@@ -1,0 +1,14 @@
+---
+const { title, category, text, badge='Editor Pick', price='Explore', image='' } = Astro.props;
+---
+<article class="product-card">
+  <div class="product-image" style={`background-image:url('${image}')`}>
+    <span class="badge">{badge}</span>
+  </div>
+  <div class="product-body">
+    <div class="product-category">{category}</div>
+    <h3>{title}</h3>
+    <p>{text}</p>
+    <div class="product-bottom"><strong>{price}</strong><a href="/guides/">See why →</a></div>
+  </div>
+</article>

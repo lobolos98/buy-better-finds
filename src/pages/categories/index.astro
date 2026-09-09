@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const cats=['Home','Tech','Outdoor','Kitchen','Lifestyle'];
+---
+<BaseLayout title="Categories | Buy Better Finds"><section class="section"><div class="container"><div class="eyebrow">Browse</div><h1>Shop by category.</h1><p class="lead">Explore the areas where better product research can make a difference.</p><div class="grid">{cats.map(c=><article class="card"><span class="tag">Category</span><h3>{c}</h3><p>Curated recommendations and buying guides for practical purchases.</p><a class="arrow" href={`/categories/${c.toLowerCase()}/`}>Explore {c} →</a></article>)}</div></div></section></BaseLayout>

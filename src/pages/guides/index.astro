@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const guides=['10 Practical Products Worth Considering This Month','Best Useful Tech Under $100','Smart Home Upgrades That Are Actually Useful','Outdoor Gear Worth Packing for a Weekend','Kitchen Tools That Save Time','Home Office Upgrades for Productivity','What to Look for Before Buying a Smart Device','Best-Value Products for Everyday Use','Small Upgrades That Make a Big Difference','How to Compare Products Before You Buy'];
+---
+<BaseLayout title="Buying Guides | Buy Better Finds"><section class="section"><div class="container"><div class="eyebrow">Original content</div><h1>Buying guides.</h1><p class="lead">A launch-ready editorial roadmap with 10 guide topics to develop into substantial original content.</p><div class="grid">{guides.map((g,i)=><article class="card"><span class="tag">Guide {i+1}</span><h3>{g}</h3><p>Use this page structure for original research, comparisons and recommendations.</p><a class="arrow" href={`/guides/guide-${i+1}/`}>Open guide →</a></article>)}</div></div></section></BaseLayout>
