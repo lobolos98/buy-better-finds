@@ -14,7 +14,10 @@ const { product } = Astro.props;
       <div class="eyebrow">{product.category} · BUY BETTER FIND</div>
       <div class="product-detail">
         <div class="product-detail-visual">
-          <div class="product-detail-icon">{product.icon}</div>
+          <div class="product-photo">
+            <img src={product.image} alt={product.imageAlt} width="1000" height="750" />
+            <div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div>
+          </div>
           <span>{product.category}</span>
         </div>
         <div class="product-detail-copy">
@@ -43,9 +46,12 @@ const { product } = Astro.props;
 
 <style>
   .product-detail{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;margin-top:30px}
-  .product-detail-visual{min-height:360px;border:1px solid #d9dee8;border-radius:24px;background:linear-gradient(145deg,#f7f9fc,#e9edf4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;box-shadow:0 18px 45px rgba(15,23,42,.08)}
-  .product-detail-icon{font-size:120px;line-height:1;color:#0f172a}
-  .product-detail-visual span{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#64748b}
+  .product-detail-visual{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .product-detail-visual>span{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#64748b}
+  .product-photo{position:relative;width:100%;min-height:390px;border:1px solid #d9dee8;border-radius:24px;background:linear-gradient(145deg,#f7f9fc,#e9edf4);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 45px rgba(15,23,42,.08)}
+  .product-photo img{width:100%;height:100%;min-height:390px;object-fit:contain;padding:34px;display:block}
+  .photo-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:14px;color:#0f172a}
+  .photo-fallback span{font-size:120px;line-height:1}.photo-fallback small{text-transform:uppercase;letter-spacing:.14em;color:#64748b;font-weight:800}
   .product-detail-copy h1{margin-bottom:18px}
   .price-box{margin:28px 0;padding:20px;border:1px solid #d9dee8;border-radius:16px;background:#fff;display:grid;gap:6px}
   .price-box span,.price-box small{color:#64748b}.price-box strong{font-size:28px;color:#111827}
@@ -54,5 +60,13 @@ const { product } = Astro.props;
   .detail-grid h2{font-size:22px;margin:12px 0}
   .comparison-note{margin-top:55px;padding:34px;border-radius:22px;background:#0f172a;color:#fff;text-align:center}
   .comparison-note h2{color:#fff;margin:10px 0}.comparison-note p{max-width:720px;margin:0 auto 18px;color:#cbd5e1}.comparison-note .arrow{color:#fff}
-  @media(max-width:800px){.product-detail,.detail-grid{grid-template-columns:1fr}.product-detail-visual{min-height:260px}.product-detail-icon{font-size:90px}}
+  @media(max-width:800px){.product-detail,.detail-grid{grid-template-columns:1fr}.product-photo,.product-photo img{min-height:280px}.photo-fallback span{font-size:90px}}
 </style>
+<script>
+  const image = document.querySelector('.product-photo img');
+  image?.addEventListener('error', () => {
+    image.style.display = 'none';
+    const fallback = image.nextElementSibling;
+    if (fallback) fallback.style.display = 'flex';
+  });
+</script>
