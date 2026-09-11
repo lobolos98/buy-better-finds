@@ -1,22 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const products = [
-  ['Wireless Noise-Canceling Headphones','Tech','$99–$199','/products/example-product/'],
-  ['Compact Air Fryer','Home','$59–$129','/categories/home/'],
-  ['20V Cordless Drill Kit','Tools & DIY','$79–$149','/categories/home/'],
-  ['Portable Patio Heater','Outdoor','$129–$249','/categories/outdoor/']
+  ['Sony WH-1000XM5 Noise-Canceling Headphones','Tech','$299.99','/products/sony-wh-1000xm5/'],
+  ['Ninja 4-Qt Air Fryer AF101','Home & Kitchen','$119.99','/products/ninja-af101/'],
+  ['DEWALT 20V MAX Drill/Impact Driver Combo Kit','Tools & DIY','Check price','/products/dewalt-dck240c2/'],
+  ['Solo Stove Tower Patio Heater','Outdoor','$799.99','/products/solo-stove-tower/']
 ];
 ---
-<BaseLayout title="Products | Buy Better Finds" description="Browse practical product recommendations from Buy Better Finds.">
+<BaseLayout title="Products | Buy Better Finds" description="Browse real products and practical recommendations from Buy Better Finds.">
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Featured products</div>
+      <div class="eyebrow">REAL PRODUCTS</div>
       <h1>Products worth considering.</h1>
-      <p class="lead">Explore practical picks and use our buying guidance before making a purchase.</p>
+      <p class="lead">Explore specific products, understand the tradeoffs, and follow the product link to verify today's price and availability.</p>
       <div class="grid">
         {products.map(([name,cat,price,href]) => <article class="card">
-          <div class="tag">{cat}</div><h3>{name}</h3><p>Review the key considerations and tradeoffs for this type of purchase.</p>
-          <p><strong>{price}</strong></p><a class="arrow" href={href}>Explore →</a>
+          <div class="tag">{cat}</div><h3>{name}</h3><p>See why this product made the Buy Better Finds shortlist and what to consider before buying.</p>
+          <p><strong>{price}</strong></p><a class="arrow" href={href}>View product →</a>
         </article>)}
       </div>
     </div>
