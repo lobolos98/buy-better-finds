@@ -8,8 +8,12 @@ import { products } from '../../data/products.js';
       <div class="eyebrow">REAL PRODUCTS · UPDATED CATALOG</div>
       <h1>Products worth considering.</h1>
       <p class="lead">Explore specific products, understand the tradeoffs, and follow the product link to verify today's price and availability.</p>
-      <div class="grid">
-        {products.map((product) => <article class="card">
+      <div class="grid product-grid">
+        {products.map((product) => <article class="card product-card">
+          <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+            <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+            <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
+          </a>
           <div class="tag">{product.category}</div>
           <h3>{product.name}</h3>
           <p>{product.why}</p>
@@ -20,3 +24,25 @@ import { products } from '../../data/products.js';
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .product-grid{align-items:stretch}
+  .product-card{overflow:hidden}
+  .product-image{position:relative;display:block;aspect-ratio:4/3;margin:-1px -1px 22px;background:#f3f5f8;overflow:hidden;border-radius:18px 18px 0 0}
+  .product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}
+  .product-image:hover img{transform:scale(1.04)}
+  .image-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}
+  .image-fallback span{font-size:64px;line-height:1}
+  .image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
+  .product-image img + .image-fallback{display:none}
+  .product-image img:not([src]) + .image-fallback{display:flex}
+</style>
+<script>
+  document.querySelectorAll('.product-image img').forEach((img) => {
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+      const fallback = img.nextElementSibling;
+      if (fallback) fallback.style.display = 'flex';
+    });
+  });
+</script>
