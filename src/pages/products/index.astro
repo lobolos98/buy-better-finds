@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const products = [
+  ['Wireless Noise-Canceling Headphones','Tech','$99–$199','/products/example-product/'],
+  ['Compact Air Fryer','Home','$59–$129','/categories/home/'],
+  ['20V Cordless Drill Kit','Tools & DIY','$79–$149','/categories/home/'],
+  ['Portable Patio Heater','Outdoor','$129–$249','/categories/outdoor/']
+];
+---
+<BaseLayout title="Products | Buy Better Finds" description="Browse practical product recommendations from Buy Better Finds.">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Featured products</div>
+      <h1>Products worth considering.</h1>
+      <p class="lead">Explore practical picks and use our buying guidance before making a purchase.</p>
+      <div class="grid">
+        {products.map(([name,cat,price,href]) => <article class="card">
+          <div class="tag">{cat}</div><h3>{name}</h3><p>Review the key considerations and tradeoffs for this type of purchase.</p>
+          <p><strong>{price}</strong></p><a class="arrow" href={href}>Explore →</a>
+        </article>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

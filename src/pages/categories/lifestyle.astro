@@ -1,4 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Lifestyle | Buy Better Finds"><section class="article"><div class="eyebrow">Category</div><h1>Lifestyle finds.</h1><p class="lead">This category is ready for original product recommendations, comparisons and buying guides.</p><h2>Coming next</h2><p class="muted">Add researched editorial content here first, then connect approved affiliate links where appropriate.</p></section></BaseLayout>
+<BaseLayout title="Lifestyle | Buy Better Finds" description="Explore Lifestyle product recommendations from Buy Better Finds.">
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Category</div>
+      <h1>Lifestyle.</h1>
+      <p class="lead">Explore practical products, recommendations, and buying guidance in lifestyle.</p>
+      <div class="grid">
+        <article class="card"><span class="tag">Featured</span><h3>Start with our recommended finds.</h3><p>Use product research and buying guidance to compare options before you shop.</p><a class="arrow" href="/products/">Browse products →</a></article>
+        <article class="card"><span class="tag">Guidance</span><h3>Know what to look for.</h3><p>Focus on the features and tradeoffs that matter for your intended use.</p><a class="arrow" href="/why-we-recommend/">Our methodology →</a></article>
+        <article class="card"><span class="tag">More</span><h3>Explore another category.</h3><p>Continue browsing Buy Better Finds for more practical recommendations.</p><a class="arrow" href="/categories/">All categories →</a></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

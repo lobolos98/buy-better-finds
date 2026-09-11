@@ -2,6 +2,26 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { title='Buy Better Finds', description='Find it. Compare it. Buy better.' } = Astro.props;
+
+const {
+  title = 'Buy Better Finds',
+  description = 'Find it. Compare it. Buy better.'
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="description" content={description}/><title>{title}</title></head><body><Header/><main><slot/></main><Footer/></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+  </body>
+</html>
