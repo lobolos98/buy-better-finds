@@ -14,11 +14,14 @@ const categoryNames = {
 };
 
 export function getStaticPaths() {
-  return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
+  return Object.entries(categoryNames).map(([slug, name]) => ({
+    params: { category: slug },
+    props: { name }
+  }));
 }
 
 const { name } = Astro.props;
-const matches = products.filter((product) => product.category === name || (name === 'Home & Kitchen' && product.category === 'Home & Kitchen'));
+const matches = products.filter((product) => product.category === name);
 ---
 <BaseLayout title={`${name} Products | Buy Better Finds`} description={`Browse Buy Better Finds recommendations for ${name}.`}>
   <section class="section">
@@ -27,15 +30,19 @@ const matches = products.filter((product) => product.category === name || (name 
       <h1>{name}</h1>
       <p class="lead">Specific products, practical buying notes, and direct product sources—without filler.</p>
       <div class="grid">
-        {matches.map((product) => <article class="card">
-          <div class="tag">{product.category}</div>
-          <h3>{product.name}</h3>
-          <p>{product.why}</p>
-          <p><strong>{product.price}</strong></p>
-          <a class="arrow" href={`/products/${product.slug}/`}>View product →</a>
-        </article>)}
+        {matches.map((product) => (
+          <article class="card">
+            <div class="tag">{product.category}</div>
+            <h3>{product.name}</h3>
+            <p>{product.why}</p>
+            <p><strong>{product.price}</strong></p>
+            <a class="arrow" href={`/products/${product.slug}/`}>View product →</a>
+          </article>
+        ))}
       </div>
-      {matches.length === 0 && <p>No products are published in this category yet. <a class="arrow" href="/products/">See all products →</a></p>}
+      {matches.length === 0 && (
+        <p>No products are published in this category yet. <a class="arrow" href="/products/">See all products →</a></p>
+      )}
     </div>
   </section>
 </BaseLayout>
