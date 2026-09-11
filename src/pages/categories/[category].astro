@@ -2,18 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
-const categoryNames = {
-  home: 'Home & Kitchen',
-  tech: 'Tech',
-  outdoor: 'Outdoor',
-  kitchen: 'Home & Kitchen',
-  lifestyle: 'Lifestyle',
-  'tools-diy': 'Tools & DIY',
-  'smart-home': 'Smart Home',
-  fitness: 'Fitness'
-};
-
 export function getStaticPaths() {
+  const categoryNames = {
+    home: 'Home & Kitchen',
+    tech: 'Tech',
+    outdoor: 'Outdoor',
+    kitchen: 'Home & Kitchen',
+    lifestyle: 'Lifestyle',
+    'tools-diy': 'Tools & DIY',
+    'smart-home': 'Smart Home',
+    fitness: 'Fitness'
+  };
+
   return Object.entries(categoryNames).map(([slug, name]) => ({
     params: { category: slug },
     props: { name }
