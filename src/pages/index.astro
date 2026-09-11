@@ -2,10 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const products = [
-  { name: 'Wireless Noise-Canceling Headphones', category: 'Tech', price: '$99–$199', href: '/products/example-product/' },
-  { name: 'Compact Air Fryer', category: 'Home', price: '$59–$129', href: '/categories/home/' },
-  { name: '20V Cordless Drill Kit', category: 'Tools & DIY', price: '$79–$149', href: '/categories/home/' },
-  { name: 'Portable Patio Heater', category: 'Outdoor', price: '$129–$249', href: '/categories/outdoor/' }
+  { name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', href: '/products/sony-wh-1000xm5/' },
+  { name: 'Ninja 4-Qt Air Fryer AF101', category: 'Home & Kitchen', price: '$119.99', href: '/products/ninja-af101/' },
+  { name: 'DEWALT 20V MAX Drill/Impact Driver Combo Kit', category: 'Tools & DIY', price: 'Check price', href: '/products/dewalt-dck240c2/' },
+  { name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', href: '/products/solo-stove-tower/' }
 ];
 
 const categories = [
@@ -18,20 +18,20 @@ const categories = [
 ];
 ---
 <BaseLayout
-  title="Buy Better Finds | Smart Product Recommendations"
-  description="Discover useful products, compare options, and shop with confidence through Buy Better Finds."
+  title="Buy Better Finds | Better Products. Smarter Choices."
+  description="Discover real products, compare useful options, and shop with confidence through Buy Better Finds."
 >
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Smarter shopping starts here</div>
+        <div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div>
         <h1>Find products worth buying.</h1>
-        <p>Practical recommendations, useful comparisons, and buying guidance designed to help you spend your money with confidence.</p>
+        <p>We highlight real products from established brands and retailers, then give you the key details, tradeoffs, and buying links in one place.</p>
         <div class="buttons">
           <a class="btn primary" href="/products/">Explore Our Finds →</a>
           <a class="btn secondary" href="/categories/">Browse Categories</a>
         </div>
-        <div class="hero-note"><span>✓</span> Independent product discovery · Clear pros &amp; cons · No shopping clutter</div>
+        <div class="hero-note"><span>✓</span> Real product links · Practical comparisons · Clear buying information</div>
       </div>
 
       <div class="hero-product">
@@ -39,18 +39,18 @@ const categories = [
         <div class="hero-visual">
           <div class="hero-product-shape">
             <div class="hero-ring"></div>
-            <div class="hero-label">AUDIO<small>SMART PICK</small></div>
+            <div class="hero-label">SONY<small>WH-1000XM5</small></div>
           </div>
         </div>
         <div class="hero-product-copy">
           <div>
             <div class="tag">Tech</div>
-            <h3>Wireless Noise-Canceling Headphones</h3>
-            <p>A strong everyday option for commuters, work, travel, and focused listening.</p>
+            <h3>Sony WH-1000XM5</h3>
+            <p>Premium wireless headphones with active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.</p>
           </div>
-          <div class="hero-price">$99–$199</div>
+          <div class="hero-price">$299.99</div>
         </div>
-        <a class="hero-shop" href="/products/example-product/">See the product review <span>→</span></a>
+        <a class="hero-shop" href="/products/sony-wh-1000xm5/">See the product review <span>→</span></a>
       </div>
     </div>
   </section>
@@ -60,8 +60,8 @@ const categories = [
       <div class="section-head">
         <div>
           <div class="eyebrow">Featured finds</div>
-          <h2>Products worth a closer look.</h2>
-          <p>Start with practical picks across the categories shoppers use most.</p>
+          <h2>Real products. Useful reasons to consider them.</h2>
+          <p>Start with four current products across the categories shoppers use most.</p>
         </div>
         <a class="arrow" href="/products/">View all products →</a>
       </div>
@@ -71,14 +71,14 @@ const categories = [
             <div class="product-img">
               <span class="product-mark">{product.category}</span>
               <div class="product-art" aria-hidden="true">
-                <svg viewBox="0 0 200 140"><rect x="38" y="42" width="124" height="58" rx="16"/><path d="M58 42c4-25 80-25 84 0"/><path d="M25 65h13M162 65h13"/></svg>
+                <div class="real-product-icon">{product.category === 'Tech' ? '◉' : product.category === 'Outdoor' ? '☼' : product.category === 'Tools & DIY' ? '⚒' : '◇'}</div>
               </div>
             </div>
             <div class="product-body">
               <div class="tag">{product.category}</div>
               <h3>{product.name}</h3>
-              <p>Research the key features, tradeoffs, and shopper considerations before you buy.</p>
-              <div class="price">Typical range<strong>{product.price}</strong></div>
+              <p>See the product details, strengths, tradeoffs, and a direct shopping link.</p>
+              <div class="price">Current listed price<strong>{product.price}</strong></div>
               <a class="shop" href={product.href}>View Find →</a>
             </div>
           </article>
@@ -116,8 +116,8 @@ const categories = [
         <a class="arrow light" href="/why-we-recommend/">How we choose →</a>
       </div>
       <div class="trust-grid">
-        <div><b>01 — RESEARCH</b><h3>We focus on what matters.</h3><p>Features, use cases, tradeoffs, value, and practical buying considerations come first.</p></div>
-        <div><b>02 — COMPARE</b><h3>We make differences easier to see.</h3><p>Good buying decisions start with understanding which option fits the shopper.</p></div>
+        <div><b>01 — RESEARCH</b><h3>We start with real products.</h3><p>We identify specific models from established brands and check current product information before publishing a find.</p></div>
+        <div><b>02 — COMPARE</b><h3>We make differences easier to see.</h3><p>Good buying decisions start with understanding features, use cases, price, and tradeoffs.</p></div>
         <div><b>03 — RECOMMEND</b><h3>We keep the shortlist useful.</h3><p>Our goal is clarity—not making you sort through hundreds of nearly identical products.</p></div>
       </div>
     </div>
@@ -131,7 +131,7 @@ const categories = [
       </div>
       <div>
         <p>Buy Better Finds is an independent product-discovery site built around practical recommendations, comparisons, and buying guides.</p>
-        <p>We help shoppers slow down, understand their options, and find products that make sense for the way they actually shop and live.</p>
+        <p>Product availability and prices can change. Always confirm the current price, seller, shipping, and return terms at checkout.</p>
         <a class="arrow" href="/about/">Learn more about us →</a>
       </div>
     </div>
