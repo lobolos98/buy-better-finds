@@ -1,13 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { products as catalog } from '../data/products.js';
 
-const products = [
-  { name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', href: '/products/sony-wh-1000xm5/' },
-  { name: 'Ninja 4-Qt Air Fryer AF101', category: 'Home & Kitchen', price: '$119.99', href: '/products/ninja-af101/' },
-  { name: 'DEWALT 20V MAX Drill/Impact Driver Combo Kit', category: 'Tools & DIY', price: 'Check price', href: '/products/dewalt-dck240c2/' },
-  { name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', href: '/products/solo-stove-tower/' }
-];
-
+const products = catalog.slice(0, 8);
 const categories = [
   ['⌂','Home & Kitchen','/categories/home/'],
   ['◈','Tech','/categories/tech/'],
@@ -16,6 +11,7 @@ const categories = [
   ['◆','Lifestyle','/categories/lifestyle/'],
   ['★','Deals','/products/']
 ];
+const featured = catalog[0];
 ---
 <BaseLayout
   title="Buy Better Finds | Better Products. Smarter Choices."
@@ -44,13 +40,13 @@ const categories = [
         </div>
         <div class="hero-product-copy">
           <div>
-            <div class="tag">Tech</div>
-            <h3>Sony WH-1000XM5</h3>
-            <p>Premium wireless headphones with active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.</p>
+            <div class="tag">{featured.category}</div>
+            <h3>{featured.name}</h3>
+            <p>{featured.why}</p>
           </div>
-          <div class="hero-price">$299.99</div>
+          <div class="hero-price">{featured.price}</div>
         </div>
-        <a class="hero-shop" href="/products/sony-wh-1000xm5/">See the product review <span>→</span></a>
+        <a class="hero-shop" href={`/products/${featured.slug}/`}>See the product review <span>→</span></a>
       </div>
     </div>
   </section>
@@ -61,7 +57,7 @@ const categories = [
         <div>
           <div class="eyebrow">Featured finds</div>
           <h2>Real products. Useful reasons to consider them.</h2>
-          <p>Start with four current products across the categories shoppers use most.</p>
+          <p>Start with a growing catalog of specific products across tech, home, outdoor, tools, smart home, and lifestyle.</p>
         </div>
         <a class="arrow" href="/products/">View all products →</a>
       </div>
@@ -71,15 +67,15 @@ const categories = [
             <div class="product-img">
               <span class="product-mark">{product.category}</span>
               <div class="product-art" aria-hidden="true">
-                <div class="real-product-icon">{product.category === 'Tech' ? '◉' : product.category === 'Outdoor' ? '☼' : product.category === 'Tools & DIY' ? '⚒' : '◇'}</div>
+                <div class="real-product-icon">{product.icon}</div>
               </div>
             </div>
             <div class="product-body">
               <div class="tag">{product.category}</div>
               <h3>{product.name}</h3>
-              <p>See the product details, strengths, tradeoffs, and a direct shopping link.</p>
-              <div class="price">Current listed price<strong>{product.price}</strong></div>
-              <a class="shop" href={product.href}>View Find →</a>
+              <p>{product.why}</p>
+              <div class="price">Reference price<strong>{product.price}</strong></div>
+              <a class="shop" href={`/products/${product.slug}/`}>View Find →</a>
             </div>
           </article>
         ))}
