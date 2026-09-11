@@ -1,13 +1,42 @@
 # Buy Better Finds
 
-Astro starter site for Buy Better Finds.
+Astro website for Buy Better Finds.
 
-## Run locally
+## Run in Visual Studio Code
+
+```bash
 npm install
 npm run dev
+```
+
+Open the local URL shown by Astro.
 
 ## Build
-npm run build
 
-## Affiliate links
-Replace each `href="#"` on the product cards with the approved affiliate URL for that product. Do not add affiliate URLs until the relevant affiliate program has approved the site/account.
+```bash
+npm run build
+```
+
+## Deploy
+
+Commit and push the project to GitHub. Cloudflare Pages can then deploy the `main` branch.
+
+## SEO routes
+
+- /
+- /products/
+- /products/example-product/
+- /categories/
+- /categories/home/
+- /categories/kitchen/
+- /categories/lifestyle/
+- /categories/outdoor/
+- /categories/tech/
+- /why-we-recommend/
+- /about/
+- /contact/
+- /disclosure/
+- /privacy/
+- /terms/
+
+The site uses real page URLs rather than homepage hash anchors.
