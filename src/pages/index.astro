@@ -6,130 +6,40 @@ const products = catalog.slice(0, 8);
 const categories = [
   ['⌂','Home & Kitchen','/categories/home/'],
   ['◈','Tech','/categories/tech/'],
-  ['⚒','Tools & DIY','/categories/home/'],
+  ['⚒','Tools & DIY','/categories/tools-diy/'],
   ['☼','Outdoor','/categories/outdoor/'],
   ['◆','Lifestyle','/categories/lifestyle/'],
   ['★','Deals','/products/']
 ];
 const featured = catalog[0];
 ---
-<BaseLayout
-  title="Buy Better Finds | Better Products. Smarter Choices."
-  description="Discover real products, compare useful options, and shop with confidence through Buy Better Finds."
->
+<BaseLayout title="Buy Better Finds | Better Products. Smarter Choices." description="Discover real products, compare useful options, and shop with confidence through Buy Better Finds.">
   <section class="hero">
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div>
         <h1>Find products worth buying.</h1>
         <p>We highlight real products from established brands and retailers, then give you the key details, tradeoffs, and buying links in one place.</p>
-        <div class="buttons">
-          <a class="btn primary" href="/products/">Explore Our Finds →</a>
-          <a class="btn secondary" href="/categories/">Browse Categories</a>
-        </div>
+        <div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div>
         <div class="hero-note"><span>✓</span> Real product links · Practical comparisons · Clear buying information</div>
       </div>
-
       <div class="hero-product">
         <div class="pick-badge">FEATURED FIND</div>
-        <div class="hero-visual">
-          <div class="hero-product-shape">
-            <div class="hero-ring"></div>
-            <div class="hero-label">SONY<small>WH-1000XM5</small></div>
-          </div>
-        </div>
-        <div class="hero-product-copy">
-          <div>
-            <div class="tag">{featured.category}</div>
-            <h3>{featured.name}</h3>
-            <p>{featured.why}</p>
-          </div>
-          <div class="hero-price">{featured.price}</div>
-        </div>
+        <div class="hero-visual"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div>
+        <div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div>
         <a class="hero-shop" href={`/products/${featured.slug}/`}>See the product review <span>→</span></a>
       </div>
     </div>
   </section>
-
   <section class="section" id="finds">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Featured finds</div>
-          <h2>Real products. Useful reasons to consider them.</h2>
-          <p>Start with a growing catalog of specific products across tech, home, outdoor, tools, smart home, and lifestyle.</p>
-        </div>
-        <a class="arrow" href="/products/">View all products →</a>
-      </div>
+      <div class="section-head"><div><div class="eyebrow">Featured finds</div><h2>Real products. Useful reasons to consider them.</h2><p>Start with a growing catalog of specific products across tech, home, outdoor, tools, smart home, and lifestyle.</p></div><a class="arrow" href="/products/">View all products →</a></div>
       <div class="products">
-        {products.map((product) => (
-          <article class="product">
-            <div class="product-img">
-              <span class="product-mark">{product.category}</span>
-              <div class="product-art" aria-hidden="true">
-                <div class="real-product-icon">{product.icon}</div>
-              </div>
-            </div>
-            <div class="product-body">
-              <div class="tag">{product.category}</div>
-              <h3>{product.name}</h3>
-              <p>{product.why}</p>
-              <div class="price">Reference price<strong>{product.price}</strong></div>
-              <a class="shop" href={`/products/${product.slug}/`}>View Find →</a>
-            </div>
-          </article>
-        ))}
+        {products.map((product) => <article class="product"><div class="product-img"><span class="product-mark">{product.category}</span><div class="product-art" aria-hidden="true"><div class="real-product-icon">{product.icon}</div></div></div><div class="product-body"><div class="tag">{product.category}</div><h3>{product.name}</h3><p>{product.why}</p><div class="price">Reference price<strong>{product.price}</strong></div><a class="shop" href={`/products/${product.slug}/`}>View Find →</a></div></article>)}
       </div>
     </div>
   </section>
-
-  <section class="section categories-section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Browse</div>
-          <h2>Shop by category.</h2>
-          <p>Go directly to the products and research that matter to you.</p>
-        </div>
-        <a class="arrow" href="/categories/">All categories →</a>
-      </div>
-      <div class="categories">
-        {categories.map(([icon, name, href]) => (
-          <a class="cat" href={href}><span>{icon}</span>{name}<small>Explore →</small></a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section trust">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow light">Our approach</div>
-          <h2>Why shoppers can use our recommendations.</h2>
-          <p>We focus on useful information rather than endless product lists.</p>
-        </div>
-        <a class="arrow light" href="/why-we-recommend/">How we choose →</a>
-      </div>
-      <div class="trust-grid">
-        <div><b>01 — RESEARCH</b><h3>We start with real products.</h3><p>We identify specific models from established brands and check current product information before publishing a find.</p></div>
-        <div><b>02 — COMPARE</b><h3>We make differences easier to see.</h3><p>Good buying decisions start with understanding features, use cases, price, and tradeoffs.</p></div>
-        <div><b>03 — RECOMMEND</b><h3>We keep the shortlist useful.</h3><p>Our goal is clarity—not making you sort through hundreds of nearly identical products.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container about">
-      <div>
-        <div class="eyebrow">About Buy Better Finds</div>
-        <h2>Better information. Better purchases.</h2>
-      </div>
-      <div>
-        <p>Buy Better Finds is an independent product-discovery site built around practical recommendations, comparisons, and buying guides.</p>
-        <p>Product availability and prices can change. Always confirm the current price, seller, shipping, and return terms at checkout.</p>
-        <a class="arrow" href="/about/">Learn more about us →</a>
-      </div>
-    </div>
-  </section>
+  <section class="section categories-section"><div class="container"><div class="section-head"><div><div class="eyebrow">Browse</div><h2>Shop by category.</h2><p>Go directly to the products and research that matter to you.</p></div><a class="arrow" href="/categories/">All categories →</a></div><div class="categories">{categories.map(([icon, name, href]) => <a class="cat" href={href}><span>{icon}</span>{name}<small>Explore →</small></a>)}</div></div></section>
+  <section class="section trust"><div class="container"><div class="section-head"><div><div class="eyebrow light">Our approach</div><h2>Why shoppers can use our recommendations.</h2><p>We focus on useful information rather than endless product lists.</p></div><a class="arrow light" href="/why-we-recommend/">How we choose →</a></div><div class="trust-grid"><div><b>01 — RESEARCH</b><h3>We start with real products.</h3><p>We identify specific models from established brands and check current product information before publishing a find.</p></div><div><b>02 — COMPARE</b><h3>We make differences easier to see.</h3><p>Good buying decisions start with understanding features, use cases, price, and tradeoffs.</p></div><div><b>03 — RECOMMEND</b><h3>We keep the shortlist useful.</h3><p>Our goal is clarity—not making you sort through hundreds of nearly identical products.</p></div></div></div></section>
+  <section class="section"><div class="container about"><div><div class="eyebrow">About Buy Better Finds</div><h2>Better information. Better purchases.</h2></div><div><p>Buy Better Finds is an independent product-discovery site built around practical recommendations, comparisons, and buying guides.</p><p>Product availability and prices can change. Always confirm the current price, seller, shipping, and return terms at checkout.</p><a class="arrow" href="/about/">Learn more about us →</a></div></div></section>
 </BaseLayout>
