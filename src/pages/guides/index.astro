@@ -2,20 +2,29 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const guides = [
   ['Best Tech Products','best-tech','Headphones, tablets, mice, power, and everyday technology.'],
+  ['Best Noise-Canceling Headphones','best-noise-canceling-headphones','A focused comparison for travelers, commuters, and listeners who want quieter surroundings.'],
   ['Best Home & Kitchen Products','best-home-kitchen','Practical appliances, organization, and household upgrades.'],
-  ['Best Tools & DIY Products','best-tools-diy','Useful tools and gear for projects, repairs, and the workshop.'],
+  ['Best Air Fryers','best-air-fryers','Compare countertop air fryers by capacity, everyday use, and who each model suits best.'],
+  ['Best Cordless & Everyday Vacuums','best-vacuums','A practical vacuum shortlist for quick cleanups and whole-home floor care.'],
+  ['Best Tools for Homeowners','best-homeowner-drills','A straightforward drill-and-driver guide for repairs, projects, and general DIY work.'],
   ['Best Outdoor Products','best-outdoor','Grills, patio gear, and products for getting more from outdoor spaces.'],
+  ['Best Patio Heaters','best-patio-heaters','What to consider when choosing outdoor heat for patios, decks, and entertaining.'],
   ['Best Smart Home Products','best-smart-home','Simple connected products that can make home life easier.'],
+  ['Best Smart Plugs','best-smart-plugs','A focused look at outdoor smart-plug use, scheduling, ecosystems, and convenience.'],
+  ['Best Fitness Watches','best-fitness-watches','A practical fitness-watch starting point for runners and structured training.'],
+  ['Best Everyday Drinkware','best-everyday-drinkware','Compare insulated drinkware choices for commuting, hydration, and outdoor use.'],
+  ['Best Home Organization Products','best-home-organization','Useful storage and organization ideas for everyday household clutter.'],
   ['Best Products Under $100','best-products-under-100','A practical shortlist for shoppers focused on value and budget.'],
   ['Best Everyday Products','best-everyday-products','Useful products selected for common daily needs.']
 ];
 ---
-<BaseLayout title="Buying Guides | Buy Better Finds" description="Original buying guides from Buy Better Finds covering useful products, tradeoffs, and practical shopping decisions.">
+<BaseLayout title="Buying Guides | Buy Better Finds" description="Original buying guides from Buy Better Finds covering useful products, tradeoffs, comparisons, and practical shopping decisions.">
   <section class="hero-section"><div class="container"><div class="eyebrow">BUYING GUIDES</div><h1>Know what to look for before you buy.</h1><p>Our buying guides turn a crowded product category into a practical shortlist. We focus on what a product is for, where it makes sense, what to watch for, and which shoppers may want to consider it.</p></div></section>
   <section class="section"><div class="container"><div class="guide-grid">{guides.map(([title,slug,description])=><a class="guide-card" href={`/guides/${slug}/`}><span class="guide-label">BUYING GUIDE</span><h2>{title}</h2><p>{description}</p><b>Read the guide →</b></a>)}</div></div></section>
   <section class="section methodology"><div class="container"><div class="eyebrow">OUR METHOD</div><h2>Research. Compare. Recommend.</h2><p>We organize product information into useful decisions rather than simply presenting a long list of products. Every guide is designed to help you understand the strengths, limitations, intended use, and practical tradeoffs before you shop.</p><a class="arrow" href="/why-we-recommend/">Learn how we choose →</a></div></section>
 </BaseLayout>
 <style>
-.hero-section{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:82px 0}.hero-section h1{max-width:760px;font-size:clamp(38px,6vw,68px);line-height:1.02;margin:12px 0 20px}.hero-section p{max-width:760px;color:#d9e4f1;font-size:18px;line-height:1.7}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;min-height:245px;display:flex;flex-direction:column;transition:.2s}.guide-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #10233f14;border-color:#b8c8d9}.guide-label{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--red)}.guide-card h2{font-size:24px;line-height:1.15;color:var(--navy);margin:14px 0 10px}.guide-card p{color:var(--muted);line-height:1.6;font-size:14px}.guide-card b{margin-top:auto;color:var(--blue);font-size:13px}.methodology{background:#f5f7fa}.methodology p{max-width:760px;color:var(--muted);line-height:1.7}.methodology h2{color:var(--navy);font-size:34px;margin:10px 0}
-@media(max-width:800px){.guide-grid{grid-template-columns:1fr}.hero-section{padding:60px 0}.hero-section p{font-size:16px}}
+.hero-section{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:82px 0}.hero-section h1{max-width:760px;font-size:clamp(38px,6vw,68px);line-height:1.02;margin:12px 0 20px}.hero-section p{max-width:760px;color:#d9e4f1;font-size:18px;line-height:1.7}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;min-height:245px;display:flex;flex-direction:column;transition:.2s}.guide-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #10233f14;border-color:#b8c8d9}.guide-label{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--red)}.guide-card h2{font-size:22px;line-height:1.15;color:var(--navy);margin:14px 0 10px}.guide-card p{color:var(--muted);line-height:1.6;font-size:14px}.guide-card b{margin-top:auto;color:var(--blue);font-size:13px}.methodology{background:#f5f7fa}.methodology p{max-width:760px;color:var(--muted);line-height:1.7}.methodology h2{color:var(--navy);font-size:34px;margin:10px 0}
+@media(max-width:900px){.guide-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.guide-grid{grid-template-columns:1fr}.hero-section{padding:60px 0}.hero-section p{font-size:16px}}
 </style>
