@@ -9,6 +9,9 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
+const siteName = 'Buy Better Finds';
+const isHome = Astro.url.pathname === '/';
+const pageTitle = title || siteName;
 ---
 <!doctype html>
 <html lang="en">
@@ -16,8 +19,23 @@ const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#10233f" />
     <link rel="canonical" href={canonical} />
-    <title>{title}</title>
+    <meta property="og:type" content={isHome ? 'website' : 'article'} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{pageTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': isHome ? 'WebSite' : 'WebPage',
+      name: pageTitle,
+      description,
+      url: canonical.toString(),
+      ...(isHome ? { publisher: { '@type': 'Organization', name: siteName, url: 'https://buybetterfinds.com/' } } : {})
+    })} />
   </head>
   <body>
     <Header />
