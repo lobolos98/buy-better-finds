@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
+import { getRecommendation } from '../../data/recommendations.js';
 
 export function getStaticPaths() {
   return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
 }
 
 const { product } = Astro.props;
+const recommendation = getRecommendation(product);
 const related = products.filter((item) => item.slug !== product.slug && item.category === product.category).slice(0, 3);
 ---
 <BaseLayout title={`${product.name} | Buy Better Finds`} description={`${product.name}: independent buying guidance, strengths, tradeoffs, and practical product information.`}>
@@ -29,9 +31,14 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
           <h1>{product.name}</h1>
           <p class="lead">{product.why}</p>
 
+          <div class="score-panel">
+            <div class="score-ring"><strong>{recommendation.score}</strong><span>/10</span></div>
+            <div><div class="score-label">BUY BETTER SCORE</div><strong class="score-status">{recommendation.label}</strong><p>Editorial score based on practical fit, value, useful features, and documented tradeoffs—not paid placement.</p></div>
+          </div>
+
           <div class="verdict">
             <div class="verdict-label">OUR VERDICT</div>
-            <p>{product.bestFor}</p>
+            <p>{recommendation.bestFor}</p>
           </div>
 
           <div class="price-box">
@@ -44,7 +51,7 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
             <a class="btn primary" href={product.url} target="_blank" rel="noopener noreferrer">Check current product →</a>
             <a class="btn secondary" href="/products/">Browse all finds</a>
           </div>
-          <p class="disclosure">Independent recommendation. We may earn a commission from qualifying purchases when affiliate links are used.</p>
+          <p class="disclosure">We may earn a commission from qualifying purchases when affiliate links are used. Our recommendations are based on product fit and editorial evaluation, not commission size.</p>
         </div>
       </div>
 
@@ -59,19 +66,24 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
           <div class="number">01</div>
           <div class="tag">BEST FOR</div>
           <h2>Who should consider it?</h2>
-          <p>{product.bestFor}</p>
+          <p>{recommendation.bestFor}</p>
         </article>
         <article class="card recommendation-card">
           <div class="number">02</div>
           <div class="tag">WHY WE LIKE IT</div>
-          <h2>Why it made our list</h2>
-          <p>{product.why}</p>
+          <h2>What stands out</h2>
+          <ul class="pros-list">
+            {recommendation.pros.map((item) => <li>{item}</li>)}
+          </ul>
         </article>
         <article class="card warning-card">
           <div class="number">03</div>
           <div class="tag">WATCH BEFORE BUYING</div>
-          <h2>Know the tradeoff</h2>
-          <p>{product.watch}</p>
+          <h2>Know the tradeoffs</h2>
+          <ul class="cons-list">
+            {recommendation.cons.map((item) => <li>{item}</li>)}
+          </ul>
+          <p class="skip"><strong>Look elsewhere if:</strong> {recommendation.skipIf}</p>
         </article>
       </div>
 
@@ -79,12 +91,13 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
         <div>
           <div class="eyebrow">HOW WE RECOMMEND</div>
           <h2>Research. Compare. Recommend.</h2>
-          <p>Buy Better Finds is built to help shoppers narrow a crowded market. We look at intended use, useful features, practical tradeoffs, and overall fit before recommending a product.</p>
+          <p>Buy Better Finds is built to help shoppers narrow a crowded market. We evaluate intended use, useful features, practical tradeoffs, value, and overall fit before recommending a product.</p>
+          <a href="/why-we-recommend/" class="method-link">See our recommendation methodology →</a>
         </div>
         <div class="method-steps">
           <div><strong>01</strong><span>Research</span><small>Understand the product and its use case.</small></div>
-          <div><strong>02</strong><span>Compare</span><small>Consider strengths, limitations, and alternatives.</small></div>
-          <div><strong>03</strong><span>Recommend</span><small>Tell you who it's actually for.</small></div>
+          <div><strong>02</strong><span>Compare</span><small>Consider strengths, limitations, value, and alternatives.</small></div>
+          <div><strong>03</strong><span>Recommend</span><small>Tell you who it's actually for—and who should skip it.</small></div>
         </div>
       </div>
 
@@ -93,14 +106,16 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
           <div class="review-heading compact">
             <div class="eyebrow">MORE TO CONSIDER</div>
             <h2>Related finds</h2>
+            <p>Compare nearby options before making your final decision.</p>
           </div>
           <div class="related-grid">
-            {related.map((item) => (
-              <a class="related-card" href={`/products/${item.slug}/`}>
+            {related.map((item) => {
+              const itemRec = getRecommendation(item);
+              return <a class="related-card" href={`/products/${item.slug}/`}>
                 <div class="related-image"><img src={item.image} alt={item.imageAlt} loading="lazy" width="600" height="450" /></div>
-                <div class="related-copy"><span>{item.category}</span><h3>{item.name}</h3><p>{item.bestFor}</p><strong>See our take →</strong></div>
-              </a>
-            ))}
+                <div class="related-copy"><span>{item.category}</span><h3>{item.name}</h3><div class="mini-score"><strong>{itemRec.score}/10</strong><span>{itemRec.label}</span></div><p>{item.bestFor}</p><strong>See our take →</strong></div>
+              </a>;
+            })}
           </div>
         </section>
       )}
@@ -123,15 +138,16 @@ const related = products.filter((item) => item.slug !== product.slug && item.cat
   .product-photo{position:relative;width:100%;min-height:440px;border:1px solid #d9dee8;border-radius:24px;background:linear-gradient(145deg,#f7f9fc,#e9edf4);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 55px rgba(15,23,42,.1)}
   .product-photo img{width:100%;height:100%;min-height:440px;object-fit:contain;padding:32px;display:block}.photo-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:14px;color:#0f172a}.photo-fallback span{font-size:120px;line-height:1}.photo-fallback small{text-transform:uppercase;letter-spacing:.14em;color:#64748b;font-weight:800}.category-label{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#64748b}
   .product-detail-copy h1{font-size:clamp(34px,5vw,58px);line-height:1.03;margin:10px 0 18px}.lead{font-size:20px;line-height:1.65;color:#475569;max-width:680px}
+  .score-panel{margin:25px 0;padding:18px 20px;border:1px solid #d9dee8;border-radius:18px;background:#fff;display:flex;align-items:center;gap:18px;box-shadow:0 10px 30px rgba(15,23,42,.06)}.score-ring{width:78px;height:78px;flex:0 0 78px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column}.score-ring strong{font-size:26px;line-height:1}.score-ring span{font-size:10px;color:#cbd5e1;margin-top:3px}.score-label{font-size:10px;font-weight:900;letter-spacing:.14em;color:#c8102e}.score-status{display:block;margin-top:3px;color:#111827}.score-panel p{margin:5px 0 0;color:#64748b;font-size:12px;line-height:1.5}
   .verdict{margin:25px 0;padding:18px 20px;border-left:4px solid #c8102e;background:#f8fafc;border-radius:0 12px 12px 0}.verdict-label{font-size:11px;font-weight:900;letter-spacing:.14em;color:#c8102e}.verdict p{margin:6px 0 0;font-weight:700;color:#111827}
-  .price-box{margin:24px 0;padding:18px 20px;border:1px solid #d9dee8;border-radius:16px;background:#fff;display:grid;gap:5px}.price-box span,.price-box small{color:#64748b}.price-box strong{font-size:28px;color:#111827}.detail-actions{display:flex;gap:12px;flex-wrap:wrap}.disclosure{font-size:11px;color:#64748b;margin-top:14px;max-width:650px}
+  .price-box{margin:24px 0;padding:18px 20px;border:1px solid #d9dee8;border-radius:16px;background:#fff;display:grid;gap:5px}.price-box span,.price-box small{color:#64748b}.price-box strong{font-size:28px;color:#111827}.detail-actions{display:flex;gap:12px;flex-wrap:wrap}.disclosure{font-size:11px;color:#64748b;margin-top:14px;max-width:650px;line-height:1.6}
   .review-heading{text-align:center;max-width:760px;margin:80px auto 30px}.review-heading h2{font-size:clamp(28px,4vw,42px);margin:8px 0}.review-heading p{color:#64748b;font-size:17px}.review-heading.compact{margin:0 auto 25px}
-  .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.recommendation-card,.warning-card{position:relative}.number{font-size:12px;font-weight:900;color:#c8102e;letter-spacing:.12em}.detail-grid h2{font-size:23px;margin:10px 0}.detail-grid p{color:#64748b;line-height:1.7}
-  .methodology{margin-top:65px;padding:38px;border-radius:24px;background:#0f172a;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.methodology h2{color:#fff;font-size:32px;margin:8px 0 12px}.methodology p{color:#cbd5e1;line-height:1.7}.method-steps{display:grid;gap:15px}.method-steps div{display:grid;grid-template-columns:38px 1fr;column-gap:12px;align-items:center}.method-steps strong{grid-row:span 2;color:#c8102e}.method-steps span{font-weight:800}.method-steps small{color:#94a3b8}
-  .related-section{margin-top:70px}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.related-card{text-decoration:none;color:inherit;border:1px solid #d9dee8;border-radius:20px;overflow:hidden;background:#fff;transition:transform .2s ease,box-shadow .2s ease}.related-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(15,23,42,.1)}.related-image{aspect-ratio:4/3;background:#f5f7fa;display:flex;align-items:center;justify-content:center}.related-image img{width:100%;height:100%;object-fit:contain;padding:18px}.related-copy{padding:20px}.related-copy>span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#64748b;font-weight:800}.related-copy h3{font-size:19px;line-height:1.3;margin:8px 0}.related-copy p{font-size:14px;color:#64748b;line-height:1.5}.related-copy strong{font-size:14px;color:#c8102e}
+  .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.recommendation-card,.warning-card{position:relative}.number{font-size:12px;font-weight:900;color:#c8102e;letter-spacing:.12em}.detail-grid h2{font-size:23px;margin:10px 0}.pros-list,.cons-list{list-style:none;padding:0;margin:15px 0}.pros-list li,.cons-list li{position:relative;padding:7px 0 7px 24px;color:#475569;line-height:1.5}.pros-list li::before{content:'✓';position:absolute;left:0;color:#c8102e;font-weight:900}.cons-list li::before{content:'—';position:absolute;left:0;color:#c8102e;font-weight:900}.skip{border-top:1px solid #e2e8f0;padding-top:13px;margin-top:14px;font-size:13px!important}.skip strong{color:#111827}
+  .methodology{margin-top:65px;padding:38px;border-radius:24px;background:#0f172a;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.methodology h2{color:#fff;font-size:32px;margin:8px 0 12px}.methodology p{color:#cbd5e1;line-height:1.7}.method-link{display:inline-block;color:#fff;font-weight:800;margin-top:10px;text-decoration:none}.method-link:hover{text-decoration:underline}.method-steps{display:grid;gap:15px}.method-steps div{display:grid;grid-template-columns:38px 1fr;column-gap:12px;align-items:center}.method-steps strong{grid-row:span 2;color:#c8102e}.method-steps span{font-weight:800}.method-steps small{color:#94a3b8}
+  .related-section{margin-top:70px}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.related-card{text-decoration:none;color:inherit;border:1px solid #d9dee8;border-radius:20px;overflow:hidden;background:#fff;transition:transform .2s ease,box-shadow .2s ease}.related-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(15,23,42,.1)}.related-image{aspect-ratio:4/3;background:#f5f7fa;display:flex;align-items:center;justify-content:center}.related-image img{width:100%;height:100%;object-fit:contain;padding:18px}.related-copy{padding:20px}.related-copy>span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#64748b;font-weight:800}.related-copy h3{font-size:19px;line-height:1.3;margin:8px 0}.related-copy p{font-size:14px;color:#64748b;line-height:1.5}.related-copy>strong{font-size:14px;color:#c8102e}.mini-score{display:flex;align-items:center;gap:8px;margin:7px 0}.mini-score strong{font-size:13px;color:#111827}.mini-score span{font-size:11px;color:#64748b}
   .comparison-note{margin-top:65px;padding:40px 30px;border-radius:24px;background:#f1f5f9;text-align:center}.comparison-note h2{margin:8px 0 10px}.comparison-note p{max-width:680px;margin:0 auto 22px;color:#64748b}.comparison-note .btn{display:inline-flex}
   @media(max-width:900px){.product-detail,.methodology{grid-template-columns:1fr}.detail-grid,.related-grid{grid-template-columns:1fr}.product-photo,.product-photo img{min-height:320px}.methodology{padding:28px}.product-detail-copy h1{font-size:40px}}
-  @media(max-width:600px){.breadcrumbs{font-size:12px}.product-detail{gap:28px}.product-photo,.product-photo img{min-height:270px}.product-photo img{padding:20px}.detail-actions .btn{width:100%;justify-content:center}.review-heading{margin-top:55px}.methodology h2{font-size:27px}}
+  @media(max-width:600px){.breadcrumbs{font-size:12px}.product-detail{gap:28px}.product-photo,.product-photo img{min-height:270px}.product-photo img{padding:20px}.detail-actions .btn{width:100%;justify-content:center}.review-heading{margin-top:55px}.methodology h2{font-size:27px}.score-panel{align-items:flex-start}.score-ring{width:68px;height:68px;flex-basis:68px}.score-ring strong{font-size:23px}}
 </style>
 <script>
   const image = document.querySelector('.product-photo img');
