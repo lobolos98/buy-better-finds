@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ExploreMore from '../components/ExploreMore.astro';
 import '../styles/global.css';
 
 const {
@@ -40,6 +41,7 @@ const pageTitle = title || siteName;
   <body>
     <Header />
     <main><slot /></main>
+    <ExploreMore />
     <Footer />
   </body>
 </html>
