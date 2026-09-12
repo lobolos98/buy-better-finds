@@ -19,32 +19,74 @@ const featured = catalog[0];
       <div>
         <div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div>
         <h1>Find products worth buying.</h1>
-        <p>We highlight real products from established brands and retailers, then give you the key details, tradeoffs, and buying links in one place.</p>
+        <p>Better research. Clearer tradeoffs. Smarter choices. We narrow down real products and explain what makes each one worth considering before you spend your money.</p>
         <div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div>
-        <div class="hero-note"><span>✓</span> Real product links · Practical comparisons · Clear buying information</div>
+        <div class="hero-note"><span>✓</span> Real products · Original buying guidance · Clear strengths and tradeoffs</div>
       </div>
       <div class="hero-product">
-        <div class="pick-badge">FEATURED FIND</div>
+        <div class="pick-badge">EDITOR'S PICK</div>
         <div class="hero-visual hero-image-wrap">
           <img src={featured.image} alt={featured.imageAlt} width="1000" height="750" />
           <div class="hero-image-fallback" aria-hidden="true"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div>
         </div>
         <div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div>
-        <a class="hero-shop" href={`/products/${featured.slug}/`}>See the product review <span>→</span></a>
+        <a class="hero-shop" href={`/products/${featured.slug}/`}>See why we recommend it <span>→</span></a>
       </div>
     </div>
   </section>
-  <section class="section" id="finds">
+
+  <section class="section quick-picks">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Featured finds</div><h2>Real products. Useful reasons to consider them.</h2><p>Start with a growing catalog of specific products across tech, home, outdoor, tools, smart home, and lifestyle.</p></div><a class="arrow" href="/products/">View all products →</a></div>
+      <div class="section-head"><div><div class="eyebrow">Start here</div><h2>Shop our top finds.</h2><p>Specific products with a clear reason to consider them.</p></div><a class="arrow" href="/products/">View all products →</a></div>
       <div class="products">
-        {products.map((product) => <article class="product"><a class="product-img" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}><img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="product-image-fallback" aria-hidden="true"><span class="real-product-icon">{product.icon}</span><small>{product.category}</small></span></a><div class="product-body"><div class="tag">{product.category}</div><h3>{product.name}</h3><p>{product.why}</p><div class="price">Reference price<strong>{product.price}</strong></div><a class="shop" href={`/products/${product.slug}/`}>View Find →</a></div></article>)}
+        {products.map((product, index) => <article class="product">
+          <a class="product-img" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+            {index === 0 && <span class="product-badge">TOP PICK</span>}
+            <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+            <span class="product-image-fallback" aria-hidden="true"><span class="real-product-icon">{product.icon}</span><small>{product.category}</small></span>
+          </a>
+          <div class="product-body">
+            <div class="tag">{product.category}</div>
+            <h3>{product.name}</h3>
+            <div class="best-for"><strong>Best for:</strong> {product.bestFor}</div>
+            <p>{product.why}</p>
+            <div class="watch"><strong>Watch before you buy:</strong> {product.watch}</div>
+            <div class="price">Reference price<strong>{product.price}</strong></div>
+            <a class="shop" href={`/products/${product.slug}/`}>See Our Take →</a>
+          </div>
+        </article>)}
       </div>
     </div>
   </section>
-  <section class="section categories-section"><div class="container"><div class="section-head"><div><div class="eyebrow">Browse</div><h2>Shop by category.</h2><p>Go directly to the products and research that matter to you.</p></div><a class="arrow" href="/categories/">All categories →</a></div><div class="categories">{categories.map(([icon, name, href]) => <a class="cat" href={href}><span>{icon}</span>{name}<small>Explore →</small></a>)}</div></div></section>
-  <section class="section trust"><div class="container"><div class="section-head"><div><div class="eyebrow light">Our approach</div><h2>Why shoppers can use our recommendations.</h2><p>We focus on useful information rather than endless product lists.</p></div><a class="arrow light" href="/why-we-recommend/">How we choose →</a></div><div class="trust-grid"><div><b>01 — RESEARCH</b><h3>We start with real products.</h3><p>We identify specific models from established brands and check current product information before publishing a find.</p></div><div><b>02 — COMPARE</b><h3>We make differences easier to see.</h3><p>Good buying decisions start with understanding features, use cases, price, and tradeoffs.</p></div><div><b>03 — RECOMMEND</b><h3>We keep the shortlist useful.</h3><p>Our goal is clarity—not making you sort through hundreds of nearly identical products.</p></div></div></div></section>
-  <section class="section"><div class="container about"><div><div class="eyebrow">About Buy Better Finds</div><h2>Better information. Better purchases.</h2></div><div><p>Buy Better Finds is an independent product-discovery site built around practical recommendations, comparisons, and buying guides.</p><p>Product availability and prices can change. Always confirm the current price, seller, shipping, and return terms at checkout.</p><a class="arrow" href="/about/">Learn more about us →</a></div></div></section>
+
+  <section class="section categories-section">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Browse smarter</div><h2>Shop by category.</h2><p>Jump directly into the products and research that matter to you.</p></div><a class="arrow" href="/categories/">All categories →</a></div>
+      <div class="categories">{categories.map(([icon, name, href]) => <a class="cat" href={href}><span>{icon}</span>{name}<small>Explore →</small></a>)}</div>
+    </div>
+  </section>
+
+  <section class="section trust">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow light">Our recommendation process</div><h2>We help you make the shortlist.</h2><p>Instead of throwing hundreds of products at you, we focus on useful information and practical differences.</p></div><a class="arrow light" href="/why-we-recommend/">How we choose →</a></div>
+      <div class="trust-grid">
+        <div><b>01 — RESEARCH</b><h3>Start with real products.</h3><p>We identify specific models from established brands and organize the product information shoppers actually need.</p></div>
+        <div><b>02 — COMPARE</b><h3>Make the differences obvious.</h3><p>We look at features, intended use, price, strengths, limitations, and the tradeoffs that can change a buying decision.</p></div>
+        <div><b>03 — RECOMMEND</b><h3>Keep the shortlist useful.</h3><p>We explain who a product is best suited for—and who may be better off choosing something else.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section buying-guides">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Buying guidance</div><h2>Know what to look for.</h2><p>Use our category research to make a more informed purchase.</p></div></div>
+      <div class="guide-grid">
+        {categories.slice(0,5).map(([icon, name, href]) => <a class="guide-card" href={href}><span>{icon}</span><div><strong>{name}</strong><p>Explore products, key considerations, strengths, and tradeoffs.</p></div><b>→</b></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section"><div class="container about"><div><div class="eyebrow">About Buy Better Finds</div><h2>Better information. Better purchases.</h2></div><div><p>Buy Better Finds is an independent product-discovery site built around practical recommendations, comparisons, and buying guidance.</p><p>We may earn commissions when visitors purchase through qualifying links. Product availability and prices can change, so always confirm the current details at checkout.</p><a class="arrow" href="/about/">Learn more about us →</a></div></div></section>
 </BaseLayout>
 
 <style>
@@ -53,8 +95,12 @@ const featured = catalog[0];
   .product-img:hover img{transform:scale(1.04)}
   .product-image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;background:linear-gradient(145deg,#f7f9fc,#e7ebf1)}
   .product-image-fallback .real-product-icon{font-size:58px}.product-image-fallback small{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
+  .product-badge{position:absolute;top:12px;left:12px;background:#d6a84f;color:#fff;padding:7px 9px;border-radius:5px;font-size:9px;font-weight:900;letter-spacing:.8px;z-index:3}
+  .best-for{font-size:12px;line-height:1.45;background:#f5f8fb;border-radius:7px;padding:9px 10px;margin:2px 0 11px;color:#405166}.best-for strong{color:#10233f}
+  .watch{font-size:11px;line-height:1.45;color:#64748b;border-top:1px solid #edf0f3;padding-top:10px;margin-top:2px}.watch strong{color:#475569}
   .hero-image-wrap>img{width:100%;height:100%;object-fit:contain;padding:26px;display:block;position:relative;z-index:2}
   .hero-image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center}
+  .guide-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.guide-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;min-height:170px;transition:.2s}.guide-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #10233f12;border-color:#b9c9da}.guide-card>span{font-size:25px;margin-bottom:18px}.guide-card strong{color:var(--navy);font-size:14px}.guide-card p{font-size:12px;line-height:1.45;color:var(--muted);margin:7px 0}.guide-card>b{color:var(--blue);margin-top:auto;font-size:16px}.about-section{background:#fff}
 </style>
 <script>
   document.querySelectorAll('.product-img img, .hero-image-wrap>img').forEach((img) => {
