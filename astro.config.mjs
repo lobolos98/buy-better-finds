@@ -6,9 +6,6 @@ export default defineConfig({
   redirects: {
     '/categories/home/': '/categories/home-kitchen/',
     '/categories/kitchen/': '/categories/home-kitchen/',
-    '/categories/tech/': '/categories/tech/',
-    '/categories/outdoor/': '/categories/outdoor/',
-    '/categories/lifestyle/': '/categories/lifestyle/',
     '/comparisons/sony-wh-1000xm5-noise-canceling-headphones/': '/comparisons/sony-wh-1000xm5-vs-airpods-4/',
     '/comparisons/ninja-4-qt-air-fryer-af101/': '/comparisons/ninja-af101-vs-instant-vortex-plus/',
     '/comparisons/instant-vortex-plus-air-fryer/': '/comparisons/ninja-af101-vs-instant-vortex-plus/',
