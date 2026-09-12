@@ -1,18 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
-const guideConfig = {
-  'best-tech': { title: 'Best Tech Products', intro: 'A practical shortlist of technology products worth considering, with clear reasons to choose them and tradeoffs to understand.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4','Apple iPad 11-inch (A16)','Garmin Forerunner 265','Anker Nano Power Bank','Logitech MX Master 3S'] },
-  'best-home-kitchen': { title: 'Best Home & Kitchen Products', intro: 'Useful appliances and household products selected for shoppers who want practical benefits without sorting through endless options.', products: ['Ninja 4-Qt Air Fryer AF101','Govee Smart LED Light Bulbs','OXO Good Grips Refrigerator Organization Set','Dyson V8 Cordless Vacuum','Instant Vortex Plus Air Fryer'] },
-  'best-tools-diy': { title: 'Best Tools & DIY Products', intro: 'Tools and project gear for homeowners and DIYers who want capable equipment and a clearer idea of what each product is best suited for.', products: ['DEWALT 20V MAX Drill/Impact Driver Combo Kit'] },
-  'best-outdoor': { title: 'Best Outdoor Products', intro: 'Outdoor products for grilling, entertaining, heating, and spending more time outside.', products: ['Solo Stove Tower Patio Heater','Weber Spirit E-210 Gas Grill'] },
-  'best-smart-home': { title: 'Best Smart Home Products', intro: 'Connected home products that can add convenience without turning everyday tasks into complicated technology projects.', products: ['TP-Link Kasa Smart Outdoor Plug EP40M','Ring Battery Doorbell','Amazon Echo Dot'] },
-  'best-products-under-100': { title: 'Best Products for Budget Shoppers', intro: 'A value-focused shortlist for shoppers who want useful products while keeping an eye on cost. Prices and availability can change, so confirm current details before purchasing.', products: ['Apple AirPods 4','Anker Nano Power Bank','Govee Smart LED Light Bulbs','OXO Good Grips Refrigerator Organization Set','YETI Rambler Drinkware','Stanley Quencher H2.0 Tumbler','Logitech MX Master 3S','Shark Navigator Lift-Away'] },
-  'best-everyday-products': { title: 'Best Everyday Products', intro: 'Useful products for common daily needs—from staying organized and powered up to making work, cooking, and home life easier.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Ninja 4-Qt Air Fryer AF101','Anker Nano Power Bank','OXO Good Grips Refrigerator Organization Set','Amazon Echo Dot','Logitech MX Master 3S','Shark Navigator Lift-Away'] }
-};
-export function getStaticPaths(){return Object.keys(guideConfig).map((slug)=>({params:{slug},props:{guide:guideConfig[slug]}}));}
-const {guide}=Astro.props;
-const selected=guide.products.map((name)=>catalog.find((product)=>product.name===name)).filter(Boolean);
+
+export function getStaticPaths() {
+  const guideConfig = {
+    'best-tech': { title: 'Best Tech Products', intro: 'A practical shortlist of technology products worth considering, with clear reasons to choose them and tradeoffs to understand.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4','Apple iPad 11-inch (A16)','Garmin Forerunner 265','Anker Nano Power Bank','Logitech MX Master 3S'] },
+    'best-home-kitchen': { title: 'Best Home & Kitchen Products', intro: 'Useful appliances and household products selected for shoppers who want practical benefits without sorting through endless options.', products: ['Ninja 4-Qt Air Fryer AF101','Govee Smart LED Light Bulbs','OXO Good Grips Refrigerator Organization Set','Dyson V8 Cordless Vacuum','Instant Vortex Plus Air Fryer'] },
+    'best-tools-diy': { title: 'Best Tools & DIY Products', intro: 'Tools and project gear for homeowners and DIYers who want capable equipment and a clearer idea of what each product is best suited for.', products: ['DEWALT 20V MAX Drill/Impact Driver Combo Kit'] },
+    'best-outdoor': { title: 'Best Outdoor Products', intro: 'Outdoor products for grilling, entertaining, heating, and spending more time outside.', products: ['Solo Stove Tower Patio Heater','Weber Spirit E-210 Gas Grill'] },
+    'best-smart-home': { title: 'Best Smart Home Products', intro: 'Connected home products that can add convenience without turning everyday tasks into complicated technology projects.', products: ['TP-Link Kasa Smart Outdoor Plug EP40M','Ring Battery Doorbell','Amazon Echo Dot'] },
+    'best-products-under-100': { title: 'Best Products for Budget Shoppers', intro: 'A value-focused shortlist for shoppers who want useful products while keeping an eye on cost. Prices and availability can change, so confirm current details before purchasing.', products: ['Apple AirPods 4','Anker Nano Power Bank','Govee Smart LED Light Bulbs','OXO Good Grips Refrigerator Organization Set','YETI Rambler Drinkware','Stanley Quencher H2.0 Tumbler','Logitech MX Master 3S','Shark Navigator Lift-Away'] },
+    'best-everyday-products': { title: 'Best Everyday Products', intro: 'Useful products for common daily needs—from staying organized and powered up to making work, cooking, and home life easier.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Ninja 4-Qt Air Fryer AF101','Anker Nano Power Bank','OXO Good Grips Refrigerator Organization Set','Amazon Echo Dot','Logitech MX Master 3S','Shark Navigator Lift-Away'] }
+  };
+
+  return Object.keys(guideConfig).map((slug) => ({
+    params: { slug },
+    props: { guide: guideConfig[slug] }
+  }));
+}
+
+const { guide } = Astro.props;
+const selected = guide.products.map((name) => catalog.find((product) => product.name === name)).filter(Boolean);
 ---
 <BaseLayout title={`${guide.title} | Buy Better Finds`} description={guide.intro}>
 <section class="guide-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/guides/">Buying Guides</a><span>/</span><strong>{guide.title}</strong></div><div class="eyebrow">BUYING GUIDE</div><h1>{guide.title}</h1><p>{guide.intro}</p></div></section>
