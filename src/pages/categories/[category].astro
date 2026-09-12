@@ -4,68 +4,56 @@ import { products } from '../../data/products.js';
 
 export function getStaticPaths() {
   const categoryNames = {
-    home: 'Home & Kitchen',
-    tech: 'Tech',
-    outdoor: 'Outdoor',
-    kitchen: 'Home & Kitchen',
-    lifestyle: 'Lifestyle',
-    'tools-diy': 'Tools & DIY',
-    'smart-home': 'Smart Home',
-    fitness: 'Fitness'
+    home: 'Home & Kitchen', tech: 'Tech', outdoor: 'Outdoor', kitchen: 'Home & Kitchen', lifestyle: 'Lifestyle', 'tools-diy': 'Tools & DIY', 'smart-home': 'Smart Home', fitness: 'Fitness'
   };
-
-  return Object.entries(categoryNames).map(([slug, name]) => ({
-    params: { category: slug },
-    props: { name }
-  }));
+  return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
 }
 
 const { name } = Astro.props;
 const matches = products.filter((product) => product.category === name);
+const categorySlug = Object.entries({home:'Home & Kitchen',tech:'Tech',outdoor:'Outdoor',kitchen:'Home & Kitchen',lifestyle:'Lifestyle','tools-diy':'Tools & DIY','smart-home':'Smart Home',fitness:'Fitness'}).find(([, value]) => value === name)?.[0] ?? 'products';
 ---
-<BaseLayout title={`${name} Products | Buy Better Finds`} description={`Browse Buy Better Finds recommendations for ${name}.`}>
-  <section class="section">
+<BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, and product sources.`}>
+  <section class="section category-page">
     <div class="container">
-      <div class="eyebrow">CATEGORY</div>
-      <h1>{name}</h1>
-      <p class="lead">Specific products, practical buying notes, and direct product sources—without filler.</p>
-      <div class="grid category-product-grid">
-        {matches.map((product) => (
-          <article class="card product-card">
-            <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-              <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
-              <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
-            </a>
-            <div class="tag">{product.category}</div>
-            <h3>{product.name}</h3>
-            <p>{product.why}</p>
-            <p><strong>{product.price}</strong></p>
-            <a class="arrow" href={`/products/${product.slug}/`}>View product →</a>
-          </article>
-        ))}
+      <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>{name}</strong></div>
+      <div class="category-hero">
+        <div><div class="eyebrow">BUYING GUIDE · {matches.length} FINDS</div><h1>{name}</h1><p class="lead">Our shortlist of products worth considering, with practical notes on who each one is for and what to watch before buying.</p></div>
+        <div class="category-rule"><strong>HOW TO SHOP</strong><span>Start with your use case, then compare the tradeoffs.</span></div>
       </div>
-      {matches.length === 0 && (
-        <p>No products are published in this category yet. <a class="arrow" href="/products/">See all products →</a></p>
-      )}
+
+      {matches.length > 0 ? <>
+        <div class="guide-intro"><div><div class="eyebrow">OUR APPROACH</div><h2>Don't just compare features.</h2></div><p>Use these recommendations as a starting point. We focus on practical fit, useful features, and the limitations that can matter after you buy.</p></div>
+        <div class="grid category-product-grid">
+          {matches.map((product, index) => (
+            <article class="card product-card">
+              <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+                {index === 0 && <span class="pick-badge">TOP PICK</span>}
+                <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+                <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
+              </a>
+              <div class="tag">{index === 0 ? 'TOP PICK · ' : ''}{product.category}</div>
+              <h3>{product.name}</h3>
+              <div class="best-for"><strong>BEST FOR</strong><span>{product.bestFor}</span></div>
+              <p>{product.why}</p>
+              <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
+            </article>
+          ))}
+        </div>
+      </> : <p>No products are published in this category yet. <a class="arrow" href="/products/">See all products →</a></p>}
+
+      <div class="category-cta"><div><div class="eyebrow">KEEP EXPLORING</div><h2>Want to see everything?</h2><p>Browse the full Buy Better Finds catalog or jump to another category.</p></div><div class="cta-actions"><a class="btn primary" href="/products/">View all finds →</a><a class="btn secondary" href="/categories/">All categories</a></div></div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .product-card{overflow:hidden}
-  .product-image{position:relative;display:block;aspect-ratio:4/3;margin:-1px -1px 22px;background:#f3f5f8;overflow:hidden;border-radius:18px 18px 0 0}
-  .product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}
-  .product-image:hover img{transform:scale(1.04)}
-  .image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}
-  .image-fallback span{font-size:64px;line-height:1}.image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
-  @media(max-width:800px){.category-product-grid{grid-template-columns:1fr}}
+  .category-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:30px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.breadcrumbs strong{color:#111827}
+  .category-hero{display:grid;grid-template-columns:1.5fr .7fr;gap:40px;align-items:end}.category-hero h1{font-size:clamp(40px,6vw,68px);margin:8px 0 15px}.category-rule{padding:20px;border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;display:grid;gap:6px}.category-rule strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.category-rule span{color:#475569;line-height:1.5}
+  .guide-intro{margin:55px 0 28px;padding:28px;border-bottom:1px solid #d9dee8;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.guide-intro h2{margin:6px 0;font-size:30px}.guide-intro p{color:#64748b;line-height:1.7;margin:0}
+  .product-card{overflow:hidden}.product-image{position:relative;display:block;aspect-ratio:4/3;margin:-1px -1px 22px;background:#f3f5f8;overflow:hidden;border-radius:18px 18px 0 0}.product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}.product-image:hover img{transform:scale(1.04)}.pick-badge{position:absolute;z-index:2;top:14px;left:14px;background:#c8102e;color:#fff;font-size:10px;font-weight:900;letter-spacing:.12em;padding:7px 10px;border-radius:999px}.image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}.image-fallback span{font-size:64px;line-height:1}.image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
+  .best-for{margin:15px 0;padding:12px;border-radius:10px;background:#f8fafc;display:grid;gap:4px}.best-for strong{font-size:10px;letter-spacing:.12em;color:#c8102e}.best-for span{font-size:14px;color:#334155;line-height:1.45}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}.card-footer strong{color:#111827}.card-footer .arrow{white-space:nowrap}
+  .category-cta{margin-top:65px;padding:34px;border-radius:22px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.category-cta h2{color:#fff;margin:7px 0}.category-cta p{color:#cbd5e1;margin:0}.cta-actions{display:flex;gap:10px;flex-wrap:wrap}.category-cta .btn.secondary{border-color:#64748b;color:#fff}
+  @media(max-width:850px){.category-hero,.guide-intro{grid-template-columns:1fr}.category-cta{flex-direction:column;align-items:flex-start}.category-product-grid{grid-template-columns:1fr}}
 </style>
-<script>
-  document.querySelectorAll('.product-image img').forEach((img) => {
-    img.addEventListener('error', () => {
-      img.style.display = 'none';
-      const fallback = img.nextElementSibling;
-      if (fallback) fallback.style.display = 'flex';
-    });
-  });
-</script>
+<script>document.querySelectorAll('.product-image img').forEach((img) => { img.addEventListener('error', () => { img.style.display = 'none'; const fallback = img.nextElementSibling; if (fallback) fallback.style.display = 'flex'; }); });</script>
