@@ -1,0 +1,40 @@
+---
+import { getRecommendation } from '../data/recommendations.js';
+
+const { product, related = [] } = Astro.props;
+const items = [product, ...related].slice(0, 4);
+---
+<section class="comparison-section" aria-labelledby="comparison-heading">
+  <div class="comparison-heading">
+    <div class="eyebrow">COMPARE BEFORE YOU BUY</div>
+    <h2 id="comparison-heading">How it compares with nearby options</h2>
+    <p>Use the score, best-for guidance, and tradeoffs to narrow the choice.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Score</th>
+          <th>Best for</th>
+          <th>Watch</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => {
+          const rec = getRecommendation(item);
+          return <tr class:list={{ current: item.slug === product.slug }}>
+            <td><a href={`/products/${item.slug}/`}>{item.name}</a>{item.slug === product.slug && <span class="current-badge">THIS FIND</span>}</td>
+            <td><strong>{rec.score}/10</strong></td>
+            <td>{rec.bestFor}</td>
+            <td>{item.watch}</td>
+          </tr>;
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .comparison-section{margin-top:70px}.comparison-heading{text-align:center;max-width:760px;margin:0 auto 25px}.comparison-heading h2{font-size:clamp(28px,4vw,42px);margin:8px 0}.comparison-heading p{color:#64748b;font-size:17px}.table-wrap{overflow-x:auto;border:1px solid #d9dee8;border-radius:18px;background:#fff}.table-wrap table{width:100%;border-collapse:collapse;min-width:760px}.table-wrap th,.table-wrap td{text-align:left;padding:16px 15px;border-bottom:1px solid #e2e8f0;vertical-align:top;line-height:1.5;font-size:13px}.table-wrap th{background:#f8fafc;color:#475569;text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:900}.table-wrap tr:last-child td{border-bottom:0}.table-wrap tr.current{background:#fff7f8}.table-wrap td:first-child{font-weight:800;color:#111827;width:26%}.table-wrap td:first-child a{color:#111827;text-decoration:none}.table-wrap td:first-child a:hover{text-decoration:underline}.table-wrap td:nth-child(2){white-space:nowrap;color:#c8102e}.current-badge{display:block;width:max-content;margin-top:5px;padding:3px 6px;border-radius:5px;background:#c8102e;color:#fff;font-size:8px;letter-spacing:.08em}.table-wrap td:nth-child(3),.table-wrap td:nth-child(4){color:#64748b}
+</style>
