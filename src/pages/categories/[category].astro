@@ -2,16 +2,23 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
+const categoryNames = {
+  'home-kitchen': 'Home & Kitchen',
+  tech: 'Tech',
+  'tools-diy': 'Tools & DIY',
+  outdoor: 'Outdoor',
+  'smart-home': 'Smart Home',
+  fitness: 'Fitness',
+  lifestyle: 'Lifestyle'
+};
+
 export function getStaticPaths() {
-  const categoryNames = {
-    home: 'Home & Kitchen', tech: 'Tech', outdoor: 'Outdoor', kitchen: 'Home & Kitchen', lifestyle: 'Lifestyle', 'tools-diy': 'Tools & DIY', 'smart-home': 'Smart Home', fitness: 'Fitness'
-  };
   return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
 }
 
 const { name } = Astro.props;
 const matches = products.filter((product) => product.category === name);
-const categorySlug = Object.entries({home:'Home & Kitchen',tech:'Tech',outdoor:'Outdoor',kitchen:'Home & Kitchen',lifestyle:'Lifestyle','tools-diy':'Tools & DIY','smart-home':'Smart Home',fitness:'Fitness'}).find(([, value]) => value === name)?.[0] ?? 'products';
+const categorySlug = Object.entries(categoryNames).find(([, value]) => value === name)?.[0] ?? 'products';
 ---
 <BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, and product sources.`}>
   <section class="section category-page">
