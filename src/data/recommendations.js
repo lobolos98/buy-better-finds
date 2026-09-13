@@ -1,173 +1,41 @@
 export const recommendationData = {
-  'sony-wh-1000xm5': {
-    score: 9.2,
-    label: 'Strong recommendation',
-    pros: ['Excellent active noise cancellation', 'Comfortable for long listening sessions', 'Strong battery life and multipoint support'],
-    cons: ['Premium price', 'Fit and sound preferences vary by listener'],
-    bestFor: 'Travelers, commuters, remote workers, and focused listeners',
-    skipIf: 'You mainly want the lowest-cost option or a compact travel headset'
-  },
-  'ninja-af101': {
-    score: 8.8,
-    label: 'Recommended',
-    pros: ['Compact countertop footprint', 'Simple everyday cooking workflow', 'Good fit for smaller households'],
-    cons: ['Limited capacity for large meals', 'Counter space still matters'],
-    bestFor: 'Smaller households and quick weeknight meals',
-    skipIf: 'You regularly cook large batches for a crowd'
-  },
-  'dewalt-dck240c2': {
-    score: 9.0,
-    label: 'Strong recommendation',
-    pros: ['Useful drill and impact-driver combination', 'Two-tool flexibility for DIY work', 'Established cordless platform'],
-    cons: ['Kit contents can vary', 'More tool than casual users may need'],
-    bestFor: 'Homeowners, DIY projects, repairs, and general drilling/driving',
-    skipIf: 'You only need an occasional light-duty household drill'
-  },
-  'solo-stove-tower': {
-    score: 8.5,
-    label: 'Recommended for the right space',
-    pros: ['Purpose-built for outdoor entertaining', 'Tall format for patio use', 'Premium outdoor presentation'],
-    cons: ['High price', 'Large footprint'],
-    bestFor: 'Dedicated patios, decks, and outdoor entertaining areas',
-    skipIf: 'You have limited outdoor space or a tight budget'
-  },
-  'apple-airpods-4': {
-    score: 8.9,
-    label: 'Recommended',
-    pros: ['Excellent Apple-device integration', 'Compact everyday design', 'Convenient wireless experience'],
-    cons: ['Open-style fit is not ideal for everyone', 'Noise-cancelling needs vary by version'],
-    bestFor: 'Apple users wanting simple everyday wireless listening',
-    skipIf: 'You need maximum isolation or a different ecosystem'
-  },
-  'apple-ipad-a16': {
-    score: 9.0,
-    label: 'Strong recommendation',
-    pros: ['Fast A16 chip', 'Versatile everyday tablet format', 'Strong accessory ecosystem'],
-    cons: ['Keyboard and Pencil accessories add cost', 'May be more tablet than simple media users need'],
-    bestFor: 'Students, streaming, browsing, light productivity, and everyday use',
-    skipIf: 'You need a full laptop workflow or want the lowest total cost'
-  },
-  'garmin-forerunner-265': {
-    score: 9.1,
-    label: 'Strong recommendation',
-    pros: ['Strong running and training features', 'Bright AMOLED display', 'Useful recovery and training metrics'],
-    cons: ['More specialized than a basic fitness tracker', 'Feature depth can be overwhelming for casual users'],
-    bestFor: 'Runners and people following structured training plans',
-    skipIf: 'You only want basic steps, notifications, and activity tracking'
-  },
-  'weber-spirit-e210': {
-    score: 8.7,
-    label: 'Recommended',
-    pros: ['Compact two-burner format', 'Straightforward heat control', 'Established grill platform'],
-    cons: ['Smaller cooking area', 'Requires a propane tank'],
-    bestFor: 'Everyday backyard grilling in smaller spaces',
-    skipIf: 'You regularly cook for large groups'
-  },
-  'tp-link-ep40m': {
-    score: 8.8,
-    label: 'Recommended',
-    pros: ['Two independently controlled outlets', 'Outdoor-rated design', 'Useful scheduling and smart-home features'],
-    cons: ['Ecosystem compatibility should be checked', 'Smart features depend on setup'],
-    bestFor: 'Outdoor lights and scheduled smart-home devices',
-    skipIf: 'You want a completely offline/manual outdoor plug'
-  },
-  'ring-battery-doorbell': {
-    score: 8.4,
-    label: 'Recommended with subscription caveat',
-    pros: ['Flexible battery installation', 'Useful front-door monitoring', 'Recognizable smart-home ecosystem'],
-    cons: ['Subscription features can add recurring cost', 'Battery devices require periodic charging'],
-    bestFor: 'Homes wanting flexible front-door video monitoring',
-    skipIf: 'You want to avoid subscriptions or prefer wired-only systems'
-  },
-  'amazon-echo-dot': {
-    score: 8.6,
-    label: 'Recommended',
-    pros: ['Compact footprint', 'Convenient voice controls', 'Useful smart-home routines'],
-    cons: ['Value depends on ecosystem adoption', 'Privacy preferences should be considered'],
-    bestFor: 'Voice control, timers, music, and connected-home routines',
-    skipIf: 'You do not want a connected voice assistant in your home'
-  },
-  'anker-nano-power-bank': {
-    score: 8.7,
-    label: 'Recommended',
-    pros: ['Portable form factor', 'Convenient backup power', 'Strong accessory-brand reputation'],
-    cons: ['Exact capacity and connector vary by model', 'Compact size limits total energy storage'],
-    bestFor: 'Everyday phone backup power and travel',
-    skipIf: 'You need to recharge multiple devices for several days'
-  },
-  'govee-smart-light-bulbs': {
-    score: 8.5,
-    label: 'Recommended for smart lighting',
-    pros: ['Flexible color lighting', 'App-based control', 'Useful for rooms and entertainment spaces'],
-    cons: ['Specifications vary by bulb', 'Compatibility should be confirmed before purchase'],
-    bestFor: 'Smart-home ambiance and customizable room lighting',
-    skipIf: 'You only need basic non-connected lighting'
-  },
-  'oxo-fridge-organizer': {
-    score: 8.6,
-    label: 'Recommended for organization',
-    pros: ['Simple storage improvement', 'Useful for grouping refrigerator items', 'Easy to understand use case'],
-    cons: ['Requires accurate shelf measurements', 'Organization benefit depends on refrigerator layout'],
-    bestFor: 'Reducing refrigerator clutter and improving shelf organization',
-    skipIf: 'Your refrigerator has limited shelf depth or unusual dimensions'
-  },
-  'dyson-v8': {
-    score: 8.5,
-    label: 'Recommended for quick cleaning',
-    pros: ['Convenient cordless format', 'Easy for spot cleaning', 'Useful for hard-to-reach areas'],
-    cons: ['Limited battery runtime compared with some larger options', 'Smaller bin'],
-    bestFor: 'Quick daily cleanup and smaller cleaning jobs',
-    skipIf: 'You need maximum runtime or heavy-duty whole-home cleaning'
-  },
-  'instant-vortex-plus': {
-    score: 8.6,
-    label: 'Recommended',
-    pros: ['Versatile countertop format', 'Fast everyday cooking', 'Multiple cooking functions'],
-    cons: ['Variants differ in size and functions', 'Counter space is required'],
-    bestFor: 'Fast everyday countertop cooking',
-    skipIf: 'You have very limited counter space or rarely cook at home'
-  },
-  'yeti-rambler': {
-    score: 8.9,
-    label: 'Recommended',
-    pros: ['Durable insulated design', 'Broad range of sizes', 'Strong fit for everyday and outdoor use'],
-    cons: ['Premium pricing on some models', 'Size and lid choice matter'],
-    bestFor: 'Commuting, outdoor use, and people who carry drinks daily',
-    skipIf: 'You prefer lightweight disposable or very inexpensive drinkware'
-  },
-  'stanley-quencher': {
-    score: 8.5,
-    label: 'Recommended for high-volume hydration',
-    pros: ['Large capacity', 'Insulated design', 'Convenient everyday hydration format'],
-    cons: ['Large footprint', 'Not ideal for every cup holder or bag'],
-    bestFor: 'People who want to carry a large drink throughout the day',
-    skipIf: 'You prefer compact drinkware or frequently travel light'
-  },
-  'logitech-mx-master-3s': {
-    score: 9.1,
-    label: 'Strong recommendation',
-    pros: ['Excellent productivity-oriented controls', 'Ergonomic design', 'Useful multi-device workflow'],
-    cons: ['Larger shape is not ideal for every hand', 'Premium productivity mouse pricing'],
-    bestFor: 'Desktop productivity, creative work, and multi-device users',
-    skipIf: 'You need a tiny travel mouse or prefer a gaming-focused design'
-  },
-  'shark-navigator-lift-away': {
-    score: 8.7,
-    label: 'Recommended',
-    pros: ['Versatile upright format', 'Lift-away concept for stairs and above-floor areas', 'Good whole-home orientation'],
-    cons: ['Takes more storage space than many cordless sticks', 'Less convenient for quick grab-and-go cleaning'],
-    bestFor: 'Whole-home floor cleaning and homes needing an upright format',
-    skipIf: 'You prioritize minimal storage space and cordless portability'
-  }
+  'sony-wh-1000xm5': { score: 9.2, label: 'Strong recommendation', pros: ['Excellent active noise cancellation', 'Comfortable for long listening sessions', 'Strong battery life and multipoint support'], cons: ['Premium price', 'Fit and sound preferences vary by listener'], bestFor: 'Travelers, commuters, remote workers, and focused listeners', skipIf: 'You mainly want the lowest-cost option or a compact travel headset' },
+  'ninja-af101': { score: 8.8, label: 'Recommended', pros: ['Compact countertop footprint', 'Simple everyday cooking workflow', 'Good fit for smaller households'], cons: ['Limited capacity for large meals', 'Counter space still matters'], bestFor: 'Smaller households and quick weeknight meals', skipIf: 'You regularly cook large batches for a crowd' },
+  'dewalt-dck240c2': { score: 9.0, label: 'Strong recommendation', pros: ['Useful drill and impact-driver combination', 'Two-tool flexibility for DIY work', 'Established cordless platform'], cons: ['Kit contents can vary', 'More tool than casual users may need'], bestFor: 'Homeowners, DIY projects, repairs, and general drilling/driving', skipIf: 'You only need an occasional light-duty household drill' },
+  'solo-stove-tower': { score: 8.5, label: 'Recommended for the right space', pros: ['Purpose-built for outdoor entertaining', 'Tall format for patio use', 'Premium outdoor presentation'], cons: ['High price', 'Large footprint'], bestFor: 'Dedicated patios, decks, and outdoor entertaining areas', skipIf: 'You have limited outdoor space or a tight budget' },
+  'apple-airpods-4': { score: 8.9, label: 'Recommended', pros: ['Excellent Apple-device integration', 'Compact everyday design', 'Convenient wireless experience'], cons: ['Open-style fit is not ideal for everyone', 'Noise-cancelling needs vary by version'], bestFor: 'Apple users wanting simple everyday wireless listening', skipIf: 'You need maximum isolation or a different ecosystem' },
+  'apple-ipad-a16': { score: 9.0, label: 'Strong recommendation', pros: ['Fast A16 chip', 'Versatile everyday tablet format', 'Strong accessory ecosystem'], cons: ['Keyboard and Pencil accessories add cost', 'May be more tablet than simple media users need'], bestFor: 'Students, streaming, browsing, light productivity, and everyday use', skipIf: 'You need a full laptop workflow or want the lowest total cost' },
+  'garmin-forerunner-265': { score: 9.1, label: 'Strong recommendation', pros: ['Strong running and training features', 'Bright AMOLED display', 'Useful recovery and training metrics'], cons: ['More specialized than a basic fitness tracker', 'Feature depth can be overwhelming for casual users'], bestFor: 'Runners and people following structured training plans', skipIf: 'You only want basic steps, notifications, and activity tracking' },
+  'weber-spirit-e210': { score: 8.7, label: 'Recommended', pros: ['Compact two-burner format', 'Straightforward heat control', 'Established grill platform'], cons: ['Smaller cooking area', 'Requires a propane tank'], bestFor: 'Everyday backyard grilling in smaller spaces', skipIf: 'You regularly cook for large groups' },
+  'tp-link-ep40m': { score: 8.8, label: 'Recommended', pros: ['Two independently controlled outlets', 'Outdoor-rated design', 'Useful scheduling and smart-home features'], cons: ['Ecosystem compatibility should be checked', 'Smart features depend on setup'], bestFor: 'Outdoor lights and scheduled smart-home devices', skipIf: 'You want a completely offline/manual outdoor plug' },
+  'ring-battery-doorbell': { score: 8.4, label: 'Recommended with subscription caveat', pros: ['Flexible battery installation', 'Useful front-door monitoring', 'Recognizable smart-home ecosystem'], cons: ['Subscription features can add recurring cost', 'Battery devices require periodic charging'], bestFor: 'Homes wanting flexible front-door video monitoring', skipIf: 'You want to avoid subscriptions or prefer wired-only systems' },
+  'amazon-echo-dot': { score: 8.6, label: 'Recommended', pros: ['Compact footprint', 'Convenient voice controls', 'Useful smart-home routines'], cons: ['Value depends on ecosystem adoption', 'Privacy preferences should be considered'], bestFor: 'Voice control, timers, music, and connected-home routines', skipIf: 'You do not want a connected voice assistant in your home' },
+  'anker-nano-power-bank': { score: 8.7, label: 'Recommended', pros: ['Portable form factor', 'Convenient backup power', 'Strong accessory-brand reputation'], cons: ['Exact capacity and connector vary by model', 'Compact size limits total energy storage'], bestFor: 'Everyday phone backup power and travel', skipIf: 'You need to recharge multiple devices for several days' },
+  'govee-smart-light-bulbs': { score: 8.5, label: 'Recommended for smart lighting', pros: ['Flexible color lighting', 'App-based control', 'Useful for rooms and entertainment spaces'], cons: ['Specifications vary by bulb', 'Compatibility should be confirmed before purchase'], bestFor: 'Smart-home ambiance and customizable room lighting', skipIf: 'You only need basic non-connected lighting' },
+  'oxo-fridge-organizer': { score: 8.6, label: 'Recommended for organization', pros: ['Simple storage improvement', 'Useful for grouping refrigerator items', 'Easy to understand use case'], cons: ['Requires accurate shelf measurements', 'Organization benefit depends on refrigerator layout'], bestFor: 'Reducing refrigerator clutter and improving shelf organization', skipIf: 'Your refrigerator has limited shelf depth or unusual dimensions' },
+  'dyson-v8': { score: 8.5, label: 'Recommended for quick cleaning', pros: ['Convenient cordless format', 'Easy for spot cleaning', 'Useful for hard-to-reach areas'], cons: ['Limited battery runtime compared with some larger options', 'Smaller bin'], bestFor: 'Quick daily cleanup and smaller cleaning jobs', skipIf: 'You need maximum runtime or heavy-duty whole-home cleaning' },
+  'instant-vortex-plus': { score: 8.6, label: 'Recommended', pros: ['Versatile countertop format', 'Fast everyday cooking', 'Multiple cooking functions'], cons: ['Variants differ in size and functions', 'Counter space is required'], bestFor: 'Fast everyday countertop cooking', skipIf: 'You have very limited counter space or rarely cook at home' },
+  'yeti-rambler': { score: 8.9, label: 'Recommended', pros: ['Durable insulated design', 'Broad range of sizes', 'Strong fit for everyday and outdoor use'], cons: ['Premium pricing on some models', 'Size and lid choice matter'], bestFor: 'Commuting, outdoor use, and people who carry drinks daily', skipIf: 'You prefer lightweight disposable or very inexpensive drinkware' },
+  'stanley-quencher': { score: 8.5, label: 'Recommended for high-volume hydration', pros: ['Large capacity', 'Insulated design', 'Convenient everyday hydration format'], cons: ['Large footprint', 'Not ideal for every cup holder or bag'], bestFor: 'People who want to carry a large drink throughout the day', skipIf: 'You prefer compact drinkware or frequently travel light' },
+  'logitech-mx-master-3s': { score: 9.1, label: 'Strong recommendation', pros: ['Excellent productivity-oriented controls', 'Ergonomic design', 'Useful multi-device workflow'], cons: ['Larger shape is not ideal for every hand', 'Premium productivity mouse pricing'], bestFor: 'Desktop productivity, creative work, and multi-device users', skipIf: 'You need a tiny travel mouse or prefer a gaming-focused design' },
+  'shark-navigator-lift-away': { score: 8.7, label: 'Recommended', pros: ['Versatile upright format', 'Lift-away concept for stairs and above-floor areas', 'Good whole-home orientation'], cons: ['Takes more storage space than many cordless sticks', 'Less convenient for quick grab-and-go cleaning'], bestFor: 'Whole-home floor cleaning and homes needing an upright format', skipIf: 'You prioritize minimal storage space and cordless portability' },
+  'disney-stitch-plush': { score: 8.8, label: 'Recommended gift', pros: ['Recognizable Disney character', 'Easy gift category fit', 'Broad appeal for fans'], cons: ['Exact size and edition vary', 'Collector value depends on the specific release'], bestFor: 'Disney fans, birthdays, holidays, and character-themed gifts', skipIf: 'You need a highly specialized collectible or guaranteed limited edition' },
+  'disney-lorcana-hunny-rescue': { score: 9.0, label: 'Strong collectible pick', pros: ['Disney fandom appeal', 'Combines collecting with gameplay', 'Special-edition positioning'], cons: ['Availability can change quickly', 'Trading-card products can fluctuate in price'], bestFor: 'Disney collectors and Lorcana players', skipIf: 'You want a simple non-collectible gift with predictable pricing' },
+  'funko-harry-potter-bitty-bundle': { score: 8.6, label: 'Recommended for collectors', pros: ['Compact display footprint', 'Strong fandom appeal', 'Accessible entry point to collecting'], cons: ['Small scale may not suit every collector', 'Mystery formats can reduce control over exact variants'], bestFor: 'Harry Potter fans, desk displays, and casual collectors', skipIf: 'You only want one specific character or a large display figure' },
+  'pokemon-30th-elite-trainer-box': { score: 9.1, label: 'Strong collectible pick', pros: ['Major Pokémon anniversary appeal', 'Strong trading-card collector interest', 'Giftable presentation'], cons: ['Demand can push prices upward', 'Availability may be limited'], bestFor: 'Pokémon TCG collectors and serious fans', skipIf: 'You want a low-cost casual card game' },
+  'lego-botanicals-mushrooms': { score: 9.0, label: 'Strong recommendation', pros: ['Build plus display value', 'Appeals to adults as well as LEGO fans', 'Fits the broader Botanicals trend'], cons: ['Display appeal matters more than traditional play', 'Premium LEGO sets can be expensive'], bestFor: 'Adult builders, décor gifts, and creative hobbyists', skipIf: 'You primarily want an action-oriented kids play set' },
+  'lego-city-lava-rollercoaster': { score: 9.0, label: 'Strong recommendation', pros: ['High build and play value', 'Imaginative amusement-park theme', 'Good fit for LEGO City fans'], cons: ['Requires build and storage space', 'Higher price than small LEGO sets'], bestFor: 'Creative builders and kids who enjoy longer LEGO projects', skipIf: 'You want a quick, inexpensive toy or have limited storage' },
+  'magna-tiles-undersea': { score: 9.1, label: 'Strong recommendation', pros: ['Open-ended creative play', 'Reusable building system', 'Supports independent experimentation'], cons: ['Expansion sets can become costly', 'Best value comes from repeated use'], bestFor: 'Creative building, open-ended play, and families who want reusable toys', skipIf: 'You want a single-purpose electronic toy' },
+  'crunchlabs-crunchinator': { score: 8.8, label: 'Recommended for makers', pros: ['Hands-on problem solving', 'Build-focused experience', 'Strong STEM positioning'], cons: ['Best for kids who enjoy tinkering', 'Less appealing for passive play preferences'], bestFor: 'STEM-minded kids and young makers', skipIf: 'You need a toy that works with little setup or building' },
+  'educational-kanoodle': { score: 8.7, label: 'Recommended', pros: ['Compact and travel-friendly', 'Screen-free logic play', 'Repeatable challenges'], cons: ['Challenge level may not fit every age', 'Puzzle appeal is personal'], bestFor: 'Travel, quiet play, and puzzle-loving kids or adults', skipIf: 'You want a social multiplayer game rather than solo puzzles' },
+  'uno-championship-series': { score: 8.6, label: 'Recommended for groups', pros: ['Easy to learn', 'Works well for groups', 'Tournament-style presentation'], cons: ['Limited strategic depth', 'Large set may be unnecessary for casual players'], bestFor: 'Family game nights and casual competitive play', skipIf: 'You want a complex strategy board game' },
+  'cerave-hydrating-cleanser': { score: 8.8, label: 'Recommended for a simple routine', pros: ['Straightforward daily-use format', 'Widely available', 'Easy to fit into a basic routine'], cons: ['Skin compatibility varies', 'Not designed for every specialized skincare goal'], bestFor: 'People seeking a simple everyday facial cleanser', skipIf: 'You need a targeted product for a specific skin concern' },
+  'la-roche-posay-anthelios': { score: 9.0, label: 'Strong recommendation', pros: ['Strong everyday sun-protection focus', 'Multiple formula options', 'Established skincare brand'], cons: ['Finish varies by formula', 'Exact SPF and formulation matter'], bestFor: 'Daily facial sun protection and shoppers comparing sunscreen formulas', skipIf: 'You dislike the feel of the particular formula you select' },
+  'elf-halo-glow-liquid-filter': { score: 8.7, label: 'Recommended for glow', pros: ['Flexible complexion use', 'Glow-focused finish', 'Accessible price positioning'], cons: ['Shade matching takes care', 'Finish preference is personal'], bestFor: 'Makeup users who want a luminous complexion product', skipIf: 'You prefer a fully matte or minimal-finish complexion' },
+  'olaplex-no3': { score: 8.7, label: 'Recommended for the right hair routine', pros: ['Recognizable repair-focused product', 'Simple pre-shampoo format', 'Strong salon-brand awareness'], cons: ['Premium compared with basic conditioners', 'Hair needs vary considerably'], bestFor: 'People building a repair-focused routine for processed or damaged hair', skipIf: 'Your hair is healthy and you do not need a treatment step' },
+  'philips-oneblade': { score: 8.8, label: 'Recommended for versatility', pros: ['Compact grooming format', 'Useful for trimming and shaping', 'Broad everyday use case'], cons: ['Replacement blades cost extra', 'Not the same as a traditional close shave'], bestFor: 'Everyday beard trimming, shaping, and flexible grooming', skipIf: 'You want the closest possible traditional shave' }
 };
 
 export function getRecommendation(product) {
-  return recommendationData[product.slug] ?? {
-    score: null,
-    label: 'Editorial recommendation',
-    pros: [],
-    cons: [],
-    bestFor: product.bestFor,
-    skipIf: 'Compare the product with alternatives before buying'
-  };
+  return recommendationData[product.slug] ?? { score: null, label: 'Editorial recommendation', pros: [], cons: [], bestFor: product.bestFor, skipIf: 'Compare the product with alternatives before buying' };
 }
