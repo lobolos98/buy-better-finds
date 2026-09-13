@@ -13,7 +13,20 @@ const categoryNames = {
 };
 
 export function getStaticPaths() {
-  return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
+  const categoryNames = {
+    'home-kitchen': 'Home & Kitchen',
+    tech: 'Tech',
+    'tools-diy': 'Tools & DIY',
+    outdoor: 'Outdoor',
+    'smart-home': 'Smart Home',
+    fitness: 'Fitness',
+    lifestyle: 'Lifestyle'
+  };
+
+  return Object.entries(categoryNames).map(([slug, name]) => ({
+    params: { category: slug },
+    props: { name }
+  }));
 }
 
 const { name } = Astro.props;
