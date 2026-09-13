@@ -1,6 +1,7 @@
 <header class="header">
   <div class="container nav">
-    <a class="logo" href="/">BUY <span>BETTER</span> FINDS</a>
+    <a class="logo" href="/" aria-label="Buy Better Finds home">BUY <span>BETTER</span> FINDS</a>
+
     <nav class="links" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/products/">Products</a>
@@ -11,6 +12,208 @@
       <a href="/why-we-recommend/">Why We Recommend</a>
       <a href="/about/">About</a>
     </nav>
-    <a class="btn primary nav-cta" href="/products/">Shop Finds →</a>
+
+    <a class="btn primary nav-cta" href="/products/">Shop Finds <span aria-hidden="true">→</span></a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/products/">Products</a>
+      <a href="/categories/">Categories</a>
+      <a href="/best/">Best Of</a>
+      <a href="/guides/">Buying Guides</a>
+      <a href="/comparisons/">Comparisons</a>
+      <a href="/why-we-recommend/">Why We Recommend</a>
+      <a href="/about/">About</a>
+      <a class="mobile-cta" href="/products/">Shop Finds <span aria-hidden="true">→</span></a>
+    </nav>
   </div>
 </header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .logo span {
+    color: #1d4ed8;
+  }
+
+  .links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .links a,
+  .mobile-menu a {
+    color: #374151;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .links a:hover,
+  .links a:focus-visible,
+  .mobile-menu a:hover,
+  .mobile-menu a:focus-visible {
+    color: #1d4ed8;
+  }
+
+  .nav-cta {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 9px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background: #111827;
+    border-radius: 2px;
+  }
+
+  .mobile-menu {
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 20px 18px;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 15px;
+  }
+
+  .mobile-menu .mobile-cta {
+    margin-top: 10px;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 7px;
+    background: #1d4ed8;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .mobile-menu .mobile-cta:hover,
+  .mobile-menu .mobile-cta:focus-visible {
+    color: #ffffff;
+    background: #1e40af;
+  }
+
+  @media (max-width: 1100px) {
+    .links {
+      gap: 12px;
+    }
+
+    .links a {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .nav {
+      min-height: 64px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .links,
+    .nav-cta {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 14px;
+    }
+
+    .mobile-menu nav {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('#mobile-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      menu.hidden = isOpen;
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+        menu.hidden = true;
+      });
+    });
+  }
+</script>
