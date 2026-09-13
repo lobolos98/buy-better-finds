@@ -12,7 +12,11 @@ const comparisonConfig = {
 };
 
 export function getStaticPaths() {
-  return Object.entries(comparisonConfig).map(([slug, comparison]) => ({ params: { slug }, props: { comparison } }));
+  const paths = Object.entries(comparisonConfig).map(([slug, comparison]) => ({
+    params: { slug },
+    props: { comparison }
+  }));
+  return paths;
 }
 
 const { comparison } = Astro.props;
