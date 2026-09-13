@@ -2,6 +2,22 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
+export function getStaticPaths() {
+  const categoryNames = {
+    'home-kitchen': 'Home & Kitchen',
+    tech: 'Tech',
+    'tools-diy': 'Tools & DIY',
+    outdoor: 'Outdoor',
+    'smart-home': 'Smart Home',
+    fitness: 'Fitness',
+    lifestyle: 'Lifestyle',
+    'gifts-collectibles': 'Gifts & Collectibles',
+    'toys-games': 'Toys & Games',
+    'beauty-personal-care': 'Beauty & Personal Care'
+  };
+  return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
+}
+
 const categoryNames = {
   'home-kitchen': 'Home & Kitchen',
   tech: 'Tech',
@@ -21,13 +37,8 @@ const categoryThemes = {
   'Beauty & Personal Care': ['Skincare', 'Hair care', 'Grooming', 'Beauty tools', 'Daily essentials']
 };
 
-export function getStaticPaths() {
-  return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
-}
-
 const { name } = Astro.props;
 const matches = products.filter((product) => product.category === name);
-const categorySlug = Object.entries(categoryNames).find(([, value]) => value === name)?.[0] ?? 'products';
 const themes = categoryThemes[name] ?? [];
 ---
 <BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, and product sources.`}>
