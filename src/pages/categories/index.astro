@@ -3,70 +3,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
 const categoryData = [
-  { name: 'Home & Kitchen', slug: 'home-kitchen', image: '/images/products/ninja-af101.svg', alt: 'Ninja air fryer representing Home & Kitchen products', description: 'Air fryers, vacuums, organization, kitchen gear, and useful home upgrades.', guide: '/guides/best-home-kitchen/' },
+  { name: 'Home & Kitchen', slug: 'home-kitchen', image: '/images/products/ninja-af101.svg', alt: 'Home and kitchen products including an air fryer', description: 'Air fryers, vacuums, organization, kitchen gear, and useful home upgrades.', guide: '/guides/best-home-kitchen/' },
   { name: 'Tech', slug: 'tech', image: '/images/products/sony-wh-1000xm5.svg', alt: 'Sony noise-canceling headphones representing Tech products', description: 'Headphones, tablets, accessories, mice, charging gear, and everyday technology.', guide: '/guides/best-tech/' },
   { name: 'Tools & DIY', slug: 'tools-diy', image: '/images/products/dewalt-dck240c2.svg', alt: 'DEWALT drill and impact driver kit representing Tools & DIY products', description: 'Drills, drivers, project tools, repair gear, and practical equipment for DIY work.', guide: '/guides/best-tools-diy/' },
   { name: 'Outdoor', slug: 'outdoor', image: '/images/products/solo-stove-tower.svg', alt: 'Solo Stove patio heater representing Outdoor products', description: 'Grills, patio heaters, outdoor entertaining gear, and products for time outside.', guide: '/guides/best-outdoor/' },
   { name: 'Smart Home', slug: 'smart-home', image: '/images/products/ring-battery-doorbell.svg', alt: 'Ring Battery Doorbell representing Smart Home products', description: 'Doorbells, smart plugs, speakers, lighting, and connected-home essentials.', guide: '/guides/best-smart-home/' },
   { name: 'Fitness', slug: 'fitness', image: '/images/products/garmin-forerunner-265.svg', alt: 'Garmin Forerunner 265 representing Fitness products', description: 'Fitness watches, training gear, and products built around active lifestyles.', guide: null },
-  { name: 'Lifestyle', slug: 'lifestyle', image: '/images/products/yeti-rambler.svg', alt: 'YETI Rambler drinkware representing Lifestyle products', description: 'Drinkware and everyday products designed for commuting, work, travel, and daily use.', guide: '/guides/best-everyday-products/' }
+  { name: 'Lifestyle', slug: 'lifestyle', image: '/images/products/yeti-rambler.svg', alt: 'YETI Rambler representing Lifestyle products', description: 'Drinkware and everyday products designed for commuting, work, travel, and daily use.', guide: '/guides/best-everyday-products/' },
+  { name: 'Gifts & Collectibles', slug: 'gifts-collectibles', image: '/images/products/disney-stitch-plush.svg', alt: 'Disney Stitch plush representing Gifts and Collectibles', description: 'Disney, Marvel, Star Wars, LEGO, Pokémon, Funko, fandom gifts, and collectible finds.', guide: null },
+  { name: 'Toys & Games', slug: 'toys-games', image: '/images/products/lego-city-lava-rollercoaster.svg', alt: 'LEGO City building set representing Toys and Games', description: 'Building sets, STEM toys, puzzles, family games, collectibles, and creative play.', guide: null },
+  { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '/images/products/cerave-hydrating-cleanser.svg', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, beauty tools, and everyday personal-care products.', guide: null }
 ];
 
-const categories = categoryData.map((category) => ({
-  ...category,
-  count: products.filter((product) => product.category === category.name).length
-}));
+const categories = categoryData.map((category) => ({ ...category, count: products.filter((product) => product.category === category.name).length }));
 ---
-<BaseLayout title="Categories | Buy Better Finds" description="Browse Buy Better Finds product categories with visual previews, recommendations, buying guides, strengths, and tradeoffs.">
+<BaseLayout title="Categories | Buy Better Finds" description="Browse Buy Better Finds product categories with visual previews, recommendations, buying guidance, strengths, and tradeoffs.">
   <section class="section categories-page">
     <div class="container">
       <div class="breadcrumbs"><a href="/">Home</a><span>/</span><strong>Categories</strong></div>
-      <div class="page-heading">
-        <div>
-          <div class="eyebrow">BROWSE SMARTER</div>
-          <h1>Shop by category.</h1>
-          <p class="lead">Explore our product recommendations by category. Each section starts with a visual preview, then takes you into the products and buying guidance that matter.</p>
-        </div>
-        <div class="heading-note"><strong>{products.length} PRODUCTS</strong><span>across {categories.length} shopping categories</span></div>
-      </div>
-
+      <div class="page-heading"><div><div class="eyebrow">BROWSE SMARTER</div><h1>Shop by category.</h1><p class="lead">Explore product recommendations by category, then use practical buying guidance to narrow your shortlist.</p></div><div class="heading-note"><strong>{products.length} PRODUCTS</strong><span>across {categories.length} shopping categories</span></div></div>
       <div class="category-grid">
         {categories.map((category) => (
           <article class="category-card">
-            <a class="category-image" href={`/categories/${category.slug}/`} aria-label={`Explore ${category.name}`}>
-              <img src={category.image} alt={category.alt} loading="lazy" width="800" height="600" />
-              <span class="image-overlay">Explore {category.name} <b>→</b></span>
-            </a>
-            <div class="category-content">
-              <div class="category-meta"><span class="tag">CATEGORY</span><span>{category.count} {category.count === 1 ? 'find' : 'finds'}</span></div>
-              <h2><a href={`/categories/${category.slug}/`}>{category.name}</a></h2>
-              <p>{category.description}</p>
-              <div class="category-actions">
-                <a class="primary-link" href={`/categories/${category.slug}/`}>Explore {category.name} →</a>
-                {category.guide && <a class="guide-link" href={category.guide}>Buying guide</a>}
-              </div>
-            </div>
+            <a class="category-image" href={`/categories/${category.slug}/`} aria-label={`Explore ${category.name}`}><img src={category.image} alt={category.alt} loading="lazy" width="800" height="600" /><span class="image-overlay">Explore {category.name} <b>→</b></span></a>
+            <div class="category-content"><div class="category-meta"><span class="tag">CATEGORY</span><span>{category.count} {category.count === 1 ? 'find' : 'finds'}</span></div><h2><a href={`/categories/${category.slug}/`}>{category.name}</a></h2><p>{category.description}</p><div class="category-actions"><a class="primary-link" href={`/categories/${category.slug}/`}>Explore {category.name} →</a>{category.guide && <a class="guide-link" href={category.guide}>Buying guide</a>}</div></div>
           </article>
         ))}
       </div>
-
-      <div class="bottom-cta">
-        <div>
-          <div class="eyebrow light">NOT SURE WHERE TO START?</div>
-          <h2>See all of our finds.</h2>
-          <p>Browse the complete product catalog and use our recommendation scores, pros and cons, and buying guidance to narrow your shortlist.</p>
-        </div>
-        <a class="btn primary" href="/products/">View all products →</a>
-      </div>
+      <div class="bottom-cta"><div><div class="eyebrow light">NOT SURE WHERE TO START?</div><h2>See all of our finds.</h2><p>Browse the complete catalog and use recommendation scores, pros and cons, and buying guidance to narrow your shortlist.</p></div><a class="btn primary" href="/products/">View all products →</a></div>
     </div>
   </section>
 </BaseLayout>
-
 <style>
-  .categories-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;margin-bottom:32px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.breadcrumbs strong{color:#111827}
-  .page-heading{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-bottom:48px}.page-heading h1{font-size:clamp(42px,6vw,68px);line-height:1;margin:8px 0 16px}.page-heading .lead{max-width:760px}.heading-note{border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;padding:18px 22px;display:grid;gap:5px;min-width:190px}.heading-note strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.heading-note span{font-size:13px;color:#475569}
-  .category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.category-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #10233f0a;transition:transform .2s ease,box-shadow .2s ease}.category-card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #10233f14}.category-image{position:relative;display:block;aspect-ratio:16/9;background:#f3f5f8;overflow:hidden}.category-image img{width:100%;height:100%;display:block;object-fit:contain;padding:34px;transition:transform .3s ease}.category-card:hover .category-image img{transform:scale(1.045)}.image-overlay{position:absolute;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:center;padding:11px 13px;border-radius:8px;background:#0f172ae6;color:#fff;font-size:11px;font-weight:800;letter-spacing:.03em;opacity:0;transform:translateY(6px);transition:.2s ease}.category-card:hover .image-overlay{opacity:1;transform:translateY(0)}.image-overlay b{font-size:16px;color:#fff}
-  .category-content{padding:22px 23px 24px}.category-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:7px}.category-meta>span:last-child{font-size:11px;color:#64748b;font-weight:700}.category-content h2{font-size:26px;margin:5px 0 9px}.category-content h2 a{color:#10233f;text-decoration:none}.category-content h2 a:hover{color:#c8102e}.category-content p{font-size:14px;line-height:1.65;color:#64748b;margin:0;min-height:46px}.category-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:18px;padding-top:15px;border-top:1px solid #edf0f3}.primary-link{font-size:13px;font-weight:850;color:#003087;text-decoration:none}.primary-link:hover{text-decoration:underline}.guide-link{font-size:12px;font-weight:700;color:#64748b;text-decoration:none}.guide-link:hover{color:#c8102e}
-  .bottom-cta{margin-top:58px;padding:34px;border-radius:20px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.bottom-cta h2{color:#fff;margin:7px 0 8px}.bottom-cta p{color:#cbd5e1;max-width:700px;line-height:1.6;margin:0}.bottom-cta .btn{white-space:nowrap}
-  @media(max-width:800px){.page-heading{grid-template-columns:1fr}.heading-note{width:max-content}.category-grid{grid-template-columns:1fr}.image-overlay{opacity:1;transform:none}}@media(max-width:560px){.page-heading h1{font-size:43px}.category-content{padding:19px}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center}.category-image img{padding:24px}}
+.categories-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;margin-bottom:32px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs strong{color:#111827}.page-heading{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-bottom:48px}.page-heading h1{font-size:clamp(42px,6vw,68px);line-height:1;margin:8px 0 16px}.page-heading .lead{max-width:760px}.heading-note{border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;padding:18px 22px;display:grid;gap:5px;min-width:190px}.heading-note strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.heading-note span{font-size:13px;color:#475569}.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.category-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #10233f0a;transition:transform .2s ease,box-shadow .2s ease}.category-card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #10233f14}.category-image{position:relative;display:block;aspect-ratio:16/9;background:#f3f5f8;overflow:hidden}.category-image img{width:100%;height:100%;display:block;object-fit:contain;padding:34px;transition:transform .3s ease}.category-card:hover .category-image img{transform:scale(1.045)}.image-overlay{position:absolute;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:center;padding:11px 13px;border-radius:8px;background:#0f172ae6;color:#fff;font-size:11px;font-weight:800;letter-spacing:.03em;opacity:0;transform:translateY(6px);transition:.2s ease}.category-card:hover .image-overlay{opacity:1;transform:translateY(0)}.image-overlay b{font-size:16px;color:#fff}.category-content{padding:22px 23px 24px}.category-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:7px}.category-meta>span:last-child{font-size:11px;color:#64748b;font-weight:700}.category-content h2{font-size:26px;margin:5px 0 9px}.category-content h2 a{color:#10233f;text-decoration:none}.category-content h2 a:hover{color:#c8102e}.category-content p{font-size:14px;line-height:1.65;color:#64748b;margin:0;min-height:46px}.category-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:18px;padding-top:15px;border-top:1px solid #edf0f3}.primary-link{font-size:13px;font-weight:850;color:#003087;text-decoration:none}.primary-link:hover{text-decoration:underline}.guide-link{font-size:12px;font-weight:700;color:#64748b;text-decoration:none}.guide-link:hover{color:#c8102e}.bottom-cta{margin-top:58px;padding:34px;border-radius:20px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.bottom-cta h2{color:#fff;margin:7px 0 8px}.bottom-cta p{color:#cbd5e1;max-width:700px;line-height:1.6;margin:0}.bottom-cta .btn{white-space:nowrap}@media(max-width:800px){.page-heading{grid-template-columns:1fr}.heading-note{width:max-content}.category-grid{grid-template-columns:1fr}.image-overlay{opacity:1;transform:none}}@media(max-width:560px){.page-heading h1{font-size:43px}.category-content{padding:19px}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center}.category-image img{padding:24px}}
 </style>
