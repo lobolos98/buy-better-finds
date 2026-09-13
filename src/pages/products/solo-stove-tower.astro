@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { products } from '../../data/products.js';
+import { getRecommendation } from '../../data/recommendations.js';
+
+const product = products.find((item) => item.slug === 'solo-stove-tower');
+const recommendation = product ? getRecommendation(product) : null;
+if (!product || !recommendation) throw new Error('Solo Stove Tower product data is missing.');
+---
+<BaseLayout title={`${product.name} | Buy Better Finds`} description="Independent buying guidance for the Solo Stove Tower Patio Heater, including strengths, tradeoffs, and practical fit.">
+  <section class="section product-page">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/products/">All Finds</a><span>/</span><a href="/categories/outdoor/">Outdoor</a><span>/</span><strong>{product.name}</strong></div>
+      <div class="product-detail">
+        <div class="product-visual">
+          <div class="badge">BUY BETTER FIND</div>
+          <div class="product-photo"><img src={product.image} alt={product.imageAlt} width="1000" height="750" /></div>
+          <span class="category">{product.category}</span>
+        </div>
+        <div class="copy">
+          <div class="eyebrow">BUY BETTER FIND · OUTDOOR</div>
+          <h1>{product.name}</h1>
+          <p class="lead">{product.why}</p>
+          <div class="meta">Recommendation reviewed: September 2026 · <a href="/why-we-recommend/">How we evaluate →</a></div>
+          <div class="score"><div class="score-number">{recommendation.score}<small>/10</small></div><div><strong>BUY BETTER SCORE</strong><span>{recommendation.label}</span><p>Editorial score based on practical fit, value, useful features, and documented tradeoffs.</p></div></div>
+          <div class="best"><strong>BEST FOR</strong><p>{recommendation.bestFor}</p></div>
+          <div class="price"><span>Reference price</span><strong>{product.price}</strong><small>Prices and availability can change. Verify the current offer at the retailer.</small></div>
+          <div class="actions"><a class="btn primary" href={product.url} target="_blank" rel="noopener noreferrer">Check current product →</a><a class="btn secondary" href="/products/">Browse all finds</a></div>
+          <p class="disclosure">We may earn a commission from qualifying purchases when affiliate links are used. Our recommendations are based on product fit and editorial evaluation, not commission size.</p>
+        </div>
+      </div>
+
+      <div class="breakdown">
+        <article><span>01 · WHY WE LIKE IT</span><h2>What stands out</h2><ul>{recommendation.pros.map((item) => <li>{item}</li>)}</ul></article>
+        <article><span>02 · WATCH BEFORE BUYING</span><h2>Know the tradeoffs</h2><ul>{recommendation.cons.map((item) => <li>{item}</li>)}</ul><p><strong>Look elsewhere if:</strong> {recommendation.skipIf}</p></article>
+        <article><span>03 · SHOPPING GUIDE</span><h2>Keep researching</h2><p>See this product in the broader patio-heater category and compare practical alternatives before buying.</p><a href="/guides/best-patio-heaters/">Read Best Patio Heaters →</a></article>
+      </div>
+
+      <div class="before-buy"><div class="eyebrow">BEFORE YOU BUY</div><h2>Check the current offer.</h2><p>The retailer or manufacturer remains the source of truth for today's price, stock, shipping, warranty, and return policy.</p><a class="btn primary" href={product.url} target="_blank" rel="noopener noreferrer">Open product source →</a></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.product-page{padding-top:24px}.container{max-width:1200px;margin:auto}.breadcrumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:28px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs strong{color:#111827}.product-detail{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:center}.product-visual{display:flex;flex-direction:column;align-items:center;gap:14px}.badge{font-size:11px;font-weight:900;letter-spacing:.14em;color:#fff;background:#c8102e;padding:8px 13px;border-radius:999px}.product-photo{width:100%;min-height:440px;border:1px solid #d9dee8;border-radius:24px;background:linear-gradient(145deg,#f7f9fc,#e9edf4);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 55px rgba(15,23,42,.1)}.product-photo img{width:100%;height:100%;min-height:440px;object-fit:contain;padding:32px}.category{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800;color:#64748b}.copy h1{font-size:clamp(34px,5vw,58px);line-height:1.03;margin:10px 0 18px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.14em;color:#c8102e}.lead{font-size:20px;line-height:1.65;color:#475569}.meta{font-size:11px;color:#64748b;margin:15px 0}.meta a{color:#c8102e;font-weight:800;text-decoration:none}.score{margin:25px 0;padding:18px 20px;border:1px solid #d9dee8;border-radius:18px;background:#fff;display:flex;align-items:center;gap:18px;box-shadow:0 10px 30px rgba(15,23,42,.06)}.score-number{width:78px;height:78px;flex:0 0 78px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:26px;font-weight:900}.score-number small{font-size:10px;color:#cbd5e1}.score strong{display:block;font-size:10px;letter-spacing:.14em;color:#c8102e}.score span{display:block;font-weight:800;margin-top:3px}.score p{margin:5px 0 0;color:#64748b;font-size:12px;line-height:1.5}.best{margin:25px 0;padding:18px 20px;border-left:4px solid #c8102e;background:#f8fafc}.best strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.best p{margin:6px 0 0;font-weight:700}.price{margin:24px 0;padding:18px 20px;border:1px solid #d9dee8;border-radius:16px;display:grid;gap:5px}.price span,.price small{color:#64748b}.price strong{font-size:28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:13px 18px;font-weight:800;font-size:14px}.primary{background:#c8102e;color:#fff}.secondary{border:1px solid #cbd5e1;color:#111827;background:#fff}.disclosure{font-size:11px;color:#64748b;line-height:1.6;margin-top:16px}.breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:70px 0}.breakdown article{border:1px solid #d9dee8;border-radius:18px;padding:26px;background:#fff}.breakdown article>span{font-size:10px;font-weight:900;letter-spacing:.12em;color:#c8102e}.breakdown h2{font-size:23px;margin:9px 0 14px}.breakdown li,.breakdown p{color:#475569;line-height:1.7;font-size:14px}.breakdown a{color:#c8102e;font-weight:800;text-decoration:none}.before-buy{margin:20px 0 0;padding:32px;text-align:center;border:1px solid #d9dee8;border-radius:20px;background:#f8fafc}.before-buy h2{margin:8px 0}.before-buy p{max-width:620px;margin:0 auto 20px;color:#64748b;line-height:1.7}@media(max-width:900px){.product-detail,.breakdown{grid-template-columns:1fr}.product-photo,.product-photo img{min-height:340px}}@media(max-width:600px){.product-page{padding-top:12px}.copy h1{font-size:34px}.lead{font-size:17px}.product-photo,.product-photo img{min-height:280px}.actions .btn{width:100%}}
+</style>
