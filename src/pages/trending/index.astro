@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { products as catalog } from '../../data/products.js';
+import { trendingProducts, trendingUpdated } from '../../data/trending.js';
+import { amazonSearchUrl } from '../../utils/amazon.js';
+
+const trending = trendingProducts
+  .map((trend) => ({ ...trend, product: catalog.find((product) => product.slug === trend.slug) }))
+  .filter((item) => item.product);
+---
+<BaseLayout
+  title="What's Trending | Buy Better Finds"
+  description="Research-based product trends, current shopper signals, and products worth watching right now."
+>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">LIVE RESEARCH · UPDATED {trendingUpdated.toUpperCase()}</div>
+      <h1>What's Trending</h1>
+      <p>Products and categories showing meaningful signals across current Amazon bestseller coverage, search-demand research, seasonal shopping coverage, and current retail trend reporting.</p>
+      <div class="hero-note"><span>✓</span> This is a research snapshot—not a claim that every product is the #1 seller.</div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container intro-grid">
+      <div>
+        <div class="eyebrow">How we determine a trend</div>
+        <h2>More than a random “popular products” list.</h2>
+      </div>
+      <div>
+        <p>We cross-check multiple public signals rather than relying on one influencer list. Signals can include Amazon bestseller coverage, Amazon search-volume trend research, seasonal demand, and repeated appearances in current retail reporting.</p>
+        <p class="muted">Because Amazon rankings and prices can change quickly, this page is designed to be refreshed regularly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section trend-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Current watchlist</div>
+          <h2>Products worth watching right now.</h2>
+          <p>These are Buy Better Finds editorial picks based on the current trend signals we reviewed.</p>
+        </div>
+      </div>
+
+      <div class="trend-grid">
+        {trending.map(({ product, rank, signal, reason, sourceLabel, sourceUrl }) => (
+          <article class="trend-card">
+            <div class="rank">#{rank}</div>
+            <a class="image-wrap" href={`/products/${product.slug}/`} aria-label={`See our take on ${product.name}`}>
+              <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+            </a>
+            <div class="card-body">
+              <div class="signal">{signal}</div>
+              <div class="tag">{product.category}</div>
+              <h3>{product.name}</h3>
+              <p>{reason}</p>
+              <div class="best"><strong>Best for:</strong> {product.bestFor}</div>
+              <div class="actions">
+                <a class="btn secondary" href={`/products/${product.slug}/`}>See Our Take →</a>
+                <a class="amazon-btn" href={amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+              </div>
+              <a class="source" href={sourceUrl} target="_blank" rel="noopener noreferrer">Research signal: {sourceLabel} ↗</a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p class="disclosure">As an Amazon Associate I earn from qualifying purchases. Trend signals are editorial research and are not guarantees of sales, rankings, price, availability, or product performance. Always confirm current details on Amazon before buying.</p>
+    </div>
+  </section>
+
+  <section class="section methodology">
+    <div class="container">
+      <div class="method-grid">
+        <div><b>01</b><h3>Demand</h3><p>We look for evidence of current shopper interest and search momentum.</p></div>
+        <div><b>02</b><h3>Seasonality</h3><p>Fall routines, holidays, weather, school, travel, and other timely shopping patterns can move demand.</p></div>
+        <div><b>03</b><h3>Coverage</h3><p>Repeated appearances across current bestseller, deal, and trend reporting strengthen a signal.</p></div>
+        <div><b>04</b><h3>Our filter</h3><p>We still ask whether the product is worth explaining—not simply whether it is getting attention.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.hero{padding:74px 0 58px;background:linear-gradient(135deg,#10233f 0%,#17385f 58%,#1d4ed8 100%);color:#fff}.hero .eyebrow{color:#cbd8e8}.hero h1{max-width:850px;font-size:clamp(42px,6vw,72px);line-height:1.02;margin:10px 0 18px}.hero p{max-width:780px;font-size:18px;line-height:1.65;color:#e7eef7}.hero-note{margin-top:22px;display:inline-flex;gap:9px;align-items:center;background:#ffffff16;border:1px solid #ffffff2b;border-radius:8px;padding:10px 13px;font-size:11px;font-weight:700}.hero-note span{color:#ffb000;font-size:16px}.intro{background:#fff}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.intro h2{font-size:34px;line-height:1.15;color:var(--navy);margin:8px 0}.intro p{color:var(--muted);line-height:1.7}.muted{font-size:12px}.trend-section{background:#f5f7fa}.trend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.trend-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(16,35,63,.05)}.rank{position:absolute;top:12px;left:12px;z-index:2;background:var(--navy);color:#fff;border-radius:5px;padding:7px 9px;font-size:10px;font-weight:900}.image-wrap{height:210px;background:linear-gradient(145deg,#f7f9fc,#e9eef4);display:flex;align-items:center;justify-content:center}.image-wrap img{width:100%;height:100%;object-fit:contain;padding:22px}.card-body{padding:18px;display:flex;flex-direction:column;flex:1}.signal{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#c8102e;font-weight:900;margin-bottom:7px}.tag{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#1d4ed8;font-weight:900}.card-body h3{font-size:18px;line-height:1.25;color:var(--navy);margin:6px 0 10px}.card-body p{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 12px}.best{font-size:11px;line-height:1.45;background:#f5f8fb;border-radius:7px;padding:9px;color:#405166;margin-bottom:16px}.best strong{color:var(--navy)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.actions .btn,.actions .amazon-btn{font-size:10px;padding:9px 10px}.source{display:block;margin-top:14px;font-size:9px;line-height:1.4;color:#64748b;text-decoration:underline}.disclosure{max-width:900px;margin:25px auto 0;text-align:center;color:#64748b;font-size:10px;line-height:1.55}.methodology{background:var(--navy);color:#fff}.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.method-grid>div{border:1px solid #ffffff22;border-radius:12px;padding:22px}.method-grid b{font-size:11px;color:#ffb000}.method-grid h3{margin:9px 0 7px;font-size:18px}.method-grid p{margin:0;color:#cbd8e8;font-size:12px;line-height:1.55}@media(max-width:1050px){.trend-grid{grid-template-columns:repeat(2,1fr)}.method-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.intro-grid{grid-template-columns:1fr;gap:20px}.trend-grid{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr}.hero{padding:55px 0 45px}.hero p{font-size:15px}}
+</style>
