@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://buybetterfinds.com',
   trailingSlash: 'always',
+  integrations: [sitemap()],
   redirects: {
     '/categories/home/': '/categories/home-kitchen/',
     '/categories/kitchen/': '/categories/home-kitchen/',
