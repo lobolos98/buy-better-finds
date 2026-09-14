@@ -2,8 +2,7 @@ import type { APIRoute } from 'astro';
 
 const robotsTxt = `User-agent: *
 Allow: /
-
-Sitemap: https://buybetterfinds.com/sitemap-index.xml
+Sitemap: https://buybetterfinds.com/sitemap.xml
 `;
 
 export const GET: APIRoute = () => {
