@@ -13,7 +13,8 @@ const staticPages = [
   '/categories/',
   '/best/',
   '/guides/',
-  '/comparisons/'
+  '/comparisons/',
+  '/trending/'
 ];
 
 const guidePages = [
