@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Product Research | Buy Better Finds" description="Research a product with Buy Better Finds before checking its Amazon listing.">
+  <section class="section product-research">
+    <div class="container">
+      <a class="back-link" href="/search/">← Back to product search</a>
+      <div id="loading" class="loading">Loading product research…</div>
+      <article id="product" class="research-product" hidden>
+        <div class="product-hero">
+          <div class="product-image"><img id="product-image" alt="" /></div>
+          <div>
+            <div id="brand" class="eyebrow"></div>
+            <h1 id="title"></h1>
+            <p id="asin" class="asin"></p>
+            <a id="amazon-link" class="btn primary" target="_blank" rel="nofollow sponsored noopener">Check current Amazon listing →</a>
+          </div>
+        </div>
+        <div class="research-grid">
+          <section class="research-card">
+            <div class="eyebrow">BUY BETTER FINDS REVIEW</div>
+            <h2>Our editorial review</h2>
+            <p id="review-status">This product has been found through Amazon search. A Buy Better Finds editorial review is published here when the product has been independently evaluated and its pros, cons, and recommendation have been verified.</p>
+            <div class="review-framework">
+              <div><strong>Pros</strong><span>Editorially verified strengths</span></div>
+              <div><strong>Cons</strong><span>Editorially verified tradeoffs</span></div>
+              <div><strong>Best for</strong><span>Intended shopper/use case</span></div>
+              <div><strong>Buy Better Score</strong><span>Assigned only after editorial evaluation</span></div>
+            </div>
+          </section>
+          <section class="research-card">
+            <div class="eyebrow">AMAZON PRODUCT INFORMATION</div>
+            <h2>What the listing says</h2>
+            <ul id="features" class="features"></ul>
+          </section>
+        </div>
+        <p class="amazon-disclaimer">CERTAIN CONTENT THAT APPEARS ON THIS SITE COMES FROM AMAZON. THIS CONTENT IS PROVIDED “AS IS” AND IS SUBJECT TO CHANGE OR REMOVAL AT ANY TIME.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+const params = new URLSearchParams(window.location.search);
+const asin = params.get('asin');
+const loading = document.querySelector('#loading');
+const product = document.querySelector('#product');
+const image = document.querySelector('#product-image');
+const title = document.querySelector('#title');
+const brand = document.querySelector('#brand');
+const asinEl = document.querySelector('#asin');
+const amazonLink = document.querySelector('#amazon-link');
+const features = document.querySelector('#features');
+
+function esc(value=''){return String(value).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+
+async function load() {
+  if (!asin) { loading.textContent='No product ASIN was supplied. Return to search and select a product.'; return; }
+  try {
+    const response = await fetch(`/api/amazon-item?asin=${encodeURIComponent(asin)}`);
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'Product lookup failed.');
+    const productTitle = data.itemInfo?.title?.displayValue || 'Amazon product';
+    const productBrand = data.itemInfo?.byLineInfo?.brand?.displayValue || 'Amazon listing';
+    const productImage = data.images?.primary?.large?.url || data.images?.primary?.medium?.url;
+    const url = data.detailPageURL || `https://www.amazon.com/dp/${asin}?tag=buybetterfi06-20`;
+    title.textContent = productTitle;
+    brand.textContent = productBrand;
+    asinEl.textContent = `ASIN: ${asin}`;
+    amazonLink.href = url;
+    if (productImage) { image.src = productImage; image.alt = productTitle; }
+    const values = data.itemInfo?.features?.displayValues || [];
+    features.innerHTML = values.length ? values.slice(0,8).map((value)=>`<li>${esc(value)}</li>`).join('') : '<li>Feature information is not available for this item.</li>';
+    loading.hidden = true;
+    product.hidden = false;
+  } catch (error) {
+    loading.textContent = error.message || 'Product lookup failed.';
+  }
+}
+load();
+</script>
+<style>
+.product-research{padding-top:34px}.back-link{display:inline-block;color:#1d4ed8;font-weight:800;text-decoration:none;margin-bottom:26px}.product-hero{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}.product-image{min-height:400px;background:#f6f8fb;border:1px solid var(--line);border-radius:22px;display:flex;align-items:center;justify-content:center}.product-image img{max-width:100%;max-height:390px;object-fit:contain}.product-hero h1{font-size:clamp(32px,5vw,58px);line-height:1.05;color:var(--navy);margin:10px 0 12px}.asin{font-size:11px;color:#64748b;margin-bottom:22px}.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:52px}.research-card{padding:28px;border:1px solid var(--line);border-radius:18px;background:#fff}.research-card h2{font-size:27px;color:var(--navy);margin:8px 0 12px}.research-card p{color:#64748b;line-height:1.7}.review-framework{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.review-framework div{padding:14px;background:#f7f9fc;border-radius:10px}.review-framework strong{display:block;color:#c8102e;font-size:12px;margin-bottom:4px}.review-framework span{font-size:11px;color:#64748b}.features{margin:15px 0 0;padding-left:20px}.features li{padding:7px 0;color:#475569;line-height:1.55;font-size:14px}.amazon-disclaimer{margin-top:20px;font-size:10px;color:#64748b;line-height:1.5}.loading{padding:60px 0;text-align:center;color:#64748b}
+@media(max-width:800px){.product-hero,.research-grid{grid-template-columns:1fr}.product-image{min-height:300px}.review-framework{grid-template-columns:1fr}}
+</style>
