@@ -107,10 +107,9 @@ function escapeHtml(value) {
 }
 function escapeAttribute(value) { return escapeHtml(value); }
 
-form?.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const q = input.value.trim();
+async function runSearch(q) {
   if (q.length < 2) return;
+  input.value = q;
   status.textContent = 'Searching Amazon…';
   results.innerHTML = '';
   try {
@@ -121,5 +120,15 @@ form?.addEventListener('submit', async (event) => {
   } catch (error) {
     status.textContent = error.message || 'Search is temporarily unavailable.';
   }
+}
+
+form?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  await runSearch(input.value.trim());
 });
+
+const initialQuery = new URLSearchParams(window.location.search).get('q')?.trim() || '';
+if (initialQuery.length >= 2) {
+  runSearch(initialQuery);
+}
 </script>
