@@ -21,7 +21,8 @@ import { amazonSearchUrl } from '../../utils/amazon.js';
       <div class="grid product-grid">
         {products.map((product) => {
           const recommendation = getRecommendation(product);
-          const amazonUrl = amazonSearchUrl(product.name);\n          const productImage = product.amazonImage || product.image;
+          const amazonUrl = amazonSearchUrl(product.name);
+          const productImage = product.amazonImage || product.image;
           return <article class="card product-card">
             <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
               <img src={productImage} alt={product.imageAlt} loading="lazy" width="800" height="600" />
