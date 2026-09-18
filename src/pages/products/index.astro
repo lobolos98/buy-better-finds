@@ -16,15 +16,15 @@ import { amazonSearchUrl } from '../../utils/amazon.js';
         <a href="/why-we-recommend/">How we recommend →</a>
       </div>
 
-      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
+      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product images supplied through Amazon Associates/SiteStripe are used as provided and may change. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
 
       <div class="grid product-grid">
         {products.map((product) => {
           const recommendation = getRecommendation(product);
-          const amazonUrl = amazonSearchUrl(product.name);
+          const amazonUrl = amazonSearchUrl(product.name);\n          const productImage = product.amazonImage || product.image;
           return <article class="card product-card">
             <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-              <img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+              <img src={productImage} alt={product.imageAlt} loading="lazy" width="800" height="600" />
               <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
               <span class="pick-badge">BUY BETTER FIND</span>
             </a>
