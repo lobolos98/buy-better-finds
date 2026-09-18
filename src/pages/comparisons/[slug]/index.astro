@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { products } from '../../../data/products.js';
 import { amazonSearchUrl } from '../../../utils/amazon.js';
 
-const getArticles = () => ({
+const articles = {
   'compression-packing-cubes-vs-regular': {
     title: 'Compression Packing Cubes vs. Regular Cubes: Do They Actually Save Space?',
     intro: 'A practical comparison of compression and standard packing cubes, focused on luggage space, organization, weight, convenience, and value.',
@@ -60,14 +60,22 @@ const getArticles = () => ({
     advice: 'Choose based on your skin needs, preferred texture, ingredients, and how the cleanser fits your routine. Check the current ingredient list and product directions before buying.',
     search: 'facial cleanser'
   }
-});
+};
 
 export function getStaticPaths() {
-  const articles = getArticles();
-  return Object.entries(articles).map(([slug, article]) => ({ params: { slug }, props: { article } }));
+  const slugs = [
+    'compression-packing-cubes-vs-regular',
+    'budget-vs-premium-milk-frothers',
+    'drawer-dividers-compared',
+    'compact-air-fryers-for-small-countertops',
+    'under-sink-storage-comparison',
+    'cable-trays-vs-sleeves',
+    '3-in-1-travel-charging-stations',
+    'skincare-cleansers-compared'
+  ];
+  return slugs.map((slug) => ({ params: { slug } }));
 }
 
-const articles = getArticles();
 const { article } = Astro.props;
 const related = products.filter((p) => `${p.name} ${p.category} ${p.bestFor}`.toLowerCase().includes(article.search.toLowerCase())).slice(0, 4);
 ---
