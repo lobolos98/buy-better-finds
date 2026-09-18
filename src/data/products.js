@@ -107,5 +107,34 @@ export const products = [
   },
   {
     slug: 'philips-oneblade', name: 'Philips Norelco OneBlade', category: 'Beauty & Personal Care', price: 'Check price', icon: '▌', image: '/images/products/philips-oneblade.svg', imageAlt: 'Philips Norelco OneBlade grooming tool', bestFor: 'Flexible beard trimming and everyday grooming', why: 'A compact hybrid grooming format designed for trimming and shaping with interchangeable blade options.', watch: 'Replacement blades add ongoing cost, and users wanting a very close traditional shave may prefer another format.', url: 'https://www.usa.philips.com/c-m-pe/oneblade-oneblade'
+  },
+{
+    slug: 'oxo-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: '/images/products/oxo-tub-tile-scrubber.svg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
+    bestFor: 'Bathroom cleaning without kneeling or crouching', why: 'An extendable cleaning tool designed to reach tubs, tile, glass, floors, and corners from a more comfortable standing position.', watch: 'The head is replaceable, and exact retailer pricing and availability can change.', url: 'https://www.amazon.com/s?k=OXO+Good+Grips+Extendable+Tub+Tile+Scrubber&tag=buybetterfi06-20', dailyDealDate: '2026-09-17'
+  },
+  {
+    slug: 'chefaide-spatula-set', name: 'ChefAide 5-Piece Silicone Spatula Set', category: 'Home & Kitchen', price: 'Check price', icon: '✚', image: '/images/products/chefaide-spatula-set.svg', imageAlt: 'ChefAide silicone spatula set',
+    bestFor: 'Everyday cooking and baking', why: 'A practical multi-piece silicone utensil set for stirring, folding, scraping, and general kitchen prep.', watch: 'Check the current set contents and dimensions because listings can vary.', url: 'https://www.amazon.com/s?k=ChefAide+5+Piece+Silicone+Spatula+Set&tag=buybetterfi06-20', dailyDealDate: '2026-09-18'
+  },
+  {
+    slug: 'bagsmart-packing-cubes', name: 'BAGSMART Compression Packing Cubes', category: 'Lifestyle', price: 'Check price', icon: '▦', image: '/images/products/bagsmart-packing-cubes.svg', imageAlt: 'BAGSMART compression packing cubes',
+    bestFor: 'Travel organization and maximizing luggage space', why: 'Compression packing cubes help organize clothing and make it easier to separate items inside luggage.', watch: 'Set size, zipper configuration, and compression capacity vary by bundle.', url: 'https://www.amazon.com/s?k=BAGSMART+compression+packing+cubes&tag=buybetterfi06-20', dailyDealDate: '2026-09-19'
+  },
+  {
+    slug: 'tubshroom-drain-protector', name: 'TubShroom Drain Protector', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: '/images/products/tubshroom-drain-protector.svg', imageAlt: 'TubShroom drain protector',
+    bestFor: 'Reducing hair buildup in shower and tub drains', why: 'A simple drain insert designed to catch hair before it travels deeper into the plumbing.', watch: 'Confirm the drain size and current version before ordering.', url: 'https://www.amazon.com/s?k=TubShroom+drain+protector&tag=buybetterfi06-20', dailyDealDate: '2026-09-20'
+  },
+  {
+    slug: 'tweezerman-tweezers', name: 'Tweezerman Slant Tweezer', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: '/images/products/tweezerman-tweezers.svg', imageAlt: 'Tweezerman slant tweezers',
+    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/s?k=Tweezerman+Slant+Tweezer&tag=buybetterfi06-20', dailyDealDate: '2026-09-21'
+  },
+  {
+    slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: '/images/products/stitch-sticker-stamper.svg', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
+    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch+Stamper&tag=buybetterfi06-20', dailyDealDate: '2026-09-22'
+  },
+  {
+    slug: 'jandcase-night-lights', name: 'Jandcase Motion Sensor Night Lights', category: 'Smart Home', price: 'Check price', icon: '☼', image: '/images/products/jandcase-night-lights.svg', imageAlt: 'Jandcase motion sensor night lights',
+    bestFor: 'Hallways, stairs, closets, and nighttime navigation', why: 'Small motion-activated lights can add low-effort illumination to areas where a full light fixture is unnecessary.', watch: 'Check battery type, sensor range, and pack size for the current listing.', url: 'https://www.amazon.com/s?k=Jandcase+motion+sensor+night+lights&tag=buybetterfi06-20', dailyDealDate: '2026-09-23'
   }
+
 ];
