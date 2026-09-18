@@ -74,7 +74,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     const root = document.getElementById('daily-deal');
     if (!root) return;
     const today = easternDate();
-    const item = dailyDealQueue.filter((product) => product.dailyDealDate <= today).sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate))[0];
+    const item = dailyDealQueue.find((product) => product.dailyDealDate === today);
     if (!item) {
       root.innerHTML = '<div class="deal-copy" style="grid-column:1/-1"><div class="tag">NEW PRODUCT QUEUE</div><h3>Our next new product is being prepared.</h3><p>We never recycle an old Daily Deal. New products are added to the queue and then permanently placed in their category after their feature day.</p></div>';
       return;
