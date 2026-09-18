@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { products } from '../../../../data/products.js';
+const cosmeticProducts = products.filter((p) => ['e.l.f. Halo Glow Liquid Filter','Tweezerman Slant Tweezer'].includes(p.name));
+---
+<BaseLayout title="Cosmetics & Beauty Tools | Buy Better Finds" description="Compare cosmetics, makeup, and beauty tools with practical pros, cons, and buying considerations.">
+<section class="section"><div class="container">
+<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><a href="/categories/beauty-personal-care/">Beauty & Personal Care</a><span>/</span><strong>Cosmetics</strong></div>
+<div class="heading"><div class="eyebrow">BEAUTY & PERSONAL CARE</div><h1>Cosmetics & Beauty Tools</h1><p>Makeup and precision beauty products compared around real shopping questions: finish, use case, shade or fit, convenience, and value.</p></div>
+<div class="principles"><div><strong>Compare the use case</strong><span>Every product should have a clear reason to be considered.</span></div><div><strong>Show the tradeoffs</strong><span>Shade, finish, tool feel, and personal preference matter.</span></div><div><strong>Avoid unsupported claims</strong><span>We won't imply testing, medical results, or universal outcomes we haven't established.</span></div></div>
+<h2>Current cosmetics finds</h2>
+<div class="products">{cosmeticProducts.map((product)=><article><img src={product.image} alt={product.imageAlt}/><span>{product.category}</span><h3>{product.name}</h3><p><strong>Best for:</strong> {product.bestFor}</p><p>{product.why}</p><a href={'/products/'+product.slug+'/'}>See Our Take →</a></article>)}</div>
+<div class="coming"><strong>Next:</strong> side-by-side cosmetics comparisons covering complexion products, lip products, beauty tools, and budget-vs-premium upgrades.</div>
+</div></section>
+</BaseLayout>
+<style>
+.breadcrumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:#64748b;margin-bottom:30px}.breadcrumbs a{color:#475569;text-decoration:none}.heading{max-width:850px}.heading h1{font-size:clamp(40px,6vw,64px);line-height:1.04;color:var(--navy);margin:8px 0 16px}.heading p{font-size:16px;line-height:1.7;color:var(--muted)}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 46px}.principles div{background:#10233f;color:#fff;border-radius:12px;padding:19px}.principles strong{display:block;font-size:13px}.principles span{display:block;color:#d5deea;font-size:11px;line-height:1.5;margin-top:7px}.heading+h2,h2{color:var(--navy);margin-bottom:18px}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.products article{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}.products img{width:100%;height:220px;object-fit:contain;background:#f5f7fa;border-radius:10px;padding:20px;box-sizing:border-box}.products span{display:block;margin-top:16px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#c8102e;font-weight:900}.products h3{font-size:20px;color:var(--navy);margin:7px 0 10px}.products p{font-size:12px;line-height:1.55;color:var(--muted)}.products a{font-size:12px;color:#003087;font-weight:900;text-decoration:none}.coming{margin-top:28px;padding:17px 19px;background:#f5f7fa;border-left:4px solid #d6a84f;border-radius:8px;color:#475569;font-size:12px;line-height:1.6}@media(max-width:700px){.principles,.products{grid-template-columns:1fr}}
+</style>
