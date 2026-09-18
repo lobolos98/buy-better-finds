@@ -9,7 +9,7 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const related = products.filter((p) => `${p.name} ${p.category} ${p.bestFor}`.toLowerCase().includes(article.search.toLowerCase())).slice(0, 4);
+const related = products.filter((p) => `${p.name} ${p.category} ${p.bestFor}`.toLowerCase().includes(article.search.toLowerCase())).slice(0, 4);\nconst linkedOptions = article.options || [];\nconst hasCatalogProducts = related.length > 0;
 ---
 
 <BaseLayout title={`${article.title} | Buy Better Finds`} description={article.intro}>
@@ -19,7 +19,8 @@ const related = products.filter((p) => `${p.name} ${p.category} ${p.bestFor}`.to
     <div class="question"><div class="eyebrow">THE BUYING QUESTION</div><h2>Which option makes more sense for your needs?</h2><p>There is not necessarily one right choice. The useful comparison is the one that makes the tradeoffs visible so you can match the product to how you actually plan to use it.</p></div>
     <div class="criteria">{article.criteria.map((item,index)=><div><b>0{index+1}</b><strong>{item}</strong><span>Compare this factor before you buy.</span></div>)}</div>
     <h2>Products worth comparing</h2><p>These are products currently in the Buy Better Finds catalog that may be relevant to this buying question. More products will be added as the comparison library grows.</p>
-    {related.length>0 ? <div class="products">{related.map((product)=><article class="product"><a href={`/products/${product.slug}/`} class="image"><img src={product.image} alt={product.imageAlt} loading="lazy"/></a><div class="body"><span class="tag">{product.category}</span><h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3><p><strong>Best for:</strong> {product.bestFor}</p><p>{product.why}</p><div class="links"><a href={`/products/${product.slug}/`}>See Our Take →</a><a class="amazon" href={amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check Amazon →</a></div></div></article>)}</div> : <div class="catalog-note"><strong>More products are coming to this comparison.</strong><p>We are building this comparison from specific products rather than filling it with generic recommendations. Check the catalog for current finds.</p><a href="/products/">Browse Products →</a></div>}
+    undefined
+    {!hasCatalogProducts && linkedOptions.length > 0 && <div class="option-grid">{linkedOptions.map((name)=><article class="option-card"><div><span class="tag">AMAZON OPTION</span><h3>{name}</h3><p>Check the current Amazon listing for price, availability, specifications, and reviews.</p></div><a class="amazon" href={amazonSearchUrl(name)} target="_blank" rel="nofollow sponsored noopener">Check Amazon →</a></article>)}</div>}
     <div class="table-wrap"><h2>Side-by-side buying framework</h2><table><thead><tr><th>Factor</th><th>What to look for</th><th>Why it matters</th></tr></thead><tbody>{article.criteria.map(item=><tr><td><strong>{item}</strong></td><td>Compare the exact model specifications and current listing.</td><td>Small differences can matter depending on your intended use.</td></tr>)}</tbody></table></div>
     <div class="next-step"><div><div class="eyebrow">NEXT STEP</div><h2>Compare the details, then check the current retailer listing.</h2><p>Prices, availability, specifications, and product versions can change. Confirm the current details before purchasing.</p></div><a href="/comparisons/">← Back to Comparisons</a></div>
   </div></section>
