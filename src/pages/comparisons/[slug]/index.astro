@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { products } from '../../../data/products.js';
+import { amazonSearchUrl } from '../../../utils/amazon.js';
+
+const articles = {
+  'compression-packing-cubes-vs-regular': {
+    title: 'Compression Packing Cubes vs. Regular Cubes: Do They Actually Save Space?',
+    intro: 'A practical comparison of compression and standard packing cubes, focused on luggage space, organization, weight, convenience, and value.',
+    criteria: ['Space efficiency','Organization','Weight','Ease of packing','Value'],
+    advice: 'Compression cubes can be useful when your priority is fitting more clothing into a limited suitcase. Standard cubes can be simpler and lighter when organization is the main goal.',
+    search: 'packing cubes'
+  },
+  'budget-vs-premium-milk-frothers': {
+    title: 'Budget vs. Premium Milk Frothers: Is the Upgrade Worth It?',
+    intro: 'Compare the features that can actually change the frothing experience before paying more for a premium model.',
+    criteria: ['Froth consistency','Speed','Controls','Cleaning','Value'],
+    advice: 'The premium upgrade makes more sense when you use a frother frequently and care about convenience or additional controls. Occasional users may value simplicity more.',
+    search: 'milk frother'
+  },
+  'drawer-dividers-compared': {
+    title: 'Modular vs. Standard Drawer Dividers: Which Maximizes Your Space?',
+    intro: 'A decision guide for choosing drawer dividers based on adjustability, fit, organization, and everyday access.',
+    criteria: ['Adjustability','Fit','Installation','Organization','Value'],
+    advice: 'Modular dividers are useful when drawer dimensions or storage needs change. Standard dividers can be a straightforward choice for predictable layouts.',
+    search: 'drawer organizer'
+  },
+  'compact-air-fryers-for-small-countertops': {
+    title: 'Compact Air Fryers Compared: Which Fits a Small Countertop?',
+    intro: 'A small-kitchen comparison focused on footprint, capacity, controls, cleanup, and everyday convenience.',
+    criteria: ['Countertop footprint','Capacity','Controls','Cleanup','Storage'],
+    advice: 'For a small kitchen, exterior dimensions matter as much as advertised capacity. Measure the available counter and storage space before choosing.',
+    search: 'air fryer'
+  },
+  'under-sink-storage-comparison': {
+    title: 'Under-Sink Storage: 5 Expandable Organizers for Complex Plumbing',
+    intro: 'Under-sink cabinets are difficult because plumbing takes up valuable space. Compare adjustable storage formats before buying.',
+    criteria: ['Pipe clearance','Adjustability','Access','Stability','Value'],
+    advice: 'Expandable or tiered organizers can work well around plumbing, but measuring the cabinet first is essential.',
+    search: 'under sink organizer'
+  },
+  'cable-trays-vs-sleeves': {
+    title: 'Cable Management: Trays vs. Sleeves for a Cleaner Desk',
+    intro: 'Compare two common cable-management approaches by installation, flexibility, visibility, and maintenance.',
+    criteria: ['Installation','Flexibility','Appearance','Access','Maintenance'],
+    advice: 'Cable trays are useful for routing cables underneath a desk, while sleeves are better when multiple cables need to stay bundled together.',
+    search: 'cable management'
+  },
+  '3-in-1-travel-charging-stations': {
+    title: '3-in-1 Charging Stations: Which Travel Hub Makes Sense?',
+    intro: 'A travel-focused comparison of multi-device charging stations, with attention to portability, compatibility, convenience, and bulk.',
+    criteria: ['Device compatibility','Portability','Charging convenience','Foldability','Bulk'],
+    advice: 'A foldable multi-device charger can reduce the number of separate charging accessories you carry, but verify compatibility with your exact devices before buying.',
+    search: '3 in 1 charging station'
+  },
+  'skincare-cleansers-compared': {
+    title: 'Skincare Cleansers Compared: What Should You Look For?',
+    intro: 'A practical cleanser comparison focused on format, ingredients, routine fit, and individual preferences—not universal skin claims.',
+    criteria: ['Cleanser format','Ingredients','Skin-feel','Routine fit','Value'],
+    advice: 'Choose based on your skin needs, preferred texture, ingredients, and how the cleanser fits your routine. Check the current ingredient list and product directions before buying.',
+    search: 'facial cleanser'
+  }
+};
+
+export function getStaticPaths() {
+  return Object.keys(articles).map((slug) => ({ params: { slug }, props: { article: articles[slug] } }));
+}
+
+const { article } = Astro.props;
+const related = products.filter((p) => `${p.name} ${p.category} ${p.bestFor}`.toLowerCase().includes(article.search.toLowerCase())).slice(0, 4);
+---
+
+<BaseLayout title={`${article.title} | Buy Better Finds`} description={article.intro}>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">PRODUCT COMPARISON</div>
+      <h1>{article.title}</h1>
+      <p>{article.intro}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container article">
+      <div class="quick-answer">
+        <span>QUICK TAKE</span>
+        <p>{article.advice}</p>
+      </div>
+
+      <div class="question">
+        <div class="eyebrow">THE BUYING QUESTION</div>
+        <h2>Which option makes more sense for your needs?</h2>
+        <p>There is not necessarily one right choice. The useful comparison is the one that makes the tradeoffs visible so you can match the product to how you actually plan to use it.</p>
+      </div>
+
+      <div class="criteria">
+        {article.criteria.map((item, index) => <div><b>0{index + 1}</b><strong>{item}</strong><span>Compare this factor before you buy.</span></div>)}
+      </div>
+
+      <h2>Products worth comparing</h2>
+      <p>These are products currently in the Buy Better Finds catalog that may be relevant to this buying question. More products will be added as the comparison library grows.</p>
+      {related.length > 0 ? (
+        <div class="products">
+          {related.map((product) => (
+            <article class="product">
+              <a href={`/products/${product.slug}/`} class="image"><img src={product.image} alt={product.imageAlt} loading="lazy" /></a>
+              <div class="body">
+                <span class="tag">{product.category}</span>
+                <h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3>
+                <p><strong>Best for:</strong> {product.bestFor}</p>
+                <p>{product.why}</p>
+                <div class="links"><a href={`/products/${product.slug}/`}>See Our Take →</a><a class="amazon" href={amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check Amazon →</a></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="catalog-note"><strong>More products are coming to this comparison.</strong><p>We are building this comparison from specific products rather than filling it with generic recommendations. Check the catalog for current finds.</p><a href="/products/">Browse Products →</a></div>
+      )}
+
+      <div class="table-wrap">
+        <h2>Side-by-side buying framework</h2>
+        <table>
+          <thead><tr><th>Factor</th><th>What to look for</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            {article.criteria.map((item) => <tr><td><strong>{item}</strong></td><td>Compare the exact model specifications and current listing.</td><td>Small differences can matter depending on your intended use.</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="next-step">
+        <div><div class="eyebrow">NEXT STEP</div><h2>Compare the details, then check the current retailer listing.</h2><p>Prices, availability, specifications, and product versions can change. Confirm the current details before purchasing.</p></div>
+        <a href="/comparisons/">← Back to Comparisons</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.hero{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:78px 0}.hero .eyebrow,.hero h1,.hero p{color:#fff}.hero h1{max-width:900px;font-size:clamp(38px,6vw,64px);line-height:1.05;margin:12px 0 18px}.hero p{max-width:780px;font-size:18px;line-height:1.7}.article{max-width:1080px}.quick-answer{border-left:5px solid #c8102e;background:#f5f7fa;padding:22px 24px;margin-bottom:48px}.quick-answer span{font-size:10px;font-weight:900;letter-spacing:.12em;color:#c8102e}.quick-answer p{font-size:18px;line-height:1.7;color:#10233f;margin:8px 0 0;font-weight:600}.question{margin-bottom:28px}.question h2,.article>h2{color:#10233f;font-size:32px;margin:8px 0 10px}.question p{color:#64748b;line-height:1.7}.criteria{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:28px 0 52px}.criteria div{border:1px solid #e2e8f0;border-radius:12px;padding:17px;background:#fff}.criteria b{display:block;color:#c8102e;font-size:10px}.criteria strong{display:block;color:#10233f;margin:8px 0 5px}.criteria span{font-size:11px;line-height:1.4;color:#64748b}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:22px 0 52px}.product{border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;background:#fff}.image{height:230px;background:#f5f7fa;display:block}.image img{width:100%;height:100%;object-fit:contain;padding:20px}.body{padding:20px}.tag{font-size:9px;font-weight:900;color:#003087;text-transform:uppercase;letter-spacing:.1em}.body h3{font-size:21px;line-height:1.25;margin:7px 0}.body h3 a{color:#10233f;text-decoration:none}.body p{font-size:12px;color:#64748b;line-height:1.55}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.links>a:first-child{color:#003087;font-weight:800;text-decoration:none}.amazon{background:#ffb000;color:#10233f!important;padding:9px 12px;border-radius:7px;text-decoration:none;font-weight:900;font-size:11px}.table-wrap{margin:30px 0 48px}.table-wrap h2{color:#10233f}.table-wrap table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e2e8f0}.table-wrap th,.table-wrap td{padding:15px;border:1px solid #e2e8f0;text-align:left;vertical-align:top;line-height:1.5}.table-wrap th{background:#10233f;color:#fff}.table-wrap td{color:#475569;font-size:13px}.table-wrap td strong{color:#10233f}.catalog-note{border:1px dashed #cbd5e1;border-radius:14px;padding:28px;margin:22px 0 52px;background:#f8fafc}.catalog-note strong{color:#10233f}.catalog-note p{color:#64748b;line-height:1.6}.catalog-note a,.next-step a{color:#003087;font-weight:900;text-decoration:none}.next-step{display:flex;justify-content:space-between;gap:25px;align-items:center;background:#10233f;color:#fff;border-radius:15px;padding:28px}.next-step .eyebrow{color:#d6a84f}.next-step h2{margin:7px 0;color:#fff}.next-step p{color:#d5deea;line-height:1.6}.next-step a{background:#fff;padding:11px 14px;border-radius:8px;white-space:nowrap}@media(max-width:850px){.criteria{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr}.next-step{flex-direction:column;align-items:flex-start}}@media(max-width:600px){.hero{padding:58px 0}.hero p{font-size:16px}.criteria{grid-template-columns:1fr}.table-wrap{overflow-x:auto}.table-wrap table{min-width:700px}.next-step a{white-space:normal}}
+</style>
