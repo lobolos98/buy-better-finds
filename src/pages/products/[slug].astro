@@ -1,23 +1,4 @@
 ---
-<script type="application/ld+json" set:html={JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: product.name,
-  image: [new URL(product.image, 'https://buybetterfinds.com').toString()],
-  description: product.why,
-  url: canonicalUrl,
-  review: {
-    '@type': 'Review',
-    author: { '@type': 'Organization', name: 'Buy Better Finds' },
-    reviewBody: `${product.why} Best for: ${recommendation.bestFor} Key tradeoff: ${recommendation.skipIf}`,
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: recommendation.score ?? 1,
-      bestRating: 10,
-      worstRating: 1
-    }
-  }
-})} />
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
@@ -79,6 +60,26 @@ const affiliateUrl = product.url?.includes('amazon.com') ? product.url : amazonS
 const reviewDate = 'September 22, 2026';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 ---
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.name,
+  image: [new URL(product.image, 'https://buybetterfinds.com').toString()],
+  description: product.why,
+  url: canonicalUrl,
+  review: {
+    '@type': 'Review',
+    author: { '@type': 'Organization', name: 'Buy Better Finds' },
+    reviewBody: `${product.why} Best for: ${recommendation.bestFor} Key tradeoff: ${recommendation.skipIf}`,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: recommendation.score ?? 1,
+      bestRating: 10,
+      worstRating: 1
+    }
+  }
+})} />
+
 <BaseLayout title={`${product.name} | Buy Better Finds`} description={`${product.name}: independent buying guidance, strengths, tradeoffs, and practical product information.`}>
   <section class="section product-page">
     <div class="container">
