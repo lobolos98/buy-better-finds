@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
 import { trendingProducts, trendingUpdated } from '../../data/trending.js';
-import { amazonProductUrl } from '../../utils/amazon.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 
 const trending = trendingProducts
   .map((trend) => ({ ...trend, product: catalog.find((product) => product.slug === trend.slug) }))
@@ -59,7 +59,7 @@ const trending = trendingProducts
               <div class="best"><strong>Best for:</strong> {product.bestFor}</div>
               <div class="actions">
                 <a class="btn secondary" href={`/products/${product.slug}/`}>See Our Take →</a>
-                {product.amazonAsin ? <a class="amazon-btn" href={amazonProductUrl(product.amazonAsin)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a> : <span class="amazon-btn amazon-pending">Amazon link pending verified ASIN</span>}
+                <a class="amazon-btn" href={product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
               </div>
               <a class="source" href={sourceUrl} target="_blank" rel="noopener noreferrer">Research signal: {sourceLabel} ↗</a>
             </div>
