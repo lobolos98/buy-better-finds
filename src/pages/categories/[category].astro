@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
-import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
+import { amazonProductUrl } from '../../utils/amazon.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
 export function getStaticPaths() {
@@ -90,14 +90,14 @@ const rankedMatches = [...matches].sort((a, b) => (getRecommendation(b).score ??
     {themes.length > 0 && <section class="theme-panel"><div><div class="eyebrow">SHOPPING FILTERS</div><h2>What to look for.</h2><p>Use these practical filters to narrow the category before you compare individual products.</p></div><div class="theme-list">{themes.map((theme) => <span>{theme}</span>)}</div></section>}
     {rankedMatches.length > 0 && <>
       <section class="featured-section"><div class="section-head"><div><div class="eyebrow">SHORTLISTED FINDS</div><h2>Start with the products worth comparing.</h2></div><a class="text-link" href="/products/">Browse all finds →</a></div>
-        <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name); const rec = getRecommendation(product); return <article class="card product-card">
+        <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : ''; const rec = getRecommendation(product); return <article class="card product-card">
           <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span></a>
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
           <div class="score-row"><strong>{rec.score ? rec.score.toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
           <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
-          <div class="affiliate-actions"><a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div>
+          <div class="affiliate-actions">{amazonUrl ? <a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a> : <span class="amazon-button amazon-pending">Amazon link pending verified ASIN</span>}</div>
         </article>; })}</div>
         <p class="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm current details on Amazon before buying.</p>
       </section>
