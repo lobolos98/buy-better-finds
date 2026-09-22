@@ -33,43 +33,87 @@ const categoryNames = {
 };
 
 const categoryThemes = {
-  'Gifts & Collectibles': ['Disney', 'Marvel', 'Star Wars', 'LEGO', 'Pokémon', 'Funko', 'Gifts under $25', 'Gifts under $50'],
-  'Toys & Games': ['Building sets', 'STEM & maker toys', 'Puzzles', 'Family games', 'Collectibles', 'Screen-free play'],
-  'Beauty & Personal Care': ['Skincare', 'Hair care', 'Grooming', 'Beauty tools', 'Daily essentials']
+  'Home & Kitchen': ['Counter space', 'Capacity', 'Ease of cleaning', 'Everyday convenience'],
+  Tech: ['Compatibility', 'Battery life', 'Comfort & fit', 'Long-term value'],
+  'Tools & DIY': ['Power & platform', 'Kit contents', 'Ergonomics', 'Project fit'],
+  Outdoor: ['Space & setup', 'Durability', 'Weather exposure', 'Seasonal use'],
+  'Smart Home': ['Compatibility', 'Setup', 'Subscriptions', 'Automation'],
+  Fitness: ['Training goals', 'Battery life', 'Comfort', 'Data & features'],
+  Lifestyle: ['Size & portability', 'Durability', 'Daily use', 'Cleaning'],
+  'Gifts & Collectibles': ['Who it is for', 'Edition & availability', 'Display value', 'Gift budget'],
+  'Toys & Games': ['Age fit', 'Play value', 'Repeat use', 'Storage'],
+  'Beauty & Personal Care': ['Skin or hair goal', 'Formula', 'Routine fit', 'Value']
 };
+
+const categoryAdvice = {
+  'Home & Kitchen': 'Prioritize capacity, footprint, cleanup, and how often the product will actually earn its counter or cabinet space.',
+  Tech: 'Start with the device ecosystem and your main use case. Then compare comfort, battery life, connectivity, and the features you will use most.',
+  'Tools & DIY': 'Match the tool to the work you actually do. Platform compatibility, included batteries, ergonomics, and kit contents can matter more than headline power.',
+  Outdoor: 'Think about your space first. Footprint, weather exposure, setup, maintenance, and seasonal storage can change whether an outdoor product fits.',
+  'Smart Home': 'Check compatibility before features. The right product should work with your existing ecosystem and make everyday routines simpler rather than adding another app.',
+  Fitness: 'Choose around your training goal rather than the feature count. Comfort, battery life, accuracy, and the metrics you will use are the practical priorities.',
+  Lifestyle: 'Focus on the way you carry, use, clean, and store the product. Small differences in size and durability can matter every day.',
+  'Gifts & Collectibles': 'Shop around the recipient and the occasion first. Edition, character or franchise, display value, age fit, and current availability all matter.',
+  'Toys & Games': 'Look beyond the box art. Age fit, repeat play, setup time, storage, and whether the child can play independently are useful filters.',
+  'Beauty & Personal Care': 'Start with the specific routine or grooming goal. Formula, compatibility, frequency of use, and total routine cost are more useful than hype.'
+};
+
+const categoryGuides = {
+  'Home & Kitchen': '/guides/best-home-kitchen/',
+  Tech: '/guides/best-tech/',
+  'Tools & DIY': '/guides/best-tools-diy/',
+  Outdoor: '/guides/best-outdoor/',
+  'Smart Home': '/guides/best-smart-home/',
+  Lifestyle: '/guides/best-everyday-products/',
+  'Beauty & Personal Care': '/categories/beauty-personal-care/cosmetics/'
+};
+
+const categoryComparisons = {
+  Tech: [['Sony WH-1000XM5 vs AirPods 4', '/comparisons/sony-wh-1000xm5-vs-airpods-4/']],
+  'Home & Kitchen': [['Ninja AF101 vs Instant Vortex Plus', '/comparisons/ninja-af101-vs-instant-vortex-plus/'], ['Dyson V8 vs Shark Navigator', '/comparisons/dyson-v8-vs-shark-navigator/']],
+  Lifestyle: [['YETI Rambler vs Stanley Quencher', '/comparisons/yeti-rambler-vs-stanley-quencher/']],
+  'Smart Home': [['TP-Link Outdoor Plug vs Ring Doorbell', '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/']]
+};
+
 
 const { name } = Astro.props;
 const matches = products.filter((product) => product.category === name);
 const themes = categoryThemes[name] ?? [];
+const advice = categoryAdvice[name] ?? 'Start with your use case, then compare the features, limitations, and total cost that matter most to you.';
+const rankedMatches = [...matches].sort((a, b) => (getRecommendation(b).score ?? 0) - (getRecommendation(a).score ?? 0));
 ---
-<BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, and product sources.`}>
+<BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, comparisons, and product sources.`}>
   <section class="section category-page"><div class="container">
     <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>{name}</strong></div>
-    <div class="category-hero"><div><div class="eyebrow">BUYING GUIDE · {matches.length} FINDS</div><h1>{name}</h1><p class="lead">Our shortlist of products worth considering, with practical notes on who each one is for and what to watch before buying.</p></div><div class="category-rule"><strong>HOW TO SHOP</strong><span>Start with your use case, then compare the tradeoffs.</span></div></div>
-    {themes.length > 0 && <section class="theme-panel"><div><div class="eyebrow">EXPLORE THE HUB</div><h2>Shop by interest.</h2><p>Use these themes to guide what you look for without turning every trend into a permanent top-level category.</p></div><div class="theme-list">{themes.map((theme) => <span>{theme}</span>)}</div></section>}
-    {matches.length > 0 ? <>
-      <div class="guide-intro"><div><div class="eyebrow">OUR APPROACH</div><h2>Don't just compare features.</h2></div><p>Use these recommendations as a starting point. We focus on practical fit, useful features, and the limitations that can matter after you buy.</p></div>
-      <div class="grid category-product-grid">{matches.map((product, index) => { const amazonUrl = amazonSearchUrl(product.name); return <article class="card product-card" data-daily-date={product.dailyDealDate ?? ''}><a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP PICK</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span></a><div class="tag">{index === 0 ? 'TOP PICK · ' : ''}{product.category}</div><h3>{product.name}</h3><div class="best-for"><strong>BEST FOR</strong><span>{product.bestFor}</span></div><p>{product.why}</p><div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div><div class="affiliate-actions"><a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div></article>; })}</div>
-      <p class="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm current details on Amazon before buying.</p>
-    </> : <p>No products are published in this category yet. <a class="arrow" href="/products/">See all products →</a></p>}
-    <div class="category-cta"><div><div class="eyebrow">KEEP EXPLORING</div><h2>Want to see everything?</h2><p>Browse the full Buy Better Finds catalog or jump to another category.</p></div><div class="cta-actions"><a class="btn primary" href="/products/">View all finds →</a><a class="btn secondary" href="/categories/">All categories</a></div></div>
+    <div class="category-hero"><div><div class="eyebrow">SHOPPING HUB · {matches.length} FINDS</div><h1>{name}</h1><p class="lead">{advice}</p></div><div class="category-rule"><strong>HOW TO SHOP</strong><span>Start with your use case, then compare the tradeoffs.</span></div></div>
+    {themes.length > 0 && <section class="theme-panel"><div><div class="eyebrow">SHOPPING FILTERS</div><h2>What to look for.</h2><p>Use these practical filters to narrow the category before you compare individual products.</p></div><div class="theme-list">{themes.map((theme) => <span>{theme}</span>)}</div></section>}
+    {rankedMatches.length > 0 && <>
+      <section class="featured-section"><div class="section-head"><div><div class="eyebrow">SHORTLISTED FINDS</div><h2>Start with the products worth comparing.</h2></div><a class="text-link" href="/products/">Browse all finds →</a></div>
+        <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = amazonSearchUrl(product.name); const rec = getRecommendation(product); return <article class="card product-card">
+          <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span></a>
+          <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
+          <div class="score-row"><strong>{rec.score ? rec.score.toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
+          <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
+          <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
+          <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
+          <div class="affiliate-actions"><a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div>
+        </article>; })}</div>
+        <p class="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm current details on Amazon before buying.</p>
+      </section>
+      <section class="decision-section"><div class="decision-copy"><div class="eyebrow">BUYING CHECKLIST</div><h2>Before you buy, ask these questions.</h2><p>{advice}</p></div>
+        <div class="checklist">{themes.slice(0,4).map((theme, index) => <div class="check-item"><span>0{index + 1}</span><div><strong>{theme}</strong><p>{index === 0 ? 'Does this match the way you will actually use it?' : index === 1 ? 'Will the product fit your space, setup, or existing gear?' : index === 2 ? 'What limitation could matter after the first few weeks?' : 'Is the extra cost buying something you will actually use?'}</p></div></div>)}</div>
+      </section>
+      {categoryComparisons[name]?.length > 0 && <section class="compare-section"><div class="section-head"><div><div class="eyebrow">SIDE-BY-SIDE</div><h2>Compare before choosing.</h2></div><a class="text-link" href="/comparisons/">All comparisons →</a></div><div class="compare-grid">{categoryComparisons[name].map(([title, href]) => <a class="compare-card" href={href}><span>COMPARISON</span><strong>{title}</strong><b>See the tradeoffs →</b></a>)}</div></section>}
+      {categoryGuides[name] && <section class="guide-banner"><div><div class="eyebrow">GO DEEPER</div><h2>Read the buying guide.</h2><p>Use a longer-form guide when you want the reasoning behind the shortlist, not just the product cards.</p></div><a class="btn primary" href={categoryGuides[name]}>Read the guide →</a></section>}
+    </>}
+    <div class="category-cta"><div><div class="eyebrow">KEEP EXPLORING</div><h2>Want to compare more?</h2><p>Browse the full catalog or jump to another shopping category.</p></div><div class="cta-actions"><a class="btn primary" href="/products/">View all finds →</a><a class="btn secondary" href="/categories/">All categories</a></div></div>
   </div></section>
 </BaseLayout>
 <style>
-.category-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:30px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs strong{color:#111827}.category-hero{display:grid;grid-template-columns:1.5fr .7fr;gap:40px;align-items:end}.category-hero h1{font-size:clamp(40px,6vw,68px);margin:8px 0 15px}.category-rule{padding:20px;border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;display:grid;gap:6px}.category-rule strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.category-rule span{color:#475569;line-height:1.5}.theme-panel{margin:38px 0 0;padding:25px;border:1px solid #d9dee8;border-radius:18px;background:#fff;display:grid;grid-template-columns:.8fr 1.2fr;gap:25px;align-items:center}.theme-panel h2{margin:6px 0}.theme-panel p{margin:0;color:#64748b;line-height:1.6}.theme-list{display:flex;flex-wrap:wrap;gap:9px}.theme-list span{padding:9px 12px;border-radius:999px;background:#f1f5f9;color:#10233f;font-size:12px;font-weight:800}.guide-intro{margin:55px 0 28px;padding:28px;border-bottom:1px solid #d9dee8;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.guide-intro h2{margin:6px 0;font-size:30px}.guide-intro p{color:#64748b;line-height:1.7;margin:0}.product-card{overflow:hidden}.product-image{position:relative;display:block;aspect-ratio:4/3;margin:-1px -1px 22px;background:#f3f5f8;overflow:hidden;border-radius:18px 18px 0 0}.product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}.product-image:hover img{transform:scale(1.04)}.pick-badge{position:absolute;z-index:2;top:14px;left:14px;background:#c8102e;color:#fff;font-size:10px;font-weight:900;letter-spacing:.12em;padding:7px 10px;border-radius:999px}.image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}.image-fallback span{font-size:64px;line-height:1}.image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}.best-for{margin:15px 0;padding:12px;border-radius:10px;background:#f8fafc;display:grid;gap:4px}.best-for strong{font-size:10px;letter-spacing:.12em;color:#c8102e}.best-for span{font-size:14px;color:#334155;line-height:1.45}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}.card-footer strong{color:#111827}.card-footer .arrow{white-space:nowrap}.affiliate-actions{margin-top:14px}.amazon-button{display:block;width:100%;box-sizing:border-box;text-align:center;padding:12px 14px;border-radius:9px;background:#c8102e;color:#fff;text-decoration:none;font-size:13px;font-weight:850;letter-spacing:.01em}.amazon-button:hover{background:#a50d26}.affiliate-disclosure{margin:24px 0 0;text-align:center;color:#64748b;font-size:12px;line-height:1.6}.category-cta{margin-top:65px;padding:34px;border-radius:22px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.category-cta h2{color:#fff;margin:7px 0}.category-cta p{color:#cbd5e1;margin:0}.cta-actions{display:flex;gap:10px;flex-wrap:wrap}.category-cta .btn.secondary{border-color:#64748b;color:#fff}@media(max-width:850px){.category-hero,.guide-intro,.theme-panel{grid-template-columns:1fr}.category-cta{flex-direction:column;align-items:flex-start}.category-product-grid{grid-template-columns:1fr}}
+.category-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:30px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs strong{color:#111827}.category-hero{display:grid;grid-template-columns:1.5fr .7fr;gap:40px;align-items:end}.category-hero h1{font-size:clamp(40px,6vw,68px);margin:8px 0 15px}.category-rule{padding:20px;border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;display:grid;gap:6px}.category-rule strong{font-size:11px;letter-spacing:.14em;color:#c8102e}.category-rule span{color:#475569;line-height:1.5}.theme-panel{margin:38px 0 0;padding:25px;border:1px solid #d9dee8;border-radius:18px;background:#fff;display:grid;grid-template-columns:.8fr 1.2fr;gap:25px;align-items:center}.theme-panel h2{margin:6px 0}.theme-panel p{margin:0;color:#64748b;line-height:1.6}.theme-list{display:flex;flex-wrap:wrap;gap:9px}.theme-list span{padding:9px 12px;border-radius:999px;background:#f1f5f9;color:#10233f;font-size:12px;font-weight:800}.featured-section{margin-top:55px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.section-head h2{margin:6px 0;font-size:30px}.text-link{font-size:13px;font-weight:850;color:#003087;text-decoration:none;white-space:nowrap}.category-product-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}.product-card{overflow:hidden;padding-bottom:18px}.product-image{position:relative;display:block;aspect-ratio:4/3;margin:-1px -1px 22px;background:#f3f5f8;overflow:hidden;border-radius:18px 18px 0 0}.product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}.product-image:hover img{transform:scale(1.04)}.pick-badge{position:absolute;z-index:2;top:14px;left:14px;background:#c8102e;color:#fff;font-size:10px;font-weight:900;letter-spacing:.12em;padding:7px 10px;border-radius:999px}.image-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}.image-fallback span{font-size:64px;line-height:1}.image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}.score-row{display:flex;align-items:baseline;gap:8px;margin:13px 0}.score-row strong{font-size:25px;color:#10233f}.score-row span{font-size:9px;letter-spacing:.12em;color:#c8102e;font-weight:900}.best-for,.tradeoff{margin:12px 0;padding:11px;border-radius:10px;background:#f8fafc;display:grid;gap:4px}.best-for strong,.tradeoff strong{font-size:10px;letter-spacing:.12em;color:#c8102e}.best-for span,.tradeoff span{font-size:13px;color:#334155;line-height:1.45}.tradeoff{background:#fff7f7;border:1px solid #f3dddd}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px}.card-footer .arrow{white-space:nowrap}.affiliate-actions{margin-top:13px}.amazon-button{display:block;width:100%;box-sizing:border-box;text-align:center;padding:12px 14px;border-radius:9px;background:#c8102e;color:#fff;text-decoration:none;font-size:13px;font-weight:850}.amazon-button:hover{background:#a50d26}.affiliate-disclosure{margin:24px 0 0;text-align:center;color:#64748b;font-size:12px;line-height:1.6}.decision-section{margin-top:65px;padding:34px;border-radius:20px;background:#f8fafc;border:1px solid #e2e8f0;display:grid;grid-template-columns:.85fr 1.15fr;gap:45px}.decision-copy h2{font-size:32px;margin:7px 0 12px}.decision-copy p{color:#64748b;line-height:1.7}.checklist{display:grid;gap:12px}.check-item{display:grid;grid-template-columns:38px 1fr;gap:13px;padding:15px;background:#fff;border:1px solid #e2e8f0;border-radius:12px}.check-item>span{font-size:11px;font-weight:900;color:#c8102e;padding-top:3px}.check-item strong{color:#10233f}.check-item p{margin:4px 0 0;color:#64748b;font-size:13px;line-height:1.5}.compare-section,.guide-banner{margin-top:65px}.compare-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.compare-card{display:grid;gap:8px;padding:22px;border:1px solid #d9dee8;border-radius:15px;background:#fff;text-decoration:none}.compare-card span{font-size:10px;letter-spacing:.12em;color:#c8102e;font-weight:900}.compare-card strong{font-size:18px;color:#10233f}.compare-card b{font-size:12px;color:#003087}.guide-banner{padding:30px;border-radius:20px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:25px}.guide-banner h2{color:#fff;margin:7px 0}.guide-banner p{color:#cbd5e1;margin:0;max-width:700px;line-height:1.6}.category-cta{margin-top:65px;padding:34px;border-radius:22px;background:#fff;border:1px solid #d9dee8;display:flex;justify-content:space-between;align-items:center;gap:30px}.category-cta h2{margin:7px 0}.category-cta p{color:#64748b;margin:0}.cta-actions{display:flex;gap:10px;flex-wrap:wrap}@media(max-width:1000px){.category-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.category-hero,.decision-section,.theme-panel{grid-template-columns:1fr}}@media(max-width:650px){.category-product-grid,.compare-grid{grid-template-columns:1fr}.section-head,.guide-banner,.category-cta{align-items:flex-start;flex-direction:column}.text-link{white-space:normal}.category-hero h1{font-size:43px}.decision-section{padding:24px}.guide-banner .btn,.category-cta .btn{width:100%;text-align:center;box-sizing:border-box}}
 </style>
 <script>
-  const easternDate = () => {
-    const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
-    const get = (type) => parts.find((part) => part.type === type)?.value || '';
-    return get('year') + '-' + get('month') + '-' + get('day');
-  };
-  const today = easternDate();
-  document.querySelectorAll('[data-daily-date]').forEach((card) => {
-    const release = card.getAttribute('data-daily-date');
-    if (release && release > today) card.remove();
-  });
-  document.querySelectorAll('.product-image img').forEach((img) => {
-    img.addEventListener('error', () => { img.style.display = 'none'; const fallback = img.nextElementSibling; if (fallback) fallback.style.display = 'flex'; });
-  });
+document.querySelectorAll('.product-image img').forEach((img) => {
+  img.addEventListener('error', () => { img.style.display = 'none'; const fallback = img.nextElementSibling; if (fallback) fallback.style.display = 'flex'; });
+});
 </script>
