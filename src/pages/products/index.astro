@@ -21,7 +21,7 @@ import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
       <div class="grid product-grid">
         {products.map((product) => {
           const recommendation = getRecommendation(product);
-          const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : '';
+          const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name);
           const productImage = product.amazonImage || product.image;
           return <article class="card product-card">
             <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
@@ -37,7 +37,7 @@ import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
             <p class="price"><strong>{product.price}</strong></p>
             <div class="product-actions">
               <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
-              {amazonUrl ? <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon · Paid link →</a> : <span class="shop-btn amazon-shop amazon-pending" aria-label="Amazon link pending verified ASIN">Amazon link pending verified ASIN</span>}
+              <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon · Paid link →</a>
             </div>
           </article>;
         })}
