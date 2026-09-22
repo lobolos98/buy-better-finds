@@ -2,68 +2,191 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Search Products | Buy Better Finds" description="Amazon product search is coming soon to Buy Better Finds. Search products and connect results with our research, comparisons, pros, cons, and retailer links.">
-  <section class="product-search-home search-page-notification">
+<BaseLayout title="Product Search Coming Soon | Buy Better Finds" description="Buy Better Finds is preparing an Amazon-connected product search experience with product research, pros and cons, comparisons, and buying guidance.">
+  <section class="search-hero">
     <div class="container">
-      <div class="search-home-copy">
-        <div>
-          <div class="eyebrow">SEARCH ANY PRODUCT</div>
-          <h1>Looking for something specific?</h1>
-          <p>Search for a product, brand, or model and then use Buy Better Finds research to understand what to look for before you buy.</p>
+      <div class="search-hero-grid">
+        <div class="search-hero-copy">
+          <div class="eyebrow">PRODUCT SEARCH · COMING SOON</div>
+          <h1>Search a product.<br /><span>Understand it before you buy.</span></h1>
+          <p>We're building a product search experience that connects Amazon product listings with Buy Better Finds research, including strengths, tradeoffs, comparisons, and who each product is best for.</p>
+          <div class="status-pill"><span></span> Amazon-connected search is being prepared</div>
         </div>
-        <div class="home-search-placeholder">
-          <div class="placeholder-icon">⌕</div>
-          <strong>Amazon Product Search</strong>
-          <span>Coming soon</span>
-          <small>Live Amazon product search will be available once Creators API access is enabled for the Buy Better Finds Associates account.</small>
-          <a class="btn primary" href="/search/">Explore Product Search →</a>
+
+        <div class="search-panel">
+          <div class="search-panel-top">
+            <div class="placeholder-icon">⌕</div>
+            <div>
+              <strong>Amazon Product Search</strong>
+              <span>Coming soon</span>
+            </div>
+          </div>
+          <label for="product-search">Search for a product, brand, or model</label>
+          <div class="search-input">
+            <input id="product-search" type="search" placeholder="e.g. Sony WH-1000XM5" disabled aria-describedby="search-status" />
+            <button type="button" disabled>Search</button>
+          </div>
+          <p id="search-status">Live search will be enabled once Amazon Creators API access is available for the Buy Better Finds Associates account.</p>
+          <div class="search-panel-note">No product search is performed on this page yet. This is the preview of the experience we're building.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section search-next">
+  <section class="section how-search-works">
     <div class="container">
-      <div>
-        <div class="eyebrow">WHAT COMES NEXT</div>
-        <h2>Search should lead to a better buying decision.</h2>
-        <p>Our long-term search experience is designed to connect a product query with Buy Better Finds research—not simply send you straight to a retailer.</p>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">THE PLAN</div>
+          <h2>From search to a smarter shortlist.</h2>
+          <p>The goal is to make search useful—not just another way to send you to a retailer.</p>
+        </div>
       </div>
+
       <div class="search-flow">
-        <div><b>01</b><strong>Search</strong><span>Product, brand, or model</span></div>
-        <div><b>02</b><strong>Compare</strong><span>Side-by-side options and tradeoffs</span></div>
-        <div><b>03</b><strong>Decide</strong><span>Pros, cons, and best-for guidance</span></div>
-        <div><b>04</b><strong>Shop</strong><span>Check current retailer details</span></div>
+        <article>
+          <b>01</b>
+          <div class="flow-icon">⌕</div>
+          <h3>Search</h3>
+          <p>Enter a product name, brand, model, or product type.</p>
+        </article>
+        <article>
+          <b>02</b>
+          <div class="flow-icon">◫</div>
+          <h3>Understand</h3>
+          <p>See the information that matters, including intended use, strengths, limitations, and tradeoffs.</p>
+        </article>
+        <article>
+          <b>03</b>
+          <div class="flow-icon">⇄</div>
+          <h3>Compare</h3>
+          <p>Put relevant alternatives side by side when more than one option makes sense.</p>
+        </article>
+        <article>
+          <b>04</b>
+          <div class="flow-icon">✓</div>
+          <h3>Shop</h3>
+          <p>Check the retailer listing for current price, availability, and final purchase details.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section search-now">
+    <div class="container">
+      <div class="search-now-card">
+        <div>
+          <div class="eyebrow">WHILE YOU WAIT</div>
+          <h2>Start with products we've already researched.</h2>
+          <p>You can browse our current product library now. Every product includes a clear reason to consider it, who it's best for, and what to watch before buying.</p>
+        </div>
+        <div class="search-now-actions">
+          <a class="btn primary" href="/products/">Browse Our Finds →</a>
+          <a class="btn secondary" href="/categories/">Browse Categories</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section search-categories">
+    <div class="container">
+      <div class="section-head centered">
+        <div>
+          <div class="eyebrow">EXPLORE NOW</div>
+          <h2>Shop by category.</h2>
+          <p>These categories will also become searchable once live product search is enabled.</p>
+        </div>
+      </div>
+      <div class="category-links">
+        <a href="/categories/tech/">Tech <span>→</span></a>
+        <a href="/categories/home-kitchen/">Home &amp; Kitchen <span>→</span></a>
+        <a href="/categories/tools-diy/">Tools &amp; DIY <span>→</span></a>
+        <a href="/categories/outdoor/">Outdoor <span>→</span></a>
+        <a href="/categories/smart-home/">Smart Home <span>→</span></a>
+        <a href="/categories/fitness/">Fitness <span>→</span></a>
+        <a href="/categories/lifestyle/">Lifestyle <span>→</span></a>
+        <a href="/categories/gifts-collectibles/">Gifts &amp; Collectibles <span>→</span></a>
+        <a href="/categories/toys-games/">Toys &amp; Games <span>→</span></a>
+        <a href="/categories/beauty-personal-care/">Beauty &amp; Personal Care <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section search-footer-note">
+    <div class="container">
+      <div class="note-card">
+        <strong>What will power the live search?</strong>
+        <p>The planned experience requires Amazon's Creators API access for the Buy Better Finds Associates account. Until that access is available, this page intentionally keeps the search controls inactive rather than presenting a search that does not actually work.</p>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .search-page-notification{background:#10233f;padding:42px 0;min-height:0;display:block}
-  .search-page-notification .search-home-copy{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-  .search-page-notification h1{color:#fff;font-size:32px;line-height:1.2;margin:7px 0 10px}
-  .search-page-notification p{color:#d5deea;line-height:1.6;margin:0;max-width:680px}
-  .search-page-notification .eyebrow{color:#d6a84f}
-  .search-page-notification .home-search-placeholder{background:#fff;padding:26px;border-radius:12px;box-shadow:0 12px 28px rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;max-width:none;width:auto;box-sizing:border-box}
-  .search-page-notification .placeholder-icon{font-size:34px;color:#10233f}
-  .search-page-notification .home-search-placeholder strong{font-size:17px;color:#10233f}
-  .search-page-notification .home-search-placeholder>span{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#c8102e;font-weight:900}
-  .search-page-notification .home-search-placeholder small{font-size:11px;line-height:1.5;color:#64748b;max-width:390px;margin:4px 0 10px}
-  .search-page-notification .home-search-placeholder .btn{width:100%;box-sizing:border-box;text-align:center}
-  .search-next { background:#111827; color:#fff; }
-  .search-next .container { display:grid; grid-template-columns:1fr 1.3fr; gap:50px; align-items:center; }
-  .search-next p { color:#d1d5db; line-height:1.7; }
-  .search-flow { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .search-flow div { padding:20px; border:1px solid #374151; border-radius:12px; display:grid; gap:5px; }
-  .search-flow b { font-size:.78rem; opacity:.65; }
-  .search-flow span { color:#d1d5db; font-size:.9rem; }
-  @media (max-width:900px) { .results-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .search-next .container { grid-template-columns:1fr; } }
-  @media (max-width:700px) { .search-page-notification .search-home-copy{grid-template-columns:1fr} }
-  .search-page-notification { min-height:420px; display:flex; align-items:center; }
-  .search-page-notification .search-home-copy { width:100%; }
-  .search-page-notification h1 { color:#fff; font-size:clamp(2.2rem,4vw,3.2rem); line-height:1.08; margin:7px 0 10px; }
-  .search-page-notification p { max-width:680px; }
-  .search-page-notification .eyebrow { color:#d6a84f; }
-  .search-page-notification .home-search-placeholder { max-width:520px; width:100%; box-sizing:border-box; }
+  .search-hero{background:#10233f;color:#fff;padding:74px 0 78px}
+  .search-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+  .search-hero-copy .eyebrow{color:#d6a84f}
+  .search-hero h1{font-size:clamp(2.35rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.035em;margin:12px 0 18px}
+  .search-hero h1 span{color:#d6a84f}
+  .search-hero-copy>p{max-width:650px;color:#d5deea;font-size:16px;line-height:1.7;margin:0 0 24px}
+  .status-pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #39506e;background:#172d49;border-radius:999px;padding:9px 13px;color:#dbe5f0;font-size:11px;font-weight:800}
+  .status-pill span{width:8px;height:8px;border-radius:50%;background:#d6a84f;display:block}
+  .search-panel{background:#fff;color:#10233f;border-radius:18px;padding:28px;box-shadow:0 25px 60px rgba(0,0,0,.24)}
+  .search-panel-top{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+  .placeholder-icon{width:48px;height:48px;border-radius:12px;background:#eef3f8;display:flex;align-items:center;justify-content:center;font-size:28px}
+  .search-panel-top strong{display:block;font-size:18px}
+  .search-panel-top span{display:block;margin-top:4px;font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#c8102e;font-weight:900}
+  .search-panel label{display:block;font-size:11px;font-weight:900;color:#405166;margin-bottom:8px}
+  .search-input{display:grid;grid-template-columns:1fr auto;gap:8px}
+  .search-input input{min-width:0;border:1px solid #d7e0e9;border-radius:8px;padding:13px 14px;font:inherit;font-size:13px;background:#f8fafc;color:#64748b}
+  .search-input button{border:0;border-radius:8px;padding:0 18px;background:#cbd5e1;color:#64748b;font-weight:900;cursor:not-allowed}
+  .search-panel>p{font-size:11px;line-height:1.55;color:#64748b;margin:12px 0 0}
+  .search-panel-note{margin-top:18px;padding:11px 12px;background:#f5f7fa;border-radius:8px;color:#64748b;font-size:10px;line-height:1.5}
+  .how-search-works{background:#f5f7fa}
+  .search-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .search-flow article{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;min-height:205px;display:flex;flex-direction:column}
+  .search-flow article>b{font-size:10px;letter-spacing:.1em;color:#c8102e}
+  .flow-icon{margin:18px 0 12px;width:42px;height:42px;border-radius:10px;background:#eef3f8;color:#10233f;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900}
+  .search-flow h3{font-size:19px;color:var(--navy);margin:0 0 7px}
+  .search-flow p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}
+  .search-now{background:#fff}
+  .search-now-card{background:#10233f;color:#fff;border-radius:16px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+  .search-now-card .eyebrow{color:#d6a84f}
+  .search-now-card h2{margin:7px 0 9px;font-size:28px}
+  .search-now-card p{color:#d5deea;max-width:720px;line-height:1.6;margin:0}
+  .search-now-actions{display:flex;gap:9px;flex-wrap:wrap;flex:0 0 auto}
+  .search-now-actions .secondary{border-color:#6b7c91;color:#fff}
+  .search-categories{background:#f5f7fa}
+  .centered{text-align:center}
+  .centered>div{margin:0 auto}
+  .category-links{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .category-links a{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;color:var(--navy);font-size:12px;font-weight:800;text-decoration:none;display:flex;align-items:center;justify-content:space-between;transition:.2s}
+  .category-links a:hover{transform:translateY(-2px);border-color:#b8c7d8;box-shadow:0 8px 20px rgba(16,35,63,.08)}
+  .category-links span{color:#1f5f9f}
+  .search-footer-note{background:#fff;padding-top:10px}
+  .note-card{border-top:1px solid var(--line);padding:22px 0 8px;text-align:center;max-width:900px;margin:0 auto}
+  .note-card strong{font-size:12px;color:var(--navy)}
+  .note-card p{font-size:11px;line-height:1.6;color:var(--muted);margin:8px 0 0}
+  @media(max-width:1000px){
+    .search-hero-grid{grid-template-columns:1fr;gap:36px}
+    .search-panel{max-width:650px}
+    .search-flow{grid-template-columns:repeat(2,1fr)}
+    .category-links{grid-template-columns:repeat(3,1fr)}
+    .search-now-card{align-items:flex-start;flex-direction:column}
+  }
+  @media(max-width:600px){
+    .search-hero{padding:52px 0 58px}
+    .search-hero h1{font-size:clamp(2.2rem,11vw,3.2rem)}
+    .search-hero-copy>p{font-size:14px}
+    .search-panel{padding:20px;border-radius:14px}
+    .search-input{grid-template-columns:1fr}
+    .search-input button{min-height:42px}
+    .search-flow{grid-template-columns:1fr}
+    .search-flow article{min-height:0}
+    .search-now-card{padding:25px 22px}
+    .search-now-card h2{font-size:23px}
+    .search-now-actions{width:100%;flex-direction:column}
+    .search-now-actions a{width:100%;box-sizing:border-box;text-align:center}
+    .category-links{grid-template-columns:1fr}
+  }
 </style>
