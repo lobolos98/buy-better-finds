@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
-import { amazonSearchUrl } from '../../utils/amazon.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 
 const deals = products.filter((p) => p && p.dailyDealDate).sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate));
 ---
@@ -26,7 +26,7 @@ const deals = products.filter((p) => p && p.dailyDealDate).sort((a, b) => b.dail
             <p>{product.why}</p>
             <div class="score"><strong>{recommendation.score}</strong><span>/10 Buy Better Score</span></div>
             <a class="take" href={`/products/${product.slug}/`}>See our take →</a>
-            <a class="amazon" href={amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+            <a class="amazon" href={(product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name))} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
           </article>;
         })}
       </div>
