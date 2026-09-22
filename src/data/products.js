@@ -1,6 +1,6 @@
 export const products = [
   {
-    slug: 'sony-wh-1000xm5', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
+    slug: 'sony-wh-1000xm5', amazonAsin: undefined, name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
     bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b', dailyDealDate: '2026-09-22'
   },
   {
@@ -25,7 +25,7 @@ export const products = [
     slug: 'garmin-forerunner-265', name: 'Garmin Forerunner 265', category: 'Fitness', price: 'Check price', icon: '◷', image: '/images/products/garmin-forerunner-265.svg', imageAlt: 'Garmin Forerunner 265 GPS running watch', pressKitUrl: 'https://www.garmin.com/en-US/newsroom/press-kit/', bestFor: 'Runners and structured training', why: 'AMOLED GPS running watch with advanced training metrics, recovery features, music storage, and Garmin Pay.', watch: 'It is more specialized than a basic fitness tracker and can be more watch than casual users need.', url: 'https://www.garmin.com/en-US/p/886785/', dailyDealDate: '2026-09-17'
   },
   {
-    slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼', image: '/images/products/weber-spirit-e210.svg', imageAlt: 'Weber Spirit E-210 Gas Grill', bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with Snap-Jet ignition, precise heat control, and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately and has less cooking area than larger grills.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html'
+    slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼', image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill', bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with Snap-Jet ignition, precise heat control, and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately and has less cooking area than larger grills.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html'
   },
   {
     slug: 'tp-link-ep40m', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡', image: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg', imageAlt: 'TP-Link Kasa Smart Outdoor Plug EP40M', bestFor: 'Outdoor lights and scheduled devices', why: 'Matter-certified outdoor smart plug with two individually controlled outlets, scheduling, voice control, and IP64 weather resistance.', watch: 'Confirm your preferred smart-home ecosystem before purchase.', url: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/'
@@ -108,7 +108,7 @@ export const products = [
   {
     slug: 'philips-oneblade', name: 'Philips Norelco OneBlade', category: 'Beauty & Personal Care', price: 'Check price', icon: '▌', image: '/images/products/philips-oneblade.svg', imageAlt: 'Philips Norelco OneBlade grooming tool', pressKitUrl: 'https://www.usa.philips.com/a-w/about/news/resources.html', bestFor: 'Flexible beard trimming and everyday grooming', why: 'A compact hybrid grooming format designed for trimming and shaping with interchangeable blade options.', watch: 'Replacement blades add ongoing cost, and users wanting a very close traditional shave may prefer another format.', url: 'https://www.usa.philips.com/c-m-pe/oneblade-oneblade', dailyDealDate: '2026-09-19'
   },
-{
+  {
     slug: 'oxo-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
     bestFor: 'Bathroom cleaning without kneeling or crouching', why: 'An extendable cleaning tool designed to reach tubs, tile, glass, floors, and corners from a more comfortable standing position.', watch: 'The head is replaceable, and exact retailer pricing and availability can change.', url: 'https://www.amazon.com/s?k=OXO+Good+Grips+Extendable+Tub+Tile+Scrubber&tag=buybetterfi06-20'
   },
@@ -136,5 +136,4 @@ export const products = [
     slug: 'jandcase-night-lights', name: 'Jandcase Motion Sensor Night Lights', category: 'Smart Home', price: 'Check price', icon: '☼', image: '/images/products/jandcase-night-lights.svg', imageAlt: 'Jandcase motion sensor night lights',
     bestFor: 'Hallways, stairs, closets, and nighttime navigation', why: 'Small motion-activated lights can add low-effort illumination to areas where a full light fixture is unnecessary.', watch: 'Check battery type, sensor range, and pack size for the current listing.', url: 'https://www.amazon.com/s?k=Jandcase+motion+sensor+night+lights&tag=buybetterfi06-20'
   }
-
 ];
