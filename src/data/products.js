@@ -1,6 +1,6 @@
 export const products = [
   {
-    slug: 'sony-wh-1000xm5', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
+    slug: 'sony-wh-1000xm5', amazonAsin: 'B09XS7JWHH', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
     bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b', dailyDealDate: '2026-09-22'
   },
   {
@@ -109,19 +109,19 @@ export const products = [
     slug: 'philips-oneblade', name: 'Philips Norelco OneBlade', category: 'Beauty & Personal Care', price: 'Check price', icon: '▌', image: '/images/products/philips-oneblade.svg', imageAlt: 'Philips Norelco OneBlade grooming tool', pressKitUrl: 'https://www.usa.philips.com/a-w/about/news/resources.html', bestFor: 'Flexible beard trimming and everyday grooming', why: 'A compact hybrid grooming format designed for trimming and shaping with interchangeable blade options.', watch: 'Replacement blades add ongoing cost, and users wanting a very close traditional shave may prefer another format.', url: 'https://www.usa.philips.com/c-m-pe/oneblade-oneblade', dailyDealDate: '2026-09-19'
   },
   {
-    slug: 'oxo-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
+    slug: 'oxo-tub-tile-scrubber', amazonAsin: 'B00L9X4WCE', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
     bestFor: 'Bathroom cleaning without kneeling or crouching', why: 'An extendable cleaning tool designed to reach tubs, tile, glass, floors, and corners from a more comfortable standing position.', watch: 'The head is replaceable, and exact retailer pricing and availability can change.', url: 'https://www.amazon.com/s?k=OXO+Good+Grips+Extendable+Tub+Tile+Scrubber&tag=buybetterfi06-20'
   },
   {
-    slug: 'chefaide-spatula-set', name: 'ChefAide 5-Piece Silicone Spatula Set', category: 'Home & Kitchen', price: 'Check price', icon: '✚', image: '/images/products/chefaide-spatula-set.svg', imageAlt: 'ChefAide silicone spatula set',
+    slug: 'chefaide-spatula-set', amazonAsin: 'B0CHGFG64S', name: 'ChefAide 5-Piece Silicone Spatula Set', category: 'Home & Kitchen', price: 'Check price', icon: '✚', image: '/images/products/chefaide-spatula-set.svg', imageAlt: 'ChefAide silicone spatula set',
     bestFor: 'Everyday cooking and baking', why: 'A practical multi-piece silicone utensil set for stirring, folding, scraping, and general kitchen prep.', watch: 'Check the current set contents and dimensions because listings can vary.', url: 'https://www.amazon.com/s?k=ChefAide+5+Piece+Silicone+Spatula+Set&tag=buybetterfi06-20'
   },
   {
-    slug: 'bagsmart-packing-cubes', name: 'BAGSMART Compression Packing Cubes', category: 'Lifestyle', price: 'Check price', icon: '▦', image: '/images/products/bagsmart-packing-cubes.svg', imageAlt: 'BAGSMART compression packing cubes',
+    slug: 'bagsmart-packing-cubes', amazonAsin: 'B08Z7SLGMF', name: 'BAGSMART Compression Packing Cubes', category: 'Lifestyle', price: 'Check price', icon: '▦', image: '/images/products/bagsmart-packing-cubes.svg', imageAlt: 'BAGSMART compression packing cubes',
     bestFor: 'Travel organization and maximizing luggage space', why: 'Compression packing cubes help organize clothing and make it easier to separate items inside luggage.', watch: 'Set size, zipper configuration, and compression capacity vary by bundle.', url: 'https://www.amazon.com/s?k=BAGSMART+compression+packing+cubes&tag=buybetterfi06-20'
   },
   {
-    slug: 'tubshroom-drain-protector', name: 'TubShroom Drain Protector', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: '/images/products/tubshroom-drain-protector.svg', imageAlt: 'TubShroom drain protector',
+    slug: 'tubshroom-drain-protector', amazonAsin: 'B07MKPMBCJ', name: 'TubShroom Drain Protector', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: '/images/products/tubshroom-drain-protector.svg', imageAlt: 'TubShroom drain protector',
     bestFor: 'Reducing hair buildup in shower and tub drains', why: 'A simple drain insert designed to catch hair before it travels deeper into the plumbing.', watch: 'Confirm the drain size and current version before ordering.', url: 'https://www.amazon.com/s?k=TubShroom+drain+protector&tag=buybetterfi06-20'
   },
   {
