@@ -76,6 +76,7 @@ const focusedGuide = guideByName[product.name];
 const comparison = comparisonMap[product.slug];
 const affiliateUrl = product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name);
 const reviewDate = 'September 22, 2026';
+const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 ---
 <BaseLayout title={`${product.name} | Buy Better Finds`} description={`${product.name}: independent buying guidance, strengths, tradeoffs, and practical product information.`}>
   <section class="section product-page">
