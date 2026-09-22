@@ -110,19 +110,19 @@ export const products = [
   },
   {
     slug: 'oxo-tub-tile-scrubber', amazonAsin: 'B00L9X4WCE', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
-    bestFor: 'Bathroom cleaning without kneeling or crouching', why: 'An extendable cleaning tool designed to reach tubs, tile, glass, floors, and corners from a more comfortable standing position.', watch: 'The head is replaceable, and exact retailer pricing and availability can change.', url: 'https://www.amazon.com/s?k=OXO+Good+Grips+Extendable+Tub+Tile+Scrubber&tag=buybetterfi06-20'
+    bestFor: 'Bathroom cleaning without kneeling or crouching', why: 'An extendable cleaning tool designed to reach tubs, tile, glass, floors, and corners from a more comfortable standing position.', watch: 'The head is replaceable, and exact retailer pricing and availability can change.', url: 'https://www.amazon.com/dp/B00L9X4WCE?tag=buybetterfi06-20'
   },
   {
     slug: 'chefaide-spatula-set', amazonAsin: 'B0CHGFG64S', name: 'ChefAide 5-Piece Silicone Spatula Set', category: 'Home & Kitchen', price: 'Check price', icon: '✚', image: '/images/products/chefaide-spatula-set.svg', imageAlt: 'ChefAide silicone spatula set',
-    bestFor: 'Everyday cooking and baking', why: 'A practical multi-piece silicone utensil set for stirring, folding, scraping, and general kitchen prep.', watch: 'Check the current set contents and dimensions because listings can vary.', url: 'https://www.amazon.com/s?k=ChefAide+5+Piece+Silicone+Spatula+Set&tag=buybetterfi06-20'
+    bestFor: 'Everyday cooking and baking', why: 'A practical multi-piece silicone utensil set for stirring, folding, scraping, and general kitchen prep.', watch: 'Check the current set contents and dimensions because listings can vary.', url: 'https://www.amazon.com/dp/B0CHGFG64S?tag=buybetterfi06-20'
   },
   {
     slug: 'bagsmart-packing-cubes', amazonAsin: 'B08Z7SLGMF', name: 'BAGSMART Compression Packing Cubes', category: 'Lifestyle', price: 'Check price', icon: '▦', image: '/images/products/bagsmart-packing-cubes.svg', imageAlt: 'BAGSMART compression packing cubes',
-    bestFor: 'Travel organization and maximizing luggage space', why: 'Compression packing cubes help organize clothing and make it easier to separate items inside luggage.', watch: 'Set size, zipper configuration, and compression capacity vary by bundle.', url: 'https://www.amazon.com/s?k=BAGSMART+compression+packing+cubes&tag=buybetterfi06-20'
+    bestFor: 'Travel organization and maximizing luggage space', why: 'Compression packing cubes help organize clothing and make it easier to separate items inside luggage.', watch: 'Set size, zipper configuration, and compression capacity vary by bundle.', url: 'https://www.amazon.com/dp/B08Z7SLGMF?tag=buybetterfi06-20'
   },
   {
     slug: 'tubshroom-drain-protector', amazonAsin: 'B07MKPMBCJ', name: 'TubShroom Drain Protector', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: '/images/products/tubshroom-drain-protector.svg', imageAlt: 'TubShroom drain protector',
-    bestFor: 'Reducing hair buildup in shower and tub drains', why: 'A simple drain insert designed to catch hair before it travels deeper into the plumbing.', watch: 'Confirm the drain size and current version before ordering.', url: 'https://www.amazon.com/s?k=TubShroom+drain+protector&tag=buybetterfi06-20'
+    bestFor: 'Reducing hair buildup in shower and tub drains', why: 'A simple drain insert designed to catch hair before it travels deeper into the plumbing.', watch: 'Confirm the drain size and current version before ordering.', url: 'https://www.amazon.com/dp/B07MKPMBCJ?tag=buybetterfi06-20'
   },
   {
     slug: 'tweezerman-tweezers', name: 'Tweezerman Slant Tweezer', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://tweezerman.com/cdn/shop/files/wobnswxyuhspivnfjukp_1_2.jpg?v=1762528093&width=2000', imageAlt: 'Tweezerman slant tweezers',
