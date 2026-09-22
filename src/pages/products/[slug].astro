@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import { products } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
-import { amazonSearchUrl } from '../../utils/amazon.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 
 const guideMap = {
   tech: { label: 'Best Tech Products', href: '/guides/best-tech/' },
@@ -56,7 +56,7 @@ const categorySlug = product.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const categoryGuide = guideMap[categorySlug];
 const focusedGuide = guideByName[product.name];
 const comparison = comparisonMap[product.slug];
-const affiliateUrl = product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name);
+const affiliateUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
 const reviewDate = 'September 22, 2026';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 ---
