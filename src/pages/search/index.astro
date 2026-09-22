@@ -16,67 +16,29 @@ const searchableProducts = products.map((product) => ({
 ---
 
 <BaseLayout title="Search Products | Buy Better Finds" description="Search the Buy Better Finds product catalog and find product research, comparisons, pros, cons, and retailer links.">
-  <section class="search-hero">
+  <section class="search-hero search-coming-soon-hero">
     <div class="container">
       <div class="eyebrow">PRODUCT SEARCH</div>
-      <h1>Find the product you're looking for.</h1>
-      <p>Search our growing catalog by product name, brand, category, or use case. Then compare the options and see what is worth considering before you buy.</p>
-      <form id="product-search" class="search-form" role="search">
-        <label for="search-input">Search products</label>
-        <div class="search-row">
-          <input id="search-input" name="q" type="search" placeholder="Try “air fryer”, “LEGO”, “Sony”, or “travel”" autocomplete="off" />
-          <button type="submit">Search</button>
-        </div>
-        <div class="search-suggestions" aria-label="Popular searches">
-          <button type="button" data-query="air fryer">Air Fryers</button>
-          <button type="button" data-query="travel">Travel</button>
-          <button type="button" data-query="LEGO">LEGO</button>
-          <button type="button" data-query="beauty">Beauty</button>
-          <button type="button" data-query="smart home">Smart Home</button>
-        </div>
-      </form>
+      <div class="coming-soon-badge">COMING SOON</div>
+      <h1>Amazon Product Search is coming soon.</h1>
+      <p>We’re building a product search experience that will let you look up products and connect each result with Buy Better Finds research, pros and cons, and a clear link to check the current Amazon listing.</p>
+      <div class="search-preview-card">
+        <div class="preview-icon">⌕</div>
+        <strong>Search any product</strong>
+        <span>Live Amazon product discovery is being prepared.</span>
+        <small>The search feature will be expanded once the required Amazon Associates/Creators API access is available.</small>
+      </div>
     </div>
   </section>
 
   <section class="section search-status">
     <div class="container">
       <div class="coming-soon">
-        <span class="status-icon">⌕</span>
+        <span class="status-icon">✦</span>
         <div>
-          <strong>Expanded Amazon product search is coming soon.</strong>
-          <p>Our current search covers the Buy Better Finds catalog. Live Amazon product discovery will be added when the required Associates/Creators API access is available. Until then, we do not pretend this page is a live Amazon database.</p>
+          <strong>The full product search is coming soon.</strong>
+          <p>We’re intentionally keeping live Amazon product discovery disabled until the required API access is available. This avoids presenting a limited catalog as if it were a live Amazon search.</p>
         </div>
-      </div>
-      <div class="results-head">
-        <div>
-          <div class="eyebrow">BUY BETTER FINDS CATALOG</div>
-          <h2 id="results-title">Browse our products</h2>
-        </div>
-        <span id="results-count"></span>
-      </div>
-      <div id="results" class="results-grid">
-        {searchableProducts.map((product) => (
-          <article class="result-card" data-search={`${product.name} ${product.category} ${product.bestFor} ${product.why}`.toLowerCase()}>
-            <a class="result-image" href={`/products/${product.slug}/`}>
-              <img src={product.image} alt={product.imageAlt} loading="lazy" width="600" height="450" />
-            </a>
-            <div class="result-body">
-              <span class="tag">{product.category}</span>
-              <h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3>
-              <p><strong>Best for:</strong> {product.bestFor}</p>
-              <p>{product.why}</p>
-              <div class="result-actions">
-                <a class="details" href={`/products/${product.slug}/`}>See Our Take →</a>
-                <a class="amazon" href={amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check Amazon →</a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-      <div id="no-results" class="no-results" hidden>
-        <h3>No matching products yet.</h3>
-        <p>Try a broader search, browse a category, or check back as the catalog grows.</p>
-        <a class="details" href="/categories/">Browse Categories →</a>
       </div>
     </div>
   </section>
