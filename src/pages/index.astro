@@ -65,8 +65,8 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
 <script define:vars={{ dailyDealQueue: dealQueue.map(({ slug, name, category, image, imageAlt, bestFor, why, dailyDealDate, amazonAsin }) => ({ slug, name, category, image, imageAlt, bestFor, why, dailyDealDate, amazonAsin })) }}>
   const dailyDealCatalog = [];
   const amazonTag = 'buybetterfi06-20';
-  const amazonSearch = (name) => 'https://www.amazon.com/s?k=' + encodeURIComponent(name) + '&tag=' + amazonTag;
-  const amazonProduct = (asin, name) => asin ? 'https://www.amazon.com/dp/' + encodeURIComponent(asin) + '?tag=' + amazonTag : amazonSearch(name);
+  const amazonProduct = (asin) => asin ? 'https://www.amazon.com/dp/' + encodeURIComponent(asin) + '?tag=' + amazonTag : '';
+  const amazonCta = (item) => item.amazonAsin ? '<a class="amazon-btn" href="' + amazonProduct(item.amazonAsin) + '" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>' : '<span class="amazon-btn amazon-pending">Amazon link pending verified ASIN</span>';
   const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const easternDate = () => {
     const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
@@ -84,7 +84,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     }
     root.innerHTML =
       '<div class="deal-image"><span class="deal-badge">NEW TODAY</span><img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.imageAlt) + '" width="900" height="650" /></div>' +
-      '<div class="deal-copy"><div class="tag">' + escapeHtml(item.category) + '</div><h3>' + escapeHtml(item.name) + '</h3><div class="deal-stars" aria-label="Editorial recommendation">★★★★★ <span>Buy Better Finds pick</span></div><p><strong>Why we’re highlighting it:</strong> ' + escapeHtml(item.why) + '</p><div class="deal-points"><span>✓ Strong fit for ' + escapeHtml(item.bestFor.toLowerCase()) + '</span><span>✓ New to the Buy Better Finds category</span><span>✓ After today, it remains in its permanent category</span></div><div class="deal-actions"><a class="shop" href="/products/' + encodeURIComponent(item.slug) + '/">See Our Take →</a><a class="amazon-btn" href="' + amazonProduct(item.amazonAsin, item.name) + '" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div><small>Amazon price and availability can change at any time. Check Amazon for current details.</small></div>';
+      '<div class="deal-copy"><div class="tag">' + escapeHtml(item.category) + '</div><h3>' + escapeHtml(item.name) + '</h3><div class="deal-stars" aria-label="Editorial recommendation">★★★★★ <span>Buy Better Finds pick</span></div><p><strong>Why we’re highlighting it:</strong> ' + escapeHtml(item.why) + '</p><div class="deal-points"><span>✓ Strong fit for ' + escapeHtml(item.bestFor.toLowerCase()) + '</span><span>✓ New to the Buy Better Finds category</span><span>✓ After today, it remains in its permanent category</span></div><div class="deal-actions"><a class="shop" href="/products/' + encodeURIComponent(item.slug) + '/">See Our Take →</a>' + amazonCta(item) + '</div><small>Amazon price and availability can change at any time. Check Amazon for current details.</small></div>';
   };
   renderDailyDeal();
   const scheduleNextDealRefresh = () => {
