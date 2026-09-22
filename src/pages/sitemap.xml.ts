@@ -14,7 +14,9 @@ const staticPages = [
   '/best/',
   '/guides/',
   '/comparisons/',
-  '/trending/'
+  '/trending/',
+  '/deals/',
+  '/search/'
 ];
 
 const guidePages = [
@@ -49,13 +51,15 @@ const categoryPages = [...new Set(products.map((product) =>
 ))].map((slug) => `/categories/${slug}/`);
 
 const productPages = products.map((product) => `/products/${product.slug}/`);
+const extraPages = ['/categories/beauty-personal-care/cosmetics/'];
 
 const pages = [...new Set([
   ...staticPages,
   ...categoryPages,
   ...guidePages,
   ...comparisonPages,
-  ...productPages
+  ...productPages,
+  ...extraPages
 ])];
 
 const escapeXml = (value: string) => value
