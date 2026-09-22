@@ -59,6 +59,15 @@ const comparison = comparisonMap[product.slug];
 const affiliateUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
 const reviewDate = 'September 22, 2026';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'All Finds', item: 'https://buybetterfinds.com/products/' },
+    { '@type': 'ListItem', position: 2, name: product.category, item: `https://buybetterfinds.com/categories/${categorySlug}/` },
+    { '@type': 'ListItem', position: 3, name: product.name, item: canonicalUrl }
+  ]
+};
 ---
 <script type="application/ld+json" set:html={JSON.stringify({
   '@context': 'https://schema.org',
