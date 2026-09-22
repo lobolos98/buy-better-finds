@@ -16,7 +16,7 @@ import { amazonSearchUrl } from '../../utils/amazon.js';
         <a href="/why-we-recommend/">How we recommend →</a>
       </div>
 
-      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product images supplied through Amazon Associates/SiteStripe are used as provided and may change. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
+      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
 
       <div class="grid product-grid">
         {products.map((product) => {
@@ -37,7 +37,7 @@ import { amazonSearchUrl } from '../../utils/amazon.js';
             <p class="price"><strong>{product.price}</strong></p>
             <div class="product-actions">
               <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
-              <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+              <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon · Paid link →</a>
             </div>
           </article>;
         })}
