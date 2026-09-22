@@ -1,10 +1,16 @@
 export const AMAZON_ASSOCIATE_TAG = 'buybetterfi06-20';
 
 /**
- * Builds an Amazon Associates search link using the site's assigned tag.
- * We use Amazon-hosted search results rather than inventing ASINs; the shopper
- * can confirm the exact model, current price, and availability on Amazon.
+ * Builds a direct Amazon Associates product link when a verified ASIN is
+ * available. Otherwise falls back to an Amazon-hosted search link so we do
+ * not invent or guess a product identifier.
  */
+export function amazonProductUrl(asin) {
+  return asin
+    ? `https://www.amazon.com/dp/${encodeURIComponent(asin)}?tag=${AMAZON_ASSOCIATE_TAG}`
+    : '';
+}
+
 export function amazonSearchUrl(productName) {
   const query = encodeURIComponent(productName);
   return `https://www.amazon.com/s?k=${query}&tag=${AMAZON_ASSOCIATE_TAG}`;
