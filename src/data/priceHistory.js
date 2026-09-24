@@ -4,7 +4,7 @@
 //
 // Entry types:
 // - reference: editorial reference price; never treated as a live offer.
-// - current: explicitly verified current retailer price; eligible for Offer markup.
+// - current: explicitly verified current retailer price; eligible for Offer markup when fresh.
 // - historical: dated retailer observation kept for comparison only.
 //
 // For current entries, record verifiedAt and retailer when available.
@@ -37,6 +37,24 @@ export function getCurrentPriceObservation(history) {
   return history
     .filter((entry) => typeof entry.price === 'number' && entry.type === 'current')
     .sort((a, b) => b.date.localeCompare(a.date))[0] ?? null;
+}
+
+export function getFreshCurrentPriceObservation(history, maxAgeDays = 2) {
+  const current = getCurrentPriceObservation(history);
+  if (!current) return null;
+
+  const [year, month, day] = current.date.split('-').map(Number);
+  const observed = new Date(Date.UTC(year, month - 1, day));
+  const nowParts = new Intl.DateTimeFormat('en-CA', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    timeZone: 'America/New_York'
+  }).format(new Date()).split('-').map(Number);
+  const today = new Date(Date.UTC(nowParts[0], nowParts[1] - 1, nowParts[2]));
+  const ageDays = Math.floor((today - observed) / 86400000);
+
+  return ageDays >= 0 && ageDays <= maxAgeDays ? current : null;
 }
 
 export function getLowestObservedPrice(history) {
