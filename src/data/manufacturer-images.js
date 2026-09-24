@@ -20,5 +20,13 @@ export const manufacturerImageOverrides = {
   'crunchlabs-crunchinator': {
     image: 'https://www.crunchlabs.com/cdn/shop/files/11601_CRUNCHLABS_CRUNCHNATOR_SINGLE_PK_F.png?v=1781203491&width=400',
     source: 'CrunchLabs'
+  },
+  'lego-botanicals-roses': {
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt08f4d88d801a4cf8/10328.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500',
+    source: 'LEGO'
+  },
+  'cosrx-snail-96': {
+    image: 'https://www.cosrx.com/cdn/shop/files/Snail_96_Hero-banner-slider_1024x1024.png?v=1763517851',
+    source: 'COSRX'
   }
 };
