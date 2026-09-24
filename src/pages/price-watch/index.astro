@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { products } from '../../data/products.js';
+
+const tracked = products.filter((product) => product.price !== 'Check price');
+const categories = [...new Set(products.map((product) => product.category))];
+---
+
+<BaseLayout title="Price Watch | Buy Better Finds" description="Track reference prices, understand deal context, and verify current retailer pricing before you buy.">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">PRICE WATCH</div>
+        <h1>Know the price before you buy.</h1>
+        <p>Buy Better Finds uses reference prices to give deals context without pretending a static site has live retailer pricing. When a price matters, verify the current offer at the retailer before purchasing.</p>
+      </div>
+      <div class="price-card">
+        <span>WHAT THIS MEANS</span>
+        <strong>Reference price ≠ live price</strong>
+        <p>Retail prices can change at any time. We label our prices as reference prices unless we have a verified current price source.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">CURRENTLY TRACKED</div>
+          <h2>Products with published reference prices</h2>
+          <p>These are editorial reference points, not guarantees of today's Amazon price.</p>
+        </div>
+      </div>
+
+      <div class="watch-grid">
+        {tracked.map((product) => (
+          <article class="watch-card">
+            <div class="watch-top">
+              <span>{product.category}</span>
+              <b>REFERENCE</b>
+            </div>
+            <h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3>
+            <div class="watch-price">{product.price}</div>
+            <p>{product.watch}</p>
+            <a class="watch-link" href={`/products/${product.slug}/`}>Review &amp; buying context →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section context">
+    <div class="container context-grid">
+      <div>
+        <div class="eyebrow">HOW TO READ PRICE WATCH</div>
+        <h2>We separate price context from product judgment.</h2>
+        <p>A lower price does not automatically make a product a better fit. Our product pages explain strengths, tradeoffs, and who the product is best for.</p>
+      </div>
+      <div class="rules">
+        <div><strong>Reference price</strong><span>A published price point used for context.</span></div>
+        <div><strong>Deal of the Day</strong><span>A featured editorial opportunity, not a guarantee of the lowest price.</span></div>
+        <div><strong>Check on Amazon</strong><span>Use the retailer link to verify the current price and availability.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section next">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">NEXT PHASE</div>
+          <h2>Live price tracking can come later.</h2>
+          <p>The site is structured so a future verified price source can replace reference pricing without changing the product-review architecture.</p>
+        </div>
+        <a class="btn primary" href="/products/">Browse product reviews →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.hero{background:var(--navy);color:#fff;padding:72px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.02;margin:10px 0 18px;color:#fff}.hero p{font-size:17px;line-height:1.65;color:#dbe5ef;max-width:700px}.eyebrow{letter-spacing:.12em;font-weight:900;font-size:10px}.price-card{background:#fff;color:var(--navy);border-radius:16px;padding:28px;box-shadow:0 20px 50px #0002}.price-card span{font-size:10px;letter-spacing:.12em;color:#1d4ed8;font-weight:900}.price-card strong{display:block;font-size:24px;margin:10px 0}.price-card p{color:#64748b;font-size:14px;line-height:1.55;margin:0}.watch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.watch-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;display:flex;flex-direction:column;min-height:205px}.watch-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.08em;font-weight:900}.watch-top span{color:#1d4ed8}.watch-top b{color:#64748b}.watch-card h3{font-size:19px;line-height:1.3;margin:12px 0}.watch-card h3 a{color:var(--navy);text-decoration:none}.watch-price{font-size:24px;font-weight:900;color:var(--navy)}.watch-card p{font-size:13px;line-height:1.55;color:var(--muted);margin:8px 0 14px}.watch-link{font-size:12px;color:#1d4ed8;font-weight:900;margin-top:auto}.context{background:#f8fafc}.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}.context h2{font-size:32px;color:var(--navy);margin:8px 0 12px}.context p{color:var(--muted);line-height:1.6}.rules{display:grid;gap:12px}.rules div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.rules strong{display:block;color:var(--navy);font-size:14px}.rules span{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:5px}.next{padding-bottom:85px}.next .section-head{align-items:center}@media(max-width:900px){.watch-grid{grid-template-columns:1fr 1fr}.hero-grid,.context-grid{grid-template-columns:1fr}}@media(max-width:600px){.watch-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero h1{font-size:42px}.price-card{padding:22px}}
+</style>
