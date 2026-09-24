@@ -16,7 +16,7 @@ for (const match of source.matchAll(/slug:\s*'([^']+)'[^]*?name:\s*'([^']+)'[^]*
   products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
 }
 
-const tempProducts = products.filter((p) => p.image.startsWith('/images/products/'));
+const tempProducts = products.filter((p) => p.image.startsWith('/images/products/') || p.image.includes('new-product-placeholder'));
 const targetProducts = products.filter((p) => p.asin || tempProducts.some((t) => t.slug === p.slug));
 
 if (!clientId || !clientSecret || !partnerTag) {
