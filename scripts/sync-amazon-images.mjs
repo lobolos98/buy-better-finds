@@ -12,8 +12,17 @@ const tokenEndpoint = process.env.CREATORS_API_TOKEN_ENDPOINT || 'https://api.am
 
 const source = await fs.readFile(PRODUCTS_FILE, 'utf8');
 const products = [];
+
+// First parse the original single-quoted catalog entries.
 for (const match of source.matchAll(/slug:\s*'([^']+)'[^]*?name:\s*'([^']+)'[^]*?(?:amazonAsin:\s*'([^']+)')?[^]*?image:\s*'([^']+)'/g)) {
   products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
+}
+
+// Then parse the newer JSON-style entries that use double-quoted keys/values.
+for (const match of source.matchAll(/"slug":"([^"]+)"[^]*?"name":"([^"]+)"[^]*?(?:"amazonAsin":"([^"]+)")?[^]*?"image":"([^"]+)"/g)) {
+  if (!products.some((product) => product.slug === match[1])) {
+    products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
+  }
 }
 
 const tempProducts = products.filter((p) => p.image.startsWith('/images/products/') || p.image.includes('new-product-placeholder'));
