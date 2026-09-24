@@ -1,6 +1,13 @@
 // Editorial price observations for Buy Better Finds.
 // Only add an entry when the price was actually observed or verified.
 // Do not backfill historical prices from memory or inference.
+//
+// Entry types:
+// - reference: editorial reference price; never treated as a live offer.
+// - current: explicitly verified current retailer price; eligible for Offer markup.
+// - historical: dated retailer observation kept for comparison only.
+//
+// For current entries, record verifiedAt and retailer when available.
 export const priceHistory = {
   'sony-wh-1000xm5': [
     { date: '2026-09-22', price: 299.99, currency: 'USD', source: 'Editorial reference price', type: 'reference' }
@@ -24,6 +31,12 @@ export const priceHistory = {
 
 export function getPriceHistory(slug) {
   return priceHistory[slug] ?? [];
+}
+
+export function getCurrentPriceObservation(history) {
+  return history
+    .filter((entry) => typeof entry.price === 'number' && entry.type === 'current')
+    .sort((a, b) => b.date.localeCompare(a.date))[0] ?? null;
 }
 
 export function getLowestObservedPrice(history) {
