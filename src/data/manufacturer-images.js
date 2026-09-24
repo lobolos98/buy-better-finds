@@ -28,5 +28,9 @@ export const manufacturerImageOverrides = {
   'cosrx-snail-96': {
     image: 'https://www.cosrx.com/cdn/shop/files/Snail_96_Hero-banner-slider_1024x1024.png?v=1763517851',
     source: 'COSRX'
+  },
+  'samsung-t7-shield': {
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/us/mu-pe1t0k-am/gallery/us-portable-ssd-t7-shield-mu-pe1t0k-am-552408682?%24product-details-jpg%24=',
+    source: 'Samsung'
   }
 };
