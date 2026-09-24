@@ -16,7 +16,9 @@ const staticPages = [
   '/comparisons/',
   '/trending/',
   '/deals/',
-  '/search/'
+  '/search/',
+  '/categories/seasonal-holidays/',
+  '/categories/seasonal-holidays/prime-big-deal-days/'
 ];
 
 const guidePages = [
