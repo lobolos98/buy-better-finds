@@ -2,8 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
-const tracked = products.filter((product) => product.price !== 'Check price');
-const categories = [...new Set(products.map((product) => product.category))];
+const today = '2026-09-24';
+const tracked = products.filter((product) => product.price !== 'Check price').sort((a,b) => (b.dailyDealDate || '').localeCompare(a.dailyDealDate || ''));
+const featured = products.filter((product) => product.dailyDealDate === today);
+const upcoming = products.filter((product) => product.dailyDealDate > today).sort((a,b) => a.dailyDealDate.localeCompare(b.dailyDealDate)).slice(0, 6);
 ---
 
 <BaseLayout title="Price Watch | Buy Better Finds" description="Track reference prices, understand deal context, and verify current retailer pricing before you buy.">
@@ -32,6 +34,8 @@ const categories = [...new Set(products.map((product) => product.category))];
         </div>
       </div>
 
+      <div class="status-grid"><div class="status-card today"><span>TODAY</span><strong>{featured.length ? featured.map((product) => product.name).join(" · ") : "No featured price watch today"}</strong><p>Check the product page and retailer listing for the current offer.</p></div><div class="status-card"><span>NEXT UP</span><strong>{upcoming.length ? upcoming[0].name : "More price-watch features coming"}</strong><p>{upcoming.length ? `Scheduled Deal of the Day feature: ${upcoming[0].dailyDealDate}.` : "We will add new dated features as the editorial queue grows."}</p></div></div>
+
       <div class="watch-grid">
         {tracked.map((product) => (
           <article class="watch-card">
@@ -41,8 +45,10 @@ const categories = [...new Set(products.map((product) => product.category))];
             </div>
             <h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3>
             <div class="watch-price">{product.price}</div>
+            {product.dailyDealDate === today && <div class="deal-status live">DEAL OF THE DAY · TODAY</div>}
+            {product.dailyDealDate > today && <div class="deal-status upcoming">DEAL SCHEDULED · {product.dailyDealDate}</div>}
             <p>{product.watch}</p>
-            <a class="watch-link" href={`/products/${product.slug}/`}>Review &amp; buying context →</a>
+            <div class="watch-actions"><a class="watch-link" href={`/products/${product.slug}/`}>Review &amp; buying context →</a>{product.dailyDealDate && <a class="deal-link" href="/deals/">View deal history →</a>}</div>
           </article>
         ))}
       </div>
@@ -79,5 +85,5 @@ const categories = [...new Set(products.map((product) => product.category))];
 </BaseLayout>
 
 <style>
-.hero{background:var(--navy);color:#fff;padding:72px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.02;margin:10px 0 18px;color:#fff}.hero p{font-size:17px;line-height:1.65;color:#dbe5ef;max-width:700px}.eyebrow{letter-spacing:.12em;font-weight:900;font-size:10px}.price-card{background:#fff;color:var(--navy);border-radius:16px;padding:28px;box-shadow:0 20px 50px #0002}.price-card span{font-size:10px;letter-spacing:.12em;color:#1d4ed8;font-weight:900}.price-card strong{display:block;font-size:24px;margin:10px 0}.price-card p{color:#64748b;font-size:14px;line-height:1.55;margin:0}.watch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.watch-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;display:flex;flex-direction:column;min-height:205px}.watch-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.08em;font-weight:900}.watch-top span{color:#1d4ed8}.watch-top b{color:#64748b}.watch-card h3{font-size:19px;line-height:1.3;margin:12px 0}.watch-card h3 a{color:var(--navy);text-decoration:none}.watch-price{font-size:24px;font-weight:900;color:var(--navy)}.watch-card p{font-size:13px;line-height:1.55;color:var(--muted);margin:8px 0 14px}.watch-link{font-size:12px;color:#1d4ed8;font-weight:900;margin-top:auto}.context{background:#f8fafc}.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}.context h2{font-size:32px;color:var(--navy);margin:8px 0 12px}.context p{color:var(--muted);line-height:1.6}.rules{display:grid;gap:12px}.rules div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.rules strong{display:block;color:var(--navy);font-size:14px}.rules span{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:5px}.next{padding-bottom:85px}.next .section-head{align-items:center}@media(max-width:900px){.watch-grid{grid-template-columns:1fr 1fr}.hero-grid,.context-grid{grid-template-columns:1fr}}@media(max-width:600px){.watch-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero h1{font-size:42px}.price-card{padding:22px}}
+.hero{background:var(--navy);color:#fff;padding:72px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.02;margin:10px 0 18px;color:#fff}.hero p{font-size:17px;line-height:1.65;color:#dbe5ef;max-width:700px}.eyebrow{letter-spacing:.12em;font-weight:900;font-size:10px}.price-card{background:#fff;color:var(--navy);border-radius:16px;padding:28px;box-shadow:0 20px 50px #0002}.price-card span{font-size:10px;letter-spacing:.12em;color:#1d4ed8;font-weight:900}.price-card strong{display:block;font-size:24px;margin:10px 0}.price-card p{color:#64748b;font-size:14px;line-height:1.55;margin:0}.status-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 28px}.status-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#f8fafc}.status-card.today{background:#fff7f8;border-color:#f1c6cd}.status-card span{font-size:9px;letter-spacing:.12em;color:#c8102e;font-weight:900}.status-card strong{display:block;color:var(--navy);font-size:17px;line-height:1.35;margin:8px 0}.status-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.watch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.watch-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;display:flex;flex-direction:column;min-height:205px}.watch-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.08em;font-weight:900}.watch-top span{color:#1d4ed8}.watch-top b{color:#64748b}.watch-card h3{font-size:19px;line-height:1.3;margin:12px 0}.watch-card h3 a{color:var(--navy);text-decoration:none}.watch-price{font-size:24px;font-weight:900;color:var(--navy)}.deal-status{display:inline-block;align-self:flex-start;margin-top:9px;padding:5px 7px;border-radius:5px;font-size:9px;font-weight:900;letter-spacing:.06em}.deal-status.live{background:#c8102e;color:#fff}.deal-status.upcoming{background:#eef4fb;color:#2366a8}.watch-actions{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}.watch-actions .watch-link{margin-top:0}.deal-link{font-size:11px;color:#64748b;font-weight:800}.watch-card p{font-size:13px;line-height:1.55;color:var(--muted);margin:8px 0 14px}.watch-link{font-size:12px;color:#1d4ed8;font-weight:900;margin-top:auto}.context{background:#f8fafc}.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}.context h2{font-size:32px;color:var(--navy);margin:8px 0 12px}.context p{color:var(--muted);line-height:1.6}.rules{display:grid;gap:12px}.rules div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.rules strong{display:block;color:var(--navy);font-size:14px}.rules span{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:5px}.next{padding-bottom:85px}.next .section-head{align-items:center}@media(max-width:900px){.watch-grid{grid-template-columns:1fr 1fr}.status-grid{grid-template-columns:1fr}.hero-grid,.context-grid{grid-template-columns:1fr}}@media(max-width:600px){.watch-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero h1{font-size:42px}.price-card{padding:22px}}
 </style>
