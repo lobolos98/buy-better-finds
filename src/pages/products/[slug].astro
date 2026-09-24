@@ -1,5 +1,4 @@
 ---
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import { products } from '../../data/products.js';
@@ -13,25 +12,26 @@ const guideMap = {
   outdoor: { label: 'Best Outdoor Products', href: '/guides/best-outdoor/' },
   'smart-home': { label: 'Best Smart Home Products', href: '/guides/best-smart-home/' },
   fitness: { label: 'Best Fitness Watches', href: '/guides/best-fitness-watches/' },
-  lifestyle: { label: 'Best Everyday Drinkware', href: '/guides/best-everyday-drinkware/' }
+  lifestyle: { label: 'Best Everyday Drinkware', href: '/guides/best-everyday-drinkware/' },
+  'gifts-collectibles': { label: 'Best Gifts & Collectibles', href: '/categories/gifts-collectibles/' }
 };
 
 const comparisonMap = {
-  'sony-wh-1000xm5-noise-canceling-headphones': { label: 'Sony WH-1000XM5 vs AirPods 4', href: '/comparisons/sony-wh-1000xm5-vs-airpods-4/' },
+  'sony-wh-1000xm5': { label: 'Sony WH-1000XM5 vs AirPods 4', href: '/comparisons/sony-wh-1000xm5-vs-airpods-4/' },
   'apple-airpods-4': { label: 'Sony WH-1000XM5 vs AirPods 4', href: '/comparisons/sony-wh-1000xm5-vs-airpods-4/' },
-  'ninja-4-qt-air-fryer-af101': { label: 'Ninja AF101 vs Instant Vortex Plus', href: '/comparisons/ninja-af101-vs-instant-vortex-plus/' },
-  'instant-vortex-plus-air-fryer': { label: 'Ninja AF101 vs Instant Vortex Plus', href: '/comparisons/ninja-af101-vs-instant-vortex-plus/' },
-  'dyson-v8-cordless-vacuum': { label: 'Dyson V8 vs Shark Navigator', href: '/comparisons/dyson-v8-vs-shark-navigator/' },
+  'ninja-af101': { label: 'Ninja AF101 vs Instant Vortex Plus', href: '/comparisons/ninja-af101-vs-instant-vortex-plus/' },
+  'instant-vortex-plus': { label: 'Ninja AF101 vs Instant Vortex Plus', href: '/comparisons/ninja-af101-vs-instant-vortex-plus/' },
+  'dyson-v8': { label: 'Dyson V8 vs Shark Navigator', href: '/comparisons/dyson-v8-vs-shark-navigator/' },
   'shark-navigator-lift-away': { label: 'Dyson V8 vs Shark Navigator', href: '/comparisons/dyson-v8-vs-shark-navigator/' },
-  'yeti-rambler-drinkware': { label: 'YETI Rambler vs Stanley Quencher', href: '/comparisons/yeti-rambler-vs-stanley-quencher/' },
-  'stanley-quencher-h2-0-tumbler': { label: 'YETI Rambler vs Stanley Quencher', href: '/comparisons/yeti-rambler-vs-stanley-quencher/' },
-  'tp-link-kasa-smart-outdoor-plug-ep40m': { label: 'TP-Link Outdoor Plug vs Ring Doorbell', href: '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/' },
+  'yeti-rambler': { label: 'YETI Rambler vs Stanley Quencher', href: '/comparisons/yeti-rambler-vs-stanley-quencher/' },
+  'stanley-quencher': { label: 'YETI Rambler vs Stanley Quencher', href: '/comparisons/yeti-rambler-vs-stanley-quencher/' },
+  'tp-link-ep40m': { label: 'TP-Link Outdoor Plug vs Ring Doorbell', href: '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/' },
   'ring-battery-doorbell': { label: 'TP-Link Outdoor Plug vs Ring Doorbell', href: '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/' }
 };
 
 const guideByName = {
   'Sony WH-1000XM5 Noise-Canceling Headphones': { label: 'Best Noise-Canceling Headphones', href: '/guides/best-noise-canceling-headphones/' },
-  'Apple AirPods 4': { label: 'Best Noise-Canceling Headphones', href: '/guides/best-noise-canceling-headphones/' },
+  'Apple AirPods 5': { label: 'Best Noise-Canceling Headphones', href: '/guides/best-noise-canceling-headphones/' },
   'Ninja 4-Qt Air Fryer AF101': { label: 'Best Air Fryers', href: '/guides/best-air-fryers/' },
   'Instant Vortex Plus Air Fryer': { label: 'Best Air Fryers', href: '/guides/best-air-fryers/' },
   'Dyson V8 Cordless Vacuum': { label: 'Best Cordless & Everyday Vacuums', href: '/guides/best-vacuums/' },
@@ -56,9 +56,14 @@ const categorySlug = product.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const categoryGuide = guideMap[categorySlug];
 const focusedGuide = guideByName[product.name];
 const comparison = comparisonMap[product.slug];
-const affiliateUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
+const guideHref = focusedGuide?.href ?? categoryGuide?.href;
+const guideLabel = focusedGuide?.label ?? categoryGuide?.label;
+const affiliateUrl = product.amazonAsin
+  ? amazonProductUrl(product.amazonAsin)
+  : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
 const reviewDate = 'September 22, 2026';
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -69,6 +74,7 @@ const breadcrumbSchema = {
   ]
 };
 ---
+
 <script type="application/ld+json" set:html={JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -90,17 +96,13 @@ const breadcrumbSchema = {
     positiveNotes: {
       '@type': 'ItemList',
       itemListElement: (recommendation.pros ?? []).map((name, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name
+        '@type': 'ListItem', position: index + 1, name
       }))
     },
     negativeNotes: {
       '@type': 'ItemList',
       itemListElement: (recommendation.cons ?? []).map((name, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name
+        '@type': 'ListItem', position: index + 1, name
       }))
     }
   }
@@ -110,16 +112,58 @@ const breadcrumbSchema = {
 <BaseLayout title={`${product.name} | Buy Better Finds`} description={`${product.name}: independent buying guidance, strengths, tradeoffs, and practical product information.`}>
   <section class="section product-page">
     <div class="container">
-      <div class="breadcrumbs"><a href="/products/">All Finds</a><span>/</span><a href={`/categories/${categorySlug}/`}>{product.category}</a><span>/</span><strong>{product.name}</strong></div>
+      <div class="breadcrumbs">
+        <a href="/products/">All Finds</a><span>/</span>
+        <a href={`/categories/${categorySlug}/`}>{product.category}</a><span>/</span>
+        <strong>{product.name}</strong>
+      </div>
+
       <div class="product-detail">
-        <div class="product-detail-visual"><div class="find-badge">BUY BETTER FIND</div><div class="product-photo"><img src={product.image} alt={product.imageAlt} width="1000" height="750" /><div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div></div><span class="category-label">{product.category}</span></div>
+        <div class="product-detail-visual">
+          <div class="find-badge">BUY BETTER FIND</div>
+          <div class="product-photo">
+            <img src={product.image} alt={product.imageAlt} width="1000" height="750" />
+            <div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div>
+          </div>
+          <span class="category-label">{product.category}</span>
+        </div>
+
         <div class="product-detail-copy">
-          <div class="eyebrow">BUY BETTER FIND · {product.category}</div><h1>{product.name}</h1><p class="lead">{product.why}</p>
-          <div class="review-meta"><span>Research updated: {reviewDate}</span><a href="/why-we-recommend/">How we evaluate →</a></div>
-          <div class="score-panel"><div class="score-ring"><strong>{recommendation.score ?? '—'}</strong><span>/10</span></div><div><div class="score-label">BUY BETTER SCORE</div><strong class="score-status">{recommendation.label}</strong><p>Editorial score based on practical fit, value, useful features, and documented tradeoffs—not paid placement.</p></div></div>
-          <div class="verdict"><div class="verdict-label">QUICK ANSWER · BEST FOR</div><p>{recommendation.bestFor}</p><small>Skip it if: {recommendation.skipIf}</small></div>
-          <div class="price-box"><span>Reference price</span><strong>{product.price}</strong><small>Prices and availability can change. Verify the current offer at the retailer.</small></div>
-          <div class="detail-actions"><a class="btn primary" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon · Paid link →</a><a class="btn secondary" href="/products/">Browse all finds</a></div>
+          <div class="eyebrow">BUY BETTER FIND · {product.category}</div>
+          <h1>{product.name}</h1>
+          <p class="lead">{product.why}</p>
+
+          <div class="review-meta">
+            <span>Research updated: {reviewDate}</span>
+            <a href="/why-we-recommend/">How we evaluate →</a>
+          </div>
+
+          <div class="score-panel">
+            <div class="score-ring"><strong>{recommendation.score ?? '—'}</strong><span>/10</span></div>
+            <div>
+              <div class="score-label">BUY BETTER SCORE</div>
+              <strong class="score-status">{recommendation.label}</strong>
+              <p>Editorial score based on practical fit, value, useful features, and documented tradeoffs—not paid placement.</p>
+            </div>
+          </div>
+
+          <div class="verdict">
+            <div class="verdict-label">QUICK ANSWER · BEST FOR</div>
+            <p>{recommendation.bestFor}</p>
+            <small>Skip it if: {recommendation.skipIf}</small>
+          </div>
+
+          <div class="price-box">
+            <span>Reference price</span>
+            <strong>{product.price}</strong>
+            <small>Prices and availability can change. Verify the current offer at the retailer.</small>
+          </div>
+
+          <div class="detail-actions">
+            <a class="btn primary amazon-btn" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon · Paid link →</a>
+            <a class="btn secondary" href="/products/">Browse all finds</a>
+          </div>
+
           <p class="disclosure">We may earn a commission from qualifying purchases when affiliate links are used. Our recommendations are based on product fit and editorial evaluation, not commission size.</p>
         </div>
       </div>
@@ -129,20 +173,107 @@ const breadcrumbSchema = {
           <div class="recommendation-card">
             <div class="eyebrow">WHY WE RECOMMEND IT</div>
             <h2 id="why-recommend-heading">The case for this find</h2>
-            <ul>
-              {(recommendation.pros ?? []).map((item) => <li>{item}</li>)}
-            </ul>
+            <ul>{(recommendation.pros ?? []).map((item) => <li>{item}</li>)}</ul>
           </div>
           <div class="recommendation-card caution">
             <div class="eyebrow">WHAT COULD CHANGE OUR RECOMMENDATION</div>
             <h2>Know the tradeoffs</h2>
-            <ul>
-              {(recommendation.cons ?? []).map((item) => <li>{item}</li>)}
-            </ul>
+            <ul>{(recommendation.cons ?? []).map((item) => <li>{item}</li>)}</ul>
             <p class="recommendation-skip"><strong>Skip it if:</strong> {recommendation.skipIf}</p>
           </div>
         </div>
       </section>
 
-      <section class="decision-paths" aria-label="Continue researching this product">
-        <div class="path-card"><span>SHOPPING GUIDE</span><h3>{focusedGuide?.label ?? categoryGuide?.label ?? `Best ${product.category} Products`}</h3><p>See this product in a broader shortlist with practical alternatives and buying considerations.</p><a href={focusedGuide?.href ?? categoryGuide?.href ?? '/guides/'}>Read the buying guide →</a></div>
+      <section class="decision-paths" aria-labelledby="research-heading">
+        <div class="section-head research-heading">
+          <div>
+            <div class="eyebrow">CONTINUE RESEARCHING</div>
+            <h2 id="research-heading">Build the bigger picture</h2>
+            <p>Move from this individual product to the broader category, guide, comparison, and related finds.</p>
+          </div>
+        </div>
+
+        <div class="research-link-grid">
+          <a class="research-link-card" href={`/categories/${categorySlug}/`}>
+            <span>CATEGORY</span>
+            <h3>{product.category}</h3>
+            <p>Browse more {product.category.toLowerCase()} finds in one place.</p>
+            <strong>Explore category →</strong>
+          </a>
+
+          {guideHref && (
+            <a class="research-link-card" href={guideHref}>
+              <span>SHOPPING GUIDE</span>
+              <h3>{guideLabel}</h3>
+              <p>See the broader shortlist and the buying considerations behind it.</p>
+              <strong>Read the guide →</strong>
+            </a>
+          )}
+
+          {comparison && (
+            <a class="research-link-card" href={comparison.href}>
+              <span>COMPARISON</span>
+              <h3>{comparison.label}</h3>
+              <p>Put this find next to a relevant alternative before deciding.</p>
+              <strong>See the comparison →</strong>
+            </a>
+          )}
+        </div>
+      </section>
+
+      {related.length > 0 && (
+        <section class="related-finds" aria-labelledby="related-heading">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">MORE TO CONSIDER</div>
+              <h2 id="related-heading">Related {product.category} finds</h2>
+              <p>Keep researching without leaving the category.</p>
+            </div>
+            <a class="arrow" href={`/categories/${categorySlug}/`}>View category →</a>
+          </div>
+
+          <div class="products related-product-grid">
+            {related.map((item) => (
+              <article class="product">
+                <a href={`/products/${item.slug}/`} class="product-img" aria-label={`View ${item.name}`}>
+                  <div class="product-mark">{item.category}</div>
+                  <div class="product-art">
+                    <img src={item.image} alt={item.imageAlt} loading="lazy" width="400" height="300" />
+                  </div>
+                </a>
+                <div class="product-body">
+                  <div class="tag">{item.category}</div>
+                  <h3><a href={`/products/${item.slug}/`}>{item.name}</a></h3>
+                  <p>{item.why}</p>
+                  <div class="best-for"><strong>Best for:</strong> {item.bestFor}</div>
+                  <div class="watch"><strong>Watch:</strong> {item.watch}</div>
+                  <div class="price"><span>Reference price</span><strong>{item.price}</strong></div>
+                  <a class="shop" href={`/products/${item.slug}/`}>See our take →</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <ComparisonTable product={product} related={related} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .research-link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .research-link-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;min-height:190px;transition:.2s}
+  .research-link-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #10233f12;border-color:#b9c9da}
+  .research-link-card span{font-size:10px;letter-spacing:1.2px;color:var(--blue);font-weight:900}
+  .research-link-card h3{font-size:21px;line-height:1.3;color:var(--navy);margin:9px 0}
+  .research-link-card p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
+  .research-link-card strong{color:var(--blue);font-size:13px;margin-top:auto;padding-top:18px}
+  .related-finds{margin-top:70px}
+  .related-product-grid{grid-template-columns:repeat(3,1fr)}
+  .related-product-grid .product-img{height:180px}
+  .related-product-grid .product-art img{width:150px;height:120px;object-fit:contain}
+  .decision-paths{margin-top:65px}
+  @media(max-width:900px){.research-link-grid{grid-template-columns:1fr 1fr}.related-product-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.research-link-grid,.related-product-grid{grid-template-columns:1fr}.related-finds{margin-top:52px}}
+</style>
