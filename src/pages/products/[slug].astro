@@ -62,6 +62,8 @@ const affiliateUrl = product.amazonAsin
   ? amazonProductUrl(product.amazonAsin)
   : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
 const reviewDate = 'September 22, 2026';
+const today = '2026-09-24';
+const dealStatus = product.dailyDealDate === today ? 'today' : (product.dailyDealDate > today ? 'upcoming' : null);
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 
 const breadcrumbSchema = {
@@ -154,9 +156,14 @@ const breadcrumbSchema = {
           </div>
 
           <div class="price-box">
-            <span>Reference price</span>
+            <div class="price-context-head">
+              <span>PRICE WATCH</span>
+              {dealStatus === 'today' && <b>DEAL OF THE DAY · TODAY</b>}
+              {dealStatus === 'upcoming' && <b>DEAL SCHEDULED · {product.dailyDealDate}</b>}
+            </div>
             <strong>{product.price}</strong>
-            <small>Prices and availability can change. Verify the current offer at the retailer.</small>
+            <small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small>
+            {dealStatus && <a class="price-watch-link" href="/price-watch/">See Price Watch context →</a>}
           </div>
 
           <div class="detail-actions">
@@ -273,7 +280,7 @@ const breadcrumbSchema = {
   .related-product-grid{grid-template-columns:repeat(3,1fr)}
   .related-product-grid .product-img{height:180px}
   .related-product-grid .product-art img{width:150px;height:120px;object-fit:contain}
-  .decision-paths{margin-top:65px}
+  .price-context-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.price-context-head span{font-size:10px;letter-spacing:.12em;color:#1d4ed8;font-weight:900}.price-context-head b{font-size:9px;letter-spacing:.06em;background:#eef4fb;color:#2366a8;padding:5px 7px;border-radius:5px}.price-context-head b:first-of-type{background:#c8102e;color:#fff}.price-watch-link{display:inline-block;margin-top:10px;font-size:11px;font-weight:900;color:#1d4ed8}.decision-paths{margin-top:65px}
   @media(max-width:900px){.research-link-grid{grid-template-columns:1fr 1fr}.related-product-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.research-link-grid,.related-product-grid{grid-template-columns:1fr}.related-finds{margin-top:52px}}
 </style>
