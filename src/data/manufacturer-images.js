@@ -32,7 +32,7 @@ export const manufacturerImageOverrides = {
   'samsung-t7-shield': {
     image: 'https://images.samsung.com/is/image/samsung/p6pim/us/mu-pe1t0k-am/gallery/us-portable-ssd-t7-shield-mu-pe1t0k-am-552408682?%24product-details-jpg%24=',
     source: 'Samsung'
-  }
+  },
   'kreg-pocket-hole-jig-520pro': {
     image: 'https://www.kregtool.com/dw/image/v2/BDZM_PRD/on/demandware.static/-/Sites-master-kreg/default/dw2085ce2a/images/hi-res/KPHJ520PRO2-01.jpg?sh=140&sw=140',
     source: 'Kreg'
