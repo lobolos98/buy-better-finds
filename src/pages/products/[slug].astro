@@ -123,5 +123,25 @@ const breadcrumbSchema = {
         </div>
       </div>
 
+      <section class="recommendation-breakdown" aria-labelledby="why-recommend-heading">
+        <div class="recommendation-breakdown-grid">
+          <div class="recommendation-card">
+            <div class="eyebrow">WHY WE RECOMMEND IT</div>
+            <h2 id="why-recommend-heading">The case for this find</h2>
+            <ul>
+              {(recommendation.pros ?? []).map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+          <div class="recommendation-card caution">
+            <div class="eyebrow">WHAT COULD CHANGE OUR RECOMMENDATION</div>
+            <h2>Know the tradeoffs</h2>
+            <ul>
+              {(recommendation.cons ?? []).map((item) => <li>{item}</li>)}
+            </ul>
+            <p class="recommendation-skip"><strong>Skip it if:</strong> {recommendation.skipIf}</p>
+          </div>
+        </div>
+      </section>
+
       <section class="decision-paths" aria-label="Continue researching this product">
         <div class="path-card"><span>SHOPPING GUIDE</span><h3>{focusedGuide?.label ?? categoryGuide?.label ?? `Best ${product.category} Products`}</h3><p>See this product in a broader shortlist with practical alternatives and buying considerations.</p><a href={focusedGuide?.href ?? categoryGuide?.href ?? '/guides/'}>Read the buying guide →</a></div>
