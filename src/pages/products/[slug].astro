@@ -79,12 +79,29 @@ const breadcrumbSchema = {
   review: {
     '@type': 'Review',
     author: { '@type': 'Organization', name: 'Buy Better Finds' },
+    datePublished: '2026-09-22',
     reviewBody: `${product.why} Best for: ${recommendation.bestFor} Key tradeoff: ${recommendation.skipIf}`,
     reviewRating: {
       '@type': 'Rating',
       ratingValue: recommendation.score ?? 1,
       bestRating: 10,
       worstRating: 1
+    },
+    positiveNotes: {
+      '@type': 'ItemList',
+      itemListElement: (recommendation.pros ?? []).map((name, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name
+      }))
+    },
+    negativeNotes: {
+      '@type': 'ItemList',
+      itemListElement: (recommendation.cons ?? []).map((name, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name
+      }))
     }
   }
 })} />
