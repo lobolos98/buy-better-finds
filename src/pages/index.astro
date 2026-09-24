@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { products as catalog } from '../data/products.js';
 import { trendingProducts, trendingUpdated } from '../data/trending.js';
 import { amazonProductUrl, amazonSearchUrl } from '../utils/amazon.js';
+import { getDealOfTheDay } from '../utils/priceWatch.js';
 const products = catalog.slice(0, 8);
 const amazonUrl = (product) => product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || '');
 const categoryPreviews = [
@@ -21,8 +22,7 @@ const guides = [
   ['Best Tech Products','best-tech','◈'],['Best Home & Kitchen Products','best-home-kitchen','⌂'],['Best Tools & DIY Products','best-tools-diy','⚒'],['Best Outdoor Products','best-outdoor','☼'],['Best Products Under $100','best-products-under-100','★']
 ];
 const featured = catalog[0];
-const dealQueue = catalog.filter((p) => p && p.dailyDealDate).sort((a, b) => a.dailyDealDate.localeCompare(b.dailyDealDate));
-const deal = dealQueue[0] ?? catalog[0];
+const deal = getDealOfTheDay(catalog) ?? catalog[0];
 const editorChoices = ['sony-wh-1000xm5','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => catalog.find((p) => p.slug === slug)).filter(Boolean);
 const dealAlternates = [catalog.find((p) => p.slug === 'apple-airpods-4'), catalog.find((p) => p.slug === 'lego-botanicals-mushrooms'), catalog.find((p) => p.slug === 'disney-stitch-plush')].filter(Boolean);
 const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, product: catalog.find((p) => p.slug === trend.slug) })).filter((item) => item.product);
