@@ -5,7 +5,7 @@ import { products } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 import { getPriceWatchStatus, formatPriceWatchDate } from '../../utils/priceWatch.js';
-import { getPriceHistory, getLowestObservedPrice } from '../../data/priceHistory.js';
+import { getPriceHistory, getCurrentPriceObservation, getLowestObservedPrice } from '../../data/priceHistory.js';
 
 const guideMap = {
   tech: { label: 'Best Tech Products', href: '/guides/best-tech/' },
@@ -67,7 +67,7 @@ const reviewDate = 'September 22, 2026';
 const dealStatus = getPriceWatchStatus(product.dailyDealDate);
 const priceHistory = getPriceHistory(product.slug);
 const lowestObserved = getLowestObservedPrice(priceHistory);
-const verifiedCurrentPrice = priceHistory.filter((entry) => typeof entry.price === 'number' && entry.type === 'current').sort((a, b) => b.date.localeCompare(a.date))[0] ?? null;
+const verifiedCurrentPrice = getCurrentPriceObservation(priceHistory);
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 
 const breadcrumbSchema = {
@@ -167,8 +167,7 @@ const breadcrumbSchema = {
               {dealStatus?.key === 'upcoming' && <b>DEAL SCHEDULED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
               {dealStatus?.key === 'past' && <b class="deal-past">FEATURED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
             </div>
-            <strong>{product.price}</strong>
-            <small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small>
+            {verifiedCurrentPrice ? <><strong>${verifiedCurrentPrice.price.toFixed(2)} {verifiedCurrentPrice.currency}</strong><small>Verified current price · {formatPriceWatchDate(verifiedCurrentPrice.date)}. Prices and availability can change.</small></> : <><strong>{product.price}</strong><small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small>}
             {dealStatus && <a class="price-watch-link" href="/price-watch/">See Price Watch context →</a>}
           </div>
 
@@ -203,7 +202,7 @@ const breadcrumbSchema = {
             <div>
               <div class="eyebrow">PRICE WATCH HISTORY</div>
               <h2 id="price-history-heading">Observed price context</h2>
-              <p>These are dated Buy Better Finds observations, not live retailer history. We only add entries when a price is actually observed or verified.</p>
+              <p>These are dated Buy Better Finds observations. Current-price entries are explicitly verified retailer observations; reference entries are editorial context only.</p>
             </div>
             {lowestObserved && <div class="price-history-low"><span>LOWEST OBSERVED</span><strong>${lowestObserved.price.toFixed(2)}</strong></div>}
           </div>
