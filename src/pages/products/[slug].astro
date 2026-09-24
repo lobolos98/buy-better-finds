@@ -5,7 +5,7 @@ import { products } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 import { getPriceWatchStatus, formatPriceWatchDate } from '../../utils/priceWatch.js';
-import { getPriceHistory, getCurrentPriceObservation, getLowestObservedPrice } from '../../data/priceHistory.js';
+import { getPriceHistory, getCurrentPriceObservation, getFreshCurrentPriceObservation, getLowestObservedPrice } from '../../data/priceHistory.js';
 
 const guideMap = {
   tech: { label: 'Best Tech Products', href: '/guides/best-tech/' },
@@ -68,6 +68,7 @@ const dealStatus = getPriceWatchStatus(product.dailyDealDate);
 const priceHistory = getPriceHistory(product.slug);
 const lowestObserved = getLowestObservedPrice(priceHistory);
 const verifiedCurrentPrice = getCurrentPriceObservation(priceHistory);
+const freshCurrentPrice = getFreshCurrentPriceObservation(priceHistory);
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 
 const breadcrumbSchema = {
@@ -88,7 +89,7 @@ const breadcrumbSchema = {
   image: [new URL(product.image, 'https://buybetterfinds.com').toString()],
   description: product.why,
   url: canonicalUrl,
-  ...(verifiedCurrentPrice ? { offers: { '@type': 'Offer', url: affiliateUrl, price: verifiedCurrentPrice.price, priceCurrency: verifiedCurrentPrice.currency, availability: 'https://schema.org/InStock' } } : {}),
+  ...(freshCurrentPrice ? { offers: { '@type': 'Offer', url: affiliateUrl, price: freshCurrentPrice.price, priceCurrency: freshCurrentPrice.currency, availability: 'https://schema.org/InStock' } } : {}),
   review: {
     '@type': 'Review',
     author: { '@type': 'Organization', name: 'Buy Better Finds' },
@@ -167,7 +168,7 @@ const breadcrumbSchema = {
               {dealStatus?.key === 'upcoming' && <b>DEAL SCHEDULED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
               {dealStatus?.key === 'past' && <b class="deal-past">FEATURED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
             </div>
-            {verifiedCurrentPrice ? <><strong>${verifiedCurrentPrice.price.toFixed(2)} {verifiedCurrentPrice.currency}</strong><small>Verified current price · {formatPriceWatchDate(verifiedCurrentPrice.date)}. Prices and availability can change.</small></> : <><strong>{product.price}</strong><small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small>}
+            {verifiedCurrentPrice ? <><strong>${verifiedCurrentPrice.price.toFixed(2)} {verifiedCurrentPrice.currency}</strong><small>Verified current price · {formatPriceWatchDate(verifiedCurrentPrice.date)}. Prices and availability can change.</small></> : <><strong>{product.price}</strong><small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small></>}
             {dealStatus && <a class="price-watch-link" href="/price-watch/">See Price Watch context →</a>}
           </div>
 
