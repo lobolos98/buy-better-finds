@@ -11,6 +11,7 @@ const seasonalWindow = currentMonth >= 8 && currentMonth <= 10
       : { season: 'Summer', headline: 'Summer Deals & Shopping Events', intro: 'Track summer essentials, travel finds, outdoor gear, gifts, and major shopping events.', events: ['Summer essentials', 'Father’s Day', 'July 4th', 'Back to school'] };
 
 const hubs = [
+  { title: 'Prime Big Deal Days', text: 'October 6–7, 2026. Follow the fall event, what to watch, and Buy Better Finds coverage.', href: '/categories/seasonal-holidays/prime-big-deal-days/' },
   { title: 'Trending Now', text: 'Products and categories getting attention right now.', href: '/trending/' },
   { title: 'Seasonal Deals', text: 'Timely price drops and shopping opportunities tied to the season.', href: '/deals/' },
   { title: 'Holiday Gifts', text: 'Gift ideas organized around the people and occasions shoppers care about.', href: '/guides/' },
@@ -119,5 +120,6 @@ const hubs = [
   .bottom-cta p{color:#cbd5e1;max-width:700px;line-height:1.6;margin:0}
   .bottom-cta .btn{white-space:nowrap}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:560px){.hub-card{padding:22px}.hub-card h3{font-size:19px}.hub-card p{font-size:13px}.hub-card strong{font-size:12px}}
   @media(max-width:560px){.seasonal-hero{padding-bottom:42px}.seasonal-hero h1{font-size:43px}.seasonal-hero p{font-size:16px}.season-card{padding:22px}.hub-grid,.calendar-grid{grid-template-columns:1fr}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center}}
 </style>
