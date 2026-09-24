@@ -49,6 +49,15 @@ const selected = guide.products.map((name) => catalog.find((product) => product.
 const reviewed = 'September 2026';
 ---
 <BaseLayout title={`${guide.title} | Buy Better Finds`} description={guide.intro}>
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Buying Guides', item: 'https://buybetterfinds.com/guides/' },
+    { '@type': 'ListItem', position: 3, name: guide.title, item: new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString() }
+  ]
+})} />
 <section class="guide-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/guides/">Buying Guides</a><span>/</span><strong>{guide.title}</strong></div><div class="eyebrow">BUYING GUIDE · {selected.length} FINDS</div><h1>{guide.title}</h1><p>{guide.intro}</p><div class="reviewed">Last reviewed: {reviewed}</div></div></section>
 <section class="section intro"><div class="container"><div class="quick"><div><div class="eyebrow">QUICK ANSWER</div><h2>Start with the product that fits your use case.</h2></div><div><p>There is rarely one perfect product for everyone. Our shortlist is organized around intended use, useful features, practical limitations, and reference price.</p><a class="arrow" href="/why-we-recommend/">See how we evaluate →</a></div></div></div></section>
 <section class="section picks"><div class="container"><div class="section-head"><div><div class="eyebrow">THE SHORTLIST</div><h2>Products worth considering.</h2><p>Each product links to a dedicated page with our take, Buy Better Score, best-for guidance, and what to watch before buying.</p></div></div><div class="product-grid">{selected.map((product,index)=>{const rec=getRecommendation(product);return <article class="product-card"><a class="image" href={`/products/${product.slug}/`}>{index===0&&<span class="badge">TOP PICK</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a><div class="body"><div class="tag">{product.category}</div><h3>{product.name}</h3><div class="score"><strong>{rec.score}/10</strong><span>{rec.label}</span></div><div class="best"><strong>Best for:</strong> {rec.bestFor}</div><p>{product.why}</p><div class="watch"><strong>Skip or reconsider if:</strong> {rec.skipIf}</div><div class="price">Reference price <strong>{product.price}</strong></div><a class="shop" href={`/products/${product.slug}/`}>See Our Take →</a></div></article>})}</div></div></section>
