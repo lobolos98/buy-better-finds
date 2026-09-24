@@ -35,6 +35,15 @@ const rightRec = getRecommendation(right);
 const reviewed = 'September 2026';
 ---
 <BaseLayout title={`${comparison.title} | Buy Better Finds`} description={comparison.intro}>
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://buybetterfinds.com/comparisons/' },
+    { '@type': 'ListItem', position: 3, name: comparison.title, item: new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString() }
+  ]
+})} />
 <section class="hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/comparisons/">Comparisons</a><span>/</span><strong>{comparison.title}</strong></div><div class="eyebrow">PRODUCT COMPARISON</div><h1>{comparison.title}</h1><p>{comparison.intro}</p><div class="reviewed">Last reviewed: {reviewed}</div></div></section>
 <section class="section"><div class="container"><div class="compare-products"><article class="compare-product"><div class="product-thumb"><img src={left.image} alt={left.imageAlt} /></div><div><span>OPTION A</span><h2>{left.name}</h2><p>{leftRec.bestFor}</p><a href={`/products/${left.slug}/`}>View product details →</a></div></article><article class="compare-product"><div class="product-thumb"><img src={right.image} alt={right.imageAlt} /></div><div><span>OPTION B</span><h2>{right.name}</h2><p>{rightRec.bestFor}</p><a href={`/products/${right.slug}/`}>View product details →</a></div></article></div><div class="quick"><div><div class="eyebrow">QUICK ANSWER</div><h2>Which one should you choose?</h2></div><div><p><strong>{left.name}</strong> is the better fit when you prioritize {leftRec.bestFor.toLowerCase()}. <strong>{right.name}</strong> is the better fit when you prioritize {rightRec.bestFor.toLowerCase()}.</p><p class="note">There is no universal winner. Use the side-by-side breakdown below to match the product to your priorities.</p></div></div></div></section>
 <section class="section table-section"><div class="container"><div class="table-wrap"><table><thead><tr><th>Decision factor</th><th>{left.name}</th><th>{right.name}</th></tr></thead><tbody><tr><th>Buy Better Score</th><td><strong>{leftRec.score}/10</strong><br/><small>{leftRec.label}</small></td><td><strong>{rightRec.score}/10</strong><br/><small>{rightRec.label}</small></td></tr><tr><th>Best for</th><td>{leftRec.bestFor}</td><td>{rightRec.bestFor}</td></tr><tr><th>Why consider it</th><td>{left.why}</td><td>{right.why}</td></tr><tr><th>Watch before buying</th><td>{left.watch}</td><td>{right.watch}</td></tr><tr><th>Reference price</th><td>{left.price}</td><td>{right.price}</td></tr></tbody></table></div></div></section>
