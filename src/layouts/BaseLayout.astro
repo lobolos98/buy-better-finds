@@ -6,13 +6,18 @@ import '../styles/global.css';
 
 const {
   title = 'Buy Better Finds',
-  description = 'Find it. Compare it. Buy better.'
+  description = 'Find it. Compare it. Buy better.',
+  image = '',
+  imageAlt = 'Buy Better Finds'
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
 const siteName = 'Buy Better Finds';
 const isHome = Astro.url.pathname === '/';
 const pageTitle = title || siteName;
+const socialImage = image
+  ? new URL(image, 'https://buybetterfinds.com').toString()
+  : null;
 ---
 <!doctype html>
 <html lang="en">
@@ -31,6 +36,12 @@ const pageTitle = title || siteName;
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    {socialImage && <meta property="og:image:alt" content={imageAlt} />}
+    <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {socialImage && <meta name="twitter:image" content={socialImage} />}
     <title>{pageTitle}</title>
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
