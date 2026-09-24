@@ -12,7 +12,8 @@ const categoryData = [
   { name: 'Lifestyle', slug: 'lifestyle', image: '/images/products/yeti-rambler.svg', alt: 'YETI Rambler representing Lifestyle products', description: 'Drinkware and everyday products designed for commuting, work, travel, and daily use.', guide: '/guides/best-everyday-products/' },
   { name: 'Gifts & Collectibles', slug: 'gifts-collectibles', image: '/images/products/disney-stitch-plush.svg', alt: 'Disney Stitch plush representing Gifts and Collectibles', description: 'Disney, Marvel, Star Wars, LEGO, Pokémon, Funko, fandom gifts, and collectible finds.', guide: null },
   { name: 'Toys & Games', slug: 'toys-games', image: '/images/products/lego-city-lava-rollercoaster.svg', alt: 'LEGO City building set representing Toys and Games', description: 'Building sets, STEM toys, puzzles, family games, collectibles, and creative play.', guide: null },
-  { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '/images/products/cerave-hydrating-cleanser.svg', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, cosmetics, beauty tools, and everyday personal-care products.', guide: '/categories/beauty-personal-care/cosmetics/' }
+  { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '/images/products/cerave-hydrating-cleanser.svg', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, cosmetics, beauty tools, and everyday personal-care products.', guide: '/categories/beauty-personal-care/cosmetics/' },
+  { name: 'Seasonal & Holidays', slug: 'seasonal-holidays', image: '/images/products/lego-city-lava-rollercoaster.svg', alt: 'Seasonal gift and holiday shopping ideas', description: 'Seasonal deals, holiday gifts, major shopping events, and timely finds worth watching right now.', guide: null, seasonal: true }
 ];
 
 const categories = categoryData.map((category) => ({ ...category, count: products.filter((product) => product.category === category.name).length }));
@@ -26,7 +27,7 @@ const categories = categoryData.map((category) => ({ ...category, count: product
         {categories.map((category) => (
           <article class="category-card">
             <a class="category-image" href={`/categories/${category.slug}/`} aria-label={`Explore ${category.name}`}><img src={category.image} alt={category.alt} loading="lazy" width="800" height="600" /><span class="image-overlay">Explore {category.name} <b>→</b></span></a>
-            <div class="category-content"><div class="category-meta"><span class="tag">CATEGORY</span><span>{category.count} {category.count === 1 ? 'find' : 'finds'}</span></div><h2><a href={`/categories/${category.slug}/`}>{category.name}</a></h2><p>{category.description}</p><div class="category-actions"><a class="primary-link" href={`/categories/${category.slug}/`}>Explore {category.name} →</a>{category.guide && <a class="guide-link" href={category.guide}>{category.name === 'Beauty & Personal Care' ? 'Explore Cosmetics' : 'Buying guide'}</a>}</div></div>
+            <div class="category-content"><div class="category-meta"><span class="tag">{category.seasonal ? 'TIMELY HUB' : 'CATEGORY'}</span><span>{category.seasonal ? 'Updated seasonally' : `${category.count} ${category.count === 1 ? 'find' : 'finds'}`}</span></div><h2><a href={`/categories/${category.slug}/`}>{category.name}</a></h2><p>{category.description}</p><div class="category-actions"><a class="primary-link" href={`/categories/${category.slug}/`}>Explore {category.name} →</a>{category.guide && <a class="guide-link" href={category.guide}>{category.name === 'Beauty & Personal Care' ? 'Explore Cosmetics' : 'Buying guide'}</a>}</div></div>
           </article>
         ))}
       </div>
