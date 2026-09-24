@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const currentMonth = new Date().getMonth();
 const seasonalWindow = currentMonth >= 8 && currentMonth <= 10
-  ? { season: 'Fall', headline: 'Fall, Halloween & Holiday Shopping', intro: 'Stay ahead of the season with timely deals, gift ideas, and shopping events as they become relevant.', events: ['Fall finds', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
+  ? { season: 'Fall', headline: 'Fall, Halloween & Prime Big Deal Days', intro: 'Stay ahead of the season with timely deals, gift ideas, and shopping events as they become relevant.', events: ['Fall finds', 'Prime Big Deal Days — Oct. 6–7', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
   : currentMonth >= 11 || currentMonth <= 1
     ? { season: 'Winter', headline: 'Winter & Holiday Shopping', intro: 'Find timely gift ideas, winter essentials, clearance opportunities, and the next big shopping events.', events: ['Holiday gifts', 'Winter essentials', 'Last-minute gifts', 'New Year deals'] }
     : currentMonth >= 2 && currentMonth <= 4
@@ -67,7 +67,7 @@ const hubs = [
         <div><strong>Jan–Mar</strong><span>New Year • Valentine’s • Winter clearance • Spring refresh</span></div>
         <div><strong>Apr–Jun</strong><span>Easter • Mother’s Day • Father’s Day • Memorial Day • Summer</span></div>
         <div><strong>Jul–Sep</strong><span>July 4th • Prime shopping season • Back to school • Fall prep</span></div>
-        <div><strong>Oct–Dec</strong><span>Halloween • Holiday gifts • Black Friday • Cyber Monday • Christmas</span></div>
+        <div><strong>Oct–Dec</strong><span>Halloween • Prime Big Deal Days • Holiday gifts • Black Friday • Cyber Monday • Christmas</span></div>
       </div>
     </div>
   </section>
