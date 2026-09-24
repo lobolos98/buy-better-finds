@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const currentMonth = new Date().getMonth();
+const seasonalWindow = currentMonth >= 8 && currentMonth <= 10
+  ? { season: 'Fall', headline: 'Fall, Halloween & Holiday Shopping', intro: 'Stay ahead of the season with timely deals, gift ideas, and shopping events as they become relevant.', events: ['Fall finds', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
+  : currentMonth >= 11 || currentMonth <= 1
+    ? { season: 'Winter', headline: 'Winter & Holiday Shopping', intro: 'Find timely gift ideas, winter essentials, clearance opportunities, and the next big shopping events.', events: ['Holiday gifts', 'Winter essentials', 'Last-minute gifts', 'New Year deals'] }
+    : currentMonth >= 2 && currentMonth <= 4
+      ? { season: 'Spring', headline: 'Spring Deals & Holidays', intro: 'Follow seasonal refreshes, spring events, gifts, and products worth watching as the season changes.', events: ['Spring refresh', 'Easter', 'Mother’s Day', 'Memorial Day'] }
+      : { season: 'Summer', headline: 'Summer Deals & Shopping Events', intro: 'Track summer essentials, travel finds, outdoor gear, gifts, and major shopping events.', events: ['Summer essentials', 'Father’s Day', 'July 4th', 'Back to school'] };
+
+const hubs = [
+  { title: 'Trending Now', text: 'Products and categories getting attention right now.', href: '/trending/' },
+  { title: 'Seasonal Deals', text: 'Timely price drops and shopping opportunities tied to the season.', href: '/deals/' },
+  { title: 'Holiday Gifts', text: 'Gift ideas organized around the people and occasions shoppers care about.', href: '/guides/' },
+  { title: 'Major Shopping Events', text: 'Prepare for high-interest events such as Black Friday and Cyber Monday.', href: '/deals/' }
+];
+---
+<BaseLayout title="Seasonal & Holidays | Buy Better Finds" description="Seasonal deals, holiday gifts, shopping events, and timely product finds from Buy Better Finds.">
+  <section class="seasonal-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>Seasonal & Holidays</strong></div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">SHOP WHAT'S TIMELY</div>
+          <h1>{seasonalWindow.headline}</h1>
+          <p>{seasonalWindow.intro}</p>
+          <div class="season-tag"><span>{seasonalWindow.season} 2026</span><strong>Updated as shopping trends change</strong></div>
+        </div>
+        <div class="season-card">
+          <span class="card-label">ON THE RADAR</span>
+          <h2>What we're watching</h2>
+          <ul>
+            {seasonalWindow.events.map((event) => <li><span>✓</span>{event}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">SEASONAL & HOLIDAYS</div>
+          <h2>Shop what matters now.</h2>
+          <p>This hub changes throughout the year so Buy Better Finds can surface timely shopping opportunities without changing the core product categories.</p>
+        </div>
+      </div>
+      <div class="hub-grid">
+        {hubs.map((hub) => <a class="hub-card" href={hub.href}><span class="hub-arrow">→</span><h3>{hub.title}</h3><p>{hub.text}</p><strong>Explore →</strong></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section calendar-section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">YEAR-ROUND SHOPPING CALENDAR</div>
+          <h2>What's coming next.</h2>
+          <p>We'll use this structure to rotate content ahead of the moments when shoppers are most likely to be looking for deals and gifts.</p>
+        </div>
+      </div>
+      <div class="calendar-grid">
+        <div><strong>Jan–Mar</strong><span>New Year • Valentine’s • Winter clearance • Spring refresh</span></div>
+        <div><strong>Apr–Jun</strong><span>Easter • Mother’s Day • Father’s Day • Memorial Day • Summer</span></div>
+        <div><strong>Jul–Sep</strong><span>July 4th • Prime shopping season • Back to school • Fall prep</span></div>
+        <div><strong>Oct–Dec</strong><span>Halloween • Holiday gifts • Black Friday • Cyber Monday • Christmas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="bottom-cta">
+        <div><div class="eyebrow light">KEEP SHOPPING</div><h2>Explore our core categories.</h2><p>Seasonal trends change, but our product categories stay organized so you can compare products year-round.</p></div>
+        <a class="btn primary" href="/categories/">View all categories →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .seasonal-hero{background:#10233f;color:#fff;padding:24px 0 58px}
+  .breadcrumbs{display:flex;gap:10px;align-items:center;margin-bottom:38px;color:#aebed1;font-size:13px}
+  .breadcrumbs a{color:#d5deea;text-decoration:none}
+  .breadcrumbs strong{color:#fff}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .seasonal-hero h1{color:#fff;font-size:clamp(42px,6vw,68px);line-height:1.02;margin:10px 0 18px;max-width:820px}
+  .seasonal-hero p{color:#d5deea;font-size:18px;line-height:1.65;max-width:700px;margin:0}
+  .season-tag{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+  .season-tag span{background:#c8102e;color:#fff;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:900;letter-spacing:.08em}
+  .season-tag strong{color:#d6a84f;font-size:12px}
+  .season-card{background:#fff;color:#10233f;border-radius:18px;padding:28px;box-shadow:0 25px 60px #0003}
+  .card-label{font-size:10px;letter-spacing:.14em;font-weight:900;color:#c8102e}
+  .season-card h2{font-size:28px;margin:8px 0 18px}
+  .season-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .season-card li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:700}
+  .season-card li span{color:#c8102e;font-weight:900}
+  .section-head{max-width:820px;margin-bottom:28px}
+  .section-head h2{margin:7px 0 10px}
+  .section-head p{color:#64748b;line-height:1.65;margin:0}
+  .hub-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .hub-card{position:relative;display:block;padding:25px;border:1px solid #d9e2ec;border-radius:16px;background:#fff;box-shadow:0 8px 25px #10233f0a;text-decoration:none;transition:.2s ease}
+  .hub-card:hover{transform:translateY(-3px);box-shadow:0 18px 35px #10233f14}
+  .hub-arrow{position:absolute;top:18px;right:20px;color:#c8102e;font-size:20px;font-weight:900}
+  .hub-card h3{color:#10233f;font-size:20px;margin:15px 0 8px}
+  .hub-card p{color:#64748b;font-size:13px;line-height:1.6;margin:0 0 17px}
+  .hub-card strong{color:#003087;font-size:12px}
+  .calendar-section{background:#f8fafc}
+  .calendar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#d9e2ec;border:1px solid #d9e2ec;border-radius:16px;overflow:hidden}
+  .calendar-grid div{background:#fff;padding:24px}
+  .calendar-grid strong{display:block;color:#10233f;font-size:18px;margin-bottom:9px}
+  .calendar-grid span{display:block;color:#64748b;font-size:13px;line-height:1.6}
+  .bottom-cta{padding:34px;border-radius:20px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}
+  .bottom-cta h2{color:#fff;margin:7px 0 8px}
+  .bottom-cta p{color:#cbd5e1;max-width:700px;line-height:1.6;margin:0}
+  .bottom-cta .btn{white-space:nowrap}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:560px){.seasonal-hero{padding-bottom:42px}.seasonal-hero h1{font-size:43px}.seasonal-hero p{font-size:16px}.season-card{padding:22px}.hub-grid,.calendar-grid{grid-template-columns:1fr}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center}}
+</style>
