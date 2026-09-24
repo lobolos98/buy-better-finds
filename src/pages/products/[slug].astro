@@ -67,6 +67,7 @@ const reviewDate = 'September 22, 2026';
 const dealStatus = getPriceWatchStatus(product.dailyDealDate);
 const priceHistory = getPriceHistory(product.slug);
 const lowestObserved = getLowestObservedPrice(priceHistory);
+const verifiedCurrentPrice = priceHistory.filter((entry) => typeof entry.price === 'number' && entry.type === 'current').sort((a, b) => b.date.localeCompare(a.date))[0] ?? null;
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 
 const breadcrumbSchema = {
@@ -87,6 +88,7 @@ const breadcrumbSchema = {
   image: [new URL(product.image, 'https://buybetterfinds.com').toString()],
   description: product.why,
   url: canonicalUrl,
+  ...(verifiedCurrentPrice ? { offers: { '@type': 'Offer', url: affiliateUrl, price: verifiedCurrentPrice.price, priceCurrency: verifiedCurrentPrice.currency, availability: 'https://schema.org/InStock' } } : {}),
   review: {
     '@type': 'Review',
     author: { '@type': 'Organization', name: 'Buy Better Finds' },
