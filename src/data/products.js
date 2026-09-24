@@ -1,4 +1,5 @@
 import { amazonImageOverrides } from './amazon-images.js';
+import { manufacturerImageOverrides } from './manufacturer-images.js';
 
 const productsCatalog = [
   {
@@ -201,12 +202,17 @@ const productsCatalog = [
 ];
 
 export const products = productsCatalog.map((product) => {
-  const override = amazonImageOverrides[product.slug];
-  if (!override) return product;
+  const amazonOverride = amazonImageOverrides[product.slug];
+  const manufacturerOverride = manufacturerImageOverrides[product.slug];
+
+  if (!amazonOverride && !manufacturerOverride) return product;
+
+  const override = amazonOverride || manufacturerOverride;
   return {
     ...product,
-    amazonAsin: override.asin || product.amazonAsin,
-    amazonImage: override.image,
+    amazonAsin: amazonOverride?.asin || product.amazonAsin,
+    amazonImage: amazonOverride?.image || product.amazonImage,
+    manufacturerImage: manufacturerOverride?.image || product.manufacturerImage,
     image: override.image
   };
 });
