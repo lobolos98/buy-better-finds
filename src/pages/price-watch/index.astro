@@ -15,6 +15,15 @@ const getRetailerUrl = (product) => product.amazonAsin ? amazonProductUrl(produc
 ---
 
 <BaseLayout title="Price Watch | Buy Better Finds" description="Track reference prices, understand deal context, and verify current retailer pricing before you buy.">
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Price Watch', item: 'https://buybetterfinds.com/price-watch/' },
+    { '@type': 'ListItem', position: 3, name: 'Price Watch', item: new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString() }
+  ]
+})} />
   <section class="hero">
     <div class="container hero-grid">
       <div>
