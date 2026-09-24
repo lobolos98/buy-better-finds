@@ -84,6 +84,15 @@ const advice = categoryAdvice[name] ?? 'Start with your use case, then compare t
 const rankedMatches = [...matches].sort((a, b) => (getRecommendation(b).score ?? 0) - (getRecommendation(a).score ?? 0));
 ---
 <BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, comparisons, and product sources.`}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Categories', item: 'https://buybetterfinds.com/categories/' },
+      { '@type': 'ListItem', position: 3, name, item: new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString() }
+    ]
+  })} />
   <section class="section category-page"><div class="container">
     <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>{name}</strong></div>
     <div class="category-hero"><div><div class="eyebrow">SHOPPING HUB · {matches.length} FINDS</div><h1>{name}</h1><p class="lead">{advice}</p></div><div class="category-rule"><strong>HOW TO SHOP</strong><span>Start with your use case, then compare the tradeoffs.</span></div></div>
