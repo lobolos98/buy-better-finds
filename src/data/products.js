@@ -1,4 +1,6 @@
-export const products = [
+import { amazonImageOverrides } from './amazon-images.js';
+
+const productsCatalog = [
   {
     slug: 'sony-wh-1000xm5', amazonAsin: 'B09XS7JWHH', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
     bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b', dailyDealDate: '2026-09-22'
@@ -197,3 +199,15 @@ export const products = [
   {"slug":"revlon-one-step","name":"Revlon One-Step Hair Dryer & Volumizer","category":"Beauty & Personal Care","price":"Check price","icon":"✦","image":"/images/products/new-product-placeholder.svg","imageAlt":"Revlon One-Step Hair Dryer & Volumizer","bestFor":"At-home blowouts and styling","why":"One-step hot-air styling format combining drying and brushing motions for everyday hair routines.","watch":"Heat styling should be matched to hair type and used with appropriate heat protection.","url":"https://www.revlonhairtools.com/"},
   {"slug":"braun-series-7","name":"Braun Series 7 Electric Shaver","category":"Beauty & Personal Care","price":"Check price","icon":"✦","image":"/images/products/new-product-placeholder.svg","imageAlt":"Braun Series 7 Electric Shaver","bestFor":"Everyday electric shaving","why":"Electric shaver line designed around flexible shaving and grooming features for daily use.","watch":"Replacement parts and exact shaving-head configuration vary by model.","url":"https://us.braun.com/en-us/male-grooming/shavers-for-men/series-7"},
 ];
+
+export const products = productsCatalog.map((product) => {
+  const override = amazonImageOverrides[product.slug];
+  if (!override) return product;
+  return {
+    ...product,
+    amazonAsin: override.asin || product.amazonAsin,
+    amazonImage: override.image,
+    image: override.image
+  };
+});
+
