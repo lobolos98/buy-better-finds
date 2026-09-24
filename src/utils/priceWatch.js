@@ -1,4 +1,11 @@
-export const EDITORIAL_TODAY = '2026-09-24';
+const buildDate = new Intl.DateTimeFormat('en-CA', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  timeZone: 'America/New_York'
+}).format(new Date());
+
+export const EDITORIAL_TODAY = import.meta.env.PUBLIC_EDITORIAL_TODAY || buildDate;
 
 export function getPriceWatchStatus(dailyDealDate) {
   if (!dailyDealDate) return null;
