@@ -29,6 +29,14 @@ export const manufacturerImageOverrides = {
     image: 'https://www.cosrx.com/cdn/shop/files/Snail_96_Hero-banner-slider_1024x1024.png?v=1763517851',
     source: 'COSRX'
   },
+  'dyson-v8': {
+    image: 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/447266-01.jpg?%24responsive%24=&wid=400',
+    source: 'Dyson'
+  },
+  'magna-tiles-undersea': {
+    image: 'https://magnatiles.com/cdn/shop/files/26Undersea_Adventure_FR1_RGB_1.jpg?v=1777929366&width=1504',
+    source: 'MAGNA-TILES'
+  },
   'samsung-t7-shield': {
     image: 'https://images.samsung.com/is/image/samsung/p6pim/us/mu-pe1t0k-am/gallery/us-portable-ssd-t7-shield-mu-pe1t0k-am-552408682?%24product-details-jpg%24=',
     source: 'Samsung'
