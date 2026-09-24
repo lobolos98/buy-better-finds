@@ -3,3 +3,15 @@
 /* Consistent Amazon affiliate CTA styling across the site */
 .amazon-btn,.amazon-button,.amazon-shop{background:#c8102e !important;color:#fff !important;border-color:#c8102e !important}
 .amazon-btn:hover,.amazon-button:hover,.amazon-shop:hover{background:#a80d27 !important;color:#fff !important;border-color:#a80d27 !important}
+
+/* Product review recommendation breakdown */
+.recommendation-breakdown{margin:42px 0 0}
+.recommendation-breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.recommendation-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:28px;box-shadow:0 10px 28px #10233f0a}
+.recommendation-card.caution{background:#f8fafc}
+.recommendation-card .eyebrow{margin-bottom:8px}
+.recommendation-card h2{color:var(--navy);font-size:24px;line-height:1.25;margin:0 0 18px}
+.recommendation-card ul{margin:0;padding-left:20px;color:var(--muted)}
+.recommendation-card li{margin:0 0 11px;line-height:1.55}
+.recommendation-skip{margin:20px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);line-height:1.55}
+@media(max-width:700px){.recommendation-breakdown-grid{grid-template-columns:1fr}.recommendation-card{padding:22px}}
