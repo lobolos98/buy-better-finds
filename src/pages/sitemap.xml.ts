@@ -16,6 +16,7 @@ const staticPages = [
   '/comparisons/',
   '/trending/',
   '/deals/',
+  '/price-watch/',
   '/search/',
   '/categories/seasonal-holidays/',
   '/categories/seasonal-holidays/prime-big-deal-days/'
