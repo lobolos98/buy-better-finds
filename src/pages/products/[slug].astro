@@ -5,6 +5,7 @@ import { products } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 import { getPriceWatchStatus, formatPriceWatchDate } from '../../utils/priceWatch.js';
+import { getPriceHistory, getLowestObservedPrice } from '../../data/priceHistory.js';
 
 const guideMap = {
   tech: { label: 'Best Tech Products', href: '/guides/best-tech/' },
@@ -64,6 +65,8 @@ const affiliateUrl = product.amazonAsin
   : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
 const reviewDate = 'September 22, 2026';
 const dealStatus = getPriceWatchStatus(product.dailyDealDate);
+const priceHistory = getPriceHistory(product.slug);
+const lowestObserved = getLowestObservedPrice(priceHistory);
 const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
 
 const breadcrumbSchema = {
@@ -191,6 +194,28 @@ const breadcrumbSchema = {
           </div>
         </div>
       </section>
+
+      {priceHistory.length > 0 && (
+        <section class="price-history" aria-labelledby="price-history-heading">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">PRICE WATCH HISTORY</div>
+              <h2 id="price-history-heading">Observed price context</h2>
+              <p>These are dated Buy Better Finds observations, not live retailer history. We only add entries when a price is actually observed or verified.</p>
+            </div>
+            {lowestObserved && <div class="price-history-low"><span>LOWEST OBSERVED</span><strong>${lowestObserved.price.toFixed(2)}</strong></div>}
+          </div>
+          <div class="price-history-list">
+            {priceHistory.slice().reverse().map((entry) => (
+              <div class="price-history-row">
+                <span>{formatPriceWatchDate(entry.date)}</span>
+                <strong>${entry.price.toFixed(2)} {entry.currency}</strong>
+                <small>{entry.source}</small>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section class="decision-paths" aria-labelledby="research-heading">
         <div class="section-head research-heading">
