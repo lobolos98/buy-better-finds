@@ -18,6 +18,14 @@ export function getPriceWatchStatus(dailyDealDate) {
   return { key: 'past', label: `FEATURED · ${dailyDealDate}` };
 }
 
+export function getDealOfTheDay(products) {
+  const dated = products.filter((product) => product?.dailyDealDate);
+  return dated.find((product) => product.dailyDealDate === EDITORIAL_TODAY)
+    || dated.find((product) => product.dailyDealDate > EDITORIAL_TODAY)
+    || dated.slice().sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate))[0]
+    || null;
+}
+
 export function formatPriceWatchDate(date) {
   if (!date) return '';
   const [year, month, day] = date.split('-').map(Number);
