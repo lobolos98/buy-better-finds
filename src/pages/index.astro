@@ -4,7 +4,7 @@ import { products as catalog } from '../data/products.js';
 import { trendingProducts, trendingUpdated } from '../data/trending.js';
 import { amazonProductUrl, amazonSearchUrl } from '../utils/amazon.js';
 import { getDealOfTheDay } from '../utils/priceWatch.js';
-const products = catalog.slice(0, 8);
+const products = catalog.filter((product) => product?.slug).slice(0, 8);
 const amazonUrl = (product) => product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || '');
 const categoryPreviews = [
   { name: 'Tech', href: '/categories/tech/', image: '/images/products/sony-wh-1000xm5.svg', alt: 'Tech products including Sony headphones', description: 'Headphones, tablets, accessories & more' },
