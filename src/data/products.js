@@ -558,8 +558,7 @@ const productsCatalog = [
     image: '/images/products/stitch-sticker-stamper.svg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
     bestFor: 'Disney fans and screen-free creative gifts', why: 'A portable creative activity combining a recognizable character with sticker play.',
     watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch&tag=buybetterfi06-20'
-  }
-
+  },
 
   {
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
