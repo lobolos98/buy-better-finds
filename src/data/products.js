@@ -382,6 +382,32 @@ const productsCatalog = [
     slug: 'switchbot-blind-tilt', name: 'SwitchBot Blind Tilt', category: 'Smart Home', price: 'Check price', icon: '▥', image: 'https://us.switch-bot.com/cdn/shop/products/switchbotblindtilt0103.jpg?v=1674980976', imageAlt: 'SwitchBot Blind Tilt smart blinds controller', bestFor: 'Automating existing horizontal blinds', why: 'A retrofit blind controller with scheduling, light sensing, solar-assisted charging, and smart-home integrations.', watch: 'Compatibility depends on your existing blind mechanism and hub setup.', url: 'https://us.switch-bot.com/products/switchbot-blind-tilt'
   },
 
+
+  {
+    slug: 'amazon-echo-spot', amazonAsin: 'B0D92GBTFS', name: 'Amazon Echo Spot (2024 Release)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://m.media-amazon.com/images/I/51w6wQ5Z8ML._AC_SL1001_.jpg', imageAlt: 'Amazon Echo Spot smart alarm clock', bestFor: 'Nightstands, alarms, and compact Alexa control', why: 'A compact Alexa smart alarm clock with a touch display, customizable clock faces, and directional audio.', watch: 'Display and feature availability can vary by software updates.', url: 'https://www.amazon.com/dp/B0D92GBTFS'
+  },
+  {
+    slug: 'amazon-fire-tv-stick-4k-max', amazonAsin: 'B0BP9SNVH9', name: 'Amazon Fire TV Stick 4K Max', category: 'Smart Home', price: 'Check price', icon: '▶', image: 'https://m.media-amazon.com/images/I/51KJtMftGPL._AC_SL1000_.jpg', imageAlt: 'Amazon Fire TV Stick 4K Max', bestFor: '4K streaming and smart-TV entertainment', why: 'A 4K streaming device with Alexa voice control and support for Dolby Vision, HDR10+, and Dolby Atmos.', watch: 'Streaming service availability varies by region and subscription.', url: 'https://www.amazon.com/dp/B0BP9SNVH9'
+  },
+  {
+    slug: 'kasa-hs220', name: 'Kasa Smart Wi-Fi Dimmer Switch HS220', category: 'Smart Home', price: 'Check price', icon: '☼', image: 'https://m.media-amazon.com/images/I/41kpIBtMf3L._SX522_.jpg', imageAlt: 'Kasa Smart Wi-Fi Dimmer Switch HS220', bestFor: 'Smart lighting and scheduled dimming', why: 'A Wi-Fi smart dimmer switch with app control, scheduling, scenes, and voice control through compatible assistants.', watch: 'Check wiring requirements and electrical-box compatibility before installation.', url: 'https://www.tp-link.com/us/home-networking/smart-switch/hs220/v1/'
+  },
+  {
+    slug: 'govee-rgbic-65ft', name: 'Govee RGBIC LED Strip Lights 65.6ft', category: 'Smart Home', price: 'Check price', icon: '▰', image: 'https://m.media-amazon.com/images/I/51CIdh0bxHL._AC_CX679_.jpg', imageAlt: 'Govee RGBIC LED Strip Lights', bestFor: 'Accent lighting, bedrooms, and home entertainment', why: 'Long RGBIC smart light strips with app control, music synchronization, and customizable multicolor effects.', watch: 'Designed primarily for indoor decorative lighting.', url: 'https://www.amazon.com/s?k=Govee+RGBIC+65.6ft+LED+Strip+Lights'
+  },
+  {
+    slug: 'philips-hue-a19-color', name: 'Philips Hue White and Color Ambiance A19 Smart Bulb', category: 'Smart Home', price: 'Check price', icon: '●', image: 'https://www.philips-hue.com/content/dam/b2c/en-us/collections/smart-lighting/smart-bulbs/white-and-color-ambiance/a19/hero.png', imageAlt: 'Philips Hue White and Color Ambiance A19 smart bulb', bestFor: 'Whole-home smart lighting and color scenes', why: 'A color-changing A19 smart bulb with warm-to-cool white light, dimming, app control, and voice compatibility.', watch: 'A Hue Bridge unlocks additional features beyond Bluetooth control.', url: 'https://www.philips-hue.com/en-us/p/hue-white-and-color-ambiance-a60-e26-smart-bulb-810/046677590826'
+  },
+  {
+    slug: 'meross-msg100', name: 'Meross Smart Garage Door Opener MSG100', category: 'Smart Home', price: 'Check price', icon: '⌂', image: 'https://shop.meross.com/cdn/shop/files/MSG100_1.jpg?v=1690964491', imageAlt: 'Meross Smart Garage Door Opener MSG100', bestFor: 'Remote garage access and smart-home routines', why: 'A smart garage controller that lets compatible garage doors be monitored and controlled from a phone or smart assistant.', watch: 'Compatibility depends on the garage-door opener model.', url: 'https://shop.meross.com/products/smart-wifi-garage-door-opener'
+  },
+  {
+    slug: 'tapo-c210', name: 'TP-Link Tapo C210 Pan/Tilt Home Security Wi-Fi Camera', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://static.tp-link.com/upload/image-line/01_normal_20230524004739b.jpg', imageAlt: 'TP-Link Tapo C210 pan and tilt security camera', bestFor: 'Indoor room, pet, and home monitoring', why: 'A 2K 3MP pan-and-tilt indoor camera with 360-degree horizontal coverage, night vision, motion alerts, and two-way audio.', watch: 'Cloud storage features may require a subscription; local microSD storage is supported.', url: 'https://www.tp-link.com/us/home-networking/cloud-camera/tapo-c210/'
+  },
+  {
+    slug: 'ring-spotlight-cam-pro', amazonAsin: 'B0B83HZVCF', name: 'Ring Spotlight Cam Pro', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://m.media-amazon.com/images/I/6117ytsLByL._SL1500_.jpg', imageAlt: 'Ring Spotlight Cam Pro', bestFor: 'Outdoor security and motion monitoring', why: 'A weather-resistant Ring security camera with 2K video, HDR, 3D Motion Detection, and a built-in spotlight and siren.', watch: 'Some features and video storage require a Ring subscription.', url: 'https://ring.com/products/spotlight-cam-pro'
+  }
+
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
