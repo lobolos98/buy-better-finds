@@ -136,7 +136,8 @@ const breadcrumbSchema = {
         <div class="product-detail-visual">
           <div class="find-badge">BUY BETTER FIND</div>
           <div class="product-photo">
-            <img src={product.image} alt={product.imageAlt} width="1000" height="750" />
+            <img src={product.image} alt={product.imageAlt} width="1000" height="750" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="product-image-fallback" style="display:none">Product image unavailable</div>
             <div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div>
           </div>
           <span class="category-label">{product.category}</span>
