@@ -274,6 +274,32 @@ const productsCatalog = [
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_20081-11272700_9c_1__1.jpg', imageAlt: 'OXO Good Grips Everyday Cutting Board',
     bestFor: 'Everyday chopping and food prep', why: 'Double-sided non-porous cutting board with non-slip feet and a drip catcher.', watch: 'Choose a larger board if you regularly prep large meals.', url: 'https://www.oxo.com/everyday-cutting-board.html'
   },
+
+  {
+    slug: 'ooni-koda-2-pro', name: 'Ooni Koda 2 Pro 18" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$799.00', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/Koda_2_Pro_Carousel_4.png?crop=center&format=webp&height=640&v=1749094124&width=640', imageAlt: 'Ooni Koda 2 Pro outdoor pizza oven',
+    bestFor: 'Large backyard pizza nights', why: '18-inch gas-powered outdoor pizza oven with a large cooking area and high-temperature cooking.', watch: 'Its larger footprint is best suited to a dedicated outdoor cooking area.', url: 'https://ooni.com/products/ooni-koda-2-pro'
+  },
+  {
+    slug: 'ooni-karu-2-pro', name: 'Ooni Karu 2 Pro 16" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$849.00', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2Pro-F_fb2a4824-8fc4-43d2-b031-6f158f77b22c.webp?crop=center&height=640&v=1749094517&width=640', imageAlt: 'Ooni Karu 2 Pro multi-fuel pizza oven',
+    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', url: 'https://ooni.com/products/ooni-karu-2-pro'
+  },
+  {
+    slug: 'ooni-karu-2', name: 'Ooni Karu 2 12" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$449.00', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2_98e75b3e-ab5e-4709-9a6d-3b80d32ce40e.webp?crop=center&height=640&v=1749094631&width=640', imageAlt: 'Ooni Karu 2 multi-fuel pizza oven',
+    bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', url: 'https://ooni.com/products/ooni-karu-2'
+  },
+  {
+    slug: 'ooni-koda-2-max', name: 'Ooni Koda 2 Max 24" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$1,299.00', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2Max-Front-2Pizzas-F.webp?crop=center&height=640&v=1749094223&width=640', imageAlt: 'Ooni Koda 2 Max gas-powered pizza oven',
+    bestFor: 'Large-format backyard pizza cooking', why: '24-inch gas-powered oven designed for large pizzas and multi-zone cooking.', watch: 'Its size and price make it a substantial outdoor-kitchen purchase.', url: 'https://ooni.com/products/ooni-koda-2-max'
+  },
+  {
+    slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$499.00', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2-Side-Black.webp?crop=center&height=640&v=1749094390&width=640', imageAlt: 'Ooni Koda 2 gas-powered pizza oven',
+    bestFor: 'Portable gas pizza cooking', why: '14-inch gas-powered oven designed to balance portability with a larger cooking surface.', watch: 'Gas-only cooking offers less fuel flexibility than Ooni multi-fuel models.', url: 'https://ooni.com/products/ooni-koda-2'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
