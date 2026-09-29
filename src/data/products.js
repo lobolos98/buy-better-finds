@@ -787,7 +787,7 @@ const productsCatalog = [
   },
   {
     slug: 'eos-shea-better-vanilla-cashmere', name: 'eos Shea Better Body Lotion Vanilla Cashmere', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    amazonAsin: 'B08KT2Z93D', image: 'https://i5.walmartimages.com/seo/eos-Shea-Better-Body-Lotion-Vanilla-Cashmere-for-Dryness-16-fl-oz_9f1d1b5c-8a5a-4f55-8e25-1b7d2f5f0d5a.1a0f0f4c2d0d8e0d6f0b1f0c6a0e0b4f.jpeg', imageAlt: 'eos Shea Better Body Lotion Vanilla Cashmere',
+    amazonAsin: 'B08KT2Z93D', image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08KT2Z93D&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'eos Shea Better Body Lotion Vanilla Cashmere',
     bestFor: 'Daily body moisturizing', why: 'Rich body lotion with a warm vanilla-cashmere scent for everyday hydration.', watch: 'Fragrance preference is personal; check the current formula and scent notes.', url: 'https://www.amazon.com/dp/B08KT2Z93D?tag=buybetterfi06-20'
   },
   {
