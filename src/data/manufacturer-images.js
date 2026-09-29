@@ -45,4 +45,40 @@ export const manufacturerImageOverrides = {
     image: 'https://www.kregtool.com/dw/image/v2/BDZM_PRD/on/demandware.static/-/Sites-master-kreg/default/dw2085ce2a/images/hi-res/KPHJ520PRO2-01.jpg?sh=140&sw=140',
     source: 'Kreg'
   },
+  'apple-airtag-2': {
+    image: 'https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/airtag-2nd-gen.png',
+    source: 'Apple'
+  },
+  'magna-tiles-classic-37': {
+    image: 'https://magnatiles.com/cdn/shop/files/24Classic37_FR11_RGB.jpg?v=1751909470&width=800',
+    source: 'MAGNA-TILES'
+  },
+  'owala-freesip': {
+    image: 'https://cdn.shopify.com/s/files/1/0439/2537/3087/files/OW_Nailed_It_24oz_Freesip_SC_ff189ca1-fb0a-4adb-81ea-f88b3fff7e77.png?crop=center&height=500&v=1772222740&width=500',
+    source: 'Owala'
+  },
+  'owala-freesip-24': {
+    image: 'https://cdn.shopify.com/s/files/1/0439/2537/3087/files/OW_Nailed_It_24oz_Freesip_SC_ff189ca1-fb0a-4adb-81ea-f88b3fff7e77.png?crop=center&height=500&v=1772222740&width=500',
+    source: 'Owala'
+  },
+  'theragun-mini-3': {
+    image: 'https://www.therabody.com/cdn/shop/files/Y2K-Mini-Strawberry-Splash-Thumbnail.webp?v=1787604182&width=1445',
+    source: 'Therabody'
+  },
+  'lego-mini-orchid': {
+    image: 'https://www.lego.com/cdn/cs/set/assets/bltade30768c791af76/10343_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500',
+    source: 'LEGO'
+  },
+  'lego-mini-orchid-holiday': {
+    image: 'https://www.lego.com/cdn/cs/set/assets/bltade30768c791af76/10343_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500',
+    source: 'LEGO'
+  },
+  'lego-holiday-tree': {
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt99b9c8b26b2639ab/30576.jpg?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500',
+    source: 'LEGO'
+  },
+  'ecobee-smart-thermostat-premium': {
+    image: 'https://images.ctfassets.net/a3qyhfznts9y/3Pk9XugWXYQXdiPmssg4r4/e6ddc84bb15c2c2611037d8e5ca5e994/Ares_-_Slot_2_-_Mobile.png?fm=png&h=1366&q=80&w=1366',
+    source: 'ecobee'
+  },
 };
