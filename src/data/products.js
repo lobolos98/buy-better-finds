@@ -311,6 +311,32 @@ const productsCatalog = [
     image: 'https://assets.keter.com/transform/49e78023-b692-4d97-8837-d0da532ba335/DENALI-30_300x300-px_72-dpi_20?io=transform%3Ascale%2Cwidth%3A528&quality=80', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
     bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/cortina-30-gallon-deck-box-graphite-255844.html'
   },
+
+  {
+    slug: 'brightech-ambience-pro-solar-hanging', name: 'Brightech Ambience Pro Solar Hanging String Lights', category: 'Outdoor', price: '$59.00', icon: '☼',
+    image: 'https://brightech.com/cdn/shop/files/Copy_of_Copy_of_20221121_DBaum_Brightech_15205_onestick.jpg?v=1737075514&width=1445', imageAlt: 'Brightech Ambience Pro Solar Hanging String Lights',
+    bestFor: 'Pergolas, patios, and backyard entertaining', why: 'Solar Edison-style S14 LED string lights with automatic dusk activation and warm 2700K light.', watch: 'Solar output depends on direct sunlight reaching the panel.', url: 'https://brightech.com/products/ambience-pro-solar-1w-corn-hanging'
+  },
+  {
+    slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro Solar Hanging Remote String Lights', category: 'Outdoor', price: '$64.00', icon: '☼',
+    image: 'https://brightech.com/cdn/shop/files/20241107_Brightech_15428.jpg?v=1737075497&width=1445', imageAlt: 'Brightech Ambience Pro Solar Hanging Remote String Lights',
+    bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://brightech.com/products/ambience-pro-solar-hanging-remote-control'
+  },
+  {
+    slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: '$129.99', icon: '◇',
+    image: 'https://assets.keter.com/transform/49e78023-b692-4d97-8837-d0da532ba335/DENALI-30_300x300-px_72-dpi_20?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 50-Gallon Deck Box Walnut Brown',
+    bestFor: 'Cushions, pool gear, and gardening tools', why: 'Weather-resistant resin storage box with 50-gallon capacity, ventilation, carrying handles, and lockable lid.', watch: 'The 50-gallon size is best for medium-volume patio storage.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-50-gallon-deck-box-walnut-brown-263745.html'
+  },
+  {
+    slug: 'keter-circa-37-gallon', name: 'Keter Circa 37-Gallon Deck Box', category: 'Outdoor', price: '$99.99', icon: '◇',
+    image: 'https://assets.keter.com/transform/9e3e4f1e-b4f0-4f1e-89bb-cd4f7ed8e8f1/CIRCA_37_Gal_Deck_Box_Graphite_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Circa 37-Gallon Deck Box Graphite',
+    bestFor: 'Smaller patios and balcony storage', why: 'Compact weather-resistant outdoor storage box for cushions, toys, and garden accessories.', watch: 'The 37-gallon capacity is smaller than Keter medium and large deck boxes.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/circa-37-gallon-deck-box-graphite-258711.html'
+  },
+  {
+    slug: 'keter-signature-92-gallon', name: 'Keter Signature 92-Gallon Deck Box — Oak Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
+    image: 'https://assets.keter.com/transform/3c1e3e3d-3b7a-4f9d-8f7d-7c9a9d3e6e9f/SIGNATURE_92_Gal_Deck_Box_Oak_Brown_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
+    bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-92-gallon-deck-box-oak-brown-263819.html'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
