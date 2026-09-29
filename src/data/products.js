@@ -109,7 +109,7 @@ const productsCatalog = [
 
 
   {
-    slug: 'apple-airtag-2', amazonAsin: 'B0D3V4M9F1', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
+    slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://images-na.ssl-images-amazon.com/images/P/B0D3V4M9F1.01.LZZZZZZZ.jpg', imageAlt: 'Apple AirTag 2nd generation',
     bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', url: 'https://www.apple.com/airtag/'
   },
@@ -179,18 +179,13 @@ const productsCatalog = [
     bestFor: '4K streaming on compatible televisions', why: 'Compact streaming device built around 4K video playback and Amazon Fire TV features.', watch: 'Streaming quality also depends on your TV, network, and subscription services.', url: 'https://www.amazon.com/dp/B0C6W3D4RM?tag=buybetterfi06-20'
   },
   {
-    slug: 'google-nest-hub-2', amazonAsin: 'B0FB9HGFQV', name: 'Google Nest Hub (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://images-na.ssl-images-amazon.com/images/P/B0FB9HGFQV.01.LZZZZZZZ.jpg', imageAlt: 'Google Nest Hub second generation smart display',
-    bestFor: 'Google Home control and household information', why: 'Compact smart display for compatible Google Home devices, media, routines, and household information.', watch: 'Check current Google Home compatibility before building around a smart-home platform.', url: 'https://store.google.com/'
-  },
-  {
     slug: 'apple-magic-mouse-usbc', amazonAsin: 'B0DL72PK1P', name: 'Apple Magic Mouse (USB-C)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://images-na.ssl-images-amazon.com/images/P/B0DL72PK1P.01.LZZZZZZZ.jpg', imageAlt: 'Apple Magic Mouse USB-C',
     bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.apple.com/shop/buy-mac/mouse/white-multi-touch-surface'
   },
 ];
 
-export const products = productsCatalog.map((product) => {
+export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
   const amazonOverride = amazonImageOverrides[product.slug];
   const manufacturerOverride = manufacturerImageOverrides[product.slug];
 
