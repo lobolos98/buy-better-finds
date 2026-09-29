@@ -381,9 +381,6 @@ const productsCatalog = [
   {
     slug: 'switchbot-blind-tilt', name: 'SwitchBot Blind Tilt', category: 'Smart Home', price: 'Check price', icon: '▥', image: 'https://us.switch-bot.com/cdn/shop/products/switchbotblindtilt0103.jpg?v=1674980976', imageAlt: 'SwitchBot Blind Tilt smart blinds controller', bestFor: 'Automating existing horizontal blinds', why: 'A retrofit blind controller with scheduling, light sensing, solar-assisted charging, and smart-home integrations.', watch: 'Compatibility depends on your existing blind mechanism and hub setup.', url: 'https://us.switch-bot.com/products/switchbot-blind-tilt'
   },
-  {
-    slug: 'eero-6-plus', name: 'eero 6+', category: 'Smart Home', price: 'Check price', icon: '⌁', image: 'https://prod.eero.com/shop/eero-6-plus?pack=f', imageAlt: 'eero 6+ mesh Wi-Fi router', bestFor: 'Whole-home Wi-Fi and connected smart devices', why: 'A Wi-Fi 6 mesh router with a built-in smart-home hub supporting compatible Thread and Zigbee devices.', watch: 'Coverage depends on home layout and the number of access points.', url: 'https://eero.com/shop/eero-6-plus'
-  }
 
 ];
 
