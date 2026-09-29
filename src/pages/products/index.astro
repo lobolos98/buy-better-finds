@@ -1,6 +1,51 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
+
+const escapeHtml = (value) => String(value ?? '')
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const productCards = products.map((product) => {
+  const slug = escapeHtml(product.slug);
+  const name = escapeHtml(product.name);
+  const category = escapeHtml(product.category);
+  const icon = escapeHtml(product.icon);
+  const image = escapeHtml(product.image);
+  const imageAlt = escapeHtml(product.imageAlt || product.name);
+  const score = escapeHtml(product.score ?? '—');
+  const bestFor = escapeHtml(product.bestFor);
+  const why = escapeHtml(product.why);
+  const watch = escapeHtml(product.watch);
+  const price = escapeHtml(product.price);
+  const amazonUrl = product.amazonAsin
+    ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
+    : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`);
+
+  return `<article class="card product-card">
+    <a class="product-image" href="/products/${slug}/" aria-label="View ${name}">
+      ${image ? `<img src="${image}" alt="${imageAlt}" loading="lazy" width="800" height="600">` : ''}
+      <span class="image-fallback" aria-hidden="true"><span>${icon}</span><small>${category}</small></span>
+      <span class="pick-badge">BUY BETTER FIND</span>
+    </a>
+    <div class="product-meta">
+      <div class="tag">${category}</div>
+      <div class="score-mini"><strong>${score}</strong><span>/10</span></div>
+    </div>
+    <h3>${name}</h3>
+    <p class="best-for"><strong>Best for:</strong> ${bestFor}</p>
+    <p>${why}</p>
+    <div class="tradeoff"><strong>Watch:</strong> ${watch}</div>
+    <p class="price"><strong>${price}</strong></p>
+    <div class="product-actions">
+      <a class="shop-btn secondary-shop" href="/products/${slug}/">See our take →</a>
+      <a class="shop-btn amazon-shop" href="${escapeHtml(amazonUrl)}" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+    </div>
+  </article>`;
+}).join('');
 ---
 <BaseLayout title="Products | Buy Better Finds" description="Browse real products and practical recommendations from Buy Better Finds.">
   <section class="section">
@@ -8,38 +53,12 @@ import { products } from '../../data/products.js';
       <div class="eyebrow">REAL PRODUCTS · EDITORIALLY EVALUATED</div>
       <h1>Products worth considering.</h1>
       <p class="lead">Explore specific products, see how we rate their practical fit, understand the tradeoffs, and follow the product link to verify today's price and availability.</p>
-
       <div class="catalog-note">
         <div><strong>How to use our scores</strong><span>Buy Better Scores summarize our editorial view of practical fit, value, useful features, and tradeoffs. They are not paid ratings.</span></div>
         <a href="/why-we-recommend/">How we recommend →</a>
       </div>
-
       <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
-
-      <div class="grid product-grid">
-        {products.map((product) => (
-          <article class="card product-card">
-            <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-              {product.image && <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" />}
-              <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
-              <span class="pick-badge">BUY BETTER FIND</span>
-            </a>
-            <div class="product-meta">
-              <div class="tag">{product.category}</div>
-              <div class="score-mini"><strong>{product.score ?? '—'}</strong><span>/10</span></div>
-            </div>
-            <h3>{product.name}</h3>
-            <p class="best-for"><strong>Best for:</strong> {product.bestFor}</p>
-            <p>{product.why}</p>
-            <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
-            <p class="price"><strong>{product.price}</strong></p>
-            <div class="product-actions">
-              <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
-              <a class="shop-btn amazon-shop" href={product.amazonAsin ? `https://www.amazon.com/dp/${product.amazonAsin}?tag=buybetterfi06-20` : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
-            </div>
-          </article>
-        ))}
-      </div>
+      <div class="grid product-grid" set:html={productCards}></div>
     </div>
   </section>
 </BaseLayout>
