@@ -18,7 +18,7 @@ const productsCatalog = [
     bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time with a broad heat zone.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.solostove.com/us/en-us/p/SSTOWER1.5_PELLET', dailyDealDate: '2026-09-30'
   },
   {
-    slug: 'apple-airpods-4', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉', image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 5 wireless earbuds', bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Current-generation AirPods with a compact open-style design and seamless Apple-device integration.', watch: 'Choose the noise-cancelling version if active noise reduction is a priority.', url: 'https://www.apple.com/airpods-5/', dailyDealDate: '2026-10-01'
+    slug: 'apple-airpods-4', name: 'Apple AirPods 4', category: 'Tech', price: 'Check price', icon: '◉', image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 4 wireless earbuds', bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Current-generation AirPods with a compact open-style design and seamless Apple-device integration.', watch: 'Choose the noise-cancelling version if active noise reduction is a priority.', url: 'https://www.apple.com/airpods-4/', dailyDealDate: '2026-10-01'
   },
   {
     slug: 'apple-ipad-a16', amazonAsin: 'B0DZJ4N8Y5', name: 'Apple iPad 11-inch (A16)', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://www.apple.com/v/ipad-11/d/images/overview/design/modular_startframe__ecmd9ce9dsom_large.jpg', imageAlt: 'Apple iPad 11-inch with A16 chip', pressKitUrl: 'https://www.apple.com/newsroom/2025/03/apple-introduces-ipad-air-with-powerful-m3-chip-and-new-magic-keyboard/', bestFor: 'Streaming, browsing, school, and everyday productivity', why: '11-inch iPad with an A16 chip, 128GB starting storage, USB-C, and support for Apple Pencil.', watch: 'Accessories such as keyboards and Pencil add to the total cost.', url: 'https://www.apple.com/ipad-11/', dailyDealDate: '2026-09-20'
@@ -107,6 +107,87 @@ const productsCatalog = [
   {"slug":"lego-sallys-flowerpot","name":"LEGO Disney Sally's Flowerpot","category":"Seasonal & Holidays","price":"$49.99","icon":"★","image":"https://www.lego.com/cdn/cs/set/assets/blt06d58489163cda98/43288_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500","imageAlt":"LEGO Disney Sally's Flowerpot","bestFor":"Halloween and Nightmare Before Christmas fans","why":"A seasonal display-friendly build inspired by The Nightmare Before Christmas with hidden play features.","watch":"Its strongest appeal is fandom and seasonal décor rather than everyday toy play.","url":"https://www.lego.com/en-us/product/sallys-flowerpot-43288"},
   {"slug":"lego-nightmare-before-christmas","name":"LEGO Disney Tim Burton's The Nightmare Before Christmas","category":"Seasonal & Holidays","price":"$199.99","icon":"★","image":"https://www.lego.com/cdn/cs/set/assets/blta1405340d716cd20/21351_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500","imageAlt":"LEGO Disney Tim Burton's The Nightmare Before Christmas","bestFor":"Halloween-to-Christmas décor and adult collectors","why":"A large display model built around Halloween Town and Christmas Town, making it useful across both major fall holidays.","watch":"Its large size and premium price make it a dedicated collector/display purchase.","url":"https://www.lego.com/en-us/product/disney-tim-burtons-the-nightmare-before-christmas-21351"},
 
+
+  {
+    slug: 'apple-airtag-2', amazonAsin: 'B0D3V4M9F1', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0D3V4M9F1.01.LZZZZZZZ.jpg', imageAlt: 'Apple AirTag 2nd generation',
+    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', url: 'https://www.apple.com/airtag/'
+  },
+  {
+    slug: 'anker-737-power-bank', amazonAsin: 'B09VPHVT2Z', name: 'Anker 737 Power Bank (PowerCore 24K)', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B09VPHVT2Z.01.LZZZZZZZ.jpg', imageAlt: 'Anker 737 Power Bank',
+    bestFor: 'Laptop and phone charging while traveling', why: 'High-capacity portable power bank with high-output USB-C charging and an onboard display.', watch: 'Its large capacity also means a heavier battery pack.', url: 'https://www.anker.com/products/a1289'
+  },
+  {
+    slug: 'logitech-mx-keys-s', amazonAsin: 'B0BKW3LB2B', name: 'Logitech MX Keys S Wireless Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0BKW3LB2B.01.LZZZZZZZ.jpg', imageAlt: 'Logitech MX Keys S Wireless Keyboard',
+    bestFor: 'Desktop productivity and multi-device work', why: 'Low-profile wireless keyboard built for quiet typing, multi-device switching, and customizable shortcuts.', watch: 'Full-size layouts take more desk space than compact keyboards.', url: 'https://www.logitech.com/en-us/shop/p/mx-keys-s'
+  },
+  {
+    slug: 'samsung-t7-shield', amazonAsin: 'B09VLHR4JC', name: 'Samsung T7 Shield Portable SSD 2TB', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B09VLHR4JC.01.LZZZZZZZ.jpg', imageAlt: 'Samsung T7 Shield Portable SSD',
+    bestFor: 'Portable file storage and creative work', why: 'Rugged portable SSD designed for fast external storage and travel.', watch: 'Storage capacity and interface speeds should match the workflow you actually need.', url: 'https://www.samsung.com/us/memory-storage/portable-ssd/t7-shield/'
+  },
+  {
+    slug: 'bose-qc-ultra-2', amazonAsin: 'B0FDKR293G', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0FDKR293G.01.LZZZZZZZ.jpg', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
+    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', url: 'https://www.bose.com/p/headphones/bose-quietcomfort-ultra-headphones-2nd-gen/QCUH2-HEADPHONEARN.html'
+  },
+  {
+    slug: 'jbl-charge-5', amazonAsin: 'B08VDNCZT9', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B08VDNCZT9.01.LZZZZZZZ.jpg', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
+    bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', url: 'https://www.jbl.com/bluetooth-speakers/JBLCHARGE5.html'
+  },
+  {
+    slug: 'kindle-paperwhite', amazonAsin: 'B0CFPHV9ZN', name: 'Amazon Kindle Paperwhite', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0CFPHV9ZN.01.LZZZZZZZ.jpg', imageAlt: 'Amazon Kindle Paperwhite',
+    bestFor: 'Dedicated reading and travel', why: 'E-reader designed around a glare-free display and long reading sessions without the distractions of a general-purpose tablet.', watch: 'It is specialized for reading rather than general tablet apps.', url: 'https://www.amazon.com/dp/B0CFPHV9ZN?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'razer-blackwidow-v4', amazonAsin: 'B0CCG2KHCB', name: 'Razer BlackWidow V4 75% Mechanical Gaming Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0CCG2KHCB.01.LZZZZZZZ.jpg', imageAlt: 'Razer BlackWidow V4 75 percent mechanical gaming keyboard',
+    bestFor: 'PC gaming and customizable mechanical keyboards', why: 'Compact mechanical gaming keyboard with hot-swappable design, RGB lighting, and dedicated controls.', watch: 'Mechanical switch feel and keyboard layout are highly personal.', url: 'https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-75'
+  },
+  {
+    slug: 'elgato-stream-deck-plus', amazonAsin: 'B0BJL8SJ59', name: 'Elgato Stream Deck +', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0BJL8SJ59.01.LZZZZZZZ.jpg', imageAlt: 'Elgato Stream Deck Plus',
+    bestFor: 'Streaming, content creation, and workflow shortcuts', why: 'Programmable control surface with customizable keys, dials, and touch controls for repeated software actions.', watch: 'It is most useful when you will actually build and maintain custom profiles.', url: 'https://www.elgato.com/us/en/p/10GBD9911'
+  },
+  {
+    slug: 'elgato-stream-deck-mini', amazonAsin: 'B07DYRS1WH', name: 'Elgato Stream Deck Mini', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B07DYRS1WH.01.LZZZZZZZ.jpg', imageAlt: 'Elgato Stream Deck Mini',
+    bestFor: 'Simple desktop shortcuts and streaming controls', why: 'Compact programmable controller for frequently repeated desktop and creative-app actions.', watch: 'Six keys provide less room for complex profiles than larger Stream Deck models.', url: 'https://www.elgato.com/us/en/p/10gaei9901'
+  },
+  {
+    slug: 'anker-prime-power-bank-26250', amazonAsin: 'B0F66LNB8D', name: 'Anker Prime Power Bank 26,250mAh 300W', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0F66LNB8D.01.LZZZZZZZ.jpg', imageAlt: 'Anker Prime Power Bank 26250mAh',
+    bestFor: 'High-power travel charging for laptops and multiple devices', why: 'Large-capacity power bank designed for high-output charging across multiple connected devices.', watch: 'Large high-output power banks are heavier and may be overkill for phone-only charging.', url: 'https://www.anker.com/'
+  },
+  {
+    slug: 'anker-power-bank-20000', amazonAsin: 'B0CXDXP8VR', name: 'Anker Power Bank 20,000mAh with Built-in USB-C Cable', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0CXDXP8VR.01.LZZZZZZZ.jpg', imageAlt: 'Anker 20000mAh power bank with built-in USB-C cable',
+    bestFor: 'Travel and everyday backup charging', why: 'Portable battery with built-in USB-C connectivity and multiple charging ports for phones and other devices.', watch: 'Confirm the exact output and cable configuration for your devices.', url: 'https://www.anker.com/'
+  },
+  {
+    slug: 'amazon-echo-show-8', amazonAsin: 'B09B2SBHQK', name: 'Amazon Echo Show 8', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B09B2SBHQK.01.LZZZZZZZ.jpg', imageAlt: 'Amazon Echo Show 8 smart display',
+    bestFor: 'Kitchen timers, video calls, and smart-home control', why: 'Smart display that combines Alexa voice control with a screen for compatible smart-home, media, and communication features.', watch: 'Smart-display usefulness depends on the services and devices you already use.', url: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'amazon-fire-tv-stick-4k-select', amazonAsin: 'B0C6W3D4RM', name: 'Amazon Fire TV Stick 4K Select', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0C6W3D4RM.01.LZZZZZZZ.jpg', imageAlt: 'Amazon Fire TV Stick 4K Select',
+    bestFor: '4K streaming on compatible televisions', why: 'Compact streaming device built around 4K video playback and Amazon Fire TV features.', watch: 'Streaming quality also depends on your TV, network, and subscription services.', url: 'https://www.amazon.com/dp/B0C6W3D4RM?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'google-nest-hub-2', amazonAsin: 'B0FB9HGFQV', name: 'Google Nest Hub (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0FB9HGFQV.01.LZZZZZZZ.jpg', imageAlt: 'Google Nest Hub second generation smart display',
+    bestFor: 'Google Home control and household information', why: 'Compact smart display for compatible Google Home devices, media, routines, and household information.', watch: 'Check current Google Home compatibility before building around a smart-home platform.', url: 'https://store.google.com/'
+  },
+  {
+    slug: 'apple-magic-mouse-usbc', amazonAsin: 'B0DL72PK1P', name: 'Apple Magic Mouse (USB-C)', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0DL72PK1P.01.LZZZZZZZ.jpg', imageAlt: 'Apple Magic Mouse USB-C',
+    bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.apple.com/shop/buy-mac/mouse/white-multi-touch-surface'
+  },
 ];
 
 export const products = productsCatalog.map((product) => {
