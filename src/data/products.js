@@ -210,6 +210,18 @@ const productsCatalog = [
     image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/1057961_1.jpg', imageAlt: 'OXO Good Grips Swivel Peeler',
     bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.oxo.com/swivel-peeler.html'
   },
+
+
+  {
+    slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
+    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/0/1059701_1.jpg', imageAlt: 'OXO Good Grips 5-Quart Mixing Bowl',
+    bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.oxo.com/5-quart-mixing-bowl-244-0.html'
+  },
+  {
+    slug: 'kitchenaid-artisan-plus-5qt', name: 'KitchenAid Artisan Plus 5-Quart Stand Mixer', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
+    image: 'https://www.kitchenaid.com/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-kitchenaid-master-catalog/default/dw6f3f7b3e/images/large/KSM50PKVXBK_1.jpg', imageAlt: 'KitchenAid Artisan Plus 5-Quart Stand Mixer',
+    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with precision speed control, bowl light, and a broad attachment ecosystem.', watch: 'Optional attachments increase the total investment.', url: 'https://www.kitchenaid.com/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.kitchenaid-artisan-plus-5-quart-stand-mixer.KSM50PKVXBK.html'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
