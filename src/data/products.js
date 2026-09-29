@@ -626,7 +626,7 @@ const productsCatalog = [
 
   {
     slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: '$35.99', icon: '★',
-    image: 'https://www.retailmarket.net/wp-content/uploads/2024/02/bravokids-lcd-writing-tablet-board-12inch-colorful-doodle-board-drawing-pad-toys-for-3-8-years-girls-boys-toddler-educational-learning-birthday-gift-for-age-3-4-5-6-7-8-years-old-kids-blue.jpg', imageAlt: 'Bravokids LCD Writing Tablet',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B083BG4MXC&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Bravokids LCD Writing Tablet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Bravokids+LCD+Writing+Tablet&tag=buybetterfi06-20'
   },
@@ -654,7 +654,7 @@ const productsCatalog = [
 
   {
     slug: 'hot-wheels-colossal-crash-track', name: 'Hot Wheels Colossal Crash Track Set', category: 'Toys & Games', price: 'Check price', icon: '★',
-    image: 'https://m.media-amazon.com/images/I/71s9pYj7QyL._AC_SL1500_.jpg', imageAlt: 'Hot Wheels Colossal Crash Track Set',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07NQFW239&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Hot Wheels Colossal Crash Track Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Hot+Wheels+Colossal+Crash+Track+Set&tag=buybetterfi06-20'
   },
