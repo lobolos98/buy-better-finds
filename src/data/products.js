@@ -300,6 +300,17 @@ const productsCatalog = [
     image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2-Side-Black.webp?crop=center&height=640&v=1749094390&width=640', imageAlt: 'Ooni Koda 2 gas-powered pizza oven',
     bestFor: 'Portable gas pizza cooking', why: '14-inch gas-powered oven designed to balance portability with a larger cooking surface.', watch: 'Gas-only cooking offers less fuel flexibility than Ooni multi-fuel models.', url: 'https://ooni.com/products/ooni-koda-2'
   },
+
+  {
+    slug: 'brightech-ambience-pro-solar', name: 'Brightech Ambience Pro Solar String Lights', category: 'Outdoor', price: '$49.00', icon: '☼',
+    image: 'https://brightech.com/cdn/shop/files/Copy_of_Copy_of_20221121_DBaum_Brightech_15205_onestick.jpg?v=1737075514&width=1445', imageAlt: 'Brightech Ambience Pro Solar outdoor string lights',
+    bestFor: 'Solar-powered patio and pergola ambiance', why: 'Weather-resistant Edison-style solar string lights with automatic dusk activation and a warm 2700K glow.', watch: 'Solar performance depends on placing the panel where it receives adequate direct sunlight.', url: 'https://brightech.com/products/ambience-solar-1w'
+  },
+  {
+    slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: '$59.49', icon: '◇',
+    image: 'https://assets.keter.com/transform/49e78023-b692-4d97-8837-d0da532ba335/DENALI-30_300x300-px_72-dpi_20?io=transform%3Ascale%2Cwidth%3A528&quality=80', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
+    bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/cortina-30-gallon-deck-box-graphite-255844.html'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
