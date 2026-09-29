@@ -8,7 +8,7 @@ const score = product.score ?? '—';
 ---
 <article class="card product-card">
   <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" />}
+    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />}
     <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
     <span class="pick-badge">BUY BETTER FIND</span>
   </a>
@@ -39,7 +39,7 @@ const score = product.score ?? '—';
 .image-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}
 .image-fallback span{font-size:64px;line-height:1}
 .image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
-.product-image img + .image-fallback{display:none}
+.product-image img + .image-fallback{display:none}.product-image img[style*="display: none"] + .image-fallback{display:flex}
 .product-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .score-mini{display:flex;align-items:baseline;gap:2px;padding:5px 8px;border-radius:8px;background:#f1f5f9}
 .score-mini strong{font-size:15px;color:#111827}
