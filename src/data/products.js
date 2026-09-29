@@ -419,7 +419,7 @@ const productsCatalog = [
     slug: 'funko-harry-potter-bitty-bundle-gift',
     name: 'Funko Bitty Pop! Harry Potter 6-Pack',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/funko-harry-potter-bitty-bundle.svg', imageAlt: 'Funko Bitty Pop Harry Potter collectible bundle',
+    image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dwd907dbdf/images/funko/upload/1/91760_BittyPop_Set_TNBC_Glam-1-WEB.png', imageAlt: 'Funko Bitty Pop Harry Potter collectible bundle',
     bestFor: 'Harry Potter fans and small-space collectors', why: 'Tiny collectible figures with a compact display footprint and strong fandom appeal.',
     watch: 'Mystery and bundle contents can vary by release.', url: 'https://funko.com/bitty-pop-harry-potter-6-pack/91760.html'
   },
@@ -427,7 +427,7 @@ const productsCatalog = [
     slug: 'disney-stitch-plush-gift',
     name: 'Disney Stitch Plush',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/disney-stitch-plush.svg', imageAlt: 'Disney Stitch plush gift',
+    image: 'https://target.scene7.com/is/image/Target/GUEST_91d64fca-7b86-4f5f-9f2b-fb4cec45cbae?fmt=pjpeg&hei=800&wid=800', imageAlt: 'Disney Stitch plush gift',
     bestFor: 'Disney fans and character gifts', why: 'A recognizable character gift for birthdays, holidays, and casual fandom gifting.',
     watch: 'Size and edition vary by listing.', url: 'https://www.amazon.com/s?k=Disney+Stitch+plush&tag=buybetterfi06-20'
   },
@@ -459,7 +459,7 @@ const productsCatalog = [
     slug: 'lego-city-lava-rollercoaster-gift',
     name: 'LEGO City Lava Land Roller Coaster Park',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '✦',
-    image: '/images/products/lego-city-lava-rollercoaster.svg', imageAlt: 'LEGO City Lava Land Roller Coaster Park',
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park',
     bestFor: 'LEGO fans and build-focused gifts', why: 'A larger creative set that works as both a building experience and display piece.',
     watch: 'Requires more build and storage space than small sets.', url: 'https://www.lego.com/'
   },
@@ -467,7 +467,7 @@ const productsCatalog = [
     slug: 'jbl-charge-5-gift',
     name: 'JBL Charge 5 Portable Bluetooth Speaker',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
-    image: '/images/products/jbl-charge-5-drawing.svg', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
+    image: 'https://m.media-amazon.com/images/I/61qMO3TS2RL._AC_UF1000%2C1000_QL80_.jpg', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
     bestFor: 'Music lovers and practical tech gifts', why: 'A portable speaker is an easy gift for travel, rooms, gatherings, and everyday listening.',
     watch: 'Sound preferences and speaker size are personal.', url: 'https://www.amazon.com/s?k=JBL+Charge+5&tag=buybetterfi06-20'
   },
@@ -475,7 +475,7 @@ const productsCatalog = [
     slug: 'anker-nano-power-bank-gift',
     name: 'Anker Nano Power Bank',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '▣',
-    image: '/images/products/anker-nano-power-bank.svg', imageAlt: 'Anker Nano Power Bank',
+    image: 'https://m.media-amazon.com/images/I/614OfiBkyZL.jpg', imageAlt: 'Anker Nano Power Bank',
     bestFor: 'Travelers and practical tech gifts', why: 'Compact backup charging makes a useful gift for commuters and travelers.',
     watch: 'Check connector, capacity, and output for the recipient’s devices.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah'
   },
@@ -483,7 +483,7 @@ const productsCatalog = [
     slug: 'apple-airpods-4-gift',
     name: 'Apple AirPods 4',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
-    image: '/images/products/apple-airpods-4.svg', imageAlt: 'Apple AirPods 4',
+    image: 'https://m.media-amazon.com/images/I/61iBtxCUabL._AC_SL1500_.jpg', imageAlt: 'Apple AirPods 4',
     bestFor: 'Apple users and everyday tech gifts', why: 'A compact, recognizable tech gift for compatible Apple-device users.',
     watch: 'Confirm device compatibility and the exact AirPods version.', url: 'https://www.apple.com/airpods-4/'
   },
@@ -491,7 +491,7 @@ const productsCatalog = [
     slug: 'apple-airtag-2-gift',
     name: 'Apple AirTag (2nd generation)',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
-    image: '/images/products/apple-airtag-2.svg', imageAlt: 'Apple AirTag 2nd generation',
+    image: 'https://www.apple.com/v/airtag/g/images/overview/hero_airtag__7jmq2is50n6y_large.jpg', imageAlt: 'Apple AirTag 2nd generation',
     bestFor: 'Travelers and organization-minded gift recipients', why: 'A small practical gift for keeping track of everyday belongings.',
     watch: 'Best suited to people already using compatible Apple devices.', url: 'https://www.apple.com/airtag/'
   },
@@ -499,7 +499,7 @@ const productsCatalog = [
     slug: 'crunchlabs-crunchinator-gift',
     name: 'CrunchLabs The Crunchinator',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '⚙',
-    image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
+    image: 'https://www.crunchlabs.com/cdn/shop/files/11601_CRUNCHLABS_CRUNCHNATOR_SINGLE_PK_F.png?v=1781203491&width=800', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
     bestFor: 'Makers, STEM fans, and hands-on gift recipients', why: 'A build-and-experiment gift designed around mechanical curiosity and problem solving.',
     watch: 'Best for recipients who enjoy building and tinkering.', url: 'https://www.crunchlabs.com/'
   },
@@ -531,7 +531,7 @@ const productsCatalog = [
     slug: 'kindle-paperwhite-gift',
     name: 'Amazon Kindle Paperwhite',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '▣',
-    image: '/images/products/kindle-paperwhite-drawing.svg', imageAlt: 'Amazon Kindle Paperwhite',
+    image: 'https://m.media-amazon.com/images/I/81swm2WdawL._AC_SY450_.jpg', imageAlt: 'Amazon Kindle Paperwhite',
     bestFor: 'Readers and travel-friendly tech gifts', why: 'A compact reading device that makes a practical gift for frequent readers.',
     watch: 'Storage and connectivity versions vary.', url: 'https://www.amazon.com/s?k=Kindle+Paperwhite&tag=buybetterfi06-20'
   },
@@ -539,7 +539,7 @@ const productsCatalog = [
     slug: 'yeti-rambler-gift',
     name: 'YETI Rambler Drinkware',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◈',
-    image: '/images/products/yeti-rambler.svg', imageAlt: 'YETI Rambler drinkware',
+    image: 'https://yeti-webmedia.imgix.net/asset/24ca058e-8167-416b-8879-074be44fd4be/W/YETI_Rambler_Tumbler_20oz_Riverhead_Red_Front_302_B.png?auto=format%2Ccompress&bg=0fff&h=846&w=846', imageAlt: 'YETI Rambler drinkware',
     bestFor: 'Everyday-use and practical lifestyle gifts', why: 'Durable drinkware is a useful gift for commuters, travelers, and outdoor enthusiasts.',
     watch: 'Size and lid configuration vary by model.', url: 'https://www.yeti.com/drinkware'
   },
@@ -547,7 +547,7 @@ const productsCatalog = [
     slug: 'stanley-quencher-gift',
     name: 'Stanley Quencher H2.0 Tumbler',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◒',
-    image: '/images/products/stanley-quencher.svg', imageAlt: 'Stanley Quencher H2.0 tumbler',
+    image: 'https://m.media-amazon.com/images/I/51p5WJ6x-3L._AC_SL1500_.jpg', imageAlt: 'Stanley Quencher H2.0 tumbler',
     bestFor: 'Hydration and lifestyle gifts', why: 'A recognizable everyday tumbler with broad gifting appeal.',
     watch: 'Large sizes may not fit every cup holder or bag.', url: 'https://www.stanley1913.com/products/adventure-quencher-travel-tumbler'
   },
