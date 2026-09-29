@@ -23,23 +23,25 @@ import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
           const recommendation = getRecommendation(product);
           const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name);
           const productImage = product.amazonImage || product.image;
-          return <article class="card product-card">
-            <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-              <img src={productImage} alt={product.imageAlt} loading="lazy" width="800" height="600" />
-              <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
-              <span class="pick-badge">BUY BETTER FIND</span>
-            </a>
-            <div class="product-meta"><div class="tag">{product.category}</div><div class="score-mini"><strong>{recommendation.score}</strong><span>/10</span></div></div>
-            <h3>{product.name}</h3>
-            <p class="best-for"><strong>Best for:</strong> {recommendation.bestFor}</p>
-            <p>{product.why}</p>
-            <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
-            <p class="price"><strong>{product.price}</strong></p>
-            <div class="product-actions">
-              <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
-              <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
-            </div>
-          </article>;
+          return (
+            <article class="card product-card">
+              <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+                <img src={productImage} alt={product.imageAlt} loading="lazy" width="800" height="600" />
+                <span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span>
+                <span class="pick-badge">BUY BETTER FIND</span>
+              </a>
+              <div class="product-meta"><div class="tag">{product.category}</div><div class="score-mini"><strong>{recommendation.score}</strong><span>/10</span></div></div>
+              <h3>{product.name}</h3>
+              <p class="best-for"><strong>Best for:</strong> {recommendation.bestFor}</p>
+              <p>{product.why}</p>
+              <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
+              <p class="price"><strong>{product.price}</strong></p>
+              <div class="product-actions">
+                <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
+                <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+              </div>
+            </article>
+          );
         })}
       </div>
     </div>
