@@ -1,6 +1,30 @@
 // Verified manufacturer-hosted product imagery.
 // Prefer Amazon Creators imagery when available; these entries are the manufacturer fallback.
 export const manufacturerImageOverrides = {
+  'bowflex-selecttech-552': {
+    image: 'https://www.bowflex.com/cdn/shop/files/bowflex-selecttech-results-series-552-dumbbell-weights-hero.png?v=1781824832&width=1080',
+    source: 'BowFlex'
+  },
+  'ally-peaks-pullup-bar': {
+    image: 'https://allypeaks.org/wp-content/uploads/2025/11/main3.jpg',
+    source: 'Ally Peaks'
+  },
+  'prosourcefit-yoga-mat': {
+    image: 'https://www.prosourcefit.com/cdn/shop/files/Extra-Thick-Yoga-Mat-Black-1inch-01-Shopify.jpg?v=1741368273&width=900',
+    source: 'ProsourceFit'
+  },
+  'theragun-mini': {
+    image: 'https://www.therabody.com/cdn/shop/files/Mini-Gen-3-Oat-PLP-Thumbnail-1.png?v=1741752123&width=1445',
+    source: 'Therabody'
+  },
+  'renpho-smart-tape': {
+    image: 'https://renpho.com/cdn/shop/files/Y002_Smart_Tape_Measure__1.png?v=1767695227&width=3840',
+    source: 'RENPHO'
+  },
+  'apple-watch-series-10': {
+    image: 'https://www.istoreil.co.il/media/catalog/product/a/p/apple_watch_series_10_46mm_lte_jet_black_aluminum_sport_band_black_pdp_image_position_1__wwen_2.jpg',
+    source: 'iStore'
+  },
   'anker-737-power-bank': {
     image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/products/A1289011-Anker_737_Power_Bank_PowerCore_24K_1.png?v=1775967275&width=3840',
     source: 'Anker'
