@@ -183,6 +183,33 @@ const productsCatalog = [
     image: 'https://images-na.ssl-images-amazon.com/images/P/B0DL72PK1P.01.LZZZZZZZ.jpg', imageAlt: 'Apple Magic Mouse USB-C',
     bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.apple.com/shop/buy-mac/mouse/white-multi-touch-surface'
   },
+
+
+  {
+    slug: 'kitchenaid-artisan-stand-mixer', name: 'KitchenAid Artisan Series 5-Quart Stand Mixer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://kitchenaidus.vtexassets.com/arquivos/ids/159154/hero-KSM150PSBK.jpg?v=639198847141800000', imageAlt: 'KitchenAid Artisan Series stand mixer',
+    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', url: 'https://www.kitchenaid.com/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.artisan-series-5-quart-tilt-head-stand-mixer.ksm150ps.html'
+  },
+  {
+    slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/1101880_1.jpg', imageAlt: 'OXO Good Grips 9-Inch Tongs with Silicone Heads',
+    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', url: 'https://www.oxo.com/9-tongs-with-silicone-heads-623.html'
+  },
+  {
+    slug: 'oxo-salad-spinner', name: 'OXO Good Grips Salad Spinner', category: 'Home & Kitchen', price: '$32.99', icon: '◇',
+    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/32480_1.jpg', imageAlt: 'OXO Good Grips Salad Spinner',
+    bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', url: 'https://www.oxo.com/salad-spinner.html'
+  },
+  {
+    slug: 'oxo-garlic-press', name: 'OXO Good Grips Garlic Press', category: 'Home & Kitchen', price: '$28.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/11122600_1.jpg', imageAlt: 'OXO Good Grips Garlic Press',
+    bestFor: 'Fast garlic prep', why: 'Handheld garlic press designed for quick mincing without requiring a separate knife and board.', watch: 'A garlic press is specialized, so it adds value mainly if you cook with fresh garlic often.', url: 'https://www.oxo.com/garlic-press.html'
+  },
+  {
+    slug: 'oxo-swivel-peeler', name: 'OXO Good Grips Swivel Peeler', category: 'Home & Kitchen', price: '$13.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/1057961_1.jpg', imageAlt: 'OXO Good Grips Swivel Peeler',
+    bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.oxo.com/swivel-peeler.html'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
