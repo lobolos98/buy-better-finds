@@ -560,6 +560,146 @@ const productsCatalog = [
     watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch&tag=buybetterfi06-20'
   }
 
+
+  {
+    slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000CBSNKQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Magna-Tiles+Clear+Colors+32-Piece+Set&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'taco-cat-goat-cheese-pizza', name: 'Taco Cat Goat Cheese Pizza Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B077Z1R28P&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Taco+Cat+Goat+Cheese+Pizza+Card+Game&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'bitzee-interactive-digital-pet', name: 'Bitzee Interactive Digital Pet', category: 'Toys & Games', price: 'Check price', icon: '★',
+    image: 'https://ecsmedia.pl/c/bitzee-interaktywne-zwierzatko-cyfrowe-wirtualny-zwierzak-hologram-spin-master-b-iext191183535.jpg', imageAlt: 'Bitzee Interactive Digital Pet',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Bitzee+Interactive+Digital+Pet&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'tonies-toniebox-starter-set', name: 'Tonies Toniebox Starter Set', category: 'Toys & Games', price: '$69.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BN5G4G31&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Tonies Toniebox Starter Set',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Tonies+Toniebox+Starter+Set&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00EC6NOFQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Crayola Light Up Tracing Pad',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Crayola+Light+Up+Tracing+Pad&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'lego-harry-potter-hogwarts-castle-71043', name: 'LEGO Harry Potter Hogwarts Castle (71043)', category: 'Toys & Games', price: '$469.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07GG3Y7N6&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LEGO Harry Potter Hogwarts Castle 71043',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LEGO+Harry+Potter+Hogwarts+Castle+(71043)&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'melissa-doug-top-bake-pizza-counter', name: 'Melissa & Doug Top & Bake Wooden Pizza Counter', category: 'Toys & Games', price: '$59.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B075KX9NS7&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Melissa & Doug Top & Bake Wooden Pizza Counter',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Melissa+%26+Doug+Top+%26+Bake+Wooden+Pizza+Counter&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'snap-circuits-jr-sc100', name: 'Snap Circuits Jr. SC-100', category: 'Toys & Games', price: '$14.11', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00008BFZH&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Snap Circuits Jr. SC-100',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Snap+Circuits+Jr.+SC-100&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'stomp-rocket-dueling-rockets', name: 'Stomp Rocket Dueling Rockets', category: 'Toys & Games', price: '$34.99', icon: '★',
+    image: 'https://i5.samsclubimages.com/asr/2171a5ad-c4c6-45aa-87b3-4f1a3e1e1620.2b4227fdfe8075866d0adb45d104bae7.jpeg', imageAlt: 'Stomp Rocket Dueling Rockets',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Stomp+Rocket+Dueling+Rockets&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: '$35.99', icon: '★',
+    image: 'https://www.retailmarket.net/wp-content/uploads/2024/02/bravokids-lcd-writing-tablet-board-12inch-colorful-doodle-board-drawing-pad-toys-for-3-8-years-girls-boys-toddler-educational-learning-birthday-gift-for-age-3-4-5-6-7-8-years-old-kids-blue.jpg', imageAlt: 'Bravokids LCD Writing Tablet',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Bravokids+LCD+Writing+Tablet&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'fisher-price-rock-a-stack', name: 'Fisher-Price Rock-a-Stack', category: 'Toys & Games', price: '$8.63', icon: '★',
+    image: 'https://cdn.shopify.com/s/files/1/1857/6931/products/UyJaJVohb6.jpg?v=1675763441', imageAlt: 'Fisher-Price Rock-a-Stack',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Fisher-Price+Rock-a-Stack&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'crayola-globbles-6-count', name: 'Crayola Globbles (6-Count)', category: 'Toys & Games', price: '$8.95', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07HDX46HS&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Crayola Globbles 6-Count',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Crayola+Globbles+(6-Count)&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'pokemon-day-2026-collection', name: 'Pokémon Day 2026 Collection', category: 'Toys & Games', price: 'Check price', icon: '★',
+    image: 'https://m.media-amazon.com/images/I/91YHLxggDmL._AC_SL1500_.jpg', imageAlt: 'Pokémon Day 2026 Collection',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Pok%C3%A9mon+Day+2026+Collection&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'hot-wheels-colossal-crash-track', name: 'Hot Wheels Colossal Crash Track Set', category: 'Toys & Games', price: 'Check price', icon: '★',
+    image: 'https://m.media-amazon.com/images/I/71s9pYj7QyL._AC_SL1500_.jpg', imageAlt: 'Hot Wheels Colossal Crash Track Set',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Hot+Wheels+Colossal+Crash+Track+Set&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: '$39.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07PQFT83F&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Disney+Store+Buzz+Lightyear+Interactive+Talking+Action+Figure&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'exploding-kittens-card-game', name: 'Exploding Kittens Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B010TQY7A8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Exploding Kittens Card Game',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Exploding+Kittens+Card+Game&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'vtech-pull-and-sing-puppy', name: 'VTech Pull and Sing Puppy', category: 'Toys & Games', price: '$11.95', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01MQ3YP7Y&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'VTech Pull and Sing Puppy',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=VTech+Pull+and+Sing+Puppy&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: '$3.59', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00000IZKX&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'The Original Slinky',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=The+Original+Slinky&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'lego-bonsai-tree-10281', name: 'LEGO Bonsai Tree Building Kit', category: 'Toys & Games', price: '$17.04', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08HVXZW8X&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LEGO Bonsai Tree 10281',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LEGO+Bonsai+Tree+Building+Kit&tag=buybetterfi06-20'
+  },
+
+  {
+    slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07B6ZN7P8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
+    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LeapFrog+Learning+Friends+100+Words+Book&tag=buybetterfi06-20'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
