@@ -238,6 +238,42 @@ const productsCatalog = [
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/aemdwwt79qizvty5h9pf', imageAlt: 'Solo Stove Infinity Flame Propane Fire Pit',
     bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', url: 'https://www.solostove.com/us/en-us/p/infinity-flame-fire-pit?sku=FPSURROUND-GAS'
   },
+
+  {
+    slug: 'oxo-nylon-slotted-spoon', name: 'OXO Good Grips Nylon Slotted Spoon', category: 'Home & Kitchen', price: '$9.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/u/n/unnamed_337.jpeg', imageAlt: 'OXO Good Grips Nylon Slotted Spoon',
+    bestFor: 'Straining vegetables and serving pasta', why: 'High-heat-resistant nylon utensil with a soft non-slip grip for everyday cooking.', watch: 'A slotted spoon is a specialized utensil rather than an all-purpose turner.', url: 'https://www.oxo.com/nylon-slotted-spoon.html'
+  },
+  {
+    slug: 'oxo-4-inch-pizza-wheel', name: 'OXO Good Grips 4-Inch Pizza Wheel', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11301000_2.jpg', imageAlt: 'OXO Good Grips 4-Inch Pizza Wheel',
+    bestFor: 'Cutting thick-crust pizza', why: 'Large stainless-steel blade with a thumb guard and soft non-slip handle.', watch: 'Its larger wheel needs a little more drawer space.', url: 'https://www.oxo.com/oxo-gg-large-pizza-wheel.html'
+  },
+  {
+    slug: 'oxo-avocado-slicer', name: 'OXO 3-in-1 Avocado Slicer', category: 'Home & Kitchen', price: '$11.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/p/a/papnztclj3ntvkhwbem5.jpg', imageAlt: 'OXO 3-in-1 Avocado Slicer',
+    bestFor: 'Quick avocado preparation', why: 'Three-in-one tool for halving, pitting, slicing, and serving ripe avocados.', watch: 'Its value depends on how often you prepare avocados.', url: 'https://www.oxo.com/3-in-1-avocado-slicer-901.html'
+  },
+  {
+    slug: 'oxo-simple-mandoline-slicer', name: 'OXO Good Grips Simple Mandoline Slicer', category: 'Home & Kitchen', price: '$59.99', icon: '◇',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/2/1273180.jpg', imageAlt: 'OXO Good Grips Simple Mandoline Slicer',
+    bestFor: 'Consistent vegetable slicing', why: 'Adjustable slicing and julienne settings with an integrated finger guard.', watch: 'Mandolines require careful handling and dedicated storage.', url: 'https://www.oxo.com/simple-mandoline-slicer-377.html'
+  },
+  {
+    slug: 'oxo-one-stop-chop', name: 'OXO One Stop Chop Manual Food Processor', category: 'Home & Kitchen', price: '$49.99', icon: '◇',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11238000_1.jpg', imageAlt: 'OXO One Stop Chop Manual Food Processor',
+    bestFor: 'Manual chopping, mincing, and pureeing', why: 'Hand-operated food processor for chopping fruits, vegetables, nuts, pesto, salsa, and more.', watch: 'Manual processing is slower than an electric processor for large batches.', url: 'https://www.oxo.com/one-stop-chop-manual-food-processor.html'
+  },
+  {
+    slug: 'oxo-etched-medium-grater', name: 'OXO Good Grips Etched Medium Grater', category: 'Home & Kitchen', price: '$14.99', icon: '⌁',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11215900_2.jpg', imageAlt: 'OXO Good Grips Etched Medium Grater',
+    bestFor: 'Cheese, vegetables, and fresh ingredient prep', why: 'Extra-sharp etched stainless-steel grating surface with a soft handle and stabilizing foot.', watch: 'A box grater offers more grating surfaces if you need broader functionality.', url: 'https://www.oxo.com/etched-medium-grater.html'
+  },
+  {
+    slug: 'oxo-everyday-cutting-board', name: 'OXO Good Grips Everyday Cutting Board', category: 'Home & Kitchen', price: '$17.99', icon: '◇',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_20081-11272700_9c_1__1.jpg', imageAlt: 'OXO Good Grips Everyday Cutting Board',
+    bestFor: 'Everyday chopping and food prep', why: 'Double-sided non-porous cutting board with non-slip feet and a drip catcher.', watch: 'Choose a larger board if you regularly prep large meals.', url: 'https://www.oxo.com/everyday-cutting-board.html'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
