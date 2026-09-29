@@ -16,7 +16,7 @@ const categoryData = [
   { name: 'Seasonal & Holidays', slug: 'seasonal-holidays', image: '/images/products/lego-city-lava-rollercoaster.svg', alt: 'Seasonal and holiday shopping ideas', description: 'Seasonal deals, holiday gifts, major shopping events, and timely finds worth watching right now.', guide: null, seasonal: true }
 ];
 
-const categories = categoryData.map((category) => ({ ...category, count: products.filter((product) => product.category === category.name).length }));
+const categories = categoryData.map((category) => ({\n  ...category,\n  image: products.find((product) => product.category === category.name && typeof product.image === 'string' && product.image.startsWith('http'))?.image || category.image,\n  alt: products.find((product) => product.category === category.name && typeof product.image === 'string' && product.image.startsWith('http'))?.imageAlt || category.alt,\n  count: products.filter((product) => product.category === category.name).length\n}));
 ---
 <BaseLayout title="Categories | Buy Better Finds" description="Browse Buy Better Finds product categories with visual previews, recommendations, buying guidance, strengths, and tradeoffs.">
   <section class="section categories-page">
