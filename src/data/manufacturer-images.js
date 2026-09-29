@@ -88,7 +88,7 @@ export const manufacturerImageOverrides = {
   'funko-pop-marvel': {
     image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw5cd6b83e/images/funko/upload/82500_Marvel_NC_SpiderMan_POP_GLAM-WEB.png',
     source: 'Funko'
-  },,
+  },
   'amazon-echo-dot': {
     image: 'https://m.media-amazon.com/images/I/315PBUzfZiL._SL1500_.jpg',
     source: 'Amazon'
