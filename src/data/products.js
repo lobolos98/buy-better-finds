@@ -337,6 +337,22 @@ const productsCatalog = [
     image: 'https://assets.keter.com/transform/3c1e3e3d-3b7a-4f9d-8f7d-7c9a9d3e6e9f/SIGNATURE_92_Gal_Deck_Box_Oak_Brown_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
     bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-92-gallon-deck-box-oak-brown-263819.html'
   },
+
+  {
+    slug: 'sunco-square-solar-path-lights', name: 'Sunco Square Solar Pathway Lights 4-Pack', category: 'Outdoor', price: '$29.99', icon: '☼',
+    image: 'https://sunco.com/cdn/shop/files/GD_MD_SR-BK-2740K-4PK_1.jpg', imageAlt: 'Sunco Square Solar Pathway Lights 4-Pack',
+    bestFor: 'Pathways, gardens, and patio borders', why: 'Solar-powered square path lights with dusk-to-dawn operation and selectable 2700K–4000K color temperature.', watch: 'Solar charging performance depends on direct sunlight reaching each light.', url: 'https://sunco.com/products/square-solar-pathway-lights-outdoor-super-bright'
+  },
+  {
+    slug: 'alpine-solar-pathway-stakes-4', name: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack', category: 'Outdoor', price: '$69.84', icon: '☼',
+    image: 'https://images.thdstatic.com/productImages/5d6e2c42-5baf-4a1f-93f2-4f4eec9e3a38/svn/alpine-corporation-landscape-lighting-sla342slr-4-64_1000.jpg', imageAlt: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack',
+    bestFor: 'Walkways, driveways, and garden borders', why: 'Solar-powered LED pathway stakes with warm white light and tool-free installation.', watch: 'Their 15-inch height is best for accent and pathway lighting rather than broad-area illumination.', url: 'https://www.homedepot.com/p/315866417'
+  },
+  {
+    slug: 'dazuma-solar-path-lighting', name: 'Dazuma Outdoor Solar Path Lighting', category: 'Outdoor', price: '$104.99', icon: '☼',
+    image: 'https://dazuma.us/cdn/shop/files/HA142410-01B_1.jpg', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
+    bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://dazuma.us/products/outdoor-solar-path-lighting-waterproof-ground-light'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
