@@ -45,7 +45,7 @@ export function getStaticPaths() {
 }
 
 const { guide } = Astro.props;
-const selected = guide.products.map((name) => catalog.find((product) => product.name === name)).filter(Boolean);
+const selected = guide.products.map((name) => catalog.find((product) => product?.name === name)).filter(Boolean);
 const reviewed = 'September 2026';
 ---
 <BaseLayout title={`${guide.title} | Buy Better Finds`} description={guide.intro}>
