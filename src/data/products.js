@@ -413,6 +413,152 @@ const productsCatalog = [
   {
     slug: 'ring-spotlight-cam-pro', amazonAsin: 'B0B83HZVCF', name: 'Ring Spotlight Cam Pro', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://m.media-amazon.com/images/I/6117ytsLByL._SL1500_.jpg', imageAlt: 'Ring Spotlight Cam Pro', bestFor: 'Outdoor security and motion monitoring', why: 'A weather-resistant Ring security camera with 2K video, HDR, 3D Motion Detection, and a built-in spotlight and siren.', watch: 'Some features and video storage require a Ring subscription.', url: 'https://ring.com/products/spotlight-cam-pro'
   }
+,
+
+  {
+    slug: 'funko-harry-potter-bitty-bundle-gift',
+    name: 'Funko Bitty Pop! Harry Potter 6-Pack',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/funko-harry-potter-bitty-bundle.svg', imageAlt: 'Funko Bitty Pop Harry Potter collectible bundle',
+    bestFor: 'Harry Potter fans and small-space collectors', why: 'Tiny collectible figures with a compact display footprint and strong fandom appeal.',
+    watch: 'Mystery and bundle contents can vary by release.', url: 'https://funko.com/bitty-pop-harry-potter-6-pack/91760.html'
+  },
+  {
+    slug: 'disney-stitch-plush-gift',
+    name: 'Disney Stitch Plush',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/disney-stitch-plush.svg', imageAlt: 'Disney Stitch plush gift',
+    bestFor: 'Disney fans and character gifts', why: 'A recognizable character gift for birthdays, holidays, and casual fandom gifting.',
+    watch: 'Size and edition vary by listing.', url: 'https://www.amazon.com/s?k=Disney+Stitch+plush&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'disney-lorcana-hunny-rescue-gift',
+    name: 'Disney Lorcana Hunny Rescue',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/disney-lorcana-hunny-rescue.svg', imageAlt: 'Disney Lorcana Hunny Rescue collectible',
+    bestFor: 'Disney collectors and Lorcana players', why: 'Combines Disney fandom with collectible card-game appeal.',
+    watch: 'Availability and pricing can change quickly for collectible products.', url: 'https://www.amazon.com/s?k=Disney+Lorcana+Hunny+Rescue&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'pokemon-30th-elite-trainer-box-gift',
+    name: 'Pokémon 30th Anniversary Elite Trainer Box',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/pokemon-30th-elite-trainer-box.svg', imageAlt: 'Pokémon 30th Anniversary Elite Trainer Box',
+    bestFor: 'Pokémon fans and trading-card collectors', why: 'Collector-focused presentation with strong anniversary and fandom appeal.',
+    watch: 'Collector products can fluctuate in price and availability.', url: 'https://www.amazon.com/s?k=Pokemon+30th+Anniversary+Elite+Trainer+Box&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'lego-botanicals-mushrooms-gift',
+    name: 'LEGO Botanicals Mushrooms',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '✦',
+    image: '/images/products/lego-botanicals-mushrooms.svg', imageAlt: 'LEGO Botanicals Mushrooms display set',
+    bestFor: 'Adult LEGO fans and creative décor gifts', why: 'A build-and-display gift that bridges collecting, creativity, and home décor.',
+    watch: 'Display appeal matters more than traditional play.', url: 'https://www.lego.com/en-us/themes/botanicals'
+  },
+  {
+    slug: 'lego-city-lava-rollercoaster-gift',
+    name: 'LEGO City Lava Land Roller Coaster Park',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '✦',
+    image: '/images/products/lego-city-lava-rollercoaster.svg', imageAlt: 'LEGO City Lava Land Roller Coaster Park',
+    bestFor: 'LEGO fans and build-focused gifts', why: 'A larger creative set that works as both a building experience and display piece.',
+    watch: 'Requires more build and storage space than small sets.', url: 'https://www.lego.com/'
+  },
+  {
+    slug: 'jbl-charge-5-gift',
+    name: 'JBL Charge 5 Portable Bluetooth Speaker',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
+    image: '/images/products/jbl-charge-5-drawing.svg', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
+    bestFor: 'Music lovers and practical tech gifts', why: 'A portable speaker is an easy gift for travel, rooms, gatherings, and everyday listening.',
+    watch: 'Sound preferences and speaker size are personal.', url: 'https://www.amazon.com/s?k=JBL+Charge+5&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'anker-nano-power-bank-gift',
+    name: 'Anker Nano Power Bank',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '▣',
+    image: '/images/products/anker-nano-power-bank.svg', imageAlt: 'Anker Nano Power Bank',
+    bestFor: 'Travelers and practical tech gifts', why: 'Compact backup charging makes a useful gift for commuters and travelers.',
+    watch: 'Check connector, capacity, and output for the recipient’s devices.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah'
+  },
+  {
+    slug: 'apple-airpods-4-gift',
+    name: 'Apple AirPods 4',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
+    image: '/images/products/apple-airpods-4.svg', imageAlt: 'Apple AirPods 4',
+    bestFor: 'Apple users and everyday tech gifts', why: 'A compact, recognizable tech gift for compatible Apple-device users.',
+    watch: 'Confirm device compatibility and the exact AirPods version.', url: 'https://www.apple.com/airpods-4/'
+  },
+  {
+    slug: 'apple-airtag-2-gift',
+    name: 'Apple AirTag (2nd generation)',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
+    image: '/images/products/apple-airtag-2.svg', imageAlt: 'Apple AirTag 2nd generation',
+    bestFor: 'Travelers and organization-minded gift recipients', why: 'A small practical gift for keeping track of everyday belongings.',
+    watch: 'Best suited to people already using compatible Apple devices.', url: 'https://www.apple.com/airtag/'
+  },
+  {
+    slug: 'crunchlabs-crunchinator-gift',
+    name: 'CrunchLabs The Crunchinator',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '⚙',
+    image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
+    bestFor: 'Makers, STEM fans, and hands-on gift recipients', why: 'A build-and-experiment gift designed around mechanical curiosity and problem solving.',
+    watch: 'Best for recipients who enjoy building and tinkering.', url: 'https://www.crunchlabs.com/'
+  },
+  {
+    slug: 'magna-tiles-undersea-gift',
+    name: 'MAGNA-TILES Undersea Adventure 58-Piece Set',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◇',
+    image: '/images/products/magna-tiles-undersea.svg', imageAlt: 'MAGNA-TILES Undersea Adventure set',
+    bestFor: 'Creative kids and open-ended play gifts', why: 'Magnetic construction pieces provide a reusable building experience.',
+    watch: 'Expansion sets can increase the overall collection cost.', url: 'https://www.magnatiles.com/'
+  },
+  {
+    slug: 'educational-kanoodle-gift',
+    name: 'Educational Kanoodle Puzzle',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◇',
+    image: '/images/products/educational-kanoodle.svg', imageAlt: 'Educational Kanoodle logic puzzle',
+    bestFor: 'Puzzle lovers and screen-free gifts', why: 'Compact logic play that is easy to wrap and convenient for travel.',
+    watch: 'Challenge level varies by puzzle set.', url: 'https://www.amazon.com/s?k=Educational+Insights+Kanoodle&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'uno-championship-series-gift',
+    name: 'UNO Championship Series',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/uno-championship-series.svg', imageAlt: 'UNO Championship Series card game',
+    bestFor: 'Family game nights and casual gifts', why: 'A familiar card-game format that is easy to gift and share with groups.',
+    watch: 'Best suited to recipients who enjoy casual competitive games.', url: 'https://www.amazon.com/s?k=UNO+Championship+Series&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'kindle-paperwhite-gift',
+    name: 'Amazon Kindle Paperwhite',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '▣',
+    image: '/images/products/kindle-paperwhite-drawing.svg', imageAlt: 'Amazon Kindle Paperwhite',
+    bestFor: 'Readers and travel-friendly tech gifts', why: 'A compact reading device that makes a practical gift for frequent readers.',
+    watch: 'Storage and connectivity versions vary.', url: 'https://www.amazon.com/s?k=Kindle+Paperwhite&tag=buybetterfi06-20'
+  },
+  {
+    slug: 'yeti-rambler-gift',
+    name: 'YETI Rambler Drinkware',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◈',
+    image: '/images/products/yeti-rambler.svg', imageAlt: 'YETI Rambler drinkware',
+    bestFor: 'Everyday-use and practical lifestyle gifts', why: 'Durable drinkware is a useful gift for commuters, travelers, and outdoor enthusiasts.',
+    watch: 'Size and lid configuration vary by model.', url: 'https://www.yeti.com/drinkware'
+  },
+  {
+    slug: 'stanley-quencher-gift',
+    name: 'Stanley Quencher H2.0 Tumbler',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '◒',
+    image: '/images/products/stanley-quencher.svg', imageAlt: 'Stanley Quencher H2.0 tumbler',
+    bestFor: 'Hydration and lifestyle gifts', why: 'A recognizable everyday tumbler with broad gifting appeal.',
+    watch: 'Large sizes may not fit every cup holder or bag.', url: 'https://www.stanley1913.com/products/adventure-quencher-travel-tumbler'
+  },
+  {
+    slug: 'disney-stitch-sticker-stamper-gift',
+    name: 'Disney Stitch Sticker WOW! Stamper & Activity Pad',
+    category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
+    image: '/images/products/stitch-sticker-stamper.svg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
+    bestFor: 'Disney fans and screen-free creative gifts', why: 'A portable creative activity combining a recognizable character with sticker play.',
+    watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch&tag=buybetterfi06-20'
+  }
 
 ];
 
