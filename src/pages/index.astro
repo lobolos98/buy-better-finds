@@ -4,7 +4,7 @@ import { products as catalog } from '../data/products.js';
 import { trendingProducts, trendingUpdated } from '../data/trending.js';
 import { amazonProductUrl, amazonSearchUrl } from '../utils/amazon.js';
 import { getDealOfTheDay } from '../utils/priceWatch.js';
-const products = catalog.filter((product) => product?.slug).slice(0, 8);
+const validCatalog = catalog.filter((product) => product?.slug);
 const amazonUrl = (product) => product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || '');
 const categoryPreviews = [
   { name: 'Tech', href: '/categories/tech/', image: '/images/products/sony-wh-1000xm5.svg', alt: 'Tech products including Sony headphones', description: 'Headphones, tablets, accessories & more' },
@@ -21,11 +21,11 @@ const categoryPreviews = [
 const guides = [
   ['Best Tech Products','best-tech','◈'],['Best Home & Kitchen Products','best-home-kitchen','⌂'],['Best Tools & DIY Products','best-tools-diy','⚒'],['Best Outdoor Products','best-outdoor','☼'],['Best Products Under $100','best-products-under-100','★']
 ];
-const featured = catalog[0];
-const deal = getDealOfTheDay(catalog) ?? catalog[0];
-const editorChoices = ['sony-wh-1000xm5','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => catalog.find((p) => p.slug === slug)).filter(Boolean);
-const dealAlternates = [catalog.find((p) => p.slug === 'apple-airpods-4'), catalog.find((p) => p.slug === 'lego-botanicals-mushrooms'), catalog.find((p) => p.slug === 'disney-stitch-plush')].filter(Boolean);
-const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, product: catalog.find((p) => p.slug === trend.slug) })).filter((item) => item.product);
+const featured = validCatalog[0];
+const deal = getDealOfTheDay(validCatalog) ?? validCatalog[0];
+const editorChoices = ['sony-wh-1000xm5','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => validCatalog.find((p) => p?.slug === slug)).filter(Boolean);
+const dealAlternates = [validCatalog.find((p) => p?.slug === 'apple-airpods-4'), validCatalog.find((p) => p?.slug === 'lego-botanicals-mushrooms'), validCatalog.find((p) => p?.slug === 'disney-stitch-plush')].filter(Boolean);
+const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, product: validCatalog.find((p) => p?.slug === trend.slug) })).filter((item) => item.product);
 ---
 <BaseLayout title="Buy Better Finds | Better Products. Smarter Choices." description="Discover real products, compare useful options, and shop with confidence through Buy Better Finds.">
   <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div><h1>Find products worth buying.</h1><p>Better research. Clearer tradeoffs. Smarter choices. We narrow down real products and explain what makes each one worth considering before you spend your money.</p><div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div><div class="hero-note"><span>✓</span> Real products · Original buying guidance · Clear strengths and tradeoffs</div></div><div class="hero-product"><div class="pick-badge">BUY BETTER FINDS PICK</div><div class="hero-visual hero-image-wrap"><img src={featured.image} alt={featured.imageAlt} width="1000" height="750" /><div class="hero-image-fallback" aria-hidden="true"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div></div><div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div><div class="hero-actions"><a class="hero-shop" href={`/products/${featured.slug}/`}>See why we recommend it <span>→</span></a><a class="amazon-btn" href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div></div></div></section>
