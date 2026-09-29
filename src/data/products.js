@@ -24,8 +24,6 @@ const productsCatalog = [
     slug: 'apple-ipad-a16', amazonAsin: 'B0DZJ4N8Y5', name: 'Apple iPad 11-inch (A16)', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://www.apple.com/v/ipad-11/d/images/overview/design/modular_startframe__ecmd9ce9dsom_large.jpg', imageAlt: 'Apple iPad 11-inch with A16 chip', pressKitUrl: 'https://www.apple.com/newsroom/2025/03/apple-introduces-ipad-air-with-powerful-m3-chip-and-new-magic-keyboard/', bestFor: 'Streaming, browsing, school, and everyday productivity', why: '11-inch iPad with an A16 chip, 128GB starting storage, USB-C, and support for Apple Pencil.', watch: 'Accessories such as keyboards and Pencil add to the total cost.', url: 'https://www.apple.com/ipad-11/', dailyDealDate: '2026-09-20'
   },
   {
-  },
-  {
     slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼', image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill', bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with Snap-Jet ignition, precise heat control, and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately and has less cooking area than larger grills.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html', dailyDealDate: '2026-10-02'
   },
   {
@@ -42,8 +40,6 @@ const productsCatalog = [
   },
   {
     slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: '/images/products/govee-smart-light-bulbs.svg', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://us.govee.com/collections/smart-led-bulbs'
-  },
-  {
   },
   {
     slug: 'dyson-v8', amazonAsin: 'B0GT2DG9SK', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇', image: '/images/products/dyson-v8.svg', imageAlt: 'Dyson V8 Cordless Vacuum', bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format makes it convenient for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than on larger corded vacuums.', url: 'https://www.dyson.com/vacuum-cleaners/cordless/v8/shop-all', dailyDealDate: '2026-10-06'
@@ -64,16 +60,6 @@ const productsCatalog = [
     slug: 'shark-navigator-lift-away', name: 'Shark Navigator Lift-Away', category: 'Home & Kitchen', price: 'Check price', icon: '◇', image: 'https://assets.sharkninja.com/image/upload/c_pad,w_800,h_800,f_auto,q_auto,b_rgb:FFFFFF/v1/SharkNinja-NA/NV360_01', imageAlt: 'Shark Navigator Lift-Away vacuum', bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for cleaning stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', url: 'https://www.sharkclean.com/products/navigator-lift-away-vacuum-zidNV360', dailyDealDate: '2026-10-07'
   },
   {
-  },
-  {
-  },
-  {
-  },
-  {
-  },
-  {
-  },
-  {
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰', image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park building set', bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build that combines construction, play value, and an engaging amusement-park theme.', watch: 'Larger LEGO sets cost more and need meaningful storage and build space.', url: 'https://www.lego.com/en-us/themes/city', dailyDealDate: '2026-10-08'
   },
   {
@@ -83,19 +69,7 @@ const productsCatalog = [
     slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙', image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy', bestFor: 'STEM-minded kids and hands-on makers', why: 'A build-and-experiment toy designed around problem solving and mechanical curiosity.', watch: 'Best suited to kids who enjoy building and tinkering rather than passive play.', url: 'https://www.crunchlabs.com/', dailyDealDate: '2026-10-09'
   },
   {
-  },
-  {
-  },
-  {
-  },
-  {
-  },
-  {
     slug: 'elf-halo-glow-liquid-filter', name: 'e.l.f. Halo Glow Liquid Filter', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0661/2251/4520/files/83565_OpenA_V2_R_d02ae91d-8a71-4bba-bfbb-ab663a9b18f0.png?crop=center&height=450&v=1780430096&width=450', imageAlt: 'e.l.f. Halo Glow Liquid Filter makeup product', bestFor: 'Glow-focused makeup routines', why: 'A versatile complexion product aimed at adding a luminous finish and fitting into multiple makeup routines.', watch: 'Shade and finish are highly personal, so check swatches and the current shade range.', url: 'https://www.elfcosmetics.com/halo-glow-liquid-filter/'
-  },
-  {
-  },
-  {
   },
   {
     slug: 'oxo-tub-tile-scrubber', amazonAsin: 'B00L9X4WCE', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Home & Kitchen', price: 'Check price', icon: '⌁', image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
