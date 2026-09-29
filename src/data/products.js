@@ -353,6 +353,38 @@ const productsCatalog = [
     image: 'https://dazuma.us/cdn/shop/files/HA142410-01B_1.jpg', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
     bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://dazuma.us/products/outdoor-solar-path-lighting-waterproof-ground-light'
   },
+
+  {
+    slug: 'amazon-echo-show-8', name: 'Amazon Echo Show 8', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://shop.simon.com/cdn/shop/products/2cc05985ed6146eca1689dd521512726_2772c6bf-cf79-41ec-8ac0-56d5605341f7.jpg?v=1699559274', imageAlt: 'Amazon Echo Show 8 smart display', bestFor: 'Smart-home control, video calls, recipes, and entertainment', why: 'An 8-inch smart display with Alexa, a camera, stereo audio, and smart-home controls.', watch: 'Features and pricing vary by generation.', url: 'https://www.amazon.com/dp/B07L6DJLLV'
+  },
+  {
+    slug: 'amazon-echo-show-5', name: 'Amazon Echo Show 5 (3rd Gen)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/e1fkf1k4_full.jpg?v=1769431765', imageAlt: 'Amazon Echo Show 5 smart display', bestFor: 'Nightstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Verify generation before buying.', url: 'https://www.amazon.com/s?k=Echo+Show+5+3rd+Gen'
+  },
+  {
+    slug: 'ring-pan-tilt-indoor-cam', name: 'Ring Pan-Tilt Indoor Cam', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://en-uk.ring.com/cdn/shop/files/ring_pantilt-indoor-camera_wht_01A_product_ground_1500x1500_abc7aa64-5c5e-4d02-8f01-f42b3cc60784.png?v=1756448928', imageAlt: 'Ring Pan-Tilt Indoor Cam', bestFor: 'Room monitoring, pets, and indoor security', why: 'A pan-and-tilt indoor camera with broad room coverage and two-way communication.', watch: 'Subscription features can add recurring cost.', url: 'https://ring.com/products/pan-tilt-indoor-cam'
+  },
+  {
+    slug: 'blink-outdoor-4', name: 'Blink Outdoor 4', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/ej5ww6ae_full.jpg?v=1759146146', imageAlt: 'Blink Outdoor 4 security camera', bestFor: 'Wire-free outdoor home monitoring', why: 'A battery-powered outdoor camera with 1080p video, night vision, motion detection, and long battery life.', watch: 'Battery life varies with settings and conditions.', url: 'https://blinkforhome.com/products/blink-outdoor-4'
+  },
+  {
+    slug: 'amazon-smart-plug', name: 'Amazon Smart Plug', category: 'Smart Home', price: 'Check price', icon: '⚡', image: 'https://auspowers.com/cdn/shop/files/B089DR29T6.jpg?v=1775763168', imageAlt: 'Amazon Smart Plug', bestFor: 'Lamps, fans, appliances, and Alexa routines', why: 'A compact Wi-Fi smart plug designed for simple Alexa control and scheduling.', watch: 'Designed primarily for devices with a physical on/off switch.', url: 'https://www.amazon.com/dp/B089DR29T6'
+  },
+  {
+    slug: 'amazon-smart-thermostat', amazonAsin: 'B08J4C8871', name: 'Amazon Smart Thermostat', category: 'Smart Home', price: 'Check price', icon: '⌂', image: 'https://m.media-amazon.com/images/I/41lvboI%2Br2L._SL500_.jpg', imageAlt: 'Amazon Smart Thermostat', bestFor: 'Alexa-connected heating and cooling control', why: 'An ENERGY STAR certified smart thermostat designed for Alexa control and programmable temperature schedules.', watch: 'Check HVAC compatibility and C-wire requirements before purchase.', url: 'https://www.amazon.com/dp/B08J4C8871'
+  },
+  {
+    slug: 'amazon-smart-air-quality-monitor', amazonAsin: 'B08W8KS8D3', name: 'Amazon Smart Air Quality Monitor', category: 'Smart Home', price: 'Check price', icon: '◌', image: 'https://auspowers.com/cdn/shop/files/71uRLSiQBaL.jpg?v=1776729519', imageAlt: 'Amazon Smart Air Quality Monitor', bestFor: 'Tracking indoor air quality', why: 'Monitors particulate matter, VOCs, carbon monoxide, humidity, and temperature and works with Alexa.', watch: 'It is a monitor rather than an air purifier.', url: 'https://www.amazon.com/dp/B08W8KS8D3'
+  },
+  {
+    slug: 'meater-plus', name: 'MEATER Plus', category: 'Smart Home', price: 'Check price', icon: '◇', image: 'https://www.sunsetandco.com/cdn/shop/files/8108733.jpg?v=1731624866', imageAlt: 'MEATER Plus wireless smart thermometer', bestFor: 'Wireless cooking temperature monitoring', why: 'A wire-free smart meat thermometer with dual temperature sensors and guided cooking features.', watch: 'Best suited to users who want app-guided cooking.', url: 'https://meater.com/products/meater-plus'
+  },
+  {
+    slug: 'switchbot-blind-tilt', name: 'SwitchBot Blind Tilt', category: 'Smart Home', price: 'Check price', icon: '▥', image: 'https://us.switch-bot.com/cdn/shop/products/switchbotblindtilt0103.jpg?v=1674980976', imageAlt: 'SwitchBot Blind Tilt smart blinds controller', bestFor: 'Automating existing horizontal blinds', why: 'A retrofit blind controller with scheduling, light sensing, solar-assisted charging, and smart-home integrations.', watch: 'Compatibility depends on your existing blind mechanism and hub setup.', url: 'https://us.switch-bot.com/products/switchbot-blind-tilt'
+  },
+  {
+    slug: 'eero-6-plus', name: 'eero 6+', category: 'Smart Home', price: 'Check price', icon: '⌁', image: 'https://prod.eero.com/shop/eero-6-plus?pack=f', imageAlt: 'eero 6+ mesh Wi-Fi router', bestFor: 'Whole-home Wi-Fi and connected smart devices', why: 'A Wi-Fi 6 mesh router with a built-in smart-home hub supporting compatible Thread and Zigbee devices.', watch: 'Coverage depends on home layout and the number of access points.', url: 'https://eero.com/shop/eero-6-plus'
+  }
+
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
