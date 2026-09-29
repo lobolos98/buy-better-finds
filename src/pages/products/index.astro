@@ -69,7 +69,7 @@ const productCards = products.map((product) => {
   .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;width:100%;max-width:100%;overflow:hidden}
   .product-card{min-width:0;width:100%;max-width:100%;overflow:hidden;display:flex;flex-direction:column}
   .product-image{display:flex;position:relative;width:100%;height:220px;min-width:0;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(145deg,#f1f5f9,#e6edf4);border-radius:9px}
-  .product-image img{display:block;width:auto;max-width:82%;height:auto;max-height:82%;object-fit:contain}
+  .product-image img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
   .product-card h3,.product-card p,.product-card .tradeoff{overflow-wrap:anywhere;word-break:normal}
   .product-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto;padding-top:14px;min-width:0}
   .product-actions .shop-btn{display:block;min-width:0;width:100%;text-align:center;overflow:hidden}
