@@ -222,6 +222,22 @@ const productsCatalog = [
     image: 'https://www.kitchenaid.com/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-kitchenaid-master-catalog/default/dw6f3f7b3e/images/large/KSM50PKVXBK_1.jpg', imageAlt: 'KitchenAid Artisan Plus 5-Quart Stand Mixer',
     bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with precision speed control, bowl light, and a broad attachment ecosystem.', watch: 'Optional attachments increase the total investment.', url: 'https://www.kitchenaid.com/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.kitchenaid-artisan-plus-5-quart-stand-mixer.KSM50PKVXBK.html'
   },
+
+  {
+    slug: 'solo-stove-summit-27', name: 'Solo Stove Summit 27 Smokeless Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
+    image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/f2nzr1001imdiltvo3cy', imageAlt: 'Solo Stove Summit 27 Smokeless Fire Pit',
+    bestFor: 'Large backyard gatherings', why: 'Large-format stainless-steel smokeless fire pit with a built-in stand and removable ash pan.', watch: 'Its 27-inch size and 42.4-pound weight require a dedicated outdoor space.', url: 'https://www.solostove.com/us/en-us/p/solo-stove-summit-27'
+  },
+  {
+    slug: 'solo-stove-steelfire-22', name: 'Solo Stove Steelfire 22 Stainless Griddle', category: 'Outdoor', price: '$399.99', icon: '☼',
+    image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/tctgukyqqxxzeighjz8f', imageAlt: 'Solo Stove Steelfire 22 Stainless Griddle',
+    bestFor: 'Backyard cooking and tailgating', why: 'Tabletop outdoor griddle with a clad stainless-steel cooking surface and compact footprint.', watch: 'It uses propane and is intended for outdoor use only.', url: 'https://www.solostove.com/us/en-us/p/steelfire-22-stainless-griddle?sku=SS22-G-UNIT-WLID'
+  },
+  {
+    slug: 'solo-stove-infinity-flame', name: 'Solo Stove Infinity Flame Propane Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
+    image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/aemdwwt79qizvty5h9pf', imageAlt: 'Solo Stove Infinity Flame Propane Fire Pit',
+    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', url: 'https://www.solostove.com/us/en-us/p/infinity-flame-fire-pit?sku=FPSURROUND-GAS'
+  },
 ];
 
 export const products = productsCatalog.filter((product) => product?.slug && product?.name && product?.category && product?.image).map((product) => {
