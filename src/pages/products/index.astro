@@ -9,63 +9,6 @@ const escapeHtml = (value) => String(value ?? '')
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;');
 
-const drawingFor = (slug) => {
-  const drawings = {
-    'kindle-paperwhite': '<rect x="120" y="45" width="160" height="245" rx="12"/><line x1="145" y1="78" x2="255" y2="78"/><line x1="150" y1="250" x2="250" y2="250"/>',
-    'jbl-charge-5': '<rect x="105" y="105" width="190" height="130" rx="62"/><circle cx="150" cy="170" r="30"/><circle cx="250" cy="170" r="30"/>',
-    'dewalt-oscillating-multi-tool': '<path d="M95 145h120l55-35 45 35-45 35 40 35-50 20-55-45H95z"/>',
-    'dewalt-reciprocating-saw': '<path d="M70 145h175l60-25 35 25-45 25 45 25-35 25-60-25H70z"/>',
-    'milwaukee-m18-fuel-drill-driver': '<path d="M95 110h125l65 40v40l-65 40h-55l-15 70h-55l20-90-25-25z"/><path d="M220 110l85-25 20 35-85 25z"/>',
-    'makita-18v-lxt-impact-driver': '<path d="M100 115h120l60 35v38l-60 37h-55l-15 65h-55l20-85-25-25z"/><path d="M220 115l75-20 25 35-80 22z"/>',
-    'ryobi-one-inflator': '<rect x="105" y="95" width="190" height="155" rx="18"/><circle cx="200" cy="160" r="42"/><path d="M200 202v48M295 155h55"/>',
-    'bosch-glm50c-laser-measure': '<rect x="120" y="75" width="160" height="205" rx="22"/><rect x="145" y="110" width="110" height="58" rx="5"/><line x1="150" y1="215" x2="250" y2="215"/>',
-    'klein-11-in-1-screwdriver': '<rect x="170" y="75" width="60" height="105" rx="12"/><path d="M150 180h100l18 105H132z"/><circle cx="200" cy="125" r="12"/>',
-    'blackstone-28-griddle': '<rect x="80" y="125" width="240" height="105" rx="12"/><path d="M100 125V80h200v45"/><line x1="115" y1="230" x2="100" y2="280"/><line x1="285" y1="230" x2="300" y2="280"/>',
-    'coleman-roadtrip-grill': '<rect x="95" y="130" width="210" height="95" rx="14"/><path d="M110 130V85h180v45"/><line x1="125" y1="225" x2="110" y2="280"/><line x1="275" y1="225" x2="290" y2="280"/>',
-    'solo-stove-bonfire': '<ellipse cx="200" cy="235" rx="105" ry="35"/><path d="M120 225c10-65 45-65 55-125 30 40 50 70 30 125 35-45 70-30 75 0"/>',
-    'yeti-hopper-soft-cooler': '<rect x="90" y="125" width="220" height="115" rx="18"/><path d="M135 125v-30h130v30"/><line x1="110" y1="165" x2="290" y2="165"/>',
-    'coleman-sundome-tent': '<path d="M65 275L200 65l135 210z"/><path d="M145 275l55-100 55 100"/><line x1="200" y1="65" x2="200" y2="175"/>',
-    'ego-power-leaf-blower': '<path d="M95 125h115l75 45-75 45H95z"/><path d="M285 170h75M115 215l-25 65M160 215l-10 65"/>',
-    'keter-outdoor-deck-box': '<path d="M90 125h220v125H90z"/><path d="M90 125l25-45h170l25 45"/><line x1="110" y1="170" x2="290" y2="170"/>',
-    'thermacell-mosquito-repellent': '<rect x="140" y="70" width="120" height="220" rx="28"/><circle cx="200" cy="135" r="28"/><path d="M165 210h70"/>',
-    'google-nest-learning-thermostat': '<circle cx="200" cy="170" r="105"/><circle cx="200" cy="170" r="62"/><path d="M170 170h60"/>',
-    'philips-hue-starter-kit': '<path d="M170 70h60v45l22 35v125H148V150l22-35z"/><path d="M170 95h60"/>',
-    'kasa-smart-plug-ep25': '<rect x="125" y="65" width="150" height="225" rx="20"/><circle cx="175" cy="150" r="15"/><circle cx="225" cy="150" r="15"/><circle cx="200" cy="230" r="25"/>',
-    'blink-outdoor-4': '<rect x="125" y="75" width="150" height="220" rx="28"/><circle cx="200" cy="145" r="50"/><circle cx="200" cy="145" r="18"/><circle cx="200" cy="240" r="10"/>',
-    'eufy-security-indoorcam': '<rect x="125" y="90" width="150" height="155" rx="28"/><circle cx="200" cy="160" r="55"/><circle cx="200" cy="160" r="18"/><path d="M165 245v35M235 245v35"/>',
-    'aqara-door-window-sensor': '<rect x="135" y="80" width="130" height="200" rx="22"/><circle cx="200" cy="150" r="25"/><line x1="165" y1="215" x2="235" y2="215"/>',
-    'apple-watch-se': '<rect x="145" y="105" width="110" height="130" rx="24"/><path d="M165 105V55h70v50M165 235v50h70v-50"/><circle cx="200" cy="170" r="30"/>',
-    'garmin-forerunner-165': '<rect x="145" y="105" width="110" height="130" rx="24"/><path d="M165 105V55h70v50M165 235v50h70v-50"/><circle cx="200" cy="170" r="30"/>',
-    'fitbit-charge-6': '<path d="M155 70h90v220h-90z"/><rect x="170" y="115" width="60" height="95" rx="18"/><line x1="175" y1="90" x2="225" y2="90"/>',
-    'whoop-5': '<path d="M150 70h100v220H150z"/><rect x="170" y="135" width="60" height="55" rx="10"/><path d="M165 90h70M165 250h70"/>',
-    'theragun-mini': '<path d="M125 100h95l45 45v55l-55 45h-85z"/><circle cx="225" cy="170" r="25"/><path d="M270 150l45-35"/>',
-    'bowflex-selecttech-552': '<path d="M105 150h190M135 115h130M135 185h130"/><circle cx="120" cy="150" r="30"/><circle cx="280" cy="150" r="30"/>',
-    'trx-suspension-trainer': '<path d="M200 65v110M200 105l-75 75M200 105l75 75M125 180v70M275 180v70"/>',
-    'manduka-pro-yoga-mat': '<rect x="115" y="65" width="170" height="220" rx="85"/><circle cx="200" cy="105" r="22"/>',
-    'hyperice-normatec-3': '<path d="M120 85h55v200h-55zM225 85h55v200h-55z"/><path d="M175 125h50M175 185h50M175 245h50"/>',
-    'hydro-flask-wide-mouth': '<path d="M155 70h90v45l18 30v120H137V145l18-30z"/><line x1="155" y1="95" x2="245" y2="95"/><line x1="160" y1="175" x2="240" y2="175"/>',
-    'bagsmart-toiletry-bag': '<path d="M120 90h160l15 190H105z"/><path d="M150 90V65h100v25"/><line x1="145" y1="145" x2="255" y2="145"/>',
-    'away-carry-on': '<rect x="115" y="75" width="170" height="210" rx="20"/><path d="M165 75V45h70v30"/><circle cx="145" cy="285" r="12"/><circle cx="255" cy="285" r="12"/>',
-    'apple-airtag': '<circle cx="200" cy="170" r="90"/><circle cx="200" cy="170" r="42"/><circle cx="200" cy="170" r="12"/>',
-    'bellroy-classic-backpack': '<path d="M125 125q0-55 75-55t75 55v145H125z"/><path d="M150 120q0-35 50-35t50 35M145 185h110v60H145z"/>',
-    'thermos-stainless-king-tumbler': '<path d="M145 75h110v40l15 35v135H130V150l15-35z"/><line x1="145" y1="95" x2="255" y2="95"/><path d="M145 190h110"/>',
-    'lego-star-wars-millennium-falcon': '<path d="M65 180l70-45 90 15 80-55 35 45-65 40 55 55-75 8-55-35-90 30z"/><circle cx="200" cy="180" r="28"/>',
-    'disney-stitch-collectible': '<circle cx="200" cy="165" r="75"/><path d="M145 120l-45-55 70 35M255 120l45-55-70 35"/><circle cx="175" cy="160" r="10"/><circle cx="225" cy="160" r="10"/>',
-    'pokemon-tcg-collector': '<rect x="120" y="60" width="160" height="220" rx="12"/><circle cx="200" cy="135" r="55"/><path d="M145 135h110M200 80v110"/><circle cx="200" cy="135" r="15"/>',
-    'lego-classic-creative-brick-box': '<path d="M95 125h210v130H95z"/><circle cx="140" cy="110" r="18"/><circle cx="200" cy="110" r="18"/><circle cx="260" cy="110" r="18"/><rect x="125" y="155" width="55" height="45"/><rect x="205" y="155" width="70" height="45"/>',
-    'osmo-learning-system': '<rect x="105" y="80" width="190" height="170" rx="15"/><rect x="130" y="105" width="140" height="95"/><path d="M155 225h90"/>',
-    'thinkfun-gravity-maze': '<rect x="105" y="75" width="190" height="190" rx="15"/><path d="M145 115h110v110H145zM170 140v60h60v-60z"/><circle cx="200" cy="170" r="10"/>',
-    'exploding-kittens': '<rect x="115" y="65" width="170" height="230" rx="15"/><circle cx="200" cy="155" r="55"/><path d="M165 145h20M215 145h20M170 185q30 20 60 0"/>',
-    'hape-wooden-activity-toy': '<rect x="100" y="95" width="200" height="150" rx="20"/><circle cx="145" cy="145" r="25"/><rect x="180" y="120" width="75" height="45" rx="8"/><circle cx="150" cy="205" r="18"/><circle cx="225" cy="205" r="18"/>',
-    'cerave-foaming-cleanser': '<path d="M155 85h90v45l20 25v115H135V155l20-25z"/><line x1="155" y1="110" x2="245" y2="110"/><line x1="155" y1="180" x2="245" y2="180"/>',
-    'ordinary-niacinamide': '<path d="M160 75h80v45l20 25v135H140V145l20-25z"/><line x1="160" y1="105" x2="240" y2="105"/><line x1="160" y1="190" x2="240" y2="190"/>',
-    'revlon-one-step': '<path d="M125 90h150v55l-45 30v105h-60V175l-45-30z"/><circle cx="200" cy="120" r="22"/><line x1="170" y1="205" x2="230" y2="205"/>',
-    'braun-series-7': '<rect x="145" y="80" width="110" height="210" rx="35"/><circle cx="200" cy="130" r="28"/><rect x="170" y="180" width="60" height="55" rx="8"/>'
-  };
-  const body = drawings[slug] || '<rect x="120" y="85" width="160" height="205" rx="22"/><circle cx="200" cy="160" r="45"/>';
-  return `<svg class="product-drawing" viewBox="0 0 400 340" aria-hidden="true"><g fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
-};
-
 const productCards = products.map((product) => {
   const slug = escapeHtml(product.slug);
   const name = escapeHtml(product.name);
@@ -78,14 +21,13 @@ const productCards = products.map((product) => {
   const why = escapeHtml(product.why);
   const watch = escapeHtml(product.watch);
   const price = escapeHtml(product.price);
-  const hasRealImage = Boolean(product.image) && !String(product.image).includes('new-product-placeholder.svg');
   const amazonUrl = product.amazonAsin
     ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
     : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`);
 
   return `<article class="card product-card">
     <a class="product-image" href="/products/${slug}/" aria-label="View ${name}">
-      ${hasRealImage ? `<img src="${image}" alt="${imageAlt}" loading="lazy" width="800" height="600">` : `<div class="image-fallback" role="img" aria-label="${name} product drawing">${drawingFor(product.slug)}<small>${name}</small></div>`}
+      ${image ? `<img src="${image}" alt="${imageAlt}" loading="lazy" width="800" height="600">` : ''}
       <span class="pick-badge">BUY BETTER FIND</span>
     </a>
     <div class="product-meta">
@@ -129,9 +71,9 @@ const productCards = products.map((product) => {
   :global(.product-card){min-width:0;width:100%;max-width:100%;overflow:hidden;display:flex;flex-direction:column}
   :global(.product-image){display:block;position:relative;width:100%;height:220px;min-width:0;overflow:hidden;background:linear-gradient(145deg,#f1f5f9,#e6edf4);border-radius:9px;flex:0 0 220px}
   :global(.product-image img){position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;object-fit:contain;object-position:center;z-index:1}
-  :global(.product-image .image-fallback){position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;text-align:center;padding:18px;box-sizing:border-box;background:linear-gradient(145deg,#f1f5f9,#e6edf4)}
-  :global(.product-image .product-drawing){width:78%;height:78%;display:block}
-  :global(.product-image .image-fallback small){display:block;font-size:11px;line-height:1.3;max-width:90%;overflow-wrap:anywhere;color:#64748b;font-weight:700}
+  
+  
+  
   :global(.product-image img[style*="display: none"] + .image-fallback){display:flex}
   :global(.product-card h3),:global(.product-card p),:global(.product-card .tradeoff){overflow-wrap:anywhere;word-break:normal}
   :global(.product-actions){display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto;padding-top:14px;min-width:0}
@@ -140,12 +82,4 @@ const productCards = products.map((product) => {
   @media(max-width:700px){.catalog-note{align-items:flex-start;flex-direction:column}.catalog-note a{white-space:normal}:global(.product-actions){gap:9px;grid-template-columns:1fr}}
   @media(max-width:560px){:global(.product-grid){grid-template-columns:1fr}:global(.product-image){height:200px;flex-basis:200px}}
 </style>
-<script>
-  document.querySelectorAll('.product-image img').forEach((img) => {
-    img.addEventListener('error', () => {
-      img.style.display = 'none';
-      const fallback = img.nextElementSibling;
-      if (fallback) fallback.style.display = 'flex';
-    });
-  });
-</script>
+
