@@ -71,10 +71,6 @@ const productCards = products.map((product) => {
   :global(.product-card){min-width:0;width:100%;max-width:100%;overflow:hidden;display:flex;flex-direction:column}
   :global(.product-image){display:block;position:relative;width:100%;height:220px;min-width:0;overflow:hidden;background:linear-gradient(145deg,#f1f5f9,#e6edf4);border-radius:9px;flex:0 0 220px}
   :global(.product-image img){position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;object-fit:contain;object-position:center;z-index:1}
-  
-  
-  
-  :global(.product-image img[style*="display: none"] + .image-fallback){display:flex}
   :global(.product-card h3),:global(.product-card p),:global(.product-card .tradeoff){overflow-wrap:anywhere;word-break:normal}
   :global(.product-actions){display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto;padding-top:14px;min-width:0}
   :global(.product-actions .shop-btn){display:block;min-width:0;width:100%;text-align:center;overflow:hidden}
