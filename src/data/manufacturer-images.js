@@ -81,4 +81,12 @@ export const manufacturerImageOverrides = {
     image: 'https://images.ctfassets.net/a3qyhfznts9y/3Pk9XugWXYQXdiPmssg4r4/e6ddc84bb15c2c2611037d8e5ca5e994/Ares_-_Slot_2_-_Mobile.png?fm=png&h=1366&q=80&w=1366',
     source: 'ecobee'
   },
+  'govee-smart-bulbs': {
+    image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6006-2_Pack.png?crop=center&height=1000&v=1743405694&width=1000',
+    source: 'Govee'
+  },
+  'funko-pop-marvel': {
+    image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw5cd6b83e/images/funko/upload/82500_Marvel_NC_SpiderMan_POP_GLAM-WEB.png',
+    source: 'Funko'
+  },
 };
