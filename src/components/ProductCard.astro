@@ -24,7 +24,7 @@ const score = Number.isFinite(Number(product.score)) ? Number(product.score).toF
   <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
   <p class="price"><strong>{product.price}</strong></p>
 
-  <div class="product-actions">
+  <div class="product-card-actions">
     <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
     <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
   </div>
@@ -51,7 +51,7 @@ const score = Number.isFinite(Number(product.score)) ? Number(product.score).toF
 .tradeoff{margin:4px 0 8px;padding-top:10px;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px;line-height:1.5}
 .tradeoff strong{color:#c8102e}
 .price{margin-top:auto}
-.product-actions{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.product-card-actions{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .shop-btn{display:inline-flex;align-items:center;justify-content:center;align-self:stretch;padding:13px 18px;border-radius:6px;color:#fff;text-decoration:none;font-size:13px;font-weight:800;line-height:1.2;transition:background .2s ease,transform .2s ease}
 .shop-btn:hover{transform:translateY(-1px)}
 .secondary-shop{background:#2366a8}
