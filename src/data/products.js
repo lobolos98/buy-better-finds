@@ -26,7 +26,7 @@ const productsCatalog = [
     category: 'Outdoor',
     price: 'Check price',
     icon: '☼',
-    image: 'https://nordicdesignsinc.com/cdn/shop/files/46_000_BTU_Outdoor_Propane_Patio_Heater_with_Wheels_Commercial_Residential_Slate_Gray.jpg',
+    image: 'https://m.media-amazon.com/images/I/51k1BjYwSlL._AC_UY512_.jpg',
     imageAlt: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater in Slate Gray',
     bestFor: 'Patios, decks, outdoor dining, and entertaining',
     why: 'A portable propane patio heater with adjustable heat output, wheels for repositioning, and a broad outdoor heat radius.',
