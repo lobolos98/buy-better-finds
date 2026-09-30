@@ -20,8 +20,23 @@ const productsCatalog = [
     bestFor: 'DIY projects, repairs, and general drilling/driving', why: 'A practical two-tool kit pairing a drill/driver and impact driver with two batteries, charger, and bag.', watch: 'Check the included battery size and kit contents before buying because bundles can vary.', url: 'https://www.dewalt.com/en-us/product/dck240c2/20v-max-13-ah-drill-driverimpact-driver-combo-kit', dailyDealDate: '2026-09-24'
   },
   {
+    slug: 'amazon-basics-46000-btu-patio-heater',
+    amazonAsin: 'B010VFKZEO',
+    name: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater',
+    category: 'Outdoor',
+    price: 'Check price',
+    icon: '☼',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B010VFKZEO&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
+    imageAlt: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater in Slate Gray',
+    bestFor: 'Patios, decks, outdoor dining, and entertaining',
+    why: 'A portable propane patio heater with adjustable heat output, wheels for repositioning, and a broad outdoor heat radius.',
+    watch: 'Check current propane, clearance, and outdoor-use requirements before setup. Price and availability can change.',
+    url: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20',
+    dailyDealDate: '2026-09-30'
+  },
+  {
     slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼', image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
-    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time with a broad heat zone.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.solostove.com/us/en-us/p/SSTOWER1.5_PELLET', dailyDealDate: '2026-09-30'
+    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time with a broad heat zone.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.solostove.com/us/en-us/p/SSTOWER1.5_PELLET', dailyDealDate: '2026-10-10'
   },
   {
     slug: 'apple-airpods-4', name: 'Apple AirPods 4', category: 'Tech', price: 'Check price', icon: '◉', image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 4 wireless earbuds', bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Current-generation AirPods with a compact open-style design and seamless Apple-device integration.', watch: 'Choose the noise-cancelling version if active noise reduction is a priority.', url: 'https://www.apple.com/airpods-4/', dailyDealDate: '2026-10-01'
