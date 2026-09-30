@@ -22,6 +22,22 @@ const staticPages = [
   '/categories/seasonal-holidays/prime-big-deal-days/'
 ];
 
+const categorySlugs = [
+  'tech',
+  'home-kitchen',
+  'tools-diy',
+  'outdoor',
+  'smart-home',
+  'fitness',
+  'lifestyle',
+  'gifts-collectibles',
+  'toys-games',
+  'beauty-personal-care',
+  'seasonal-holidays'
+];
+
+const categoryPages = categorySlugs.map((slug) => `/categories/${slug}/`);
+
 const guidePages = [
   'best-tech',
   'best-home-kitchen',
@@ -49,11 +65,10 @@ const comparisonPages = [
   'tp-link-outdoor-plug-vs-ring-doorbell'
 ].map((slug) => `/comparisons/${slug}/`);
 
-const categoryPages = [...new Set(products.map((product) =>
-  product.category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-))].map((slug) => `/categories/${slug}/`);
+const productPages = products
+  .filter((product) => product && typeof product.slug === 'string' && product.slug.length > 0)
+  .map((product) => `/products/${product.slug}/`);
 
-const productPages = products.map((product) => `/products/${product.slug}/`);
 const extraPages = ['/categories/beauty-personal-care/cosmetics/'];
 
 const pages = [...new Set([
@@ -69,12 +84,19 @@ const escapeXml = (value: string) => value
   .replace(/&/g, '&amp;')
   .replace(/</g, '&lt;')
   .replace(/>/g, '&gt;')
-  .replace(/"/g, '&quot;')
+  .replace(/\"/g, '&quot;')
   .replace(/'/g, '&apos;');
 
 export const GET: APIRoute = () => {
-  const urls = pages.map((path) => `  <url><loc>${escapeXml(`https://buybetterfinds.com${path}`)}</loc></url>`).join('\n');
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+  const urls = pages
+    .map((path) => `  <url><loc>${escapeXml(`https://buybetterfinds.com${path}`)}</loc></url>`)
+    .join('\n');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
 
   return new Response(xml, {
     headers: {
