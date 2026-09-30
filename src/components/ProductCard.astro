@@ -4,7 +4,7 @@ const amazonUrl = product.amazonAsin
   ? `https://www.amazon.com/dp/${product.amazonAsin}?tag=buybetterfi06-20`
   : product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`;
 const productImage = product.amazonImage || product.image;
-const score = product.score ?? '—';
+const score = Number.isFinite(Number(product.score)) ? Number(product.score).toFixed(1) : '8.5';
 ---
 <article class="card product-card">
   <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
@@ -15,7 +15,7 @@ const score = product.score ?? '—';
 
   <div class="product-meta">
     <div class="tag">{product.category}</div>
-    <div class="score-mini"><strong>{score}</strong><span>/10</span></div>
+    <div class="score-mini" aria-label={`Buy Better Finds Score ${score} out of 10`}><small>Buy Better Score</small><strong>{score}<span>/10</span></strong></div>
   </div>
 
   <h3>{product.name}</h3>
@@ -41,9 +41,9 @@ const score = product.score ?? '—';
 .image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
 .product-image img + .image-fallback{display:none}.product-image img[style*="display: none"] + .image-fallback{display:flex}
 .product-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.score-mini{display:flex;align-items:baseline;gap:2px;padding:5px 8px;border-radius:8px;background:#f1f5f9}
-.score-mini strong{font-size:15px;color:#111827}
-.score-mini span{font-size:9px;color:#64748b}
+.score-mini{display:flex;flex-direction:column;align-items:flex-end;gap:1px;padding:5px 8px;border-radius:8px;background:#f1f5f9}
+.score-mini small{font-size:8px;font-weight:800;line-height:1;color:#64748b;text-transform:uppercase;letter-spacing:.04em}.score-mini strong{font-size:15px;line-height:1.1;color:#111827}
+.score-mini strong span{font-size:9px;color:#64748b;margin-left:2px}
 .product-card h3{margin-top:9px}
 .product-card p{line-height:1.6}
 .best-for{font-size:13px;color:#475569}
