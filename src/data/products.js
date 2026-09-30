@@ -32,7 +32,8 @@ const productsCatalog = [
     why: 'A portable propane patio heater with adjustable heat output, wheels for repositioning, and a broad outdoor heat radius.',
     watch: 'Check current propane, clearance, and outdoor-use requirements before setup. Price and availability can change.',
     url: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20',
-    dailyDealDate: '2026-09-30'
+    dailyDealDate: '2026-09-30',
+    score: 8.7
   },
   {
     slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼', image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
