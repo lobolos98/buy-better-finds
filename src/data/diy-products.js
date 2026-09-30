@@ -89,7 +89,7 @@ export const diyProducts = [
     category: 'Tools & DIY',
     price: 'Check price',
     icon: '◉',
-    image: 'https://cdn11.bigcommerce.com/s-9q3w8/images/stencil/1280x1280/products/12100/12216/ABI1000__28300.1750250575.jpg',
+    image: 'https://www.photos.haightradingukltd.co.uk/Sealey/ABI1000-E.jpg',
     imageAlt: 'Sealey Space Warmer indirect heater',
     bestFor: 'Large workshops, construction sites, and enclosed work areas',
     why: 'An indirect-fired heater designed to provide clean warm air while exhausting combustion by-products through a flue.',
