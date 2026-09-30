@@ -807,11 +807,15 @@ export const products = productsCatalog.filter((product) => product?.slug && pro
   const amazonOverride = amazonImageOverrides[product.slug];
   const manufacturerOverride = manufacturerImageOverrides[product.slug];
 
-  if (!amazonOverride && !manufacturerOverride) return product;
+  if (!amazonOverride && !manufacturerOverride) return {
+    ...product,
+    score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5
+  };
 
   const override = amazonOverride || manufacturerOverride;
   return {
     ...product,
+    score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5,
     amazonAsin: amazonOverride?.asin || product.amazonAsin,
     amazonImage: amazonOverride?.image || product.amazonImage,
     manufacturerImage: manufacturerOverride?.image || product.manufacturerImage,
