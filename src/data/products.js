@@ -45,7 +45,7 @@ const productsCatalog = [
     slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah', dailyDealDate: '2026-10-05'
   },
   {
-    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: '/images/products/govee-smart-light-bulbs.svg', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://us.govee.com/collections/smart-led-bulbs'
+    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://us.govee.com/collections/smart-led-bulbs'
   },
   {
     slug: 'dyson-v8', amazonAsin: 'B0GT2DG9SK', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇', image: '/images/products/dyson-v8.svg', imageAlt: 'Dyson V8 Cordless Vacuum', bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format makes it convenient for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than on larger corded vacuums.', url: 'https://www.dyson.com/vacuum-cleaners/cordless/v8/shop-all', dailyDealDate: '2026-10-06'
@@ -69,7 +69,7 @@ const productsCatalog = [
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰', image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park building set', bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build that combines construction, play value, and an engaging amusement-park theme.', watch: 'Larger LEGO sets cost more and need meaningful storage and build space.', url: 'https://www.lego.com/en-us/themes/city', dailyDealDate: '2026-10-08'
   },
   {
-    slug: 'magna-tiles-undersea', name: 'MAGNA-TILES Undersea Adventure 58-Piece Set', category: 'Toys & Games', price: 'Check price', icon: '◇', image: '/images/products/magna-tiles-undersea.svg', imageAlt: 'MAGNA-TILES Undersea Adventure magnetic construction set', bestFor: 'Open-ended building and creative play', why: 'Magnetic construction pieces encourage kids to build, rebuild, and invent their own structures and scenes.', watch: 'Magnetic-tile sets can become a larger investment as you add more pieces and expansions.', url: 'https://www.magnatiles.com/'
+    slug: 'magna-tiles-undersea', name: 'MAGNA-TILES Undersea Adventure 58-Piece Set', category: 'Toys & Games', price: 'Check price', icon: '◇', image: 'https://magnatiles.com/cdn/shop/files/26Undersea_Adventure_FR1_RGB_1.jpg?v=1777929366', imageAlt: 'MAGNA-TILES Undersea Adventure magnetic construction set', bestFor: 'Open-ended building and creative play', why: 'Magnetic construction pieces encourage kids to build, rebuild, and invent their own structures and scenes.', watch: 'Magnetic-tile sets can become a larger investment as you add more pieces and expansions.', url: 'https://www.magnatiles.com/'
   },
   {
     slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙', image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy', bestFor: 'STEM-minded kids and hands-on makers', why: 'A build-and-experiment toy designed around problem solving and mechanical curiosity.', watch: 'Best suited to kids who enjoy building and tinkering rather than passive play.', url: 'https://www.crunchlabs.com/', dailyDealDate: '2026-10-09'
@@ -443,7 +443,7 @@ const productsCatalog = [
     slug: 'pokemon-30th-elite-trainer-box-gift',
     name: 'Pokémon 30th Anniversary Elite Trainer Box',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/pokemon-30th-elite-trainer-box.svg', imageAlt: 'Pokémon 30th Anniversary Elite Trainer Box',
+    image: 'https://bills-archive.nyc3.cdn.digitaloceanspaces.com/30th/Pokemon_TCG_30th_Celebration_Elite_Trainer_Box_EN.webp', imageAlt: 'Pokémon 30th Anniversary Elite Trainer Box',
     bestFor: 'Pokémon fans and trading-card collectors', why: 'Collector-focused presentation with strong anniversary and fandom appeal.',
     watch: 'Collector products can fluctuate in price and availability.', url: 'https://www.amazon.com/s?k=Pokemon+30th+Anniversary+Elite+Trainer+Box&tag=buybetterfi06-20'
   },
@@ -451,7 +451,7 @@ const productsCatalog = [
     slug: 'lego-botanicals-mushrooms-gift',
     name: 'LEGO Botanicals Mushrooms',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '✦',
-    image: '/images/products/lego-botanicals-mushrooms.svg', imageAlt: 'LEGO Botanicals Mushrooms display set',
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt6eea34c98ee76abb/bltaa6c5faaf18aa138-11505_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO Botanicals Mushrooms display set',
     bestFor: 'Adult LEGO fans and creative décor gifts', why: 'A build-and-display gift that bridges collecting, creativity, and home décor.',
     watch: 'Display appeal matters more than traditional play.', url: 'https://www.lego.com/en-us/themes/botanicals'
   },
@@ -507,7 +507,7 @@ const productsCatalog = [
     slug: 'magna-tiles-undersea-gift',
     name: 'MAGNA-TILES Undersea Adventure 58-Piece Set',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◇',
-    image: '/images/products/magna-tiles-undersea.svg', imageAlt: 'MAGNA-TILES Undersea Adventure set',
+    image: 'https://magnatiles.com/cdn/shop/files/26Undersea_Adventure_FR1_RGB_1.jpg?v=1777929366', imageAlt: 'MAGNA-TILES Undersea Adventure set',
     bestFor: 'Creative kids and open-ended play gifts', why: 'Magnetic construction pieces provide a reusable building experience.',
     watch: 'Expansion sets can increase the overall collection cost.', url: 'https://www.magnatiles.com/'
   },
