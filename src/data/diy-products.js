@@ -143,16 +143,4 @@ export const diyProducts = [
     why: 'A compact flip-head drill designed to switch between drilling and driving with quick access to both bit positions.',
     watch: 'Check the exact kit configuration, battery voltage, and included charger.'
   },
-  {
-    slug: 'knipex-twistcut-pipe-cutter',
-    name: 'KNIPEX Pipe Cutter',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '⌁',
-    image: '/images/products/knipex-pipe-cutter.svg',
-    imageAlt: 'KNIPEX TwistCut corrugated pipe cutter',
-    bestFor: 'Corrugated plastic pipe and conduit work',
-    why: 'A compact pipe cutter designed for clean cuts on corrugated plastic pipe with a built-in stripping function on the applicable model.',
-    watch: 'Confirm the exact KNIPEX model and diameter range because the brand offers several pipe-cutting tools.'
-  }
 ];
