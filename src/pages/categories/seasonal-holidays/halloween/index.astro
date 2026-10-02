@@ -26,7 +26,7 @@ const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score 
           const amazon = amazonImageOverrides[product.slug];
           const asin = amazon?.asin || product.amazonAsin;
           const amazonUrl = asin ? `https://www.amazon.com/dp/${asin}?tag=buybetterfi06-20` : product.url;
-          const productImage = amazon?.image || (asin ? `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${asin}&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&tag=buybetterfi06-20` : product.image);
+          const productImage = product.image || amazon?.image;
           return <article class="card product-card">
             <a class="product-image" href={`/products/${product.slug}/`}><img src={productImage} alt={product.imageAlt} loading="lazy" width="900" height="900" /><span class="pick-badge">HALLOWEEN FIND</span></a>
             <div class="tag">SEASONAL & HOLIDAYS</div>
