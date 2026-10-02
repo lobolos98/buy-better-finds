@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
+import { getRecommendation } from '../../data/recommendations.js';
 
 const escapeHtml = (value) => String(value ?? '')
   .replace(/&/g, '&amp;')
@@ -16,7 +17,8 @@ const productCards = products.map((product) => {
   const icon = escapeHtml(product.icon);
   const image = escapeHtml(product.image);
   const imageAlt = escapeHtml(product.imageAlt || product.name);
-  const score = escapeHtml(product.score ?? '—');
+  const recommendation = getRecommendation(product);
+  const score = escapeHtml(Number.isFinite(Number(recommendation?.score)) ? Number(recommendation.score).toFixed(1) : '—');
   const bestFor = escapeHtml(product.bestFor);
   const why = escapeHtml(product.why);
   const watch = escapeHtml(product.watch);
