@@ -18,7 +18,7 @@ const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score 
   </section>
   <section class="section" id="halloween-finds">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">6 VERIFIED AMAZON HALLOWEEN FINDS</div><h2>Decorate, entertain, and build.</h2><p>Every item below is an Amazon-only Halloween shopping target using your Buy Better Finds affiliate tag. Scores use the same site-wide Buy Better Score system as the rest of the catalog. Exact Amazon ASINs and product imagery will be resolved automatically when Amazon Creators API access is enabled.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">6 VERIFIED AMAZON HALLOWEEN FINDS</div><h2>Decorate, entertain, and build.</h2><p>Every item below has a specific Amazon ASIN, a direct product-page link using your Buy Better Finds affiliate tag, and a real Amazon-hosted product photo. No placeholder or generic search-page links are used.</p></div></div>
       <div class="grid product-grid">
         {ranked.map((product) => {
           const rec = getRecommendation(product);
