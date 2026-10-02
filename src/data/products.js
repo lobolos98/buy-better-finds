@@ -18,6 +18,87 @@ const productsCatalog = [
 
 
   {
+    slug: 'sony-wh-1000xm5-tech', amazonAsin: 'B09XS7JWHH', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉',
+    image: 'https://d1ncau8tqf99kp.cloudfront.net/PDP/Audio/Headphones/WH-1000XM5/gallery/icon1.svg', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
+    bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and long battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b', dailyDealDate: '2026-09-22'
+  },
+  {
+    slug: 'ninja-af101', amazonAsin: 'B07FDJMC9Q', name: 'Ninja 4-Qt Air Fryer AF101', category: 'Home & Kitchen', price: '$119.99', icon: '◇',
+    image: 'https://target.scene7.com/is/image/Target/GUEST_127e9e1c-2cdc-4e69-9a35-de5998d4c037?fmt=pjpeg&hei=900&wid=900', imageAlt: 'Ninja 4-Qt Air Fryer AF101',
+    bestFor: 'Weeknight meals and smaller households', why: 'Compact 4-quart air fryer with a ceramic-coated basket and straightforward countertop footprint.', watch: 'The 4-quart capacity is better for smaller batches than large family meals.', url: 'https://www.target.com/p/-/A-53649826', dailyDealDate: '2026-09-23'
+  },
+  {
+    slug: 'amazon-basics-46000-btu-patio-heater', amazonAsin: 'B010VFKZEO', name: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://m.media-amazon.com/images/I/51k1BjYwSlL._AC_UY512_.jpg', imageAlt: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater in Slate Gray',
+    bestFor: 'Patios, decks, outdoor dining, and entertaining', why: 'Portable propane patio heater with adjustable heat output and wheels for repositioning.', watch: 'Check current propane, clearance, and outdoor-use requirements before setup.', url: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20', dailyDealDate: '2026-09-30', score: 8.7
+  },
+  {
+    slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼',
+    image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
+    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.solostove.com/us/en-us/p/SSTOWER1.5_PELLET', dailyDealDate: '2026-10-10'
+  },
+  {
+    slug: 'apple-airpods-5', amazonAsin: 'B0HJB69GJL', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 5 wireless earbuds',
+    bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0HJB69GJL?tag=buybetterfi06-20', dailyDealDate: '2026-10-01'
+  },
+  {
+    slug: 'apple-ipad-a16', amazonAsin: 'B0DZJ4N8Y5', name: 'Apple iPad 11-inch (A16)', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://www.apple.com/v/ipad-11/d/images/overview/design/modular_startframe__ecmd9ce9dsom_large.jpg', imageAlt: 'Apple iPad 11-inch with A16 chip',
+    bestFor: 'Streaming, browsing, school, and everyday productivity', why: '11-inch iPad with an A16 chip, 128GB starting storage, USB-C, and Apple Pencil support.', watch: 'Accessories such as keyboards and Pencil add to the total cost.', url: 'https://www.apple.com/ipad-11/', dailyDealDate: '2026-09-20'
+  },
+  {
+    slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼',
+    image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill',
+    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html', dailyDealDate: '2026-10-02'
+  },
+  {
+    slug: 'amazon-echo-dot', amazonAsin: 'B09B8V1LZ3', name: 'Amazon Echo Dot', category: 'Smart Home', price: 'Check price', icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg', imageAlt: 'Amazon Echo Dot smart speaker',
+    bestFor: 'Voice control, timers, music, and smart-home routines', why: 'Compact smart speaker that can serve as a convenient voice-control hub.', watch: 'Smart-speaker usefulness depends on how much of your home you want connected.', url: 'https://www.amazon.com/dp/B09B8V1LZ3?tag=buybetterfi06-20', dailyDealDate: '2026-09-29'
+  },
+  {
+    slug: 'anker-nano-power-bank-tech', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣',
+    image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank',
+    bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah', dailyDealDate: '2026-10-05'
+  },
+  {
+    slug: 'dyson-v8', amazonAsin: 'B0GT2DG9SK', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: '/images/products/dyson-v8.svg', imageAlt: 'Dyson V8 Cordless Vacuum',
+    bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than larger corded vacuums.', url: 'https://www.dyson.com/vacuum-cleaners/cordless/v8/shop-all', dailyDealDate: '2026-10-06'
+  },
+  {
+    slug: 'instant-vortex-plus', name: 'Instant Vortex Plus Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://instantpot.com/cdn/shop/files/IB_140-3000-01_Vortex-Plus-AFO-10QT_ATF_Square_Tile1.png?v=1746220302&width=960', imageAlt: 'Instant Vortex Plus Air Fryer',
+    bestFor: 'Fast countertop cooking', why: 'Popular air-fryer format with multiple cooking functions for quick everyday meals.', watch: 'Compare basket capacity and exact functions across Vortex Plus variants.', url: 'https://instantpot.com/collections/air-fryers', dailyDealDate: '2026-09-26'
+  },
+  {
+    slug: 'yeti-rambler', name: 'YETI Rambler Drinkware', category: 'Lifestyle', price: 'Check price', icon: '◈',
+    image: 'https://yeti-webmedia.imgix.net/m/3f71b90ff226c222/original/PDP_Asset_Banner_Square_PDP_Product_Navy_Coffee_Overview_Lifestyle.jpg?auto=format%2Ccompress&fit=crop&h=400&w=400', imageAlt: 'YETI Rambler insulated drinkware',
+    bestFor: 'Daily drinks, commuting, and outdoor use', why: 'Durable insulated drinkware line with multiple sizes and lid configurations.', watch: 'Pick the size and lid style that matches how you actually carry and use it.', url: 'https://www.yeti.com/drinkware/tumblers/rambler.html', dailyDealDate: '2026-09-27'
+  },
+  {
+    slug: 'logitech-mx-master-3s', name: 'Logitech MX Master 3S', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://resource.logitech.com/w_1440%2Ch_660%2Car_24%3A11%2Cc_fill%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/mx-master-3s-graphite-ident.jpg', imageAlt: 'Logitech MX Master 3S wireless mouse',
+    bestFor: 'Desktop productivity and multi-device work', why: 'Ergonomic wireless mouse with precise scrolling and customizable controls.', watch: 'Its larger ergonomic shape may not suit users who prefer small travel mice.', url: 'https://www.logitech.com/en-us/shop/p/mx-master-3s', dailyDealDate: '2026-09-21'
+  },
+  {
+    slug: 'shark-navigator-lift-away', name: 'Shark Navigator Lift-Away', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://assets.sharkninja.com/image/upload/c_pad,w_800,h_800,f_auto,q_auto,b_rgb:FFFFFF/v1/SharkNinja-NA/NV360_01', imageAlt: 'Shark Navigator Lift-Away vacuum',
+    bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', url: 'https://www.sharkclean.com/products/navigator-lift-away-vacuum-zidNV360', dailyDealDate: '2026-10-07'
+  },
+  {
+    slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰',
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park building set',
+    bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.lego.com/en-us/themes/city', dailyDealDate: '2026-10-08'
+  },
+  {
+    slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙',
+    image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
+    bestFor: 'STEM-minded kids and hands-on makers', why: 'A build-and-experiment toy designed around problem solving and mechanical curiosity.', watch: 'Best suited to kids who enjoy building and tinkering rather than passive play.', url: 'https://www.crunchlabs.com/', dailyDealDate: '2026-10-09'
+  },
+
+  {
     slug: 'tp-link-ep40m', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡',
     image: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg', imageAlt: 'TP-Link Kasa Smart Outdoor Plug EP40M',
     bestFor: 'Outdoor smart-home control', why: 'A weather-resistant dual-outlet smart plug for outdoor lights and other connected devices.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', url: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/'
