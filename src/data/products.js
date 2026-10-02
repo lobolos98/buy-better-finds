@@ -18,6 +18,12 @@ const productsCatalog = [
 
 
   {
+    slug: 'tp-link-ep40m', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡',
+    image: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg', imageAlt: 'TP-Link Kasa Smart Outdoor Plug EP40M',
+    bestFor: 'Outdoor smart-home control', why: 'A weather-resistant dual-outlet smart plug for outdoor lights and other connected devices.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', url: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/'
+  },
+
+  {
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000CBSNKQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
