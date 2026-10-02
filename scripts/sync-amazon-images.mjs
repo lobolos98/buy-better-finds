@@ -1,7 +1,10 @@
 import fs from 'node:fs/promises';
 
 const ROOT = new URL('../', import.meta.url);
-const PRODUCTS_FILE = new URL('../src/data/products.js', import.meta.url);
+const PRODUCTS_FILES = [
+  new URL('../src/data/products.js', import.meta.url),
+  new URL('../src/data/halloween-products.js', import.meta.url)
+];
 const OVERRIDES_FILE = new URL('../src/data/amazon-images.js', import.meta.url);
 
 const clientId = process.env.CREATORS_API_CLIENT_ID;
@@ -10,18 +13,24 @@ const partnerTag = process.env.AMAZON_PARTNER_TAG;
 const marketplace = process.env.AMAZON_MARKETPLACE || 'www.amazon.com';
 const tokenEndpoint = process.env.CREATORS_API_TOKEN_ENDPOINT || 'https://api.amazon.com/auth/o2/token';
 
-const source = await fs.readFile(PRODUCTS_FILE, 'utf8');
 const products = [];
 
-// First parse the original single-quoted catalog entries.
-for (const match of source.matchAll(/slug:\s*'([^']+)'[^]*?name:\s*'([^']+)'[^]*?(?:amazonAsin:\s*'([^']+)')?[^]*?image:\s*'([^']+)'/g)) {
+for (const sourceFile of PRODUCTS_FILES) {
+  const source = await fs.readFile(sourceFile, 'utf8');
+
+  // First parse the original single-quoted catalog entries.
+  for (const match of source.matchAll(/slug:\s*'([^']+)'[^]*?name:\s*'([^']+)'[^]*?(?:amazonAsin:\s*'([^']+)')?[^]*?image:\s*'([^']+)'/g)) {
   products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
 }
 
 // Then parse the newer JSON-style entries that use double-quoted keys/values.
-for (const match of source.matchAll(/"slug":"([^"]+)"[^]*?"name":"([^"]+)"[^]*?(?:"amazonAsin":"([^"]+)")?[^]*?"image":"([^"]+)"/g)) {
-  if (!products.some((product) => product.slug === match[1])) {
-    products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
+  }
+
+  // Then parse the newer JSON-style entries that use double-quoted keys/values.
+  for (const match of source.matchAll(/\"slug\":\"([^\"]+)\"[^]*?\"name\":\"([^\"]+)\"[^]*?(?:\"amazonAsin\":\"([^\"]+)\")?[^]*?\"image\":\"([^\"]+)\"/g)) {
+    if (!products.some((product) => product.slug === match[1])) {
+      products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
+    }
   }
 }
 
