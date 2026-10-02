@@ -330,10 +330,10 @@ const scoreOverrides = {
 
 export function getRecommendation(product) {
   const existing = recommendationData[product.slug];
-  const score = scoreOverrides[product.slug];
+  const score = scoreOverrides[product.slug] ?? product.score ?? null;
   if (existing) return score == null ? existing : { ...existing, score };
   return {
-    score: score ?? null,
+    score,
     label: 'Editorial recommendation',
     pros: [],
     cons: [],
