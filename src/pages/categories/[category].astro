@@ -102,7 +102,7 @@ const rankedMatches = [...matches].sort((a, b) => (getRecommendation(b).score ??
         <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name); const rec = getRecommendation(product); return <article class="card product-card">
           <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="image-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></span></a>
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
-          <div class="score-row"><strong>{Number.isFinite(Number(product.score)) ? Number(product.score).toFixed(1) : (rec.score ? rec.score.toFixed(1) : '—')}</strong><span>BUY BETTER SCORE</span></div>
+          <div class="score-row"><strong>{Number.isFinite(Number(rec?.score)) ? Number(rec.score).toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
           <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
