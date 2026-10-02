@@ -2,18 +2,7 @@
 // Prefer Amazon Creators imagery when available; these entries are the manufacturer fallback.
 export const manufacturerImageOverrides = {
 
-  'toughbuilt-post-hole-digger': {
-    image: 'https://mobileimages.lowes.com/productimages/ead08c36-e096-4977-8b94-1881c6fb2629/63794539.jpg?size=pdhism',
-    source: 'Lowe\'s / TOUGHBUILT'
-  },
-  'knipex-twistcut-pipe-cutter': {
-    image: 'https://web-assets.knipex.com/sites/default/files/styles/knipex_product_detail/public/903101-00-3.jpg?itok=YvPcgl-N',
-    source: 'KNIPEX'
-  },
-  'merach-t14-walking-pad': {
-    image: 'https://cdn.shopify.com/s/files/1/0507/1611/5119/files/T14.jpg?v=1745719343',
-    source: 'MERACH'
-  },  'bowflex-selecttech-552': {
+  'bowflex-selecttech-552': {
     image: 'https://www.bowflex.com/cdn/shop/files/bowflex-selecttech-results-series-552-dumbbell-weights-hero.png?v=1781824832&width=1080',
     source: 'BowFlex'
   },
