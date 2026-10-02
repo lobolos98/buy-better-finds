@@ -3,11 +3,13 @@ import { manufacturerImageOverrides } from './manufacturer-images.js';
 import { diyProducts } from './diy-products.js';
 import { fitnessProducts } from './fitness-products.js';
 import { lifestyleProducts } from './lifestyle-products.js';
+import { halloweenProducts } from './halloween-products.js';
 
 const productsCatalog = [
   ...diyProducts,
   ...fitnessProducts,
   ...lifestyleProducts,
+  ...halloweenProducts,
   {
     slug: 'sony-wh-1000xm5', amazonAsin: 'B09XS7JWHH', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉', image: 'https://d1ncau8tqf99kp.cloudfront.net/converted/103364_original_local_1200x1050_v3_converted.webp', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
     bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and up to 30 hours of battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b', dailyDealDate: '2026-09-22'
