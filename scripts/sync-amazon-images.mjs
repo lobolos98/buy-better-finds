@@ -18,16 +18,13 @@ const products = [];
 for (const sourceFile of PRODUCTS_FILES) {
   const source = await fs.readFile(sourceFile, 'utf8');
 
-  // First parse the original single-quoted catalog entries.
+  // Parse the single-quoted catalog entries.
   for (const match of source.matchAll(/slug:\s*'([^']+)'[^]*?name:\s*'([^']+)'[^]*?(?:amazonAsin:\s*'([^']+)')?[^]*?image:\s*'([^']+)'/g)) {
-  products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
-}
-
-// Then parse the newer JSON-style entries that use double-quoted keys/values.
+    products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
   }
 
-  // Then parse the newer JSON-style entries that use double-quoted keys/values.
-  for (const match of source.matchAll(/\"slug\":\"([^\"]+)\"[^]*?\"name\":\"([^\"]+)\"[^]*?(?:\"amazonAsin\":\"([^\"]+)\")?[^]*?\"image\":\"([^\"]+)\"/g)) {
+  // Parse newer JSON-style entries too.
+  for (const match of source.matchAll(/"slug":"([^"]+)"[^]*?"name":"([^"]+)"[^]*?(?:"amazonAsin":"([^"]+)")?[^]*?"image":"([^"]+)"/g)) {
     if (!products.some((product) => product.slug === match[1])) {
       products.push({ slug: match[1], name: match[2], asin: match[3] || null, image: match[4] });
     }
