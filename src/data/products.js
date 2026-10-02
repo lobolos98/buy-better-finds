@@ -822,7 +822,7 @@ export const products = productsCatalog.filter((product) => product?.slug && pro
     category: 'Gifts & Collectibles',
     price: 'Check price',
     icon: '★',
-    image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw5b0f2c5e/images/funko/upload/1/88928_PopMarvel_Groot_WEB.png',
+    image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw5cd6b83e/images/funko/upload/82500_Marvel_NC_SpiderMan_POP_GLAM-WEB.png',
     imageAlt: 'Funko Pop! Marvel Collectible Figure',
     bestFor: 'Marvel fandom gifts and displays',
     why: 'Compact character collectible designed for display, gifting, and fandom collecting.',
