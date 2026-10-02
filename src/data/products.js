@@ -40,7 +40,7 @@ const productsCatalog = [
   {
     slug: 'apple-airpods-5', amazonAsin: 'B0HJB69GJL', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 5 wireless earbuds',
-    bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0HJB69GJL?tag=buybetterfi06-20', dailyDealDate: '2026-10-01'
+    bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0HJB69GJL?tag=buybetterfi06-20', dailyDealDate: '2026-10-02'
   },
   {
     slug: 'apple-ipad-a16', amazonAsin: 'B0DZJ4N8Y5', name: 'Apple iPad 11-inch (A16)', category: 'Tech', price: 'Check price', icon: '▣',
@@ -50,7 +50,7 @@ const productsCatalog = [
   {
     slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼',
     image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill',
-    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html', dailyDealDate: '2026-10-02'
+    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html', dailyDealDate: '2026-10-04'
   },
   {
     slug: 'amazon-echo-dot', amazonAsin: 'B09B8V1LZ3', name: 'Amazon Echo Dot', category: 'Smart Home', price: 'Check price', icon: '◉',
