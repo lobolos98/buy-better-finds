@@ -23,8 +23,8 @@ export const manufacturerImageOverrides = {
     source: 'RENPHO'
   },
   'apple-watch-series-10': {
-    image: 'https://www.istoreil.co.il/media/catalog/product/a/p/apple_watch_series_10_46mm_lte_jet_black_aluminum_sport_band_black_pdp_image_position_1__wwen_2.jpg',
-    source: 'iStore'
+    image: 'https://www.apple.com/newsroom/images/2024/09/introducing-apple-watch-series-10/article/Apple-Watch-Series-10-lineup-240909_big.jpg.large.jpg',
+    source: 'Apple'
   },
   'anker-737-power-bank': {
     image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/products/A1289011-Anker_737_Power_Bank_PowerCore_24K_1.png?v=1775967275&width=3840',
