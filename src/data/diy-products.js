@@ -48,18 +48,6 @@ export const diyProducts = [
     watch: 'Check whether the listing is tool-only or includes batteries and a charger.'
   },
   {
-    slug: 'band-it-cp4000-d',
-    name: 'BAND-IT CP4000-D Cordless Center Punch Tool',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '⚙',
-    image: 'https://www.band-it-idex.com/wp-content/uploads/2023/06/CP4000-D-tool-white-web.jpg',
-    imageAlt: 'BAND-IT CP4000-D cordless center punch tool',
-    bestFor: 'High-volume clamp installation',
-    why: 'A cordless center-punch tool designed for repeatable clamp installation in shop and field environments.',
-    watch: 'Confirm compatibility with the center-punch clamp and band sizes you use.'
-  },
-  {
     slug: 'rothoblaas-torque-limiter',
     name: 'Rothoblaas TORQUE LIMITER',
     category: 'Tools & DIY',
