@@ -24,18 +24,6 @@ export const diyProducts = [
     watch: 'Confirm current availability and the exact model because this particular 10-inch listing has appeared as discontinued.'
   },
   {
-    slug: 'rubi-tech-flex-notched-trowels',
-    name: 'RUBIFLEX Handle TECH-FLEX Notched Trowels',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '▰',
-    image: '/images/products/rubi-tech-flex.svg',
-    imageAlt: 'RUBIFLEX TECH-FLEX notched trowel',
-    bestFor: 'Tile adhesive and surface-setting work',
-    why: 'Flexible, rust-free TECH-FLEX notched trowel designs intended for controlled adhesive application.',
-    watch: 'Choose the notch size and handle configuration that match the material and application.'
-  },
-  {
     slug: 'metabo-hpt-reciprocating-saw',
     name: 'Metabo Reciprocating Saw',
     category: 'Tools & DIY',
@@ -58,18 +46,6 @@ export const diyProducts = [
     bestFor: 'Controlled tightening in timber connections',
     why: 'An adjustable torque-limiting tool intended to control tightening without exceeding the fastener torque range.',
     watch: 'Select the torque range and adapter configuration that match your fastening system.'
-  },
-  {
-    slug: 'toughbuilt-post-hole-digger',
-    name: 'TOUGHBUILT Post Hole Digger',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '⌂',
-    image: '/images/products/toughbuilt-post-hole-digger.svg',
-    imageAlt: 'TOUGHBUILT post hole digger',
-    bestFor: 'Fence posts and outdoor construction',
-    why: 'A heavy-duty post-hole digging tool for preparing holes during fencing, landscaping, and outdoor projects.',
-    watch: 'Check handle length, jaw design, and current retailer availability before ordering.'
   },
   {
     slug: 'sealey-space-warmer-indirect-heater',
@@ -96,18 +72,6 @@ export const diyProducts = [
     watch: 'Confirm rail configuration and wheel setup for the tile formats and materials you cut.'
   },
   {
-    slug: 'edgemate-pro-multi-cartridge-sharpener',
-    name: 'EdgeMate Pro Multi Cartridge Sharpener',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '◇',
-    image: '/images/products/edgemate-sharpener.svg',
-    imageAlt: 'EdgeMate Pro Multi Cartridge Sharpener',
-    bestFor: 'Tool and blade edge maintenance',
-    why: 'A compact sharpening-tool format designed for repeatable edge maintenance across compatible cartridges.',
-    watch: 'Check the included cartridge types and the edges each cartridge is designed to sharpen.'
-  },
-  {
     slug: 'macroza-sc300-pro-wall-chaser',
     name: 'MACROZA Wall Chaser Machine SC300 PRO',
     category: 'Tools & DIY',
@@ -120,18 +84,6 @@ export const diyProducts = [
     watch: 'This is professional equipment; confirm dust extraction, blade setup, power requirements, and material limits.'
   },
   {
-    slug: 'lenox-bi-metal-speed-slot-hole-saw',
-    name: 'LENOX Tools Bi-Metal Speed Slot Hole Saw',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '◉',
-    image: '/images/products/lenox-speed-slot.svg',
-    imageAlt: 'LENOX Bi-Metal Speed Slot Hole Saw',
-    bestFor: 'Fast hole cutting in wood and metal',
-    why: 'A bi-metal hole saw design with Speed Slot geometry for cutting common construction materials and easier plug removal.',
-    watch: 'Confirm the exact diameter and tooth configuration because the Speed Slot line is sold in many sizes.'
-  },
-  {
     slug: 'bottleloom-titanium-bottle-strip-cutter',
     name: 'Bottleloom Professional Grade Titanium Bottle Strip Cutter',
     category: 'Tools & DIY',
@@ -142,30 +94,6 @@ export const diyProducts = [
     bestFor: 'Upcycling and creative DIY projects',
     why: 'A compact bottle-cutting tool designed to turn discarded plastic bottles into usable plastic strips.',
     watch: 'Check current availability and strip-width options because this is a specialized DIY product.'
-  },
-  {
-    slug: 'ridgid-compound-leverage-wrenches',
-    name: 'RIDGID Compound Leverage Wrenches',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '⚙',
-    image: '/images/products/ridgid-compound-leverage-wrench.svg',
-    imageAlt: 'RIDGID compound leverage wrench',
-    bestFor: 'Heavy-duty pipe work',
-    why: 'Compound leverage wrench designs multiply applied turning force for difficult or seized pipe connections.',
-    watch: 'Choose the wrench size and pipe capacity that match the work.'
-  },
-  {
-    slug: 'magmaster-v2-magnetic-tool-holder',
-    name: 'MagMaster V2 Magnetic Tool & Hardware Holder',
-    category: 'Tools & DIY',
-    price: 'Check price',
-    icon: '▣',
-    image: '/images/products/magmaster-v2.svg',
-    imageAlt: 'MagMaster V2 magnetic tool and hardware holder',
-    bestFor: 'Keeping small tools and hardware within reach',
-    why: 'A clip-on magnetic holder designed to keep tools and loose hardware accessible while you work.',
-    watch: 'Magnetic holding strength and the weight of the tools you carry will determine how useful it is on your setup.'
   },
   {
     slug: 'southwire-digangl-digital-angle-gauge',
