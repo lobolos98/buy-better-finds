@@ -816,6 +816,19 @@ export const products = productsCatalog.filter((product) => product?.slug && pro
   {"slug":"ecobee-smart-thermostat-premium","name":"ecobee Smart Thermostat Premium","category":"Smart Home","price":"Check price","icon":"⌂","image":"https://images.ctfassets.net/a3qyhfznts9y/3Pk9XugWXYQXdiPmssg4r4/e6ddc84bb15c2c2611037d8e5ca5e994/Ares_-_Slot_2_-_Mobile.png?fm=png&h=1366&q=80&w=1366","imageAlt":"ecobee Smart Thermostat Premium","bestFor":"Connected climate control","why":"Smart thermostat designed for scheduling, remote control, and connected-home routines.","watch":"Check HVAC compatibility before installation.","url":"https://www.ecobee.com/en-us/smart-thermostats/smart-thermostat-premium/"},
   {"slug":"lego-mini-orchid","name":"LEGO Botanicals Mini Orchid","category":"Gifts & Collectibles","price":"Check price","icon":"✦","image":"https://www.lego.com/cdn/cs/set/assets/bltade30768c791af76/10343_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500","imageAlt":"LEGO Botanicals Mini Orchid","bestFor":"Desk and décor gifts","why":"A compact LEGO Botanicals build that combines a relaxing building experience with display-friendly décor.","watch":"Its appeal is strongest for people who enjoy both building and decorative displays.","url":"https://www.lego.com/en-us/product/mini-orchid-10343"},
   {"slug":"dremel-4300-rotary-tool","name":"Dremel 4300 Rotary Tool","category":"Tools & DIY","price":"Check price","icon":"⚙","image":"https://shop.dremel.com/cdn/shop/files/dremel_4300-5-40_update_3000x3000_rendition_PNG.png?v=1746473729&width=416","imageAlt":"Dremel 4300 Rotary Tool","bestFor":"DIY cutting, sanding, grinding, and detail work","why":"Versatile rotary-tool platform for detailed cutting, shaping, sanding, and grinding tasks.","watch":"Choose the accessory set that matches the materials and jobs you expect to tackle.","url":"https://www.dremel.com/us/en/p/4300-5-40-f0134300pb"}
+  {
+    slug: 'funko-pop-marvel',
+    name: 'Funko Pop! Marvel Collectible Figure',
+    category: 'Gifts & Collectibles',
+    price: 'Check price',
+    icon: '★',
+    image: 'https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw5b0f2c5e/images/funko/upload/1/88928_PopMarvel_Groot_WEB.png',
+    imageAlt: 'Funko Pop! Marvel Collectible Figure',
+    bestFor: 'Marvel fandom gifts and displays',
+    why: 'Compact character collectible designed for display, gifting, and fandom collecting.',
+    watch: 'Specific characters and editions vary in availability and price.',
+    url: 'https://funko.com/'
+  },
 ];
 
   if (!amazonOverride && !manufacturerOverride) return {
