@@ -2,6 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { halloweenProducts } from '../../../../data/halloween-products.js';
 import { getRecommendation } from '../../../../data/recommendations.js';
+import { amazonImageOverrides } from '../../../../data/amazon-images.js';
 
 const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score ?? 0) - (getRecommendation(a).score ?? 0));
 ---
@@ -17,12 +18,15 @@ const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score 
   </section>
   <section class="section" id="halloween-finds">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">100 AMAZON HALLOWEEN FINDS</div><h2>Decorate, entertain, and build.</h2><p>Every item below is an Amazon-only Halloween shopping target using your Buy Better Finds affiliate tag. Scores use the same site-wide Buy Better Score system as the rest of the catalog. Exact Amazon listings and product imagery will be resolved automatically when Amazon Creators API access is enabled.</p></div></div>
+      <div class="section-head"><div><div class="eyebrow">100 AMAZON HALLOWEEN FINDS</div><h2>Decorate, entertain, and build.</h2><p>Every item below is an Amazon-only Halloween shopping target using your Buy Better Finds affiliate tag. Scores use the same site-wide Buy Better Score system as the rest of the catalog. Exact Amazon ASINs and product imagery will be resolved automatically when Amazon Creators API access is enabled.</p></div></div>
       <div class="grid product-grid">
         {ranked.map((product) => {
           const rec = getRecommendation(product);
+          const amazon = amazonImageOverrides[product.slug];
+          const amazonUrl = amazon?.asin ? `https://www.amazon.com/dp/${amazon.asin}?tag=buybetterfi06-20` : product.url;
+          const productImage = amazon?.image || product.image;
           return <article class="card product-card">
-            <a class="product-image" href={`/products/${product.slug}/`}><img src={product.image} alt={product.imageAlt} loading="lazy" width="900" height="900" /><span class="pick-badge">HALLOWEEN FIND</span></a>
+            <a class="product-image" href={`/products/${product.slug}/`}><img src={productImage} alt={product.imageAlt} loading="lazy" width="900" height="900" /><span class="pick-badge">HALLOWEEN FIND</span></a>
             <div class="tag">SEASONAL & HOLIDAYS</div>
             <h3>{product.name}</h3>
             <div class="score-row"><strong>{Number(rec.score).toFixed(1)}</strong><span>BUY BETTER SCORE</span></div>
@@ -30,7 +34,7 @@ const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score 
             <p>{product.why}</p>
             <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
             <div class="card-footer"><strong>{product.price}</strong><a href={`/products/${product.slug}/`}>See our take →</a></div>
-            <div class="affiliate-actions"><a href={product.url} target="_blank" rel="nofollow sponsored noopener">Check retailer →</a></div>
+            <div class="affiliate-actions"><a href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div>
           </article>
         })}
       </div>
