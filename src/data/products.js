@@ -24,6 +24,12 @@ const productsCatalog = [
   },
 
   {
+    slug: 'apple-airpods-4', name: 'Apple AirPods 4', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/article/Apple-AirPods-4-with-case-240909_big.jpg.large.jpg', imageAlt: 'Apple AirPods 4',
+    bestFor: 'Everyday wireless listening', why: 'Open-ear wireless earbuds with the H2 chip, USB-C charging case, and an available ANC model.', watch: 'AirPods 4 and AirPods 4 with ANC are separate models; confirm the exact version before buying.', url: 'https://www.apple.com/airpods-4/'
+  },
+
+  {
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000CBSNKQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
