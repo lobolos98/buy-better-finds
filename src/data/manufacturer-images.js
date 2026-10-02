@@ -118,7 +118,7 @@ export const manufacturerImageOverrides = {
     image: 'https://magnatiles.com/cdn/shop/files/25Classic32_FR11_RGB.jpg?v=1748978065&width=3000',
     source: 'MAGNA-TILES'
   },
-  'snap-circuits-jr-sc-100': {
+  'snap-circuits-jr-sc100': {
     image: 'https://elenco.com/wp-content/uploads/2021/11/SC_100_Box_1-scaled.jpg',
     source: 'Elenco'
   },
