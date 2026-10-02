@@ -1,5 +1,5 @@
 // Verified Amazon Halloween collection for Buy Better Finds.
-// 40 total items: exact Amazon ASINs, direct product-page links, and verified Amazon-hosted product images.
+// 39 total items: exact Amazon ASINs, direct product-page links, and verified Amazon-hosted product images.
 
 export const halloweenProducts = [
   {
@@ -301,21 +301,6 @@ export const halloweenProducts = [
     "watch": "Check the current Amazon listing for price, availability, size, and options.",
     "url": "https://www.amazon.com/dp/B08BC5YWTD?tag=buybetterfi06-20",
     "score": 8.5
-  },
-  {
-    "slug": "halloween-women-halloween-yellow-costume-accessories-set-b0gy73r2kj",
-    "name": "Women Halloween Yellow Costume Accessories Set",
-    "category": "Adult Costumes",
-    "price": "Check Amazon price",
-    "icon": "🎃",
-    "image": "https://m.media-amazon.com/images/P/B0GY73R2KJ.01.LZZZZZZZ.jpg",
-    "imageAlt": "Women Halloween Yellow Costume Accessories Set — Amazon product photo",
-    "amazonAsin": "B0GY73R2KJ",
-    "bestFor": "Halloween shopping and seasonal decorating",
-    "why": "A specific Amazon seasonal item selected for the Buy Better Finds Halloween collection.",
-    "watch": "Check the current Amazon listing for price, availability, size, and options.",
-    "url": "https://www.amazon.com/dp/B0GY73R2KJ?tag=buybetterfi06-20",
-    "score": 8.3
   },
   {
     "slug": "halloween-12-piece-hanging-halloween-witch-hats-b0d454zjkf",
