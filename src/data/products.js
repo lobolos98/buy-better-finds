@@ -3,7 +3,8 @@ import { manufacturerImageOverrides } from './manufacturer-images.js';
 import { diyProducts } from './diy-products.js';
 import { fitnessProducts } from './fitness-products.js';
 import { lifestyleProducts } from './lifestyle-products.js';
-// Halloween catalog uses a named ESM export.\nimport { halloweenProducts } from './halloween-products.js';
+// Halloween catalog uses a named ESM export.
+import { halloweenProducts } from './halloween-products.js';
 
 const productsCatalog = [
   ...diyProducts,
