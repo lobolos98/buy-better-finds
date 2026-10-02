@@ -304,7 +304,28 @@ const scoreOverrides = {
   "trtl-travel-pillow-lifestyle": 7.8,
   "jisulife-handheld-fan-lifestyle": 8.4,
   "kerasal-intensive-foot-repair-lifestyle": 7.8,
-  "tweezerman-slant-tweezer-lifestyle": 8.5
+  "tweezerman-slant-tweezer-lifestyle": 8.5,
+
+  'halloween-20-inch-plush-spider': 8.2,
+  'halloween-50-inch-plush-spider': 8.4,
+  'halloween-80-inch-plush-spider': 8.6,
+  'halloween-4pc-13-inch-skeletons': 8.8,
+  'halloween-ceramic-ghost-set': 8.7,
+  'halloween-lit-pumpkin-timer': 8.5,
+  'halloween-haunted-projector': 8.8,
+  'halloween-60-inch-poseable-skeleton': 9.0,
+  'halloween-animated-doorbell-eye': 8.5,
+  'halloween-9ft-eerie-fabric': 8.1,
+  'halloween-36ft-eerie-fabric': 8.5,
+  'halloween-peeking-cauldron': 8.3,
+  'halloween-raven-bones-blow-mold': 8.4,
+  'halloween-raven-ribcage-blow-mold': 8.7,
+  'halloween-monster-house': 8.2,
+  'halloween-jack-skeleton-blow-mold': 8.6,
+  'halloween-ultra-skelly-65': 9.1,
+  'lego-halloween-pumpkin-lantern-40872': 9.0,
+  'lego-halloween-skull-candle-40883': 8.9,
+  'lego-nightmare-before-christmas-21351': 9.2,
 };
 
 export function getRecommendation(product) {
