@@ -23,9 +23,10 @@ const productCards = products.map((product) => {
   const why = escapeHtml(product.why);
   const watch = escapeHtml(product.watch);
   const price = escapeHtml(product.price);
-  const amazonUrl = product.amazonAsin
-    ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
-    : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`);
+  const amazonUrl = product.amazonUrl
+    ?? (product.amazonAsin
+      ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
+      : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`));
 
   return `<article class="card product-card">
     <a class="product-image" href="/products/${slug}/" aria-label="View ${name}">
