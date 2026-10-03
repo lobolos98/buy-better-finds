@@ -463,7 +463,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/1101880_1.jpg', imageAlt: 'OXO Good Grips 9-Inch Tongs with Silicone Heads',
-    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', url: 'https://www.oxo.com/9-tongs-with-silicone-heads-623.html'
+    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', amazonAsin: 'B003L0OYJ4', url: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-salad-spinner', name: 'OXO Good Grips Salad Spinner', category: 'Home & Kitchen', price: '$32.99', icon: '◇',
