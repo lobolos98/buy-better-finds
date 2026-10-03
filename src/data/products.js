@@ -478,7 +478,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-swivel-peeler', name: 'OXO Good Grips Swivel Peeler', category: 'Home & Kitchen', price: '$13.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_20081v5_solo.jpg', imageAlt: 'OXO Good Grips Swivel Peeler',
-    bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.oxo.com/swivel-peeler.html'
+    bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.amazon.com/dp/B00004OCIP?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
