@@ -6,7 +6,8 @@ import { amazonProductUrl, amazonSearchUrl } from '../utils/amazon.js';
 import { getDealOfTheDay } from '../utils/priceWatch.js';
 const validCatalog = catalog.filter((product) => product?.slug);
 const products = validCatalog.slice(0, 8);
-const amazonUrl = (product) => product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || '');
+const amazonUrl = (product) => product?.amazonUrl
+  ?? (product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || ''));
 const categoryPreviews = [
   { name: 'Tech', href: '/categories/tech/', image: '/images/products/sony-wh-1000xm5.svg', alt: 'Tech products including Sony headphones', description: 'Headphones, tablets, accessories & more' },
   { name: 'Home & Kitchen', href: '/categories/home-kitchen/', image: '/images/products/ninja-af101.svg', alt: 'Home and kitchen products including an air fryer', description: 'Kitchen gear, cleaning & organization' },
