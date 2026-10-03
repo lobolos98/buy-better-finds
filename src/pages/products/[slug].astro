@@ -88,9 +88,9 @@ const focusedGuide = guideByName[product.name];
 const comparison = comparisonMap[product.slug];
 const guideHref = focusedGuide?.href ?? categoryGuide?.href;
 const guideLabel = focusedGuide?.label ?? categoryGuide?.label;
-const affiliateUrl = product.amazonAsin
-  ? amazonProductUrl(product.amazonAsin)
-  : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name));
+const affiliateUrl = product.amazonUrl
+  ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin)
+  : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name)));
 const reviewDate = 'September 22, 2026';
 const dealStatus = getPriceWatchStatus(product.dailyDealDate);
 const priceHistory = getPriceHistory(product.slug);
