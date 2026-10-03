@@ -488,7 +488,7 @@ const supplementalProducts = [
   {
     slug: 'kitchenaid-artisan-plus-5qt', name: 'KitchenAid Artisan Plus 5-Quart Stand Mixer', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
     image: 'https://content.abt.com/image.php/c17afe17c3a886a6d29c52c15dc7ba46?canvas=&ck=2&height=750&image=%2Fimages%2Fproducts%2FBDP_Images%2Fkitchenaid-stand-mixer-ksm50pkvxft.jpg&width=750', imageAlt: 'KitchenAid Artisan Plus 5-Quart Stand Mixer',
-    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with precision speed control, bowl light, and a broad attachment ecosystem.', watch: 'Optional attachments increase the total investment.', url: 'https://www.kitchenaid.com/countertop-appliances/stand-mixers/tilt-head-stand-mixers/p.kitchenaid-artisan-plus-5-quart-stand-mixer.KSM50PKVXBK.html'
+    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with precision speed control, bowl light, and a broad attachment ecosystem.', watch: 'Optional attachments increase the total investment.', url: 'https://www.amazon.com/dp/B0D9VZVQYH?tag=buybetterfi06-20'
   },
   {
     slug: 'solo-stove-summit-27', name: 'Solo Stove Summit 27 Smokeless Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
