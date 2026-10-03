@@ -68,7 +68,7 @@ const trending = trendingProducts
               <div class="best"><strong>Best for:</strong> {product.bestFor}</div>
               <div class="actions">
                 <a class="btn secondary" href={`/products/${product.slug}/`}>See Our Take →</a>
-                <a class="amazon-btn" href={product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+                <a class="amazon-btn" href={product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name))} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
               </div>
               <a class="source" href={sourceUrl} target="_blank" rel="noopener noreferrer">Research signal: {sourceLabel} ↗</a>
             </div>
