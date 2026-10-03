@@ -48,10 +48,10 @@ export const dealQueue = [
     manufacturer: 'TP-Link',
     manufacturerImage: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg',
     manufacturerUrl: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/',
-    amazonUrl: 'https://www.amazon.com/s?k=TP-Link+EP40M&tag=buybetterfi06-20',
-    amazonAsin: null,
+    amazonUrl: 'https://www.amazon.com/dp/B0CVMXZMDM?tag=buybetterfi06-20',
+    amazonAsin: 'B0CVMXZMDM',
     amazonPrice: null,
-    status: 'verify-amazon'
+    status: 'verified'
   },
   {
     slug: 'ring-battery-doorbell-2k',
