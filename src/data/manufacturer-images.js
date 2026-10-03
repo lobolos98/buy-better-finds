@@ -122,6 +122,10 @@ export const manufacturerImageOverrides = {
     image: 'https://elenco.com/wp-content/uploads/2021/11/SC_100_Box_1-scaled.jpg',
     source: 'Elenco'
   },
+  'tp-link-ep40m': {
+    image: 'https://www.matteralpha.com/uploads/kasa-ep40m-smart-wifi-outdoor-plug-product.jpg',
+    source: 'Matter Alpha product image of TP-Link Kasa EP40M'
+  },
   'amazon-echo-dot': {
     image: 'https://m.media-amazon.com/images/I/315PBUzfZiL._SL1500_.jpg',
     source: 'Amazon'
