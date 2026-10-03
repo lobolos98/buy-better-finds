@@ -513,7 +513,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-4-inch-pizza-wheel', name: 'OXO Good Grips 4-Inch Pizza Wheel', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11301000_2.jpg', imageAlt: 'OXO Good Grips 4-Inch Pizza Wheel',
-    bestFor: 'Cutting thick-crust pizza', why: 'Large stainless-steel blade with a thumb guard and soft non-slip handle.', watch: 'Its larger wheel needs a little more drawer space.', url: 'https://www.oxo.com/oxo-gg-large-pizza-wheel.html'
+    bestFor: 'Cutting thick-crust pizza', why: 'Large stainless-steel blade with a thumb guard and soft non-slip handle.', watch: 'Its larger wheel needs a little more drawer space.', amazonAsin: 'B08K3STKK1', url: 'https://www.amazon.com/dp/B08K3STKK1?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-avocado-slicer', name: 'OXO 3-in-1 Avocado Slicer', category: 'Home & Kitchen', price: '$11.99', icon: '⌁',
