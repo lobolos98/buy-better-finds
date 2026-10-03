@@ -46,7 +46,7 @@ export const dealQueue = [
     name: 'TP-Link Kasa Smart Outdoor Plug EP40M',
     category: 'Smart Home',
     manufacturer: 'TP-Link',
-    manufacturerImage: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg',
+    manufacturerImage: 'https://www.matteralpha.com/uploads/kasa-ep40m-smart-wifi-outdoor-plug-product.jpg',
     manufacturerUrl: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/',
     amazonUrl: 'https://www.amazon.com/dp/B0CVMXZMDM?tag=buybetterfi06-20',
     amazonAsin: 'B0CVMXZMDM',
