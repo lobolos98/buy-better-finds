@@ -99,9 +99,9 @@ const productsCatalog = [
   },
 
   {
-    slug: 'tp-link-ep40m', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡',
+    slug: 'tp-link-ep40m', amazonAsin: 'B0CVMXZMDM', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡',
     image: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg', imageAlt: 'TP-Link Kasa Smart Outdoor Plug EP40M',
-    bestFor: 'Outdoor smart-home control', why: 'A weather-resistant dual-outlet smart plug for outdoor lights and other connected devices.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', url: 'https://www.tp-link.com/us/home-networking/smart-plug/ep40m/v1/', dailyDealDate: '2026-10-03'
+    bestFor: 'Outdoor smart-home control', why: 'A Matter-certified dual-outlet smart plug for outdoor lights and other connected devices, with individually controlled outlets and IP64 weather resistance.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', url: 'https://www.amazon.com/dp/B0CVMXZMDM?tag=buybetterfi06-20', dailyDealDate: '2026-10-03'
   },
 
   {
