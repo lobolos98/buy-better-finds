@@ -252,7 +252,7 @@ const productsCatalog = [
 
   {
     slug: 'eltamd-uv-clear-spf-46', name: 'EltaMD UV Clear Broad-Spectrum SPF 46', category: 'Beauty & Personal Care', price: '$14.00', icon: '✦',
-    amazonAsin: 'B002MSN3QQ', image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002MSN3QQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'EltaMD UV Clear Broad-Spectrum SPF 46',
+    amazonAsin: 'B002MSN3QQ', image: 'https://lirp.cdn-website.com/f2fb22d0/dms3rep/multi/opt/EltaMD%2BUV%2BClear%2BBroad-Spectrum%2BSPF%2B46%2B1.7%2Bfl.oz-1920w.png', imageAlt: 'EltaMD UV Clear Broad-Spectrum SPF 46',
     bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', url: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20'
   },
   {
