@@ -487,7 +487,7 @@ const supplementalProducts = [
   },
   {
     slug: 'kitchenaid-artisan-plus-5qt', amazonAsin: 'B00005UP2K', name: 'KitchenAid Artisan 5-Quart Tilt-Head Stand Mixer - White', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
-    image: 'https://m.media-amazon.com/images/I/41w-K0bXNZL._SL1500_.jpg', imageAlt: 'KitchenAid Artisan 5-Quart Tilt-Head Stand Mixer in White',
+    image: 'https://m.media-amazon.com/images/I/71hNoU5FYuL._AC_SL1500_.jpg', imageAlt: 'KitchenAid Artisan 5-Quart Tilt-Head Stand Mixer in White',
     bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', url: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20'
   },
   {
