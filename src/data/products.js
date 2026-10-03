@@ -486,9 +486,9 @@ const supplementalProducts = [
     bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.oxo.com/5-quart-mixing-bowl-244-0.html'
   },
   {
-    slug: 'kitchenaid-artisan-plus-5qt', amazonAsin: 'B00005UP2K', name: 'KitchenAid Artisan 5-Quart Tilt-Head Stand Mixer - White', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
-    image: 'https://m.media-amazon.com/images/I/71hNoU5FYuL._AC_SL1500_.jpg', imageAlt: 'KitchenAid Artisan 5-Quart Tilt-Head Stand Mixer in White',
-    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', url: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20'
+    slug: 'kitchenaid-artisan-plus-5qt', amazonAsin: 'B0769ZQWH7', name: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer - Milkshake', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
+    image: 'https://m.media-amazon.com/images/I/41JBw54siWL._SL500_.jpg', imageAlt: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer in Milkshake',
+    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', url: 'https://www.amazon.com/dp/B0769ZQWH7?tag=buybetterfi06-20'
   },
   {
     slug: 'solo-stove-summit-27', name: 'Solo Stove Summit 27 Smokeless Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
