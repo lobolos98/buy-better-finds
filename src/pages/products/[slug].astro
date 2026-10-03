@@ -57,6 +57,29 @@ export function getStaticPaths() {
 }
 
 const { product } = Astro.props;
+const recommendationCase = {
+  'sony-wh-1000xm5': 'Its strongest case is the combination of active noise cancellation, long-session comfort, and premium everyday listening features for travel and focused work.',
+  'apple-airpods-5': 'The appeal is convenience: a compact everyday listening option that fits naturally into the Apple ecosystem without the bulk of over-ear headphones.',
+  'apple-ipad-a16': 'Its value is versatility—a fast tablet that can handle streaming, browsing, schoolwork, and light productivity without requiring a full laptop setup.',
+  'apple-watch-series-10': 'The case is the combination of fitness tracking and smartwatch functions in one device, especially for shoppers already using an iPhone.',
+  'anker-nano-power-bank': 'Its biggest advantage is portability, making it useful for everyday backup power when carrying a larger power bank would be unnecessary.',
+  'logitech-mx-master-3s': 'It is built for productivity, with controls and multi-device features that become more useful the more time you spend working at a desktop.',
+  'ninja-af101': 'The 4-quart format makes this a practical choice for smaller households that want quick countertop cooking without a large appliance footprint.',
+  'govee-smart-light-bulbs': 'The reason to consider these is the flexibility of adding app-controlled, customizable lighting without replacing an entire lighting system.',
+  'oxo-everyday-cutting-board': 'Its case is everyday kitchen practicality: a dedicated prep surface that is easy to reach for during routine chopping and food preparation.',
+  'dyson-v8': 'The strongest case is grab-and-go cordless cleaning for quick messes and hard-to-reach areas rather than maximum whole-home runtime.',
+  'instant-vortex-plus': 'It is worth considering when you want a versatile countertop cooker and more functions than a basic air fryer, while still keeping the workflow simple.',
+  'shark-navigator-lift-away': 'Its case is whole-home versatility: an upright format for floor coverage plus a lift-away design for stairs and above-floor cleaning.',
+  'skil-brushless-flip-drill': 'The flip-head design solves a practical problem by making tight-space drilling and driving easier than with a conventional fixed-head drill.',
+  'solo-stove-tower': 'This is aimed at outdoor entertaining where a tall patio format and visual presentation matter alongside heat output.',
+  'weber-spirit-e210': 'The compact two-burner format is the main reason to consider it when you want straightforward backyard grilling without a large grill footprint.',
+  'tp-link-ep40m': 'Its case is outdoor automation: two independently controlled outlets, scheduling, and outdoor-oriented construction make it useful for lights and other connected devices.',
+  'ring-battery-doorbell': 'The battery format provides installation flexibility when running new wiring is inconvenient, but subscription costs should be part of the buying decision.',
+  'amazon-echo-dot': 'Its value grows when you want a compact voice-control hub for timers, music, and compatible smart-home routines.',
+  'yeti-rambler': 'The case is durable insulated drinkware for people who carry drinks regularly and want to choose a size and lid configuration around their routine.',
+  'stanley-quencher': 'Its strongest case is high-volume hydration for people who want to carry a large drink throughout the day, provided the larger footprint works for them.'
+};
+
 const recommendation = getRecommendation(product);
 const related = products.filter((item) => item.slug !== product.slug && item.category === product.category).slice(0, 3);
 const categorySlug = product.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -193,7 +216,7 @@ const breadcrumbSchema = {
           <div class="recommendation-card">
             <div class="eyebrow">WHY WE RECOMMEND IT</div>
             <h2 id="why-recommend-heading">The case for this find</h2>
-            <ul>{(recommendation.pros ?? []).map((item) => <li>{item}</li>)}</ul>
+            <p class="recommendation-case">{recommendationCase[product.slug] ?? product.why}</p><ul>{(recommendation.pros ?? []).map((item) => <li>{item}</li>)}</ul>
           </div>
           <div class="recommendation-card caution">
             <div class="eyebrow">WHAT COULD CHANGE OUR RECOMMENDATION</div>
