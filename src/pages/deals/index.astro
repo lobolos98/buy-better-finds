@@ -38,7 +38,7 @@ const currentDeal = deals.find((p) => p.dailyDealDate === EDITORIAL_TODAY) ?? nu
             <p>{product.why}</p>
             <div class="score"><strong>{recommendation.score}</strong><span>/10 Buy Better Score</span></div>
             <a class="take" href={`/products/${product.slug}/`}>See our take →</a>
-            <a class="amazon" href={(product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name))} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+            <a class="amazon" href={(product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name)))} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
           </article>;
         })}
       </div>
