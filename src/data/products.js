@@ -467,7 +467,7 @@ const supplementalProducts = [
   },
   {
     slug: 'oxo-salad-spinner', name: 'OXO Good Grips Salad Spinner', category: 'Home & Kitchen', price: '$32.99', icon: '◇',
-    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/1/32480_1.jpg', imageAlt: 'OXO Good Grips Salad Spinner',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_32480_3_1.jpg', imageAlt: 'OXO Good Grips Salad Spinner',
     bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', url: 'https://www.oxo.com/salad-spinner.html'
   },
   {
