@@ -587,7 +587,7 @@ const supplementalProducts = [
   },
   {
     slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: '$129.99', icon: '◇',
-    image: 'https://assets.keter.com/transform/e81c5889-2946-4b31-98c0-1323cece6a08/?io=transform%3Ascale%2Cwidth%3A528&quality=80', imageAlt: 'Keter Signature 50-Gallon Deck Box Walnut Brown',
+    image: 'https://i5.walmartimages.com/asr/3142a8d5-4b47-4d39-93fc-2fd76f666b43.450c1f32b83f53ea7550ae7caf751756.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768', imageAlt: 'Keter Signature 50-Gallon Deck Box Walnut Brown',
     bestFor: 'Cushions, pool gear, and gardening tools', why: 'Weather-resistant resin storage box with 50-gallon capacity, ventilation, carrying handles, and lockable lid.', watch: 'The 50-gallon size is best for medium-volume patio storage.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-50-gallon-deck-box-walnut-brown-263745.html'
   },
   {
