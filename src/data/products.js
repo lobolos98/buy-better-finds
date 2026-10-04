@@ -685,7 +685,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: '/images/products/disney-lorcana-hunny-rescue.svg', imageAlt: 'Disney Lorcana Hunny Rescue collectible',
     bestFor: 'Disney collectors and Lorcana players', why: 'Combines Disney fandom with collectible card-game appeal.',
-    watch: 'Availability and pricing can change quickly for collectible products.', url: 'https://www.amazon.com/s?k=Disney+Lorcana+Hunny+Rescue&tag=buybetterfi06-20'
+    watch: 'Availability and pricing can change quickly for collectible products.', url: 'https://www.amazon.com/dp/B0CGXJ8244?tag=buybetterfi06-20'
   },
   {
     slug: 'pokemon-30th-elite-trainer-box-gift',
