@@ -64,7 +64,7 @@ const productsCatalog = [
   },
   {
     slug: 'dyson-v8', amazonAsin: 'B0GT2DG9SK', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: '/images/products/dyson-v8.svg', imageAlt: 'Dyson V8 Cordless Vacuum',
+    image: 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/447266-01.jpg?%24responsive%24=&wid=800', imageAlt: 'Dyson V8 Cordless Vacuum',
     bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than larger corded vacuums.', url: 'https://www.dyson.com/vacuum-cleaners/cordless/v8/shop-all', dailyDealDate: '2026-10-06'
   },
   {
