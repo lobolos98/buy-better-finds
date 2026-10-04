@@ -378,7 +378,7 @@ const supplementalProducts = [
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
-    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch+Stamper&tag=buybetterfi06-20'
+    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20'
   },
   {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
@@ -805,7 +805,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: '/images/products/stitch-sticker-stamper.svg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
     bestFor: 'Disney fans and screen-free creative gifts', why: 'A portable creative activity combining a recognizable character with sticker play.',
-    watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/s?k=Melissa+Doug+Sticker+WOW+Disney+Stitch&tag=buybetterfi06-20'
+    watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20'
   },
 
 
