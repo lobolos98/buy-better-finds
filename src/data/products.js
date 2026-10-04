@@ -472,7 +472,7 @@ const supplementalProducts = [
   },
   {
     slug: 'oxo-garlic-press', name: 'OXO Good Grips Garlic Press', category: 'Home & Kitchen', price: '$28.99', icon: '⌁',
-    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/1/11107400_1.jpg', imageAlt: 'OXO Good Grips Garlic Press',
+    image: 'https://www.hartsofstur.com/media/catalog/product/1/1/11107400UK-OXO-Good-Grips-Garlic-Press.jpg', imageAlt: 'OXO Good Grips Garlic Press',
     bestFor: 'Fast garlic prep', why: 'Handheld garlic press designed for quick mincing without requiring a separate knife and board.', watch: 'A garlic press is specialized, so it adds value mainly if you cook with fresh garlic often.', url: 'https://www.oxo.com/garlic-press.html'
   },
   {
