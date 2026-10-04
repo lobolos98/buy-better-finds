@@ -231,7 +231,7 @@ const productsCatalog = [
 
   {
     slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: '$3.59', icon: '★',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00000IZKX&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'The Original Slinky',
+    image: 'https://i.ebayimg.com/images/g/KmcAAOSwBfNgnnUz/s-l1200.jpg', imageAlt: 'The Original Slinky',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00000IZKX', amazonUrl: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20'
   },
