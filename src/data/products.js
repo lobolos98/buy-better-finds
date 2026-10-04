@@ -441,9 +441,9 @@ const supplementalProducts = [
     bestFor: 'Travel and everyday backup charging', why: 'Portable battery with built-in USB-C connectivity and multiple charging ports for phones and other devices.', watch: 'Confirm the exact output and cable configuration for your devices.', url: 'https://www.anker.com/'
   },
   {
-    slug: 'amazon-echo-show-8', amazonAsin: 'B09B2SBHQK', name: 'Amazon Echo Show 8', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09B2SBHQK&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Amazon Echo Show 8 smart display',
-    bestFor: 'Kitchen timers, video calls, and smart-home control', why: 'Smart display that combines Alexa voice control with a screen for compatible smart-home, media, and communication features.', watch: 'Smart-display usefulness depends on the services and devices you already use.', url: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20'
+    slug: 'amazon-echo-show-8', amazonAsin: 'B0BLS3Y632', name: 'Amazon Echo Show 8', category: 'Tech', price: 'Check price', icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/31vBM9LK3CL._SL500_.jpg', imageAlt: 'Amazon Echo Show 8 (3rd Gen) smart display',
+    bestFor: 'Kitchen timers, video calls, and smart-home control', why: 'Smart display that combines Alexa voice control with a screen for compatible smart-home, media, and communication features.', watch: 'Smart-display usefulness depends on the services and devices you already use.', url: 'https://www.amazon.com/dp/B0BLS3Y632?tag=buybetterfi06-20'
   },
   {
     slug: 'amazon-fire-tv-stick-4k-select', amazonAsin: 'B0C6W3D4RM', name: 'Amazon Fire TV Stick 4K Select', category: 'Tech', price: 'Check price', icon: '▣',
