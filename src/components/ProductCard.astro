@@ -13,13 +13,10 @@ const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommenda
 ---
 <article class="card product-card">
   <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />}
-    <span class="image-fallback" aria-hidden="true">
-      {fallbackImage
-        ? <img class="fallback-real-image" src={fallbackImage} alt="" width="400" height="400" />
-        : <span>{product.icon}</span>}
-      {!fallbackImage && <small>{product.category}</small>}
-    </span>
+    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" onerror="this.style.display='none'; const fallback=this.nextElementSibling; if(fallback) fallback.style.display='flex';" />}
+    {fallbackImage && <span class="image-fallback" aria-hidden="true">
+      <img class="fallback-real-image" src={fallbackImage} alt="" width="400" height="400" />
+    </span>}
     <span class="pick-badge">BUY BETTER FIND</span>
   </a>
 
@@ -46,10 +43,8 @@ const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommenda
 .product-image img{width:100%;height:100%;display:block;object-fit:contain;padding:24px;transition:transform .25s ease}
 .product-image:hover img{transform:scale(1.04)}
 .pick-badge{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:#0f172a;color:#fff;font-size:9px;font-weight:900;letter-spacing:.1em}
-.image-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#f8fafc,#e7ebf1);color:#0f172a}
-.image-fallback > span{font-size:64px;line-height:1}
+.image-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#f3f5f8}
 .fallback-real-image{width:150px!important;height:150px!important;padding:16px!important;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.12)}
-.image-fallback small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#64748b}
 .product-image img + .image-fallback{display:none}.product-image img[style*="display: none"] + .image-fallback{display:flex}
 .product-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .score-mini{display:flex;flex-direction:column;align-items:flex-end;gap:1px;padding:5px 8px;border-radius:8px;background:#f1f5f9}
