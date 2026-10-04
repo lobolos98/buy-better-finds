@@ -151,10 +151,6 @@ export const manufacturerImageOverrides = {
     image: 'https://down-ph.img.susercontent.com/file/cn-11134207-820l4-mn1ojoidbapye7',
     source: 'Anker Official Store product image'
   },
-  'anker-power-bank-20000': {
-    image: 'https://m.media-amazon.com/images/I/61d8xY4G8WL._AC_SL1500_.jpg',
-    source: 'Amazon product image'
-  },
   'amazon-fire-tv-stick-4k-select': {
     image: 'https://media.adeo.com/mkp/406c943ecc35d164224fb2042cc95d62/media.jpg',
     source: 'Product image'
