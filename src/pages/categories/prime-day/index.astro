@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { products } from '../../../data/products.js';
+import { getRecommendation } from '../../../data/recommendations.js';
+
+const primeDaySlugs = [
+  'sony-wh-1000xm5-tech',
+  'apple-airtag-2',
+  'anker-737-power-bank',
+  'logitech-mx-keys-s',
+  'samsung-t7-shield',
+  'bose-qc-ultra-2',
+  'jbl-charge-5',
+  'kindle-paperwhite',
+  'amazon-echo-show-8',
+  'amazon-echo-dot',
+  'tp-link-ep40m',
+  'ninja-af101',
+  'dyson-v8',
+  'instant-vortex-plus',
+  'kitchenaid-artisan-stand-mixer',
+  'yeti-rambler',
+  'keter-signature-92-gallon',
+  'lego-bonsai-tree-10281',
+  'crayola-light-up-tracing-pad',
+  'original-slinky'
+];
+
+const primeProducts = primeDaySlugs
+  .map((slug) => products.find((product) => product?.slug === slug))
+  .filter((product) => product?.image);
+
+const amazonUrl = (product) => product?.amazonUrl
+  ?? (product?.amazonAsin
+    ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
+    : (product?.url || `https://www.amazon.com/s?k=${encodeURIComponent(product?.name || '')}&tag=buybetterfi06-20`));
+---
+
+<BaseLayout title="Prime Day Picks | Buy Better Finds" description="Buy Better Finds Prime Day picks: a curated selection of real products across tech, home, smart home, lifestyle, outdoor, and gifts.">
+  <section class="prime-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/seasonal-holidays/">Seasonal & Holidays</a><span>/</span><strong>Prime Day Picks</strong></div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">PRIME DAY 2026</div>
+          <h1>Prime Day picks worth watching.</h1>
+          <p>We’re narrowing the Prime Day shopping universe to products worth a closer look—real products, clear tradeoffs, and Buy Better Finds scores before you shop.</p>
+          <div class="event-date"><strong>CURATED PICKS</strong><span>Updated as the event and product selection change</span></div>
+          <div class="hero-actions">
+            <a class="btn primary" href="#prime-day-picks">Shop the picks ↓</a>
+            <a class="btn secondary" href="/categories/seasonal-holidays/prime-big-deal-days/">Prime Big Deal Days guide →</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <span class="card-label">WHAT WE'RE WATCHING</span>
+          <h2>Prime Day categories</h2>
+          <ul>
+            <li><span>01</span>Tech & electronics</li>
+            <li><span>02</span>Home & kitchen</li>
+            <li><span>03</span>Smart home</li>
+            <li><span>04</span>Outdoor & lifestyle</li>
+            <li><span>05</span>Toys & gifts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="prime-day-picks">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">BUY BETTER FINDS CURATED LIST</div>
+          <h2>Products worth checking.</h2>
+          <p>These are existing Buy Better Finds products selected for Prime Day coverage. We’ll keep the list focused rather than filling it with every Prime-eligible product.</p>
+        </div>
+        <div class="count-note"><strong>{primeProducts.length}</strong><span>curated picks</span></div>
+      </div>
+
+      <div class="catalog-note">
+        <div><strong>How to shop this list</strong><span>Start with our recommendation, then check Amazon for the current price, Prime eligibility, availability, and any event-specific discount.</span></div>
+        <a href="/why-we-recommend/">How we recommend →</a>
+      </div>
+
+      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Prime Day prices, Prime eligibility, inventory, and availability can change.</p>
+
+      <div class="prime-grid">
+        {primeProducts.map((product) => {
+          const recommendation = getRecommendation(product);
+          const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommendation.score).toFixed(1) : '—';
+          return (
+            <article class="prime-card">
+              <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
+                <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" />
+                <span class="pick-badge">PRIME DAY PICK</span>
+              </a>
+              <div class="product-meta"><div class="tag">{product.category}</div><div class="score-mini"><strong>{score}</strong><span>/10</span></div></div>
+              <h3>{product.name}</h3>
+              <p class="best-for"><strong>Best for:</strong> {product.bestFor}</p>
+              <p>{product.why}</p>
+              <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
+              <p class="price"><strong>{product.price}</strong></p>
+              <div class="product-actions">
+                <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See Our Take →</a>
+                <a class="shop-btn amazon-shop" href={amazonUrl(product)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section watch-section">
+    <div class="container">
+      <div class="bottom-cta">
+        <div><div class="eyebrow light">KEEP RESEARCHING</div><h2>Want the bigger picture?</h2><p>See the Prime Big Deal Days event guide, then come back here for the curated product list.</p></div>
+        <a class="btn primary" href="/categories/seasonal-holidays/prime-big-deal-days/">View the event guide →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prime-hero{background:#10233f;color:#fff;padding:24px 0 62px}
+  .breadcrumbs{display:flex;gap:10px;align-items:center;margin-bottom:40px;color:#aebed1;font-size:13px}.breadcrumbs a{color:#d5deea;text-decoration:none}.breadcrumbs strong{color:#fff}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .prime-hero h1{color:#fff;font-size:clamp(44px,6vw,70px);line-height:1.02;margin:10px 0 18px}
+  .prime-hero p{color:#d5deea;font-size:19px;line-height:1.6;max-width:700px;margin:0}
+  .event-date{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:25px 0}.event-date strong{background:#c8102e;color:#fff;border-radius:999px;padding:9px 13px;font-size:12px;letter-spacing:.05em}.event-date span{color:#d6a84f;font-size:12px;font-weight:800}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-actions .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-decoration:none}.hero-actions .secondary{background:#fff;color:#10233f}
+  .event-card{background:#fff;color:#10233f;border-radius:18px;padding:30px;box-shadow:0 25px 60px #0003}.card-label{font-size:10px;letter-spacing:.14em;font-weight:900;color:#c8102e}.event-card h2{font-size:30px;margin:8px 0 20px}.event-card ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}.event-card li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800}.event-card li span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#f1f5f9;color:#003087;font-size:10px}
+  .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;max-width:none;margin-bottom:28px}.section-head h2{margin:7px 0 10px}.section-head p{color:#64748b;line-height:1.65;margin:0;max-width:820px}.count-note{border-top:3px solid #c8102e;background:#f8fafc;border-radius:12px;padding:16px 20px;display:grid;gap:4px;min-width:140px}.count-note strong{font-size:24px;color:#10233f}.count-note span{font-size:11px;color:#64748b;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+  .catalog-note{margin:30px 0 22px;padding:18px 20px;border:1px solid #d9dee8;border-radius:16px;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;gap:20px}.catalog-note div{display:grid;gap:4px}.catalog-note strong{color:#111827}.catalog-note span{color:#64748b;font-size:13px;line-height:1.5}.catalog-note a{color:#c8102e;font-weight:800;text-decoration:none;white-space:nowrap}
+  .affiliate-notice{margin:0 0 38px;padding:14px 16px;border-left:4px solid #c8102e;background:#fff7f8;color:#475569;font-size:12px;line-height:1.6}.affiliate-notice strong{color:#111827}
+  .prime-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.prime-card{min-width:0;width:100%;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid #d9e2ec;border-radius:16px;padding:14px;box-shadow:0 8px 25px #10233f0a}.product-image{display:block;position:relative;width:100%;height:220px;overflow:hidden;background:#f3f5f8;border-radius:9px}.product-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.product-meta{display:flex;justify-content:space-between;align-items:center;margin:14px 0 6px}.tag{font-size:10px;font-weight:900;letter-spacing:.08em;color:#c8102e;text-transform:uppercase}.score-mini{display:flex;align-items:baseline;gap:2px;color:#64748b}.score-mini strong{color:#003087;font-size:17px}.score-mini span{font-size:10px}.prime-card h3{font-size:19px;line-height:1.25;color:#10233f;margin:4px 0 10px}.prime-card p{font-size:13px;line-height:1.6;color:#64748b;margin:0 0 10px}.best-for strong,.tradeoff strong{color:#334155}.tradeoff{margin-top:3px;padding:10px 12px;border-radius:9px;background:#f8fafc;font-size:12px;color:#64748b;line-height:1.5}.price{margin-top:12px!important;color:#10233f!important}.product-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto;padding-top:14px}.shop-btn{display:block;width:100%;box-sizing:border-box;text-align:center;padding:11px 8px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:850}.secondary-shop{background:#eef2f7;color:#10233f}.amazon-shop{background:#003087;color:#fff}
+  .watch-section{background:#f8fafc}.bottom-cta{padding:34px;border-radius:20px;background:#0f172a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.bottom-cta h2{color:#fff;margin:7px 0 8px}.bottom-cta p{color:#cbd5e1;max-width:700px;line-height:1.6;margin:0}.bottom-cta .btn{white-space:nowrap}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.prime-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:flex-start;flex-direction:column}}
+  @media(max-width:650px){.prime-hero{padding-bottom:44px}.prime-hero h1{font-size:43px}.prime-hero p{font-size:16px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%;box-sizing:border-box}.event-card{padding:22px}.prime-grid{grid-template-columns:1fr}.catalog-note{align-items:flex-start;flex-direction:column}.catalog-note a{white-space:normal}.product-actions{grid-template-columns:1fr}.product-image{height:200px}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center;box-sizing:border-box}}
+</style>
