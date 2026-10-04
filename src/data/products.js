@@ -50,7 +50,7 @@ const productsCatalog = [
   {
     slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼',
     image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill',
-    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.weber.com/US/en/gas/spirit/spirit-e-210-lp-blk/1501000.html', dailyDealDate: '2026-10-04'
+    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.amazon.com/dp/B0DPH7QGTP/ref=cm_sw_r_as_gl_apa_gl_i_HMWPS5D2VYWVDX7CR975?linkCode=ml1&tag=buybetterfi06-20&linkId=7898dbeaaeefed9eb697dd37aae004ac&gaOptInStatus=true', amazonAsin: 'B0DPH7QGTP', amazonUrl: 'https://www.amazon.com/dp/B0DPH7QGTP/ref=cm_sw_r_as_gl_apa_gl_i_HMWPS5D2VYWVDX7CR975?linkCode=ml1&tag=buybetterfi06-20&linkId=7898dbeaaeefed9eb697dd37aae004ac&gaOptInStatus=true', dailyDealDate: '2026-10-04'
   },
   {
     slug: 'amazon-echo-dot', amazonAsin: 'B09B8V1LZ3', name: 'Amazon Echo Dot', category: 'Smart Home', price: 'Check price', icon: '◉',
