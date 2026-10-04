@@ -80,12 +80,12 @@ const productsCatalog = [
   {
     slug: 'logitech-mx-master-3s', name: 'Logitech MX Master 3S', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://resource.logitech.com/w_1440%2Ch_660%2Car_24%3A11%2Cc_fill%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/mx-master-3s-graphite-ident.jpg', imageAlt: 'Logitech MX Master 3S wireless mouse',
-    bestFor: 'Desktop productivity and multi-device work', why: 'Ergonomic wireless mouse with precise scrolling and customizable controls.', watch: 'Its larger ergonomic shape may not suit users who prefer small travel mice.', url: 'https://www.logitech.com/en-us/shop/p/mx-master-3s', dailyDealDate: '2026-09-21'
+    bestFor: 'Desktop productivity and multi-device work', why: 'Ergonomic wireless mouse with precise scrolling and customizable controls.', watch: 'Its larger ergonomic shape may not suit users who prefer small travel mice.', amazonAsin: 'B09HM94VDS', amazonUrl: 'https://www.amazon.com/dp/B09HM94VDS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09HM94VDS?tag=buybetterfi06-20', dailyDealDate: '2026-09-21'
   },
   {
     slug: 'shark-navigator-lift-away', name: 'Shark Navigator Lift-Away', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://assets.sharkninja.com/image/upload/c_pad,w_800,h_800,f_auto,q_auto,b_rgb:FFFFFF/v1/SharkNinja-NA/NV360_01', imageAlt: 'Shark Navigator Lift-Away vacuum',
-    bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', url: 'https://www.sharkclean.com/products/navigator-lift-away-vacuum-zidNV360', dailyDealDate: '2026-10-07'
+    bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', amazonAsin: 'B00JH98GR4', amazonUrl: 'https://www.amazon.com/dp/B00JH98GR4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00JH98GR4?tag=buybetterfi06-20', dailyDealDate: '2026-10-07'
   },
   {
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰',
@@ -114,56 +114,56 @@ const productsCatalog = [
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000CBSNKQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Magna-Tiles+Clear+Colors+32-Piece+Set&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20'
   },
 
   {
     slug: 'taco-cat-goat-cheese-pizza', name: 'Taco Cat Goat Cheese Pizza Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B077Z1R28P&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Taco+Cat+Goat+Cheese+Pizza+Card+Game&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B077Z1R28P', amazonUrl: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20'
   },
 
   {
     slug: 'bitzee-interactive-digital-pet', name: 'Bitzee Interactive Digital Pet', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ecsmedia.pl/c/bitzee-interaktywne-zwierzatko-cyfrowe-wirtualny-zwierzak-hologram-spin-master-b-iext191183535.jpg', imageAlt: 'Bitzee Interactive Digital Pet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Bitzee+Interactive+Digital+Pet&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BRQXKSCW', amazonUrl: 'https://www.amazon.com/dp/B0BRQXKSCW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BRQXKSCW?tag=buybetterfi06-20'
   },
 
   {
     slug: 'tonies-toniebox-starter-set', name: 'Tonies Toniebox Starter Set', category: 'Toys & Games', price: '$69.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BN5G4G31&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Tonies Toniebox Starter Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Tonies+Toniebox+Starter+Set&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BN5G4G31', amazonUrl: 'https://www.amazon.com/dp/B0BN5G4G31?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BN5G4G31?tag=buybetterfi06-20'
   },
 
   {
     slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00EC6NOFQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Crayola Light Up Tracing Pad',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Crayola+Light+Up+Tracing+Pad&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00EC6NOFQ', amazonUrl: 'https://www.amazon.com/dp/B00EC6NOFQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00EC6NOFQ?tag=buybetterfi06-20'
   },
 
   {
     slug: 'lego-harry-potter-hogwarts-castle-71043', name: 'LEGO Harry Potter Hogwarts Castle (71043)', category: 'Toys & Games', price: '$469.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07GG3Y7N6&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LEGO Harry Potter Hogwarts Castle 71043',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LEGO+Harry+Potter+Hogwarts+Castle+(71043)&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07GG3Y7N6', amazonUrl: 'https://www.amazon.com/dp/B07GG3Y7N6?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07GG3Y7N6?tag=buybetterfi06-20'
   },
 
   {
     slug: 'melissa-doug-top-bake-pizza-counter', name: 'Melissa & Doug Top & Bake Wooden Pizza Counter', category: 'Toys & Games', price: '$59.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B075KX9NS7&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Melissa & Doug Top & Bake Wooden Pizza Counter',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Melissa+%26+Doug+Top+%26+Bake+Wooden+Pizza+Counter&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B075KX9NS7', amazonUrl: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20'
   },
 
   {
     slug: 'snap-circuits-jr-sc100', name: 'Snap Circuits Jr. SC-100', category: 'Toys & Games', price: '$14.11', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00008BFZH&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Snap Circuits Jr. SC-100',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Snap+Circuits+Jr.+SC-100&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00008BFZH', amazonUrl: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20'
   },
 
   {
@@ -177,7 +177,7 @@ const productsCatalog = [
     slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: '$35.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B083BG4MXC&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Bravokids LCD Writing Tablet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Bravokids+LCD+Writing+Tablet&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B083BG4MXC', amazonUrl: 'https://www.amazon.com/dp/B083BG4MXC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B083BG4MXC?tag=buybetterfi06-20'
   },
 
   {
@@ -191,7 +191,7 @@ const productsCatalog = [
     slug: 'crayola-globbles-6-count', name: 'Crayola Globbles (6-Count)', category: 'Toys & Games', price: '$8.95', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07HDX46HS&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Crayola Globbles 6-Count',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Crayola+Globbles+(6-Count)&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07HDX46HS', amazonUrl: 'https://www.amazon.com/dp/B07HDX46HS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07HDX46HS?tag=buybetterfi06-20'
   },
 
   {
@@ -205,49 +205,49 @@ const productsCatalog = [
     slug: 'hot-wheels-colossal-crash-track', name: 'Hot Wheels Colossal Crash Track Set', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07NQFW239&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Hot Wheels Colossal Crash Track Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Hot+Wheels+Colossal+Crash+Track+Set&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07NQFW239', amazonUrl: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20'
   },
 
   {
     slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: '$39.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07PQFT83F&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Disney+Store+Buzz+Lightyear+Interactive+Talking+Action+Figure&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07PQFT83F', amazonUrl: 'https://www.amazon.com/dp/B07PQFT83F?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07PQFT83F?tag=buybetterfi06-20'
   },
 
   {
     slug: 'exploding-kittens-card-game', name: 'Exploding Kittens Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B010TQY7A8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Exploding Kittens Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Exploding+Kittens+Card+Game&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B010TQY7A8', amazonUrl: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20'
   },
 
   {
     slug: 'vtech-pull-and-sing-puppy', name: 'VTech Pull and Sing Puppy', category: 'Toys & Games', price: '$11.95', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01MQ3YP7Y&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'VTech Pull and Sing Puppy',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=VTech+Pull+and+Sing+Puppy&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B01MQ3YP7Y', amazonUrl: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20'
   },
 
   {
     slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: '$3.59', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00000IZKX&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'The Original Slinky',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=The+Original+Slinky&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00000IZKX', amazonUrl: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20'
   },
 
   {
     slug: 'lego-bonsai-tree-10281', name: 'LEGO Bonsai Tree Building Kit', category: 'Toys & Games', price: '$17.04', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08HVXZW8X&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LEGO Bonsai Tree 10281',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LEGO+Bonsai+Tree+Building+Kit&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B08HVXZW8X', amazonUrl: 'https://www.amazon.com/dp/B08HVXZW8X?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08HVXZW8X?tag=buybetterfi06-20'
   },
 
   {
     slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07B6ZN7P8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=LeapFrog+Learning+Friends+100+Words+Book&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20'
   },
 
   {
@@ -361,7 +361,7 @@ const supplementalProducts = [
     slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah', dailyDealDate: '2026-10-05'
   },
   {
-    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://us.govee.com/collections/smart-led-bulbs'
+    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', amazonAsin: 'B09B7NQT2K', amazonUrl: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20'
   },
   {
     slug: 'stanley-quencher', name: 'Stanley Quencher H2.0 Tumbler', category: 'Lifestyle', price: 'Check price', icon: '◈', image: 'https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-TheQuencherH2.OFlowStateTMTumbler20OZ-Black2.0-Front_20399a06-bbde-478f-a91e-c3b545d6457d.png?v=1716304216&width=990', imageAlt: 'Stanley Quencher H2.0 Tumbler', pressKitUrl: 'https://www.stanley1913.com/pages/newsroom', bestFor: 'Large-volume everyday hydration', why: 'Large insulated tumbler designed for carrying a substantial drink throughout the day.', watch: 'Its large size is convenient for hydration but less convenient for small cup holders and bags.', url: 'https://www.stanley1913.com/products/adventure-quencher-travel-tumbler-20-oz', dailyDealDate: '2026-09-18'
@@ -374,7 +374,7 @@ const supplementalProducts = [
   },
   {
     slug: 'tweezerman-tweezers', name: 'Tweezerman Slant Tweezer', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://tweezerman.com/cdn/shop/files/wobnswxyuhspivnfjukp_1_2.jpg?v=1762528093&width=2000', imageAlt: 'Tweezerman slant tweezers',
-    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/s?k=Tweezerman+Slant+Tweezer&tag=buybetterfi06-20'
+    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', amazonAsin: 'B000EMUDUQ', amazonUrl: 'https://www.amazon.com/dp/B000EMUDUQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000EMUDUQ?tag=buybetterfi06-20'
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
@@ -408,7 +408,7 @@ const supplementalProducts = [
   {
     slug: 'jbl-charge-5', amazonAsin: 'B08VDNCZT9', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08VDNCZT9&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
-    bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', url: 'https://www.jbl.com/bluetooth-speakers/JBLCHARGE5.html'
+    bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', amazonAsin: 'B08VDNCZT9', amazonUrl: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20'
   },
   {
     slug: 'kindle-paperwhite', amazonAsin: 'B0CFPHV9ZN', name: 'Amazon Kindle Paperwhite', category: 'Tech', price: 'Check price', icon: '▣',
