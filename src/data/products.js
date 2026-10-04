@@ -210,7 +210,7 @@ const productsCatalog = [
 
   {
     slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: '$39.99', icon: '★',
-    image: 'https://m.media-amazon.com/images/P/B07PQFT83F.01.LZZZZZZZ.jpg', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
+    image: 'https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/1713036510322?fmt=jpeg&hei=608&qlt=90&wid=608', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07PQFT83F', amazonUrl: 'https://www.amazon.com/dp/B07PQFT83F?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07PQFT83F?tag=buybetterfi06-20'
   },
