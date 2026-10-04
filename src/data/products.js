@@ -597,8 +597,8 @@ const supplementalProducts = [
   },
   {
     slug: 'keter-signature-92-gallon', name: 'Keter Signature 92-Gallon Deck Box — Oak Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
-    image: 'https://assets.keter.com/transform/3c1e3e3d-3b7a-4f9d-8f7d-7c9a9d3e6e9f/SIGNATURE_92_Gal_Deck_Box_Oak_Brown_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
-    bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-92-gallon-deck-box-oak-brown-263819.html'
+    image: 'https://assets.keter.com/transform/03fe333b-1f35-4c45-9fbc-7ca92ae0364b/Generated-image?io=transform%3Ascale%2Cwidth%3A1200&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
+    bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-92-gallon-deck-box-oak-brown-263821.html'
   },
   {
     slug: 'sunco-square-solar-path-lights', name: 'Sunco Square Solar Pathway Lights 4-Pack', category: 'Outdoor', price: '$29.99', icon: '☼',
