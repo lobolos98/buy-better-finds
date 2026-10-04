@@ -170,7 +170,7 @@ const productsCatalog = [
     slug: 'stomp-rocket-dueling-rockets', name: 'Stomp Rocket Dueling Rockets', category: 'Toys & Games', price: '$34.99', icon: '★',
     image: 'https://i5.samsclubimages.com/asr/2171a5ad-c4c6-45aa-87b3-4f1a3e1e1620.2b4227fdfe8075866d0adb45d104bae7.jpeg', imageAlt: 'Stomp Rocket Dueling Rockets',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Stomp+Rocket+Dueling+Rockets&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00G9WR0RE', amazonUrl: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20'
   },
 
   {
@@ -184,7 +184,7 @@ const productsCatalog = [
     slug: 'fisher-price-rock-a-stack', name: 'Fisher-Price Rock-a-Stack', category: 'Toys & Games', price: '$8.63', icon: '★',
     image: 'https://cdn.shopify.com/s/files/1/1857/6931/products/UyJaJVohb6.jpg?v=1675763441', imageAlt: 'Fisher-Price Rock-a-Stack',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Fisher-Price+Rock-a-Stack&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07M9233QG', amazonUrl: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20'
   },
 
   {
@@ -198,7 +198,7 @@ const productsCatalog = [
     slug: 'pokemon-day-2026-collection', name: 'Pokémon Day 2026 Collection', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://m.media-amazon.com/images/I/91YHLxggDmL._AC_SL1500_.jpg', imageAlt: 'Pokémon Day 2026 Collection',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/s?k=Pok%C3%A9mon+Day+2026+Collection&tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0G2FVLXVL', amazonUrl: 'https://www.amazon.com/dp/B0G2FVLXVL?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0G2FVLXVL?tag=buybetterfi06-20'
   },
 
   {
@@ -257,8 +257,8 @@ const productsCatalog = [
   },
   {
     slug: 'hero-mighty-patch-original', name: 'Hero Cosmetics Mighty Patch Original', category: 'Beauty & Personal Care', price: '$8.97', icon: '✦',
-    amazonAsin: 'B074PVTPBW', image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B074PVTPBW&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Hero Cosmetics Mighty Patch Original',
-    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', url: 'https://www.amazon.com/s?k=Hero+Cosmetics+Mighty+Patch+Original&tag=buybetterfi06-20'
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B074PVTPBW&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Hero Cosmetics Mighty Patch Original',
+    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', amazonAsin: 'B074PVTPBW', amazonUrl: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20'
   },
   {
     slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: '$5.90', icon: '✦',
@@ -616,7 +616,7 @@ const supplementalProducts = [
     bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://dazuma.us/products/outdoor-solar-path-lighting-waterproof-ground-light'
   },
   {
-    slug: 'amazon-echo-show-5', name: 'Amazon Echo Show 5 (3rd Gen)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/e1fkf1k4_full.jpg?v=1769431765', imageAlt: 'Amazon Echo Show 5 smart display', bestFor: 'Nightstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Verify generation before buying.', url: 'https://www.amazon.com/s?k=Echo+Show+5+3rd+Gen'
+    slug: 'amazon-echo-show-5', name: 'Amazon Echo Show 5 (3rd Gen)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/e1fkf1k4_full.jpg?v=1769431765', imageAlt: 'Amazon Echo Show 5 smart display', bestFor: 'Nightstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Verify generation before buying.', amazonAsin: 'B09B2SBHQK', amazonUrl: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20'
   },
   {
     slug: 'ring-pan-tilt-indoor-cam', name: 'Ring Pan-Tilt Indoor Cam', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://en-uk.ring.com/cdn/shop/files/ring_pantilt-indoor-camera_wht_01A_product_ground_1500x1500_abc7aa64-5c5e-4d02-8f01-f42b3cc60784.png?v=1756448928', imageAlt: 'Ring Pan-Tilt Indoor Cam', bestFor: 'Room monitoring, pets, and indoor security', why: 'A pan-and-tilt indoor camera with broad room coverage and two-way communication.', watch: 'Subscription features can add recurring cost.', url: 'https://ring.com/products/pan-tilt-indoor-cam'
@@ -649,7 +649,7 @@ const supplementalProducts = [
     slug: 'kasa-hs220', name: 'Kasa Smart Wi-Fi Dimmer Switch HS220', category: 'Smart Home', price: 'Check price', icon: '☼', image: 'https://m.media-amazon.com/images/I/41kpIBtMf3L._SX522_.jpg', imageAlt: 'Kasa Smart Wi-Fi Dimmer Switch HS220', bestFor: 'Smart lighting and scheduled dimming', why: 'A Wi-Fi smart dimmer switch with app control, scheduling, scenes, and voice control through compatible assistants.', watch: 'Check wiring requirements and electrical-box compatibility before installation.', url: 'https://www.tp-link.com/us/home-networking/smart-switch/hs220/v1/'
   },
   {
-    slug: 'govee-rgbic-65ft', name: 'Govee RGBIC LED Strip Lights 65.6ft', category: 'Smart Home', price: 'Check price', icon: '▰', image: 'https://m.media-amazon.com/images/I/51CIdh0bxHL._AC_CX679_.jpg', imageAlt: 'Govee RGBIC LED Strip Lights', bestFor: 'Accent lighting, bedrooms, and home entertainment', why: 'Long RGBIC smart light strips with app control, music synchronization, and customizable multicolor effects.', watch: 'Designed primarily for indoor decorative lighting.', url: 'https://www.amazon.com/s?k=Govee+RGBIC+65.6ft+LED+Strip+Lights'
+    slug: 'govee-rgbic-65ft', name: 'Govee RGBIC LED Strip Lights 65.6ft', category: 'Smart Home', price: 'Check price', icon: '▰', image: 'https://m.media-amazon.com/images/I/51CIdh0bxHL._AC_CX679_.jpg', imageAlt: 'Govee RGBIC LED Strip Lights', bestFor: 'Accent lighting, bedrooms, and home entertainment', why: 'Long RGBIC smart light strips with app control, music synchronization, and customizable multicolor effects.', watch: 'Designed primarily for indoor decorative lighting.', amazonAsin: 'B09YQ73BWF', amazonUrl: 'https://www.amazon.com/dp/B09YQ73BWF?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09YQ73BWF?tag=buybetterfi06-20'
   },
   {
     slug: 'philips-hue-a19-color', name: 'Philips Hue White and Color Ambiance A19 Smart Bulb', category: 'Smart Home', price: 'Check price', icon: '●', image: 'https://www.philips-hue.com/content/dam/b2c/en-us/collections/smart-lighting/smart-bulbs/white-and-color-ambiance/a19/hero.png', imageAlt: 'Philips Hue White and Color Ambiance A19 smart bulb', bestFor: 'Whole-home smart lighting and color scenes', why: 'A color-changing A19 smart bulb with warm-to-cool white light, dimming, app control, and voice compatibility.', watch: 'A Hue Bridge unlocks additional features beyond Bluetooth control.', url: 'https://www.philips-hue.com/en-us/p/hue-white-and-color-ambiance-a60-e26-smart-bulb-810/046677590826'
@@ -677,7 +677,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: 'https://target.scene7.com/is/image/Target/GUEST_91d64fca-7b86-4f5f-9f2b-fb4cec45cbae?fmt=pjpeg&hei=800&wid=800', imageAlt: 'Disney Stitch plush gift',
     bestFor: 'Disney fans and character gifts', why: 'A recognizable character gift for birthdays, holidays, and casual fandom gifting.',
-    watch: 'Size and edition vary by listing.', url: 'https://www.amazon.com/s?k=Disney+Stitch+plush&tag=buybetterfi06-20'
+    watch: 'Size and edition vary by listing.', amazonAsin: 'B09NMJTL53', amazonUrl: 'https://www.amazon.com/dp/B09NMJTL53?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09NMJTL53?tag=buybetterfi06-20'
   },
   {
     slug: 'disney-lorcana-hunny-rescue-gift',
@@ -693,7 +693,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: 'https://bills-archive.nyc3.cdn.digitaloceanspaces.com/30th/Pokemon_TCG_30th_Celebration_Elite_Trainer_Box_EN.webp', imageAlt: 'Pokémon 30th Anniversary Elite Trainer Box',
     bestFor: 'Pokémon fans and trading-card collectors', why: 'Collector-focused presentation with strong anniversary and fandom appeal.',
-    watch: 'Collector products can fluctuate in price and availability.', url: 'https://www.amazon.com/s?k=Pokemon+30th+Anniversary+Elite+Trainer+Box&tag=buybetterfi06-20'
+    watch: 'Collector products can fluctuate in price and availability.', amazonAsin: 'B0H78BB9TY', amazonUrl: 'https://www.amazon.com/dp/B0H78BB9TY?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0H78BB9TY?tag=buybetterfi06-20'
   },
   {
     slug: 'lego-botanicals-mushrooms-gift',
@@ -717,7 +717,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
     image: 'https://m.media-amazon.com/images/I/61qMO3TS2RL._AC_UF1000%2C1000_QL80_.jpg', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
     bestFor: 'Music lovers and practical tech gifts', why: 'A portable speaker is an easy gift for travel, rooms, gatherings, and everyday listening.',
-    watch: 'Sound preferences and speaker size are personal.', url: 'https://www.amazon.com/s?k=JBL+Charge+5&tag=buybetterfi06-20'
+    watch: 'Sound preferences and speaker size are personal.', amazonAsin: 'B08VDNCZT9', amazonUrl: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-nano-power-bank-gift',
@@ -765,7 +765,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◇',
     image: '/images/products/educational-kanoodle.svg', imageAlt: 'Educational Kanoodle logic puzzle',
     bestFor: 'Puzzle lovers and screen-free gifts', why: 'Compact logic play that is easy to wrap and convenient for travel.',
-    watch: 'Challenge level varies by puzzle set.', url: 'https://www.amazon.com/s?k=Educational+Insights+Kanoodle&tag=buybetterfi06-20'
+    watch: 'Challenge level varies by puzzle set.', amazonAsin: 'B000FGECAI', amazonUrl: 'https://www.amazon.com/dp/B000FGECAI?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000FGECAI?tag=buybetterfi06-20'
   },
   {
     slug: 'uno-championship-series-gift',
@@ -781,7 +781,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '▣',
     image: 'https://m.media-amazon.com/images/I/81swm2WdawL._AC_SY450_.jpg', imageAlt: 'Amazon Kindle Paperwhite',
     bestFor: 'Readers and travel-friendly tech gifts', why: 'A compact reading device that makes a practical gift for frequent readers.',
-    watch: 'Storage and connectivity versions vary.', url: 'https://www.amazon.com/s?k=Kindle+Paperwhite&tag=buybetterfi06-20'
+    watch: 'Storage and connectivity versions vary.', amazonAsin: 'B0CFPHV9ZN', amazonUrl: 'https://www.amazon.com/dp/B0CFPHV9ZN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CFPHV9ZN?tag=buybetterfi06-20'
   },
   {
     slug: 'yeti-rambler-gift',
