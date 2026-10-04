@@ -94,7 +94,7 @@ const productsCatalog = [
   },
   {
     slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙',
-    image: '/images/products/crunchlabs-crunchinator.svg', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
+    image: 'https://i5.walmartimages.com/asr/26c902f4-0819-45b0-8ad6-d9a1db96a9a6.8cf79559a1b1f9516ba243f972226a12.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
     bestFor: 'STEM-minded kids and hands-on makers', why: 'A build-and-experiment toy designed around problem solving and mechanical curiosity.', watch: 'Best suited to kids who enjoy building and tinkering rather than passive play.', url: 'https://www.crunchlabs.com/', dailyDealDate: '2026-10-09'
   },
 
