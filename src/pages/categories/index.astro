@@ -3,17 +3,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
 const categoryData = [
-  { name: 'Home & Kitchen', slug: 'home-kitchen', image: '/images/products/ninja-af101.svg', alt: 'Home and kitchen products including an air fryer', description: 'Air fryers, vacuums, organization, kitchen gear, and useful home upgrades.', guide: '/guides/best-home-kitchen/' },
-  { name: 'Tech', slug: 'tech', image: '/images/products/sony-wh-1000xm5.svg', alt: 'Sony noise-canceling headphones representing Tech products', description: 'Headphones, tablets, accessories, mice, charging gear, and everyday technology.', guide: '/guides/best-tech/' },
-  { name: 'Tools & DIY', slug: 'tools-diy', image: '/images/products/dewalt-dck240c2.svg', alt: 'DEWALT drill and impact driver kit representing Tools & DIY products', description: 'Drills, drivers, project tools, repair gear, and practical equipment for DIY work.', guide: '/guides/best-tools-diy/' },
-  { name: 'Outdoor', slug: 'outdoor', image: '/images/products/solo-stove-tower.svg', alt: 'Solo Stove patio heater representing Outdoor products', description: 'Grills, patio heaters, outdoor entertaining gear, and products for time outside.', guide: '/guides/best-outdoor/' },
-  { name: 'Smart Home', slug: 'smart-home', image: '/images/products/ring-battery-doorbell.svg', alt: 'Ring Battery Doorbell representing Smart Home products', description: 'Doorbells, smart plugs, speakers, lighting, and connected-home essentials.', guide: '/guides/best-smart-home/' },
-  { name: 'Fitness', slug: 'fitness', image: '/images/products/garmin-forerunner-265.svg', alt: 'Garmin Forerunner 265 representing Fitness products', description: 'Fitness watches, training gear, and products built around active lifestyles.', guide: null },
-  { name: 'Lifestyle', slug: 'lifestyle', image: '/images/products/yeti-rambler.svg', alt: 'YETI Rambler representing Lifestyle products', description: 'Drinkware and everyday products designed for commuting, work, travel, and daily use.', guide: '/guides/best-everyday-products/' },
-  { name: 'Gifts & Collectibles', slug: 'gifts-collectibles', image: '/images/products/disney-stitch-plush.svg', alt: 'Disney Stitch plush representing Gifts and Collectibles', description: 'Disney, Marvel, Star Wars, LEGO, Pokémon, Funko, fandom gifts, and collectible finds.', guide: null },
+  { name: 'Home & Kitchen', slug: 'home-kitchen', image: '', alt: 'Home and kitchen products including an air fryer', description: 'Air fryers, vacuums, organization, kitchen gear, and useful home upgrades.', guide: '/guides/best-home-kitchen/' },
+  { name: 'Tech', slug: 'tech', image: '', alt: 'Sony noise-canceling headphones representing Tech products', description: 'Headphones, tablets, accessories, mice, charging gear, and everyday technology.', guide: '/guides/best-tech/' },
+  { name: 'Tools & DIY', slug: 'tools-diy', image: '', alt: 'DEWALT drill and impact driver kit representing Tools & DIY products', description: 'Drills, drivers, project tools, repair gear, and practical equipment for DIY work.', guide: '/guides/best-tools-diy/' },
+  { name: 'Outdoor', slug: 'outdoor', image: '', alt: 'Solo Stove patio heater representing Outdoor products', description: 'Grills, patio heaters, outdoor entertaining gear, and products for time outside.', guide: '/guides/best-outdoor/' },
+  { name: 'Smart Home', slug: 'smart-home', image: '', alt: 'Ring Battery Doorbell representing Smart Home products', description: 'Doorbells, smart plugs, speakers, lighting, and connected-home essentials.', guide: '/guides/best-smart-home/' },
+  { name: 'Fitness', slug: 'fitness', image: '', alt: 'Garmin Forerunner 265 representing Fitness products', description: 'Fitness watches, training gear, and products built around active lifestyles.', guide: null },
+  { name: 'Lifestyle', slug: 'lifestyle', image: '', alt: 'YETI Rambler representing Lifestyle products', description: 'Drinkware and everyday products designed for commuting, work, travel, and daily use.', guide: '/guides/best-everyday-products/' },
+  { name: 'Gifts & Collectibles', slug: 'gifts-collectibles', image: '', alt: 'Disney Stitch plush representing Gifts and Collectibles', description: 'Disney, Marvel, Star Wars, LEGO, Pokémon, Funko, fandom gifts, and collectible finds.', guide: null },
   { name: 'Toys & Games', slug: 'toys-games', image: 'https://www.lego.com/cdn/cs/set/assets/blt8a5b33fbe2efbe39/blt11ecdc92ea69a278-40872_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', alt: 'LEGO City building set representing Toys and Games', description: 'Building sets, STEM toys, puzzles, family games, collectibles, and creative play.', guide: null },
-  { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '/images/products/cerave-hydrating-cleanser.svg', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, cosmetics, beauty tools, and everyday personal-care products.', guide: '/categories/beauty-personal-care/cosmetics/' },
-  { name: 'Seasonal & Holidays', slug: 'seasonal-holidays', image: '/images/products/lego-city-lava-rollercoaster.svg', alt: 'Seasonal and holiday shopping ideas', description: 'Seasonal deals, holiday gifts, major shopping events, and timely finds worth watching right now.', guide: null, seasonal: true }
+  { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, cosmetics, beauty tools, and everyday personal-care products.', guide: '/categories/beauty-personal-care/cosmetics/' },
+  { name: 'Seasonal & Holidays', slug: 'seasonal-holidays', image: '', alt: 'Seasonal and holiday shopping ideas', description: 'Seasonal deals, holiday gifts, major shopping events, and timely finds worth watching right now.', guide: null, seasonal: true }
 ];
 
 const categories = categoryData.map((category) => {
@@ -21,7 +21,7 @@ const categories = categoryData.map((category) => {
     (product) =>
       product.category === category.name &&
       typeof product.image === 'string' &&
-      product.image.startsWith('http')
+      product.image.length > 0
   );
 
   return {
