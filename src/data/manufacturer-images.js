@@ -130,4 +130,33 @@ export const manufacturerImageOverrides = {
     image: 'https://m.media-amazon.com/images/I/315PBUzfZiL._SL1500_.jpg',
     source: 'Amazon'
   },
+
+  'kindle-paperwhite': {
+    image: 'https://medias.fortress.com.hk/publishing/FTRHK-13536955-FRONT-zoom.png?version=1769764084',
+    source: 'Fortress product image'
+  },
+  'razer-blackwidow-v4': {
+    image: 'https://cdn.awsli.com.br/2500x2500/2508/2508057/produto/229897966/2-a2yt0wml73.jpg',
+    source: 'Product image'
+  },
+  'elgato-stream-deck-plus': {
+    image: 'https://oechsle.vteximg.com.br/arquivos/ids/22855086-1000-1000/imageUrl_1.jpg?v=638977464858930000',
+    source: 'Product image'
+  },
+  'elgato-stream-deck-mini': {
+    image: 'https://www.maxgaming.com/bilder/artiklar/zoom/13148_1.jpg?m=1588923933',
+    source: 'Product image'
+  },
+  'anker-prime-power-bank-26250': {
+    image: 'https://down-ph.img.susercontent.com/file/cn-11134207-820l4-mn1ojoidbapye7',
+    source: 'Anker Official Store product image'
+  },
+  'anker-power-bank-20000': {
+    image: 'https://m.media-amazon.com/images/I/61d8xY4G8WL._AC_SL1500_.jpg',
+    source: 'Amazon product image'
+  },
+  'amazon-fire-tv-stick-4k-select': {
+    image: 'https://media.adeo.com/mkp/406c943ecc35d164224fb2042cc95d62/media.jpg',
+    source: 'Product image'
+  },
 };
