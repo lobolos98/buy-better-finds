@@ -683,7 +683,7 @@ const supplementalProducts = [
     slug: 'disney-lorcana-hunny-rescue-gift',
     name: 'Disney Lorcana Hunny Rescue',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/disney-lorcana-hunny-rescue.svg', imageAlt: 'Disney Lorcana Hunny Rescue collectible',
+    image: 'https://ravensburger.cloud/cms/gallery/lorcana-web/products/iq3-great-hunny-rescue/inline-singles/dlc-iq3_spill-photo_1920x1080.png', imageAlt: 'Disney Lorcana Hunny Rescue collectible',
     bestFor: 'Disney collectors and Lorcana players', why: 'Combines Disney fandom with collectible card-game appeal.',
     watch: 'Availability and pricing can change quickly for collectible products.', url: 'https://www.amazon.com/dp/B0CGXJ8244?tag=buybetterfi06-20'
   },
@@ -763,7 +763,7 @@ const supplementalProducts = [
     slug: 'educational-kanoodle-gift',
     name: 'Educational Kanoodle Puzzle',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◇',
-    image: '/images/products/educational-kanoodle.svg', imageAlt: 'Educational Kanoodle logic puzzle',
+    image: 'https://m.media-amazon.com/images/P/B000FGECAI.01.LZZZZZZZ.jpg', imageAlt: 'Educational Kanoodle logic puzzle',
     bestFor: 'Puzzle lovers and screen-free gifts', why: 'Compact logic play that is easy to wrap and convenient for travel.',
     watch: 'Challenge level varies by puzzle set.', amazonAsin: 'B000FGECAI', amazonUrl: 'https://www.amazon.com/dp/B000FGECAI?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000FGECAI?tag=buybetterfi06-20'
   },
@@ -771,7 +771,7 @@ const supplementalProducts = [
     slug: 'uno-championship-series-gift',
     name: 'UNO Championship Series',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/uno-championship-series.svg', imageAlt: 'UNO Championship Series card game',
+    image: 'https://m.media-amazon.com/images/P/B0G49ZLYY6.01.LZZZZZZZ.jpg', imageAlt: 'UNO Championship Series card game',
     bestFor: 'Family game nights and casual gifts', why: 'A familiar card-game format that is easy to gift and share with groups.',
     watch: 'Best suited to recipients who enjoy casual competitive games.', url: 'https://www.amazon.com/dp/B0G49ZLYY6?tag=buybetterfi06-20'
   },
@@ -803,7 +803,7 @@ const supplementalProducts = [
     slug: 'disney-stitch-sticker-stamper-gift',
     name: 'Disney Stitch Sticker WOW! Stamper & Activity Pad',
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
-    image: '/images/products/stitch-sticker-stamper.svg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
+    image: 'https://m.media-amazon.com/images/P/B0G4XNTNHT.01.LZZZZZZZ.jpg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
     bestFor: 'Disney fans and screen-free creative gifts', why: 'A portable creative activity combining a recognizable character with sticker play.',
     watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20'
   },
