@@ -402,7 +402,7 @@ const supplementalProducts = [
   },
   {
     slug: 'bose-qc-ultra-2', amazonAsin: 'B0FDKR293G', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FDKR293G&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
+    image: 'https://image.anhducdigital.vn/di-dong/tai-nghe/tai-nghe-headphone/bose/bose-quietcomfort-ultra-headphones-2/bose-quietcomfort-ultra-headphones-2-white-2.jpg', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
     bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', url: 'https://www.bose.com/p/headphones/bose-quietcomfort-ultra-headphones-2nd-gen/QCUH2-HEADPHONEARN.html'
   },
   {
