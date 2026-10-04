@@ -140,7 +140,7 @@ const productsCatalog = [
 
   {
     slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00EC6NOFQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Crayola Light Up Tracing Pad',
+    image: 'https://www.crayola.com/images/default-source/product-images/toys/04-0908-0-202_light-up-tracing-pad_pink_f1.jpg?sfvrsn=67c0bf90_9', imageAlt: 'Crayola Light Up Tracing Pad',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00EC6NOFQ', amazonUrl: 'https://www.amazon.com/dp/B00EC6NOFQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00EC6NOFQ?tag=buybetterfi06-20'
   },
