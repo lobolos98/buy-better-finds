@@ -572,7 +572,7 @@ const supplementalProducts = [
   },
   {
     slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: '$59.49', icon: '◇',
-    image: 'https://assets.keter.com/transform/49e78023-b692-4d97-8837-d0da532ba335/DENALI-30_300x300-px_72-dpi_20?io=transform%3Ascale%2Cwidth%3A528&quality=80', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
+    image: 'https://i5.walmartimages.com/seo/Keter-Cortina-30-Gallon-Resin-Deck-Box-for-Patio-Furniture-Pool-Accessories-and-Storage-for-Outdoor-Toys-Grey-Black_0b628539-23dc-458b-8f6f-7340e8caec84.5a6d7d2a67f3243bd467fb876d490ee8.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
     bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/cortina-30-gallon-deck-box-graphite-255844.html'
   },
   {
@@ -592,12 +592,12 @@ const supplementalProducts = [
   },
   {
     slug: 'keter-circa-37-gallon', name: 'Keter Circa 37-Gallon Deck Box', category: 'Outdoor', price: '$99.99', icon: '◇',
-    image: 'https://assets.keter.com/transform/9e3e4f1e-b4f0-4f1e-89bb-cd4f7ed8e8f1/CIRCA_37_Gal_Deck_Box_Graphite_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Circa 37-Gallon Deck Box Graphite',
+    image: 'https://i5.walmartimages.com/asr/2c982cb8-534f-44ab-aaef-abe10bc747ae.e75b5e0928b885a2859ef1cf5ad7bf08.jpeg?odnBg=FFFFFF&odnHeight=576&odnWidth=576', imageAlt: 'Keter Circa 37-Gallon Deck Box Graphite',
     bestFor: 'Smaller patios and balcony storage', why: 'Compact weather-resistant outdoor storage box for cushions, toys, and garden accessories.', watch: 'The 37-gallon capacity is smaller than Keter medium and large deck boxes.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/circa-37-gallon-deck-box-graphite-258711.html'
   },
   {
     slug: 'keter-signature-92-gallon', name: 'Keter Signature 92-Gallon Deck Box — Oak Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
-    image: 'https://assets.keter.com/transform/3c1e3e3d-3b7a-4f9d-8f7d-7c9a9d3e6e9f/SIGNATURE_92_Gal_Deck_Box_Oak_Brown_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
+    image: 'https://assets.keter.com/transform/6e9c2a7e-8d1f-4f9a-9a2d-7f2f8b8b8a8e/SIGNATURE_92_Gal_Deck_Box_Oak_Brown_300x300_72dpi?io=transform%3Ascale%2Cwidth%3A800&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
     bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.keter.com/en-us/outdoor-storage/small-deck-boxes/signature-92-gallon-deck-box-oak-brown-263819.html'
   },
   {
