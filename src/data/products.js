@@ -112,14 +112,14 @@ const productsCatalog = [
 
   {
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
-    image: 'https://m.media-amazon.com/images/P/B000CBSNKQ.01.LZZZZZZZ.jpg', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
+    image: 'https://timbuktoys.com/cdn/shop/files/Magna-TilesClearColors32PieceSet.jpg?v=1723148394', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20'
   },
 
   {
     slug: 'taco-cat-goat-cheese-pizza', name: 'Taco Cat Goat Cheese Pizza Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
-    image: 'https://www.brightstartoys.co.uk/productimages/bx125x125/taco-cat-goat-cheese-pizza-card-game_175114.jpg', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
+    image: 'https://happypiranha.com/cdn/shop/files/taco_cat_goat_cheese_pizza_game_1.png?v=1762271901&width=1946', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B077Z1R28P', amazonUrl: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20'
   },
@@ -133,7 +133,7 @@ const productsCatalog = [
 
   {
     slug: 'tonies-toniebox-starter-set', name: 'Tonies Toniebox Starter Set', category: 'Toys & Games', price: '$69.99', icon: '★',
-    image: 'https://toygame.ca/cdn/shop/files/tonies-toniebox-starter-set-green_1000x.jpg?v=1767737618', imageAlt: 'Tonies Toniebox Starter Set',
+    image: 'https://images.cdn.europe-west1.gcp.commercetools.com/3b0dd326-e471-4c81-b93e-7cd0db90e1b0/Green-GZJm9dPg.png', imageAlt: 'Tonies Toniebox Starter Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BN5G4G31', amazonUrl: 'https://www.amazon.com/dp/B0BN5G4G31?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BN5G4G31?tag=buybetterfi06-20'
   },
@@ -245,7 +245,7 @@ const productsCatalog = [
 
   {
     slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
-    image: 'https://m.media-amazon.com/images/P/B07B6ZN7P8.01.LZZZZZZZ.jpg', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
+    image: 'https://t7.leapfrog.com/images/prod-lg/learning-friends-100-words-book_80-601540_1.jpg', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
     watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20'
   },
