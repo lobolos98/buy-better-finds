@@ -773,7 +773,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: '/images/products/uno-championship-series.svg', imageAlt: 'UNO Championship Series card game',
     bestFor: 'Family game nights and casual gifts', why: 'A familiar card-game format that is easy to gift and share with groups.',
-    watch: 'Best suited to recipients who enjoy casual competitive games.', url: 'https://www.amazon.com/s?k=UNO+Championship+Series&tag=buybetterfi06-20'
+    watch: 'Best suited to recipients who enjoy casual competitive games.', url: 'https://www.amazon.com/dp/B0G49ZLYY6?tag=buybetterfi06-20'
   },
   {
     slug: 'kindle-paperwhite-gift',
