@@ -482,7 +482,7 @@ const supplementalProducts = [
   },
   {
     slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
-    image: 'https://www.oxo.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/1/0/1059701_1.jpg', imageAlt: 'OXO Good Grips 5-Quart Mixing Bowl',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/0/1059701.jpg', imageAlt: 'OXO Good Grips 5-Quart Mixing Bowl',
     bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.oxo.com/5-quart-mixing-bowl-244-0.html'
   },
   {
