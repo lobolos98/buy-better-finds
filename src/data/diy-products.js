@@ -20,7 +20,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '⌁',
     image: 'https://www.zoro.com/static/cms/product/full/Grainger_CMHT82543xx1xxe19432.jpeg',
-    imageAlt: 'Craftsman 10-inch rasp file',
+    imageAlt: 'Craftsman 10-inch rasp file',\n    amazonAsin: 'B09KP1N4HX',\n    amazonUrl: 'https://www.amazon.com/dp/B09KP1N4HX?tag=buybetterfi06-20',
     bestFor: 'Shaping wood and rough material removal',
     why: 'A traditional hand rasp for shaping and removing material during woodworking and repair projects.',
     watch: 'Confirm current availability and the exact model because this particular 10-inch listing has appeared as discontinued.'
@@ -32,7 +32,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '⚒',
     image: 'https://www.metabo-hpt.com/images/default-source/default-album/cr18dbq4_rm_action-15_for-web.jpg?sfvrsn=d5e997a1_5',
-    imageAlt: 'Metabo HPT cordless reciprocating saw',
+    imageAlt: 'Metabo HPT cordless reciprocating saw',\n    amazonAsin: 'B07P57ZZM1',\n    amazonUrl: 'https://www.amazon.com/dp/B07P57ZZM1?tag=buybetterfi06-20',
     bestFor: 'Demolition and rough cutting',
     why: 'A cordless reciprocating saw format built for rough cutting in wood, pipe, metal, and remodeling work.',
     watch: 'Check whether the listing is tool-only or includes batteries and a charger.'
@@ -68,7 +68,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '▱',
     image: 'https://www.lovebrico.com/15460-large_default/tagliapiastrelle-per-grandi-formati-0-340-cm-flash-line-3-montolit-fl3.jpg',
-    imageAlt: 'Montolit Flash Line 3 tile cutting system',
+    imageAlt: 'Montolit Flash Line 3 tile cutting system',\n    amazonAsin: 'B08NPPD7NK',\n    amazonUrl: 'https://www.amazon.com/dp/B08NPPD7NK?tag=buybetterfi06-20',
     bestFor: 'Large-format porcelain and tile panels',
     why: 'A professional manual cutting system built around modular rails, an engraving trolley, and separating tools.',
     watch: 'Confirm rail configuration and wheel setup for the tile formats and materials you cut.'
@@ -116,7 +116,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '⚡',
     image: 'https://kaiweets.com/cdn/shop/files/kaiweets-kws-114-automatic-wire-strippercutter-kaiweets-1.webp?v=1720765555&width=1000',
-    imageAlt: 'KAIWEETS KWS-114 automatic wire stripper and cutter',
+    imageAlt: 'KAIWEETS KWS-114 automatic wire stripper and cutter',\n    amazonAsin: 'B097SZ1F7W',\n    amazonUrl: 'https://www.amazon.com/dp/B097SZ1F7W?tag=buybetterfi06-20',
     bestFor: 'Electrical repair and repeated wire stripping',
     why: 'An automatic wire stripper and cutter designed for common solid and stranded wire sizes with adjustable stripping length.',
     watch: 'Match the wire gauge range to your cable before purchase.'
@@ -128,7 +128,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '▱',
     image: 'https://m.media-amazon.com/images/I/71j9K9bhEiL._AC_SL1000_.jpg',
-    imageAlt: 'Worx BladeRunner portable tabletop saw',
+    imageAlt: 'Worx BladeRunner portable tabletop saw',\n    amazonAsin: 'B071P6GZN5',\n    amazonUrl: 'https://www.amazon.com/dp/B071P6GZN5?tag=buybetterfi06-20',
     bestFor: 'Portable workshop and light-duty cutting',
     why: 'A compact tabletop cutting platform designed for wood, metal, tile, aluminum, and plastic with compatible blades.',
     watch: 'This is a corded tool; check blade type, cutting capacity, and available workspace.'
@@ -140,7 +140,7 @@ export const diyProducts = [
     price: 'Check price',
     icon: '⚒',
     image: 'https://www.skil.com/cdn/shop/files/dl6300d-12_skil_12-20v_flip-drill_3q_24-0209_main_1000.png?v=1759160741',
-    imageAlt: 'SKIL 12V/20V brushless flip drill',
+    imageAlt: 'SKIL 12V/20V brushless flip drill',\n    amazonAsin: 'B0DHWPM278',\n    amazonUrl: 'https://www.amazon.com/dp/B0DHWPM278?tag=buybetterfi06-20',
     bestFor: 'Tight-space drilling and driving',
     why: 'A compact flip-head drill designed to switch between drilling and driving with quick access to both bit positions.',
     watch: 'Check the exact kit configuration, battery voltage, and included charger.'
