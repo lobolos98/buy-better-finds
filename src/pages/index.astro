@@ -85,9 +85,10 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
 <script define:vars={{ dailyDealQueue: catalog.filter((product) => product?.dailyDealDate).map(({ slug, name, category, image, imageAlt, bestFor, why, dailyDealDate, amazonAsin, amazonUrl, score }) => ({ slug, name, category, image, imageAlt, bestFor, why, dailyDealDate, amazonAsin, amazonUrl, score })) }}>
   const dailyDealCatalog = [];
   const amazonTag = 'buybetterfi06-20';
+  const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
   const amazonSearch = (name) => 'https://www.amazon.com/s?k=' + encodeURIComponent(name) + '&tag=' + amazonTag;
-  const amazonProduct = (asin, name) => asin ? 'https://www.amazon.com/dp/' + encodeURIComponent(asin) + '?tag=' + amazonTag : amazonSearch(name);
-  const amazonCta = (item) => '<a class="amazon-btn" href="' + (item.amazonUrl || amazonProduct(item.amazonAsin, item.name)) + '" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>';
+  const amazonProduct = (asin, name) => asin === 'B0C6XJNKP8' ? exactDealAmazonUrl : (asin ? 'https://www.amazon.com/dp/' + encodeURIComponent(asin) + '?tag=' + amazonTag : amazonSearch(name));
+  const amazonCta = (item) => '<a class="amazon-btn" href="' + (item.amazonAsin === 'B0C6XJNKP8' ? exactDealAmazonUrl : (item.amazonUrl || amazonProduct(item.amazonAsin, item.name))) + '" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>';
   const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const easternDate = () => {
     const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
