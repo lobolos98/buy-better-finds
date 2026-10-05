@@ -383,7 +383,7 @@ const supplementalProducts = [
   {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D3V4M9F1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple AirTag 2nd generation',
-    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0D3V4M9F1', amazonUrl: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20'
+    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-737-power-bank', name: 'Anker 737 Power Bank (PowerCore 24K)', category: 'Tech', price: 'Check price', icon: '▣',
@@ -458,7 +458,7 @@ const supplementalProducts = [
   {
     slug: 'kitchenaid-artisan-stand-mixer', name: 'KitchenAid Artisan Series 5-Quart Stand Mixer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://kitchenaidus.vtexassets.com/arquivos/ids/159154/hero-KSM150PSBK.jpg?v=639198847141800000', imageAlt: 'KitchenAid Artisan Series stand mixer',
-    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', amazonAsin: 'B08K3STKK1', amazonUrl: 'https://www.amazon.com/dp/B08K3STKK1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08K3STKK1?tag=buybetterfi06-20'
+    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', amazonAsin: 'B00005UP2K', amazonUrl: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
@@ -741,7 +741,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/v/airtag/g/images/overview/hero_airtag__7jmq2is50n6y_large.jpg', imageAlt: 'Apple AirTag 2nd generation',
     bestFor: 'Travelers and organization-minded gift recipients', why: 'A small practical gift for keeping track of everyday belongings.',
-    watch: 'Best suited to people already using compatible Apple devices.', url: 'https://www.apple.com/airtag/'
+    watch: 'Best suited to people already using compatible Apple devices.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
   },
   {
     slug: 'crunchlabs-crunchinator-gift',
