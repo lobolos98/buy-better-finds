@@ -3,6 +3,21 @@
 
 export const halloweenProducts = [
   {
+    "slug": "halloween-the-good-the-bad-and-the-spooky-0062954547",
+    "name": "The Bad Seed Presents: The Good, the Bad, and the Spooky",
+    "category": "Halloween Books",
+    "price": "Check Amazon price",
+    "icon": "🎃",
+    "image": "https://dynamic.indigoimages.ca/v1/books/books/0062954547/1.jpg",
+    "imageAlt": "The Bad Seed Presents: The Good, the Bad, and the Spooky by Jory John and Pete Oswald — book cover",
+    "amazonAsin": "0062954547",
+    "bestFor": "Halloween story time for children ages 4–8",
+    "why": "A funny Halloween picture book from Jory John and Pete Oswald, featuring the Bad Seed searching for the perfect costume and more than 150 spooky stickers.",
+    "watch": "Check the current Amazon listing for price, edition, sticker-sheet details, and availability.",
+    "url": "https://www.amazon.com/dp/0062954547?tag=buybetterfi06-20",
+    "score": 8.6
+  },
+  {
     "slug": "halloween-wymulot-2-pack-40-pose-n-stay-skeletons",
     "name": "wymulot 2-Pack 40\" Pose-N-Stay Halloween Skeletons",
     "category": "Outdoor Decorations",
