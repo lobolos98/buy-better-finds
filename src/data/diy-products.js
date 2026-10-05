@@ -9,7 +9,9 @@ export const diyProducts = [
     imageAlt: 'Seesii Electric Car Jack kit',
     bestFor: 'Roadside tire changes and garage repairs',
     why: 'A portable electric jack kit designed to combine vehicle lifting with an impact wrench and tire-inflation capability.',
-    watch: 'Verify the exact kit, power source, lifting range, and vehicle compatibility before buying.'
+    watch: 'Verify the exact kit, power source, lifting range, and vehicle compatibility before buying.',
+    amazonAsin: 'B0CS3FF4RF',
+    amazonUrl: 'https://www.amazon.com/dp/B0CS3FF4RF?tag=buybetterfi06-20'
   },
   {
     slug: 'craftsman-10-in-rasp-file',
