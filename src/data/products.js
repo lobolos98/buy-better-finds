@@ -382,7 +382,7 @@ const supplementalProducts = [
   },
   {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airtag-1pack-witb-202601?wid=600&hei=600&fmt=jpeg&qlt=90', imageAlt: 'Apple AirTag 2nd generation',
+    image: 'https://theapplewiki.com/images/applewiki/6/65/AirTag_%282nd_generation%29.jpg', imageAlt: 'Apple AirTag 2nd generation',
     bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
   },
   {
