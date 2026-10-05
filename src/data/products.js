@@ -60,7 +60,7 @@ const productsCatalog = [
   {
     slug: 'anker-nano-power-bank-tech', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank',
-    bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.anker.com/products/a1653-usb-c-portable-charger-5000mah', amazonAsin: 'B0C6XJNKP8', amazonUrl: 'https://www.amazon.com/dp/B0C6XJNKP8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C6XJNKP8?tag=buybetterfi06-20', dailyDealDate: '2026-10-05'
+    bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', amazonAsin: 'B0C6XJNKP8', amazonUrl: 'https://www.amazon.com/dp/B0C6XJNKP8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C6XJNKP8?tag=buybetterfi06-20', dailyDealDate: '2026-10-05'
   },
   {
     slug: 'dyson-v8', amazonAsin: 'B0GT2DG9SK', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
