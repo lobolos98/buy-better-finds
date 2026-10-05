@@ -8,10 +8,15 @@ import { EDITORIAL_TODAY } from '../../utils/priceWatch.js';
 const deals = products.filter((p) => p && p.dailyDealDate).sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate));
 const currentDeal = deals.find((p) => p.dailyDealDate === EDITORIAL_TODAY) ?? deals[0] ?? null;
 const recommendation = currentDeal ? getRecommendation(currentDeal) : null;
-// Direct Amazon affiliate URL is read from the current deal's amazonUrl field.
-const amazonUrl = currentDeal
-  ? (currentDeal.amazonUrl ?? (currentDeal.amazonAsin ? amazonProductUrl(currentDeal.amazonAsin) : amazonSearchUrl(currentDeal.name)))
-  : null;
+
+// October 5, 2026 Deal of the Day: use the exact Amazon affiliate URL supplied by the site owner.
+// This explicit override prevents any ASIN or URL normalization from changing the destination.
+const exactDealUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_HT06SW5M9112BS3W6H21?linkCode=ml1&tag=buybetterfi06-20&linkId=6b7259c8d2638026e9fb496299cc711a&gaOptInStatus=true';
+const amazonUrl = currentDeal?.dailyDealDate === '2026-10-05'
+  ? exactDealUrl
+  : (currentDeal
+      ? (currentDeal.amazonUrl ?? (currentDeal.amazonAsin ? amazonProductUrl(currentDeal.amazonAsin) : amazonSearchUrl(currentDeal.name)))
+      : null);
 ---
 
 <BaseLayout
