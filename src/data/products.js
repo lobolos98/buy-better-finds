@@ -20,12 +20,12 @@ const productsCatalog = [
   {
     slug: 'sony-wh-1000xm5-tech', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉',
     image: 'https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1500_.jpg', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
-    bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and long battery life.', watch: 'Premium pricing; fit and sound preference are personal.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-22'
+    bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and long battery life.', watch: 'Premium pricing; fit and sound preference are personal.', amazonAsin: 'B09XS7JWHH', amazonUrl: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', dailyDealDate: '2026-09-22'
   },
   {
     slug: 'ninja-af101', name: 'Ninja 4-Qt Air Fryer AF101', category: 'Home & Kitchen', price: '$119.99', icon: '◇',
     image: 'https://target.scene7.com/is/image/Target/GUEST_127e9e1c-2cdc-4e69-9a35-de5998d4c037?fmt=pjpeg&hei=900&wid=900', imageAlt: 'Ninja 4-Qt Air Fryer AF101',
-    bestFor: 'Weeknight meals and smaller households', why: 'Compact 4-quart air fryer with a ceramic-coated basket and straightforward countertop footprint.', watch: 'The 4-quart capacity is better for smaller batches than large family meals.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-23'
+    bestFor: 'Weeknight meals and smaller households', why: 'Compact 4-quart air fryer with a ceramic-coated basket and straightforward countertop footprint.', watch: 'The 4-quart capacity is better for smaller batches than large family meals.', amazonAsin: 'B07FDJMC9Q', amazonUrl: 'https://www.amazon.com/dp/B07FDJMC9Q?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07FDJMC9Q?tag=buybetterfi06-20', dailyDealDate: '2026-09-23'
   },
   {
     slug: 'amazon-basics-46000-btu-patio-heater', name: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater', category: 'Outdoor', price: 'Check price', icon: '☼',
@@ -65,17 +65,17 @@ const productsCatalog = [
   {
     slug: 'dyson-v8', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/lifestyle/447266-01.jpg?%24responsive%24=&wid=800', imageAlt: 'Dyson V8 Cordless Vacuum',
-    bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than larger corded vacuums.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-06'
+    bestFor: 'Quick everyday floor and spot cleaning', why: 'Cordless stick vacuum format for quick cleanups and hard-to-reach areas.', watch: 'Battery runtime and bin capacity are more limited than larger corded vacuums.', amazonAsin: 'B0GT2DG9SK', amazonUrl: 'https://www.amazon.com/dp/B0GT2DG9SK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GT2DG9SK?tag=buybetterfi06-20', dailyDealDate: '2026-10-06'
   },
   {
     slug: 'instant-vortex-plus', name: 'Instant Vortex Plus Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://instantpot.com/cdn/shop/files/IB_140-3000-01_Vortex-Plus-AFO-10QT_ATF_Square_Tile1.png?v=1746220302&width=960', imageAlt: 'Instant Vortex Plus Air Fryer',
-    bestFor: 'Fast countertop cooking', why: 'Popular air-fryer format with multiple cooking functions for quick everyday meals.', watch: 'Compare basket capacity and exact functions across Vortex Plus variants.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-26'
+    bestFor: 'Fast countertop cooking', why: 'Popular air-fryer format with multiple cooking functions for quick everyday meals.', watch: 'Compare basket capacity and exact functions across Vortex Plus variants.', amazonAsin: 'B096N3FTZP', amazonUrl: 'https://www.amazon.com/dp/B096N3FTZP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B096N3FTZP?tag=buybetterfi06-20', dailyDealDate: '2026-09-26'
   },
   {
     slug: 'yeti-rambler', name: 'YETI Rambler Drinkware', category: 'Lifestyle', price: 'Check price', icon: '◈',
     image: 'https://yeti-webmedia.imgix.net/m/3f71b90ff226c222/original/PDP_Asset_Banner_Square_PDP_Product_Navy_Coffee_Overview_Lifestyle.jpg?auto=format%2Ccompress&fit=crop&h=400&w=400', imageAlt: 'YETI Rambler insulated drinkware',
-    bestFor: 'Daily drinks, commuting, and outdoor use', why: 'Durable insulated drinkware line with multiple sizes and lid configurations.', watch: 'Pick the size and lid style that matches how you actually carry and use it.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-27'
+    bestFor: 'Daily drinks, commuting, and outdoor use', why: 'Durable insulated drinkware line with multiple sizes and lid configurations.', watch: 'Pick the size and lid style that matches how you actually carry and use it.', amazonAsin: 'B073WJMKHN', amazonUrl: 'https://www.amazon.com/dp/B073WJMKHN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B073WJMKHN?tag=buybetterfi06-20', dailyDealDate: '2026-09-27'
   },
   {
     slug: 'logitech-mx-master-3s', name: 'Logitech MX Master 3S', category: 'Tech', price: 'Check price', icon: '◉',
@@ -101,7 +101,7 @@ const productsCatalog = [
   {
     slug: 'tp-link-ep40m', name: 'TP-Link Kasa Smart Outdoor Plug EP40M', category: 'Smart Home', price: 'Check price', icon: '⚡',
     image: 'https://static.tp-link.com/upload/image-line/EP40M_US_1.0_1_normal_20240522012656v.jpg', imageAlt: 'TP-Link Kasa Smart Outdoor Plug EP40M',
-    bestFor: 'Outdoor smart-home control', why: 'A Matter-certified dual-outlet smart plug for outdoor lights and other connected devices, with individually controlled outlets and IP64 weather resistance.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-03'
+    bestFor: 'Outdoor smart-home control', why: 'A Matter-certified dual-outlet smart plug for outdoor lights and other connected devices, with individually controlled outlets and IP64 weather resistance.', watch: 'Outdoor use requires appropriate weather protection and GFCI installation where applicable.', amazonAsin: 'B0CVMXZMDM', amazonUrl: 'https://www.amazon.com/dp/B0CVMXZMDM?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CVMXZMDM?tag=buybetterfi06-20', dailyDealDate: '2026-10-03'
   },
 
   {
@@ -355,7 +355,7 @@ const productsCatalog = [
 
 const supplementalProducts = [
   {
-    slug: 'ring-battery-doorbell', name: 'Ring Battery Doorbell', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://images.ctfassets.net/a3peezndovsu/x7qceIoaiCJ3QArhqVeSp/ea33ebc6250b36d629f22971b3e76930/ring_battery_doorbell_2nd_gen_front_image_render_speckle_mocha_1500x1500_02.jpg', imageAlt: 'Ring Battery Doorbell', bestFor: 'Front-door monitoring and package awareness', why: 'Battery-powered video doorbell designed for flexible installation without running doorbell wiring.', watch: 'Cloud features and subscriptions can add ongoing cost depending on how you use it.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    slug: 'ring-battery-doorbell', name: 'Ring Battery Doorbell', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://images.ctfassets.net/a3peezndovsu/x7qceIoaiCJ3QArhqVeSp/ea33ebc6250b36d629f22971b3e76930/ring_battery_doorbell_2nd_gen_front_image_render_speckle_mocha_1500x1500_02.jpg', imageAlt: 'Ring Battery Doorbell', bestFor: 'Front-door monitoring and package awareness', why: 'Battery-powered video doorbell designed for flexible installation without running doorbell wiring.', watch: 'Cloud features and subscriptions can add ongoing cost depending on how you use it.', amazonAsin: 'B0BZWRLRLK', amazonUrl: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-05'
@@ -383,37 +383,37 @@ const supplementalProducts = [
   {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D3V4M9F1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple AirTag 2nd generation',
-    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, amazonAsin: 'B0D3V4M9F1', amazonUrl: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20', not continuous personal location tracking.', url: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-737-power-bank', name: 'Anker 737 Power Bank (PowerCore 24K)', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09VPHVT2Z&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Anker 737 Power Bank',
-    bestFor: 'Laptop and phone charging while traveling', why: 'High-capacity portable power bank with high-output USB-C charging and an onboard display.', watch: 'Its large capacity also means a heavier battery pack.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Laptop and phone charging while traveling', why: 'High-capacity portable power bank with high-output USB-C charging and an onboard display.', watch: 'Its large capacity also means a heavier battery pack.', amazonAsin: 'B09VPHVT2Z', amazonUrl: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20'
   },
   {
     slug: 'logitech-mx-keys-s', name: 'Logitech MX Keys S Wireless Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BKW3LB2B&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Logitech MX Keys S Wireless Keyboard',
-    bestFor: 'Desktop productivity and multi-device work', why: 'Low-profile wireless keyboard built for quiet typing, multi-device switching, and customizable shortcuts.', watch: 'Full-size layouts take more desk space than compact keyboards.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Desktop productivity and multi-device work', why: 'Low-profile wireless keyboard built for quiet typing, multi-device switching, and customizable shortcuts.', watch: 'Full-size layouts take more desk space than compact keyboards.', amazonAsin: 'B0BKW3LB2B', amazonUrl: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20'
   },
   {
     slug: 'samsung-t7-shield', name: 'Samsung T7 Shield Portable SSD 2TB', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09VLHR4JC&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Samsung T7 Shield Portable SSD',
-    bestFor: 'Portable file storage and creative work', why: 'Rugged portable SSD designed for fast external storage and travel.', watch: 'Storage capacity and interface speeds should match the workflow you actually need.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Portable file storage and creative work', why: 'Rugged portable SSD designed for fast external storage and travel.', watch: 'Storage capacity and interface speeds should match the workflow you actually need.', amazonAsin: 'B09VLHR4JC', amazonUrl: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20'
   },
   {
     slug: 'bose-qc-ultra-2', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://image.anhducdigital.vn/di-dong/tai-nghe/tai-nghe-headphone/bose/bose-quietcomfort-ultra-headphones-2/bose-quietcomfort-ultra-headphones-2-white-2.jpg', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
-    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, amazonAsin: 'B0FDKR293G', amazonUrl: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', so fit and sound preferences matter.', url: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20'
   },
   {
     slug: 'jbl-charge-5', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf9fae84b/JBL_CHARGE5_HERO_GREEN_0025_x2.jpg?sw=900&sh=900&sm=fit&sfrm=png', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
-    bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', amazonAsin: 'B08VDNCZT9', amazonUrl: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VDNCZT9?tag=buybetterfi06-20'
   },
   {
     slug: 'kindle-paperwhite', name: 'Amazon Kindle Paperwhite', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CFPHV9ZN&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Amazon Kindle Paperwhite',
-    bestFor: 'Dedicated reading and travel', why: 'E-reader designed around a glare-free display and long reading sessions without the distractions of a general-purpose tablet.', watch: 'It is specialized for reading rather than general tablet apps.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Dedicated reading and travel', why: 'E-reader designed around a glare-free display and long reading sessions without the distractions of a general-purpose tablet.', watch: 'It is specialized for reading rather than general tablet apps.', amazonAsin: 'B0CFPHV9ZN', amazonUrl: 'https://www.amazon.com/dp/B0CFPHV9ZN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CFPHV9ZN?tag=buybetterfi06-20'
   },
   {
     slug: 'razer-blackwidow-v4', name: 'Razer BlackWidow V4 75% Mechanical Gaming Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
@@ -443,7 +443,7 @@ const supplementalProducts = [
   {
     slug: 'amazon-echo-show-8', name: 'Amazon Echo Show 8', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://m.media-amazon.com/images/I/31vBM9LK3CL._SL500_.jpg', imageAlt: 'Amazon Echo Show 8 (3rd Gen) smart display',
-    bestFor: 'Kitchen timers, video calls, and smart-home control', why: 'Smart display that combines Alexa voice control with a screen for compatible smart-home, media, and communication features.', watch: 'Smart-display usefulness depends on the services and devices you already use.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Kitchen timers, video calls, and smart-home control', why: 'Smart display that combines Alexa voice control with a screen for compatible smart-home, media, and communication features.', watch: 'Smart-display usefulness depends on the services and devices you already use.', amazonAsin: 'B0BLS3Y632', amazonUrl: 'https://www.amazon.com/dp/B0BLS3Y632?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BLS3Y632?tag=buybetterfi06-20'
   },
   {
     slug: 'amazon-fire-tv-stick-4k-select', name: 'Amazon Fire TV Stick 4K Select', category: 'Tech', price: 'Check price', icon: '▣',
@@ -458,7 +458,7 @@ const supplementalProducts = [
   {
     slug: 'kitchenaid-artisan-stand-mixer', name: 'KitchenAid Artisan Series 5-Quart Stand Mixer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://kitchenaidus.vtexassets.com/arquivos/ids/159154/hero-KSM150PSBK.jpg?v=639198847141800000', imageAlt: 'KitchenAid Artisan Series stand mixer',
-    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', amazonAsin: 'B08K3STKK1', amazonUrl: 'https://www.amazon.com/dp/B08K3STKK1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08K3STKK1?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
@@ -568,7 +568,7 @@ const supplementalProducts = [
   {
     slug: 'brightech-ambience-pro-solar', name: 'Brightech Ambience Pro Solar String Lights', category: 'Outdoor', price: '$49.00', icon: '☼',
     image: 'https://brightech.com/cdn/shop/files/Copy_of_Copy_of_20221121_DBaum_Brightech_15205_onestick.jpg?v=1737075514&width=1445', imageAlt: 'Brightech Ambience Pro Solar outdoor string lights',
-    bestFor: 'Solar-powered patio and pergola ambiance', why: 'Weather-resistant Edison-style solar string lights with automatic dusk activation and a warm 2700K glow.', watch: 'Solar performance depends on placing the panel where it receives adequate direct sunlight.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Solar-powered patio and pergola ambiance', why: 'Weather-resistant Edison-style solar string lights with automatic dusk activation and a warm 2700K glow.', watch: 'Solar performance depends on placing the panel where it receives adequate direct sunlight.', amazonAsin: 'B075NS8YXG', amazonUrl: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: '$59.49', icon: '◇',
