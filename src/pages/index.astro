@@ -6,8 +6,11 @@ import { amazonProductUrl, amazonSearchUrl } from '../utils/amazon.js';
 import { getDealOfTheDay } from '../utils/priceWatch.js';
 const validCatalog = catalog.filter((product) => product?.slug);
 const products = validCatalog.slice(0, 8);
-const amazonUrl = (product) => product?.amazonUrl
-  ?? (product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || ''));
+const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
+const amazonUrl = (product) => product?.amazonAsin === 'B0C6XJNKP8'
+  ? exactDealAmazonUrl
+  : (product?.amazonUrl
+      ?? (product?.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product?.name || '')));
 const categoryPreviews = [
   { name: 'Tech', href: '/categories/tech/', slug: 'sony-wh-1000xm5-tech', alt: 'Tech products including Sony headphones', description: 'Headphones, tablets, accessories & more' },
   { name: 'Home & Kitchen', href: '/categories/home-kitchen/', slug: 'ninja-af101', alt: 'Home and kitchen products including an air fryer', description: 'Kitchen gear, cleaning & organization' },
