@@ -407,7 +407,7 @@ const supplementalProducts = [
   },
   {
     slug: 'jbl-charge-5', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08VDNCZT9&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
+    image: 'https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf9fae84b/JBL_CHARGE5_HERO_GREEN_0025_x2.jpg?sw=900&sh=900&sm=fit&sfrm=png', imageAlt: 'JBL Charge 5 portable Bluetooth speaker',
     bestFor: 'Portable music at home and outdoors', why: 'Portable Bluetooth speaker designed around durable construction, wireless playback, and a built-in battery.', watch: 'Speaker size and bass response should match where you plan to use it.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
