@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { products } from '../../data/products.js';
+import { getRecommendation } from '../../data/recommendations.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
+import { EDITORIAL_TODAY } from '../../utils/priceWatch.js';
+
+const deals = products.filter((p) => p && p.dailyDealDate).sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate));
+const currentDeal = deals.find((p) => p.dailyDealDate === EDITORIAL_TODAY) ?? deals[0] ?? null;
+const recommendation = currentDeal ? getRecommendation(currentDeal) : null;
+const amazonUrl = currentDeal
+  ? (currentDeal.amazonUrl ?? (currentDeal.amazonAsin ? amazonProductUrl(currentDeal.amazonAsin) : amazonSearchUrl(currentDeal.name)))
+  : null;
+---
+
+<BaseLayout
+  title="Deal of the Day | Buy Better Finds"
+  description="See today's featured Buy Better Finds deal, why we recommend it, and where to check the current price."
+>
+  <section class="section">
+    <div class="container">
+      {currentDeal ? (
+        <>
+          <div class="eyebrow">🔥 DEAL OF THE DAY</div>
+          <h1>{currentDeal.name}</h1>
+          <p class="lead">Today's featured Buy Better Finds pick. We highlight one product at a time so this page can stay your permanent deal link.</p>
+
+          <div class="deal-card">
+            <div class="product-image">
+              <img src={currentDeal.amazonImage || currentDeal.image} alt={currentDeal.imageAlt} width="900" height="900" />
+            </div>
+            <div class="content">
+              <div class="tag">{currentDeal.category}</div>
+              <h2>{currentDeal.name}</h2>
+              <p>{currentDeal.why}</p>
+              <div class="score"><strong>{recommendation?.score ?? currentDeal.score ?? 8.5}</strong><span>/10 Buy Better Score</span></div>
+              <div class="actions">
+                <a class="primary" href={currentDeal.amazonAsin ? `/products/${currentDeal.slug}/` : `/products/${currentDeal.slug}/`}>See Our Take →</a>
+                {amazonUrl && <a class="amazon" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check Current Price on Amazon →</a>}
+              </div>
+              <p class="disclosure"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Prices and availability can change, so confirm current details on Amazon before buying.</p>
+            </div>
+          </div>
+
+          <div class="how-it-works">
+            <strong>This is the permanent Deal of the Day link.</strong>
+            <span>The featured product can change without changing the URL. Use this page for your Instagram bio, Stories, Pinterest posts, and other social profiles.</span>
+          </div>
+        </>
+      ) : (
+        <div class="empty">
+          <div class="eyebrow">DEAL OF THE DAY</div>
+          <h1>Today's deal is coming soon.</h1>
+          <p>Check back as Buy Better Finds adds the next featured deal.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.deal-card{margin:28px 0 30px;display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,1fr);gap:34px;padding:28px;border:1px solid #d9e2ec;border-radius:20px;background:#fff;box-shadow:0 14px 38px #10233f12}.product-image{min-height:420px;border-radius:16px;background:#f4f6f8;display:flex;align-items:center;justify-content:center;overflow:hidden}.product-image img{width:100%;height:100%;max-height:520px;object-fit:contain;padding:30px;box-sizing:border-box}.content{display:flex;flex-direction:column;justify-content:center}.tag{display:inline-block;width:max-content;padding:6px 9px;border-radius:999px;background:#eef3f8;color:#10233f;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.content h2{margin:12px 0 10px;color:#10233f;font-size:30px;line-height:1.15}.content p{color:#475569;line-height:1.6;font-size:15px}.score{display:flex;align-items:baseline;gap:7px;margin:8px 0 18px}.score strong{font-size:25px;color:#10233f}.score span{font-size:11px;color:#64748b}.actions{display:grid;gap:10px}.actions a{display:block;text-align:center;padding:14px 18px;border-radius:8px;text-decoration:none;font-weight:900;font-size:14px}.primary{background:#2366a8;color:#fff}.amazon{background:#c8102e;color:#fff}.disclosure{margin-top:18px!important;padding:13px 15px;background:#fff7f8;border-left:4px solid #c8102e;font-size:11px!important;line-height:1.5!important}.how-it-works{padding:20px 22px;border:1px solid #d9dee8;border-radius:16px;background:#f8fafc;display:grid;gap:6px}.how-it-works strong{color:#10233f}.how-it-works span{color:#64748b;font-size:13px;line-height:1.5}.empty{text-align:center;padding:60px 20px}.empty h1{color:#10233f}.empty p{color:#64748b}@media(max-width:700px){.deal-card{grid-template-columns:1fr;padding:18px;gap:20px}.product-image{min-height:300px}.content h2{font-size:24px}}
+</style>
