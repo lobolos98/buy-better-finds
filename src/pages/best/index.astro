@@ -1,20 +1,175 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const sections = [
-  ['Tech','best-tech','Headphones, tablets, mice, power, and everyday technology.','/guides/best-tech/'],
-  ['Home & Kitchen','best-home-kitchen','Appliances, cleaning, organization, and practical household upgrades.','/guides/best-home-kitchen/'],
-  ['Tools & DIY','best-tools-diy','Useful tools for repairs, projects, and general homeowner work.','/guides/best-tools-diy/'],
-  ['Outdoor','best-outdoor','Grilling, patio heating, and products for spending more time outside.','/guides/best-outdoor/'],
-  ['Smart Home','best-smart-home','Connected products for convenience, monitoring, lighting, and routines.','/guides/best-smart-home/'],
-  ['Fitness','best-fitness-watches','Fitness watches and gear for structured activity and training.','/guides/best-fitness-watches/'],
-  ['Everyday Products','best-everyday-products','Useful products that solve common daily problems.','/guides/best-everyday-products/']
+import { products } from '../../data/products.js';
+import { getRecommendation } from '../../data/recommendations.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
+
+const featuredSlugs = [
+  'sony-wh-1000xm5',
+  'apple-ipad-a16',
+  'logitech-mx-master-3s'
 ];
+
+const topPickSlugs = [
+  'sony-wh-1000xm5',
+  'apple-ipad-a16',
+  'logitech-mx-master-3s',
+  'lego-city-lava-rollercoaster',
+  'bowflex-selecttech-552',
+  'apple-watch-series-10',
+  'garmin-forerunner-265',
+  'tp-link-ep40m',
+  'ninja-af101',
+  'crunchlabs-crunchinator',
+  'yeti-rambler',
+  'weber-spirit-e210'
+];
+
+const featured = featuredSlugs
+  .map((slug) => products.find((product) => product.slug === slug))
+  .filter(Boolean);
+
+const topPicks = topPickSlugs
+  .map((slug) => products.find((product) => product.slug === slug))
+  .filter(Boolean);
+
+const scoreFor = (product) => getRecommendation(product).score ?? product.score ?? null;
+
+const affiliateUrlFor = (product) =>
+  product.amazonUrl ??
+  (product.amazonAsin
+    ? amazonProductUrl(product.amazonAsin)
+    : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name)));
 ---
-<BaseLayout title="Best Products | Buy Better Finds" description="Browse Buy Better Finds best-product guides by category, with practical comparisons, scores, tradeoffs, and buying advice.">
-<section class="hero"><div class="container"><div class="eyebrow">BEST OF BUY BETTER FINDS</div><h1>Start with the products worth considering.</h1><p>Our best-of hub connects shoppers to focused buying guides, direct comparisons, and individual product reviews—so you can move from broad category to specific decision without getting lost.</p></div></section>
-<section class="section"><div class="container"><div class="grid">{sections.map(([name,slug,description,href])=><article class="card"><span>BEST {name.toUpperCase()}</span><h2>{name}</h2><p>{description}</p><a class="arrow" href={href}>Explore {name} →</a></article>)}</div></div></section>
-<section class="section pathways"><div class="container"><div class="path-grid"><div><div class="eyebrow">NEED A SHORTLIST?</div><h2>Read a buying guide.</h2><p>Use a focused guide when you know the type of product you want but need help narrowing the field.</p><a class="arrow" href="/guides/">Browse All Buying Guides →</a></div><div><div class="eyebrow">ALREADY HAVE TWO OPTIONS?</div><h2>Compare them directly.</h2><p>Use our comparison pages when you are deciding between specific products.</p><a class="arrow" href="/comparisons/">Browse Comparisons →</a></div><div><div class="eyebrow">READY TO SHOP?</div><h2>See every find.</h2><p>Browse the full catalog with product scores, best-for guidance, and practical watch-outs.</p><a class="arrow" href="/products/">View All Products →</a></div></div></div></section>
+
+<BaseLayout
+  title="Our Top Picks | Buy Better Finds"
+  description="Shop the products Buy Better Finds recommends most, with real product images, Buy Better Scores, practical reasons to consider each pick, and direct shopping links."
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">OUR TOP PICKS</div>
+      <h1>The products we’d start with.</h1>
+      <p>These are the Buy Better Finds picks we think are most worth a closer look—across tech, home, outdoor, fitness, toys, and everyday life.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="/products/">Browse All Products</a>
+        <a class="secondary-button" href="/guides/">Read Buying Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section featured-section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">START HERE</div>
+          <h2>Three standout picks</h2>
+        </div>
+        <p>Strong all-around recommendations with different use cases, so you can find a starting point quickly.</p>
+      </div>
+
+      <div class="featured-grid">
+        {featured.map((product, index) => {
+          const recommendation = getRecommendation(product);
+          const score = scoreFor(product);
+          return (
+            <article class:list={['featured-card', index === 0 && 'featured-card-main']}>
+              <div class="image-wrap">
+                <img src={product.image} alt={product.imageAlt || product.name} loading={index === 0 ? 'eager' : 'lazy'} />
+                <div class="score-badge">★ {score?.toFixed(1)}/10</div>
+              </div>
+              <div class="card-content">
+                <span class="category">{product.category}</span>
+                <h3>{product.name}</h3>
+                <p class="best-for"><strong>Best for:</strong> {recommendation.bestFor || product.bestFor}</p>
+                <p>{product.why}</p>
+                <div class="card-actions">
+                  <a class="take-link" href={`/products/${product.slug}/`}>See Our Take →</a>
+                  <a class="amazon-link" href={affiliateUrlFor(product)} target="_blank" rel="sponsored noopener">Check Price</a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section picks-section">
+    <div class="container">
+      <div class="section-heading centered">
+        <div>
+          <div class="eyebrow">MORE TO CONSIDER</div>
+          <h2>Our Top Picks</h2>
+        </div>
+        <p>Handpicked products with a strong Buy Better Score and a clear reason to recommend them.</p>
+      </div>
+
+      <div class="product-grid">
+        {topPicks.map((product) => {
+          const recommendation = getRecommendation(product);
+          const score = scoreFor(product);
+          return (
+            <article class="product-card">
+              <a class="product-image-link" href={`/products/${product.slug}/`} aria-label={`See ${product.name}`}>
+                <div class="product-image">
+                  <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" />
+                  {score && <span class="score-badge small">★ {score.toFixed(1)}</span>}
+                </div>
+              </a>
+              <div class="product-card-body">
+                <span class="category">{product.category}</span>
+                <h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3>
+                <p>{recommendation.bestFor || product.bestFor}</p>
+                <div class="why"><strong>Why we recommend it:</strong> {product.why}</div>
+                <div class="product-footer">
+                  <a class="take-link" href={`/products/${product.slug}/`}>See Our Take →</a>
+                  <a class="amazon-link" href={affiliateUrlFor(product)} target="_blank" rel="sponsored noopener">Shop →</a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section category-section">
+    <div class="container">
+      <div class="section-heading centered">
+        <div>
+          <div class="eyebrow">SHOP BY INTEREST</div>
+          <h2>More ways to find a great pick</h2>
+        </div>
+        <p>Want to go deeper? Jump into a category or use our buying guides for more focused recommendations.</p>
+      </div>
+      <div class="category-links">
+        <a href="/categories/tech/"><span>Tech</span><b>→</b></a>
+        <a href="/categories/home-kitchen/"><span>Home & Kitchen</span><b>→</b></a>
+        <a href="/categories/tools-diy/"><span>Tools & DIY</span><b>→</b></a>
+        <a href="/categories/outdoor/"><span>Outdoor</span><b>→</b></a>
+        <a href="/categories/smart-home/"><span>Smart Home</span><b>→</b></a>
+        <a href="/categories/fitness/"><span>Fitness</span><b>→</b></a>
+        <a href="/categories/lifestyle/"><span>Lifestyle</span><b>→</b></a>
+        <a href="/categories/gifts-collectibles/"><span>Gifts & Collectibles</span><b>→</b></a>
+        <a href="/categories/toys-games/"><span>Toys & Games</span><b>→</b></a>
+        <a href="/categories/beauty-personal-care/"><span>Beauty & Personal Care</span><b>→</b></a>
+        <a href="/categories/seasonal-holidays/"><span>Seasonal & Holidays</span><b>→</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section trust-section">
+    <div class="container trust-inner">
+      <div>
+        <div class="eyebrow">HOW WE PICK</div>
+        <h2>A score is only part of the decision.</h2>
+      </div>
+      <p>Our Buy Better Score is paired with the product's strengths, tradeoffs, best-for use case, and practical watch-outs. We want you to know <em>why</em> a product made the list—not just that it did.</p>
+    </div>
+  </section>
 </BaseLayout>
+
 <style>
-.hero{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:82px 0}.hero .eyebrow,.hero h1,.hero p{color:#fff}.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;max-width:850px;margin:12px 0 20px}.hero p{max-width:780px;font-size:18px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:14px;padding:28px;background:#fff;min-height:230px;display:flex;flex-direction:column}.card span{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--red)}.card h2{font-size:27px;color:var(--navy);margin:13px 0 8px}.card p{font-size:14px;line-height:1.6;color:var(--muted)}.card .arrow{margin-top:auto}.pathways{background:#f5f7fa}.path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.path-grid>div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px}.path-grid h2{color:var(--navy);margin:9px 0}.path-grid p{color:var(--muted);line-height:1.6;font-size:13px}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.path-grid{grid-template-columns:1fr}}@media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding:60px 0}.hero p{font-size:16px}}
+.hero{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:72px 0 78px}.hero-inner{max-width:1050px}.hero .eyebrow,.hero h1,.hero p{color:#fff}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;max-width:850px;margin:12px 0 20px;letter-spacing:-.035em}.hero p{max-width:760px;font-size:18px;line-height:1.7;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.primary-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:8px;font-weight:800;text-decoration:none}.primary-button{background:#fff;color:#10233f}.secondary-button{border:1px solid rgba(255,255,255,.45);color:#fff}.section{padding:68px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px}.section-heading h2{font-size:clamp(30px,4vw,44px);line-height:1.08;color:var(--navy);margin:7px 0 0}.section-heading>p{max-width:500px;color:var(--muted);line-height:1.6;margin:0}.centered{align-items:end}.featured-section{background:#fff}.featured-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px}.featured-card,.product-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 7px 24px rgba(16,35,63,.06)}.featured-card-main{box-shadow:0 12px 34px rgba(16,35,63,.11)}.image-wrap{position:relative;height:285px;background:#f7f8fa;display:flex;align-items:center;justify-content:center;padding:22px}.featured-card-main .image-wrap{height:330px}.image-wrap img{width:100%;height:100%;object-fit:contain}.score-badge{position:absolute;top:14px;right:14px;background:#fff;color:var(--navy);border-radius:999px;padding:8px 11px;font-weight:900;font-size:13px;box-shadow:0 4px 15px rgba(0,0,0,.12)}.score-badge.small{top:10px;right:10px;font-size:12px;padding:7px 9px}.card-content{padding:22px}.category{display:inline-block;text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:900;color:var(--red);margin-bottom:7px}.featured-card h3,.product-card h3{font-size:22px;line-height:1.18;color:var(--navy);margin:3px 0 10px}.featured-card p,.product-card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 10px}.best-for{min-height:42px}.card-actions,.product-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}.take-link{color:var(--navy);font-weight:900;text-decoration:none}.amazon-link{background:var(--red);color:#fff;font-weight:900;text-decoration:none;padding:10px 13px;border-radius:7px;font-size:12px}.picks-section{background:#f5f7fa}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product-image-link{display:block}.product-image{position:relative;height:235px;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px}.product-image img{width:100%;height:100%;object-fit:contain;transition:transform .2s ease}.product-image-link:hover img{transform:scale(1.035)}.product-card-body{padding:18px}.product-card h3 a{color:var(--navy);text-decoration:none}.product-card-body>p{min-height:40px}.why{font-size:12px;line-height:1.55;color:var(--muted);min-height:76px}.why strong{color:var(--navy)}.product-footer{margin-top:17px}.product-footer .amazon-link{padding:8px 11px}.category-section{background:#fff}.category-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.category-links a{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:10px;padding:15px 16px;text-decoration:none;color:var(--navy);font-weight:800;background:#fff;transition:transform .15s ease,box-shadow .15s ease}.category-links a:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(16,35,63,.08)}.category-links b{color:var(--red)}.trust-section{background:#10233f;color:#fff}.trust-inner{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.trust-section .eyebrow,.trust-section h2{color:#fff}.trust-section h2{font-size:clamp(30px,4vw,44px);margin:8px 0 0}.trust-section p{color:rgba(255,255,255,.86);line-height:1.75;margin:0}@media(max-width:1000px){.featured-grid{grid-template-columns:1fr 1fr}.featured-card-main{grid-column:1/-1}.product-grid{grid-template-columns:repeat(3,1fr)}.category-links{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.section{padding:52px 0}.section-heading{display:block}.section-heading>p{margin-top:13px}.featured-grid{grid-template-columns:1fr}.featured-card-main{grid-column:auto}.image-wrap,.featured-card-main .image-wrap{height:285px}.product-grid{grid-template-columns:repeat(2,1fr);gap:12px}.product-image{height:190px;padding:12px}.product-card-body{padding:14px}.product-card h3{font-size:18px}.why{min-height:auto}.product-footer{align-items:flex-start}.category-links{grid-template-columns:1fr}.trust-inner{grid-template-columns:1fr;gap:18px}}@media(max-width:430px){.product-grid{grid-template-columns:1fr}.product-image{height:240px}.hero{padding:58px 0 62px}.hero h1{font-size:42px}}
 </style>
