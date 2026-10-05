@@ -3,6 +3,21 @@
 
 export const halloweenProducts = [
   {
+    "slug": "halloween-oreo-orange-creme-cookies-b0bxn51s2z",
+    "name": "OREO Orange Creme Chocolate Sandwich Cookies, Limited Edition, Halloween Cookies, 18.71 oz",
+    "category": "Halloween Treats",
+    "price": "Check Amazon price",
+    "icon": "🍪",
+    "image": "https://m.media-amazon.com/images/I/71kdoJYbnBL._AC_UL320_.jpg",
+    "imageAlt": "OREO Orange Creme Chocolate Sandwich Cookies Limited Edition Halloween Cookies",
+    "amazonAsin": "B0BXN51S2Z",
+    "bestFor": "Halloween parties, treat bags, and seasonal snacking",
+    "why": "A limited-edition OREO Halloween treat with bright orange creme between chocolate wafers and festive spooky designs.",
+    "watch": "Check the current Amazon listing for price, package size, availability, and packaging details.",
+    "url": "https://www.amazon.com/dp/B0BXN51S2Z?tag=buybetterfi06-20",
+    "score": 8.5
+  },
+  {
     "slug": "halloween-the-good-the-bad-and-the-spooky-0062954547",
     "name": "The Bad Seed Presents: The Good, the Bad, and the Spooky",
     "category": "Halloween Books",
