@@ -586,5 +586,20 @@ export const halloweenProducts = [
     "watch": "Check the current Amazon listing for price, availability, size, and options.",
     "url": "https://www.amazon.com/dp/B0HBVNRBBW?tag=buybetterfi06-20",
     "score": 8.5
+  },
+  {
+    "slug": "the-spooky-wheels-on-the-bus",
+    "name": "The Spooky Wheels on the Bus",
+    "category": "Halloween Books",
+    "price": "Check Amazon price",
+    "icon": "🎃",
+    "image": "https://covers1.booksamillion.com/covers/bam/0/54/517/480/0545174805_b.jpg",
+    "imageAlt": "The Spooky Wheels on the Bus by J. Elizabeth Mills and Ben Mantle — book cover",
+    "amazonAsin": "0545174805",
+    "bestFor": "Halloween story time for young children",
+    "why": "A Halloween-themed twist on the classic Wheels on the Bus song, with a spooky bus ride and counting elements for preschool and kindergarten readers.",
+    "watch": "Check the current Amazon listing for price, edition, and availability.",
+    "url": "https://www.amazon.com/dp/0545174805?tag=buybetterfi06-20",
+    "score": 8.5
   }
 ];
