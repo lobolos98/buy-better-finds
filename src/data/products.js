@@ -383,7 +383,7 @@ const supplementalProducts = [
   {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D3V4M9F1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple AirTag 2nd generation',
-    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, amazonAsin: 'B0D3V4M9F1', amazonUrl: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20', not continuous personal location tracking.', url: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20'
+    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0D3V4M9F1', amazonUrl: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D3V4M9F1?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-737-power-bank', name: 'Anker 737 Power Bank (PowerCore 24K)', category: 'Tech', price: 'Check price', icon: '▣',
@@ -403,7 +403,7 @@ const supplementalProducts = [
   {
     slug: 'bose-qc-ultra-2', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://image.anhducdigital.vn/di-dong/tai-nghe/tai-nghe-headphone/bose/bose-quietcomfort-ultra-headphones-2/bose-quietcomfort-ultra-headphones-2-white-2.jpg', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
-    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, amazonAsin: 'B0FDKR293G', amazonUrl: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', so fit and sound preferences matter.', url: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20'
+    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', amazonAsin: 'B0FDKR293G', amazonUrl: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20'
   },
   {
     slug: 'jbl-charge-5', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
