@@ -582,7 +582,7 @@ const supplementalProducts = [
   },
   {
     slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro Solar Hanging Remote String Lights', category: 'Outdoor', price: '$64.00', icon: '☼',
-    image: 'https://brightech.com/cdn/shop/files/20241107_Brightech_15428.jpg?v=1737075497&width=1445', imageAlt: 'Brightech Ambience Pro Solar Hanging Remote String Lights',
+    image: 'https://brightech.com/cdn/shop/files/Untitled_design_65.png?v=1751923255&width=1500', imageAlt: 'Brightech Ambience Pro Solar Hanging Remote String Lights',
     bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://brightech.com/products/ambience-pro-solar-hanging-remote-control'
   },
   {
@@ -602,17 +602,17 @@ const supplementalProducts = [
   },
   {
     slug: 'sunco-square-solar-path-lights', name: 'Sunco Square Solar Pathway Lights 4-Pack', category: 'Outdoor', price: '$29.99', icon: '☼',
-    image: 'https://sunco.com/cdn/shop/files/GD_MD_SR-BK-2740K-4PK_1.jpg', imageAlt: 'Sunco Square Solar Pathway Lights 4-Pack',
+    image: 'https://sunco.com/cdn/shop/files/GD_MD_SR-BK-2740K_MainImage_4PK.jpg?v=1773174207&width=1200', imageAlt: 'Sunco Square Solar Pathway Lights 4-Pack',
     bestFor: 'Pathways, gardens, and patio borders', why: 'Solar-powered square path lights with dusk-to-dawn operation and selectable 2700K–4000K color temperature.', watch: 'Solar charging performance depends on direct sunlight reaching each light.', url: 'https://sunco.com/products/square-solar-pathway-lights-outdoor-super-bright'
   },
   {
     slug: 'alpine-solar-pathway-stakes-4', name: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack', category: 'Outdoor', price: '$69.84', icon: '☼',
-    image: 'https://images.thdstatic.com/productImages/5d6e2c42-5baf-4a1f-93f2-4f4eec9e3a38/svn/alpine-corporation-landscape-lighting-sla342slr-4-64_1000.jpg', imageAlt: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack',
+    image: 'https://images.thdstatic.com/productImages/858bd1c1-7e7d-467c-91b5-d57f00a0c251/svn/black-alpine-corporation-landscape-flood-spotlights-sla342slr-4-64_600.jpg', imageAlt: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack',
     bestFor: 'Walkways, driveways, and garden borders', why: 'Solar-powered LED pathway stakes with warm white light and tool-free installation.', watch: 'Their 15-inch height is best for accent and pathway lighting rather than broad-area illumination.', url: 'https://www.homedepot.com/p/315866417'
   },
   {
     slug: 'dazuma-solar-path-lighting', name: 'Dazuma Outdoor Solar Path Lighting', category: 'Outdoor', price: '$104.99', icon: '☼',
-    image: 'https://dazuma.us/cdn/shop/files/HA142410-01B_1.jpg', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
+    image: 'https://dazuma.us/cdn/shop/files/warm-glowing-outdoor-solar-path-lighting-grassy-lawn-night.jpg?v=1763106655&width=1946', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
     bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://dazuma.us/products/outdoor-solar-path-lighting-waterproof-ground-light'
   },
   {
