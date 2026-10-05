@@ -318,19 +318,19 @@ export const halloweenProducts = [
     "score": 8.3
   },
   {
-    "slug": "halloween-der-rose-4-pack-small-black-pot-faux-plants-b0bz8dzv6d",
-    "name": "Der Rose 4-Pack Small Black-Pot Faux Plants",
-    "category": "Indoor & Home Décor",
+    "slug": "halloween-atdawn-fog-machine-b07tb57jg2",
+    "name": "ATDAWN Halloween Fog Machine, Professional Wireless Remote Control Portable Smoke Machine for Holidays Parties Weddings",
+    "category": "Fog Machines & Effects",
     "price": "Check Amazon price",
-    "icon": "🎃",
-    "image": "https://m.media-amazon.com/images/I/911QXgrv0TL._AC_UY512_.jpg",
-    "imageAlt": "Der Rose 4-Pack Small Black-Pot Faux Plants — Amazon product photo",
-    "amazonAsin": "B0BZ8DZV6D",
-    "bestFor": "Halloween shopping and seasonal decorating",
-    "why": "A specific Amazon seasonal item selected for the Buy Better Finds Halloween collection.",
-    "watch": "Check the current Amazon listing for price, availability, size, and options.",
-    "url": "https://www.amazon.com/dp/B0BZ8DZV6D?tag=buybetterfi06-20",
-    "score": 8.3
+    "icon": "💨",
+    "image": "https://m.media-amazon.com/images/I/71H6uJ6Q9nL._AC_SL1500_.jpg",
+    "imageAlt": "ATDAWN Halloween Fog Machine, Professional Wireless Remote Control Portable Smoke Machine",
+    "amazonAsin": "B07TB57JG2",
+    "bestFor": "Halloween parties, haunted houses, weddings, and spooky displays",
+    "why": "A portable ATDAWN fog machine designed to generate up to 1500 CFM of fog, with wireless remote control and fuse protection.",
+    "watch": "Check the current Amazon listing for price, availability, fog fluid requirements, and operating instructions.",
+    "url": "https://www.amazon.com/dp/B07TB57JG2?tag=buybetterfi06-20",
+    "score": 8.4
   },
   {
     "slug": "halloween-b0crhbtq1j",
