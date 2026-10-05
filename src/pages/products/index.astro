@@ -23,10 +23,13 @@ const productCards = products.map((product) => {
   const why = escapeHtml(product.why);
   const watch = escapeHtml(product.watch);
   const price = escapeHtml(product.price);
-  const amazonUrl = product.amazonUrl
-    ?? (product.amazonAsin
-      ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
-      : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`));
+  const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
+  const amazonUrl = product.amazonAsin === 'B0C6XJNKP8'
+    ? exactDealAmazonUrl
+    : (product.amazonUrl
+      ?? (product.amazonAsin
+        ? `https://www.amazon.com/dp/${encodeURIComponent(product.amazonAsin)}?tag=buybetterfi06-20`
+        : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`)));
 
   return `<article class="card product-card">
     <a class="product-image" href="/products/${slug}/" aria-label="View ${name}">
