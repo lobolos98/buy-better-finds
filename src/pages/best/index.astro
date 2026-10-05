@@ -35,6 +35,8 @@ const topPicks = topPickSlugs
 
 const scoreFor = (product) => getRecommendation(product).score ?? product.score ?? null;
 
+const ourPicksAmazonUrl = 'https://www.amazon.com/dp/B0F2J118F4/ref=cm_sw_r_as_gl_apa_gl_i_MNEAN29ETHKTYAGS2VWC?linkCode=ml1&tag=buybetterfi06-20&linkId=cfa5ab1e2518c9dd3cff577524eb190d&gaOptInStatus=true';
+
 const affiliateUrlFor = (product) =>
   product.amazonUrl ??
   (product.amazonAsin
@@ -54,6 +56,7 @@ const affiliateUrlFor = (product) =>
       <div class="hero-actions">
         <a class="primary-button" href="/products/">Browse All Products</a>
         <a class="secondary-button" href="/guides/">Read Buying Guides</a>
+        <a class="secondary-button" href={ourPicksAmazonUrl} target="_blank" rel="sponsored noopener">Shop Featured Pick →</a>
       </div>
     </div>
   </section>
