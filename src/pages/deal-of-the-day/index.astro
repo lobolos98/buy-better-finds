@@ -8,6 +8,7 @@ import { EDITORIAL_TODAY } from '../../utils/priceWatch.js';
 const deals = products.filter((p) => p && p.dailyDealDate).sort((a, b) => b.dailyDealDate.localeCompare(a.dailyDealDate));
 const currentDeal = deals.find((p) => p.dailyDealDate === EDITORIAL_TODAY) ?? deals[0] ?? null;
 const recommendation = currentDeal ? getRecommendation(currentDeal) : null;
+// Direct Amazon affiliate URL is read from the current deal's amazonUrl field.
 const amazonUrl = currentDeal
   ? (currentDeal.amazonUrl ?? (currentDeal.amazonAsin ? amazonProductUrl(currentDeal.amazonAsin) : amazonSearchUrl(currentDeal.name)))
   : null;
