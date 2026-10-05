@@ -1,5 +1,5 @@
 // Verified Amazon Halloween collection for Buy Better Finds.
-// 39 total items: exact Amazon ASINs, direct product-page links, and verified Amazon-hosted product images.
+// 40 total items: exact Amazon ASINs, direct product-page links, and verified Amazon-hosted product images.
 
 export const halloweenProducts = [
   {
@@ -601,5 +601,20 @@ export const halloweenProducts = [
     "watch": "Check the current Amazon listing for price, edition, and availability.",
     "url": "https://www.amazon.com/dp/0545174805?tag=buybetterfi06-20",
     "score": 8.5
+  },
+  {
+    "slug": "halloween-atdawn-fog-machine-b07tb57jg2",
+    "name": "ATDAWN Halloween Fog Machine, Professional Wireless Remote Control Portable Smoke Machine",
+    "category": "Fog Machines & Effects",
+    "price": "Check Amazon price",
+    "icon": "💨",
+    "image": "https://m.media-amazon.com/images/I/71H6uJ6Q9nL._AC_SL1500_.jpg",
+    "imageAlt": "ATDAWN Halloween fog machine with wireless remote control",
+    "amazonAsin": "B07TB57JG2",
+    "bestFor": "Halloween parties, haunted houses, and spooky displays",
+    "why": "A portable ATDAWN fog machine with wired and wireless controls, a 300 ml tank, and 1500 CFM fog output for adding atmosphere to Halloween setups.",
+    "watch": "Check the current Amazon listing for price, availability, fog fluid requirements, and operating instructions.",
+    "url": "https://www.amazon.com/dp/B07TB57JG2?tag=buybetterfi06-20",
+    "score": 8.4
   }
 ];
