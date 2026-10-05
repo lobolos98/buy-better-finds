@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { products } from '../../../../data/products.js';
+import { halloweenProducts } from '../../../../data/halloween-products.js';
 import { getRecommendation } from '../../../../data/recommendations.js';
 import { amazonImageOverrides } from '../../../../data/amazon-images.js';
 
-const halloweenProducts = products.filter((product) => product.slug?.startsWith('halloween-'));
-const ranked = [...halloweenProducts].sort((a,b) => (getRecommendation(b).score ?? 0) - (getRecommendation(a).score ?? 0));
+const halloweenCatalog = halloweenProducts.length ? halloweenProducts : products.filter((product) => product.slug?.startsWith('halloween-'));
+const ranked = [...halloweenCatalog].sort((a,b) => (getRecommendation(b).score ?? 0) - (getRecommendation(a).score ?? 0));
 ---
 <BaseLayout title="Halloween Finds 2026 | Buy Better Finds" description="New Halloween 2026 products, decorations, interactive props, lighting, and seasonal builds selected and scored by Buy Better Finds.">
   <section class="hero">
