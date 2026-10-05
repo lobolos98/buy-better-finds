@@ -89,9 +89,12 @@ const comparison = comparisonMap[product.slug];
 const guideHref = focusedGuide?.href ?? categoryGuide?.href;
 const guideLabel = focusedGuide?.label ?? categoryGuide?.label;
 const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
+const exactSeesiiAmazonUrl = 'https://www.amazon.com/dp/B0CS3FF4RF?tag=buybetterfi06-20';
 const affiliateUrl = product.amazonAsin === 'B0C6XJNKP8'
   ? exactDealAmazonUrl
-  : (product.amazonUrl
+  : (product.amazonAsin === 'B0F2J118F4' || product.amazonAsin === 'B0CS3FF4RF')
+    ? exactSeesiiAmazonUrl
+    : (product.amazonUrl
       ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin)
       : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name))));
 const reviewDate = 'September 22, 2026';
