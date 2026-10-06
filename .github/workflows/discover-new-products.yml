@@ -1,0 +1,39 @@
+name: Discover New Buy Better Finds Products
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Discover and append new products
+        env:
+          AMAZON_PARTNER_TAG: buybetterfi06-20
+          MAX_NEW_PRODUCTS: 10
+        run: node scripts/discover-new-products.mjs
+
+      - name: Commit additions
+        run: |
+          if git diff --quiet; then
+            echo "No new products to commit."
+            exit 0
+          fi
+          git config user.name "Buy Better Finds Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/data/auto-products.js
+          git commit -m "Auto-add newly discovered products"
+          git push
