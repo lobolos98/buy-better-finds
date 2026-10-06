@@ -4,26 +4,35 @@ import { products } from '../../../data/products.js';
 import { getRecommendation } from '../../../data/recommendations.js';
 
 const primeDaySlugs = [
+  'apple-airpods-5',
   'sony-wh-1000xm5-tech',
-  'apple-airtag-2',
+  'bose-qc-ultra-2',
   'anker-737-power-bank',
   'logitech-mx-keys-s',
   'samsung-t7-shield',
-  'bose-qc-ultra-2',
   'jbl-charge-5',
   'kindle-paperwhite',
+  'amazon-fire-tv-stick-4k-max',
+  'apple-airtag-2',
   'amazon-echo-show-8',
+  'amazon-echo-show-5',
   'amazon-echo-dot',
+  'amazon-echo-spot',
+  'blink-outdoor-4',
   'tp-link-ep40m',
+  'philips-hue-a19-color',
+  'ring-battery-doorbell',
   'ninja-af101',
   'dyson-v8',
   'instant-vortex-plus',
   'kitchenaid-artisan-stand-mixer',
   'yeti-rambler',
-  'ring-spotlight-cam-pro',
+  'owala-freesip',
   'brightech-ambience-pro-solar',
   'govee-rgbic-65ft',
-  'ring-battery-doorbell'
+  'dewalt-dcd771c2-drill-driver-kit',
+  'dewalt-dck240c2-combo-kit',
+  'dremel-3100-2-60-rotary-tool'
 ];
 
 const primeProducts = primeDaySlugs
@@ -36,16 +45,16 @@ const amazonUrl = (product) => product?.amazonUrl
     : (product?.url || `https://www.amazon.com/s?k=${encodeURIComponent(product?.name || '')}&tag=buybetterfi06-20`));
 ---
 
-<BaseLayout title="Prime Big Deal Days Deals | Buy Better Finds" description="Buy Better Finds Prime Big Deal Days deals: a curated selection of real products with verified deal pricing, savings, and Buy Better Finds scores.">
+<BaseLayout title="Prime Big Deal Days Deals | Buy Better Finds" description="Buy Better Finds Prime Big Deal Days: a curated live selection of popular products to check during Amazon’s October 6–7 event, with Buy Better Finds scores and direct Amazon product links.">
   <section class="prime-hero">
     <div class="container">
       <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/seasonal-holidays/">Seasonal & Holidays</a><span>/</span><strong>Prime Day Picks</strong></div>
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">PRIME BIG DEAL DAYS · OCT. 6–7, 2026</div>
-          <h1>Prime Big Deal Days deals worth buying.</h1>
-          <p>We’re checking the deals as they drop and highlighting products we think are actually worth your money—real products, clear tradeoffs, and Buy Better Finds scores before you shop.</p>
-          <div class="event-date"><strong>OCT. 6–7</strong><span>Deals checked as new waves drop</span></div>
+          <div class="eyebrow">🔴 LIVE NOW · PRIME BIG DEAL DAYS · OCT. 6–7, 2026</div>
+          <h1>Prime Big Deal Days is LIVE.</h1>
+          <p>Prime Big Deal Days is live. We’re putting the strongest Buy Better Finds picks in one place so you can quickly check Amazon for the current Prime price, availability, and savings.</p>
+          <div class="event-date"><strong>OCT. 6–7</strong><span>LIVE EVENT · NEW DEALS DROP THROUGHOUT THE DAY</span></div>
           <div class="hero-actions">
             <a class="btn primary" href="#prime-day-picks">Shop the deals ↓</a>
             <a class="btn secondary" href="/categories/seasonal-holidays/prime-big-deal-days/">Prime Big Deal Days guide →</a>
@@ -74,11 +83,11 @@ const amazonUrl = (product) => product?.amazonUrl
           <h2>Deals worth checking.</h2>
           <p>These are existing Buy Better Finds products selected for Prime Big Deal Days coverage. Deal pricing and savings will be added only after we verify the live Amazon offer.</p>
         </div>
-        <div class="count-note"><strong>{primeProducts.length}</strong><span>products being watched</span></div>
+        <div class="count-note"><strong>{primeProducts.length}</strong><span>live Prime Day picks</span></div>
       </div>
 
       <div class="catalog-note">
-        <div><strong>How to shop these deals</strong><span>Start with our recommendation, then check Amazon for the current price, Prime eligibility, availability, and the live event discount.</span></div>
+        <div><strong>Prime Day is moving fast</strong><span>Open the product page, then check Amazon for the current Prime price, availability, and event discount before you buy.</span></div>
         <a href="/why-we-recommend/">How we recommend →</a>
       </div>
 
@@ -99,7 +108,7 @@ const amazonUrl = (product) => product?.amazonUrl
               <p class="best-for"><strong>Best for:</strong> {product.bestFor}</p>
               <p>{product.why}</p>
               <div class="tradeoff"><strong>Watch:</strong> {product.watch}</div>
-              <p class="price"><strong>{product.price}</strong></p><div class="deal-status">DEAL PRICE &amp; SAVINGS WILL APPEAR AFTER VERIFICATION</div>
+              <p class="price"><strong>{product.price}</strong></p><div class="deal-status">LIVE AMAZON PRICE · CHECK FOR PRIME SAVINGS</div>
               <div class="product-actions">
                 <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See Our Take →</a>
                 <a class="shop-btn amazon-shop" href={amazonUrl(product)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
@@ -114,7 +123,7 @@ const amazonUrl = (product) => product?.amazonUrl
   <section class="section watch-section">
     <div class="container">
       <div class="bottom-cta">
-        <div><div class="eyebrow light">KEEP RESEARCHING</div><h2>Want the bigger picture?</h2><p>See the Prime Big Deal Days event guide, then come back here for the verified deal list as offers change.</p></div>
+        <div><div class="eyebrow light">PRIME DAY IS LIVE</div><h2>Deals will keep changing.</h2><p>Amazon is releasing new Today’s Big Deals throughout the event. Check back during the sale as we refresh the Buy Better Finds lineup.</p></div>
         <a class="btn primary" href="/categories/seasonal-holidays/prime-big-deal-days/">View the event guide →</a>
       </div>
     </div>
