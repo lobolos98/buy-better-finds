@@ -40,12 +40,12 @@ const productsCatalog = [
   {
     slug: 'apple-airpods-5', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 5 wireless earbuds',
-    bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-02'
+    bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20', dailyDealDate: '2026-10-02', amazonAsin: 'B0HJB76H2V', amazonUrl: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20'
   },
   {
     slug: 'apple-ipad-a16', name: 'Apple iPad 11-inch (A16)', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://www.apple.com/v/ipad-11/d/images/overview/design/modular_startframe__ecmd9ce9dsom_large.jpg', imageAlt: 'Apple iPad 11-inch with A16 chip',
-    bestFor: 'Streaming, browsing, school, and everyday productivity', why: '11-inch iPad with an A16 chip, 128GB starting storage, USB-C, and Apple Pencil support.', watch: 'Accessories such as keyboards and Pencil add to the total cost.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-20'
+    bestFor: 'Streaming, browsing, school, and everyday productivity', why: '11-inch iPad with an A16 chip, 128GB starting storage, USB-C, and Apple Pencil support.', watch: 'Accessories such as keyboards and Pencil add to the total cost.', url: 'https://www.amazon.com/dp/B0F76MTKYK?tag=buybetterfi06-20', dailyDealDate: '2026-09-20', amazonAsin: 'B0F76MTKYK', amazonUrl: 'https://www.amazon.com/dp/B0F76MTKYK?tag=buybetterfi06-20'
   },
   {
     slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼',
@@ -60,7 +60,7 @@ const productsCatalog = [
   {
     slug: 'anker-nano-power-bank-tech', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank',
-    bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-05'
+    bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20', dailyDealDate: '2026-10-05', amazonAsin: 'B0C6XK6DDL', amazonUrl: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20'
   },
   {
     slug: 'dyson-v8', name: 'Dyson V8 Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
@@ -80,7 +80,7 @@ const productsCatalog = [
   {
     slug: 'logitech-mx-master-3s', name: 'Logitech MX Master 3S', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://resource.logitech.com/w_1440%2Ch_660%2Car_24%3A11%2Cc_fill%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/mx-master-3s-graphite-ident.jpg', imageAlt: 'Logitech MX Master 3S wireless mouse',
-    bestFor: 'Desktop productivity and multi-device work', why: 'Ergonomic wireless mouse with precise scrolling and customizable controls.', watch: 'Its larger ergonomic shape may not suit users who prefer small travel mice.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-21'
+    bestFor: 'Desktop productivity and multi-device work', why: 'Ergonomic wireless mouse with precise scrolling and customizable controls.', watch: 'Its larger ergonomic shape may not suit users who prefer small travel mice.', url: 'https://www.amazon.com/dp/B09HM94VDS?tag=buybetterfi06-20', dailyDealDate: '2026-09-21', amazonAsin: 'B09HM94VDS', amazonUrl: 'https://www.amazon.com/dp/B09HM94VDS?tag=buybetterfi06-20'
   },
   {
     slug: 'shark-navigator-lift-away', name: 'Shark Navigator Lift-Away', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
@@ -107,7 +107,7 @@ const productsCatalog = [
   {
     slug: 'apple-airpods-4', name: 'Apple AirPods 4', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/article/Apple-AirPods-4-with-case-240909_big.jpg.large.jpg', imageAlt: 'Apple AirPods 4',
-    bestFor: 'Everyday wireless listening', why: 'Open-ear wireless earbuds with the H2 chip, USB-C charging case, and an available ANC model.', watch: 'AirPods 4 and AirPods 4 with ANC are separate models; confirm the exact version before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Everyday wireless listening', why: 'Open-ear wireless earbuds with the H2 chip, USB-C charging case, and an available ANC model.', watch: 'AirPods 4 and AirPods 4 with ANC are separate models; confirm the exact version before buying.', url: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20', amazonAsin: 'B0DGHMNQ5Z', amazonUrl: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20'
   },
 
   {
@@ -358,7 +358,7 @@ const supplementalProducts = [
     slug: 'ring-battery-doorbell', name: 'Ring Battery Doorbell', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://images.ctfassets.net/a3peezndovsu/x7qceIoaiCJ3QArhqVeSp/ea33ebc6250b36d629f22971b3e76930/ring_battery_doorbell_2nd_gen_front_image_render_speckle_mocha_1500x1500_02.jpg', imageAlt: 'Ring Battery Doorbell', bestFor: 'Front-door monitoring and package awareness', why: 'Battery-powered video doorbell designed for flexible installation without running doorbell wiring.', watch: 'Cloud features and subscriptions can add ongoing cost depending on how you use it.', amazonAsin: 'B0BZWRLRLK', amazonUrl: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20'
   },
   {
-    slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-05'
+    slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20', dailyDealDate: '2026-10-05', amazonAsin: 'B0C6XK6DDL', amazonUrl: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20'
   },
   {
     slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
@@ -418,27 +418,27 @@ const supplementalProducts = [
   {
     slug: 'razer-blackwidow-v4', name: 'Razer BlackWidow V4 75% Mechanical Gaming Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CCG2KHCB&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Razer BlackWidow V4 75 percent mechanical gaming keyboard',
-    bestFor: 'PC gaming and customizable mechanical keyboards', why: 'Compact mechanical gaming keyboard with hot-swappable design, RGB lighting, and dedicated controls.', watch: 'Mechanical switch feel and keyboard layout are highly personal.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'PC gaming and customizable mechanical keyboards', why: 'Compact mechanical gaming keyboard with hot-swappable design, RGB lighting, and dedicated controls.', watch: 'Mechanical switch feel and keyboard layout are highly personal.', url: 'https://www.amazon.com/dp/B0DD5DVGZZ?tag=buybetterfi06-20', amazonAsin: 'B0DD5DVGZZ', amazonUrl: 'https://www.amazon.com/dp/B0DD5DVGZZ?tag=buybetterfi06-20'
   },
   {
     slug: 'elgato-stream-deck-plus', name: 'Elgato Stream Deck +', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BJL8SJ59&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Elgato Stream Deck Plus',
-    bestFor: 'Streaming, content creation, and workflow shortcuts', why: 'Programmable control surface with customizable keys, dials, and touch controls for repeated software actions.', watch: 'It is most useful when you will actually build and maintain custom profiles.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Streaming, content creation, and workflow shortcuts', why: 'Programmable control surface with customizable keys, dials, and touch controls for repeated software actions.', watch: 'It is most useful when you will actually build and maintain custom profiles.', url: 'https://www.amazon.com/dp/B0BJL8SJ59?tag=buybetterfi06-20', amazonAsin: 'B0BJL8SJ59', amazonUrl: 'https://www.amazon.com/dp/B0BJL8SJ59?tag=buybetterfi06-20'
   },
   {
     slug: 'elgato-stream-deck-mini', name: 'Elgato Stream Deck Mini', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07DYRS1WH&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Elgato Stream Deck Mini',
-    bestFor: 'Simple desktop shortcuts and streaming controls', why: 'Compact programmable controller for frequently repeated desktop and creative-app actions.', watch: 'Six keys provide less room for complex profiles than larger Stream Deck models.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Simple desktop shortcuts and streaming controls', why: 'Compact programmable controller for frequently repeated desktop and creative-app actions.', watch: 'Six keys provide less room for complex profiles than larger Stream Deck models.', url: 'https://www.amazon.com/dp/B07DYRS1WH?tag=buybetterfi06-20', amazonAsin: 'B07DYRS1WH', amazonUrl: 'https://www.amazon.com/dp/B07DYRS1WH?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-prime-power-bank-26250', name: 'Anker Prime Power Bank 26,250mAh 300W', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0F66LNB8D&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Anker Prime Power Bank 26250mAh',
-    bestFor: 'High-power travel charging for laptops and multiple devices', why: 'Large-capacity power bank designed for high-output charging across multiple connected devices.', watch: 'Large high-output power banks are heavier and may be overkill for phone-only charging.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'High-power travel charging for laptops and multiple devices', why: 'Large-capacity power bank designed for high-output charging across multiple connected devices.', watch: 'Large high-output power banks are heavier and may be overkill for phone-only charging.', url: 'https://www.amazon.com/dp/B0F66LNB8D?tag=buybetterfi06-20', amazonAsin: 'B0F66LNB8D', amazonUrl: 'https://www.amazon.com/dp/B0F66LNB8D?tag=buybetterfi06-20'
   },
   {
     slug: 'anker-power-bank-20000', name: 'Anker Power Bank 20,000mAh with Built-in USB-C Cable', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CXDXP8VR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Anker 20000mAh power bank with built-in USB-C cable',
-    bestFor: 'Travel and everyday backup charging', why: 'Portable battery with built-in USB-C connectivity and multiple charging ports for phones and other devices.', watch: 'Confirm the exact output and cable configuration for your devices.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Travel and everyday backup charging', why: 'Portable battery with built-in USB-C connectivity and multiple charging ports for phones and other devices.', watch: 'Confirm the exact output and cable configuration for your devices.', url: 'https://www.amazon.com/dp/B0CXDXP8VR?tag=buybetterfi06-20', amazonAsin: 'B0CXDXP8VR', amazonUrl: 'https://www.amazon.com/dp/B0CXDXP8VR?tag=buybetterfi06-20'
   },
   {
     slug: 'amazon-echo-show-8', name: 'Amazon Echo Show 8', category: 'Tech', price: 'Check price', icon: '◉',
@@ -448,12 +448,12 @@ const supplementalProducts = [
   {
     slug: 'amazon-fire-tv-stick-4k-select', name: 'Amazon Fire TV Stick 4K Select', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0C6W3D4RM&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Amazon Fire TV Stick 4K Select',
-    bestFor: '4K streaming on compatible televisions', why: 'Compact streaming device built around 4K video playback and Amazon Fire TV features.', watch: 'Streaming quality also depends on your TV, network, and subscription services.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: '4K streaming on compatible televisions', why: 'Compact streaming device built around 4K video playback and Amazon Fire TV features.', watch: 'Streaming quality also depends on your TV, network, and subscription services.', url: 'https://www.amazon.com/dp/B0C6W3D4RM?tag=buybetterfi06-20', amazonAsin: 'B0C6W3D4RM', amazonUrl: 'https://www.amazon.com/dp/B0C6W3D4RM?tag=buybetterfi06-20'
   },
   {
     slug: 'apple-magic-mouse-usbc', name: 'Apple Magic Mouse (USB-C)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DL72PK1P&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple Magic Mouse USB-C',
-    bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20', amazonAsin: 'B0DL72PK1P', amazonUrl: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20'
   },
   {
     slug: 'kitchenaid-artisan-stand-mixer', name: 'KitchenAid Artisan Series 5-Quart Stand Mixer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
