@@ -30,7 +30,7 @@ const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommenda
 ---
 <article class="card product-card">
   <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
-    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" onerror="if(this.dataset.fallback){this.style.display='none'; const fallback=this.nextElementSibling; if(fallback) fallback.style.display='flex';} else if(this.dataset.fallbackUrl){this.dataset.fallback='1'; this.src=this.dataset.fallbackUrl;}" data-fallback-url={fallbackImage || undefined} />}
+    {productImage && <img src={productImage} alt={product.imageAlt || product.name} loading="lazy" width="800" height="600" onerror="if(this.dataset.fallback){this.style.display='none'; const fallback=this.nextElementSibling; if(fallback) fallback.style.display='flex';} else if(this.dataset.fallbackUrl){this.dataset.fallback='1'; this.src=this.dataset.fallbackUrl;}" data-fallback-url={fallbackImage || undefined} referrerpolicy="no-referrer" />}
     {fallbackImage && <span class="image-fallback" aria-hidden="true">
       <img class="fallback-real-image" src={fallbackImage} alt="" width="400" height="400" />
     </span>}
