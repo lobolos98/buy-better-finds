@@ -32,7 +32,13 @@ const primeDaySlugs = [
   'govee-rgbic-65ft',
   'dewalt-dcd771c2-drill-driver-kit',
   'dewalt-dck240c2-combo-kit',
-  'dremel-3100-2-60-rotary-tool'
+  'dremel-3100-2-60-rotary-tool',
+  'apple-airpods-pro-3',
+  'bose-quietcomfort-headphones-prime',
+  'ninja-creami-7-in-1-prime',
+  'keurig-k-duo-hot-iced-prime',
+  'jbl-vibe-beam-prime',
+  'fanttik-e1-max-prime'
 ];
 
 const primeProducts = primeDaySlugs
@@ -83,12 +89,12 @@ const amazonUrl = (product) => product?.amazonUrl
         <div>
           <div class="eyebrow">TODAY'S PRIME DAY DEALS</div>
           <h2>Start with the deals getting the strongest signal.</h2>
-          <p>Amazon says new limited-time “Today's Big Deals” drops arrive three times daily during Prime Big Deal Days. We’re spotlighting a small group first, then keeping the full 29-product lineup below. Always verify the live Amazon price before buying.</p>
+          <p>Amazon says new limited-time “Today's Big Deals” drops arrive three times daily during Prime Big Deal Days. We’re spotlighting a small group first, then keeping the full 35-product lineup below. Always verify the live Amazon price before buying.</p>
         </div>
         <div class="drop-note"><strong>3× DAILY</strong><span>NEW DEAL DROPS</span></div>
       </div>
       <div class="spotlight-grid">
-        {['amazon-echo-spot','ring-battery-doorbell','kindle-paperwhite','apple-airtag-2','amazon-fire-tv-stick-4k-max','ninja-af101','dewalt-dcd771c2-drill-driver-kit','owala-freesip']
+        {['amazon-echo-spot','ring-battery-doorbell','apple-airpods-pro-3','bose-quietcomfort-headphones-prime','ninja-creami-7-in-1-prime','kindle-paperwhite','amazon-fire-tv-stick-4k-max','dewalt-dcd771c2-drill-driver-kit']
           .map((slug) => primeProducts.find((product) => product.slug === slug))
           .filter(Boolean)
           .map((product) => {
