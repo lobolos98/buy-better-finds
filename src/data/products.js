@@ -264,12 +264,12 @@ const productsCatalog = [
   },
   {
     slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: '$5.90', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01N1LL62W&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'CeraVe Hydrating Facial Cleanser',
+    image: 'https://m.media-amazon.com/images/I/516r6ghtxaL._AC_SL700_.jpg', imageAlt: 'CeraVe Hydrating Facial Cleanser',
     bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'paulas-choice-2-bha-liquid-exfoliant', name: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant", category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00949CTQQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant",
+    image: 'https://m.media-amazon.com/images/I/61cGibB-FbL._SL1500_.jpg', imageAlt: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant",
     bestFor: 'Pore and texture-focused routines', why: 'Leave-on salicylic-acid exfoliant designed to unclog pores and smooth the look of uneven texture.', watch: 'Exfoliating acids can be irritating; follow the product directions.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
@@ -329,7 +329,7 @@ const productsCatalog = [
   },
   {
     slug: 'laneige-lip-sleeping-mask', name: 'Laneige Lip Sleeping Mask', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07XXPHQZK&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Laneige Lip Sleeping Mask',
+    image: 'https://m.media-amazon.com/images/I/51bHKet2shL._SL1500_.jpg', imageAlt: 'Laneige Lip Sleeping Mask',
     bestFor: 'Overnight lip hydration', why: 'Rich leave-on lip mask designed to moisturize and soften dry lips overnight.', watch: 'Flavor and package size can vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
@@ -339,12 +339,12 @@ const productsCatalog = [
   },
   {
     slug: 'eos-shea-better-vanilla-cashmere', name: 'eos Shea Better Body Lotion Vanilla Cashmere', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08KT2Z93D&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'eos Shea Better Body Lotion Vanilla Cashmere',
+    image: 'https://images-na.ssl-images-amazon.com/images/I/61IQUadfGEL._AC_UL225_SR225,160_.jpg', imageAlt: 'eos Shea Better Body Lotion Vanilla Cashmere',
     bestFor: 'Daily body moisturizing', why: 'Rich body lotion with a warm vanilla-cashmere scent for everyday hydration.', watch: 'Fragrance preference is personal; check the current formula and scent notes.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'clean-skin-club-clean-towels-xl', name: 'Clean Skin Club Clean Towels XL', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07PBXXNCY&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Clean Skin Club Clean Towels XL',
+    image: 'https://m.media-amazon.com/images/I/61Cn1ooILhL._AC_UL320_.jpg', imageAlt: 'Clean Skin Club Clean Towels XL',
     bestFor: 'Clean, single-use face drying', why: 'Soft disposable face towels designed for single-use drying and makeup-removal routines.', watch: 'Pack counts vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
