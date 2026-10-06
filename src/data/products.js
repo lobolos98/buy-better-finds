@@ -259,7 +259,7 @@ const productsCatalog = [
   },
   {
     slug: 'hero-mighty-patch-original', name: 'Hero Cosmetics Mighty Patch Original', category: 'Beauty & Personal Care', price: '$8.97', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B074PVTPBW&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Hero Cosmetics Mighty Patch Original',
+    image: 'https://www.herocosmetics.us/cdn/shop/t/458/assets/ba-mpo-box_1400x.png?v=117881626257170890701790705573', imageAlt: 'Hero Cosmetics Mighty Patch Original',
     bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
