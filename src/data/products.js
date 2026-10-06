@@ -279,52 +279,52 @@ const productsCatalog = [
   },
   {
     slug: 'the-ordinary-niacinamide-zinc', name: 'The Ordinary Niacinamide 10% + Zinc 1%', category: 'Beauty & Personal Care', price: '$17.54', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01MDTVZTZ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'The Ordinary Niacinamide 10% + Zinc 1%',
+    image: 'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sh=800&sm=fit&sw=800', imageAlt: 'The Ordinary Niacinamide 10% + Zinc 1%',
     bestFor: 'Oil and blemish-prone skin routines', why: 'Niacinamide serum formulated with zinc to support a smoother, more balanced-looking complexion.', watch: 'Skin tolerance varies; introduce active products gradually.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'the-ordinary-glycolic-acid-7-toner', name: 'The Ordinary Glycolic Acid 7% Exfoliating Toner', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B071914GGL&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'The Ordinary Glycolic Acid 7% Exfoliating Toner',
+    image: 'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw8b57fa2b/Images/products/The%20Ordinary/ord-glyc-acid-7pct-100ml-Aug-UPC.png?sh=800&sm=fit&sw=800', imageAlt: 'The Ordinary Glycolic Acid 7% Exfoliating Toner',
     bestFor: 'Exfoliation and brighter-looking skin', why: 'Glycolic-acid toner designed to exfoliate and improve the look of uneven texture and tone.', watch: 'Use as directed and consider sun protection when using exfoliating acids.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'medicube-zero-pore-pad', name: 'Medicube Zero Pore Pad', category: 'Beauty & Personal Care', price: '$24.00', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09V7Z4TJG&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Medicube Zero Pore Pad',
+    image: 'https://medicubeamerica.com/cdn/shop/files/hf_20260715_173751_680ff534-57ce-40bc-b8fc-5b725eb6bb04.png?v=1784137184&width=1946', imageAlt: 'Medicube Zero Pore Pad',
     bestFor: 'Pore-focused skincare routines', why: 'Dual-textured toner pads formulated to help refine the appearance of pores and remove surface buildup.', watch: 'Active exfoliating ingredients may not suit every skin type.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'panoxyl-acne-foaming-wash-10', name: 'PanOxyl Acne Foaming Wash 10%', category: 'Beauty & Personal Care', price: '$1.75', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B081KL2QYJ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'PanOxyl Acne Foaming Wash 10%',
+    image: 'https://panoxyl.com/wp-content/uploads/2022/05/PDP_FoamingWash_08-150x150.webp', imageAlt: 'PanOxyl Acne Foaming Wash 10%',
     bestFor: 'Acne-prone skincare routines', why: 'Maximum-strength benzoyl peroxide foaming wash for face and body acne care.', watch: 'Benzoyl peroxide can be drying and may bleach fabrics; follow label directions.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'good-molecules-yerba-mate-eye-gel', name: 'Good Molecules Yerba Mate Wake Up Eye Gel', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B091NJQ29P&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Good Molecules Yerba Mate Wake Up Eye Gel',
+    image: 'https://cdn.shopify.com/s/files/1/0173/5085/2708/files/Yerba-Mate_Product_Today-Badge_Cover-2025.png?crop=center&height=100&v=1755819517&width=100', imageAlt: 'Good Molecules Yerba Mate Wake Up Eye Gel',
     bestFor: 'Tired-looking under-eyes', why: 'Lightweight eye gel with yerba mate, caffeine, peptides, and hyaluronic acid.', watch: 'Avoid direct eye contact and check the current ingredient list.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'embryolisse-lait-creme-concentre', name: 'Embryolisse Lait-Crème Concentré', category: 'Beauty & Personal Care', price: '$84.00', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004KELK4C&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Embryolisse Lait-Crème Concentré',
+    image: 'https://us.embryolisse.com/cdn/shop/files/lait-creme-concentre-75ml.jpg', imageAlt: 'Embryolisse Lait-Crème Concentré',
     bestFor: 'Multi-use moisturizing and makeup prep', why: 'Multi-purpose moisturizer that can also be used as a makeup base, cleansing milk, and moisturizing mask.', watch: 'Formula and packaging can vary by market and size.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'mielle-rosemary-mint-oil', name: 'Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://http2.mlstatic.com/D_Q_NP_2X_671278-MLA99919731119_112025-P.webp', imageAlt: 'Mielle Organics Rosemary Mint Scalp and Hair Strengthening Oil',
+    image: 'https://mielleorganics.com/cdn/shop/files/SI00_Mielle_eContent_RosemaryMint_Oil_80822737.jpg?v=1790187148', imageAlt: 'Mielle Organics Rosemary Mint Scalp and Hair Strengthening Oil',
     bestFor: 'Scalp and hair care', why: 'Rosemary and mint hair oil infused with biotin for scalp and hair-care routines.', watch: 'Check the current formula and use directions before applying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'olaplex-no-3-hair-perfector', name: 'Olaplex No. 3 Hair Perfector', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00SNM5US4&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Olaplex No. 3 Hair Perfector',
+    image: 'https://www.salonhq.com.au/cdn/shop/files/2019_No3_100ml_NoBg_CMYK.jpg?v=1750903060', imageAlt: 'Olaplex No. 3 Hair Perfector',
     bestFor: 'Damaged or chemically treated hair', why: 'At-home pre-shampoo treatment designed to strengthen and improve the feel of damaged hair.', watch: 'Follow the current product directions for application and processing time.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'color-wow-dream-coat', name: 'Color Wow Dream Coat Supernatural Spray', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B073CWSQ51&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Color Wow Dream Coat Supernatural Spray',
+    image: 'https://colorwowhair.com/cdn/shop/products/DreamCoat_200ml_main.jpg?v=1647378208&width=800', imageAlt: 'Color Wow Dream Coat Supernatural Spray',
     bestFor: 'Smooth, humidity-resistant styling', why: 'Heat-activated styling spray designed to create a smoother, glass-like finish and help control frizz.', watch: 'The effect depends on thorough heat activation during styling.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
     slug: 'nizoral-anti-dandruff-shampoo', name: 'Nizoral Anti-Dandruff Shampoo', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://m.media-amazon.com/images/I/719c1rP3V8L.jpg', imageAlt: 'Nizoral Anti-Dandruff Shampoo',
+    image: 'https://nizoral.com/wp-content/uploads/2024/02/NIZ_Carton_7oz_21902_051822_OT_2.png', imageAlt: 'Nizoral Anti-Dandruff Shampoo',
     bestFor: 'Dandruff and flaky-scalp care', why: 'Ketoconazole shampoo formulated to control flaking, scaling, and itching associated with dandruff.', watch: 'Follow the drug-facts label and directions for use.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
@@ -334,7 +334,7 @@ const productsCatalog = [
   },
   {
     slug: 'maybelline-sky-high-mascara', name: 'Maybelline Lash Sensational Sky High Mascara', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08H3JPH74&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Maybelline Lash Sensational Sky High Mascara',
+    image: 'https://www.soriana.com/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw9d7c9a46/images/product/7509552750225_A.jpg', imageAlt: 'Maybelline Lash Sensational Sky High Mascara',
     bestFor: 'Lengthening and everyday eye makeup', why: 'Buildable mascara with a flexible brush designed to lengthen and volumize lashes.', watch: 'Shade and washable/waterproof versions vary.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
@@ -349,7 +349,7 @@ const productsCatalog = [
   },
   {
     slug: 'sacheu-stay-n-peel-off-lip-liner', name: 'Sacheu Peel Off Lip Liner STAY-N', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BVPNQW1C&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Sacheu STAY-N Peel Off Lip Liner',
+    image: 'https://sacheu.com/cdn/shop/files/Number_1_Lip_Liner_Graphic_-_Lip_Liner_STAY-N_7a835234-c49e-4e33-a180-6903637bc8c5.png?v=1777402314&width=2000', imageAlt: 'Sacheu STAY-N Peel Off Lip Liner',
     bestFor: 'Long-wear lip color', why: 'Peel-off lip liner format designed to leave a long-lasting tint after removal.', watch: 'Shade and wear time vary by person and application.', amazonAsin: 'B0BVPNQW1C', amazonUrl: 'https://www.amazon.com/dp/B0BVPNQW1C?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BVPNQW1C?tag=buybetterfi06-20'
   },
 
