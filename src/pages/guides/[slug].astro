@@ -134,7 +134,9 @@ const selected = selectedByName.length
   ? selectedByName
   : Astro.params.slug === 'best-home-kitchen'
     ? catalog.filter((product) => product?.category === 'Home & Kitchen').slice(0, 12)
-    : catalog.filter((product) => product?.category === guide.title.replace('Best ', '')).slice(0, 12);
+    : (Astro.params.slug === 'best-tools-diy' || Astro.params.slug === 'best-homeowner-drills')
+      ? catalog.filter((product) => product?.category === 'Tools & DIY').slice(0, 12)
+      : catalog.filter((product) => product?.category === guide.title.replace('Best ', '')).slice(0, 12);
 const reviewed = 'October 2026';
 ---
 <BaseLayout title={`${guide.title} | Buy Better Finds`} description={guide.intro}>
