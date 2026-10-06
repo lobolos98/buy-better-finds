@@ -5,12 +5,14 @@ import { fitnessProducts } from './fitness-products.js';
 import { lifestyleProducts } from './lifestyle-products.js';
 // Halloween catalog uses a named ESM export.
 import { halloweenProducts } from './halloween-products.js';
+import { autoDiscoveredProducts } from './auto-products.js';
 
 const productsCatalog = [
   ...diyProducts,
   ...fitnessProducts,
   ...lifestyleProducts,
   ...halloweenProducts,
+  ...autoDiscoveredProducts,
 
 
 
