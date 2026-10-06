@@ -87,7 +87,7 @@ const productsCatalog = [
   {
     slug: 'shark-navigator-lift-away', name: 'Shark Navigator Lift-Away', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://assets.sharkninja.com/image/upload/c_pad,w_800,h_800,f_auto,q_auto,b_rgb:FFFFFF/v1/SharkNinja-NA/NV360_01', imageAlt: 'Shark Navigator Lift-Away vacuum',
-    bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-07'
+    bestFor: 'Whole-home floor cleaning', why: 'Upright vacuum design with a lift-away concept for stairs and above-floor areas.', watch: 'An upright vacuum takes more storage space than a compact cordless stick model.', url: 'https://www.amazon.com/dp/B0C8RR4WN3?tag=buybetterfi06-20', amazonAsin: 'B0C8RR4WN3', amazonUrl: 'https://www.amazon.com/dp/B0C8RR4WN3?tag=buybetterfi06-20', dailyDealDate: '2026-10-07'
   },
   {
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰',
@@ -827,6 +827,37 @@ const supplementalProducts = [
     why: 'Compact character collectible designed for display, gifting, and fandom collecting.',
     watch: 'Specific characters and editions vary in availability and price.',
     url: 'https://funko.com/'
+  },,
+
+  {
+    slug: 'apple-airpods-pro-3', name: 'Apple AirPods Pro 3', category: 'Tech', price: '$179.00', icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/61solmQSSlL._AC_SL1500_.jpg', imageAlt: 'Apple AirPods Pro 3',
+    bestFor: 'Noise-canceling listening, calls, travel, and Apple users', why: 'Premium wireless earbuds with active noise cancellation, a secure fit, and Apple-focused features.', watch: 'Prime Day pricing can change quickly; verify the current Amazon price before buying.', amazonAsin: 'B0FQFB8FMG', amazonUrl: 'https://www.amazon.com/dp/B0FQFB8FMG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FQFB8FMG?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'bose-quietcomfort-headphones-prime', name: 'Bose QuietComfort Headphones', category: 'Tech', price: '$169.00', icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/51tItfLj8xL._AC_SL1500_.jpg', imageAlt: 'Bose QuietComfort Headphones',
+    bestFor: 'Travel, commuting, and comfortable long listening sessions', why: 'Comfort-focused over-ear headphones with strong active noise cancellation and long battery life.', watch: 'Confirm the exact color and current Prime Day price on Amazon.', amazonAsin: 'B0DZHR44J9', amazonUrl: 'https://www.amazon.com/dp/B0DZHR44J9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DZHR44J9?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'ninja-creami-7-in-1-prime', name: 'Ninja CREAMi 7-in-1 Ice Cream Maker', category: 'Home & Kitchen', price: '$169.99', icon: '◇',
+    image: 'https://m.media-amazon.com/images/I/71sfGeMtEgL._AC_SL1500_.jpg', imageAlt: 'Ninja CREAMi 7-in-1 Ice Cream Maker',
+    bestFor: 'Homemade ice cream, sorbet, and frozen treats', why: 'Transforms frozen bases into ice cream, sorbet, milkshakes, and other frozen desserts.', watch: 'Check the exact CREAMi model and included accessories before buying.', amazonAsin: 'B09QV24FFZ', amazonUrl: 'https://www.amazon.com/dp/B09QV24FFZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09QV24FFZ?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'keurig-k-duo-hot-iced-prime', name: 'Keurig K-Duo Hot & Iced Coffee Maker', category: 'Home & Kitchen', price: '$129.99', icon: '◇',
+    image: 'https://m.media-amazon.com/images/I/717849a6v+L._AC_SL1500_.jpg', imageAlt: 'Keurig K-Duo Hot and Iced Coffee Maker',
+    bestFor: 'Single-serve coffee and full carafes', why: 'Flexible brewer that handles both K-Cup pods and ground coffee with hot and iced brewing options.', watch: 'Check the exact generation and included features on the live Amazon listing.', amazonAsin: 'B0D8LXRHQ8', amazonUrl: 'https://www.amazon.com/dp/B0D8LXRHQ8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D8LXRHQ8?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'jbl-vibe-beam-prime', name: 'JBL Vibe Beam Wireless Earbuds', category: 'Tech', price: '$26.55', icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/41+1Csr1pSL._AC_SL1000_.jpg', imageAlt: 'JBL Vibe Beam True Wireless Earbuds',
+    bestFor: 'Affordable everyday wireless listening', why: 'Compact true wireless earbuds with JBL Deep Bass sound and up to 32 hours of total battery life.', watch: 'Color and availability can change during Prime Day.', amazonAsin: 'B0BQPNMXQV', amazonUrl: 'https://www.amazon.com/dp/B0BQPNMXQV?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BQPNMXQV?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'fanttik-e1-max-prime', name: 'Fanttik E1 Max Precision Electric Screwdriver', category: 'Tools & DIY', price: '$39.97', icon: '⚙',
+    image: 'https://m.media-amazon.com/images/I/41wh0n-aLKL._AC_SL1500_.jpg', imageAlt: 'Fanttik E1 Max Precision Electric Screwdriver',
+    bestFor: 'Electronics, small repairs, and precision DIY work', why: 'Compact electric screwdriver designed for controlled fastening on small projects and electronics.', watch: 'Best suited to precision work rather than heavy-duty construction tasks.', amazonAsin: 'B0BGWRWRX2', amazonUrl: 'https://www.amazon.com/dp/B0BGWRWRX2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BGWRWRX2?tag=buybetterfi06-20'
   },
 ];
 
