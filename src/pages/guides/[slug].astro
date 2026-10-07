@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
 import { getRecommendation } from '../../data/recommendations.js';
+import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
 
 const guideConfig = {
   'best-tech': { title: 'Best Tech Products', intro: 'A practical shortlist of technology products worth considering, with clear reasons to choose them and tradeoffs to understand.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 5','Apple iPad 11-inch (A16)','Apple Watch Series 10','Anker Nano Power Bank','Logitech MX Master 3S'] },
@@ -137,6 +138,7 @@ const selected = selectedByName.length
     : (Astro.params.slug === 'best-tools-diy' || Astro.params.slug === 'best-homeowner-drills')
       ? catalog.filter((product) => product?.category === 'Tools & DIY').slice(0, 12)
       : catalog.filter((product) => product?.category === guide.title.replace('Best ', '')).slice(0, 12);
+const affiliateUrl = (product) => product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name)));
 const reviewed = 'October 2026';
 ---
 <BaseLayout title={`${guide.title} | Buy Better Finds`} description={guide.intro}>
