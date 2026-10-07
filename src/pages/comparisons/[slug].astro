@@ -19,8 +19,6 @@ const comparisonConfig = {
 };
 
 export function getStaticPaths() {
-  const comparisonConfig = { ...comparisonConfig };
-
   return Object.entries(comparisonConfig).map(([slug, comparison]) => ({
     params: { slug },
     props: { comparison }
