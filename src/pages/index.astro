@@ -29,7 +29,7 @@ const guides = [
 ];
 const featured = validCatalog[0];
 const deal = getDealOfTheDay(validCatalog) ?? validCatalog[0];
-const editorChoices = ['sony-wh-1000xm5','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => validCatalog.find((p) => p?.slug === slug)).filter(Boolean);
+const editorChoices = ['sony-wh-1000xm5-tech','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => validCatalog.find((p) => p?.slug === slug)).filter(Boolean);
 const dealAlternates = [validCatalog.find((p) => p?.slug === 'apple-airpods-4'), validCatalog.find((p) => p?.slug === 'lego-botanicals-mushrooms'), validCatalog.find((p) => p?.slug === 'disney-stitch-plush')].filter(Boolean);
 const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, product: validCatalog.find((p) => p?.slug === trend.slug) })).filter((item) => item.product);
 ---
