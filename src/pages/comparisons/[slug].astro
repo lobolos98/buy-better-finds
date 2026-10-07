@@ -4,7 +4,9 @@ import { products as catalog } from '../../data/products.js';
 import { halloweenProducts } from '../../data/halloween-products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
-const comparisonData = {
+
+export function getStaticPaths() {
+  const comparisonData = {
   'sony-wh-1000xm5-vs-airpods-4': { title: 'Sony WH-1000XM5 vs Apple AirPods 4', intro: 'Two different approaches to wireless listening: premium over-ear noise cancellation versus compact everyday earbuds. The WH-1000XM5 is the stronger choice for immersive over-ear listening and active noise cancellation, while AirPods 4 emphasize a lighter, pocket-friendly everyday experience.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4'] },
   'ninja-af101-vs-instant-vortex-plus': { title: 'Ninja 4-Qt Air Fryer AF101 vs Instant Vortex Plus', intro: 'Two popular air fryers aimed at quick, convenient countertop cooking. The Ninja AF101 favors a compact footprint and straightforward everyday use, while the Instant Vortex Plus offers another flexible approach for shoppers who want easy air-fryer cooking with a different basket and control experience.', products: ['Ninja 4-Qt Air Fryer AF101','Instant Vortex Plus Air Fryer'] },
   'seesii-car-jack-vs-fanttik-e1-max': { title: 'Seesii Electric Car Jack Kit vs Fanttik E1 Max', intro: 'Two very different tools for very different jobs. Seesii is built around roadside and automotive lifting needs, while the Fanttik E1 Max is a compact precision screwdriver for electronics, repairs, and detailed DIY work.', products: ['Seesii Electric Car Jack Kit','Fanttik E1 Max Precision Electric Screwdriver'] },
@@ -16,14 +18,13 @@ const comparisonData = {
   'lego-lava-land-vs-crunchlabs-crunchinator': { title: 'LEGO City Lava Land Roller Coaster Park vs CrunchLabs The Crunchinator', intro: 'Two hands-on choices for kids who enjoy making and experimenting. LEGO City emphasizes creative construction and imaginative play, while The Crunchinator brings a more STEM-oriented build-and-learn experience.', products: ['LEGO City Lava Land Roller Coaster Park','CrunchLabs The Crunchinator'] },
   'eltamd-uv-clear-vs-mighty-patch': { title: 'EltaMD UV Clear vs Hero Cosmetics Mighty Patch', intro: 'Two personal-care products designed for completely different routines. EltaMD UV Clear is centered on daily facial sun protection, while Mighty Patch is a targeted blemish-care product for shoppers looking for a simple spot-treatment approach.', products: ['EltaMD UV Clear Broad-Spectrum SPF 46','Hero Cosmetics Mighty Patch Original'] },
   'wymulot-vs-aiseno-halloween-skeletons': { title: 'wymulot Halloween Skeletons vs AISENO Skeleton Stakes', intro: 'Two ways to build a Halloween yard display. The wymulot poseable skeletons offer a more character-driven setup with multiple figures, while AISENO skeleton stakes are geared toward creating a classic skeletal yard scene with easy placement.', products: ['wymulot 2-Pack 40" Pose-N-Stay Halloween Skeletons','AISENO Realistic Skeleton Stakes'], seasonal: true }
-};
-
-export function getStaticPaths() {
+};;
   return Object.entries(comparisonData).map(([slug, comparison]) => ({
     params: { slug },
     props: { comparison }
   }));
 }
+
 
 const { comparison } = Astro.props;
 const source = comparison.seasonal ? halloweenProducts : catalog;
