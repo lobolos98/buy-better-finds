@@ -1,16 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
+import { halloweenProducts } from '../../data/halloween-products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
 const comparisonConfig = {
-  'sony-wh-1000xm5-vs-airpods-4': { title: 'Sony WH-1000XM5 vs Apple AirPods 4', intro: 'Two different approaches to wireless listening: premium over-ear noise cancellation versus compact everyday earbuds.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4'] }
+  'sony-wh-1000xm5-vs-airpods-4': { title: 'Sony WH-1000XM5 vs Apple AirPods 4', intro: 'Two different approaches to wireless listening: premium over-ear noise cancellation versus compact everyday earbuds. The WH-1000XM5 is the stronger choice for immersive over-ear listening and active noise cancellation, while AirPods 4 emphasize a lighter, pocket-friendly everyday experience.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4'] },
+  'ninja-af101-vs-instant-vortex-plus': { title: 'Ninja 4-Qt Air Fryer AF101 vs Instant Vortex Plus', intro: 'Two popular air fryers aimed at quick, convenient countertop cooking. The Ninja AF101 favors a compact footprint and straightforward everyday use, while the Instant Vortex Plus offers another flexible approach for shoppers who want easy air-fryer cooking with a different basket and control experience.', products: ['Ninja 4-Qt Air Fryer AF101','Instant Vortex Plus Air Fryer'] },
+  'seesii-car-jack-vs-fanttik-e1-max': { title: 'Seesii Electric Car Jack Kit vs Fanttik E1 Max', intro: 'Two very different tools for very different jobs. Seesii is built around roadside and automotive lifting needs, while the Fanttik E1 Max is a compact precision screwdriver for electronics, repairs, and detailed DIY work.', products: ['Seesii Electric Car Jack Kit','Fanttik E1 Max Precision Electric Screwdriver'] },
+  'amazon-basics-vs-solo-stove-patio-heaters': { title: 'Amazon Basics Patio Heater vs Solo Stove Tower', intro: 'Two ways to keep an outdoor space more comfortable as temperatures fall. The Amazon Basics heater emphasizes familiar propane-powered patio heating, while the Solo Stove Tower takes a more design-forward approach to outdoor warmth and gathering spaces.', products: ['Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater','Solo Stove Tower Patio Heater'] },
+  'echo-dot-vs-kasa-ep40m': { title: 'Amazon Echo Dot vs TP-Link Kasa Smart Outdoor Plug', intro: 'Two smart-home products that solve completely different problems. Echo Dot centers on voice control and everyday smart-home interaction, while the Kasa EP40M focuses on bringing connected control to outdoor devices such as lights and seasonal displays.', products: ['Amazon Echo Dot','TP-Link Kasa Smart Outdoor Plug EP40M'] },
+  'bowflex-552-vs-amazon-basics-neoprene-dumbbells': { title: 'BowFlex SelectTech 552 vs Amazon Basics Neoprene Dumbbells', intro: 'Two approaches to building a home dumbbell setup. BowFlex SelectTech 552 is designed around adjustable weight and space efficiency, while Amazon Basics neoprene dumbbells offer simple, familiar weights for straightforward home workouts.', products: ['BowFlex SelectTech 552 Adjustable Dumbbells','Amazon Basics Neoprene Dumbbells'] },
+  'yeti-rambler-vs-stanley-quencher': { title: 'YETI Rambler vs Stanley Quencher', intro: 'Two recognizable drinkware lines with different strengths in everyday use. YETI Rambler products emphasize rugged construction and dependable insulation, while the Stanley Quencher is especially appealing to shoppers who prioritize a large-capacity tumbler format and easy everyday carry.', products: ['YETI Rambler Drinkware','Stanley Quencher H2.0 Tumbler'] },
+  'funko-bitty-pop-vs-stitch-plush': { title: 'Funko Bitty Pop! Harry Potter 6-Pack vs Disney Stitch Plush', intro: 'Two very different fandom gifts: a compact collectible set built around display and collecting versus a character plush designed for a softer, more playful gift experience.', products: ['Funko Bitty Pop! Harry Potter 6-Pack','Disney Stitch Plush'] },
+  'lego-lava-land-vs-crunchlabs-crunchinator': { title: 'LEGO City Lava Land Roller Coaster Park vs CrunchLabs The Crunchinator', intro: 'Two hands-on choices for kids who enjoy making and experimenting. LEGO City emphasizes creative construction and imaginative play, while The Crunchinator brings a more STEM-oriented build-and-learn experience.', products: ['LEGO City Lava Land Roller Coaster Park','CrunchLabs The Crunchinator'] },
+  'eltamd-uv-clear-vs-mighty-patch': { title: 'EltaMD UV Clear vs Hero Cosmetics Mighty Patch', intro: 'Two personal-care products designed for completely different routines. EltaMD UV Clear is centered on daily facial sun protection, while Mighty Patch is a targeted blemish-care product for shoppers looking for a simple spot-treatment approach.', products: ['EltaMD UV Clear Broad-Spectrum SPF 46','Hero Cosmetics Mighty Patch Original'] },
+  'wymulot-vs-aiseno-halloween-skeletons': { title: 'wymulot Halloween Skeletons vs AISENO Skeleton Stakes', intro: 'Two ways to build a Halloween yard display. The wymulot poseable skeletons offer a more character-driven setup with multiple figures, while AISENO skeleton stakes are geared toward creating a classic skeletal yard scene with easy placement.', products: ['wymulot 2-Pack 40" Pose-N-Stay Halloween Skeletons','AISENO Realistic Skeleton Stakes'], seasonal: true }
 };
 
 export function getStaticPaths() {
-  const comparisonConfig = {
-    'sony-wh-1000xm5-vs-airpods-4': { title: 'Sony WH-1000XM5 vs Apple AirPods 4', intro: 'Two different approaches to wireless listening: premium over-ear noise cancellation versus compact everyday earbuds.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4'] }
-  };
+  const comparisonConfig = { ...comparisonConfig };
 
   return Object.entries(comparisonConfig).map(([slug, comparison]) => ({
     params: { slug },
@@ -19,7 +28,8 @@ export function getStaticPaths() {
 }
 
 const { comparison } = Astro.props;
-const selected = comparison.products.map((name) => catalog.find((product) => product.name === name)).filter(Boolean);
+const source = comparison.seasonal ? halloweenProducts : catalog;
+const selected = comparison.products.map((name) => source.find((product) => product.name === name)).filter(Boolean);
 const left = selected[0];
 const right = selected[1];
 const leftRec = left ? getRecommendation(left) : null;
