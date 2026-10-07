@@ -21,7 +21,7 @@ const productsCatalog = [
 
   {
     slug: 'sony-wh-1000xm5-tech', name: 'Sony WH-1000XM5 Noise-Canceling Headphones', category: 'Tech', price: '$299.99', icon: '◉',
-    image: 'https://target.scene7.com/is/image/Target/GUEST_e7775d6e-6cef-4365-ba9a-3099f1aef4fd?fmt=pjpeg&hei=900&wid=900', imageFallback: 'https://target.scene7.com/is/image/Target/GUEST_e7775d6e-6cef-4365-ba9a-3099f1aef4fd?fmt=pjpeg&hei=900&wid=900', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
+    image: 'https://target.scene7.com/is/image/Target/GUEST_e7775d6e-6cef-4365-ba9a-3099f1aef4fd', imageFallback: 'https://target.scene7.com/is/image/Target/GUEST_e7775d6e-6cef-4365-ba9a-3099f1aef4fd', imageAlt: 'Sony WH-1000XM5 Noise-Canceling Headphones',
     bestFor: 'Travel, commuting, focused listening', why: 'Premium wireless headphones with strong active noise cancellation, multipoint connectivity, and long battery life.', watch: 'Premium pricing; fit and sound preference are personal.', amazonAsin: 'B09XS7JWHH', amazonUrl: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', dailyDealDate: '2026-09-22'
   },
   {
