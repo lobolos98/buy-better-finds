@@ -4,7 +4,7 @@ import { products as catalog } from '../../data/products.js';
 import { halloweenProducts } from '../../data/halloween-products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
-const comparisonConfig = {
+const comparisons = {
   'sony-wh-1000xm5-vs-airpods-4': { title: 'Sony WH-1000XM5 vs Apple AirPods 4', intro: 'Two different approaches to wireless listening: premium over-ear noise cancellation versus compact everyday earbuds. The WH-1000XM5 is the stronger choice for immersive over-ear listening and active noise cancellation, while AirPods 4 emphasize a lighter, pocket-friendly everyday experience.', products: ['Sony WH-1000XM5 Noise-Canceling Headphones','Apple AirPods 4'] },
   'ninja-af101-vs-instant-vortex-plus': { title: 'Ninja 4-Qt Air Fryer AF101 vs Instant Vortex Plus', intro: 'Two popular air fryers aimed at quick, convenient countertop cooking. The Ninja AF101 favors a compact footprint and straightforward everyday use, while the Instant Vortex Plus offers another flexible approach for shoppers who want easy air-fryer cooking with a different basket and control experience.', products: ['Ninja 4-Qt Air Fryer AF101','Instant Vortex Plus Air Fryer'] },
   'seesii-car-jack-vs-fanttik-e1-max': { title: 'Seesii Electric Car Jack Kit vs Fanttik E1 Max', intro: 'Two very different tools for very different jobs. Seesii is built around roadside and automotive lifting needs, while the Fanttik E1 Max is a compact precision screwdriver for electronics, repairs, and detailed DIY work.', products: ['Seesii Electric Car Jack Kit','Fanttik E1 Max Precision Electric Screwdriver'] },
@@ -19,7 +19,7 @@ const comparisonConfig = {
 };
 
 export function getStaticPaths() {
-  return Object.entries(comparisonConfig).map(([slug, comparison]) => ({
+  return Object.entries(comparisons).map(([slug, comparison]) => ({
     params: { slug },
     props: { comparison }
   }));
