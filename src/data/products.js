@@ -6,6 +6,7 @@ import { lifestyleProducts } from './lifestyle-products.js';
 // Halloween catalog uses a named ESM export.
 import { halloweenProducts } from './halloween-products.js';
 import { autoDiscoveredProducts } from './auto-products.js';
+import { pinterestProducts } from './pinterest-products.js';
 
 const productsCatalog = [
   ...diyProducts,
@@ -13,6 +14,7 @@ const productsCatalog = [
   ...lifestyleProducts,
   ...halloweenProducts,
   ...autoDiscoveredProducts,
+  ...pinterestProducts,
 
 
 
