@@ -54,7 +54,7 @@ const productsCatalog = [
   {
     slug: 'weber-spirit-e210', name: 'Weber Spirit E-210 Gas Grill', category: 'Outdoor', price: '$399.00', icon: '☼',
     image: 'https://product-images.weber.com/Grill-Images/Gas/1501000_B-1800x1800-b72c58f.png?w=800&h=800&auto=compress%2cformat', imageAlt: 'Weber Spirit E-210 Gas Grill',
-    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-04'
+    bestFor: 'Everyday backyard grilling', why: 'Two-burner propane grill with precise heat control and a compact footprint.', watch: 'It uses a 20-lb propane tank sold separately.', amazonAsin: 'B0DPH7QGTP', amazonUrl: 'https://www.amazon.com/dp/B0DPH7QGTP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DPH7QGTP?tag=buybetterfi06-20', dailyDealDate: '2026-10-04'
   },
   {
     slug: 'amazon-echo-dot', name: 'Amazon Echo Dot', category: 'Smart Home', price: 'Check price', icon: '◉',
@@ -552,12 +552,12 @@ const supplementalProducts = [
   {
     slug: 'ooni-karu-2-pro', name: 'Ooni Karu 2 Pro 16" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$849.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2Pro-F_fb2a4824-8fc4-43d2-b031-6f158f77b22c.webp?crop=center&height=640&v=1749094517&width=640', imageAlt: 'Ooni Karu 2 Pro multi-fuel pizza oven',
-    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', amazonAsin: 'B0DLH28V1D', amazonUrl: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-karu-2', name: 'Ooni Karu 2 12" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$449.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2_98e75b3e-ab5e-4709-9a6d-3b80d32ce40e.webp?crop=center&height=640&v=1749094631&width=640', imageAlt: 'Ooni Karu 2 multi-fuel pizza oven',
-    bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', amazonAsin: 'B0DQ8R4TYT', amazonUrl: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-koda-2-max', name: 'Ooni Koda 2 Max 24" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$1,299.00', icon: '☼',
@@ -567,7 +567,7 @@ const supplementalProducts = [
   {
     slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$499.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2-Side-Black.webp?crop=center&height=640&v=1749094390&width=640', imageAlt: 'Ooni Koda 2 gas-powered pizza oven',
-    bestFor: 'Portable gas pizza cooking', why: '14-inch gas-powered oven designed to balance portability with a larger cooking surface.', watch: 'Gas-only cooking offers less fuel flexibility than Ooni multi-fuel models.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Portable gas pizza cooking', why: '14-inch gas-powered oven designed to balance portability with a larger cooking surface.', watch: 'Gas-only cooking offers less fuel flexibility than Ooni multi-fuel models.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
   },
   {
     slug: 'brightech-ambience-pro-solar', name: 'Brightech Ambience Pro Solar String Lights', category: 'Outdoor', price: '$49.00', icon: '☼',
@@ -582,7 +582,7 @@ const supplementalProducts = [
   {
     slug: 'brightech-ambience-pro-solar-hanging', name: 'Brightech Ambience Pro Solar Hanging String Lights', category: 'Outdoor', price: '$59.00', icon: '☼',
     image: 'https://brightech.com/cdn/shop/files/Copy_of_Copy_of_20221121_DBaum_Brightech_15205_onestick.jpg?v=1737075514&width=1445', imageAlt: 'Brightech Ambience Pro Solar Hanging String Lights',
-    bestFor: 'Pergolas, patios, and backyard entertaining', why: 'Solar Edison-style S14 LED string lights with automatic dusk activation and warm 2700K light.', watch: 'Solar output depends on direct sunlight reaching the panel.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Pergolas, patios, and backyard entertaining', why: 'Solar Edison-style S14 LED string lights with automatic dusk activation and warm 2700K light.', watch: 'Solar output depends on direct sunlight reaching the panel.', amazonAsin: 'B075NS8YXG', amazonUrl: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
     slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro Solar Hanging Remote String Lights', category: 'Outdoor', price: '$64.00', icon: '☼',
