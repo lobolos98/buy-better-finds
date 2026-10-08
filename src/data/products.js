@@ -983,7 +983,7 @@ const supplementalProducts = [
     bestFor: 'Portable everyday hydration', why: 'Insulated bottle designed for quick drinking with a lightweight, travel-friendly format.', watch: 'Check the exact lid style and capacity before buying because IceFlow models vary.', amazonAsin: 'B0CWLQ1Z25', amazonUrl: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20'
   },
 ];
-\nexport const products = [...productsCatalog, ...supplementalProducts]
+export const products = [...productsCatalog, ...supplementalProducts]
   .filter((product) => product?.slug && product?.name && product?.category && product?.image)
   .map((product) => {
   const amazonOverride = amazonImageOverrides[product.slug];
