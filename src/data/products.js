@@ -146,21 +146,21 @@ const productsCatalog = [
     slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
     image: 'https://www.crayola.com/images/default-source/product-images/toys/04-0908-0-202_light-up-tracing-pad_pink_f1.jpg?sfvrsn=67c0bf90_9', imageAlt: 'Crayola Light Up Tracing Pad',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0084JUNXS', amazonUrl: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20'
   },
 
   {
     slug: 'lego-harry-potter-hogwarts-castle-71043', name: 'LEGO Harry Potter Hogwarts Castle (71043)', category: 'Toys & Games', price: '$469.99', icon: '★',
     image: 'https://ucarecdn.com/5ef380cf-4612-4bce-9142-3c397d58069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/', imageAlt: 'LEGO Harry Potter Hogwarts Castle 71043',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07GH953JN', amazonUrl: 'https://www.amazon.com/dp/B07GH953JN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07GH953JN?tag=buybetterfi06-20'
   },
 
   {
     slug: 'melissa-doug-top-bake-pizza-counter', name: 'Melissa & Doug Top & Bake Wooden Pizza Counter', category: 'Toys & Games', price: '$59.99', icon: '★',
     image: 'https://www.melissaanddoug.com/cdn/shop/files/dc3d6e11c82d1ab2f8e2b562c6dd53eae932feaa_750x.progressive.jpg?v=1747934085', imageAlt: 'Melissa & Doug Top & Bake Wooden Pizza Counter',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B075KX9NS7', amazonUrl: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20'
   },
 
   {
@@ -174,21 +174,21 @@ const productsCatalog = [
     slug: 'stomp-rocket-dueling-rockets', name: 'Stomp Rocket Dueling Rockets', category: 'Toys & Games', price: '$34.99', icon: '★',
     image: 'https://i5.samsclubimages.com/asr/2171a5ad-c4c6-45aa-87b3-4f1a3e1e1620.2b4227fdfe8075866d0adb45d104bae7.jpeg', imageAlt: 'Stomp Rocket Dueling Rockets',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00G9WR0RE', amazonUrl: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20'
   },
 
   {
     slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: '$35.99', icon: '★',
     image: 'https://m.media-amazon.com/images/I/41TEK-U5X1L.jpg', imageAlt: 'Bravokids LCD Writing Tablet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B083BCTLP5', amazonUrl: 'https://www.amazon.com/dp/B083BCTLP5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B083BCTLP5?tag=buybetterfi06-20'
   },
 
   {
     slug: 'fisher-price-rock-a-stack', name: 'Fisher-Price Rock-a-Stack', category: 'Toys & Games', price: '$8.63', icon: '★',
     image: 'https://cdn.shopify.com/s/files/1/1857/6931/products/UyJaJVohb6.jpg?v=1675763441', imageAlt: 'Fisher-Price Rock-a-Stack',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07M9233QG', amazonUrl: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20'
   },
 
   {
@@ -262,7 +262,7 @@ const productsCatalog = [
   {
     slug: 'hero-mighty-patch-original', name: 'Hero Cosmetics Mighty Patch Original', category: 'Beauty & Personal Care', price: '$8.97', icon: '✦',
     image: 'https://www.herocosmetics.us/cdn/shop/t/458/assets/ba-mpo-box_1400x.png?v=117881626257170890701790705573', imageAlt: 'Hero Cosmetics Mighty Patch Original',
-    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', amazonAsin: 'B074PVTPBW', amazonUrl: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20'
   },
   {
     slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: '$5.90', icon: '✦',
@@ -277,7 +277,7 @@ const productsCatalog = [
   {
     slug: 'biodance-bio-collagen-real-deep-mask', name: 'Biodance Bio-Collagen Real Deep Mask', category: 'Beauty & Personal Care', price: '$19.00', icon: '✦',
     image: 'https://www.pletovecentrum.sk/cdn/shop/files/Biodance_pink.jpg?v=1729804718', imageAlt: 'Biodance Bio-Collagen Real Deep Mask',
-    bestFor: 'Hydration and overnight self-care', why: 'Hydrogel face mask designed for deep hydration and a plump, refreshed-looking complexion.', watch: 'Verify the number of masks in the selected package.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Hydration and overnight self-care', why: 'Hydrogel face mask designed for deep hydration and a plump, refreshed-looking complexion.', watch: 'Verify the number of masks in the selected package.', amazonAsin: 'B0B2RM68G2', amazonUrl: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20'
   },
   {
     slug: 'the-ordinary-niacinamide-zinc', name: 'The Ordinary Niacinamide 10% + Zinc 1%', category: 'Beauty & Personal Care', price: '$17.54', icon: '✦',
@@ -322,12 +322,12 @@ const productsCatalog = [
   {
     slug: 'color-wow-dream-coat', name: 'Color Wow Dream Coat Supernatural Spray', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://colorwowhair.com/cdn/shop/products/DreamCoat_200ml_main.jpg?v=1647378208&width=800', imageAlt: 'Color Wow Dream Coat Supernatural Spray',
-    bestFor: 'Smooth, humidity-resistant styling', why: 'Heat-activated styling spray designed to create a smoother, glass-like finish and help control frizz.', watch: 'The effect depends on thorough heat activation during styling.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Smooth, humidity-resistant styling', why: 'Heat-activated styling spray designed to create a smoother, glass-like finish and help control frizz.', watch: 'The effect depends on thorough heat activation during styling.', amazonAsin: 'B07FJ783ZG', amazonUrl: 'https://www.amazon.com/dp/B07FJ783ZG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07FJ783ZG?tag=buybetterfi06-20'
   },
   {
     slug: 'nizoral-anti-dandruff-shampoo', name: 'Nizoral Anti-Dandruff Shampoo', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://nizoral.com/wp-content/uploads/2024/02/NIZ_Carton_7oz_21902_051822_OT_2.png', imageAlt: 'Nizoral Anti-Dandruff Shampoo',
-    bestFor: 'Dandruff and flaky-scalp care', why: 'Ketoconazole shampoo formulated to control flaking, scaling, and itching associated with dandruff.', watch: 'Follow the drug-facts label and directions for use.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Dandruff and flaky-scalp care', why: 'Ketoconazole shampoo formulated to control flaking, scaling, and itching associated with dandruff.', watch: 'Follow the drug-facts label and directions for use.', amazonAsin: 'B00AINMFAC', amazonUrl: 'https://www.amazon.com/dp/B00AINMFAC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00AINMFAC?tag=buybetterfi06-20'
   },
   {
     slug: 'laneige-lip-sleeping-mask', name: 'Laneige Lip Sleeping Mask', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
@@ -337,12 +337,12 @@ const productsCatalog = [
   {
     slug: 'maybelline-sky-high-mascara', name: 'Maybelline Lash Sensational Sky High Mascara', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://www.soriana.com/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw9d7c9a46/images/product/7509552750225_A.jpg', imageAlt: 'Maybelline Lash Sensational Sky High Mascara',
-    bestFor: 'Lengthening and everyday eye makeup', why: 'Buildable mascara with a flexible brush designed to lengthen and volumize lashes.', watch: 'Shade and washable/waterproof versions vary.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Lengthening and everyday eye makeup', why: 'Buildable mascara with a flexible brush designed to lengthen and volumize lashes.', watch: 'Shade and washable/waterproof versions vary.', amazonAsin: 'B08H3JPH74', amazonUrl: 'https://www.amazon.com/dp/B08H3JPH74?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08H3JPH74?tag=buybetterfi06-20'
   },
   {
     slug: 'eos-shea-better-vanilla-cashmere', name: 'eos Shea Better Body Lotion Vanilla Cashmere', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://images-na.ssl-images-amazon.com/images/I/61IQUadfGEL._AC_UL225_SR225,160_.jpg', imageAlt: 'eos Shea Better Body Lotion Vanilla Cashmere',
-    bestFor: 'Daily body moisturizing', why: 'Rich body lotion with a warm vanilla-cashmere scent for everyday hydration.', watch: 'Fragrance preference is personal; check the current formula and scent notes.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Daily body moisturizing', why: 'Rich body lotion with a warm vanilla-cashmere scent for everyday hydration.', watch: 'Fragrance preference is personal; check the current formula and scent notes.', amazonAsin: 'B08KT2Z93D', amazonUrl: 'https://www.amazon.com/dp/B08KT2Z93D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08KT2Z93D?tag=buybetterfi06-20'
   },
   {
     slug: 'clean-skin-club-clean-towels-xl', name: 'Clean Skin Club Clean Towels XL', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
