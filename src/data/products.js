@@ -492,7 +492,7 @@ const supplementalProducts = [
   {
     slug: 'kitchenaid-artisan-plus-5qt', name: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer - Milkshake', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
     image: 'https://m.media-amazon.com/images/I/41JBw54siWL._SL500_.jpg', imageAlt: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer in Milkshake',
-    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
+    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', amazonAsin: 'B0769ZQWH7', amazonUrl: 'https://www.amazon.com/dp/B0769ZQWH7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0769ZQWH7?tag=buybetterfi06-20'
   },
   {
     slug: 'solo-stove-summit-27', name: 'Solo Stove Summit 27 Smokeless Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
@@ -597,7 +597,7 @@ const supplementalProducts = [
   {
     slug: 'keter-circa-37-gallon', name: 'Keter Circa 37-Gallon Deck Box', category: 'Outdoor', price: '$99.99', icon: '◇',
     image: 'https://i5.walmartimages.com/asr/2c982cb8-534f-44ab-aaef-abe10bc747ae.e75b5e0928b885a2859ef1cf5ad7bf08.jpeg?odnBg=FFFFFF&odnHeight=576&odnWidth=576', imageAlt: 'Keter Circa 37-Gallon Deck Box Graphite',
-    bestFor: 'Smaller patios and balcony storage', why: 'Compact weather-resistant outdoor storage box for cushions, toys, and garden accessories.', watch: 'The 37-gallon capacity is smaller than Keter medium and large deck boxes.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Smaller patios and balcony storage', why: 'Compact weather-resistant outdoor storage box for cushions, toys, and garden accessories.', watch: 'The 37-gallon capacity is smaller than Keter medium and large deck boxes.', amazonAsin: 'B01JJJ1R7W', amazonUrl: 'https://www.amazon.com/dp/B01JJJ1R7W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01JJJ1R7W?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-signature-92-gallon', name: 'Keter Signature 92-Gallon Deck Box — Oak Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
