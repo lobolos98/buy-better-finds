@@ -105,7 +105,7 @@ export const pinterestProducts = [
     category: 'Gifts & Collectibles',
     price: 'Check price',
     icon: '✦',
-    image: 'https://images.brickset.com/sets/AdditionalImages/10329-1/10329_box1.jpg',
+    image: 'https://www.lego.com/cdn/cs/set/assets/blt5ff2bce4c437cbc5/10329_boxprod_v39.jpg',
     imageAlt: 'LEGO Botanicals Tiny Plants set 10329',
     bestFor: 'Plant lovers, adult LEGO fans, and decorative gifts',
     why: 'A display-friendly LEGO Botanicals set that creates nine miniature plants and turns the building experience into long-lasting home or office décor.',
