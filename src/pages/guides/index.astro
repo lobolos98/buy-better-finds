@@ -35,6 +35,8 @@ const categories = [
   ['Seasonal & Holidays','Seasonal & Holidays','❄','best-products-under-100','Seasonal ideas, holiday shopping, and timely product inspiration.']
 ];
 
+const categoryGuide = (slug) => guides.find((guide) => guide[1] === slug);
+
 const categoryImage = (category) => {
   const product = products.find((item) => item.category === category && item.image);
   return product?.image || '';
@@ -92,7 +94,7 @@ const featured = [
         <p>Eleven visual starting points make it easier to jump into the research that matters to you.</p>
       </div>
       <div class="category-grid">
-        {categories.map(([name,category,icon,slug,description]) => (
+        {categories.map(([name,category,icon,slug,description]) => { const guide = categoryGuide(slug); return (
           <a class="category-card" href={`/guides/${slug}/`}>
             <div class="category-image">
               {categoryImage(category) ? <img src={categoryImage(category)} alt="" loading="lazy" referrerpolicy="no-referrer" /> : <span class="category-icon">{icon}</span>}
@@ -100,9 +102,9 @@ const featured = [
             </div>
             <div class="category-content">
               <span class="category-kicker">{name}</span>
-              <h3>{name}</h3>
+              <h3>{guide?.[0] || name}</h3>
               <p>{description}</p>
-              <span class="category-link">Explore guides <b>→</b></span>
+              <span class="category-link">Read the guide <b>→</b></span>
             </div>
           </a>
         ))}
