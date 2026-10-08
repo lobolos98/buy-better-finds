@@ -532,7 +532,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-one-stop-chop', name: 'OXO One Stop Chop Manual Food Processor', category: 'Home & Kitchen', price: '$49.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11238000_1.jpg', imageAlt: 'OXO One Stop Chop Manual Food Processor',
-    bestFor: 'Manual chopping, mincing, and pureeing', why: 'Hand-operated food processor for chopping fruits, vegetables, nuts, pesto, salsa, and more.', watch: 'Manual processing is slower than an electric processor for large batches.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Manual chopping, mincing, and pureeing', why: 'Hand-operated food processor for chopping fruits, vegetables, nuts, pesto, salsa, and more.', watch: 'Manual processing is slower than an electric processor for large batches.', url: 'https://www.amazon.com/dp/B07BZHCRLS?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-etched-medium-grater', name: 'OXO Good Grips Etched Medium Grater', category: 'Home & Kitchen', price: '$14.99', icon: '⌁',
