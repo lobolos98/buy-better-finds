@@ -22,17 +22,17 @@ const guides = [
 ];
 
 const categories = [
-  ['Tech','Tech','⚡','Tech guides for headphones, devices, charging, and everyday digital life.'],
-  ['Home & Kitchen','Home & Kitchen','⌂','Practical guides for cooking, cleaning, organization, and home upgrades.'],
-  ['Tools & DIY','Tools & DIY','⚙','Straightforward guidance for repairs, projects, tools, and workshop gear.'],
-  ['Outdoor','Outdoor','☼','Outdoor cooking, patio comfort, entertaining, and backyard gear.'],
-  ['Smart Home','Smart Home','⌁','Connected products, smart plugs, routines, and easier home control.'],
-  ['Fitness','Fitness','◈','Fitness gear and wearable guidance built around real-world use.'],
-  ['Lifestyle','Lifestyle','◒','Everyday carry, drinkware, travel, and products you use constantly.'],
-  ['Gifts & Collectibles','Gifts & Collectibles','★','Giftable finds for fans, collectors, families, and special occasions.'],
-  ['Toys & Games','Toys & Games','✦','Play, building, STEM, games, and family-friendly product guidance.'],
-  ['Beauty & Personal Care','Beauty & Personal Care','✧','Beauty and personal-care picks with practical tradeoffs in focus.'],
-  ['Seasonal & Holidays','Seasonal & Holidays','❄','Seasonal ideas, holiday shopping, and timely product inspiration.']
+  ['Tech','Tech','⚡','best-tech','Tech guides for headphones, devices, charging, and everyday digital life.'],
+  ['Home & Kitchen','Home & Kitchen','⌂','best-home-kitchen','Practical guides for cooking, cleaning, organization, and home upgrades.'],
+  ['Tools & DIY','Tools & DIY','⚙','best-tools-diy','Straightforward guidance for repairs, projects, tools, and workshop gear.'],
+  ['Outdoor','Outdoor','☼','best-outdoor','Outdoor cooking, patio comfort, entertaining, and backyard gear.'],
+  ['Smart Home','Smart Home','⌁','best-smart-home','Connected products, smart plugs, routines, and easier home control.'],
+  ['Fitness','Fitness','◈','best-fitness-watches','Fitness gear and wearable guidance built around real-world use.'],
+  ['Lifestyle','Lifestyle','◒','best-everyday-drinkware','Everyday carry, drinkware, travel, and products you use constantly.'],
+  ['Gifts & Collectibles','Gifts & Collectibles','★','best-everyday-products','Giftable finds for fans, collectors, families, and special occasions.'],
+  ['Toys & Games','Toys & Games','✦','best-everyday-products','Play, building, STEM, games, and family-friendly product guidance.'],
+  ['Beauty & Personal Care','Beauty & Personal Care','✧','best-everyday-products','Beauty and personal-care picks with practical tradeoffs in focus.'],
+  ['Seasonal & Holidays','Seasonal & Holidays','❄','best-products-under-100','Seasonal ideas, holiday shopping, and timely product inspiration.']
 ];
 
 const categoryImage = (category) => {
@@ -92,8 +92,8 @@ const featured = [
         <p>Eleven visual starting points make it easier to jump into the research that matters to you.</p>
       </div>
       <div class="category-grid">
-        {categories.map(([name,category,icon,description]) => (
-          <a class="category-card" href="/guides/">
+        {categories.map(([name,category,icon,slug,description]) => (
+          <a class="category-card" href={`/guides/${slug}/`}>
             <div class="category-image">
               {categoryImage(category) ? <img src={categoryImage(category)} alt="" loading="lazy" referrerpolicy="no-referrer" /> : <span class="category-icon">{icon}</span>}
               <span class="category-icon-overlay">{icon}</span>
@@ -107,7 +107,7 @@ const featured = [
           </a>
         ))}
       </div>
-      <p class="category-note">Category cards are a visual starting point; the guide library below contains every current guide and its dedicated page.</p>
+      <p class="category-note">Each category card now opens a live, dedicated buying guide from the current guide library.</p>
     </div>
   </section>
 
