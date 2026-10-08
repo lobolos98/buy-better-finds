@@ -10,8 +10,8 @@ export const diyProducts = [
     bestFor: 'Roadside tire changes and garage repairs',
     why: 'A portable 5-ton electric jack kit that combines vehicle lifting with an impact wrench and tire-inflation pump.',
     watch: 'Verify the exact kit, power source, lifting range, and vehicle compatibility before buying.',
-    amazonAsin: 'B0CS3FF4RF',
-    amazonUrl: 'https://www.amazon.com/dp/B0CS3FF4RF?tag=buybetterfi06-20'
+    amazonAsin: 'B0F2J118F4',
+    amazonUrl: 'https://www.amazon.com/dp/B0F2J118F4?tag=buybetterfi06-20'
   },
   {
     slug: 'craftsman-surform-replacement-blade',
