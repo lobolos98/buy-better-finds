@@ -497,7 +497,7 @@ const supplementalProducts = [
   {
     slug: 'solo-stove-summit-27', name: 'Solo Stove Summit 27 Smokeless Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/f2nzr1001imdiltvo3cy', imageAlt: 'Solo Stove Summit 27 Smokeless Fire Pit',
-    bestFor: 'Large backyard gatherings', why: 'Large-format stainless-steel smokeless fire pit with a built-in stand and removable ash pan.', watch: 'Its 27-inch size and 42.4-pound weight require a dedicated outdoor space.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Large backyard gatherings', why: 'Large-format stainless-steel smokeless fire pit with a built-in stand and removable ash pan.', watch: 'Its 27-inch size and 42.4-pound weight require a dedicated outdoor space.', amazonAsin: 'B0GVVS9L3P', amazonUrl: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20'
   },
   {
     slug: 'solo-stove-steelfire-22', name: 'Solo Stove Steelfire 22 Stainless Griddle', category: 'Outdoor', price: '$399.99', icon: '☼',
