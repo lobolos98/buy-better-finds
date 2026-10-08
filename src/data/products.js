@@ -282,12 +282,12 @@ const productsCatalog = [
   {
     slug: 'the-ordinary-niacinamide-zinc', name: 'The Ordinary Niacinamide 10% + Zinc 1%', category: 'Beauty & Personal Care', price: '$17.54', icon: '✦',
     image: 'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sh=800&sm=fit&sw=800', imageAlt: 'The Ordinary Niacinamide 10% + Zinc 1%',
-    bestFor: 'Oil and blemish-prone skin routines', why: 'Niacinamide serum formulated with zinc to support a smoother, more balanced-looking complexion.', watch: 'Skin tolerance varies; introduce active products gradually.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Oil and blemish-prone skin routines', why: 'Niacinamide serum formulated with zinc to support a smoother, more balanced-looking complexion.', watch: 'Skin tolerance varies; introduce active products gradually.', amazonAsin: 'B01MDTVZTZ', amazonUrl: 'https://www.amazon.com/dp/B01MDTVZTZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01MDTVZTZ?tag=buybetterfi06-20'
   },
   {
     slug: 'the-ordinary-glycolic-acid-7-toner', name: 'The Ordinary Glycolic Acid 7% Exfoliating Toner', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw8b57fa2b/Images/products/The%20Ordinary/ord-glyc-acid-7pct-100ml-Aug-UPC.png?sh=800&sm=fit&sw=800', imageAlt: 'The Ordinary Glycolic Acid 7% Exfoliating Toner',
-    bestFor: 'Exfoliation and brighter-looking skin', why: 'Glycolic-acid toner designed to exfoliate and improve the look of uneven texture and tone.', watch: 'Use as directed and consider sun protection when using exfoliating acids.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Exfoliation and brighter-looking skin', why: 'Glycolic-acid toner designed to exfoliate and improve the look of uneven texture and tone.', watch: 'Use as directed and consider sun protection when using exfoliating acids.', amazonAsin: 'B071914GGL', amazonUrl: 'https://www.amazon.com/dp/B071914GGL?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B071914GGL?tag=buybetterfi06-20'
   },
   {
     slug: 'medicube-zero-pore-pad', name: 'Medicube Zero Pore Pad', category: 'Beauty & Personal Care', price: '$24.00', icon: '✦',
@@ -307,7 +307,7 @@ const productsCatalog = [
   {
     slug: 'embryolisse-lait-creme-concentre', name: 'Embryolisse Lait-Crème Concentré', category: 'Beauty & Personal Care', price: '$84.00', icon: '✦',
     image: 'https://us.embryolisse.com/cdn/shop/files/lait-creme-concentre-75ml.jpg', imageAlt: 'Embryolisse Lait-Crème Concentré',
-    bestFor: 'Multi-use moisturizing and makeup prep', why: 'Multi-purpose moisturizer that can also be used as a makeup base, cleansing milk, and moisturizing mask.', watch: 'Formula and packaging can vary by market and size.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Multi-use moisturizing and makeup prep', why: 'Multi-purpose moisturizer that can also be used as a makeup base, cleansing milk, and moisturizing mask.', watch: 'Formula and packaging can vary by market and size.', amazonAsin: 'B0CZTWJ16V', amazonUrl: 'https://www.amazon.com/dp/B0CZTWJ16V?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CZTWJ16V?tag=buybetterfi06-20'
   },
   {
     slug: 'mielle-rosemary-mint-oil', name: 'Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
@@ -317,7 +317,7 @@ const productsCatalog = [
   {
     slug: 'olaplex-no-3-hair-perfector', name: 'Olaplex No. 3 Hair Perfector', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://www.salonhq.com.au/cdn/shop/files/2019_No3_100ml_NoBg_CMYK.jpg?v=1750903060', imageAlt: 'Olaplex No. 3 Hair Perfector',
-    bestFor: 'Damaged or chemically treated hair', why: 'At-home pre-shampoo treatment designed to strengthen and improve the feel of damaged hair.', watch: 'Follow the current product directions for application and processing time.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Damaged or chemically treated hair', why: 'At-home pre-shampoo treatment designed to strengthen and improve the feel of damaged hair.', watch: 'Follow the current product directions for application and processing time.', amazonAsin: 'B09HR5KSR8', amazonUrl: 'https://www.amazon.com/dp/B09HR5KSR8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09HR5KSR8?tag=buybetterfi06-20'
   },
   {
     slug: 'color-wow-dream-coat', name: 'Color Wow Dream Coat Supernatural Spray', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
@@ -332,7 +332,7 @@ const productsCatalog = [
   {
     slug: 'laneige-lip-sleeping-mask', name: 'Laneige Lip Sleeping Mask', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/51bHKet2shL._SL1500_.jpg', imageAlt: 'Laneige Lip Sleeping Mask',
-    bestFor: 'Overnight lip hydration', why: 'Rich leave-on lip mask designed to moisturize and soften dry lips overnight.', watch: 'Flavor and package size can vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Overnight lip hydration', why: 'Rich leave-on lip mask designed to moisturize and soften dry lips overnight.', watch: 'Flavor and package size can vary by listing.', amazonAsin: 'B07XXPHQZK', amazonUrl: 'https://www.amazon.com/dp/B07XXPHQZK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07XXPHQZK?tag=buybetterfi06-20'
   },
   {
     slug: 'maybelline-sky-high-mascara', name: 'Maybelline Lash Sensational Sky High Mascara', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
