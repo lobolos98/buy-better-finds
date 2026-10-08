@@ -870,7 +870,7 @@ const supplementalProducts = [
   {
     slug: 'cosori-smart-wifi-air-fryer', name: 'COSORI Smart WiFi Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://cosori.es/cdn/shop/files/712pqfyIq5L._AC_SL1500.jpg?v=1784517638&width=1391', imageAlt: 'COSORI Smart WiFi Air Fryer',
-    bestFor: 'Connected air-frying and everyday meal prep', why: 'A connected air-fryer format that combines app control with a practical countertop cooking footprint.', watch: 'Smart features add value mainly if you actually plan to use app-based control.', amazonAsin: 'B07VLKMMJ5', amazonUrl: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20'
+    bestFor: 'Connected air-frying and everyday meal prep', why: 'A connected air-fryer format that combines app control with a practical countertop cooking footprint.', watch: 'Smart features add value mainly if you actually plan to use app-based control.', amazonAsin: 'B0BPY841P6', amazonUrl: 'https://www.amazon.com/dp/B0BPY841P6?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BPY841P6?tag=buybetterfi06-20'
   },
   {
     slug: 'instant-vortex-plus-10qt', name: 'Instant Vortex Plus 10-Quart Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
