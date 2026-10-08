@@ -21,41 +21,31 @@ const guides = [
   ['Best Everyday Products','best-everyday-products','Everyday','Useful products selected for common daily needs.']
 ];
 
-const categories = [
-  ['Tech','Tech','⚡','best-tech','Tech guides for headphones, devices, charging, and everyday digital life.'],
-  ['Home & Kitchen','Home & Kitchen','⌂','best-home-kitchen','Practical guides for cooking, cleaning, organization, and home upgrades.'],
-  ['Tools & DIY','Tools & DIY','⚙','best-tools-diy','Straightforward guidance for repairs, projects, tools, and workshop gear.'],
-  ['Outdoor','Outdoor','☼','best-outdoor','Outdoor cooking, patio comfort, entertaining, and backyard gear.'],
-  ['Smart Home','Smart Home','⌁','best-smart-home','Connected products, smart plugs, routines, and easier home control.'],
-  ['Fitness','Fitness','◈','best-fitness-watches','Fitness gear and wearable guidance built around real-world use.'],
-  ['Lifestyle','Lifestyle','◒','best-everyday-drinkware','Everyday carry, drinkware, travel, and products you use constantly.'],
-  ['Gifts & Collectibles','Gifts & Collectibles','★','best-everyday-products','Giftable finds for fans, collectors, families, and special occasions.'],
-  ['Toys & Games','Toys & Games','✦','best-everyday-products','Play, building, STEM, games, and family-friendly product guidance.'],
-  ['Beauty & Personal Care','Beauty & Personal Care','✧','best-everyday-products','Beauty and personal-care picks with practical tradeoffs in focus.'],
-  ['Seasonal & Holidays','Seasonal & Holidays','❄','best-products-under-100','Seasonal ideas, holiday shopping, and timely product inspiration.']
-];
-
-const categoryGuide = (slug) => guides.find((guide) => guide[1] === slug);
-
-const categoryImage = (category) => {
-  const product = products.find((item) => item.category === category && item.image);
-  return product?.image || '';
+const guideImages = {
+  'best-tech': 'Sony WH-1000XM5 Noise-Canceling Headphones',
+  'best-noise-canceling-headphones': 'Sony WH-1000XM5 Noise-Canceling Headphones',
+  'best-home-kitchen': 'KitchenAid Artisan Series 5-Quart Stand Mixer',
+  'best-air-fryers': 'Ninja 4-Qt Air Fryer AF101',
+  'best-vacuums': 'Dyson V8 Cordless Vacuum',
+  'best-homeowner-drills': 'DEWALT 20V MAX Compact Drill/Driver Kit DCD771C2',
+  'best-tools-diy': 'Dremel 3100-2/60 Variable Speed Rotary Tool Kit',
+  'best-outdoor': 'Weber Spirit E-210 Gas Grill',
+  'best-patio-heaters': 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater',
+  'best-smart-home': 'Amazon Echo Dot',
+  'best-smart-plugs': 'TP-Link Kasa Smart Outdoor Plug EP40M',
+  'best-fitness-watches': 'Apple Watch Series 10',
+  'best-everyday-drinkware': 'YETI Rambler Drinkware',
+  'best-home-organization': 'EUDELE Adhesive Shower Caddy',
+  'best-products-under-100': 'LEGO Bonsai Tree Building Kit',
+  'best-everyday-products': 'Stanley Quencher H2.0 Tumbler'
 };
 
-const featured = [
-  ['Best Tech Products','best-tech','Sony WH-1000XM5 Noise-Canceling Headphones'],
-  ['Best Home & Kitchen Products','best-home-kitchen','Ninja 4-Qt Air Fryer AF101'],
-  ['Best Tools & DIY Products','best-tools-diy','Dremel 4300 Rotary Tool'],
-  ['Best Outdoor Products','best-outdoor','Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater'],
-  ['Best Smart Home Products','best-smart-home','TP-Link Kasa Smart Outdoor Plug EP40M'],
-  ['Best Everyday Drinkware','best-everyday-drinkware','YETI Rambler Drinkware']
-].map(([title,slug,productName]) => ({
-  title,
-  slug,
-  product: products.find((item) => item.name === productName) || products.find((item) => item.category === title.replace('Best ','').replace(' Products','') && item.image)
-}));
----
-
+const guideImage = (slug, category) => {
+  const preferredName = guideImages[slug];
+  const preferred = preferredName && products.find((item) => item.name === preferredName && item.image);
+  if (preferred?.image) return preferred.image;
+  return products.find((item) => item.category === category && item.image)?.image || '';
+};
 <BaseLayout title="Buying Guides | Buy Better Finds" description="Original buying guides from Buy Better Finds covering useful products, tradeoffs, comparisons, and practical shopping decisions.">
   <section class="hero">
     <div class="hero-glow glow-one"></div>
@@ -84,7 +74,7 @@ const featured = [
       </div>
       <div class="library-grid">
         {guides.map(([title,slug,category,description]) => {
-          const image = categoryImage(category);
+          const image = guideImage(slug, category);
           return (
             <a class="library-card" href={`/guides/${slug}/`}>
               <div class="library-image">
