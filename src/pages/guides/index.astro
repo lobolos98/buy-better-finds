@@ -73,101 +73,32 @@ const featured = [
     </div>
   </section>
 
-  <section class="section featured-section" id="featured-guides">
-    <div class="container">
-      <div class="section-heading featured-heading">
-        <div>
-          <div class="eyebrow">FEATURED RESEARCH</div>
-          <h2>Guides worth opening first.</h2>
-        </div>
-        <p>Start with a focused guide, then move into individual product pages and side-by-side comparisons.</p>
-      </div>
-      <div class="featured-grid">
-        {featured.map(({title,slug,product}, index) => (
-          <a class={`featured-card featured-${index + 1}`} href={`/guides/${slug}/`}>
-            <div class="featured-image">
-              {product?.image && <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" referrerpolicy="no-referrer" />}
-              <span class="featured-number">0{index + 1}</span>
-              <span class="featured-tag">{product?.category || 'BUYING GUIDE'}</span>
-            </div>
-            <div class="featured-body">
-              <h3>{title}</h3>
-              <p>{guides.find((guide) => guide[1] === slug)?.[3]}</p>
-              <span>Read the guide <b>→</b></span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section category-section">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">EXPLORE BY CATEGORY</div>
-          <h2>Start with what you’re shopping for.</h2>
-        </div>
-        <p>Eleven visual starting points make it easier to jump into the research that matters to you.</p>
-      </div>
-      <div class="category-grid">
-        {categories.map(([name,category,icon,slug,description]) => { const guide = categoryGuide(slug); return (
-          <a class="category-card" href={`/guides/${slug}/`}>
-            <div class="category-image">
-              {categoryImage(category) ? <img src={categoryImage(category)} alt="" loading="lazy" referrerpolicy="no-referrer" /> : <span class="category-icon">{icon}</span>}
-              <span class="category-icon-overlay">{icon}</span>
-            </div>
-            <div class="category-content">
-              <span class="category-kicker">{name}</span>
-              <h3>{guide?.[0] || name}</h3>
-              <p>{description}</p>
-              <span class="category-link">Read the guide <b>→</b></span>
-            </div>
-          </a>
-          );
-        })}
-      </div>
-      <p class="category-note">Each category card now opens a live, dedicated buying guide from the current guide library.</p>
-    </div>
-  </section>
-
-
-
-  <section class="section decision-section">
-    <div class="container decision-layout">
-      <div>
-        <div class="eyebrow">FIND YOUR NEXT MOVE</div>
-        <h2>Not sure which guide you need?</h2>
-        <p>Think about the decision in front of you—not the entire category. These paths help you move from browsing to a useful shortlist.</p>
-      </div>
-      <div class="decision-grid">
-        <a href="/guides/best-products-under-100/"><span class="decision-icon">$</span><strong>Shopping on a budget</strong><small>Start with value-focused picks.</small></a>
-        <a href="/comparisons/"><span class="decision-icon">⇄</span><strong>Choosing between two</strong><small>See product tradeoffs side by side.</small></a>
-        <a href="/products/"><span class="decision-icon">◉</span><strong>Want the details</strong><small>Read individual product strengths and watch-outs.</small></a>
-        <a href="/trending/"><span class="decision-icon">↗</span><strong>Want what’s current</strong><small>See the latest research signals.</small></a>
-      </div>
-    </div>
-  </section>
-
   <section class="section library-section">
     <div class="container">
       <div class="section-heading">
         <div>
-          <div class="eyebrow">THE FULL LIBRARY</div>
-          <h2>Every current buying guide.</h2>
+          <div class="eyebrow">ALL BUYING GUIDES</div>
+          <h2>Every guide, all in one place.</h2>
         </div>
         <span class="library-count">{guides.length} guides</span>
       </div>
       <div class="library-grid">
-        {guides.map(([title,slug,category,description]) => (
-          <a class="library-card" href={`/guides/${slug}/`}>
-            <span class="library-category">{category}</span>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <span class="library-arrow">Read guide <b>→</b></span>
-          </a>
-        ))}
+        {guides.map(([title,slug,category,description]) => {
+          const image = categoryImage(category);
+          return (
+            <a class="library-card" href={`/guides/${slug}/`}>
+              <div class="library-image">
+                {image ? <img src={image} alt={title} loading="lazy" referrerpolicy="no-referrer" /> : <span class="library-image-placeholder">BUY<br />BETTER<br />FINDS</span>}
+              </div>
+              <div class="library-body">
+                <span class="library-category">{category}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <span class="library-arrow">Read guide <b>→</b></span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -231,60 +162,20 @@ const featured = [
 .section-heading h2{color:#10233f;font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.025em;margin:8px 0 0}
 .section-heading p{max-width:540px;color:#64748b;font-size:13px;line-height:1.65;margin:0}
 
-.featured-section{background:#fff}
-.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.featured-card{display:flex;flex-direction:column;border:1px solid #e1e7ee;border-radius:18px;overflow:hidden;background:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
-.featured-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(16,35,63,.12)}
-.featured-image{height:240px;position:relative;background:#f2f5f8;overflow:hidden}
-.featured-image img{width:100%;height:100%;object-fit:contain;padding:22px;transition:transform .3s ease}
-.featured-card:hover .featured-image img{transform:scale(1.05)}
-.featured-number{position:absolute;left:14px;top:14px;background:#10233f;color:#fff;border-radius:999px;padding:7px 9px;font-size:10px;font-weight:950;letter-spacing:.08em}
-.featured-tag{position:absolute;right:14px;top:14px;background:#fff;color:#c8102e;border-radius:999px;padding:7px 9px;font-size:9px;font-weight:900;box-shadow:0 5px 14px rgba(16,35,63,.1)}
-.featured-body{padding:20px 21px 22px}
-.featured-body h3{color:#10233f;font-size:22px;line-height:1.15;margin:0 0 9px}
-.featured-body p{color:#64748b;font-size:13px;line-height:1.6;margin:0 0 17px}
-.featured-body>span{color:#2366a8;font-size:12px;font-weight:900}
-.featured-body>span b{margin-left:5px}
-.featured-1{grid-column:span 2}
-.featured-1 .featured-image{height:310px}
-
-.category-section{background:#f8fafc}
-.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.category-card{display:flex;flex-direction:column;min-height:330px;border:1px solid #dfe6ee;border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.category-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(16,35,63,.1);border-color:#c7d3e0}
-.category-image{height:160px;background:#eef3f8;position:relative;overflow:hidden}
-.category-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
-.category-card:hover .category-image img{transform:scale(1.06)}
-.category-icon{height:100%;display:grid;place-items:center;font-size:58px;color:#1d4ed8}
-.category-icon-overlay{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#c8102e;font-size:16px;font-weight:900;box-shadow:0 5px 14px rgba(16,35,63,.12)}
-.category-content{padding:19px 20px 21px;display:flex;flex-direction:column;flex:1}
-.category-kicker{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#c8102e;font-weight:900}
-.category-content h3{font-size:20px;line-height:1.15;color:#10233f;margin:8px 0}
-.category-content p{font-size:12px;line-height:1.55;color:#64748b;margin:0}
-.category-link{margin-top:auto;padding-top:16px;color:#2366a8;font-size:12px;font-weight:900}
-.category-link b{margin-left:5px}
-.category-note{font-size:11px;color:#64748b;margin:18px 0 0}
-
-.decision-section{background:#10233f;color:#fff}
-.decision-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.decision-section h2{font-size:clamp(30px,4vw,46px);line-height:1.05;margin:10px 0 15px}
-.decision-section p{color:#c7d5e4;line-height:1.7;max-width:560px}
-.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.decision-grid a{padding:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:13px;text-decoration:none;color:#fff;display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;transition:background .2s ease,transform .2s ease}
-.decision-grid a:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
-.decision-icon{grid-row:span 2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#c8102e;font-weight:950}
-.decision-grid strong{font-size:14px}
-.decision-grid small{color:#b9cbe0;font-size:11px;line-height:1.4;margin-top:3px}
-
 .library-section{background:#f8fafc}
 .library-count{padding:8px 11px;border:1px solid #d9e2ec;border-radius:999px;background:#fff;color:#64748b;font-size:11px;font-weight:900}
-.library-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.library-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px;display:flex;flex-direction:column;min-height:205px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
-.library-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(16,35,63,.08)}
+.library-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.library-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #dfe6ee;border-radius:16px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.library-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(16,35,63,.1);border-color:#c7d3e0}
+.library-image{height:180px;background:#eef3f8;display:grid;place-items:center;overflow:hidden}
+.library-image img{width:100%;height:100%;object-fit:contain;padding:18px;transition:transform .3s ease}
+.library-card:hover .library-image img{transform:scale(1.05)}
+.library-image-placeholder{color:#10233f;font-size:15px;line-height:1.05;font-weight:950;letter-spacing:.08em;text-align:center}
+.library-body{padding:18px 19px 20px;display:flex;flex-direction:column;flex:1}
 .library-category{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#c8102e;font-weight:900}
-.library-card h3{color:#10233f;font-size:17px;line-height:1.2;margin:10px 0 8px}
+.library-card h3{color:#10233f;font-size:18px;line-height:1.2;margin:9px 0 8px}
 .library-card p{color:#64748b;font-size:12px;line-height:1.55;margin:0}
-.library-arrow{margin-top:auto;padding-top:14px;color:#2366a8;font-size:11px;font-weight:900}
+.library-arrow{margin-top:auto;padding-top:15px;color:#2366a8;font-size:11px;font-weight:900}
 .library-arrow b{margin-left:5px}
 
 .next-section{background:#fff}
@@ -317,9 +208,6 @@ const featured = [
   .section-heading{display:block}
   .section-heading p{margin-top:12px}
   .category-grid{grid-template-columns:repeat(2,1fr)}
-  .featured-grid{grid-template-columns:1fr}
-  .featured-1{grid-column:span 1}
-  .featured-1 .featured-image{height:240px}
   .library-grid{grid-template-columns:repeat(2,1fr)}
   .next-grid{grid-template-columns:1fr 1fr}
   .decision-grid{grid-template-columns:1fr 1fr}
