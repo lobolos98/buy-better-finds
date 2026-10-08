@@ -864,7 +864,7 @@ const supplementalProducts = [
 
   {
     slug: 'ninja-dz201-foodi-dualzone', name: 'Ninja DZ201 Foodi 6-in-1 DualZone 8-Qt Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B089TQWJKK&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Ninja DZ201 Foodi 6-in-1 DualZone 8-Qt Air Fryer',
+    image: 'https://i04.hsncdn.com/is/image/HomeShoppingNetwork/rocs1200/ninja-dz201-foodi-6-in-1-2-basket-air-fryer-with-dualzo-d-20250404144457227~23043374w.jpg', imageAlt: 'Ninja DZ201 Foodi 6-in-1 DualZone 8-Qt Air Fryer',
     bestFor: 'Family-size air frying and cooking two foods at once', why: 'Dual-zone baskets let you cook separate foods at different settings while using one countertop appliance.', watch: 'Its larger footprint is better suited to households that cook multiple portions at once.', amazonAsin: 'B089TQWJKK', amazonUrl: 'https://www.amazon.com/dp/B089TQWJKK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B089TQWJKK?tag=buybetterfi06-20'
   },
   {
@@ -874,7 +874,7 @@ const supplementalProducts = [
   },
   {
     slug: 'instant-vortex-plus-10qt', name: 'Instant Vortex Plus 10-Quart Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07VM28XTR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Instant Vortex Plus 10-Quart Air Fryer',
+    image: 'https://instantpot.com/cdn/shop/files/IB_140-3000-01_Vortex-Plus-AFO-10QT_ATF_Square_Tile1.png?v=1746220302&width=960', imageAlt: 'Instant Vortex Plus 10-Quart Air Fryer',
     bestFor: 'Larger batches and countertop versatility', why: 'Large-capacity air-fryer oven format aimed at shoppers who want more room than compact basket models.', watch: 'Measure your counter space before choosing a 10-quart appliance.', amazonAsin: 'B07VM28XTR', amazonUrl: 'https://www.amazon.com/dp/B07VM28XTR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07VM28XTR?tag=buybetterfi06-20'
   },
   {
