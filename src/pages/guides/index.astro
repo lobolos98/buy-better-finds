@@ -67,7 +67,7 @@ const featured = [
         <h1>Know what to look for <em>before</em> you buy.</h1>
         <p>Skip the endless scrolling. Our guides turn crowded product categories into practical decisions—what matters, who each option fits, and what to watch before you spend.</p>
         <div class="hero-actions">
-          <a class="hero-btn primary" href="#featured-guides">Explore our guides <span>→</span></a>
+          <a class="hero-btn primary" href="/guides/best-tech/">Explore our guides <span>→</span></a>
           <a class="hero-btn ghost" href="/comparisons/">Compare products</a>
         </div>
         <div class="hero-proof"><span>✓</span> Research-focused <span>✓</span> Practical tradeoffs <span>✓</span> No hype-first rankings</div>
@@ -83,6 +83,35 @@ const featured = [
       </div>
     </div>
   </section>
+
+  <section class="section featured-section" id="featured-guides">
+    <div class="container">
+      <div class="section-heading featured-heading">
+        <div>
+          <div class="eyebrow">FEATURED RESEARCH</div>
+          <h2>Guides worth opening first.</h2>
+        </div>
+        <p>Start with a focused guide, then move into individual product pages and side-by-side comparisons.</p>
+      </div>
+      <div class="featured-grid">
+        {featured.map(({title,slug,product}, index) => (
+          <a class={`featured-card featured-${index + 1}`} href={`/guides/${slug}/`}>
+            <div class="featured-image">
+              {product?.image && <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" referrerpolicy="no-referrer" />}
+              <span class="featured-number">0{index + 1}</span>
+              <span class="featured-tag">{product?.category || 'BUYING GUIDE'}</span>
+            </div>
+            <div class="featured-body">
+              <h3>{title}</h3>
+              <p>{guides.find((guide) => guide[1] === slug)?.[3]}</p>
+              <span>Read the guide <b>→</b></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
 
   <section class="section category-section">
     <div class="container">
@@ -115,33 +144,6 @@ const featured = [
   </section>
 
 
-  <section class="section featured-section" id="featured-guides">
-    <div class="container">
-      <div class="section-heading featured-heading">
-        <div>
-          <div class="eyebrow">FEATURED RESEARCH</div>
-          <h2>Guides worth opening first.</h2>
-        </div>
-        <p>Start with a focused guide, then move into individual product pages and side-by-side comparisons.</p>
-      </div>
-      <div class="featured-grid">
-        {featured.map(({title,slug,product}, index) => (
-          <a class={`featured-card featured-${index + 1}`} href={`/guides/${slug}/`}>
-            <div class="featured-image">
-              {product?.image && <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" referrerpolicy="no-referrer" />}
-              <span class="featured-number">0{index + 1}</span>
-              <span class="featured-tag">{product?.category || 'BUYING GUIDE'}</span>
-            </div>
-            <div class="featured-body">
-              <h3>{title}</h3>
-              <p>{guides.find((guide) => guide[1] === slug)?.[3]}</p>
-              <span>Read the guide <b>→</b></span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
 
   <section class="section decision-section">
     <div class="container decision-layout">
