@@ -34,7 +34,7 @@ const productsCatalog = [
   {
     slug: 'amazon-basics-46000-btu-patio-heater', name: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://m.media-amazon.com/images/I/51k1BjYwSlL._AC_UY512_.jpg', imageAlt: 'Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater in Slate Gray',
-    bestFor: 'Patios, decks, outdoor dining, and entertaining', why: 'Portable propane patio heater with adjustable heat output and wheels for repositioning.', watch: 'Check current propane, clearance, and outdoor-use requirements before setup.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-30', score: 8.7
+    bestFor: 'Patios, decks, outdoor dining, and entertaining', why: 'Portable propane patio heater with adjustable heat output and wheels for repositioning.', watch: 'Check current propane, clearance, and outdoor-use requirements before setup.', amazonAsin: 'B010VFKZEO', amazonUrl: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20', dailyDealDate: '2026-09-30', score: 8.7
   },
   {
     slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼',
@@ -118,21 +118,21 @@ const productsCatalog = [
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
     image: 'https://timbuktoys.com/cdn/shop/files/Magna-TilesClearColors32PieceSet.jpg?v=1723148394', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20'
   },
 
   {
     slug: 'taco-cat-goat-cheese-pizza', name: 'Taco Cat Goat Cheese Pizza Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://happypiranha.com/cdn/shop/files/taco_cat_goat_cheese_pizza_game_1.png?v=1762271901&width=1946', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B077Z1R28P', amazonUrl: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20'
   },
 
   {
     slug: 'bitzee-interactive-digital-pet', name: 'Bitzee Interactive Digital Pet', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ecsmedia.pl/c/bitzee-interaktywne-zwierzatko-cyfrowe-wirtualny-zwierzak-hologram-spin-master-b-iext191183535.jpg', imageAlt: 'Bitzee Interactive Digital Pet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BW1B31SR', amazonUrl: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20'
   },
 
   {
@@ -167,7 +167,7 @@ const productsCatalog = [
     slug: 'snap-circuits-jr-sc100', name: 'Snap Circuits Jr. SC-100', category: 'Toys & Games', price: '$14.11', icon: '★',
     image: 'https://www.gigaparts.com/media/catalog/product/cache/002dc70ccef261c78c46589b619436fc/s/n/snap-circuits-jr-sc100-electronics-exploration-kit-over-100-projects-stem-educational-toy-for-kids-8_2ea30750-6d94-4389-9ab1-96d12ad79106.a0686dc9319d685b881bfb641eefaf73.jpg', imageAlt: 'Snap Circuits Jr. SC-100',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00008BFZH', amazonUrl: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20'
   },
 
   {
@@ -209,7 +209,7 @@ const productsCatalog = [
     slug: 'hot-wheels-colossal-crash-track', name: 'Hot Wheels Colossal Crash Track Set', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://http2.mlstatic.com/D_Q_NP_764963-MLA99578671058_122025-O.webp', imageAlt: 'Hot Wheels Colossal Crash Track Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07NQFW239', amazonUrl: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20'
   },
 
   {
@@ -223,21 +223,21 @@ const productsCatalog = [
     slug: 'exploding-kittens-card-game', name: 'Exploding Kittens Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://target.scene7.com/is/image/Target/GUEST_875a837b-0921-48fa-a399-9fbd79edd071?fmt=pjpeg&hei=1000&wid=1000', imageAlt: 'Exploding Kittens Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B010TQY7A8', amazonUrl: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20'
   },
 
   {
     slug: 'vtech-pull-and-sing-puppy', name: 'VTech Pull and Sing Puppy', category: 'Toys & Games', price: '$11.95', icon: '★',
     image: 'https://static.wixstatic.com/media/4c5139_508bafa058df4cbd9b2f10e443c5b53a~mv2.jpg/v1/fill/w_1500,h_1500,al_c,q_90,enc_avif,quality_auto/4c5139_508bafa058df4cbd9b2f10e443c5b53a~mv2.jpg', imageAlt: 'VTech Pull and Sing Puppy',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B01MQ3YP7Y', amazonUrl: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20'
   },
 
   {
     slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: '$3.59', icon: '★',
     image: 'https://i.ebayimg.com/images/g/KmcAAOSwBfNgnnUz/s-l1200.jpg', imageAlt: 'The Original Slinky',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B00000IZKX', amazonUrl: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20'
   },
 
   {
@@ -251,7 +251,7 @@ const productsCatalog = [
     slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
     image: 'https://t7.leapfrog.com/images/prod-lg/learning-friends-100-words-book_80-601540_1.jpg', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20'
   },
 
   {
