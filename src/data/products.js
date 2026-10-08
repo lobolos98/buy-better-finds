@@ -809,7 +809,7 @@ const supplementalProducts = [
     category: 'Gifts & Collectibles', price: 'Check price', icon: '★',
     image: 'https://m.media-amazon.com/images/P/B0G4XNTNHT.01.LZZZZZZZ.jpg', imageAlt: 'Disney Stitch Sticker WOW stamper and activity pad',
     bestFor: 'Disney fans and screen-free creative gifts', why: 'A portable creative activity combining a recognizable character with sticker play.',
-    watch: 'Check the included sticker-roll contents for the current edition.', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20'
+    watch: 'Check the included sticker-roll contents for the current edition.', amazonAsin: 'B0G4XNTNHT', amazonUrl: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20'
   },
 
 
