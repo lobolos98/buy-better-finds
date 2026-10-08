@@ -607,7 +607,7 @@ const supplementalProducts = [
   {
     slug: 'sunco-square-solar-path-lights', name: 'Sunco Square Solar Pathway Lights 4-Pack', category: 'Outdoor', price: '$29.99', icon: '☼',
     image: 'https://sunco.com/cdn/shop/files/GD_MD_SR-BK-2740K_MainImage_4PK.jpg?v=1773174207&width=1200', imageAlt: 'Sunco Square Solar Pathway Lights 4-Pack',
-    bestFor: 'Pathways, gardens, and patio borders', why: 'Solar-powered square path lights with dusk-to-dawn operation and selectable 2700K–4000K color temperature.', watch: 'Solar charging performance depends on direct sunlight reaching each light.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Pathways, gardens, and patio borders', why: 'Solar-powered square path lights with dusk-to-dawn operation and selectable 2700K–4000K color temperature.', watch: 'Solar charging performance depends on direct sunlight reaching each light.', amazonAsin: 'B0CNBS4XD5', amazonUrl: 'https://www.amazon.com/dp/B0CNBS4XD5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CNBS4XD5?tag=buybetterfi06-20'
   },
   {
     slug: 'alpine-solar-pathway-stakes-4', name: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack', category: 'Outdoor', price: '$69.84', icon: '☼',
