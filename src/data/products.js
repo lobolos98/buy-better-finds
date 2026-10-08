@@ -869,7 +869,7 @@ const supplementalProducts = [
   },
   {
     slug: 'cosori-smart-wifi-air-fryer', name: 'COSORI Smart WiFi Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07VLKMMJ5&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'COSORI Smart WiFi Air Fryer',
+    image: 'https://cosori.es/cdn/shop/files/712pqfyIq5L._AC_SL1500.jpg?v=1784517638&width=1391', imageAlt: 'COSORI Smart WiFi Air Fryer',
     bestFor: 'Connected air-frying and everyday meal prep', why: 'A connected air-fryer format that combines app control with a practical countertop cooking footprint.', watch: 'Smart features add value mainly if you actually plan to use app-based control.', amazonAsin: 'B07VLKMMJ5', amazonUrl: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20'
   },
   {
