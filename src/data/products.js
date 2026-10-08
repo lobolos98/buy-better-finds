@@ -267,7 +267,7 @@ const productsCatalog = [
   {
     slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: '$5.90', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/516r6ghtxaL._AC_SL700_.jpg', imageAlt: 'CeraVe Hydrating Facial Cleanser',
-    bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', url: 'https://www.amazon.com/dp/B081KL2QYJ?tag=buybetterfi06-20'
   },
   {
     slug: 'paulas-choice-2-bha-liquid-exfoliant', name: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant", category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
@@ -374,11 +374,11 @@ const supplementalProducts = [
     slug: 'magna-tiles-undersea', name: 'MAGNA-TILES Undersea Adventure 58-Piece Set', category: 'Toys & Games', price: 'Check price', icon: '◇', image: 'https://magnatiles.com/cdn/shop/files/26Undersea_Adventure_FR1_RGB_1.jpg?v=1777929366', imageAlt: 'MAGNA-TILES Undersea Adventure magnetic construction set', bestFor: 'Open-ended building and creative play', why: 'Magnetic construction pieces encourage kids to build, rebuild, and invent their own structures and scenes.', watch: 'Magnetic-tile sets can become a larger investment as you add more pieces and expansions.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
   },
   {
-    slug: 'elf-halo-glow-liquid-filter', name: 'e.l.f. Halo Glow Liquid Filter', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0661/2251/4520/files/83565_OpenA_V2_R_d02ae91d-8a71-4bba-bfbb-ab663a9b18f0.png?crop=center&height=450&v=1780430096&width=450', imageAlt: 'e.l.f. Halo Glow Liquid Filter makeup product', bestFor: 'Glow-focused makeup routines', why: 'A versatile complexion product aimed at adding a luminous finish and fitting into multiple makeup routines.', watch: 'Shade and finish are highly personal, so check swatches and the current shade range.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    slug: 'elf-halo-glow-liquid-filter', name: 'e.l.f. Halo Glow Liquid Filter', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0661/2251/4520/files/83565_OpenA_V2_R_d02ae91d-8a71-4bba-bfbb-ab663a9b18f0.png?crop=center&height=450&v=1780430096&width=450', imageAlt: 'e.l.f. Halo Glow Liquid Filter makeup product', bestFor: 'Glow-focused makeup routines', why: 'A versatile complexion product aimed at adding a luminous finish and fitting into multiple makeup routines.', watch: 'Shade and finish are highly personal, so check swatches and the current shade range.', url: 'https://www.amazon.com/dp/B0CL1H6W3L?tag=buybetterfi06-20'
   },
   {
     slug: 'tweezerman-tweezers', name: 'Tweezerman Slant Tweezer', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://tweezerman.com/cdn/shop/files/wobnswxyuhspivnfjukp_1_2.jpg?v=1762528093&width=2000', imageAlt: 'Tweezerman slant tweezers',
-    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/dp/B000EMUDUQ?tag=buybetterfi06-20'
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
