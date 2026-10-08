@@ -347,7 +347,7 @@ const productsCatalog = [
   {
     slug: 'clean-skin-club-clean-towels-xl', name: 'Clean Skin Club Clean Towels XL', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/61Cn1ooILhL._AC_UL320_.jpg', imageAlt: 'Clean Skin Club Clean Towels XL',
-    bestFor: 'Clean, single-use face drying', why: 'Soft disposable face towels designed for single-use drying and makeup-removal routines.', watch: 'Pack counts vary by listing.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Clean, single-use face drying', why: 'Soft disposable face towels designed for single-use drying and makeup-removal routines.', watch: 'Pack counts vary by listing.', amazonAsin: 'B07PBXXNCY', amazonUrl: 'https://www.amazon.com/dp/B07PBXXNCY?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07PBXXNCY?tag=buybetterfi06-20'
   },
   {
     slug: 'sacheu-stay-n-peel-off-lip-liner', name: 'Sacheu Peel Off Lip Liner STAY-N', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
