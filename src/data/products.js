@@ -477,12 +477,12 @@ const supplementalProducts = [
   {
     slug: 'oxo-garlic-press', name: 'OXO Good Grips Garlic Press', category: 'Home & Kitchen', price: '$28.99', icon: '⌁',
     image: 'https://www.hartsofstur.com/media/catalog/product/1/1/11107400UK-OXO-Good-Grips-Garlic-Press.jpg', imageAlt: 'OXO Good Grips Garlic Press',
-    bestFor: 'Fast garlic prep', why: 'Handheld garlic press designed for quick mincing without requiring a separate knife and board.', watch: 'A garlic press is specialized, so it adds value mainly if you cook with fresh garlic often.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Fast garlic prep', why: 'Handheld garlic press designed for quick mincing without requiring a separate knife and board.', watch: 'A garlic press is specialized, so it adds value mainly if you cook with fresh garlic often.', url: 'https://www.amazon.com/dp/B00HEZ888K?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-swivel-peeler', name: 'OXO Good Grips Swivel Peeler', category: 'Home & Kitchen', price: '$13.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_20081v5_solo.jpg', imageAlt: 'OXO Good Grips Swivel Peeler',
-    bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Vegetable and fruit prep', why: 'Swivel blade and soft grip make it a practical everyday peeling tool.', watch: 'Blade sharpness and handle feel are personal preferences.', url: 'https://www.amazon.com/dp/B00004OCIP?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
@@ -512,7 +512,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-nylon-slotted-spoon', name: 'OXO Good Grips Nylon Slotted Spoon', category: 'Home & Kitchen', price: '$9.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/u/n/unnamed_337.jpeg', imageAlt: 'OXO Good Grips Nylon Slotted Spoon',
-    bestFor: 'Straining vegetables and serving pasta', why: 'High-heat-resistant nylon utensil with a soft non-slip grip for everyday cooking.', watch: 'A slotted spoon is a specialized utensil rather than an all-purpose turner.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Straining vegetables and serving pasta', why: 'High-heat-resistant nylon utensil with a soft non-slip grip for everyday cooking.', watch: 'A slotted spoon is a specialized utensil rather than an all-purpose turner.', url: 'https://www.amazon.com/dp/B003L0OOXK?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-4-inch-pizza-wheel', name: 'OXO Good Grips 4-Inch Pizza Wheel', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
