@@ -861,9 +861,129 @@ const supplementalProducts = [
     image: 'https://m.media-amazon.com/images/I/41wh0n-aLKL._AC_SL1500_.jpg', imageAlt: 'Fanttik E1 Max Precision Electric Screwdriver',
     bestFor: 'Electronics, small repairs, and precision DIY work', why: 'Compact electric screwdriver designed for controlled fastening on small projects and electronics.', watch: 'Best suited to precision work rather than heavy-duty construction tasks.', amazonAsin: 'B0BGWRWRX2', amazonUrl: 'https://www.amazon.com/dp/B0BGWRWRX2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BGWRWRX2?tag=buybetterfi06-20'
   },
-];
 
-export const products = [...productsCatalog, ...supplementalProducts]
+  {
+    slug: 'ninja-dz201-foodi-dualzone', name: 'Ninja DZ201 Foodi 6-in-1 DualZone 8-Qt Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B089TQWJKK&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Ninja DZ201 Foodi 6-in-1 DualZone 8-Qt Air Fryer',
+    bestFor: 'Family-size air frying and cooking two foods at once', why: 'Dual-zone baskets let you cook separate foods at different settings while using one countertop appliance.', watch: 'Its larger footprint is better suited to households that cook multiple portions at once.', amazonAsin: 'B089TQWJKK', amazonUrl: 'https://www.amazon.com/dp/B089TQWJKK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B089TQWJKK?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'cosori-smart-wifi-air-fryer', name: 'COSORI Smart WiFi Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07VLKMMJ5&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'COSORI Smart WiFi Air Fryer',
+    bestFor: 'Connected air-frying and everyday meal prep', why: 'A connected air-fryer format that combines app control with a practical countertop cooking footprint.', watch: 'Smart features add value mainly if you actually plan to use app-based control.', amazonAsin: 'B07VLKMMJ5', amazonUrl: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07VLKMMJ5?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'instant-vortex-plus-10qt', name: 'Instant Vortex Plus 10-Quart Air Fryer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07VM28XTR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Instant Vortex Plus 10-Quart Air Fryer',
+    bestFor: 'Larger batches and countertop versatility', why: 'Large-capacity air-fryer oven format aimed at shoppers who want more room than compact basket models.', watch: 'Measure your counter space before choosing a 10-quart appliance.', amazonAsin: 'B07VM28XTR', amazonUrl: 'https://www.amazon.com/dp/B07VM28XTR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07VM28XTR?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'shark-stratos-multiflex-cordless', name: 'Shark Stratos MultiFLEX Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0B5JMNGNQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Shark Stratos MultiFLEX Cordless Vacuum',
+    bestFor: 'Cordless whole-home cleaning', why: 'Cordless vacuum with a flexible wand and DuoClean PowerFins design for everyday floor cleaning.', watch: 'Cordless convenience comes with battery and dust-bin limitations compared with corded uprights.', amazonAsin: 'B0B5JMNGNQ', amazonUrl: 'https://www.amazon.com/dp/B0B5JMNGNQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0B5JMNGNQ?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'dyson-v15-detect-plus', name: 'Dyson V15 Detect Plus Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CT97D9R2&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Dyson V15 Detect Plus Cordless Vacuum',
+    bestFor: 'Premium cordless cleaning and detailed floor care', why: 'High-end cordless stick vacuum with a strong feature set for shoppers who want more than a basic quick-clean machine.', watch: 'Premium pricing makes it worth comparing against less expensive cordless options first.', amazonAsin: 'B0CT97D9R2', amazonUrl: 'https://www.amazon.com/dp/B0CT97D9R2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CT97D9R2?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'shark-powerdetect-nevertouch', name: 'Shark PowerDetect NeverTouch Robot Vacuum & Mop', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DGRZHXZN&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Shark PowerDetect NeverTouch Robot Vacuum and Mop',
+    bestFor: 'Hands-off automated floor cleaning', why: 'Robot vacuum-and-mop format designed to reduce how often you have to manually clean floors.', watch: 'Robot cleaners require suitable floor layouts and regular maintenance of the dock and consumables.', amazonAsin: 'B0DGRZHXZN', amazonUrl: 'https://www.amazon.com/dp/B0DGRZHXZN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DGRZHXZN?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'east-oak-50000-btu-patio-heater', name: 'EAST OAK 50,000 BTU Patio Heater with Sand Box', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09RFZMV7Z&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'EAST OAK 50,000 BTU Patio Heater with Sand Box',
+    bestFor: 'Outdoor gatherings and larger seating areas', why: 'High-output propane patio heater designed for broad outdoor warmth with a stability-focused sand-box base.', watch: 'Propane appliances require proper outdoor placement, clearance, and fuel handling.', amazonAsin: 'B09RFZMV7Z', amazonUrl: 'https://www.amazon.com/dp/B09RFZMV7Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09RFZMV7Z?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'east-oak-55000-btu-patio-heater', name: 'EAST OAK 55,000 BTU Propane Patio Heater with Round Table', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D5QVBPTL&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'EAST OAK 55,000 BTU Propane Patio Heater with Round Table',
+    bestFor: 'Large patios and entertaining areas', why: 'High-output propane heater that combines outdoor warmth with a useful round table surface.', watch: 'The larger footprint needs a stable, well-cleared outdoor location.', amazonAsin: 'B0D5QVBPTL', amazonUrl: 'https://www.amazon.com/dp/B0D5QVBPTL?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D5QVBPTL?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'newbulig-48000-btu-patio-heater', name: 'NEWBULIG 48,000 BTU Propane Patio Heater', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0HGFQRGZQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'NEWBULIG 48,000 BTU Propane Patio Heater',
+    bestFor: 'Outdoor gatherings where mobility and broad heat matter', why: 'Freestanding propane heater designed for substantial outdoor heating with a wheeled format.', watch: 'Check the current setup requirements and keep propane heating equipment in an appropriate open-air location.', amazonAsin: 'B0HGFQRGZQ', amazonUrl: 'https://www.amazon.com/dp/B0HGFQRGZQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0HGFQRGZQ?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'kasa-ep10-smart-plug', name: 'Kasa Smart Plug Ultra Mini 15A (EP10)', category: 'Smart Home', price: 'Check price', icon: '⚡',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B091699Z3W&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Kasa Smart Plug Ultra Mini EP10',
+    bestFor: 'Compact indoor smart-home automation', why: 'Compact smart plug designed for schedules, timers, remote control, and voice-assistant routines.', watch: 'Check the supported Wi-Fi band and electrical rating for the exact model before setup.', amazonAsin: 'B091699Z3W', amazonUrl: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'govee-smart-plug-4-pack', name: 'Govee Smart Plug 15A 4-Pack', category: 'Smart Home', price: 'Check price', icon: '⚡',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0948ZZZJP&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Govee Smart Plug 15A 4-Pack',
+    bestFor: 'Automating several indoor outlets at once', why: 'Four-pack smart plug setup for adding schedules and voice control to multiple ordinary devices.', watch: 'A multi-pack makes sense only if you actually need several connected outlets.', amazonAsin: 'B0948ZZZJP', amazonUrl: 'https://www.amazon.com/dp/B0948ZZZJP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0948ZZZJP?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'linkind-matter-smart-plug', name: 'Linkind Matter Smart Plug', category: 'Smart Home', price: 'Check price', icon: '⚡',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0C36WXGP1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Linkind Matter Smart Plug',
+    bestFor: 'Cross-platform smart-home setups', why: 'Matter-enabled smart plug aimed at households that want flexibility across supported smart-home ecosystems.', watch: 'Matter setup depends on the controller and ecosystem you use.', amazonAsin: 'B0C36WXGP1', amazonUrl: 'https://www.amazon.com/dp/B0C36WXGP1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C36WXGP1?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'apple-watch-se-3', name: 'Apple Watch SE 3', category: 'Fitness', price: 'Check price', icon: '◉',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FQFJ2WRG&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple Watch SE 3',
+    bestFor: 'Everyday fitness tracking and Apple users', why: 'Lower-cost Apple Watch option for activity tracking, notifications, and everyday smartwatch use.', watch: 'Check the exact case size and GPS or cellular configuration before buying.', amazonAsin: 'B0FQFJ2WRG', amazonUrl: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'fitbit-charge-6', name: 'Fitbit Charge 6 Fitness Tracker', category: 'Fitness', price: 'Check price', icon: '◉',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CC63GZ3R&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Fitbit Charge 6 Fitness Tracker',
+    bestFor: 'Everyday activity and fitness tracking', why: 'Fitness tracker format focused on activity, workouts, and everyday health and training metrics.', watch: 'A fitness tracker is a different experience from a full smartwatch with a larger app ecosystem.', amazonAsin: 'B0CC63GZ3R', amazonUrl: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'garmin-vivoactive-5', name: 'Garmin vívoactive 5', category: 'Fitness', price: 'Check price', icon: '◉',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CG6NR413&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Garmin vívoactive 5 fitness GPS smartwatch',
+    bestFor: 'GPS fitness tracking and everyday training', why: 'Fitness-focused GPS smartwatch with a broad activity feature set and a more traditional watch experience.', watch: 'Compare Garmin’s feature set with Apple and Fitbit before choosing your ecosystem.', amazonAsin: 'B0CG6NR413', amazonUrl: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'garmin-vivoactive-6', name: 'Garmin vívoactive 6', category: 'Fitness', price: 'Check price', icon: '◉',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0F38GR9PZ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Garmin vívoactive 6 fitness GPS smartwatch',
+    bestFor: 'More advanced everyday fitness tracking', why: 'Newer GPS smartwatch option for shoppers who want a broader fitness-focused feature set.', watch: 'The extra features may not matter if you mainly want basic activity tracking.', amazonAsin: 'B0F38GR9PZ', amazonUrl: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'simple-modern-40oz-tumbler', name: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid', category: 'Lifestyle', price: 'Check price', icon: '◈',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DG3MS3ST&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid',
+    bestFor: 'Large-volume everyday hydration', why: 'Large handled tumbler format built around portable hydration and a straw lid.', watch: 'The 40-ounce size is less convenient if you prefer a smaller bottle or cup-holder footprint.', amazonAsin: 'B0DG3MS3ST', amazonUrl: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'owala-freesip-32', name: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle', category: 'Lifestyle', price: 'Check price', icon: '◈',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FK1LF5PM&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle',
+    bestFor: 'Everyday hydration and on-the-go use', why: 'Insulated bottle with Owala’s FreeSip drinking design for flexible sipping and chugging.', watch: 'Choose the size and lid style that best fit your bag, car, and daily routine.', amazonAsin: 'B0FK1LF5PM', amazonUrl: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'oxo-extendable-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Lifestyle', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00L9XH3X4&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
+    bestFor: 'Cleaning hard-to-reach bathroom areas', why: 'Extendable cleaning tool designed to make tubs, tile, and other awkward surfaces easier to reach.', watch: 'This is a cleaning-accessory pick rather than a storage product, so use it when reducing household task friction is the goal.', amazonAsin: 'B00L9XH3X4', amazonUrl: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'bagsmart-toiletry-bag-organization', name: 'BAGSMART Toiletry Bag', category: 'Lifestyle', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07G2Q1JY9&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'BAGSMART Toiletry Bag',
+    bestFor: 'Bathroom and travel organization', why: 'Compartmented toiletry organizer that keeps smaller personal-care items together and easy to find.', watch: 'Capacity and compartment layout vary by BAGSMART version.', amazonAsin: 'B07G2Q1JY9', amazonUrl: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'tubshroom-ultra-organization', name: 'TubShroom Ultra', category: 'Lifestyle', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01M0XQY1D&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'TubShroom Ultra drain protector',
+    bestFor: 'Reducing bathroom drain buildup and cleanup', why: 'Simple bathroom accessory that keeps hair and debris from becoming a recurring drain-maintenance problem.', watch: 'Fit depends on the drain configuration in your tub or shower.', amazonAsin: 'B01M0XQY1D', amazonUrl: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'keter-cortina-30-gallon-storage', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: 'Check price', icon: '◇',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0F44216HP&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Keter Cortina 30-Gallon Deck Box',
+    bestFor: 'Compact household and patio storage', why: 'Weather-resistant deck box format for keeping outdoor accessories, cushions, and small gear contained.', watch: 'It is most useful where outdoor or garage-style storage is appropriate; measure the footprint first.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'stanley-iceflow-20oz', name: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz', category: 'Lifestyle', price: 'Check price', icon: '◈',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08VPTBYM5&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz',
+    bestFor: 'Portable hydration with a handled straw lid', why: 'Compact insulated tumbler format designed for easy carrying and sipping on the go.', watch: 'The 20-ounce capacity is smaller than many oversized tumbler options.', amazonAsin: 'B08VPTBYM5', amazonUrl: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'stanley-iceflow-24oz-fastflow', name: 'STANLEY IceFlow Fast Flow Water Bottle 24-Oz', category: 'Lifestyle', price: 'Check price', icon: '◈',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CWLQ1Z25&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'STANLEY IceFlow Fast Flow Water Bottle 24-Oz',
+    bestFor: 'Portable everyday hydration', why: 'Insulated bottle designed for quick drinking with a lightweight, travel-friendly format.', watch: 'Check the exact lid style and capacity before buying because IceFlow models vary.', amazonAsin: 'B0CWLQ1Z25', amazonUrl: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20'
+  },
+];
+\nexport const products = [...productsCatalog, ...supplementalProducts]
   .filter((product) => product?.slug && product?.name && product?.category && product?.image)
   .map((product) => {
   const amazonOverride = amazonImageOverrides[product.slug];
