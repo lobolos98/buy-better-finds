@@ -517,12 +517,12 @@ const supplementalProducts = [
   {
     slug: 'oxo-4-inch-pizza-wheel', name: 'OXO Good Grips 4-Inch Pizza Wheel', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11301000_2.jpg', imageAlt: 'OXO Good Grips 4-Inch Pizza Wheel',
-    bestFor: 'Cutting thick-crust pizza', why: 'Large stainless-steel blade with a thumb guard and soft non-slip handle.', watch: 'Its larger wheel needs a little more drawer space.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Cutting thick-crust pizza', why: 'Large stainless-steel blade with a thumb guard and soft non-slip handle.', watch: 'Its larger wheel needs a little more drawer space.', url: 'https://www.amazon.com/dp/B00004OCJN?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-avocado-slicer', name: 'OXO 3-in-1 Avocado Slicer', category: 'Home & Kitchen', price: '$11.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/p/a/papnztclj3ntvkhwbem5.jpg', imageAlt: 'OXO 3-in-1 Avocado Slicer',
-    bestFor: 'Quick avocado preparation', why: 'Three-in-one tool for halving, pitting, slicing, and serving ripe avocados.', watch: 'Its value depends on how often you prepare avocados.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Quick avocado preparation', why: 'Three-in-one tool for halving, pitting, slicing, and serving ripe avocados.', watch: 'Its value depends on how often you prepare avocados.', url: 'https://www.amazon.com/dp/B0088LR5EW?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-simple-mandoline-slicer', name: 'OXO Good Grips Simple Mandoline Slicer', category: 'Home & Kitchen', price: '$59.99', icon: '◇',
@@ -537,12 +537,12 @@ const supplementalProducts = [
   {
     slug: 'oxo-etched-medium-grater', name: 'OXO Good Grips Etched Medium Grater', category: 'Home & Kitchen', price: '$14.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_11215900_2.jpg', imageAlt: 'OXO Good Grips Etched Medium Grater',
-    bestFor: 'Cheese, vegetables, and fresh ingredient prep', why: 'Extra-sharp etched stainless-steel grating surface with a soft handle and stabilizing foot.', watch: 'A box grater offers more grating surfaces if you need broader functionality.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Cheese, vegetables, and fresh ingredient prep', why: 'Extra-sharp etched stainless-steel grating surface with a soft handle and stabilizing foot.', watch: 'A box grater offers more grating surfaces if you need broader functionality.', url: 'https://www.amazon.com/dp/B07V49WGRQ?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-everyday-cutting-board', name: 'OXO Good Grips Everyday Cutting Board', category: 'Home & Kitchen', price: '$17.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_20081-11272700_9c_1__1.jpg', imageAlt: 'OXO Good Grips Everyday Cutting Board',
-    bestFor: 'Everyday chopping and food prep', why: 'Double-sided non-porous cutting board with non-slip feet and a drip catcher.', watch: 'Choose a larger board if you regularly prep large meals.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Everyday chopping and food prep', why: 'Double-sided non-porous cutting board with non-slip feet and a drip catcher.', watch: 'Choose a larger board if you regularly prep large meals.', url: 'https://www.amazon.com/dp/B0836229FZ?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-koda-2-pro', name: 'Ooni Koda 2 Pro 18" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$799.00', icon: '☼',
