@@ -39,7 +39,7 @@ const productsCatalog = [
   {
     slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
-    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-10'
+    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', dailyDealDate: '2026-10-10'
   },
   {
     slug: 'apple-airpods-5', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
@@ -94,7 +94,7 @@ const productsCatalog = [
   {
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰',
     image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park building set',
-    bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-10-08'
+    bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20', dailyDealDate: '2026-10-08'
   },
   {
     slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙',
@@ -195,7 +195,7 @@ const productsCatalog = [
     slug: 'crayola-globbles-6-count', name: 'Crayola Globbles (6-Count)', category: 'Toys & Games', price: '$8.95', icon: '★',
     image: 'https://www.crayola.com/images/default-source/product-images/toys/74-7294-0-300_globbles_6ct_f1.jpg?sfvrsn=d9f59144_7', imageAlt: 'Crayola Globbles 6-Count',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20'
   },
 
   {
@@ -216,7 +216,7 @@ const productsCatalog = [
     slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: '$39.99', icon: '★',
     image: 'https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/1713036510322?fmt=jpeg&hei=608&qlt=90&wid=608', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20'
   },
 
   {
@@ -244,7 +244,7 @@ const productsCatalog = [
     slug: 'lego-bonsai-tree-10281', name: 'LEGO Bonsai Tree Building Kit', category: 'Toys & Games', price: '$17.04', icon: '★',
     image: 'https://images.squarespace-cdn.com/content/v1/5f06d2b4df9fa94888ac8286/1609348324314-MDYY5RZHERMVBR82P03G/Bonsai%2BLEGO.jpg', imageAlt: 'LEGO Bonsai Tree 10281',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20'
   },
 
   {
@@ -272,7 +272,7 @@ const productsCatalog = [
   {
     slug: 'paulas-choice-2-bha-liquid-exfoliant', name: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant", category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/61cGibB-FbL._SL1500_.jpg', imageAlt: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant",
-    bestFor: 'Pore and texture-focused routines', why: 'Leave-on salicylic-acid exfoliant designed to unclog pores and smooth the look of uneven texture.', watch: 'Exfoliating acids can be irritating; follow the product directions.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Pore and texture-focused routines', why: 'Leave-on salicylic-acid exfoliant designed to unclog pores and smooth the look of uneven texture.', watch: 'Exfoliating acids can be irritating; follow the product directions.', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20'
   },
   {
     slug: 'biodance-bio-collagen-real-deep-mask', name: 'Biodance Bio-Collagen Real Deep Mask', category: 'Beauty & Personal Care', price: '$19.00', icon: '✦',
@@ -365,7 +365,7 @@ const supplementalProducts = [
     slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20', dailyDealDate: '2026-10-05', amazonAsin: 'B0C6XK6DDL', amazonUrl: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20'
   },
   {
-    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', url: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20'
   },
   {
     slug: 'stanley-quencher', name: 'Stanley Quencher H2.0 Tumbler', category: 'Lifestyle', price: 'Check price', icon: '◈', image: 'https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-TheQuencherH2.OFlowStateTMTumbler20OZ-Black2.0-Front_20399a06-bbde-478f-a91e-c3b545d6457d.png?v=1716304216&width=990', imageAlt: 'Stanley Quencher H2.0 Tumbler', pressKitUrl: 'https://www.stanley1913.com/pages/newsroom', bestFor: 'Large-volume everyday hydration', why: 'Large insulated tumbler designed for carrying a substantial drink throughout the day.', watch: 'Its large size is convenient for hydration but less convenient for small cup holders and bags.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20', dailyDealDate: '2026-09-18'
@@ -487,7 +487,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/0/1059701.jpg', imageAlt: 'OXO Good Grips 5-Quart Mixing Bowl',
-    bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
   },
   {
     slug: 'kitchenaid-artisan-plus-5qt', name: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer - Milkshake', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
@@ -527,7 +527,7 @@ const supplementalProducts = [
   {
     slug: 'oxo-simple-mandoline-slicer', name: 'OXO Good Grips Simple Mandoline Slicer', category: 'Home & Kitchen', price: '$59.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/2/1273180.jpg', imageAlt: 'OXO Good Grips Simple Mandoline Slicer',
-    bestFor: 'Consistent vegetable slicing', why: 'Adjustable slicing and julienne settings with an integrated finger guard.', watch: 'Mandolines require careful handling and dedicated storage.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Consistent vegetable slicing', why: 'Adjustable slicing and julienne settings with an integrated finger guard.', watch: 'Mandolines require careful handling and dedicated storage.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-one-stop-chop', name: 'OXO One Stop Chop Manual Food Processor', category: 'Home & Kitchen', price: '$49.99', icon: '◇',
@@ -562,7 +562,7 @@ const supplementalProducts = [
   {
     slug: 'ooni-koda-2-max', name: 'Ooni Koda 2 Max 24" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$1,299.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2Max-Front-2Pizzas-F.webp?crop=center&height=640&v=1749094223&width=640', imageAlt: 'Ooni Koda 2 Max gas-powered pizza oven',
-    bestFor: 'Large-format backyard pizza cooking', why: '24-inch gas-powered oven designed for large pizzas and multi-zone cooking.', watch: 'Its size and price make it a substantial outdoor-kitchen purchase.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Large-format backyard pizza cooking', why: '24-inch gas-powered oven designed for large pizzas and multi-zone cooking.', watch: 'Its size and price make it a substantial outdoor-kitchen purchase.', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$499.00', icon: '☼',
@@ -577,7 +577,7 @@ const supplementalProducts = [
   {
     slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: '$59.49', icon: '◇',
     image: 'https://i5.walmartimages.com/seo/Keter-Cortina-30-Gallon-Resin-Deck-Box-for-Patio-Furniture-Pool-Accessories-and-Storage-for-Outdoor-Toys-Grey-Black_0b628539-23dc-458b-8f6f-7340e8caec84.5a6d7d2a67f3243bd467fb876d490ee8.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
-    bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
   },
   {
     slug: 'brightech-ambience-pro-solar-hanging', name: 'Brightech Ambience Pro Solar Hanging String Lights', category: 'Outdoor', price: '$59.00', icon: '☼',
@@ -587,7 +587,7 @@ const supplementalProducts = [
   {
     slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro Solar Hanging Remote String Lights', category: 'Outdoor', price: '$64.00', icon: '☼',
     image: 'https://brightech.com/cdn/shop/files/Untitled_design_65.png?v=1751923255&width=1500', imageAlt: 'Brightech Ambience Pro Solar Hanging Remote String Lights',
-    bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: '$129.99', icon: '◇',
