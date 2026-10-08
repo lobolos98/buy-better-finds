@@ -46,6 +46,7 @@ const guideImage = (slug, category) => {
   if (preferred?.image) return preferred.image;
   return products.find((item) => item.category === category && item.image)?.image || '';
 };
+---
 <BaseLayout title="Buying Guides | Buy Better Finds" description="Original buying guides from Buy Better Finds covering useful products, tradeoffs, comparisons, and practical shopping decisions.">
   <section class="hero">
     <div class="hero-glow glow-one"></div>
