@@ -165,9 +165,9 @@ const breadcrumbSchema = {
         <div class="product-detail-visual">
           <div class="find-badge">BUY BETTER FIND</div>
           <div class="product-photo">
-            <img src={product.image} alt={product.imageAlt} width="1000" height="750" onerror="if(this.dataset.fallback){this.style.display='none'; this.nextElementSibling.style.display='flex';} else if(this.dataset.fallbackUrl){this.dataset.fallback='1'; this.src=this.dataset.fallbackUrl;}" data-fallback-url={product.imageFallback || undefined} referrerpolicy="no-referrer" />
-            <div class="product-image-fallback" style="display:none">Product image unavailable</div>
-            <div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div>
+            <img src={product.image} alt={product.imageAlt} width="1000" height="750" onerror={product.slug === 'lego-botanicals-tiny-plants' ? undefined : "if(this.dataset.fallback){this.style.display='none'; this.nextElementSibling.style.display='flex';} else if(this.dataset.fallbackUrl){this.dataset.fallback='1'; this.src=this.dataset.fallbackUrl;}" } data-fallback-url={product.slug === 'lego-botanicals-tiny-plants' ? undefined : (product.imageFallback || undefined)} referrerpolicy="no-referrer" />
+            {product.slug !== 'lego-botanicals-tiny-plants' && <div class="product-image-fallback" style="display:none">Product image unavailable</div>}
+            {product.slug !== 'lego-botanicals-tiny-plants' && <div class="photo-fallback" aria-hidden="true"><span>{product.icon}</span><small>{product.category}</small></div>}
           </div>
           <span class="category-label">{product.category}</span>
         </div>
