@@ -600,9 +600,9 @@ const supplementalProducts = [
     bestFor: 'Smaller patios and balcony storage', why: 'Compact weather-resistant outdoor storage box for cushions, toys, and garden accessories.', watch: 'The 37-gallon capacity is smaller than Keter medium and large deck boxes.', amazonAsin: 'B01JJJ1R7W', amazonUrl: 'https://www.amazon.com/dp/B01JJJ1R7W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01JJJ1R7W?tag=buybetterfi06-20'
   },
   {
-    slug: 'keter-signature-92-gallon', name: 'Keter Signature 92-Gallon Deck Box — Oak Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
-    image: 'https://assets.keter.com/transform/03fe333b-1f35-4c45-9fbc-7ca92ae0364b/Generated-image?io=transform%3Ascale%2Cwidth%3A1200&quality=80', imageAlt: 'Keter Signature 92-Gallon Deck Box Oak Brown',
-    bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with a wood-look finish for substantial outdoor storage.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    slug: 'keter-signature-92-gallon', name: 'Keter Kentwood 92-Gallon Resin Deck Box — Brown', category: 'Outdoor', price: '$159.99', icon: '◇',
+    image: 'https://assets.keter.com/transform/03fe333b-1f35-4c45-9fbc-7ca92ae0364b/Generated-image?io=transform%3Ascale%2Cwidth%3A1200&quality=80', imageAlt: 'Keter Kentwood 92-Gallon Resin Deck Box Brown',
+    bestFor: 'Larger cushion and patio-accessory storage', why: 'Large weather-resistant resin deck box with 92-gallon capacity, durable resin construction, and a lockable lid.', watch: 'The larger footprint needs adequate clearance on your patio or deck.', amazonAsin: 'B091V4GN7Z', amazonUrl: 'https://www.amazon.com/dp/B091V4GN7Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B091V4GN7Z?tag=buybetterfi06-20'
   },
   {
     slug: 'sunco-square-solar-path-lights', name: 'Sunco Square Solar Pathway Lights 4-Pack', category: 'Outdoor', price: '$29.99', icon: '☼',
