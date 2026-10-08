@@ -257,7 +257,7 @@ const productsCatalog = [
   {
     slug: 'eltamd-uv-clear-spf-46', name: 'EltaMD UV Clear Broad-Spectrum SPF 46', category: 'Beauty & Personal Care', price: '$14.00', icon: '✦',
     image: 'https://lirp.cdn-website.com/f2fb22d0/dms3rep/multi/opt/EltaMD%2BUV%2BClear%2BBroad-Spectrum%2BSPF%2B46%2B1.7%2Bfl.oz-1920w.png', imageAlt: 'EltaMD UV Clear Broad-Spectrum SPF 46',
-    bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', amazonAsin: 'B002MSN3QQ', amazonUrl: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20'
   },
   {
     slug: 'hero-mighty-patch-original', name: 'Hero Cosmetics Mighty Patch Original', category: 'Beauty & Personal Care', price: '$8.97', icon: '✦',
@@ -292,17 +292,17 @@ const productsCatalog = [
   {
     slug: 'medicube-zero-pore-pad', name: 'Medicube Zero Pore Pad', category: 'Beauty & Personal Care', price: '$24.00', icon: '✦',
     image: 'https://medicubeamerica.com/cdn/shop/files/hf_20260715_173751_680ff534-57ce-40bc-b8fc-5b725eb6bb04.png?v=1784137184&width=1946', imageAlt: 'Medicube Zero Pore Pad',
-    bestFor: 'Pore-focused skincare routines', why: 'Dual-textured toner pads formulated to help refine the appearance of pores and remove surface buildup.', watch: 'Active exfoliating ingredients may not suit every skin type.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Pore-focused skincare routines', why: 'Dual-textured toner pads formulated to help refine the appearance of pores and remove surface buildup.', watch: 'Active exfoliating ingredients may not suit every skin type.', amazonAsin: 'B09V7Z4TJG', amazonUrl: 'https://www.amazon.com/dp/B09V7Z4TJG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09V7Z4TJG?tag=buybetterfi06-20'
   },
   {
     slug: 'panoxyl-acne-foaming-wash-10', name: 'PanOxyl Acne Foaming Wash 10%', category: 'Beauty & Personal Care', price: '$1.75', icon: '✦',
     image: 'https://panoxyl.com/wp-content/uploads/2022/05/PDP_FoamingWash_08-150x150.webp', imageAlt: 'PanOxyl Acne Foaming Wash 10%',
-    bestFor: 'Acne-prone skincare routines', why: 'Maximum-strength benzoyl peroxide foaming wash for face and body acne care.', watch: 'Benzoyl peroxide can be drying and may bleach fabrics; follow label directions.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Acne-prone skincare routines', why: 'Maximum-strength benzoyl peroxide foaming wash for face and body acne care.', watch: 'Benzoyl peroxide can be drying and may bleach fabrics; follow label directions.', amazonAsin: 'B081KL2QYJ', amazonUrl: 'https://www.amazon.com/dp/B081KL2QYJ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B081KL2QYJ?tag=buybetterfi06-20'
   },
   {
     slug: 'good-molecules-yerba-mate-eye-gel', name: 'Good Molecules Yerba Mate Wake Up Eye Gel', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://cdn.shopify.com/s/files/1/0173/5085/2708/files/Yerba-Mate_Product_Today-Badge_Cover-2025.png?crop=center&height=100&v=1755819517&width=100', imageAlt: 'Good Molecules Yerba Mate Wake Up Eye Gel',
-    bestFor: 'Tired-looking under-eyes', why: 'Lightweight eye gel with yerba mate, caffeine, peptides, and hyaluronic acid.', watch: 'Avoid direct eye contact and check the current ingredient list.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Tired-looking under-eyes', why: 'Lightweight eye gel with yerba mate, caffeine, peptides, and hyaluronic acid.', watch: 'Avoid direct eye contact and check the current ingredient list.', amazonAsin: 'B091NJQ29P', amazonUrl: 'https://www.amazon.com/dp/B091NJQ29P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B091NJQ29P?tag=buybetterfi06-20'
   },
   {
     slug: 'embryolisse-lait-creme-concentre', name: 'Embryolisse Lait-Crème Concentré', category: 'Beauty & Personal Care', price: '$84.00', icon: '✦',
@@ -312,7 +312,7 @@ const productsCatalog = [
   {
     slug: 'mielle-rosemary-mint-oil', name: 'Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://mielleorganics.com/cdn/shop/files/SI00_Mielle_eContent_RosemaryMint_Oil_80822737.jpg?v=1790187148', imageAlt: 'Mielle Organics Rosemary Mint Scalp and Hair Strengthening Oil',
-    bestFor: 'Scalp and hair care', why: 'Rosemary and mint hair oil infused with biotin for scalp and hair-care routines.', watch: 'Check the current formula and use directions before applying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Scalp and hair care', why: 'Rosemary and mint hair oil infused with biotin for scalp and hair-care routines.', watch: 'Check the current formula and use directions before applying.', amazonAsin: 'B07N7PK9QK', amazonUrl: 'https://www.amazon.com/dp/B07N7PK9QK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07N7PK9QK?tag=buybetterfi06-20'
   },
   {
     slug: 'olaplex-no-3-hair-perfector', name: 'Olaplex No. 3 Hair Perfector', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
@@ -467,12 +467,12 @@ const supplementalProducts = [
   {
     slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/1/1101880.jpg', imageAlt: 'OXO Good Grips 9-Inch Tongs with Silicone Heads',
-    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', amazonAsin: 'B003L0OYJ4', amazonUrl: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-salad-spinner', name: 'OXO Good Grips Salad Spinner', category: 'Home & Kitchen', price: '$32.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_32480_3_1.jpg', imageAlt: 'OXO Good Grips Salad Spinner',
-    bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', amazonAsin: 'B00004OCKR', amazonUrl: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-garlic-press', name: 'OXO Good Grips Garlic Press', category: 'Home & Kitchen', price: '$28.99', icon: '⌁',
@@ -507,7 +507,7 @@ const supplementalProducts = [
   {
     slug: 'solo-stove-infinity-flame', name: 'Solo Stove Infinity Flame Propane Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/aemdwwt79qizvty5h9pf', imageAlt: 'Solo Stove Infinity Flame Propane Fire Pit',
-    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-nylon-slotted-spoon', name: 'OXO Good Grips Nylon Slotted Spoon', category: 'Home & Kitchen', price: '$9.99', icon: '⌁',
