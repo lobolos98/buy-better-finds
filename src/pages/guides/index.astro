@@ -1,32 +1,283 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { products } from '../../data/products.js';
+
 const guides = [
-  ['Best Tech Products','best-tech','Headphones, tablets, mice, power, and everyday technology.'],
-  ['Best Noise-Canceling Headphones','best-noise-canceling-headphones','A focused comparison for travelers, commuters, and listeners who want quieter surroundings.'],
-  ['Best Home & Kitchen Products','best-home-kitchen','Practical appliances, organization, and household upgrades.'],
-  ['Best Air Fryers','best-air-fryers','Compare countertop air fryers by capacity, everyday use, and who each model suits best.'],
-  ['Best Cordless & Everyday Vacuums','best-vacuums','A practical vacuum shortlist for quick cleanups and whole-home floor care.'],
-  ['Best Tools for Homeowners','best-homeowner-drills','A straightforward drill-and-driver guide for repairs, projects, and general DIY work.'],
-  ['Best Tools & DIY Products','best-tools-diy','Tools and project gear for homeowners and DIYers who want capable equipment and a clearer idea of what each product is best suited for.'],
-  ['Best Outdoor Products','best-outdoor','Grills, patio gear, and products for getting more from outdoor spaces.'],
-  ['Best Patio Heaters','best-patio-heaters','What to consider when choosing outdoor heat for patios, decks, and entertaining.'],
-  ['Best Smart Home Products','best-smart-home','Simple connected products that can make home life easier.'],
-  ['Best Smart Plugs','best-smart-plugs','A focused look at outdoor smart-plug use, scheduling, ecosystems, and convenience.'],
-  ['Best Fitness Watches','best-fitness-watches','A practical fitness-watch starting point for runners and structured training.'],
-  ['Best Everyday Drinkware','best-everyday-drinkware','Compare insulated drinkware choices for commuting, hydration, and outdoor use.'],
-  ['Best Home Organization Products','best-home-organization','Useful storage and organization ideas for everyday household clutter.'],
-  ['Best Products Under $100','best-products-under-100','A practical shortlist for shoppers focused on value and budget.'],
-  ['Best Everyday Products','best-everyday-products','Useful products selected for common daily needs.']
+  ['Best Tech Products','best-tech','Tech','Headphones, tablets, mice, power, and everyday technology.'],
+  ['Best Noise-Canceling Headphones','best-noise-canceling-headphones','Tech','A focused comparison for travelers, commuters, and listeners who want quieter surroundings.'],
+  ['Best Home & Kitchen Products','best-home-kitchen','Home & Kitchen','Practical appliances, organization, and household upgrades.'],
+  ['Best Air Fryers','best-air-fryers','Home & Kitchen','Compare countertop air fryers by capacity, everyday use, and who each model suits best.'],
+  ['Best Cordless & Everyday Vacuums','best-vacuums','Home & Kitchen','A practical vacuum shortlist for quick cleanups and whole-home floor care.'],
+  ['Best Tools for Homeowners','best-homeowner-drills','Tools & DIY','A straightforward drill-and-driver guide for repairs, projects, and general DIY work.'],
+  ['Best Tools & DIY Products','best-tools-diy','Tools & DIY','Tools and project gear for homeowners and DIYers who want capable equipment and a clearer idea of what each product is best suited for.'],
+  ['Best Outdoor Products','best-outdoor','Outdoor','Grills, patio gear, and products for getting more from outdoor spaces.'],
+  ['Best Patio Heaters','best-patio-heaters','Outdoor','What to consider when choosing outdoor heat for patios, decks, and entertaining.'],
+  ['Best Smart Home Products','best-smart-home','Smart Home','Simple connected products that can make home life easier.'],
+  ['Best Smart Plugs','best-smart-plugs','Smart Home','A focused look at outdoor smart-plug use, scheduling, ecosystems, and convenience.'],
+  ['Best Fitness Watches','best-fitness-watches','Fitness','A practical fitness-watch starting point for runners and structured training.'],
+  ['Best Everyday Drinkware','best-everyday-drinkware','Lifestyle','Compare insulated drinkware choices for commuting, hydration, and outdoor use.'],
+  ['Best Home Organization Products','best-home-organization','Home & Kitchen','Useful storage and organization ideas for everyday household clutter.'],
+  ['Best Products Under $100','best-products-under-100','Value','A practical shortlist for shoppers focused on value and budget.'],
+  ['Best Everyday Products','best-everyday-products','Everyday','Useful products selected for common daily needs.']
 ];
+
+const categories = [
+  ['Tech','Tech','⚡','Tech guides for headphones, devices, charging, and everyday digital life.'],
+  ['Home & Kitchen','Home & Kitchen','⌂','Practical guides for cooking, cleaning, organization, and home upgrades.'],
+  ['Tools & DIY','Tools & DIY','⚙','Straightforward guidance for repairs, projects, tools, and workshop gear.'],
+  ['Outdoor','Outdoor','☼','Outdoor cooking, patio comfort, entertaining, and backyard gear.'],
+  ['Smart Home','Smart Home','⌁','Connected products, smart plugs, routines, and easier home control.'],
+  ['Fitness','Fitness','◈','Fitness gear and wearable guidance built around real-world use.'],
+  ['Lifestyle','Lifestyle','◒','Everyday carry, drinkware, travel, and products you use constantly.'],
+  ['Gifts & Collectibles','Gifts & Collectibles','★','Giftable finds for fans, collectors, families, and special occasions.'],
+  ['Toys & Games','Toys & Games','✦','Play, building, STEM, games, and family-friendly product guidance.'],
+  ['Beauty & Personal Care','Beauty & Personal Care','✧','Beauty and personal-care picks with practical tradeoffs in focus.'],
+  ['Seasonal & Holidays','Seasonal & Holidays','❄','Seasonal ideas, holiday shopping, and timely product inspiration.']
+];
+
+const categoryImage = (category) => {
+  const product = products.find((item) => item.category === category && item.image);
+  return product?.image || '';
+};
+
+const featured = [
+  ['Best Tech Products','best-tech','Sony WH-1000XM5 Noise-Canceling Headphones'],
+  ['Best Home & Kitchen Products','best-home-kitchen','Ninja 4-Qt Air Fryer AF101'],
+  ['Best Tools & DIY Products','best-tools-diy','Dremel 4300 Rotary Tool'],
+  ['Best Outdoor Products','best-outdoor','Amazon Basics 46,000 BTU Portable Outdoor Propane Patio Heater'],
+  ['Best Smart Home Products','best-smart-home','TP-Link Kasa Smart Outdoor Plug EP40M'],
+  ['Best Everyday Drinkware','best-everyday-drinkware','YETI Rambler Drinkware']
+].map(([title,slug,productName]) => ({
+  title,
+  slug,
+  product: products.find((item) => item.name === productName) || products.find((item) => item.category === title.replace('Best ','').replace(' Products','') && item.image)
+}));
 ---
+
 <BaseLayout title="Buying Guides | Buy Better Finds" description="Original buying guides from Buy Better Finds covering useful products, tradeoffs, comparisons, and practical shopping decisions.">
-  <section class="hero-section"><div class="container"><div class="eyebrow">BUYING GUIDES</div><h1>Know what to look for before you buy.</h1><p>Our buying guides turn a crowded product category into a practical shortlist. We focus on what a product is for, where it makes sense, what to watch for, and which shoppers may want to consider it.</p></div></section>
-  <section class="section"><div class="container"><div class="guide-grid">{guides.map(([title,slug,description])=><a class="guide-card" href={`/guides/${slug}/`}><span class="guide-label">BUYING GUIDE</span><h2>{title}</h2><p>{description}</p><b>Read the guide →</b></a>)}</div></div></section>
-  <section class="section research-next"><div class="container"><div class="eyebrow">NEXT STEP</div><h2>Move from guidance to a specific decision.</h2><p>After reading a guide, compare the products that fit your needs, review individual product pages, or check current Price Watch context.</p><div class="next-grid"><a href="/comparisons/"><strong>Compare Products</strong><span>See side-by-side tradeoffs.</span></a><a href="/products/"><strong>Review Products</strong><span>Read individual strengths and limitations.</span></a><a href="/trending/"><strong>What's Trending</strong><span>See current research signals.</span></a><a href="/price-watch/"><strong>Price Watch</strong><span>Review dated price observations.</span></a></div></div></section>
-  <section class="section methodology"><div class="container"><div class="eyebrow">OUR METHOD</div><h2>Research. Compare. Recommend.</h2><p>We organize product information into useful decisions rather than simply presenting a long list of products. Every guide is designed to help you understand the strengths, limitations, intended use, and practical tradeoffs before you shop.</p><a class="arrow" href="/why-we-recommend/">Learn how we choose →</a></div></section>
+  <section class="hero">
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="brand-mark"><span class="mark-b">B</span><span>BUY BETTER FINDS</span></div>
+        <div class="eyebrow">BUYING GUIDES</div>
+        <h1>Know what to look for <em>before</em> you buy.</h1>
+        <p>Skip the endless scrolling. Our guides turn crowded product categories into practical decisions—what matters, who each option fits, and what to watch before you spend.</p>
+        <div class="hero-actions">
+          <a class="hero-btn primary" href="#featured-guides">Explore our guides <span>→</span></a>
+          <a class="hero-btn ghost" href="/comparisons/">Compare products</a>
+        </div>
+        <div class="hero-proof"><span>✓</span> Research-focused <span>✓</span> Practical tradeoffs <span>✓</span> No hype-first rankings</div>
+      </div>
+      <div class="hero-collage" aria-label="Featured product imagery">
+        {featured.slice(0,4).map(({product}, index) => product?.image && (
+          <a class={`hero-product hero-product-${index + 1}`} href={product ? `/products/${product.slug}/` : '/products/'} aria-label={product.name}>
+            <img src={product.image} alt={product.imageAlt || product.name} loading={index === 0 ? 'eager' : 'lazy'} referrerpolicy="no-referrer" />
+            <span>{product.name}</span>
+          </a>
+        ))}
+        <div class="collage-badge"><strong>BUY BETTER</strong><span>Finds worth a closer look.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section category-section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">EXPLORE BY CATEGORY</div>
+          <h2>Start with what you’re shopping for.</h2>
+        </div>
+        <p>Eleven visual starting points make it easier to jump into the research that matters to you.</p>
+      </div>
+      <div class="category-grid">
+        {categories.map(([name,category,icon,description]) => (
+          <a class="category-card" href="/guides/">
+            <div class="category-image">
+              {categoryImage(category) ? <img src={categoryImage(category)} alt="" loading="lazy" referrerpolicy="no-referrer" /> : <span class="category-icon">{icon}</span>}
+              <span class="category-icon-overlay">{icon}</span>
+            </div>
+            <div class="category-content">
+              <span class="category-kicker">{name}</span>
+              <h3>{name}</h3>
+              <p>{description}</p>
+              <span class="category-link">Explore guides <b>→</b></span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="category-note">Category cards are a visual starting point; the guide library below contains every current guide and its dedicated page.</p>
+    </div>
+  </section>
+
+  <section class="section featured-section" id="featured-guides">
+    <div class="container">
+      <div class="section-heading featured-heading">
+        <div>
+          <div class="eyebrow">FEATURED RESEARCH</div>
+          <h2>Guides worth opening first.</h2>
+        </div>
+        <p>Start with a focused guide, then move into individual product pages and side-by-side comparisons.</p>
+      </div>
+      <div class="featured-grid">
+        {featured.map(({title,slug,product}, index) => (
+          <a class={`featured-card featured-${index + 1}`} href={`/guides/${slug}/`}>
+            <div class="featured-image">
+              {product?.image && <img src={product.image} alt={product.imageAlt || product.name} loading="lazy" referrerpolicy="no-referrer" />}
+              <span class="featured-number">0{index + 1}</span>
+              <span class="featured-tag">{product?.category || 'BUYING GUIDE'}</span>
+            </div>
+            <div class="featured-body">
+              <h3>{title}</h3>
+              <p>{guides.find((guide) => guide[1] === slug)?.[3]}</p>
+              <span>Read the guide <b>→</b></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section decision-section">
+    <div class="container decision-layout">
+      <div>
+        <div class="eyebrow">FIND YOUR NEXT MOVE</div>
+        <h2>Not sure which guide you need?</h2>
+        <p>Think about the decision in front of you—not the entire category. These paths help you move from browsing to a useful shortlist.</p>
+      </div>
+      <div class="decision-grid">
+        <a href="/guides/best-products-under-100/"><span class="decision-icon">$</span><strong>Shopping on a budget</strong><small>Start with value-focused picks.</small></a>
+        <a href="/comparisons/"><span class="decision-icon">⇄</span><strong>Choosing between two</strong><small>See product tradeoffs side by side.</small></a>
+        <a href="/products/"><span class="decision-icon">◉</span><strong>Want the details</strong><small>Read individual product strengths and watch-outs.</small></a>
+        <a href="/trending/"><span class="decision-icon">↗</span><strong>Want what’s current</strong><small>See the latest research signals.</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section library-section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE FULL LIBRARY</div>
+          <h2>Every current buying guide.</h2>
+        </div>
+        <span class="library-count">{guides.length} guides</span>
+      </div>
+      <div class="library-grid">
+        {guides.map(([title,slug,category,description]) => (
+          <a class="library-card" href={`/guides/${slug}/`}>
+            <span class="library-category">{category}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <span class="library-arrow">Read guide <b>→</b></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section next-section">
+    <div class="container">
+      <div class="next-panel">
+        <div>
+          <div class="eyebrow">CONTINUE YOUR RESEARCH</div>
+          <h2>From guidance to a specific decision.</h2>
+          <p>Once you know what matters, keep the research moving with comparisons, individual product pages, trending signals, or dated Price Watch context.</p>
+        </div>
+        <div class="next-grid">
+          <a href="/comparisons/"><strong>Compare Products</strong><span>See side-by-side tradeoffs.</span><b>→</b></a>
+          <a href="/products/"><strong>Review Products</strong><span>Read individual strengths and limitations.</span><b>→</b></a>
+          <a href="/trending/"><strong>What's Trending</strong><span>See current research signals.</span><b>→</b></a>
+          <a href="/price-watch/"><strong>Price Watch</strong><span>Review dated price observations.</span><b>→</b></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section methodology">
+    <div class="container methodology-inner">
+      <div>
+        <div class="eyebrow">OUR METHOD</div>
+        <h2>Research. Compare. Recommend.</h2>
+      </div>
+      <div>
+        <p>We organize product information into useful decisions rather than simply presenting a long list of products. Every guide is designed to help you understand strengths, limitations, intended use, and practical tradeoffs before you shop.</p>
+        <a class="method-link" href="/why-we-recommend/">Learn how we choose <span>→</span></a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
 <style>
-.hero-section{background:linear-gradient(135deg,#10233f,#173c69);color:#fff;padding:82px 0}.hero-section h1{max-width:760px;font-size:clamp(38px,6vw,68px);line-height:1.02;margin:12px 0 20px}.hero-section p{max-width:760px;color:#d9e4f1;font-size:18px;line-height:1.7}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;min-height:245px;display:flex;flex-direction:column;transition:.2s}.guide-card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #10233f14;border-color:#b8c8d9}.guide-label{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--red)}.guide-card h2{font-size:22px;line-height:1.15;color:var(--navy);margin:14px 0 10px}.guide-card p{color:var(--muted);line-height:1.6;font-size:14px}.guide-card b{margin-top:auto;color:var(--blue);font-size:13px}.research-next{background:#fff}.research-next h2{color:var(--navy);font-size:34px;margin:8px 0}.research-next p{max-width:760px;color:var(--muted);line-height:1.7}.next-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.next-grid a{display:flex;flex-direction:column;gap:7px;padding:18px;border:1px solid var(--line);border-radius:12px;background:#f8fafc;text-decoration:none}.next-grid strong{color:var(--navy);font-size:15px}.next-grid span{color:var(--muted);font-size:12px;line-height:1.5}.methodology{background:#f5f7fa}.methodology p{max-width:760px;color:var(--muted);line-height:1.7}.methodology h2{color:var(--navy);font-size:34px;margin:10px 0}
-@media(max-width:900px){.next-grid{grid-template-columns:1fr 1fr}.guide-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.next-grid{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.hero-section{padding:60px 0}.hero-section p{font-size:16px}}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#0b1d35 0%,#102f55 55%,#173f6d 100%);color:#fff;padding:70px 0 82px}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);gap:48px;align-items:center;position:relative;z-index:2}
+.hero-copy{max-width:720px}
+.brand-mark{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;font-size:12px;font-weight:900;letter-spacing:.12em}
+.mark-b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#10233f;font-size:18px;font-weight:950;box-shadow:0 8px 25px rgba(0,0,0,.18)}
+.hero .eyebrow{color:#f4c6ce}
+.hero h1{max-width:760px;font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.045em;margin:8px 0 24px}
+.hero h1 em{font-style:normal;color:#fff;border-bottom:5px solid #c8102e}
+.hero p{max-width:690px;color:#dbe8f5;font-size:18px;line-height:1.75;margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:7px;text-decoration:none;font-size:14px;font-weight:900}
+.hero-btn.primary{background:#c8102e;color:#fff;box-shadow:0 12px 28px rgba(200,16,46,.25)}
+.hero-btn.primary:hover{background:#a80d27}
+.hero-btn.ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.06)}
+.hero-proof{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;color:#b9cbe0;font-size:11px;font-weight:800;letter-spacing:.02em}
+.hero-proof span{color:#f2b4bf}
+.hero-collage{min-height:500px;position:relative}
+.hero-product{position:absolute;display:block;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 28px 60px rgba(0,0,0,.28);text-decoration:none;transition:transform .25s ease}
+.hero-product img{display:block;width:100%;height:100%;object-fit:contain;padding:20px;background:#f7f8fa}
+.hero-product span{display:block;padding:10px 13px;color:#10233f;font-size:10px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero-product-1{width:48%;height:285px;top:10px;left:8% ;transform:rotate(-5deg);z-index:3}
+.hero-product-2{width:43%;height:255px;top:175px;right:2%;transform:rotate(5deg);z-index:2}
+.hero-product-3{width:43%;height:235px;bottom:4px;left:0;transform:rotate(4deg);z-index:1}
+.hero-product-4{width:42%;height:225px;bottom:22px;right:10%;transform:rotate(-4deg);z-index:2}
+.hero-product:hover{transform:translateY(-7px) rotate(0)}
+.collage-badge{position:absolute;right:18%;top:43%;z-index:5;width:118px;height:118px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#c8102e;color:#fff;box-shadow:0 15px 35px rgba(0,0,0,.25);transform:rotate(8deg)}
+.collage-badge strong{font-size:13px;letter-spacing:.08em}.collage-badge span{font-size:9px;line-height:1.35;padding:0 12px;margin-top:4px}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(2px);opacity:.22;background:#2f7fc1}.glow-one{width:360px;height:360px;right:-100px;top:-100px}.glow-two{width:220px;height:220px;left:35%;bottom:-120px;background:#c8102e}
+.section{padding:76px 0}
+.category-section{background:#f6f8fb}
+.section-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}
+.section-heading h2{color:#10233f;font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;margin:8px 0 0}
+.section-heading p{max-width:500px;color:#64748b;line-height:1.65;margin:0}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.category-card{display:flex;flex-direction:column;background:#fff;border:1px solid #e3e8ef;border-radius:16px;overflow:hidden;text-decoration:none;min-height:345px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.category-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(16,35,63,.1);border-color:#c7d3e0}
+.category-image{height:160px;background:#eef3f8;position:relative;overflow:hidden}
+.category-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.category-card:hover .category-image img{transform:scale(1.06)}
+.category-icon{height:100%;display:grid;place-items:center;font-size:58px;color:#1d4ed8}
+.category-icon-overlay{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#c8102e;font-size:16px;font-weight:900;box-shadow:0 5px 14px rgba(16,35,63,.12)}
+.category-content{padding:19px 20px 21px;display:flex;flex-direction:column;flex:1}
+.category-kicker{font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#c8102e;font-weight:900}
+.category-content h3{font-size:20px;line-height:1.15;color:#10233f;margin:8px 0}
+.category-content p{font-size:12px;line-height:1.55;color:#64748b;margin:0}
+.category-link{margin-top:auto;padding-top:16px;color:#2366a8;font-size:12px;font-weight:900}
+.category-link b{margin-left:5px}
+.category-note{font-size:11px;color:#64748b;margin:18px 0 0}
+.featured-section{background:#fff}
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.featured-card{display:flex;flex-direction:column;border:1px solid #e1e7ee;border-radius:18px;overflow:hidden;background:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.featured-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(16,35,63,.12)}
+.featured-image{height:240px;position:relative;background:#f2f5f8;overflow:hidden}
+.featured-image img{width:100%;height:100%;object-fit:contain;padding:22px;transition:transform .3s ease}
+.featured-card:hover .featured-image img{transform:scale(1.05)}
+.featured-number{position:absolute;left:14px;top:14px;background:#10233f;color:#fff;border-radius:999px;padding:7px 9px;font-size:10px;font-weight:950;letter-spacing:.08em}
+.featured-tag{position:absolute;right:14px;top:14px;background:#fff;color:#c8102e;border-radius:999px;padding:7px 9px;font-size:9px;font-weight:900;box-shadow:0 5px 14px rgba(16,35,63,.1)}
+.featured-body{padding:20px 21px 22px}
+.featured-body h3{color:#10233f;font-size:22px;line-height:1.15;margin:0 0 9px}
+.featured-body p{color:#64748b;font-size:13px;line-height:1.6;margin:0 0 17px}
+.featured-body>span{color:#2366a8;font-size:12px;font-weight:900}.featured-body>span b{margin-left:5px}
+.featured-1{grid-column:span 2}.featured-1 .featured-image{height:310px}
+.decision-section{background:#10233f;color:#fff}.decision-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}.decision-section h2{font-size:clamp(30px,4vw,46px);line-height:1.05;margin:10px 0 15px}.decision-section p{color:#c7d5e4;line-height:1.7;max-width:560px}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.decision-grid a{padding:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:13px;text-decoration:none;color:#fff;display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;transition:background .2s ease,transform .2s ease}.decision-grid a:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}.decision-icon{grid-row:span 2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#c8102e;font-weight:950}.decision-grid strong{font-size:14px}.decision-grid small{color:#b9cbe0;font-size:11px;line-height:1.4;margin-top:3px}
+.library-section{background:#f8fafc}.library-count{padding:8px 11px;border:1px solid #d9e2ec;border-radius:999px;background:#fff;color:#64748b;font-size:11px;font-weight:900}
+.library-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.library-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px;display:flex;flex-direction:column;min-height:205px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.library-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(16,35,63,.08)}.library-category{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#c8102e;font-weight:900}.library-card h3{color:#10233f;font-size:17px;line-height:1.2;margin:10px 0 8px}.library-card p{color:#64748b;font-size:12px;line-height:1.55;margin:0}.library-arrow{margin-top:auto;padding-top:14px;color:#2366a8;font-size:11px;font-weight:900}.library-arrow b{margin-left:5px}
+.next-section{background:#fff}.next-panel{border:1px solid #dce4ed;border-radius:22px;padding:34px;background:linear-gradient(135deg,#f7f9fc,#fff)}.next-panel h2{color:#10233f;font-size:34px;margin:8px 0 10px}.next-panel p{max-width:680px;color:#64748b;line-height:1.65}.next-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}.next-grid a{display:flex;flex-direction:column;gap:6px;padding:17px;border:1px solid #dce4ed;border-radius:12px;background:#fff;text-decoration:none}.next-grid strong{color:#10233f;font-size:14px}.next-grid span{color:#64748b;font-size:11px;line-height:1.5}.next-grid b{color:#c8102e;font-size:14px}
+.methodology{background:#f1f4f8}.methodology-inner{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.methodology h2{color:#10233f;font-size:38px;margin:8px 0}.methodology p{color:#64748b;line-height:1.75;max-width:720px}.method-link{display:inline-flex;gap:8px;color:#2366a8;font-size:13px;font-weight:900;text-decoration:none}
+@media(max-width:1050px){.category-grid{grid-template-columns:repeat(3,1fr)}.library-grid{grid-template-columns:repeat(3,1fr)}.hero-inner{grid-template-columns:1fr}.hero-collage{max-width:720px;width:100%;margin:0 auto}.decision-layout,.methodology-inner{grid-template-columns:1fr}.decision-layout{gap:28px}}
+@media(max-width:760px){.hero{padding:54px 0 60px}.hero-collage{min-height:420px}.hero-product-1{width:52%;height:245px}.hero-product-2{width:47%;height:220px;top:145px}.hero-product-3{width:48%;height:205px}.hero-product-4{width:46%;height:195px;right:4%}.collage-badge{right:12%;top:40%;width:96px;height:96px}.section{padding:58px 0}.section-heading{display:block}.section-heading p{margin-top:12px}.category-grid{grid-template-columns:repeat(2,1fr)}.featured-grid{grid-template-columns:1fr}.featured-1{grid-column:span 1}.featured-1 .featured-image{height:240px}.library-grid{grid-template-columns:repeat(2,1fr)}.next-grid{grid-template-columns:1fr 1fr}.decision-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.hero h1{font-size:43px}.hero p{font-size:16px}.hero-proof{gap:8px}.hero-collage{min-height:340px}.hero-product-1{width:55%;height:195px}.hero-product-2{width:48%;height:175px;top:115px}.hero-product-3{width:50%;height:165px}.hero-product-4{width:46%;height:155px}.hero-product span{font-size:8px;padding:7px}.collage-badge{width:82px;height:82px;right:9%;top:39%}.collage-badge strong{font-size:10px}.collage-badge span{font-size:7px}.category-grid{grid-template-columns:1fr}.category-card{min-height:320px}.library-grid{grid-template-columns:1fr}.next-grid,.decision-grid{grid-template-columns:1fr}.next-panel{padding:24px 19px}.brand-mark{font-size:10px}}
 </style>
