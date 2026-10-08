@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const currentMonth = new Date().getMonth();
 const seasonalWindow = currentMonth >= 8 && currentMonth <= 10
-  ? { season: 'Fall', headline: 'Fall, Halloween & Prime Big Deal Days', intro: 'Stay ahead of the season with timely deals, gift ideas, and shopping events as they become relevant.', events: ['Fall finds', 'Prime Big Deal Days — Oct. 6–7', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
+  ? { season: 'Fall', headline: 'Fall & Halloween Shopping', intro: 'Stay ahead of the season with Halloween finds, fall products, gift ideas, and timely shopping opportunities.', events: ['Fall finds', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
   : currentMonth >= 11 || currentMonth <= 1
     ? { season: 'Winter', headline: 'Winter & Holiday Shopping', intro: 'Find timely gift ideas, winter essentials, clearance opportunities, and the next big shopping events.', events: ['Holiday gifts', 'Winter essentials', 'Last-minute gifts', 'New Year deals'] }
     : currentMonth >= 2 && currentMonth <= 4
@@ -17,20 +17,6 @@ const hubs = [
     href: '/categories/seasonal-holidays/halloween/',
     image: 'https://www.lego.com/cdn/cs/set/assets/blt8a5b33fbe2efbe39/blt11ecdc92ea69a278-40872_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=900&quality=80&width=900',
     alt: 'LEGO Halloween Pumpkin Lantern'
-  },
-  {
-    title: 'Prime Day Picks',
-    text: 'A curated product list for Prime Day shopping, with Buy Better Finds scores and clear tradeoffs before you shop.',
-    href: '/categories/prime-day/',
-    image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg',
-    alt: 'Apple AirPods 5 wireless earbuds representing Prime Day Picks'
-  },
-  {
-    title: 'Prime Big Deal Days Guide',
-    text: 'October 6–7, 2026. Follow the fall event, what to watch, and Buy Better Finds coverage.',
-    href: '/categories/seasonal-holidays/prime-big-deal-days/',
-    image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg',
-    alt: 'Apple AirPods 5 wireless earbuds'
   },
   {
     title: 'Trending Now',
@@ -124,7 +110,7 @@ const hubs = [
         <div><strong>Jan–Mar</strong><span>New Year • Valentine’s • Winter clearance • Spring refresh</span></div>
         <div><strong>Apr–Jun</strong><span>Easter • Mother’s Day • Father’s Day • Memorial Day • Summer</span></div>
         <div><strong>Jul–Sep</strong><span>July 4th • Prime shopping season • Back to school • Fall prep</span></div>
-        <div><strong>Oct–Dec</strong><span>Halloween • Prime Big Deal Days • Holiday gifts • Black Friday • Cyber Monday • Christmas</span></div>
+        <div><strong>Oct–Dec</strong><span>Halloween • Holiday gifts • Black Friday • Cyber Monday • Christmas</span></div>
       </div>
     </div>
   </section>

@@ -1,3 +1,10 @@
+# Archived Prime Big Deal Days guide
+
+Archived from `src/pages/categories/seasonal-holidays/prime-big-deal-days/index.astro` on 2026-10-07. The page is no longer part of the live Astro site.
+
+## Original source
+
+```astro
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 const primeSearchUrl = 'https://www.amazon.com/s?k=Prime+Big+Deal+Days&tag=buybetterfi06-20';
@@ -120,3 +127,5 @@ const primeSearchUrl = 'https://www.amazon.com/s?k=Prime+Big+Deal+Days&tag=buybe
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.info-grid,.watch-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:600px){.prime-hero{padding-bottom:44px}.breadcrumbs{margin-bottom:28px;font-size:12px;gap:7px;overflow:hidden;white-space:nowrap}.prime-hero h1{font-size:43px}.hero-copy{font-size:16px}.event-date{align-items:flex-start;flex-direction:column;gap:8px}.hero-actions{display:grid;grid-template-columns:1fr;gap:10px}.hero-actions .btn{width:100%;box-sizing:border-box}.event-card{padding:22px}.event-card h2{font-size:25px}.info-grid,.watch-grid{grid-template-columns:1fr}.info-grid article{padding:21px}.watch-grid a{min-height:110px}.bottom-cta{flex-direction:column;align-items:flex-start;padding:26px}.bottom-cta .btn{width:100%;text-align:center;box-sizing:border-box}.disclosure{padding:20px 16px}}
 </style>
+
+```

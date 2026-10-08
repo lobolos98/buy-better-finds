@@ -1,3 +1,10 @@
+# Archived Prime Day page
+
+Archived from `src/pages/categories/prime-day/index.astro` on 2026-10-07. The page is no longer part of the live Astro site.
+
+## Original source
+
+```astro
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { products } from '../../../data/products.js';
@@ -210,3 +217,5 @@ const amazonUrl = (product) => product?.amazonUrl
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.spotlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.spotlight-head{align-items:flex-start;flex-direction:column}.prime-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:flex-start;flex-direction:column}}
   @media(max-width:650px){.spotlight-grid{grid-template-columns:1fr}.spotlight-section{padding-top:42px}.prime-hero{padding-bottom:44px}.prime-hero h1{font-size:43px}.prime-hero p{font-size:16px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%;box-sizing:border-box}.event-card{padding:22px}.prime-grid{grid-template-columns:1fr}.catalog-note{align-items:flex-start;flex-direction:column}.catalog-note a{white-space:normal}.product-actions{grid-template-columns:1fr}.product-image{height:200px}.bottom-cta{flex-direction:column;align-items:flex-start}.bottom-cta .btn{width:100%;text-align:center;box-sizing:border-box}}
 </style>
+
+```
