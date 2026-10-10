@@ -352,22 +352,7 @@ export const petProducts = [
     url: 'https://www.amazon.com/dp/B09N8W2SC4?tag=buybetterfi06-20',
     score: 8.5
   },
-  {
-    slug: 'bfpethome-dog-bed-option',
-    name: 'Popular Dog Bed Option',
-    category: 'Pet Supplies',
-    price: 'Check price',
-    icon: '🐾',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09D7DWTVB&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
-    imageAlt: 'Popular Dog Bed Option product image',
-    bestFor: 'Everyday dog lounging',
-    why: 'A bed option to compare for comfort, size, and ease of cleaning.',
-    watch: 'Confirm the current listing’s brand, dimensions, and materials before purchase.',
-    amazonAsin: 'B09D7DWTVB',
-    amazonUrl: 'https://www.amazon.com/dp/B09D7DWTVB?tag=buybetterfi06-20',
-    url: 'https://www.amazon.com/dp/B09D7DWTVB?tag=buybetterfi06-20',
-    score: 8
-  },
+
   {
     slug: 'hoewina-calming-donut-pet-bed',
     name: 'Hoewina Washable Donut Pet Bed (20 in)',
