@@ -7,6 +7,7 @@ import { lifestyleProducts } from './lifestyle-products.js';
 import { halloweenProducts } from './halloween-products.js';
 import { autoDiscoveredProducts } from './auto-products.js';
 import { pinterestProducts } from './pinterest-products.js';
+import { petProducts } from './pet-products.js';
 
 const productsCatalog = [
   ...diyProducts,
@@ -15,6 +16,7 @@ const productsCatalog = [
   ...halloweenProducts,
   ...autoDiscoveredProducts,
   ...pinterestProducts,
+  ...petProducts,
 
 
 
