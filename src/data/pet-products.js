@@ -342,7 +342,7 @@ export const petProducts = [
     category: 'Pet Supplies',
     price: 'Check price',
     icon: '🐾',
-    image: 'https://m.media-amazon.com/images/I/61Qh+VLXKzL._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/41Qh+VLXKzL._AC_SL1500_.jpg',
     imageAlt: 'BFPETHOME Orthopedic Washable Dog Bed product image',
     bestFor: 'Dogs that prefer a supportive couch-style bed',
     why: 'A washable bed design with a removable cover and raised sides.',
