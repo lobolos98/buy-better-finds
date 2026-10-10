@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
 import { halloweenProducts } from '../../data/halloween-products.js';
+import { petProducts } from '../../data/pet-products.js';
 
 const featured = [
   { category: 'Tech', eyebrow: 'TECH', products: ['Sony WH-1000XM5 Noise-Canceling Headphones', 'Apple AirPods 4'], comparison: 'sony-wh-1000xm5-vs-airpods-4', description: 'Compare premium over-ear noise cancellation with compact everyday earbuds.' },
@@ -14,17 +15,18 @@ const featured = [
   { category: 'Gifts & Collectibles', eyebrow: 'GIFTS & COLLECTIBLES', products: ['Funko Bitty Pop! Harry Potter 6-Pack', 'Disney Stitch Plush'], comparison: 'funko-bitty-pop-vs-stitch-plush', description: 'Two different approaches to fandom-focused gifting and collecting.' },
   { category: 'Toys & Games', eyebrow: 'TOYS & GAMES', products: ['LEGO City Lava Land Roller Coaster Park', 'CrunchLabs The Crunchinator'], comparison: 'lego-lava-land-vs-crunchlabs-crunchinator', description: 'Compare creative building with hands-on STEM experimentation.' },
   { category: 'Beauty & Personal Care', eyebrow: 'BEAUTY & PERSONAL CARE', products: ['EltaMD UV Clear Broad-Spectrum SPF 46', 'Hero Cosmetics Mighty Patch Original'], comparison: 'eltamd-uv-clear-vs-mighty-patch', description: 'Two very different everyday personal-care products, selected for distinct needs.' },
+  { category: 'Pet Supplies', eyebrow: 'PET SUPPLIES', products: ['PETLIBRO Wi-Fi Automatic Pet Feeder', 'oneisall Automatic Cat Feeder for Two Cats (5 L)'], comparison: 'petlibro-vs-oneisall-automatic-feeders', description: 'Compare scheduled feeding with app-based control against a feeder designed for homes with two cats.', pet: true },
   { category: 'Seasonal & Holidays', eyebrow: 'SEASONAL & HOLIDAYS', products: ['wymulot 2-Pack 40" Pose-N-Stay Halloween Skeletons', 'AISENO Realistic Skeleton Stakes'], description: 'Compare two Halloween display approaches for building a standout yard scene.', seasonal: true }
 ];
 
-const getProduct = (name, seasonal = false) => {
-  const source = seasonal ? halloweenProducts : catalog;
+const getProduct = (name, seasonal = false, pet = false) => {
+  const source = pet ? petProducts : seasonal ? halloweenProducts : catalog;
   return source.find((product) => product.name === name);
 };
 
 const sections = featured.map((item) => ({
   ...item,
-  items: item.products.map((name) => getProduct(name, item.seasonal)).filter(Boolean)
+  items: item.products.map((name) => getProduct(name, item.seasonal, item.pet)).filter(Boolean)
 }));
 ---
 <BaseLayout title="Product Comparisons | Buy Better Finds" description="Explore featured products from every Buy Better Finds category, then use the comparison experience to evaluate the options that fit you best.">
