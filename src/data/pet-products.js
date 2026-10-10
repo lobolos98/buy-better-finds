@@ -214,7 +214,7 @@ export const petProducts = [
     category: 'Pet Supplies',
     price: 'Check price',
     icon: '🐾',
-    image: 'https://m.media-amazon.com/images/P/B0C5X2G933.01._SCLZZZZZZZ_.jpg',
+    image: 'https://oneisall.com/cdn/shop/files/oneisall-5l-automatic-cat-feeder-for-two-cats-black-8538650.png?v=1775035531',
     imageAlt: 'oneisall Automatic Cat Feeder for Two Cats (5 L) product image',
     bestFor: 'Homes feeding two cats',
     why: 'A larger-capacity timed feeder aimed at multi-pet routines.',
