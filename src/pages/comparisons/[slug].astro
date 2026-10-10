@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products as catalog } from '../../data/products.js';
 import { halloweenProducts } from '../../data/halloween-products.js';
+import { petProducts } from '../../data/pet-products.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
 
@@ -17,6 +18,7 @@ export function getStaticPaths() {
   'funko-bitty-pop-vs-stitch-plush': { title: 'Funko Bitty Pop! Harry Potter 6-Pack vs Disney Stitch Plush', intro: 'Two very different fandom gifts: a compact collectible set built around display and collecting versus a character plush designed for a softer, more playful gift experience.', products: ['Funko Bitty Pop! Harry Potter 6-Pack','Disney Stitch Plush'] },
   'lego-lava-land-vs-crunchlabs-crunchinator': { title: 'LEGO City Lava Land Roller Coaster Park vs CrunchLabs The Crunchinator', intro: 'Two hands-on choices for kids who enjoy making and experimenting. LEGO City emphasizes creative construction and imaginative play, while The Crunchinator brings a more STEM-oriented build-and-learn experience.', products: ['LEGO City Lava Land Roller Coaster Park','CrunchLabs The Crunchinator'] },
   'eltamd-uv-clear-vs-mighty-patch': { title: 'EltaMD UV Clear vs Hero Cosmetics Mighty Patch', intro: 'Two personal-care products designed for completely different routines. EltaMD UV Clear is centered on daily facial sun protection, while Mighty Patch is a targeted blemish-care product for shoppers looking for a simple spot-treatment approach.', products: ['EltaMD UV Clear Broad-Spectrum SPF 46','Hero Cosmetics Mighty Patch Original'] },
+  'petlibro-vs-oneisall-automatic-feeders': { title: 'PETLIBRO Wi-Fi Automatic Pet Feeder vs oneisall Automatic Cat Feeder', intro: 'Both feeders help make scheduled meals more consistent, but they suit different routines. PETLIBRO is the more natural fit for owners who want remote feeding schedules, while oneisall is designed with households feeding two cats in mind. Confirm current model features, portion settings, and bowl setup on the retailer listing before buying.', products: ['PETLIBRO Wi-Fi Automatic Pet Feeder', 'oneisall Automatic Cat Feeder for Two Cats (5 L)'], pet: true },
   'wymulot-vs-aiseno-halloween-skeletons': { title: 'wymulot Halloween Skeletons vs AISENO Skeleton Stakes', intro: 'Two ways to build a Halloween yard display. The wymulot poseable skeletons offer a more character-driven setup with multiple figures, while AISENO skeleton stakes are geared toward creating a classic skeletal yard scene with easy placement.', products: ['wymulot 2-Pack 40" Pose-N-Stay Halloween Skeletons','AISENO Realistic Skeleton Stakes'], seasonal: true }
 };;
   return Object.entries(comparisonData).map(([slug, comparison]) => ({
@@ -27,7 +29,7 @@ export function getStaticPaths() {
 
 
 const { comparison } = Astro.props;
-const source = comparison.seasonal ? halloweenProducts : catalog;
+const source = comparison.pet ? petProducts : comparison.seasonal ? halloweenProducts : catalog;
 const selected = comparison.products.map((name) => source.find((product) => product.name === name)).filter(Boolean);
 const left = selected[0];
 const right = selected[1];
