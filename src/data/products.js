@@ -896,17 +896,17 @@ const supplementalProducts = [
   },
   {
     slug: 'east-oak-50000-btu-patio-heater', name: 'EAST OAK 50,000 BTU Patio Heater with Sand Box', category: 'Outdoor', price: 'Check price', icon: '☼',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09RFZMV7Z&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'EAST OAK 50,000 BTU Patio Heater with Sand Box',
+    image: 'https://m.media-amazon.com/images/I/51JVOx2tIoL._AC_SL1500_.jpg', imageAlt: 'EAST OAK 50,000 BTU Patio Heater with Sand Box',
     bestFor: 'Outdoor gatherings and larger seating areas', why: 'High-output propane patio heater designed for broad outdoor warmth with a stability-focused sand-box base.', watch: 'Propane appliances require proper outdoor placement, clearance, and fuel handling.', amazonAsin: 'B09RFZMV7Z', amazonUrl: 'https://www.amazon.com/dp/B09RFZMV7Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09RFZMV7Z?tag=buybetterfi06-20'
   },
   {
     slug: 'east-oak-55000-btu-patio-heater', name: 'EAST OAK 55,000 BTU Propane Patio Heater with Round Table', category: 'Outdoor', price: 'Check price', icon: '☼',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0D5QVBPTL&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'EAST OAK 55,000 BTU Propane Patio Heater with Round Table',
+    image: 'https://m.media-amazon.com/images/I/51I-t3RMC-L._AC_SL1500_.jpg', imageAlt: 'EAST OAK 55,000 BTU Propane Patio Heater with Round Table',
     bestFor: 'Large patios and entertaining areas', why: 'High-output propane heater that combines outdoor warmth with a useful round table surface.', watch: 'The larger footprint needs a stable, well-cleared outdoor location.', amazonAsin: 'B0D5QVBPTL', amazonUrl: 'https://www.amazon.com/dp/B0D5QVBPTL?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D5QVBPTL?tag=buybetterfi06-20'
   },
   {
     slug: 'newbulig-48000-btu-patio-heater', name: 'NEWBULIG 48,000 BTU Propane Patio Heater', category: 'Outdoor', price: 'Check price', icon: '☼',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0HGFQRGZQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'NEWBULIG 48,000 BTU Propane Patio Heater',
+    image: 'https://m.media-amazon.com/images/I/51VuIHvmC9L._SY800_.jpg', imageAlt: 'NEWBULIG 48,000 BTU Propane Patio Heater',
     bestFor: 'Outdoor gatherings where mobility and broad heat matter', why: 'Freestanding propane heater designed for substantial outdoor heating with a wheeled format.', watch: 'Check the current setup requirements and keep propane heating equipment in an appropriate open-air location.', amazonAsin: 'B0HGFQRGZQ', amazonUrl: 'https://www.amazon.com/dp/B0HGFQRGZQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0HGFQRGZQ?tag=buybetterfi06-20'
   },
   {
@@ -971,7 +971,7 @@ const supplementalProducts = [
   },
   {
     slug: 'keter-cortina-30-gallon-storage', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0F44216HP&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Keter Cortina 30-Gallon Deck Box',
+    image: 'https://m.media-amazon.com/images/I/61U+lAJfoHL._AC_SL1500_.jpg', imageAlt: 'Keter Cortina 30-Gallon Deck Box',
     bestFor: 'Compact household and patio storage', why: 'Weather-resistant deck box format for keeping outdoor accessories, cushions, and small gear contained.', watch: 'It is most useful where outdoor or garage-style storage is appropriate; measure the footprint first.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
   },
   {
