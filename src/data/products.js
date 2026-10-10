@@ -881,17 +881,17 @@ const supplementalProducts = [
   },
   {
     slug: 'shark-stratos-multiflex-cordless', name: 'Shark Stratos MultiFLEX Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0B5JMNGNQ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Shark Stratos MultiFLEX Cordless Vacuum',
+    image: 'https://m.media-amazon.com/images/I/41VgaT00HWL._AC_SL1152_.jpg', imageAlt: 'Shark Stratos MultiFLEX Cordless Vacuum',
     bestFor: 'Cordless whole-home cleaning', why: 'Cordless vacuum with a flexible wand and DuoClean PowerFins design for everyday floor cleaning.', watch: 'Cordless convenience comes with battery and dust-bin limitations compared with corded uprights.', amazonAsin: 'B0B5JMNGNQ', amazonUrl: 'https://www.amazon.com/dp/B0B5JMNGNQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0B5JMNGNQ?tag=buybetterfi06-20'
   },
   {
     slug: 'dyson-v15-detect-plus', name: 'Dyson V15 Detect Plus Cordless Vacuum', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CT97D9R2&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Dyson V15 Detect Plus Cordless Vacuum',
+    image: 'https://m.media-amazon.com/images/I/61m8L2J6pQL._AC_SL1500_.jpg', imageAlt: 'Dyson V15 Detect Plus Cordless Vacuum',
     bestFor: 'Premium cordless cleaning and detailed floor care', why: 'High-end cordless stick vacuum with a strong feature set for shoppers who want more than a basic quick-clean machine.', watch: 'Premium pricing makes it worth comparing against less expensive cordless options first.', amazonAsin: 'B0CT97D9R2', amazonUrl: 'https://www.amazon.com/dp/B0CT97D9R2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CT97D9R2?tag=buybetterfi06-20'
   },
   {
     slug: 'shark-powerdetect-nevertouch', name: 'Shark PowerDetect NeverTouch Robot Vacuum & Mop', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DGRZHXZN&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Shark PowerDetect NeverTouch Robot Vacuum and Mop',
+    image: 'https://m.media-amazon.com/images/I/81GsrYDaYXL._AC_SL1500_.jpg', imageAlt: 'Shark PowerDetect NeverTouch Robot Vacuum and Mop',
     bestFor: 'Hands-off automated floor cleaning', why: 'Robot vacuum-and-mop format designed to reduce how often you have to manually clean floors.', watch: 'Robot cleaners require suitable floor layouts and regular maintenance of the dock and consumables.', amazonAsin: 'B0DGRZHXZN', amazonUrl: 'https://www.amazon.com/dp/B0DGRZHXZN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DGRZHXZN?tag=buybetterfi06-20'
   },
   {
