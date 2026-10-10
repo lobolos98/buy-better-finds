@@ -443,7 +443,7 @@ const supplementalProducts = [
   },
   {
     slug: 'anker-power-bank-20000', name: 'Anker Power Bank 20,000mAh with Built-in USB-C Cable', category: 'Tech', price: 'Check price', icon: '▣',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CXDXP8VR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Anker 20000mAh power bank with built-in USB-C cable',
+    image: 'https://m.media-amazon.com/images/I/61jWG2JyYNL._AC_SL1500_.jpg', imageAlt: 'Anker 20000mAh power bank with built-in USB-C cable',
     bestFor: 'Travel and everyday backup charging', why: 'Portable battery with built-in USB-C connectivity and multiple charging ports for phones and other devices.', watch: 'Confirm the exact output and cable configuration for your devices.', url: 'https://www.amazon.com/dp/B0CXDXP8VR?tag=buybetterfi06-20', amazonAsin: 'B0CXDXP8VR', amazonUrl: 'https://www.amazon.com/dp/B0CXDXP8VR?tag=buybetterfi06-20'
   },
   {
@@ -458,7 +458,7 @@ const supplementalProducts = [
   },
   {
     slug: 'apple-magic-mouse-usbc', name: 'Apple Magic Mouse (USB-C)', category: 'Tech', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DL72PK1P&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple Magic Mouse USB-C',
+    image: 'https://m.media-amazon.com/images/I/516a630bNQL._AC_SL1500_.jpg', imageAlt: 'Apple Magic Mouse USB-C',
     bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20', amazonAsin: 'B0DL72PK1P', amazonUrl: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20'
   },
   {
