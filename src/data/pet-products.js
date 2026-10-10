@@ -1,0 +1,67 @@
+// Initial Pet Supplies launch collection. ASINs and product names were cross-checked against current Amazon pet-supply sales reports.
+export const petProducts = [
+  {
+    slug: 'earth-rated-dog-waste-bags',
+    name: 'Earth Rated Dog Waste Bags (270 Count)',
+    category: 'Pet Supplies',
+    price: 'Check price',
+    icon: '🐾',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BSYR7K8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
+    imageAlt: 'Earth Rated lavender-scented dog waste bag refill rolls, 270 count',
+    bestFor: 'Daily dog walks and stocking up on waste bags',
+    why: 'A frequently purchased everyday essential with a large 270-bag refill pack.',
+    watch: 'Confirm scent preference and roll compatibility with your dispenser.',
+    amazonAsin: 'B00BSYR7K8',
+    amazonUrl: 'https://www.amazon.com/dp/B00BSYR7K8?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B00BSYR7K8?tag=buybetterfi06-20',
+    score: 8.7
+  },
+  {
+    slug: 'amazon-basics-puppy-pads-100',
+    name: 'Amazon Basics Puppy Training Pads (100 Count)',
+    category: 'Pet Supplies',
+    price: 'Check price',
+    icon: '🐾',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00MW8G62E&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
+    imageAlt: 'Amazon Basics regular-size puppy training pads, 100 count',
+    bestFor: 'Puppy house-training and indoor pet cleanup',
+    why: 'A high-volume training essential with a five-layer absorbent design.',
+    watch: 'Check the pad dimensions and pack size against your needs.',
+    amazonAsin: 'B00MW8G62E',
+    amazonUrl: 'https://www.amazon.com/dp/B00MW8G62E?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B00MW8G62E?tag=buybetterfi06-20',
+    score: 8.5
+  },
+  {
+    slug: 'rocco-roxie-enzyme-stain-odor-remover',
+    name: 'Rocco & Roxie Enzyme Stain & Odor Eliminator',
+    category: 'Pet Supplies',
+    price: 'Check price',
+    icon: '🐾',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00CKFL93K&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
+    imageAlt: 'Rocco & Roxie enzyme stain and odor eliminator spray for pet messes',
+    bestFor: 'Cleaning pet accidents from household surfaces',
+    why: 'An enzyme-based cleaner frequently purchased for pet stain and odor cleanup.',
+    watch: 'Follow the label directions and test fabric or carpet in an inconspicuous area.',
+    amazonAsin: 'B00CKFL93K',
+    amazonUrl: 'https://www.amazon.com/dp/B00CKFL93K?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B00CKFL93K?tag=buybetterfi06-20',
+    score: 8.6
+  },
+  {
+    slug: 'earth-rated-unscented-dog-wipes',
+    name: 'Earth Rated Unscented Dog Wipes (100 Count)',
+    category: 'Pet Supplies',
+    price: 'Check price',
+    icon: '🐾',
+    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07NHL31CC&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1',
+    imageAlt: 'Earth Rated unscented pet grooming wipes, 100 count',
+    bestFor: 'Quick cleanup after walks and outdoor play',
+    why: 'A practical grooming and cleanup staple for paws and coat maintenance.',
+    watch: 'Use as directed and avoid contact with eyes; check ingredients for individual sensitivities.',
+    amazonAsin: 'B07NHL31CC',
+    amazonUrl: 'https://www.amazon.com/dp/B07NHL31CC?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B07NHL31CC?tag=buybetterfi06-20',
+    score: 8.4
+  }
+];
