@@ -15,7 +15,8 @@ export function getStaticPaths() {
     lifestyle: 'Lifestyle',
     'gifts-collectibles': 'Gifts & Collectibles',
     'toys-games': 'Toys & Games',
-    'beauty-personal-care': 'Beauty & Personal Care'
+    'beauty-personal-care': 'Beauty & Personal Care',
+    'pet-supplies': 'Pet Supplies'
   };
   return Object.entries(categoryNames).map(([slug, name]) => ({ params: { category: slug }, props: { name } }));
 }
@@ -30,7 +31,8 @@ const categoryNames = {
   lifestyle: 'Lifestyle',
   'gifts-collectibles': 'Gifts & Collectibles',
   'toys-games': 'Toys & Games',
-  'beauty-personal-care': 'Beauty & Personal Care'
+  'beauty-personal-care': 'Beauty & Personal Care',
+  'pet-supplies': 'Pet Supplies'
 };
 
 const categoryThemes = {
@@ -43,7 +45,8 @@ const categoryThemes = {
   Lifestyle: ['Size & portability', 'Durability', 'Daily use', 'Cleaning'],
   'Gifts & Collectibles': ['Who it is for', 'Edition & availability', 'Display value', 'Gift budget'],
   'Toys & Games': ['Age fit', 'Play value', 'Repeat use', 'Storage'],
-  'Beauty & Personal Care': ['Skin or hair goal', 'Formula', 'Routine fit', 'Value']
+  'Beauty & Personal Care': ['Skin or hair goal', 'Formula', 'Routine fit', 'Value'],
+  'Pet Supplies': ['Pet size & age', 'Cleaning & upkeep', 'Safety & materials', 'Long-term value']
 };
 
 const categoryAdvice = {
@@ -56,7 +59,8 @@ const categoryAdvice = {
   Lifestyle: 'Focus on the way you carry, use, clean, and store the product. Small differences in size and durability can matter every day.',
   'Gifts & Collectibles': 'Shop around the recipient and the occasion first. Edition, character or franchise, display value, age fit, and current availability all matter.',
   'Toys & Games': 'Look beyond the box art. Age fit, repeat play, setup time, storage, and whether the child can play independently are useful filters.',
-  'Beauty & Personal Care': 'Start with the specific routine or grooming goal. Formula, compatibility, frequency of use, and total routine cost are more useful than hype.'
+  'Beauty & Personal Care': 'Start with the specific routine or grooming goal. Formula, compatibility, frequency of use, and total routine cost are more useful than hype.',
+  'Pet Supplies': 'Start with your pet’s species, size, age, and daily routine. Compare safety, ease of cleaning, durability, and ongoing supply costs before buying.'
 };
 
 const categoryGuides = {
