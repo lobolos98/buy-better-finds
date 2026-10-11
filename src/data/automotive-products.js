@@ -19,7 +19,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'zevzo-et03-jump-starter', name: 'S ZEVZO ET03 4000A Jump Starter', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'S ZEVZO ET03 4000A Jump Starter',
+    image: 'https://szevzousa.com/images/product-et03.webp', imageAlt: 'S ZEVZO ET03 4000A Jump Starter',
     bestFor: 'Portable emergency starting', why: 'A portable 12V jump pack with display and USB charging features for roadside preparedness.', watch: 'Peak-amp claims do not alone predict performance; review vehicle compatibility and maintenance guidance.', score: 8.7,
     amazonAsin: 'B0C42Y5TPD', amazonUrl: 'https://www.amazon.com/dp/B0C42Y5TPD?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C42Y5TPD?tag=buybetterfi06-20'
   },
