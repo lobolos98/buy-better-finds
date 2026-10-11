@@ -67,7 +67,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'generic-2-5k-dual-dash-cam', name: '2.5K Dual Dash Camera with Parking Monitor', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: '2.5K Dual Dash Camera with Parking Monitor',
+    image: 'https://m.media-amazon.com/images/I/51PdmNfQazL._SL500_.jpg', imageAlt: '2.5K Dual Dash Camera with Parking Monitor',
     bestFor: 'Budget front-camera recording', why: 'A value-oriented dash camera listing for shoppers who want a screen and basic incident recording without premium pricing.', watch: 'Verify the current bundle, card inclusion and independent night-video performance before purchase.', score: 8.1,
     amazonAsin: 'B0DF7BW4GV', amazonUrl: 'https://www.amazon.com/dp/B0DF7BW4GV?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DF7BW4GV?tag=buybetterfi06-20'
   },
