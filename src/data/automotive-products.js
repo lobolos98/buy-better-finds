@@ -109,7 +109,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'pulidiki-cleaning-gel', name: 'PULIDIKI Car Cleaning Gel', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'PULIDIKI Car Cleaning Gel',
+    image: 'https://i5.walmartimages.com/seo/PULIDIKI-Car-Cleaning-Gel-Detailing-Kit-Automotive-Dust-Crevice-Cleaner-Slime-Auto-Interior-Detail-Removal-Putty-Keyboard-Cleaning-Car-Accessories_40c750e1-8e5a-48fe-b09f-e25879732e98.bd093ca04ed263bea983b000bb58af87.jpeg', imageAlt: 'PULIDIKI Car Cleaning Gel',
     bestFor: 'Dusting interior crevices', why: 'Reusable cleaning gel can pick up loose dust from compatible hard-to-reach interior gaps.', watch: 'Avoid fabric, screens, hot surfaces and delicate finishes; stop using it if it becomes sticky or leaves residue.', score: 8,
     amazonAsin: 'B081T7N948', amazonUrl: 'https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20'
   },
