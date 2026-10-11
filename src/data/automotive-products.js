@@ -85,7 +85,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'vanmass-upgraded-phone-mount', name: 'VANMASS Upgraded Suction-and-Clip Phone Mount', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'VANMASS Upgraded Suction-and-Clip Phone Mount',
+    image: 'https://i.ebayimg.com/images/g/IfUAAOSwpp1jOgTy/s-l1200.jpg', imageAlt: 'VANMASS Upgraded Suction-and-Clip Phone Mount',
     bestFor: 'Flexible phone placement', why: 'An adjustable mount option for drivers who need a stable position for navigation.', watch: 'Check dashboard texture and vent compatibility; temperature extremes can affect suction mounts.', score: 8.5,
     amazonAsin: 'B08DKHHTFX', amazonUrl: 'https://www.amazon.com/dp/B08DKHHTFX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08DKHHTFX?tag=buybetterfi06-20'
   },
