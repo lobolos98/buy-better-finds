@@ -25,7 +25,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'astroai-l7-inflator', name: 'AstroAI L7 Cordless Tire Inflator', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'AstroAI L7 Cordless Tire Inflator',
+    image: 'https://regi-astroai-assets.s3.us-east-2.amazonaws.com/preview/33/98e319f7-8ff5-2b29-0f46-5cc51aea112d-20250117-webp__preview.webp', imageAlt: 'AstroAI L7 Cordless Tire Inflator',
     bestFor: 'Cars, bikes and everyday tire top-ups', why: 'Compact cordless inflator with a digital pressure display for routine pressure checks and small inflations.', watch: 'Confirm the included accessories and battery runtime; allow cooling during extended use.', score: 8.8,
     amazonAsin: 'B0CS3B7MD8', amazonUrl: 'https://www.amazon.com/dp/B0CS3B7MD8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CS3B7MD8?tag=buybetterfi06-20'
   },
