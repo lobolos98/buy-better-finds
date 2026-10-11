@@ -139,7 +139,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'esr-halolock-car-charger', name: 'ESR HaloLock Magnetic Wireless Car Charger', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'ESR HaloLock Magnetic Wireless Car Charger',
+    image: 'https://www.esrtech.com/cdn/shop/files/15W-Dashboard-Wireless-Car-Charger-_HaloLock_-Black-ESR-234342256.jpg', imageAlt: 'ESR HaloLock Magnetic Wireless Car Charger',
     bestFor: 'Magnetic phone mounting and charging', why: 'Magnetic attachment and wireless charging combine navigation mounting with everyday phone power.', watch: 'Confirm phone/MagSafe compatibility, required power adapter and safe mounting placement.', score: 8.6,
     amazonAsin: 'B08HNBHSQV', amazonUrl: 'https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20'
   },
