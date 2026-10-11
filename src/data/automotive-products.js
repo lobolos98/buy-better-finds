@@ -61,7 +61,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'redtiger-f7n-touch-dash-cam', name: 'REDTIGER F7N Touch 4K Dash Cam', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'REDTIGER F7N Touch 4K Dash Cam',
+    image: 'https://redtigercam.com/cdn/shop/files/F7NT_cb310970-5440-4121-8033-5853c20360be.avif?v=1784885680', imageAlt: 'REDTIGER F7N Touch 4K Dash Cam',
     bestFor: 'Touchscreen dash-cam controls', why: 'A front/rear camera package with a touchscreen interface and high-resolution recording features.', watch: 'Confirm camera bundle and included accessories; check glare, nighttime clarity and parking-mode power needs.', score: 8.5,
     amazonAsin: 'B0C6YBHKJ5', amazonUrl: 'https://www.amazon.com/dp/B0C6YBHKJ5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C6YBHKJ5?tag=buybetterfi06-20'
   },
