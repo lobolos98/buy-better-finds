@@ -127,7 +127,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'bissell-little-green-1400b', name: 'BISSELL Little Green Multi-Purpose Portable Cleaner', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'BISSELL Little Green Multi-Purpose Portable Cleaner',
+    image: 'https://m.media-amazon.com/images/I/412Cq2JSLGL._SS520_.jpg', imageAlt: 'BISSELL Little Green Multi-Purpose Portable Cleaner',
     bestFor: 'Deeper spot cleaning', why: 'A portable upholstery cleaner suited to car seats, mats and household fabric spots when used as directed.', watch: 'Bulkier than a car-specific vacuum and requires water, cleaning solution and post-use cleaning.', score: 8.6,
     amazonAsin: 'B0016HF5GK', amazonUrl: 'https://www.amazon.com/dp/B0016HF5GK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0016HF5GK?tag=buybetterfi06-20'
   },
