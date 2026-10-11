@@ -97,7 +97,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'econour-windshield-sunshade', name: 'EcoNour Windshield Sunshade', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'EcoNour Windshield Sunshade',
+    image: 'https://www.econour.com/cdn/shop/files/71W3_eLCARL.jpg', imageAlt: 'EcoNour Windshield Sunshade',
     bestFor: 'Reducing parked-car sun exposure', why: 'A foldable windshield shade helps reduce direct sunlight on the cabin and dashboard.', watch: 'Measure windshield dimensions and select the correct size; it does not eliminate heat or replace safe parking practices.', score: 8.8,
     amazonAsin: 'B01KIFISX2', amazonUrl: 'https://www.amazon.com/dp/B01KIFISX2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01KIFISX2?tag=buybetterfi06-20'
   },
