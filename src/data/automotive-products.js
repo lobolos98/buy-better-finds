@@ -1,13 +1,13 @@
 export const automotiveProducts = [
   {
     slug: 'noco-boost-gb40', name: 'NOCO Boost Plus GB40 1000A Jump Starter', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'NOCO Boost Plus GB40 1000A Jump Starter',
+    image: 'https://no.co/media/wysiwyg/Products/Boost/Boost/GB40/Overview/1_H3V1_Main_Image/1-GB40-Main-Render-XS.jpg', imageAlt: 'NOCO Boost Plus GB40 1000A Jump Starter',
     bestFor: 'Jump-starting compatible 12V vehicles', why: 'Compact lithium jump starter with spark-proof connections and reverse-polarity protection for compatible 12V batteries.', watch: 'Confirm your engine size and battery type; follow the included connection and charging instructions.', score: 9.3,
     amazonAsin: 'B015TKUPIC', amazonUrl: 'https://www.amazon.com/dp/B015TKUPIC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B015TKUPIC?tag=buybetterfi06-20'
   },
   {
     slug: 'gooloo-a3-jump-starter', name: 'GOOLOO A3 3000A Jump Starter with Air Compressor', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'GOOLOO A3 3000A Jump Starter with Air Compressor',
+    image: 'https://us.gooloo.com/cdn/shop/files/GOOLOO_A3_Best_Jump_Starter_with_Air_Compressor.jpg?v=1765872686&width=720', imageAlt: 'GOOLOO A3 3000A Jump Starter with Air Compressor',
     bestFor: 'Roadside starting and tire inflation', why: 'Combines emergency jump-start capability with a built-in compressor, reducing the number of separate tools to carry.', watch: 'Check engine limits and keep the unit charged; an integrated compressor is not a substitute for routine tire checks.', score: 9.1,
     amazonAsin: 'B0D4DLXNR1', amazonUrl: 'https://www.amazon.com/dp/B0D4DLXNR1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D4DLXNR1?tag=buybetterfi06-20'
   },
