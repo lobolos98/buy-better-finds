@@ -8,8 +8,10 @@ import { halloweenProducts } from './halloween-products.js';
 import { autoDiscoveredProducts } from './auto-products.js';
 import { pinterestProducts } from './pinterest-products.js';
 import { petProducts } from './pet-products.js';
+import { automotiveProducts } from './automotive-products.js';
 
 const productsCatalog = [
+  ...automotiveProducts,
   ...diyProducts,
   ...fitnessProducts,
   ...lifestyleProducts,
