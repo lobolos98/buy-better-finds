@@ -55,7 +55,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'redtiger-f7np-dash-cam', name: 'REDTIGER F7NP Front-and-Rear Dash Cam', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'REDTIGER F7NP Front-and-Rear Dash Cam',
+    image: 'https://redtigercam.com/cdn/shop/files/F7NP-N_251218.webp', imageAlt: 'REDTIGER F7NP Front-and-Rear Dash Cam',
     bestFor: 'Front/rear video on a budget', why: 'Front-and-rear recording with GPS and night-vision features offers broad coverage at a midrange feature level.', watch: 'Verify the exact bundle and included memory card; parking mode may require hardwiring.', score: 8.6,
     amazonAsin: 'B098WVKF19', amazonUrl: 'https://www.amazon.com/dp/B098WVKF19?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B098WVKF19?tag=buybetterfi06-20'
   },
