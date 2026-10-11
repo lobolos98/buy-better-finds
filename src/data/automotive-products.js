@@ -43,7 +43,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'ancel-ad310-obd2-scanner', name: 'ANCEL AD310 OBD-II Code Reader', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'ANCEL AD310 OBD-II Code Reader',
+    image: 'https://www.ancel.com/cdn/shop/files/ANCEL_AD310_Engine_Code_Reader_ODB2_Car_Diagnostic_Scanner_Turn_off_Engine_Check_MIL_1.webp?v=1786613655', imageAlt: 'ANCEL AD310 OBD-II Code Reader',
     bestFor: 'Basic engine-light diagnostics', why: 'A straightforward wired OBD-II reader for retrieving and clearing supported diagnostic trouble codes.', watch: 'Generally targets OBD-II engine diagnostics; it is not a full professional scan tool and cannot diagnose every system.', score: 9,
     amazonAsin: 'B01G5EA74I', amazonUrl: 'https://www.amazon.com/dp/B01G5EA74I?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01G5EA74I?tag=buybetterfi06-20'
   },
