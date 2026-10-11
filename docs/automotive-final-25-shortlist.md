@@ -41,3 +41,10 @@
 - No candidate ASIN duplicates the existing catalog.
 - Production build workflow passed on commit `03c002a` after catalog integration. Recheck CI after the latest documentation update.
 - Vehicle-specific fitment cautions are included for the wiper blades, shade and mounting products.
+
+
+## Image policy update — October 11, 2026
+- No Amazon Associates image widgets in the automotive catalog.
+- No image fallback behavior or fallback graphics on automotive product detail pages.
+- Category cards and product directory omit image elements when the image field is blank.
+- Direct manufacturer image URLs currently set only for NOCO GB40 and GOOLOO A3; 23 products have no image yet and are not image-checklist complete.
