@@ -133,7 +133,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'blackdecker-dustbuster-car-vacuum', name: 'BLACK+DECKER Dustbuster AdvancedClean Handheld Vacuum', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'BLACK+DECKER Dustbuster AdvancedClean Handheld Vacuum',
+    image: 'https://cdn.microless.com/products/1e5c316181850c51d087bcdf7c36c025-hi.jpg', imageAlt: 'BLACK+DECKER Dustbuster AdvancedClean Handheld Vacuum',
     bestFor: 'Crumbs and dry debris', why: 'A compact handheld vacuum with crevice access for routine cleanup in vehicle interiors.', watch: 'Not intended for wet spills; check battery condition, filter cleaning and included attachments.', score: 8.5,
     amazonAsin: 'B006LXOJC0', amazonUrl: 'https://www.amazon.com/dp/B006LXOJC0?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B006LXOJC0?tag=buybetterfi06-20'
   },
