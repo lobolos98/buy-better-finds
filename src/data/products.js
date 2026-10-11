@@ -8,8 +8,10 @@ import { halloweenProducts } from './halloween-products.js';
 import { autoDiscoveredProducts } from './auto-products.js';
 import { pinterestProducts } from './pinterest-products.js';
 import { petProducts } from './pet-products.js';
+import { automotiveProducts } from './automotive-products.js';
 
 const productsCatalog = [
+  ...automotiveProducts,
   ...diyProducts,
   ...fitnessProducts,
   ...lifestyleProducts,
@@ -986,7 +988,7 @@ const supplementalProducts = [
   },
 ];
 export const products = [...productsCatalog, ...supplementalProducts]
-  .filter((product) => product?.slug && product?.name && product?.category && product?.image)
+  .filter((product) => product?.slug && product?.name && product?.category && (product?.image || product?.category === 'Automotive & Car Accessories'))
   .map((product) => {
   const amazonOverride = amazonImageOverrides[product.slug];
   const manufacturerOverride = manufacturerImageOverrides[product.slug] || null;

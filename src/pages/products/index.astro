@@ -32,10 +32,7 @@ const productCards = products.map((product) => {
         : (product.url || `https://www.amazon.com/s?k=${encodeURIComponent(product.name)}`)));
 
   return `<article class="card product-card">
-    <a class="product-image" href="/products/${slug}/" aria-label="View ${name}">
-      ${image ? `<img src="${image}" alt="${imageAlt}" loading="lazy" width="800" height="600">` : ''}
-      <span class="pick-badge">BUY BETTER FIND</span>
-    </a>
+    ${image ? `<a class="product-image" href="/products/${slug}/" aria-label="View ${name}"><img src="${image}" alt="${imageAlt}" loading="lazy" width="800" height="600"><span class="pick-badge">BUY BETTER FIND</span></a>` : ''}
     <div class="product-meta">
       <div class="tag">${category}</div>
       <div class="score-mini"><strong>${score}</strong><span>/10</span></div>
