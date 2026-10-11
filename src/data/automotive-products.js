@@ -103,7 +103,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'rainx-repellency-wiper-blades', name: 'Rain-X Water Repellency Wiper Blades 22-Inch Pair', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'Rain-X Water Repellency Wiper Blades 22-Inch Pair',
+    image: 'https://www.rainx.com/wp-content/smush-webp/2026/05/810322-RX-REPELLENCY.png.webp', imageAlt: 'Rain-X Water Repellency Wiper Blades 22-Inch Pair',
     bestFor: 'Wet-weather visibility', why: 'Water-repellent wiper blades combine wiping with a rain-repellent treatment for suitable windshields.', watch: 'This listing is a specific 22-inch pair; verify both blade lengths and connector fit for your vehicle.', score: 8.5,
     amazonAsin: 'B0DXW2FP8Y', amazonUrl: 'https://www.amazon.com/dp/B0DXW2FP8Y?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DXW2FP8Y?tag=buybetterfi06-20'
   },
