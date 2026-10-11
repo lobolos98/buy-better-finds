@@ -49,7 +49,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'rove-r2-4k-dual-dash-cam', name: 'ROVE R2-4K DUAL Dash Cam', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'ROVE R2-4K DUAL Dash Cam',
+    image: 'https://www.rovedashcam.com/cdn/shop/files/ROVE_R2-4K_DUAL_Upscaled_Dash_Cam_Front_Rear.jpg?v=1786970514&width=1946', imageAlt: 'ROVE R2-4K DUAL Dash Cam',
     bestFor: 'Front-and-rear driving footage', why: 'Dual-camera recording and included storage make this a practical starting point for drivers wanting incident footage.', watch: 'Check memory-card requirements, hardwire kit needs for parking mode, and local recording/privacy laws.', score: 9,
     amazonAsin: 'B0D6J5B98H', amazonUrl: 'https://www.amazon.com/dp/B0D6J5B98H?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0D6J5B98H?tag=buybetterfi06-20'
   },
