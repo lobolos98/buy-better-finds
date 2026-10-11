@@ -1,24 +1,62 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { automotiveProducts } from '../../data/automotive-products.js';
+
+const groups = [
+  { id: 'jump-starters', title: 'Portable jump starters', intro: 'Choose by vehicle compatibility, engine limits and battery type—not peak amps alone.', slugs: ['noco-boost-gb40','gooloo-a3-jump-starter','noco-boost-gb70'] },
+  { id: 'tire-inflators', title: 'Tire inflators', intro: 'Compare cordless convenience with a corded 12V power supply and check runtime and reach.', slugs: ['astroai-l7-inflator','astroai-airun-h-inflator','olarhike-dual-power-inflator'] },
+  { id: 'dash-cams', title: 'Dash cameras', intro: 'Consider front/rear coverage, storage, nighttime recording and parking-mode power requirements.', slugs: ['rove-r2-4k-dual-dash-cam','redtiger-f7np-dash-cam','redtiger-f7n-touch-dash-cam'] },
+  { id: 'everyday', title: 'Everyday driving upgrades', intro: 'Practical accessories for visibility, navigation and cabin comfort.', slugs: ['vanmass-phone-mount','econour-windshield-sunshade','esr-halolock-car-charger'] },
+  { id: 'cleaning', title: 'Cleaning and detailing', intro: 'Match your cleaner to the job: dry crumbs, upholstery spills or routine dusting.', slugs: ['blackdecker-dustbuster-car-vacuum','bissell-little-green-mini-4075','usanooks-microfiber-cloths'] }
+];
+const bySlug = new Map(automotiveProducts.map(p => [p.slug,p]));
+const sections = groups.map(group => ({ ...group, products: group.slugs.map(slug => bySlug.get(slug)).filter(Boolean) }));
+const featured = [bySlug.get('noco-boost-gb40'),bySlug.get('astroai-l7-inflator'),bySlug.get('rove-r2-4k-dual-dash-cam')].filter(Boolean);
+const link = p => p.amazonUrl || p.url;
 ---
-<BaseLayout title="Automotive Accessories Buying Guide | Buy Better Finds" description="Compare portable jump starters, tire inflators, dash cams and car accessories by fit, installation, safety and value.">
-  <section class="section"><div class="container" style="max-width:940px">
-    <nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/categories/automotive-car-accessories/">Automotive &amp; Car Accessories</a> / Buying Guide</nav>
-    <p class="eyebrow">BUY BETTER FINDS · AUTOMOTIVE</p>
-    <h1>Automotive accessories worth researching first</h1>
-    <p class="lead">Choose accessories that solve a real driving problem. Vehicle compatibility, safe installation, and useful features matter more than an impressive specification on the box.</p>
-    <h2>Portable jump starters</h2>
-    <p>Match the starter to your vehicle's battery voltage and engine size. The NOCO GB40 is rated for 12V lead-acid batteries and gas engines up to 6.0L or diesel engines up to 3.0L. Recharge and maintain it according to the manufacturer's instructions; it is an emergency starting aid, not a replacement for repairing a failing battery.</p>
-    <p><a href="https://no.co/gb40/specs" target="_blank" rel="noopener">Review NOCO GB40 specifications →</a></p>
-    <h2>Portable tire inflators</h2>
-    <p>Look for an inflator that reaches all four tires, has a readable gauge, and works with your vehicle's available power source. The VIAIR 88P connects using battery clamps, rather than an ordinary 12V accessory socket. Check the vehicle manufacturer's recommended tire pressure on the door-jamb placard, not the maximum pressure printed on the tire sidewall.</p>
-    <p><a href="https://viaircorp.com/products/88p-portable-compressor" target="_blank" rel="noopener">Review VIAIR 88P specifications →</a></p>
-    <h2>Dash cameras</h2>
-    <p>Compare video resolution, field of view, storage, low-light performance, and the cost of optional cloud features. Garmin's Dash Cam Mini 3 records at 1080p with a 140-degree field of view and a built-in polarizer. Parking surveillance and remote features may require additional power equipment or subscriptions. Follow local laws and privacy requirements.</p>
-    <p><a href="https://www.garmin.com/en-US/p/1223369/" target="_blank" rel="noopener">Review Garmin Dash Cam Mini 3 specifications →</a></p>
-    <h2>Other categories to compare</h2>
-    <p>Car vacuums, interior organizers, phone mounts, charging accessories, and detailing supplies can make everyday driving easier. Check dimensions, materials, mounting stability, and whether a product obstructs airbags or visibility.</p>
-    <p><strong>Editorial note:</strong> The catalog now contains 25 selected products with direct tagged Amazon listings. Product imagery is undergoing final visual verification. Prices are shown as Check price until confirmed; fit-sensitive items require a vehicle-specific compatibility check.</p>
-    <p><a href="/categories/automotive-car-accessories/">Back to Automotive &amp; Car Accessories →</a></p>
-  </div></section>
+<BaseLayout title="Best Automotive Accessories Buying Guide | Buy Better Finds" description="Compare real automotive accessories with product photos, Buy Better Scores, practical tradeoffs and direct Amazon product links.">
+  <main class="auto-guide">
+    <section class="auto-hero"><div class="container">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/guides/">Buying Guides</a> / Automotive</nav>
+      <span class="eyebrow">BUY BETTER FINDS · BUYING GUIDE</span>
+      <h1>Best automotive accessories: compare the picks that matter</h1>
+      <p class="lead">From roadside essentials to dash cameras and cleaning gear, shop by what you actually need. See real catalog products, practical differences, and what to check before buying.</p>
+      <div class="hero-actions"><a class="primary" href="#quick-picks">See quick picks ↓</a><a class="secondary" href="#compare">Compare products →</a></div>
+      <p class="fine">October 2026 guide · Product specifications and availability can change. Recommendations are editorial selections, not claims of hands-on testing.</p>
+    </div></section>
+    <section id="quick-picks" class="section"><div class="container">
+      <div class="section-head"><div><span class="eyebrow">START HERE</span><h2>Our quick picks</h2></div><p>Three different needs, three useful starting points.</p></div>
+      <div class="pick-grid">{featured.map((p,i) => <article class="pick">
+        <div class="pick-top"><span>{['Roadside essential','Tire maintenance','Driving footage'][i]}</span><strong>{p.score.toFixed(1)}/10</strong></div>
+        {p.image && <div class="photo"><img src={p.image} alt={p.imageAlt || p.name} loading="lazy" onerror="this.closest('.photo').remove()" /></div>}
+        <h3>{p.name}</h3><p>{p.why}</p><p class="best"><strong>Best for:</strong> {p.bestFor}</p>
+        <div class="actions"><a class="primary" href={link(p)} target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a><a class="details" href={`/products/${p.slug}/`}>See our take →</a></div>
+      </article>)}</div>
+    </div></section>
+    <section id="compare" class="section compare-section"><div class="container">
+      <span class="eyebrow">AT A GLANCE</span><h2>Compare by what you need</h2>
+      <p class="muted">These products serve different purposes. Use the category comparisons below to compare similar options.</p>
+      <div class="compare-scroll"><table><thead><tr><th>Category</th><th>Best starting point</th><th>What to compare</th><th>Explore</th></tr></thead><tbody>
+        {sections.map(s => <tr><th scope="row">{s.title}</th><td>{s.products[0]?.name}</td><td>{s.intro}</td><td><a href={`#${s.id}`}>Compare →</a></td></tr>)}
+      </tbody></table></div>
+    </div></section>
+    {sections.map(s => <section class="section group-section" id={s.id}><div class="container">
+      <div class="section-head"><div><span class="eyebrow">PRODUCT COMPARISON</span><h2>{s.title}</h2></div><p>{s.intro}</p></div>
+      <div class="product-grid">{s.products.map(p => <article class="product">
+        {p.image && <div class="photo"><img src={p.image} alt={p.imageAlt || p.name} loading="lazy" onerror="this.closest('.photo').remove()" /></div>}
+        <div class="product-body"><div class="score">BUY BETTER SCORE <strong>{p.score.toFixed(1)}/10</strong></div><h3>{p.name}</h3>
+          <p><strong>Best for:</strong> {p.bestFor}</p><p>{p.why}</p><p class="watch"><strong>What to know:</strong> {p.watch}</p>
+          <div class="actions"><a class="primary" href={link(p)} target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon ↗</a><a class="details" href={`/products/${p.slug}/`}>See our take →</a></div>
+        </div>
+      </article>)}</div>
+    </div></section>)}
+    <section class="section end-section"><div class="container"><span class="eyebrow">SHOP SMARTER</span><h2>Before you buy</h2>
+      <div class="tips"><div><h3>Check compatibility</h3><p>Confirm vehicle, battery, outlet, wiper and phone-mount fit where relevant.</p></div><div><h3>Prioritize safe installation</h3><p>Keep mounts clear of airbags and sightlines; follow power and mounting instructions.</p></div><div><h3>Compare total cost</h3><p>Account for memory cards, hardwire kits, replacement parts and cleaning supplies.</p></div></div>
+      <p class="fine">Buy Better Scores are editorial assessments, not customer star ratings. We may earn a commission from qualifying purchases through Amazon links, at no extra cost to you. Product photos are loaded from the catalog's original image URLs; no placeholder or fallback imagery is used.</p>
+      <a class="secondary" href="/categories/automotive-car-accessories/">Browse all 25 automotive products →</a>
+    </div></section>
+  </main>
 </BaseLayout>
+<style>
+.auto-guide{color:#15233b}.auto-guide .container{max-width:1160px;margin:auto;padding:0 20px}.auto-guide .section{padding:60px 0}.auto-hero{background:linear-gradient(125deg,#eaf3fc,#fff 62%,#f9edf0);padding:70px 0 64px}.crumb{font-size:.85rem;margin-bottom:30px;color:#5c6a7d}.crumb a{color:#16487d}.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.13em;color:#bd1835}.auto-guide h1{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.1;max-width:900px;margin:16px 0 20px;color:#102b50}.auto-guide h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#102b50;margin:10px 0 16px}.auto-guide h3{font-size:1.13rem;color:#102b50;margin:12px 0}.lead{font-size:1.18rem;line-height:1.7;max-width:780px}.hero-actions,.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:20px}.primary,.secondary{display:inline-block;text-decoration:none;font-weight:800;padding:12px 17px;border-radius:9px}.primary{background:#c8102e;color:white!important}.secondary{border:2px solid #173c69;color:#173c69!important}.details{font-weight:750;color:#174d84}.fine{font-size:.83rem;color:#5c6a7d;margin-top:24px;line-height:1.6}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.section-head>p{max-width:400px;color:#5c6a7d;line-height:1.6}.pick-grid,.product-grid,.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.pick,.product,.tips>div{background:white;border:1px solid #d9e2ed;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(16,43,80,.06)}.pick{padding:20px}.pick-top{display:flex;justify-content:space-between;gap:8px;color:#5c6a7d;font-size:.83rem;font-weight:750}.pick-top strong,.score strong{color:#c8102e}.photo{height:205px;display:flex;align-items:center;justify-content:center;background:#fff;margin:12px 0}.photo img{width:100%;height:100%;object-fit:contain}.pick p,.product p{line-height:1.55;font-size:.94rem}.best,.watch{background:#f1f6fc;padding:11px;border-radius:8px}.compare-section{background:#f1f6fc}.muted{color:#5c6a7d}.compare-scroll{overflow-x:auto}.auto-guide table{width:100%;border-collapse:collapse;min-width:650px;background:white;border-radius:12px;overflow:hidden}.auto-guide th,.auto-guide td{padding:18px;text-align:left;border-bottom:1px solid #e2e8f0;vertical-align:top}.auto-guide thead{background:#102b50;color:white}.auto-guide tbody th{color:#102b50}.auto-guide td a{color:#b81432;font-weight:800}.group-section:nth-of-type(even){background:#f8fafc}.product{display:flex;flex-direction:column}.product .photo{margin:14px 14px 0}.product-body{padding:18px;display:flex;flex:1;flex-direction:column}.score{font-size:.73rem;letter-spacing:.06em;font-weight:800;display:flex;justify-content:space-between}.product .actions{margin-top:auto;padding-top:14px}.actions .primary{font-size:.84rem}.end-section{background:#edf3fa}.tips>div{padding:20px}.auto-guide a:focus-visible{outline:3px solid #c8102e;outline-offset:3px}@media(max-width:900px){.pick-grid,.product-grid,.tips{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.auto-guide .section{padding:42px 0}.auto-hero{padding:40px 0}.pick-grid,.product-grid,.tips{grid-template-columns:1fr}.section-head{display:block}.photo{height:230px}.primary{width:100%;text-align:center}.actions{align-items:stretch;flex-direction:column}.details{text-align:center}}
+</style>
