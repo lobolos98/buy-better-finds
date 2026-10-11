@@ -73,7 +73,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'three-channel-dash-cam', name: 'Three-Channel Front, Rear and Cabin Dash Cam', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'Three-Channel Front, Rear and Cabin Dash Cam',
+    image: 'https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/f9cf2e90b84b40db9482aefa7c87b504~tplv-fhlh96nyum-resize-webp%3A800%3A800.webp?dr=12190&from=2378011839&idc=useast5&ps=933b5bde&shcp=e1be8f53&shp=8dbd94bf&t=555f072d', imageAlt: 'Three-Channel Front, Rear and Cabin Dash Cam',
     bestFor: 'Rideshare and cabin recording', why: 'Three-channel recording can capture forward, rear and cabin views in a single system.', watch: 'Confirm exact camera configuration and resolution; cabin recording raises privacy considerations.', score: 8,
     amazonAsin: 'B0C2Y6WXJ7', amazonUrl: 'https://www.amazon.com/dp/B0C2Y6WXJ7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C2Y6WXJ7?tag=buybetterfi06-20'
   },
