@@ -961,12 +961,12 @@ const supplementalProducts = [
   },
   {
     slug: 'bagsmart-toiletry-bag-organization', name: 'BAGSMART Toiletry Bag', category: 'Lifestyle', price: 'Check price', icon: '◇',
-    image: 'https://clarify.pk/cdn/shop/files/bagsmart-hanging-toiletry-bag-for-travel-pink-organizer-multi-compartment.webp?v=1752600894&width=1946', imageAlt: 'BAGSMART Toiletry Bag',
+    image: 'https://www.gosupps.com/media/catalog/product/8/1/81nTRvlpV6L.jpg', imageAlt: 'BAGSMART Toiletry Bag',
     bestFor: 'Bathroom and travel organization', why: 'Compartmented toiletry organizer that keeps smaller personal-care items together and easy to find.', watch: 'Capacity and compartment layout vary by BAGSMART version.', amazonAsin: 'B07G2Q1JY9', amazonUrl: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20'
   },
   {
     slug: 'tubshroom-ultra-organization', name: 'TubShroom Ultra', category: 'Lifestyle', price: 'Check price', icon: '◇',
-    image: 'https://m.media-amazon.com/images/I/81y1tFSN%2BDL._AC_US1000_.jpg', imageAlt: 'TubShroom Ultra drain protector',
+    image: 'https://www.tubshroom.com/cdn/shop/products/6_c9c691ae-ec56-46e4-8d1d-fe4e5b857d4b.jpg?v=1764007449&width=1206', imageAlt: 'TubShroom Ultra drain protector',
     bestFor: 'Reducing bathroom drain buildup and cleanup', why: 'Simple bathroom accessory that keeps hair and debris from becoming a recurring drain-maintenance problem.', watch: 'Fit depends on the drain configuration in your tub or shower.', amazonAsin: 'B01M0XQY1D', amazonUrl: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20'
   },
   {
@@ -976,12 +976,12 @@ const supplementalProducts = [
   },
   {
     slug: 'stanley-iceflow-20oz', name: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz', category: 'Lifestyle', price: 'Check price', icon: '◈',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08VPTBYM5&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz',
+    image: 'https://00846a.cdn.akinoncloud.com/products/2026/02/04/390165/3a3aefe7-168c-40c9-bd8d-e7e0fa48a716.jpg', imageAlt: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz',
     bestFor: 'Portable hydration with a handled straw lid', why: 'Compact insulated tumbler format designed for easy carrying and sipping on the go.', watch: 'The 20-ounce capacity is smaller than many oversized tumbler options.', amazonAsin: 'B08VPTBYM5', amazonUrl: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20'
   },
   {
     slug: 'stanley-iceflow-24oz-fastflow', name: 'STANLEY IceFlow Fast Flow Water Bottle 24-Oz', category: 'Lifestyle', price: 'Check price', icon: '◈',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CWLQ1Z25&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'STANLEY IceFlow Fast Flow Water Bottle 24-Oz',
+    image: 'https://beforeworksurfclub.com/cdn/shop/files/IceFlow-Ash1_a0d2c433-f681-4b1b-98c8-a91c8c0e0879.webp?v=1713564032', imageAlt: 'STANLEY IceFlow Fast Flow Water Bottle 24-Oz',
     bestFor: 'Portable everyday hydration', why: 'Insulated bottle designed for quick drinking with a lightweight, travel-friendly format.', watch: 'Check the exact lid style and capacity before buying because IceFlow models vary.', amazonAsin: 'B0CWLQ1Z25', amazonUrl: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20'
   },
 ];
