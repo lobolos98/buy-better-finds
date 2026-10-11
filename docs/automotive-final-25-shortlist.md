@@ -17,7 +17,7 @@
 | 11 | Miofive S1 Ultra | Dash cameras | Value-oriented 4K | Pending | Pending |
 | 12 | Vantrue N4 Pro S | Dash cameras | Three-channel coverage | Pending | Pending |
 | 13 | WeatherTech FloorLiner HP | Interior protection | Vehicle-specific floor protection | Pending | Pending |
-| 14 | Scosche MagicMount Pro Charge5 | Phone mounting | Magnetic wireless charging | Pending | Pending |
+| 14 | ESR HaloLock Magnetic Wireless Car Charger | Phone mounting | Magnetic wireless charging | B08HNBHSQV (Amazon listing located) | Pending |
 | 15 | iOttie Easy One Touch 6 | Phone mounting | Universal clamp mount | Pending | Pending |
 | 16 | OBDLink MX+ | Diagnostics | Bluetooth diagnostics | Pending | Pending |
 | 17 | BLACK+DECKER BDH1200NVAV | Interior cleaning | 12V car vacuum | Pending | Pending |
@@ -40,3 +40,7 @@
 
 ## Publishing rules
 Verify exact model/variant and Amazon product detail page, then build only direct https://www.amazon.com/dp/ASIN?tag=buybetterfi06-20 links. Verify matching genuine working photos separately. For size/fit products (wipers, liners, shades), select an exact compatible variant and include fitment guidance. Deduplicate by ASIN and model across existing catalog. Run build before merge.
+
+## Amazon listing verification notes
+- ESR HaloLock Magnetic Wireless Car Charger: Amazon product-detail page https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20 corresponds to an ESR magnetic wireless car charger; image still requires exact-item source and URL verification. Amazon page https://us.amazon.com/ESR-HaloLock-Magnetic-Attachment-Alignment/dp/B08HNBHSQV supplies the listing evidence. **Not yet publishable.**
+- Product feeds from general shopping search are predominantly non-Amazon retailers and do not validate Amazon ASINs; do not infer ASINs from retailer model numbers.
