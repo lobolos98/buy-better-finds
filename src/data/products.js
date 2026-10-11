@@ -911,7 +911,7 @@ const supplementalProducts = [
   },
   {
     slug: 'kasa-ep10-smart-plug', name: 'Kasa Smart Plug Ultra Mini 15A (EP10)', category: 'Smart Home', price: 'Check price', icon: '⚡',
-    image: 'https://static.tp-link.com/EP10%28US%29_1.0_normal_1610000359003u.jpg', imageAlt: 'Kasa Smart Plug Ultra Mini EP10',
+    image: 'https://images.prismic.io/kasasmart/b740ff45-4e16-4193-b93c-f702f585c6b9_overview-01.jpg?auto=compress%2Cformat&h=480&rect=0%2C0%2C1000%2C1000&w=480', imageAlt: 'Kasa Smart Plug Ultra Mini EP10',
     bestFor: 'Compact indoor smart-home automation', why: 'Compact smart plug designed for schedules, timers, remote control, and voice-assistant routines.', watch: 'Check the supported Wi-Fi band and electrical rating for the exact model before setup.', amazonAsin: 'B091699Z3W', amazonUrl: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20'
   },
   {
