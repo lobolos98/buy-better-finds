@@ -4,14 +4,14 @@ The following 25 distinct **candidate models/product families** are research lea
 
 | # | Candidate | Use case | Amazon ASIN | Image verified | Approved |
 |---|---|---|---|---|---|
-| 1 | NOCO Boost GB40 | Jump starter | Pending | No | No |
+| 1 | NOCO Boost GB40 | Jump starter | Pending | No | No — model identity confirmed via Home Depot/AutoZone |
 | 2 | NOCO Boost GB20 | Jump starter | Pending | No | No |
 | 3 | VIAIR 88P | Tire inflator | Pending | No | No |
 | 4 | AstroAI L7 cordless | Tire inflator | Pending | No | No |
 | 5 | AstroAI dual-power AC/DC | Tire inflator | Pending | No | No |
 | 6 | Garmin Dash Cam Mini 3 | Dash cam | Pending | No | No |
 | 7 | Garmin Dash Cam X110 | Dash cam | Pending | No | No |
-| 8 | VIOFO A229 Pro | Dash cam | Pending | No | No |
+| 8 | VIOFO A229 Pro | Dash cam | Pending | No | No — 1CH/2CH/3CH variants must not be conflated |
 | 9 | BLACK+DECKER dustbuster CHV1410L | Car vacuum | Pending | No | No |
 | 10 | ThisWorx portable car vacuum | Car vacuum | Pending | No | No |
 | 11 | Chemical Guys 7-piece Wash & Shine | Exterior cleaning | Pending | No | No |
@@ -40,3 +40,6 @@ The following 25 distinct **candidate models/product families** are research lea
 - Write specific pros, limitations, compatibility cautions, and independently justified Buy Better Score.
 - Test routes, links, imagery, and production build.
 - Keep pull request in draft until all checks pass.
+
+## Verification audit — 2026-10-11
+Product searches located third-party retail listings for NOCO GB40, VIOFO A229 Pro and Bosch ICON blades. This establishes that those product families exist, **not** that their Amazon ASINs, matching photographs, or affiliate URLs are verified. VIOFO A229 Pro has multiple camera-count configurations, and Bosch ICON has multiple blade sizes; these require variant-level selection. A broad Amazon-site search returned no reliably matched results for the batch. No items were added to the live catalog, and the PR must remain unmerged. Do not promote these entries to approved until the outstanding fields are verified.
