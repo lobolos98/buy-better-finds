@@ -926,22 +926,22 @@ const supplementalProducts = [
   },
   {
     slug: 'apple-watch-se-3', name: 'Apple Watch SE 3', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FQFJ2WRG&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Apple Watch SE 3',
+    image: 'https://bfasset.costco-static.com/U447IH35/as/p39hnnpxr4ct4f8mx4grk7h/4000403247-894_starlight_1?auto=webp&canvas=1024%2C1024&fit=bounds&format=jpg&height=1024&width=1024', imageAlt: 'Apple Watch SE 3',
     bestFor: 'Everyday fitness tracking and Apple users', why: 'Lower-cost Apple Watch option for activity tracking, notifications, and everyday smartwatch use.', watch: 'Check the exact case size and GPS or cellular configuration before buying.', amazonAsin: 'B0FQFJ2WRG', amazonUrl: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20'
   },
   {
     slug: 'fitbit-charge-6', name: 'Fitbit Charge 6 Fitness Tracker', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CC63GZ3R&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Fitbit Charge 6 Fitness Tracker',
+    image: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1715883391-619toLfvJL.jpg?crop=1xw%3A1.00xh%3Bcenter', imageAlt: 'Fitbit Charge 6 Fitness Tracker',
     bestFor: 'Everyday activity and fitness tracking', why: 'Fitness tracker format focused on activity, workouts, and everyday health and training metrics.', watch: 'A fitness tracker is a different experience from a full smartwatch with a larger app ecosystem.', amazonAsin: 'B0CC63GZ3R', amazonUrl: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20'
   },
   {
     slug: 'garmin-vivoactive-5', name: 'Garmin vívoactive 5', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CG6NR413&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Garmin vívoactive 5 fitness GPS smartwatch',
+    image: 'https://cdn.haushaltsparadies.de/media/5f/3b/72/1740085420/301667.jpg?ts=1745574503', imageAlt: 'Garmin vívoactive 5 fitness GPS smartwatch',
     bestFor: 'GPS fitness tracking and everyday training', why: 'Fitness-focused GPS smartwatch with a broad activity feature set and a more traditional watch experience.', watch: 'Compare Garmin’s feature set with Apple and Fitbit before choosing your ecosystem.', amazonAsin: 'B0CG6NR413', amazonUrl: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20'
   },
   {
     slug: 'garmin-vivoactive-6', name: 'Garmin vívoactive 6', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0F38GR9PZ&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Garmin vívoactive 6 fitness GPS smartwatch',
+    image: 'https://www.staples-3p.com/s7/is/image/Staples/D5BA7333-6ABF-4CC6-90DBE79FA31BDB1B_sc7?hei=512&wid=512', imageAlt: 'Garmin vívoactive 6 fitness GPS smartwatch',
     bestFor: 'More advanced everyday fitness tracking', why: 'Newer GPS smartwatch option for shoppers who want a broader fitness-focused feature set.', watch: 'The extra features may not matter if you mainly want basic activity tracking.', amazonAsin: 'B0F38GR9PZ', amazonUrl: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20'
   },
   {
