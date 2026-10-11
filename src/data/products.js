@@ -308,7 +308,7 @@ const productsCatalog = [
   },
   {
     slug: 'embryolisse-lait-creme-concentre', name: 'Embryolisse Lait-Crème Concentré', category: 'Beauty & Personal Care', price: '$84.00', icon: '✦',
-    image: 'https://us.embryolisse.com/cdn/shop/files/lait-creme-concentre-75ml.jpg', imageAlt: 'Embryolisse Lait-Crème Concentré',
+    image: 'https://static.thcdn.com/productimg/original/11118731-7485314808463039.jpg', imageAlt: 'Embryolisse Lait-Crème Concentré',
     bestFor: 'Multi-use moisturizing and makeup prep', why: 'Multi-purpose moisturizer that can also be used as a makeup base, cleansing milk, and moisturizing mask.', watch: 'Formula and packaging can vary by market and size.', amazonAsin: 'B0CZTWJ16V', amazonUrl: 'https://www.amazon.com/dp/B0CZTWJ16V?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CZTWJ16V?tag=buybetterfi06-20'
   },
   {
