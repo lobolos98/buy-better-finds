@@ -43,3 +43,9 @@ The following 25 distinct **candidate models/product families** are research lea
 
 ## Verification audit — 2026-10-11
 Product searches located third-party retail listings for NOCO GB40, VIOFO A229 Pro and Bosch ICON blades. This establishes that those product families exist, **not** that their Amazon ASINs, matching photographs, or affiliate URLs are verified. VIOFO A229 Pro has multiple camera-count configurations, and Bosch ICON has multiple blade sizes; these require variant-level selection. A broad Amazon-site search returned no reliably matched results for the batch. No items were added to the live catalog, and the PR must remain unmerged. Do not promote these entries to approved until the outstanding fields are verified.
+
+## Retail cross-check — October 2026
+- NOCO GB40: matching model found at AutoZone and Home Depot; 1000A, 12V. Amazon ASIN/image still unverified.
+- VIAIR 88P: matching model found at AutoZone; battery-clamp powered, up to 33-inch tires. Amazon ASIN/image still unverified.
+- VIOFO A229 Pro: manufacturer sells separate 1CH, 2CH, 3CH and telephoto versions. Choose the exact 2CH 4K+2K variant before creating an Amazon listing; ASIN/image still unverified.
+- Product research search results did not establish reliable Amazon detail-page matches for the full 25. No product is eligible for the public catalog yet.
