@@ -121,7 +121,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'bissell-little-green-mini-4075', name: 'BISSELL Little Green Mini Portable Cleaner', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'BISSELL Little Green Mini Portable Cleaner',
+    image: 'https://d3fhbhbdc81n2i.cloudfront.net/v3/assets/blt34d3d525a62e8995/blt3d025cfcb5696a8f/68d498f191f26d0f5dc8c666/4075_2_1500x1000.jpg', imageAlt: 'BISSELL Little Green Mini Portable Cleaner',
     bestFor: 'Spot-cleaning upholstery and car interiors', why: 'Portable spray-and-suction cleaning helps tackle localized spills on compatible fabric and upholstery.', watch: 'It is a wet cleaner, not a dry vacuum; test fabric colorfastness and follow drying instructions.', score: 8.7,
     amazonAsin: 'B0DJMP6T3N', amazonUrl: 'https://www.amazon.com/dp/B0DJMP6T3N?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DJMP6T3N?tag=buybetterfi06-20'
   },
