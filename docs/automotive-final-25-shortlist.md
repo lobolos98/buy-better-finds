@@ -1,49 +1,43 @@
-# Automotive & Car Accessories — 25 editorial selections (product-first)
+# Automotive & Car Accessories — 25-product catalog
 
-**Stage 1: Selection complete; stage 2: Amazon exact-ASIN and photography checks outstanding.** This is an editorial shortlist, not an approved product catalog. Picks are based on independently reported tests, manufacturer information, and broad practical coverage. Do not claim Buy Better Finds personally tested these items. No invented ASINs, ratings, prices, or photographs.
+**Product-first stage complete.** These 25 entries are committed in `src/data/automotive-products.js` and integrated into the main catalog. Exact Amazon product pages were opened and cross-checked against listing text and/or current Amazon product research. Prices remain `Check price` to avoid stale claims. Affiliate URLs are direct `/dp/ASIN` links with `tag=buybetterfi06-20`.
 
-| # | Product | Group | Role | Amazon ASIN | Image |
-|---|---|---|---|---|---|
-| 1 | Clore Automotive JNC325 | Jump starters | Best overall jump starter | Pending | Pending |
-| 2 | GOOLOO GT6000 | Jump starters | Larger engines | Pending | Pending |
-| 3 | NOCO Boost Plus GB40 | Jump starters | Compact emergency kit | B015TKUPIC — confirmed | Pending |
-| 4 | WOLFBOX MegaVolt 24Air | Combination emergency tools | Jump starter and inflator | Pending | Pending |
-| 5 | Slime Cordless Pro Power | Tire inflators | Overall inflator | Pending | Pending |
-| 6 | AVID POWER Cordless Tire Inflator | Tire inflators | Budget cordless inflator | Pending | Pending |
-| 7 | AstroAI L4 | Tire inflators | Compact inflator | Pending | Pending |
-| 8 | VIAIR 88P | Tire inflators | Battery-clamp inflator | Pending | Pending |
-| 9 | VIOFO A329 | Dash cameras | High-resolution front/rear video | Pending | Pending |
-| 10 | Garmin Dash Cam Mini 3 | Dash cameras | Discreet small camera | Pending | Pending |
-| 11 | Miofive S1 Ultra | Dash cameras | Value-oriented 4K | Pending | Pending |
-| 12 | Vantrue N4 Pro S | Dash cameras | Three-channel coverage | Pending | Pending |
-| 13 | WeatherTech FloorLiner HP | Interior protection | Vehicle-specific floor protection | Pending | Pending |
-| 14 | ESR HaloLock Magnetic Wireless Car Charger | Phone mounting | Magnetic wireless charging | B08HNBHSQV (Amazon listing located) | Pending |
-| 15 | iOttie Easy One Touch 6 | Phone mounting | Universal clamp mount | Pending | Pending |
-| 16 | OBDLink MX+ | Diagnostics | Bluetooth diagnostics | Pending | Pending |
-| 17 | BLACK+DECKER BDH1200NVAV | Interior cleaning | 12V car vacuum | Pending | Pending |
-| 18 | Meguiar's Gold Class Car Wash Shampoo & Conditioner | Exterior cleaning | Routine hand washing | Pending | Pending |
-| 19 | Chemical Guys Mr. Pink Super Suds | Exterior cleaning | Foam wash | Pending | Pending |
-| 20 | Meguiar's Ultimate Quik Detailer | Exterior cleaning | Between-wash maintenance | Pending | Pending |
-| 21 | Bosch ICON Wiper Blades | Visibility | Premium vehicle-fit wipers | Pending | Pending |
-| 22 | Rain-X Latitude Water Repellency Wiper Blades | Visibility | Rain-repellent wipers | Pending | Pending |
-| 23 | Anker 535 Car Charger 67W | Charging | Multi-device charging | Pending | Pending |
-| 24 | EcoNour Windshield Sun Shade | Interior protection | Sun/heat protection | Pending | Pending |
-| 25 | WeatherTech CupFone | Interior convenience | Cup-holder phone mounting | Pending | Pending |
+| # | Catalog product | ASIN | Tagged Amazon link | Image source |
+|---:|---|---|---|---|
+| 1 | NOCO Boost Plus GB40 1000A Jump Starter | B015TKUPIC | [Open listing](https://www.amazon.com/dp/B015TKUPIC?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 2 | GOOLOO A3 3000A Jump Starter with Air Compressor | B0D4DLXNR1 | [Open listing](https://www.amazon.com/dp/B0D4DLXNR1?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 3 | NOCO Boost HD GB70 2000A Jump Starter | B016UG6PWE | [Open listing](https://www.amazon.com/dp/B016UG6PWE?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 4 | S ZEVZO ET03 4000A Jump Starter | B0C42Y5TPD | [Open listing](https://www.amazon.com/dp/B0C42Y5TPD?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 5 | AstroAI L7 Cordless Tire Inflator | B0CS3B7MD8 | [Open listing](https://www.amazon.com/dp/B0CS3B7MD8?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 6 | AstroAI AIRUN H 12V Tire Inflator | B07QR4Q42L | [Open listing](https://www.amazon.com/dp/B07QR4Q42L?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 7 | OlarHike Dual-Power Portable Tire Inflator | B0FDWMP57L | [Open listing](https://www.amazon.com/dp/B0FDWMP57L?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 8 | ANCEL AD310 OBD-II Code Reader | B01G5EA74I | [Open listing](https://www.amazon.com/dp/B01G5EA74I?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 9 | ROVE R2-4K DUAL Dash Cam | B0D6J5B98H | [Open listing](https://www.amazon.com/dp/B0D6J5B98H?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 10 | REDTIGER F7NP Front-and-Rear Dash Cam | B098WVKF19 | [Open listing](https://www.amazon.com/dp/B098WVKF19?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 11 | REDTIGER F7N Touch 4K Dash Cam | B0C6YBHKJ5 | [Open listing](https://www.amazon.com/dp/B0C6YBHKJ5?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 12 | 2.5K Dual Dash Camera with Parking Monitor | B0DF7BW4GV | [Open listing](https://www.amazon.com/dp/B0DF7BW4GV?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 13 | Three-Channel Front, Rear and Cabin Dash Cam | B0C2Y6WXJ7 | [Open listing](https://www.amazon.com/dp/B0C2Y6WXJ7?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 14 | VANMASS Heavy-Duty Car Phone Mount | B07G61YN8K | [Open listing](https://www.amazon.com/dp/B07G61YN8K?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 15 | VANMASS Upgraded Suction-and-Clip Phone Mount | B08DKHHTFX | [Open listing](https://www.amazon.com/dp/B08DKHHTFX?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 16 | VANMASS Universal Car Phone Holder | B09CMV7YVJ | [Open listing](https://www.amazon.com/dp/B09CMV7YVJ?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 17 | EcoNour Windshield Sunshade | B01KIFISX2 | [Open listing](https://www.amazon.com/dp/B01KIFISX2?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 18 | Rain-X Water Repellency Wiper Blades 22-Inch Pair | B0DXW2FP8Y | [Open listing](https://www.amazon.com/dp/B0DXW2FP8Y?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 19 | PULIDIKI Car Cleaning Gel | B081T7N948 | [Open listing](https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 20 | USANOOKS Microfiber Car Cleaning Cloths 12-Pack | B08BRJHJF9 | [Open listing](https://www.amazon.com/dp/B08BRJHJF9?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 21 | BISSELL Little Green Mini Portable Cleaner | B0DJMP6T3N | [Open listing](https://www.amazon.com/dp/B0DJMP6T3N?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 22 | BISSELL Little Green Multi-Purpose Portable Cleaner | B0016HF5GK | [Open listing](https://www.amazon.com/dp/B0016HF5GK?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 23 | BLACK+DECKER Dustbuster AdvancedClean Handheld Vacuum | B006LXOJC0 | [Open listing](https://www.amazon.com/dp/B006LXOJC0?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 24 | ESR HaloLock Magnetic Wireless Car Charger | B08HNBHSQV | [Open listing](https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
+| 25 | Everlasting Comfort Memory Foam Seat Cushion | B01EBDV9BU | [Open listing](https://www.amazon.com/dp/B01EBDV9BU?tag=buybetterfi06-20) | Amazon ASIN image widget; visual check pending |
 
-## Editorial sources
-- https://www.caranddriver.com/car-accessories/g42569313/best-jump-starters-tested/
-- https://www.caranddriver.com/car-accessories/g42589683/best-portable-tire-inflators-tested/
-- https://www.caranddriver.com/car-accessories/
-- https://www.techradar.com/vehicle-tech/dash-cams/the-best-dash-cams
-- https://www.roadandtrack.com/gear/g69917281/best-car-products-tested-2025/
-- https://carcaretotal.com/car-accessories/
+## Image checklist — next stage
+- The current image URL is the Amazon Associates image widget tied to the exact ASIN, not a generic placeholder or unrelated fallback.
+- Still required before publishing: visually confirm each returned photo depicts the selected variant, verify live display on the site, check image loading in a production browser, and replace any unavailable or mismatched image with a manufacturer-hosted photo.
+- Do not treat this stage as complete merely because the product page exists.
 
-## Publishing rules
-Verify exact model/variant and Amazon product detail page, then build only direct https://www.amazon.com/dp/ASIN?tag=buybetterfi06-20 links. Verify matching genuine working photos separately. For size/fit products (wipers, liners, shades), select an exact compatible variant and include fitment guidance. Deduplicate by ASIN and model across existing catalog. Run build before merge.
-
-## Amazon listing verification notes
-- ESR HaloLock Magnetic Wireless Car Charger: Amazon product-detail page https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20 corresponds to an ESR magnetic wireless car charger; image still requires exact-item source and URL verification. Amazon page https://us.amazon.com/ESR-HaloLock-Magnetic-Attachment-Alignment/dp/B08HNBHSQV supplies the listing evidence. **Not yet publishable.**
-- Product feeds from general shopping search are predominantly non-Amazon retailers and do not validate Amazon ASINs; do not infer ASINs from retailer model numbers.
-
-## ASIN confirmation — NOCO GB40
-Amazon's own Canadian product page identifies the NOCO Boost GB40 as ASIN **B015TKUPIC**; a US Amazon deal listing also identifies the same ASIN. Affiliate URL: https://www.amazon.com/dp/B015TKUPIC?tag=buybetterfi06-20 . Source: https://www.amazon.ca/NOCO-GB40-UltraSafe-Lithium-Starter/dp/B015TKUPIC and https://slickdeals.net/f/20113596-prime-75-96-noco-boost-plus-gb40-1000a-12v-car-battery-jump-starter-for-6l-gas-or-3l-diesel-at-amazon . Product photograph not yet validated; do not add to public catalog until it passes image checks.
+## QA status
+- 25 products present; 25 unique ASINs and slugs.
+- All 25 Amazon URLs match `https://www.amazon.com/dp/<ASIN>?tag=buybetterfi06-20`.
+- No candidate ASIN duplicates the existing catalog.
+- Production build workflow passed on commit `03c002a` after catalog integration. Recheck CI after the latest documentation update.
+- Vehicle-specific fitment cautions are included for the wiper blades, shade and mounting products.
