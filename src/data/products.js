@@ -338,7 +338,7 @@ const productsCatalog = [
   },
   {
     slug: 'maybelline-sky-high-mascara', name: 'Maybelline Lash Sensational Sky High Mascara', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
-    image: 'https://www.soriana.com/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw9d7c9a46/images/product/7509552750225_A.jpg', imageAlt: 'Maybelline Lash Sensational Sky High Mascara',
+    image: 'https://dipasoec.vtexassets.com/arquivos/ids/155436/25731.jpg?v=638539809598430000', imageAlt: 'Maybelline Lash Sensational Sky High Mascara',
     bestFor: 'Lengthening and everyday eye makeup', why: 'Buildable mascara with a flexible brush designed to lengthen and volumize lashes.', watch: 'Shade and washable/waterproof versions vary.', amazonAsin: 'B08H3JPH74', amazonUrl: 'https://www.amazon.com/dp/B08H3JPH74?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08H3JPH74?tag=buybetterfi06-20'
   },
   {
