@@ -91,7 +91,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'vanmass-car-holder-2026', name: 'VANMASS Universal Car Phone Holder', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'VANMASS Universal Car Phone Holder',
+    image: 'https://i.ebayimg.com/images/g/IfUAAOSwpp1jOgTy/s-l1200.jpg', imageAlt: 'VANMASS Universal Car Phone Holder',
     bestFor: 'Large-phone compatibility', why: 'A universal holder option for drivers prioritizing grip and broad phone-size support.', watch: 'Check dimensions with your phone and case; position it so it does not obstruct visibility.', score: 8.4,
     amazonAsin: 'B09CMV7YVJ', amazonUrl: 'https://www.amazon.com/dp/B09CMV7YVJ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09CMV7YVJ?tag=buybetterfi06-20'
   },
