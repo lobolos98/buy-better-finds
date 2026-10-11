@@ -956,17 +956,17 @@ const supplementalProducts = [
   },
   {
     slug: 'oxo-extendable-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Lifestyle', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00L9XH3X4&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
+    image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
     bestFor: 'Cleaning hard-to-reach bathroom areas', why: 'Extendable cleaning tool designed to make tubs, tile, and other awkward surfaces easier to reach.', watch: 'This is a cleaning-accessory pick rather than a storage product, so use it when reducing household task friction is the goal.', amazonAsin: 'B00L9XH3X4', amazonUrl: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20'
   },
   {
     slug: 'bagsmart-toiletry-bag-organization', name: 'BAGSMART Toiletry Bag', category: 'Lifestyle', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07G2Q1JY9&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'BAGSMART Toiletry Bag',
+    image: 'https://clarify.pk/cdn/shop/files/bagsmart-hanging-toiletry-bag-for-travel-pink-organizer-multi-compartment.webp?v=1752600894&width=1946', imageAlt: 'BAGSMART Toiletry Bag',
     bestFor: 'Bathroom and travel organization', why: 'Compartmented toiletry organizer that keeps smaller personal-care items together and easy to find.', watch: 'Capacity and compartment layout vary by BAGSMART version.', amazonAsin: 'B07G2Q1JY9', amazonUrl: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20'
   },
   {
     slug: 'tubshroom-ultra-organization', name: 'TubShroom Ultra', category: 'Lifestyle', price: 'Check price', icon: '◇',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01M0XQY1D&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'TubShroom Ultra drain protector',
+    image: 'https://m.media-amazon.com/images/I/81y1tFSN%2BDL._AC_US1000_.jpg', imageAlt: 'TubShroom Ultra drain protector',
     bestFor: 'Reducing bathroom drain buildup and cleanup', why: 'Simple bathroom accessory that keeps hair and debris from becoming a recurring drain-maintenance problem.', watch: 'Fit depends on the drain configuration in your tub or shower.', amazonAsin: 'B01M0XQY1D', amazonUrl: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20'
   },
   {
