@@ -113,7 +113,7 @@ const imageSource = (product) => product.manufacturerImage || product.amazonImag
     {rankedMatches.length > 0 && <>
       <section class="featured-section"><div class="section-head"><div><div class="eyebrow">SHORTLISTED FINDS</div><h2>Start with the products worth comparing.</h2></div><a class="text-link" href="/products/">Browse all finds →</a></div>
         <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name)); const rec = getRecommendation(product); return <article class="card product-card">
-          <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={imageSource(product)} alt={product.imageAlt} loading="lazy" width="800" height="600" /><span class="image-fallback" aria-hidden="true"></span></a>
+          {product.image && <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a>}
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
           <div class="score-row"><strong>{Number.isFinite(Number(rec?.score)) ? Number(rec.score).toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
