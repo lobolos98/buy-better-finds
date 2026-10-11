@@ -31,7 +31,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'astroai-airun-h-inflator', name: 'AstroAI AIRUN H 12V Tire Inflator', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'AstroAI AIRUN H 12V Tire Inflator',
+    image: 'https://regi-astroai-assets.s3.us-east-2.amazonaws.com/preview/3e/9c10ca57-74f0-07de-25a0-469bb39dd022-20250120-webp__preview.webp', imageAlt: 'AstroAI AIRUN H 12V Tire Inflator',
     bestFor: '12V vehicle tire inflation', why: 'A corded 12V compressor with auto shut-off and a long power cord, suited to topping up vehicle tires.', watch: 'Requires a suitable 12V outlet; verify the target pressure and never exceed tire or vehicle limits.', score: 8.6,
     amazonAsin: 'B07QR4Q42L', amazonUrl: 'https://www.amazon.com/dp/B07QR4Q42L?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07QR4Q42L?tag=buybetterfi06-20'
   },
