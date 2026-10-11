@@ -936,7 +936,7 @@ const supplementalProducts = [
   },
   {
     slug: 'garmin-vivoactive-5', name: 'Garmin vívoactive 5', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://cdn.haushaltsparadies.de/media/5f/3b/72/1740085420/301667.jpg?ts=1745574503', imageAlt: 'Garmin vívoactive 5 fitness GPS smartwatch',
+    image: 'https://www.pbtech.co.nz/imgprod/H/E/HEAGAR100286210.jpg?h=1159909417', imageAlt: 'Garmin vívoactive 5 fitness GPS smartwatch',
     bestFor: 'GPS fitness tracking and everyday training', why: 'Fitness-focused GPS smartwatch with a broad activity feature set and a more traditional watch experience.', watch: 'Compare Garmin’s feature set with Apple and Fitbit before choosing your ecosystem.', amazonAsin: 'B0CG6NR413', amazonUrl: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CG6NR413?tag=buybetterfi06-20'
   },
   {
