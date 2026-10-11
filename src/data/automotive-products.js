@@ -145,7 +145,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'everlasting-comfort-seat-cushion', name: 'Everlasting Comfort Memory Foam Seat Cushion', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'Everlasting Comfort Memory Foam Seat Cushion',
+    image: 'https://i.ebayimg.com/images/g/DSwAAeSwGrtoOhvp/s-l1200.jpg', imageAlt: 'Everlasting Comfort Memory Foam Seat Cushion',
     bestFor: 'Additional seating cushioning', why: 'A portable memory-foam cushion may suit drivers who prefer added seat cushioning on longer trips.', watch: 'Fit and comfort are personal; ensure it does not interfere with seat belts, pedals or safe driving posture.', score: 8.1,
     amazonAsin: 'B01EBDV9BU', amazonUrl: 'https://www.amazon.com/dp/B01EBDV9BU?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01EBDV9BU?tag=buybetterfi06-20'
   }
