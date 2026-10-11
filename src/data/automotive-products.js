@@ -115,7 +115,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'usanooks-microfiber-cloths', name: 'USANOOKS Microfiber Car Cleaning Cloths 12-Pack', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'USANOOKS Microfiber Car Cleaning Cloths 12-Pack',
+    image: 'https://m.media-amazon.com/images/I/91LeXaDL9nL.jpg', imageAlt: 'USANOOKS Microfiber Car Cleaning Cloths 12-Pack',
     bestFor: 'Wash, dry and detail surfaces', why: 'A multi-pack of microfiber cloths is useful for separating glass, paint and interior cleaning tasks.', watch: 'Keep cloths clean and grit-free to reduce scratching; launder separately as directed.', score: 8.8,
     amazonAsin: 'B08BRJHJF9', amazonUrl: 'https://www.amazon.com/dp/B08BRJHJF9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08BRJHJF9?tag=buybetterfi06-20'
   },
