@@ -37,7 +37,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'olarhike-dual-power-inflator', name: 'OlarHike Dual-Power Portable Tire Inflator', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'OlarHike Dual-Power Portable Tire Inflator',
+    image: 'https://i5.walmartimages.com/asr/d272ed31-10f9-4aae-ac82-9b13822dd40c.fc991afbd8582b493f9c0ede56e182df.jpeg', imageAlt: 'OlarHike Dual-Power Portable Tire Inflator',
     bestFor: 'Portable inflation across several inflatables', why: 'Dual-power design and automatic shut-off make it a versatile option for car tires and other compatible inflatables.', watch: 'Check included battery configuration, supported valve adapters, and pressure limits before use.', score: 8.5,
     amazonAsin: 'B0FDWMP57L', amazonUrl: 'https://www.amazon.com/dp/B0FDWMP57L?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FDWMP57L?tag=buybetterfi06-20'
   },
