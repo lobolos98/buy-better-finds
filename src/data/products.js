@@ -951,7 +951,7 @@ const supplementalProducts = [
   },
   {
     slug: 'owala-freesip-32', name: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle', category: 'Lifestyle', price: 'Check price', icon: '◈',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FK1LF5PM&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle',
+    image: 'https://chicly.us/cdn/shop/files/FreeSip-Three-Quarter-32oz-SS-1080x1080-Very-Very-Dark.webp?v=1753764400&width=1946', imageAlt: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle',
     bestFor: 'Everyday hydration and on-the-go use', why: 'Insulated bottle with Owala’s FreeSip drinking design for flexible sipping and chugging.', watch: 'Choose the size and lid style that best fit your bag, car, and daily routine.', amazonAsin: 'B0FK1LF5PM', amazonUrl: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20'
   },
   {
