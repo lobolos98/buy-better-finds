@@ -911,17 +911,17 @@ const supplementalProducts = [
   },
   {
     slug: 'kasa-ep10-smart-plug', name: 'Kasa Smart Plug Ultra Mini 15A (EP10)', category: 'Smart Home', price: 'Check price', icon: '⚡',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B091699Z3W&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Kasa Smart Plug Ultra Mini EP10',
+    image: 'https://static.tp-link.com/EP10%28US%29_1.0_normal_1610000359003u.jpg', imageAlt: 'Kasa Smart Plug Ultra Mini EP10',
     bestFor: 'Compact indoor smart-home automation', why: 'Compact smart plug designed for schedules, timers, remote control, and voice-assistant routines.', watch: 'Check the supported Wi-Fi band and electrical rating for the exact model before setup.', amazonAsin: 'B091699Z3W', amazonUrl: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B091699Z3W?tag=buybetterfi06-20'
   },
   {
     slug: 'govee-smart-plug-4-pack', name: 'Govee Smart Plug 15A 4-Pack', category: 'Smart Home', price: 'Check price', icon: '⚡',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0948ZZZJP&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Govee Smart Plug 15A 4-Pack',
+    image: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/74fb3297-5939-48c8-b7ac-1a58dc53d8e9.__CR0,0,200,225_PT0_SX200_V1___.jpg', imageAlt: 'Govee Smart Plug 15A 4-Pack',
     bestFor: 'Automating several indoor outlets at once', why: 'Four-pack smart plug setup for adding schedules and voice control to multiple ordinary devices.', watch: 'A multi-pack makes sense only if you actually need several connected outlets.', amazonAsin: 'B0948ZZZJP', amazonUrl: 'https://www.amazon.com/dp/B0948ZZZJP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0948ZZZJP?tag=buybetterfi06-20'
   },
   {
     slug: 'linkind-matter-smart-plug', name: 'Linkind Matter Smart Plug', category: 'Smart Home', price: 'Check price', icon: '⚡',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0C36WXGP1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Linkind Matter Smart Plug',
+    image: 'https://linkind.com/cdn/shop/files/image_20241206094543_1733449590.webp?v=1767767995&width=3840', imageAlt: 'Linkind Matter Smart Plug',
     bestFor: 'Cross-platform smart-home setups', why: 'Matter-enabled smart plug aimed at households that want flexibility across supported smart-home ecosystems.', watch: 'Matter setup depends on the controller and ecosystem you use.', amazonAsin: 'B0C36WXGP1', amazonUrl: 'https://www.amazon.com/dp/B0C36WXGP1?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0C36WXGP1?tag=buybetterfi06-20'
   },
   {
