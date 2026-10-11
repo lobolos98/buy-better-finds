@@ -79,7 +79,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'vanmass-phone-mount', name: 'VANMASS Heavy-Duty Car Phone Mount', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'VANMASS Heavy-Duty Car Phone Mount',
+    image: 'https://img.bslcdn.com/p/1cdd3dc95951abc5f4bc7880e2650e19.jpg', imageAlt: 'VANMASS Heavy-Duty Car Phone Mount',
     bestFor: 'Windshield, dashboard or vent mounting', why: 'A versatile adjustable phone holder designed for multiple mounting positions and larger phones.', watch: 'Mount securely without blocking sightlines, controls or airbags; confirm the package\'s included base.', score: 8.7,
     amazonAsin: 'B07G61YN8K', amazonUrl: 'https://www.amazon.com/dp/B07G61YN8K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G61YN8K?tag=buybetterfi06-20'
   },
