@@ -988,7 +988,7 @@ const supplementalProducts = [
   },
 ];
 export const products = [...productsCatalog, ...supplementalProducts]
-  .filter((product) => product?.slug && product?.name && product?.category && product?.image)
+  .filter((product) => product?.slug && product?.name && product?.category && (product?.image || product?.category === 'Automotive & Car Accessories'))
   .map((product) => {
   const amazonOverride = amazonImageOverrides[product.slug];
   const manufacturerOverride = manufacturerImageOverrides[product.slug] || null;
