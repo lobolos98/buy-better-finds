@@ -13,7 +13,7 @@ export const automotiveProducts = [
   },
   {
     slug: 'noco-boost-gb70', name: 'NOCO Boost HD GB70 2000A Jump Starter', category: 'Automotive & Car Accessories', price: 'Check price', icon: '🚘',
-    image: '', imageAlt: 'NOCO Boost HD GB70 2000A Jump Starter',
+    image: 'https://no.co/media/wysiwyg/Products/Boost/Boost/GB70/Overview/1_H3V1_Main_Image/1-GB70-Main-Render-XS.jpg', imageAlt: 'NOCO Boost HD GB70 2000A Jump Starter',
     bestFor: 'Larger compatible engines', why: 'Higher-output portable jump starter for compatible 12V vehicles with more demanding starting needs.', watch: 'Larger and costlier than compact units; verify the vehicle\'s engine-size limits.', score: 9,
     amazonAsin: 'B016UG6PWE', amazonUrl: 'https://www.amazon.com/dp/B016UG6PWE?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B016UG6PWE?tag=buybetterfi06-20'
   },
