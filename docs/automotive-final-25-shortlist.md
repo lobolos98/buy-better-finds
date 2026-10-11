@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | 1 | Clore Automotive JNC325 | Jump starters | Best overall jump starter | Pending | Pending |
 | 2 | GOOLOO GT6000 | Jump starters | Larger engines | Pending | Pending |
-| 3 | NOCO Boost Plus GB40 | Jump starters | Compact emergency kit | Pending | Pending |
+| 3 | NOCO Boost Plus GB40 | Jump starters | Compact emergency kit | B015TKUPIC — confirmed | Pending |
 | 4 | WOLFBOX MegaVolt 24Air | Combination emergency tools | Jump starter and inflator | Pending | Pending |
 | 5 | Slime Cordless Pro Power | Tire inflators | Overall inflator | Pending | Pending |
 | 6 | AVID POWER Cordless Tire Inflator | Tire inflators | Budget cordless inflator | Pending | Pending |
@@ -44,3 +44,6 @@ Verify exact model/variant and Amazon product detail page, then build only direc
 ## Amazon listing verification notes
 - ESR HaloLock Magnetic Wireless Car Charger: Amazon product-detail page https://www.amazon.com/dp/B08HNBHSQV?tag=buybetterfi06-20 corresponds to an ESR magnetic wireless car charger; image still requires exact-item source and URL verification. Amazon page https://us.amazon.com/ESR-HaloLock-Magnetic-Attachment-Alignment/dp/B08HNBHSQV supplies the listing evidence. **Not yet publishable.**
 - Product feeds from general shopping search are predominantly non-Amazon retailers and do not validate Amazon ASINs; do not infer ASINs from retailer model numbers.
+
+## ASIN confirmation — NOCO GB40
+Amazon's own Canadian product page identifies the NOCO Boost GB40 as ASIN **B015TKUPIC**; a US Amazon deal listing also identifies the same ASIN. Affiliate URL: https://www.amazon.com/dp/B015TKUPIC?tag=buybetterfi06-20 . Source: https://www.amazon.ca/NOCO-GB40-UltraSafe-Lithium-Starter/dp/B015TKUPIC and https://slickdeals.net/f/20113596-prime-75-96-noco-boost-plus-gb40-1000a-12v-car-battery-jump-starter-for-6l-gas-or-3l-diesel-at-amazon . Product photograph not yet validated; do not add to public catalog until it passes image checks.
