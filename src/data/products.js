@@ -403,8 +403,8 @@ const supplementalProducts = [
   },
   {
     slug: 'samsung-t7-shield', name: 'Samsung T7 Shield Portable SSD 2TB', category: 'Tech', price: 'Check price', icon: '▣',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09VLHR4JC&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Samsung T7 Shield Portable SSD',
-    bestFor: 'Portable file storage and creative work', why: 'Rugged portable SSD designed for fast external storage and travel.', watch: 'Storage capacity and interface speeds should match the workflow you actually need.', amazonAsin: 'B09VLHR4JC', amazonUrl: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20'
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/us/mu-pe1t0k-am/gallery/us-portable-ssd-t7-shield-mu-pe1t0k-am-552408682?%24product-details-jpg%24=', imageAlt: 'Samsung T7 Shield Portable SSD',
+    bestFor: 'Portable file storage and creative work', why: 'Rugged portable SSD designed for fast external storage and travel.', watch: 'Storage capacity and interface speeds should match the workflow you actually need.', dailyDealDate: '2026-10-11', amazonAsin: 'B09VLHR4JC', amazonUrl: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VLHR4JC?tag=buybetterfi06-20'
   },
   {
     slug: 'bose-qc-ultra-2', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
