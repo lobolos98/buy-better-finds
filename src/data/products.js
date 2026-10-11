@@ -946,7 +946,7 @@ const supplementalProducts = [
   },
   {
     slug: 'simple-modern-40oz-tumbler', name: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid', category: 'Lifestyle', price: 'Check price', icon: '◈',
-    image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DG3MS3ST&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid',
+    image: 'https://www.simplemodern.com/cdn/shop/files/FB-TRK-SH-40-SPMX-M_efff742d-57ea-4714-b52f-36eef3bf09c8.jpg?v=1757017809&width=640', imageAlt: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid',
     bestFor: 'Large-volume everyday hydration', why: 'Large handled tumbler format built around portable hydration and a straw lid.', watch: 'The 40-ounce size is less convenient if you prefer a smaller bottle or cup-holder footprint.', amazonAsin: 'B0DG3MS3ST', amazonUrl: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20'
   },
   {
