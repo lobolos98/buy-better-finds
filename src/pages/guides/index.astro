@@ -24,6 +24,7 @@ const guides = [
 ];
 
 const guideImages = {
+  'basement-bathroom-macerating-toilets': 'https://simpleprojectus.com/cdn/shop/files/basement-macerating-toilet-system-full-bathroom.jpg?v=1778471001',
   'best-tech': 'Sony WH-1000XM5 Noise-Canceling Headphones',
   'best-noise-canceling-headphones': 'Sony WH-1000XM5 Noise-Canceling Headphones',
   'best-home-kitchen': 'KitchenAid Artisan Series 5-Quart Stand Mixer',
@@ -78,11 +79,11 @@ const guideImage = (slug, category) => {
       </div>
       <div class="library-grid">
         {guides.map(([title,slug,category,description]) => {
-          const image = slug === 'basement-bathroom-macerating-toilets' ? '' : guideImage(slug, category);
+          const image = guideImage(slug, category);
           return (
             <a class="library-card" href={`/guides/${slug}/`}>
               <div class="library-image">
-                {image ? <img src={image} alt={title} loading="lazy" referrerpolicy="no-referrer" /> : <span class="library-image-placeholder">BASEMENT<br />BATHROOM<br />GUIDE</span>}
+                {image ? <img src={image} alt={title} loading="lazy" referrerpolicy="no-referrer" /> : null}
               </div>
               <div class="library-body">
                 <span class="library-category">{category}</span>
