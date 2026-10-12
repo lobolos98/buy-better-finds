@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
 
 const guides = [
+  ['Basement Bathroom Solutions: Macerating Toilets','basement-bathroom-macerating-toilets','Tools & DIY','Understand upflush toilets, basement plumbing, installation requirements, and what to compare before buying.'],
   ['Best Tech Products','best-tech','Tech','Headphones, tablets, mice, power, and everyday technology.'],
   ['Best Noise-Canceling Headphones','best-noise-canceling-headphones','Tech','A focused comparison for travelers, commuters, and listeners who want quieter surroundings.'],
   ['Best Home & Kitchen Products','best-home-kitchen','Home & Kitchen','Practical appliances, organization, and household upgrades.'],
@@ -77,11 +78,11 @@ const guideImage = (slug, category) => {
       </div>
       <div class="library-grid">
         {guides.map(([title,slug,category,description]) => {
-          const image = guideImage(slug, category);
+          const image = slug === 'basement-bathroom-macerating-toilets' ? '' : guideImage(slug, category);
           return (
             <a class="library-card" href={`/guides/${slug}/`}>
               <div class="library-image">
-                {image ? <img src={image} alt={title} loading="lazy" referrerpolicy="no-referrer" /> : <span class="library-image-placeholder">BUY<br />BETTER<br />FINDS</span>}
+                {image ? <img src={image} alt={title} loading="lazy" referrerpolicy="no-referrer" /> : <span class="library-image-placeholder">BASEMENT<br />BATHROOM<br />GUIDE</span>}
               </div>
               <div class="library-body">
                 <span class="library-category">{category}</span>
