@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title = 'Halloween Yard Decorations: Ideas for a Spooky Front Yard | Buy Better Finds';
+const description = 'Plan a spooky Halloween front yard with glowing pumpkins, skeletons, eerie lighting, and simple ways to build a coordinated display.';
+const categoryUrl = '/categories/seasonal-holidays/halloween/';
+---
+<BaseLayout title={title} description={description}>
+  <article class="article-wrap">
+    <header class="article-header">
+      <a class="back" href="/blog/">← All shopping advice</a>
+      <p class="eyebrow">SEASONAL SHOPPING · HALLOWEEN</p>
+      <h1>Halloween Yard Decorations: Ideas for a Spooky Front Yard</h1>
+      <p class="dek">A few well-chosen decorations can make your entrance feel eerie, welcoming, and memorable. Start with a theme, build layers, and choose pieces that work together.</p>
+      <p class="updated">Shopping inspiration from Buy Better Finds · October 2026</p>
+    </header>
+    <div class="article-art" role="img" aria-label="Stylized Halloween yard with a dark house, glowing moon, bats and pumpkins">
+      <span class="moon"></span><span class="bat bat-one">✦</span><span class="bat bat-two">✦</span>
+      <div class="house"><span class="roof"></span><span class="window"></span><span class="door"></span></div>
+      <span class="pumpkin pumpkin-one">🎃</span><span class="pumpkin pumpkin-two">🎃</span>
+    </div>
+    <div class="article-body">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> As an Amazon Associate, Buy Better Finds earns from qualifying purchases. Product availability and prices can change, so check the current listing before buying.</p>
+      <p>Want a Halloween display that looks pulled together instead of cluttered? Choose one main attraction, add lighting for atmosphere, and finish with a few smaller details. You don't need to cover every inch of the yard to make an impression.</p>
+      <h2>1. Choose one statement decoration</h2>
+      <p>Give your display a focal point. An oversized skeleton, a dramatic inflatable, or a cluster of tall props can anchor the scene. Keep the largest item visible from the sidewalk, then leave some open space around it so it stands out.</p>
+      <h2>2. Layer in glowing pumpkins and lanterns</h2>
+      <p>Warm orange lights help connect separate decorations into one display. Place lighted pumpkins near steps or walkways, and use lanterns to guide the eye toward the entrance. Battery-powered options can be convenient where an outlet isn't nearby; check each product's power source and weather rating.</p>
+      <h2>3. Use lighting to create atmosphere</h2>
+      <p>Colored spotlights, window lighting, or a fog effect can add depth after dark. Before purchasing outdoor lighting or a fog machine, check whether it's rated for outdoor use, how it is powered, and what setup or supervision it requires. Keep cords out of walking paths and follow the manufacturer's safety directions.</p>
+      <h2>4. Add smaller details to fill gaps</h2>
+      <p>Bat silhouettes, a wreath, skull accents, and webbing can tie the display together without competing with the focal point. Repeat a few colors—such as black, orange, and purple—instead of mixing every style you see.</p>
+      <h2>5. Set a budget before you shop</h2>
+      <p>Decide which one or two pieces matter most, then add lower-cost accents if the budget allows. Check dimensions, setup requirements, storage needs, customer photos where available, and return details before choosing a decoration. Don't rely on a discount label alone to decide whether something is a good value.</p>
+      <h2>Build your Halloween display</h2>
+      <p>Browse the Buy Better Finds Halloween collection to explore decorations such as lighted accents, yard props, and spooky finishing touches. Product availability and pricing can change, so review the current Amazon listing for details.</p>
+      <a class="shop-cta" href={categoryUrl}>Explore Halloween Finds <span aria-hidden="true">→</span></a>
+      <p class="closing">Our approach: focus on useful details, compare options before buying, and choose products that suit your space and budget.</p>
+    </div>
+  </article>
+</BaseLayout>
+<style>
+  .article-wrap{width:min(820px,calc(100% - 36px));margin:0 auto;padding:38px 0 70px}
+  .back{display:inline-block;margin-bottom:26px;color:#1d4ed8;font-weight:700;text-decoration:none}
+  .eyebrow{margin:0 0 12px;color:#b42332;font-size:.76rem;font-weight:800;letter-spacing:.13em}
+  h1,h2{color:#10233f;letter-spacing:-.025em}
+  h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;margin:0 0 18px}
+  .dek{font-size:1.2rem;line-height:1.7;color:#4b5563;margin-bottom:18px}
+  .updated{font-size:.88rem;color:#6b7280}
+  .article-art{height:330px;position:relative;overflow:hidden;margin:30px 0;background:radial-gradient(circle at 75% 18%,#f4c96b 0 3%,transparent 3.5%),linear-gradient(165deg,#101b36 0%,#222c50 65%,#3c2940 100%);border-radius:14px}
+  .moon{position:absolute;right:18%;top:12%;width:68px;height:68px;border-radius:50%;background:#f8e7b0;box-shadow:0 0 35px #f8e7b066}
+  .bat{position:absolute;color:#10172c;font-size:2rem}.bat-one{top:25%;left:19%}.bat-two{top:14%;left:48%;font-size:1.4rem}
+  .house{position:absolute;bottom:0;left:19%;width:64%;height:47%;background:#11182b;border:2px solid #59617b}
+  .roof{position:absolute;left:-10%;top:-36%;width:120%;height:50%;background:#11182b;clip-path:polygon(50% 0,100% 100%,0 100%)}
+  .window{position:absolute;left:14%;top:24%;width:22%;height:27%;border:3px solid #e9b75a;background:#f3b84a;box-shadow:0 0 18px #f3b84a88}
+  .door{position:absolute;right:16%;bottom:0;width:23%;height:57%;background:#34253a;border:2px solid #a77a54}
+  .pumpkin{position:absolute;bottom:7%;font-size:2.6rem;filter:drop-shadow(0 0 12px #f79c3d66)}.pumpkin-one{left:4%}.pumpkin-two{right:3%;font-size:2.1rem}
+  .article-body{font-size:1.06rem;line-height:1.85;color:#374151}
+  .article-body h2{font-size:1.55rem;line-height:1.25;margin:34px 0 10px}
+  .disclosure{padding:16px 18px;border-left:4px solid #c8102e;background:#f7f8fa;font-size:.92rem;line-height:1.7}
+  .shop-cta{display:inline-flex;gap:14px;align-items:center;margin:8px 0 16px;padding:14px 20px;background:#c8102e;color:#fff;text-decoration:none;font-weight:800;border-radius:7px}
+  .closing{font-size:.95rem;color:#6b7280}
+  @media(max-width:600px){.article-art{height:250px}.article-wrap{padding-top:25px}}
+</style>
