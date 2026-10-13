@@ -1,30 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
 const title = 'Halloween Yard Decorations: Ideas for a Spooky Front Yard | The Finds Edit';
 const description = 'Plan a Halloween front yard with a statement decoration, warm lighting, pumpkins, and coordinated details—without overspending.';
 const categoryUrl = '/categories/seasonal-holidays/halloween/';
+const image = 'https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=1600&q=85';
 ---
-<BaseLayout title={title} description={description} image="https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=1400&q=85" imageAlt="Halloween pumpkins and seasonal decorations on a front porch">
-  <div class="journal-page">
-    <div class="journal-topline"><a href="/blog/">THE FINDS EDIT</a><span>SEASONAL STYLE</span></div>
-    <article class="journal-article">
-      <header class="story-header">
-        <a class="back-link" href="/blog/">← Back to The Finds Edit</a>
-        <p class="story-category">THE SEASONAL EDIT <span>•</span> HALLOWEEN</p>
-        <h1>Halloween Yard Decorations: Ideas for a Spooky Front Yard</h1>
-        <p class="story-dek">A front yard can feel festive and a little eerie without becoming a storage problem. Start with one focal point, layer in light, and choose details that work together.</p>
-        <div class="byline"><span class="byline-mark">BBF</span><span>THE FINDS EDIT <small>Practical ideas for shopping smarter</small></span><span class="read-time">5 MIN READ</span></div>
-      </header>
-      <figure class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=1600&q=85" alt="Pumpkins and autumn decorations arranged on a welcoming front porch" fetchpriority="high" />
-        <figcaption>A few thoughtful layers can make a seasonal entrance feel pulled together.</figcaption>
-      </figure>
-      <div class="story-layout">
-        <aside class="story-aside"><p>IN THIS STORY</p><a href="#statement">Make a statement</a><a href="#lighting">Layer the lighting</a><a href="#details">Finish with details</a><a href="#budget">Set a budget</a><div class="aside-note">THE FINDS EDIT<br/><span>Ideas first. Smarter shopping always.</span></div></aside>
-        <div class="story-body">
-          <p class="affiliate-brief">This article may contain affiliate links. We may earn a commission from qualifying purchases.</p>
-          <p>Want a Halloween display that looks pulled together instead of cluttered? Choose one main attraction, add lighting for atmosphere, and finish with a few smaller details. You don't need to cover every inch of the yard to make an impression.</p>
+<BlogArticleLayout
+  title={title}
+  description={description}
+  image={image}
+  imageAlt="Pumpkins and autumn decorations arranged on a welcoming front porch"
+  category="SEASONAL STYLE"
+  dek="A front yard can feel festive and a little eerie without becoming a storage problem. Start with one focal point, layer in light, and choose details that work together."
+  readingTime="5 MIN READ"
+  related={[{title:'Explore our Halloween collection',href:categoryUrl},{title:'Browse practical buying guides',href:'/guides/'}]}
+>
+  <span slot="caption">A few thoughtful layers can make a seasonal entrance feel pulled together.</span>
+  <a slot="contents" href="#statement">Make a statement</a>
+  <a slot="contents" href="#lighting">Layer the lighting</a>
+  <a slot="contents" href="#details">Finish with details</a>
+  <a slot="contents" href="#budget">Set a budget</a>
+  <p>Want a Halloween display that looks pulled together instead of cluttered? Choose one main attraction, add lighting for atmosphere, and finish with a few smaller details. You don't need to cover every inch of the yard to make an impression.</p>
           <h2 id="statement">01. Choose one statement decoration</h2>
           <p>Give your display a focal point. An oversized skeleton, a dramatic inflatable, or a cluster of tall props can anchor the scene. Keep the largest item visible from the sidewalk, then leave some open space around it so it stands out.</p>
           <div class="tip-card"><span>THE QUICK TAKE</span><p>Pick the centerpiece first. It makes the rest of the shopping list easier—and helps prevent impulse buys that don't fit the look.</p></div>
@@ -38,50 +34,16 @@ const categoryUrl = '/categories/seasonal-holidays/halloween/';
           <p>Decide which one or two pieces matter most, then add lower-cost accents if the budget allows. Check dimensions, setup requirements, storage needs, customer photos where available, and return details before choosing a decoration. Don't rely on a discount label alone to decide whether something is a good value.</p>
           <div class="shop-card"><p class="section-kicker">THE SEASONAL EDIT</p><h2>Ready to bring your Halloween look together?</h2><p>Browse our Halloween collection for yard props, lighted accents, and spooky finishing touches. Review current listing details before you buy.</p><a href={categoryUrl}>Explore Halloween finds <span aria-hidden="true">↗</span></a></div>
           <p class="closing-note">Our approach is simple: focus on useful details, compare options before buying, and choose products that suit your space and budget.</p>
-          <p class="affiliate-note"><strong>Affiliate disclosure:</strong> As an Amazon Associate, Buy Better Finds earns from qualifying purchases. Product availability and prices can change, so check the current listing before buying.</p>
-          <a class="back-bottom" href="/blog/">← More from The Finds Edit</a>
-        </div>
-      </div>
-    </article>
-  </div>
-</BaseLayout>
+          
+</BlogArticleLayout>
 <style>
-  .journal-page{background:#fbf8f2;color:#2b3035;min-height:400px;--ink:#142b45;--red:#c8102e;--muted:#6a7074;--line:#e5ded2}
-  .journal-topline{display:flex;justify-content:space-between;align-items:center;padding:13px max(22px,calc((100% - 1160px)/2));background:#142b45;color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.16em}
-  .journal-topline a{color:#fff;text-decoration:none}
-  .story-header{max-width:900px;margin:0 auto;padding:37px 24px 24px}
-  .back-link{display:inline-block;color:#59636c;text-decoration:none;font-size:.78rem;font-weight:700;margin-bottom:28px}
-  .story-category,.section-kicker{color:var(--red);font-size:.67rem;letter-spacing:.16em;font-weight:800;margin:0 0 14px}
-  .story-category span{padding:0 5px}
-  .story-header h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;color:var(--ink);font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.055em;margin:0 0 20px;max-width:850px}
-  .story-dek{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.65;color:#596168;max-width:760px;margin:0 0 25px}
-  .byline{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px;color:var(--ink);font-size:.68rem;font-weight:800;letter-spacing:.08em}
-  .byline-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font-family:Georgia,serif;letter-spacing:-.05em}
-  .byline small{display:block;color:#77736c;font-size:.65rem;letter-spacing:0;font-weight:500;margin-top:4px}
-  .read-time{margin-left:auto;color:#77736c;font-size:.63rem}
-  .hero-photo{width:min(1120px,calc(100% - 44px));margin:0 auto 46px}
-  .hero-photo img{display:block;width:100%;height:clamp(260px,47vw,560px);object-fit:cover;background:#e8dfd2}
-  .hero-photo figcaption{font-size:.72rem;color:#77736c;padding-top:9px}
-  .story-layout{display:grid;grid-template-columns:190px minmax(0,700px);gap:clamp(25px,5vw,70px);width:min(960px,calc(100% - 44px));margin:0 auto 70px;align-items:start}
-  .story-aside{position:sticky;top:105px;padding-top:7px}
-  .story-aside>p{font-size:.62rem;letter-spacing:.15em;font-weight:800;color:#77736c;margin:0 0 12px}
-  .story-aside>a{display:block;border-top:1px solid var(--line);padding:10px 0;color:var(--ink);font-size:.76rem;text-decoration:none;line-height:1.4}
-  .story-aside>a:hover,.back-bottom:hover{color:var(--red)}
-  .aside-note{margin-top:28px;padding-top:14px;border-top:2px solid var(--red);font-size:.65rem;font-weight:800;letter-spacing:.13em;color:var(--ink);line-height:1.6}
-  .aside-note span{display:block;font-size:.73rem;letter-spacing:0;font-weight:400;color:#77736c;margin-top:6px}
-  .story-body{font-family:Georgia,'Times New Roman',serif;font-size:1.08rem;line-height:1.9;color:#3e464b}
-  .story-body>p{margin:0 0 23px}
-  .story-body h2{font-family:Georgia,'Times New Roman',serif;color:var(--ink);font-size:clamp(1.65rem,3vw,2.15rem);font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:39px 0 13px}
-  .affiliate-brief{font-family:Arial,Helvetica,sans-serif;font-size:.76rem;line-height:1.6;color:#77736c;margin-bottom:20px}
-  .affiliate-note{font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.7;background:#f0e9df;border-left:3px solid var(--red);padding:15px 17px}
-  .tip-card{margin:27px 0;padding:20px 22px;background:#e9edf0;border-left:3px solid var(--ink)}
-  .tip-card span{font-family:Arial,Helvetica,sans-serif;font-size:.62rem;font-weight:800;letter-spacing:.15em;color:var(--red)}
-  .tip-card p{margin:8px 0 0;font-size:1rem;line-height:1.7;color:var(--ink)}
+  .tip-card{margin:27px 0;padding:20px 22px;background:#e9edf0;border-left:3px solid #142b45}
+  .tip-card span{font-family:Arial,Helvetica,sans-serif;font-size:.62rem;font-weight:800;letter-spacing:.15em;color:#c8102e}
+  .tip-card p{margin:8px 0 0;font-size:1rem;line-height:1.7;color:#142b45}
   .shop-card{margin:38px 0 26px;padding:25px;background:#eae3d8}
   .shop-card h2{margin:0 0 10px;font-size:1.9rem}
   .shop-card>p:not(.section-kicker){font-size:.96rem;line-height:1.7;margin:0 0 18px}
-  .shop-card>a{display:inline-flex;justify-content:space-between;gap:22px;padding:13px 16px;background:var(--red);font-family:Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;font-size:.75rem;font-weight:800}
+  .shop-card>a{display:inline-flex;justify-content:space-between;gap:22px;padding:13px 16px;background:#c8102e;font-family:Arial,Helvetica,sans-serif;color:#fff;text-decoration:none;font-size:.75rem;font-weight:800}
+  .section-kicker{color:#c8102e;font-size:.67rem;letter-spacing:.16em;font-weight:800;margin:0 0 14px}
   .closing-note{color:#6a7074;font-size:.96rem}
-  .back-bottom{display:inline-block;margin-top:8px;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:.78rem;font-weight:800;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:6px}
-  @media(max-width:700px){.journal-topline{padding:12px 17px}.story-header{padding:26px 18px 20px}.story-header h1{font-size:2.7rem}.hero-photo{width:100%;margin-bottom:30px}.hero-photo img{height:300px}.hero-photo figcaption{padding:8px 17px}.story-layout{grid-template-columns:1fr;width:calc(100% - 36px);gap:22px}.story-aside{position:static;display:flex;flex-wrap:wrap;gap:0 14px;padding:0 0 12px;border-bottom:1px solid var(--line)}.story-aside>p{width:100%;margin-bottom:8px}.story-aside>a{border-top:0;padding:5px 0;font-size:.7rem}.aside-note{display:none}.story-body{font-size:1.02rem}.shop-card{padding:20px}.shop-card h2{font-size:1.65rem}}
 </style>
