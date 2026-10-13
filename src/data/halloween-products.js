@@ -3,6 +3,21 @@
 
 export const halloweenProducts = [
   {
+    "slug": "halloween-attgreat-collapsible-light-up-stacked-pumpkins-b0b55v36f1",
+    "name": "ATTGREAT 3-Foot Collapsible Light-Up Stacked Jack-O'-Lantern Halloween Decoration",
+    "category": "Outdoor Halloween Decorations",
+    "price": "Check Amazon price",
+    "icon": "🎃",
+    "image": "https://m.media-amazon.com/images/I/71ZeGMB%2B0DL._AC_SX569_.jpg",
+    "imageAlt": "ATTGREAT light-up stacked jack-o'-lantern pumpkins with purple witch hat, shown illuminated on a Halloween porch",
+    "amazonAsin": "B0B55V36F1",
+    "bestFor": "Halloween porches and compact seasonal storage",
+    "why": "A glowing stacked jack-o'-lantern display with 55 LED lights, eight lighting modes, a timer, and a collapsible frame for easier off-season storage.",
+    "watch": "Confirm current Amazon price and availability. Secure the decoration appropriately for outdoor wind and weather.",
+    "url": "https://www.amazon.com/dp/B0B55V36F1?tag=buybetterfi06-20",
+    "score": 8.7
+  },
+  {
     "slug": "halloween-oreo-orange-creme-cookies-b0bxn51s2z",
     "name": "OREO Orange Creme Chocolate Sandwich Cookies, Limited Edition, Halloween Cookies, 18.71 oz",
     "category": "Halloween Treats",
