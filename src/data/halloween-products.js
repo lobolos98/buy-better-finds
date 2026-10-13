@@ -646,7 +646,7 @@ export const halloweenProducts = [
     "watch": "Check the current Amazon listing for price, edition, and availability.",
     "url": "https://www.amazon.com/dp/0545174805?tag=buybetterfi06-20",
     "score": 8.5
-  }
+  },
   {
     "slug": "halloween-giftinbox-girls-cat-costume-b0fg81mlhx",
     "name": "GIFTINBOX Halloween Cat Costume for Girls, Cheetah Leopard Onesie",
