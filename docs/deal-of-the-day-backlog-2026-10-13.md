@@ -1,61 +1,60 @@
-# Buy Better Finds — Existing-Catalog Deal of the Day Backlog
+# Buy Better Finds — Deal of the Day Rotation
 **Planning window:** October 13–November 11, 2026  
-**Source of candidates:** Existing product entries in `src/data/products.js` and the current catalog. No new products are being added for this backlog.
+**Source:** Existing catalog entries only. No new products were added.
 
-## Rules
-- This is a rotation plan, not an automatic publication schedule. Keep the current live Deal of the Day in place until the day's candidate passes checks.
-- Every live link must point directly to the exact Amazon product detail page and include `tag=buybetterfi06-20`. Never publish search-result links.
-- Confirm ASIN-to-product match, live price, discount, rating/review count, stock, seller, and a working image on publishing day.
-- Some existing catalog records have known or suspected ASIN/URL mismatches. **Do not publish a candidate if its Amazon detail page does not match the listed product.** Fix that existing catalog entry or skip it.
-- Do not reuse the separate Buy Better Finds Pick as Deal of the Day. In particular, the October 12 KitchenAid silicone oven mitts are a Pick draft, not a Deal of the Day slot.
-- Avoid immediate repeats of recently featured products: Anker Nano Power Bank, Apple AirPods 5, Solo Stove Tower, Shark Navigator Lift-Away, Dyson V8, LEGO City Lava Land Roller Coaster Park, CrunchLabs The Crunchinator, and MAGNA-TILES Undersea Adventure.
-- Product ratings and discounts must be checked fresh. A Buy Better Score is not the same as an Amazon star rating.
+The permanent Deal of the Day page now has a 30-date slug schedule in `src/pages/deal-of-the-day/index.astro`. The page chooses the scheduled product for the editorial date at build time.
 
-## 30-day rotation — existing catalog products only
+## 30-day schedule
 
-| Date | Existing catalog product | Category | Publish gate |
-|---|---|---|---|
-| Tue, Oct 13 | Samsung T7 Shield Portable SSD 2TB | Tech | Confirm ASIN B09VLHR4JC matches the exact capacity/model and image; check today's price. |
-| Wed, Oct 14 | JBL Charge 5 Portable Bluetooth Speaker | Tech | Confirm ASIN B08VDNCZT9, rating, color/variant and live markdown. |
-| Thu, Oct 15 | Logitech MX Keys S Wireless Keyboard | Tech | Confirm ASIN B0BKW3LB2B and layout/variant; verify discount. |
-| Fri, Oct 16 | Anker 737 Power Bank (PowerCore 24K) | Tech | Confirm ASIN B09VPHVT2Z and exact model; avoid claiming a deal without a verified markdown. |
-| Sat, Oct 17 | Amazon Echo Show 8 | Smart Home | Confirm ASIN B0BLS3Y632 matches the catalog model/generation; check price and seller. |
-| Sun, Oct 18 | KitchenAid Artisan Series 5-Quart Stand Mixer | Home & Kitchen | Confirm ASIN B00005UP2K, color and bowl/model details; do not use the separate oven-mitts Pick. |
-| Mon, Oct 19 | OXO Good Grips Salad Spinner | Home & Kitchen | Confirm ASIN B00004OCKR and exact size; verify current price and image. |
-| Tue, Oct 20 | OXO Good Grips 9-Inch Tongs with Silicone Heads | Home & Kitchen | Confirm ASIN B003L0OYJ4 and exact product page; check discount. |
-| Wed, Oct 21 | OXO Good Grips Garlic Press | Home & Kitchen | Confirm ASIN B00HEZ888K and exact model; check review quality. |
-| Thu, Oct 22 | OXO Good Grips Swivel Peeler | Home & Kitchen | Confirm ASIN B00004OCIP and image match; verify a meaningful markdown. |
-| Fri, Oct 23 | OXO Good Grips 4-Inch Pizza Wheel | Home & Kitchen | Confirm ASIN B00004OCJN and exact item; verify current price. |
-| Sat, Oct 24 | OXO 3-in-1 Avocado Slicer | Home & Kitchen | Confirm ASIN B0088LR5EW; verify listing, reviews and discount. |
-| Sun, Oct 25 | OXO One Stop Chop Manual Food Processor | Home & Kitchen | Confirm ASIN B07BZHCRLS and exact product; check live deal. |
-| Mon, Oct 26 | OXO Good Grips Etched Medium Grater | Home & Kitchen | Confirm ASIN B07V49WGRQ and exact item; verify markdown. |
-| Tue, Oct 27 | OXO Good Grips Everyday Cutting Board | Home & Kitchen | Confirm ASIN B0836229FZ and exact variant; check price and image. |
-| Wed, Oct 28 | Amazon Echo Show 5 (3rd Gen) | Smart Home | Confirm ASIN B09B2SBHQK and generation; verify current deal. |
-| Thu, Oct 29 | Ring Pan-Tilt Indoor Cam | Smart Home | Confirm ASIN B0CG2VS5FD and exact camera; check price and subscription caveats. |
-| Fri, Oct 30 | Blink Outdoor 4 | Smart Home | Confirm ASIN B0DHLSZXQD, bundle contents and seller; verify discount. |
-| Sat, Oct 31 | Amazon Smart Thermostat | Smart Home | Confirm ASIN B08J4C8871 and compatibility notes; verify current price. |
-| Sun, Nov 1 | MEATER Plus | Smart Home / Kitchen | Confirm ASIN B07H8WTFHW and included probe/accessories; check markdown. |
-| Mon, Nov 2 | Brightech Ambience Pro Solar String Lights | Outdoor | Confirm ASIN B075NS8YXG and exact solar-string-light variant; image must match. |
-| Tue, Nov 3 | Sunco Square Solar Pathway Lights 4-Pack | Outdoor | Confirm ASIN B0CNBS4XD5, pack count and light color; verify live price. |
-| Wed, Nov 4 | Keter Circa 37-Gallon Deck Box | Outdoor | **High scrutiny:** catalog URL/ASIN mapping must be checked against the exact product before use. |
-| Thu, Nov 5 | Ooni Karu 2 12-Inch Multi-Fuel Pizza Oven | Outdoor | Confirm ASIN B0DQ8R4TYT and exact model; verify price and included fuel accessories. |
-| Fri, Nov 6 | Maybelline Lash Sensational Sky High Mascara | Beauty & Personal Care | Confirm ASIN B08H3JPH74 and exact variant; check rating and markdown. |
-| Sat, Nov 7 | Hero Cosmetics Mighty Patch Original | Beauty & Personal Care | Confirm ASIN B074PVTPBW, count/variant and seller; verify current deal. |
-| Sun, Nov 8 | EltaMD UV Clear Broad-Spectrum SPF 46 | Beauty & Personal Care | Confirm ASIN B002MSN3QQ, size/formula and seller; verify price. |
-| Mon, Nov 9 | LEGO Harry Potter Hogwarts Castle (71043) | Toys & Games | Confirm ASIN B07GH953JN and set number; check live price and image. |
-| Tue, Nov 10 | Snap Circuits Jr. SC-100 | Toys & Games | Confirm ASIN B00008BFZH and kit contents; verify price and rating. |
-| Wed, Nov 11 | Garmin Forerunner 265 | Fitness | Confirm the existing catalog's exact ASIN/model/size and current price before publishing. |
+| Date | Existing catalog product |
+|---|---|
+| Tue, Oct 13 | NOCO Boost Plus GB40 1000A Jump Starter |
+| Wed, Oct 14 | Ring Battery Doorbell 2K Plus |
+| Thu, Oct 15 | Logitech MX Master 3S |
+| Fri, Oct 16 | Ninja 4-Qt Air Fryer AF101 |
+| Sat, Oct 17 | Hydro Flask 32 oz Wide Mouth with Flex Straw Cap |
+| Sun, Oct 18 | DEWALT 20V MAX Compact Drill/Driver Kit DCD771C2 |
+| Mon, Oct 19 | BowFlex SelectTech 552 Adjustable Dumbbells |
+| Tue, Oct 20 | LEGO Botanicals Tiny Plants |
+| Wed, Oct 21 | PETLIBRO Wi-Fi Automatic Pet Feeder |
+| Thu, Oct 22 | AstroAI L7 Cordless Tire Inflator |
+| Fri, Oct 23 | Instant Vortex Plus Air Fryer |
+| Sat, Oct 24 | Fresh Step Clumping Cat Litter |
+| Sun, Oct 25 | LEGO Botanicals Lucky Bamboo |
+| Mon, Oct 26 | TP-Link Kasa Smart Outdoor Plug EP40M |
+| Tue, Oct 27 | Klein Tools 32500 11-in-1 Screwdriver/Nut Driver |
+| Wed, Oct 28 | Amazon Basics Neoprene Dumbbells |
+| Thu, Oct 29 | Veken Cat Water Fountain (95 oz) |
+| Fri, Oct 30 | Etekcity EL11 Digital Luggage Scale |
+| Sat, Oct 31 | Yes4All Cast Iron Kettlebell |
+| Sun, Nov 1 | Solo Stove Bonfire 2.0 Smokeless Fire Pit |
+| Mon, Nov 2 | Bitzee Interactive Digital Pet |
+| Tue, Nov 3 | Fit Simplify Resistance Loop Exercise Bands |
+| Wed, Nov 4 | ROVE R2-4K DUAL Dash Cam |
+| Thu, Nov 5 | Crayola Light Up Tracing Pad |
+| Fri, Nov 6 | MQRW Push Up Board |
+| Sat, Nov 7 | MAGNA-TILES Clear Colors 32-Piece Set |
+| Sun, Nov 8 | Earth Rated Unscented Dog Waste Bags |
+| Mon, Nov 9 | Klein Tools NCVT1P Non-Contact Voltage Tester |
+| Tue, Nov 10 | LEGO Botanicals Plum Blossom |
+| Wed, Nov 11 | NOCO Boost HD GB70 2000A Jump Starter |
 
-## Daily publishing checklist
-- [ ] Candidate is already in the site's product catalog
-- [ ] Amazon product page matches the exact name, ASIN, variant and image
-- [ ] Live price, rating, review count, stock and seller rechecked
-- [ ] Discount is real and current; no expired Prime Day price claims
-- [ ] Direct affiliate URL includes `tag=buybetterfi06-20`
-- [ ] Image loads on the site and matches the product; no fallback/placeholder
-- [ ] Copy includes concise “why it's a deal” and “what to know”
+## Required deal checks
+This schedule is a candidate rotation from existing listings; it does **not** prove that each product has a live discount. Before promoting any item as a deal, check:
+- The Amazon product page matches the product name, ASIN, selected variant, and image.
+- Current price, reference price/discount, rating, review count, seller, and stock.
+- The direct Amazon product-detail link includes `tag=buybetterfi06-20`; never use search-result links.
+- The image loads and matches the exact product; do not publish a broken image or placeholder.
+- Skip a candidate if the listing is mismatched or the discount is not compelling. Choose another already-listed product instead.
+
+## Deployment note
+The current page's editorial date is determined at build time. **The page must be rebuilt/deployed for the next date's scheduled product to appear** unless a daily scheduled build is configured separately. The code change alone does not guarantee the page changes at midnight. Verify the Cloudflare deployment and live page after publishing.
+
+## Publishing checklist
+- [ ] Current Amazon price and discount verified
+- [ ] Exact ASIN, variant, seller, rating and review count checked
+- [ ] Direct affiliate product link checked
+- [ ] Product image loads and matches
+- [ ] Buy Better Score is not presented as an Amazon star rating
 - [ ] Affiliate disclosure remains visible
-- [ ] Deal of the Day date/rotation is correct
-- [ ] Social caption is ready and links directly to the product
-
-**Status:** Existing-catalog candidates only. This backlog has not changed the live rotation or marked the products as verified deals. If an existing catalog URL is wrong or a candidate has no compelling current discount, skip it rather than publish a bad link; choose another already-listed product.
+- [ ] Social caption links directly to the product
