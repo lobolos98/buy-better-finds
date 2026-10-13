@@ -647,4 +647,19 @@ export const halloweenProducts = [
     "url": "https://www.amazon.com/dp/0545174805?tag=buybetterfi06-20",
     "score": 8.5
   }
+  {
+    "slug": "halloween-giftinbox-girls-cat-costume-b0fg81mlhx",
+    "name": "GIFTINBOX Halloween Cat Costume for Girls, Cheetah Leopard Onesie",
+    "category": "Kids Halloween Costumes",
+    "price": "Check Amazon price",
+    "icon": "🐈‍⬛",
+    "image": "https://m.media-amazon.com/images/I/81PhtTcpE1L.jpg",
+    "imageAlt": "GIFTINBOX girls' leopard-print cat costume onesie with hood, paw gloves, and tail",
+    "amazonAsin": "B0FG81MLHX",
+    "bestFor": "Kids ages 3–10, Halloween dress-up, cosplay, and birthday parties",
+    "why": "A playful hooded animal onesie with a 3D cat-style hood, leopard-print look, and costume details for Halloween and imaginative dress-up.",
+    "watch": "Check the Amazon listing for the available color, size, age fit, and current price before ordering.",
+    "url": "https://www.amazon.com/dp/B0FG81MLHX?tag=buybetterfi06-20",
+    "score": 8.5
+  },
 ];
