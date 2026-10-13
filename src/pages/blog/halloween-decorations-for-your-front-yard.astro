@@ -1,5 +1,8 @@
 ---
 import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
+import BlogProductPicks from '../../components/BlogProductPicks.astro';
+import { halloweenProducts } from '../../data/halloween-products.js';
+const pick = (asins) => asins.map((asin) => halloweenProducts.find((p) => p.amazonAsin === asin)).filter(Boolean);
 const title = 'Halloween Yard Decorations: Ideas for a Spooky Front Yard | The Finds Edit';
 const description = 'Plan a Halloween front yard with a statement decoration, warm lighting, pumpkins, and coordinated details—without overspending.';
 const categoryUrl = '/categories/seasonal-holidays/halloween/';
@@ -24,12 +27,15 @@ const image = 'https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto
           <h2 id="statement">01. Choose one statement decoration</h2>
           <p>Give your display a focal point. An oversized skeleton, a dramatic inflatable, or a cluster of tall props can anchor the scene. Keep the largest item visible from the sidewalk, then leave some open space around it so it stands out.</p>
           <div class="tip-card"><span>THE QUICK TAKE</span><p>Pick the centerpiece first. It makes the rest of the shopping list easier—and helps prevent impulse buys that don't fit the look.</p></div>
+          <BlogProductPicks title="Start with a statement" description="Two centerpiece options from our existing Halloween collection." products={pick(["B0B55V36F1","B0C6PXQWCH"])} />
           <h2 id="lighting">02. Layer in glowing pumpkins and lighting</h2>
           <p>Warm orange lights help connect separate decorations into one display. Place lighted pumpkins near steps or walkways, and use lanterns to guide the eye toward the entrance. Battery-powered options can be convenient where an outlet isn't nearby; check each product's power source and weather rating.</p>
+          <BlogProductPicks title="Add a warm Halloween glow" description="Lighting options to help pull the display together." products={pick(["B08YJQ8V1X","B0CMM4T6XV"])} />
           <h2>03. Add atmosphere after dark</h2>
           <p>Colored spotlights, window lighting, or a fog effect can add depth after dark. Before purchasing outdoor lighting or a fog machine, check whether it's rated for outdoor use, how it is powered, and what setup or supervision it requires. Keep cords out of walking paths and follow the manufacturer's safety directions.</p>
           <h2 id="details">04. Finish with smaller details</h2>
           <p>Bat silhouettes, a wreath, skull accents, and webbing can tie the display together without competing with the focal point. Repeat a few colors—such as black, orange, and purple—instead of mixing every style you see.</p>
+          <BlogProductPicks title="Finish the look" description="Small accents that complement the main decoration." products={pick(["B07DNB1MDQ","B09ZDP7BTN"])} />
           <h2 id="budget">05. Set a budget before you shop</h2>
           <p>Decide which one or two pieces matter most, then add lower-cost accents if the budget allows. Check dimensions, setup requirements, storage needs, customer photos where available, and return details before choosing a decoration. Don't rely on a discount label alone to decide whether something is a good value.</p>
           <div class="shop-card"><p class="section-kicker">THE SEASONAL EDIT</p><h2>Ready to bring your Halloween look together?</h2><p>Browse our Halloween collection for yard props, lighted accents, and spooky finishing touches. Review current listing details before you buy.</p><a href={categoryUrl}>Explore Halloween finds <span aria-hidden="true">↗</span></a></div>
