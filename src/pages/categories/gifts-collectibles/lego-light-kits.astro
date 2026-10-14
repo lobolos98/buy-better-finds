@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-const kits = [{"name":"SpongeBob SquarePants Bikini Bottom","set":"11386","url":"https://brkox.com/products/light-kit-for-lego-spongebob-squarepants-bikini-bottom-11386"},{"name":"Harry Potter Diagon Alley","set":"75978","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-diagon-alley%E2%84%A2-set-75978"},{"name":"Holiday Main Street","set":"10308","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-holiday-main-street-10308"},{"name":"The Globe","set":"21332","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-the-globe-21332"},{"name":"Winter Village Station","set":"10259","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-winter-village-station-10259"},{"name":"Death Star","set":"75419","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419"}];
+const kits = [{"name":"SpongeBob SquarePants Bikini Bottom","set":"11386","url":"https://brkox.com/products/light-kit-for-lego-spongebob-squarepants-bikini-bottom-11386"}];
 const affiliate = (url) => 'https://www.awin1.com/cread.php?awinmid=129093&awinaffid=3119041&ued=' + encodeURIComponent(url);
 ---
 <BaseLayout title="LEGO-Compatible Lighting Kits | Buy Better Finds" description="Explore BRKOX LED lighting accessories for LEGO builds, organized by compatible set number. LEGO sets sold separately.">
@@ -12,7 +12,7 @@ const affiliate = (url) => 'https://www.awin1.com/cread.php?awinmid=129093&awina
 <div class="kit-grid">
 {kits.map(kit => <article class="kit-card"><span class="set">Compatible set #{kit.set}</span><h2>{kit.name}</h2><p>Confirm your set number and select the lighting version on BRKOX before ordering.</p><a class="kit-link" href={affiliate(kit.url)} target="_blank" rel="nofollow sponsored noopener">View lighting kit at BRKOX →</a></article>)}
 </div>
-<p>More products and verified manufacturer images will be added as their individual listings are checked. No substitute or placeholder product imagery is used.</p>
+<p>Additional BRKOX products will be added after their exact product URLs and manufacturer images are verified. No placeholder imagery is used. No substitute or placeholder product imagery is used.</p>
 </main>
 <style>
 .kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin:2rem 0}.kit-card{border:1px solid #d9dfe8;border-radius:14px;padding:1.5rem;background:white;color:#17243b}.kit-card h2{font-size:1.25rem;margin:.7rem 0}.kit-card p{line-height:1.55}.set{font-size:.85rem;color:#56667c}.kit-link{display:inline-block;background:#003087;color:white;padding:.8rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:.6rem}
