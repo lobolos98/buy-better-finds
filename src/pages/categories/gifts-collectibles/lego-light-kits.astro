@@ -1,20 +1,27 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const kits = [{"name":"SpongeBob SquarePants Bikini Bottom","set":"11386","url":"https://brkox.com/products/light-kit-for-lego-spongebob-squarepants-bikini-bottom-11386"},{"name":"Harry Potter Diagon Alley","set":"75978","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-diagon-alley%E2%84%A2-set-75978"},{"name":"Holiday Main Street","set":"10308","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-holiday-main-street-10308"},{"name":"Winter Village Station","set":"10259","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-winter-village-station-10259"},{"name":"Death Star","set":"75419","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419"},{"name":"The Legend of Zelda Great Deku Tree 2-in-1","set":"77092","url":"https://brkox.com/products/led-light-kit-compatible-with-lego%C2%AE-the-legend-of-zelda-great-deku-tree-2-in-1-set-77092"}];
+const legoPages = {
+  '75978':'https://www.lego.com/en-us/product/diagon-alley-75978',
+  '10308':'https://www.lego.com/en-us/product/holiday-main-street-10308',
+  '10259':'https://www.lego.com/en-us/product/winter-village-station-10259',
+  '77092':'https://www.lego.com/en-us/product/great-deku-tree-2-in-1-77092'
+};
+const amazonSets = {'10308':'https://www.amazon.com/dp/B0BBSW13CH?tag=buybetterfi06-20'};
 const affiliate = (url) => 'https://www.awin1.com/cread.php?awinmid=129093&awinaffid=3119041&ued=' + encodeURIComponent(url);
 ---
-<BaseLayout title="LEGO-Compatible Lighting Kits | Buy Better Finds" description="Explore BRKOX LED lighting accessories for LEGO builds, organized by compatible set number. LEGO sets sold separately.">
+<BaseLayout title="LEGO Sets & Lighting Kits | Buy Better Finds" description="Match LEGO building sets with compatible BRKOX LED lighting accessories. Shop each item separately.">
 <main class="container" style="padding:3rem 1rem 5rem">
 <p><a href="/categories/gifts-collectibles/">← Gifts &amp; Collectibles</a></p>
-<h1>Lighting kits for LEGO® displays</h1>
-<p>Make your completed build shine. These independent BRKOX lighting accessories are designed for specific LEGO® set numbers. <strong>These listings are for lighting kits only; LEGO sets are not included.</strong></p>
-<p style="font-size:.9rem">Disclosure: We may earn a commission when you purchase through BRKOX links on this page. LEGO® is a trademark of the LEGO Group; BRKOX lighting kits are independent accessories, not official LEGO® products.</p>
+<h1>LEGO® Sets &amp; Lighting Kits</h1>
+<p>Find the matching LEGO building set and an independent BRKOX lighting accessory for your display. <strong>Building sets and lighting kits are separate purchases.</strong></p>
+<p style="font-size:.9rem">Disclosure: As an Amazon Associate we earn from qualifying purchases. We may also earn commissions from BRKOX affiliate purchases. LEGO® is a trademark of the LEGO Group; BRKOX lighting kits are independent accessories, not official LEGO® products.</p>
 <div class="kit-grid">
-{kits.map(kit => <article class="kit-card"><span class="set">Compatible set #{kit.set}</span><h2>{kit.name}</h2><p>Confirm your set number and select the lighting version on BRKOX before ordering.</p><a class="kit-link" href={affiliate(kit.url)} target="_blank" rel="nofollow sponsored noopener">View lighting kit at BRKOX →</a></article>)}
+{kits.map(kit => <article class="kit-card"><span class="set">Compatible set #{kit.set}</span><h2>{kit.name}</h2><p>Two separate products for the same set number. Confirm compatibility before ordering.</p><div class="buy-pair"><div><strong>1. LEGO building set</strong><p>Building bricks and instructions; lighting not included.</p>{amazonSets[kit.set] ? <a class="kit-link" href={amazonSets[kit.set]} target="_blank" rel="nofollow sponsored noopener">View LEGO set on Amazon →</a> : legoPages[kit.set] ? <a class="kit-link secondary" href={legoPages[kit.set]} target="_blank" rel="noopener">View set details at LEGO →</a> : <span class="unverified">Amazon listing pending exact-product verification</span>}</div><div><strong>2. BRKOX lighting kit</strong><p>Optional lighting accessory; LEGO building set not included.</p><a class="kit-link" href={affiliate(kit.url)} target="_blank" rel="nofollow sponsored noopener">View lighting kit at BRKOX →</a></div></div></article>)}
 </div>
-<p>These destinations have been checked against BRKOX product pages. Manufacturer images will be added after their source files are individually verified; no placeholder imagery is used. No substitute or placeholder product imagery is used.</p>
+<p>Manufacturer images will be added only after verification. LEGO links without a confirmed Amazon product-detail listing lead to official LEGO product information where available. No search-result links or placeholder images.</p>
 </main>
 <style>
-.kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin:2rem 0}.kit-card{border:1px solid #d9dfe8;border-radius:14px;padding:1.5rem;background:white;color:#17243b}.kit-card h2{font-size:1.25rem;margin:.7rem 0}.kit-card p{line-height:1.55}.set{font-size:.85rem;color:#56667c}.kit-link{display:inline-block;background:#003087;color:white;padding:.8rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:.6rem}
+.buy-pair{display:grid;gap:1rem;margin-top:1rem}.buy-pair>div{border-top:1px solid #d9dfe8;padding-top:1rem}.buy-pair p{font-size:.9rem}.kit-link.secondary{background:#e8eef7;color:#003087}.unverified{display:block;font-size:.85rem;color:#56667c}.kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin:2rem 0}.kit-card{border:1px solid #d9dfe8;border-radius:14px;padding:1.5rem;background:white;color:#17243b}.kit-card h2{font-size:1.25rem;margin:.7rem 0}.kit-card p{line-height:1.55}.set{font-size:.85rem;color:#56667c}.kit-link{display:inline-block;background:#003087;color:white;padding:.8rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;margin-top:.6rem}
 </style>
 </BaseLayout>
