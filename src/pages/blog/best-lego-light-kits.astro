@@ -21,7 +21,7 @@ const getKitImage = async (kit) => {
     if (!new RegExp('(?:^|\\D)' + kit.set + '(?:\\D|$)').test(productTitle)) return '';
     const images = Array.isArray(data.images) ? data.images : [];
     const image = images.find((src) => {
-      try { const u = new URL(src, 'https://brkox.com'); return u.protocol === 'https:' && ((u.hostname === 'brkox.com' && u.pathname.includes('/cdn/shop/')) || /(^|\\.)shopify\\.com$/.test(u.hostname)); } catch { return false; }
+      try { const u = new URL(src, 'https://brkox.com'); return u.protocol === 'https:' && ((u.hostname === 'brkox.com' && u.pathname.includes('/cdn/shop/')) || /(^|\.)shopify\.com$/.test(u.hostname)); } catch { return false; }
     });
     return image || '';
   } catch { return ''; }
