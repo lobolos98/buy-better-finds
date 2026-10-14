@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const kits = [{"name":"SpongeBob SquarePants Bikini Bottom","set":"11386","url":"https://brkox.com/products/light-kit-for-lego-spongebob-squarepants-bikini-bottom-11386"},{"name":"Harry Potter Diagon Alley","set":"75978","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-diagon-alley%E2%84%A2-set-75978"},{"name":"Holiday Main Street","set":"10308","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-holiday-main-street-10308"},{"name":"Winter Village Station","set":"10259","url":"https://brkox.com/products/light-kit-for-lego%C2%AE-winter-village-station-10259"},{"name":"Death Star","set":"75419","url":"https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419"},{"name":"The Legend of Zelda Great Deku Tree 2-in-1","set":"77092","url":"https://brkox.com/products/led-light-kit-compatible-with-lego%C2%AE-the-legend-of-zelda-great-deku-tree-2-in-1-set-77092"}];
-const amazonSets = {'75419':'https://www.amazon.com/dp/B0FMS7Y4NN?tag=buybetterfi06-20'}; // Exact Death Star 75419 listing supplied by the site owner.
+const amazonSets = {'75419':'https://www.amazon.com/dp/B0FMS7Y4NN?tag=buybetterfi06-20','77092':'https://www.amazon.com/dp/B0DG2RXK46?tag=buybetterfi06-20'}; // Exact listings supplied by the site owner; 77092/ASIN match verified.
 // Fetch each image from its exact BRKOX product record during the Astro build.
 // Never use a substitute photo, a search image, or a placeholder.
 const imageResults = await Promise.all(kits.map(async (kit) => {
