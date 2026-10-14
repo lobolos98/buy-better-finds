@@ -29,8 +29,17 @@ const guides = [
   ['Best Tech Products','best-tech','◈'],['Best Home & Kitchen Products','best-home-kitchen','⌂'],['Best Tools & DIY Products','best-tools-diy','⚒'],['Best Outdoor Products','best-outdoor','☼'],['Best Products Under $100','best-products-under-100','★']
 ];
 const featured = validCatalog[0];
-const deal = getDealOfTheDay(validCatalog) ?? validCatalog[0];
-const dailyDealSchedule = validCatalog.filter((p) => p.dailyDealDate && p.image && p.slug).map((p) => ({ date: p.dailyDealDate, name: p.name, image: p.image, imageAlt: p.imageAlt, category: p.category, why: p.why, bestFor: p.bestFor, slug: p.slug, amazonUrl: p.amazonUrl || (p.amazonAsin ? amazonProductUrl(p.amazonAsin) : '') }));
+const rotationStart = '2026-10-14';
+const rotationStartMs = Date.parse(rotationStart + 'T12:00:00Z');
+const alreadyScheduled = new Set(validCatalog.filter(p => p.dailyDealDate).map(p => p.slug));
+const rotationCandidates = validCatalog.filter(p => p.slug && p.image && (p.amazonAsin || (p.amazonUrl && p.amazonUrl.includes('/dp/'))) && !alreadyScheduled.has(p.slug));
+const rotation = rotationCandidates.slice(0, 30).map((p, i) => ({
+  ...p,
+  dailyDealDate: new Date(rotationStartMs + i * 86400000).toISOString().slice(0, 10)
+}));
+const allScheduledDeals = [...validCatalog.filter(p => p.dailyDealDate && p.dailyDealDate < rotationStart), ...rotation];
+const deal = getDealOfTheDay(allScheduledDeals) ?? validCatalog[0];
+const dailyDealSchedule = allScheduledDeals.filter((p) => p.dailyDealDate && p.image && p.slug).map((p) => ({ date: p.dailyDealDate, name: p.name, image: p.image, imageAlt: p.imageAlt, category: p.category, why: p.why, bestFor: p.bestFor, slug: p.slug, amazonUrl: p.amazonUrl || (p.amazonAsin ? amazonProductUrl(p.amazonAsin) : '') }));
 const editorChoices = ['sony-wh-1000xm5-tech','dewalt-dck240c2','garmin-forerunner-265'].map((slug) => validCatalog.find((p) => p?.slug === slug)).filter(Boolean);
 const dealAlternates = [validCatalog.find((p) => p?.slug === 'apple-airpods-4'), validCatalog.find((p) => p?.slug === 'lego-botanicals-mushrooms'), validCatalog.find((p) => p?.slug === 'disney-stitch-plush')].filter(Boolean);
 const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, product: validCatalog.find((p) => p?.slug === trend.slug) })).filter((item) => item.product);
