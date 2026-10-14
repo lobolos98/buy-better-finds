@@ -1,0 +1,133 @@
+---
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
+
+const title = 'Best LEGO Light Kits: 6 Ways to Upgrade Your Display | The Finds Edit';
+const description = 'Compare six BRKOX light kits for compatible LEGO builds, learn how to match the exact set number, and know what to check before buying.';
+const image = 'https://brkox.com/cdn/shop/files/LEGO-Death-Star-75419-light-kit-featured.jpg';
+const kits = [
+  { set: '75419', name: 'LEGO Star Wars Death Star', slug: 'light-kit-compatible-with-lego%C2%AE-death-star-set-75419', url: 'https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419', audience: 'Collectors looking for a dramatic centerpiece', detail: 'BRKOX describes lighting for interior scenes including the trench, hangar bay, detention block, and throne room.' },
+  { set: '77092', name: 'LEGO The Legend of Zelda Great Deku Tree 2-in-1', slug: 'led-light-kit-compatible-with-lego%C2%AE-the-legend-of-zelda-great-deku-tree-2-in-1-set-77092', url: 'https://brkox.com/products/led-light-kit-compatible-with-lego%C2%AE-the-legend-of-zelda-great-deku-tree-2-in-1-set-77092', audience: 'Fantasy and gaming fans', detail: 'The product description highlights multi-color lighting for the canopy, entrance, shrine, and tree face.' },
+  { set: '10259', name: 'LEGO Winter Village Station', slug: 'light-kit-for-lego%C2%AE-winter-village-station-10259', url: 'https://brkox.com/products/light-kit-for-lego%C2%AE-winter-village-station-10259', audience: 'Winter village and holiday displays', detail: 'A seasonal building option to consider when you want your village scene to stand out after dark.' },
+  { set: '75978', name: 'LEGO Harry Potter Diagon Alley', slug: 'light-kit-compatible-with-lego%C2%AE-diagon-alley%E2%84%A2-set-75978', url: 'https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-diagon-alley%E2%84%A2-set-75978', audience: 'Wizarding World fans and detailed streetscapes', detail: 'A lighting upgrade to explore for a display built around shopfronts and architectural details.' },
+  { set: '10308', name: 'LEGO Holiday Main Street', slug: 'light-kit-for-lego%C2%AE-holiday-main-street-10308', url: 'https://brkox.com/products/light-kit-for-lego%C2%AE-holiday-main-street-10308', audience: 'Festive town and Christmas displays', detail: 'A companion lighting option for a holiday-themed street scene.' },
+  { set: '11382', name: 'LEGO Icons Hubble Space Telescope', slug: 'light-kit-for-lego-hubble-space-telescope-11382', url: 'https://brkox.com/products/light-kit-for-lego-hubble-space-telescope-11382', audience: 'Space enthusiasts and science-themed displays', detail: 'A space-focused option for collectors who prefer a telescope model over buildings or movie scenes.' }
+];
+const awinLink = (url) => 'https://www.awin1.com/cread.php?awinmid=129093&awinaffid=3119041&ued=' + encodeURIComponent(url);
+const getKitImage = async (kit) => {
+  try {
+    const response = await fetch(kit.url + '.js');
+    if (!response.ok) return '';
+    const data = await response.json();
+    const productTitle = String(data.title || '');
+    if (!new RegExp('(?:^|\\D)' + kit.set + '(?:\\D|$)').test(productTitle)) return '';
+    const images = Array.isArray(data.images) ? data.images : [];
+    const image = images.find((src) => {
+      try { const u = new URL(src); return u.protocol === 'https:' && /(^|\\.)shopify\\.com$/.test(u.hostname); } catch { return false; }
+    });
+    return image || '';
+  } catch { return ''; }
+};
+const imageResults = await Promise.all(kits.map(async (kit) => ({ ...kit, image: await getKitImage(kit), affiliateUrl: awinLink(kit.url) })));
+---
+<BlogArticleLayout
+  title={title}
+  description={description}
+  image={imageResults.find((kit) => kit.set === '75419')?.image || undefined}
+  imageAlt="BRKOX lighting kit for the LEGO Death Star set 75419"
+  category="COLLECTOR'S EDIT"
+  dek="A lighting kit can make a finished build feel like a display piece. The key is choosing one made for your exact set number, then checking its lighting options, power requirements, and installation details."
+  readingTime="7 MIN READ"
+  related={[{title:'Explore our LEGO light-kit collection',href:'/categories/gifts-collectibles/lego-light-kits/'},{title:'Browse practical buying guides',href:'/guides/'}]}
+>
+  <span slot="caption">Lighting accessories can add depth to a completed build. The compatible LEGO model is sold separately.</span>
+  <a slot="contents" href="#quick-picks">Six kits to consider</a>
+  <a slot="contents" href="#compare">Compare by display style</a>
+  <a slot="contents" href="#choose">How to choose a kit</a>
+  <a slot="contents" href="#install">Installation and power</a>
+  <a slot="contents" href="#faq">FAQs</a>
+
+  <p>After spending hours building a LEGO model, it makes sense to want it to look just as impressive on a shelf as it did during the build. A compatible lighting kit can draw attention to small details, add atmosphere, and help a display stand out in a room with softer lighting.</p>
+  <p>For this guide, we selected six BRKOX kits that pair with different display styles: a large sci-fi model, a fantasy tree, two holiday scenes, a detailed magical shopping street, and a space model. These are options to compare—not hands-on test results or a claim that one kit is best for everyone.</p>
+
+  <h2 id="quick-picks">Six LEGO light kits to consider</h2>
+  <p>Before ordering, open the product page and confirm the exact set number, current kit versions, included components, and price. BRKOX offers different versions for some models, and those options can affect features and cost.</p>
+  <div class="kit-grid">
+    {imageResults.map((kit) => <article class="kit-card">
+      {kit.image ? <a class="kit-photo" href={kit.affiliateUrl} target="_blank" rel="sponsored noopener noreferrer"><img src={kit.image} alt={`BRKOX light kit compatible with LEGO set ${kit.set}: ${kit.name}`} loading="lazy" referrerpolicy="no-referrer" /></a> : <div class="kit-photo no-photo" aria-label="Product image unavailable">Open product page to view photos</div>}
+      <div class="kit-copy">
+        <p class="kit-number">COMPATIBLE SET #{kit.set}</p>
+        <h3>{kit.name}</h3>
+        <p>{kit.detail}</p>
+        <p class="kit-best"><strong>Consider it for:</strong> {kit.audience}.</p>
+        <a class="kit-cta" href={kit.affiliateUrl} target="_blank" rel="sponsored noopener noreferrer">Shop matching kit at BRKOX <span aria-hidden="true">↗</span></a>
+        <p class="kit-note">Light kit only. LEGO model sold separately.</p>
+      </div>
+    </article>)}
+  </div>
+
+  <h2 id="compare">Compare by display style</h2>
+  <div class="compare-wrap"><table>
+    <thead><tr><th>Compatible set</th><th>Display style</th><th>What to check</th></tr></thead>
+    <tbody>
+      <tr><th>Death Star #75419</th><td>Sci-fi centerpiece</td><td>Available control version, lighting zones, USB power instructions</td></tr>
+      <tr><th>Great Deku Tree #77092</th><td>Fantasy and gaming</td><td>Lighting colors, version features, fit for the exact 2-in-1 set</td></tr>
+      <tr><th>Winter Village Station #10259</th><td>Winter village</td><td>Included lights, wiring route, power requirements</td></tr>
+      <tr><th>Diagon Alley #75978</th><td>Magical streetscape</td><td>Set-number match, light placement, installation access</td></tr>
+      <tr><th>Holiday Main Street #10308</th><td>Festive town scene</td><td>Version options and the display layout you want to illuminate</td></tr>
+      <tr><th>Hubble Space Telescope #11382</th><td>Space and science</td><td>Exact set compatibility, kit contents, and power setup</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small-note">The comparison is based on the intended display theme and details to verify on the listing. It is not a lab test or a ranking of brightness, durability, or installation difficulty.</p>
+
+  <h2 id="choose">How to choose the right kit</h2>
+  <h3>1. Match the exact set number</h3>
+  <p>Start with the number printed on your LEGO box or instructions, not just the model name. Similar sets and editions can have different internal layouts. Confirm that the BRKOX listing names the same set number before adding it to your cart.</p>
+  <h3>2. Compare the available versions</h3>
+  <p>Some listings offer more than one version, such as a classic setup or a remote-control option. Read the option descriptions carefully and confirm what is included with the specific version selected. Don't assume every version has the same controls, effects, or accessories.</p>
+  <h3>3. Think about where the model will sit</h3>
+  <p>A display in a cabinet may need a different cable route from a model on an open shelf. Check where the power cable exits, whether the USB connection can reach your intended power source, and whether the finished model will remain easy to move or dust.</p>
+  <h3>4. Compare total cost—not just the headline price</h3>
+  <p>Check the selected kit version, shipping information, any power adapter requirements, return terms, and whether any optional accessories are sold separately. Prices and availability can change.</p>
+
+  <h2 id="install">What to know before installation</h2>
+  <p>Lighting kits can involve small LEDs and fine cables routed through a model. Depending on the build and kit, you may need to remove and replace a few bricks to position the lights. Read the kit-specific instructions first, work patiently, and avoid pulling tightly on wires or forcing bricks into place.</p>
+  <p>Check the listing and included instructions for the correct power source and voltage. A USB-powered kit does not automatically mean a USB power adapter is included. Keep cables arranged so they do not put strain on the model or create a trip hazard.</p>
+
+  <div class="tip-card"><span>THE QUICK TAKE</span><p>The safest shortcut is to verify the set number twice: once on your model or instructions, and once on the BRKOX product page. Then review the exact version and its included components before ordering.</p></div>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <h3>Does the light kit include the LEGO set?</h3>
+  <p>No. These are lighting accessories. The LEGO model and bricks are sold separately; the BRKOX product pages state this clearly.</p>
+  <h3>Can I install lights on a model that is already built?</h3>
+  <p>That depends on the kit and model. Some installations may require temporarily removing a few bricks to route lights and cables. Review the instructions for your exact kit before beginning.</p>
+  <h3>Are all kits powered the same way?</h3>
+  <p>No. Check the current product listing and instructions for the kit's power requirements, included cables, and whether an adapter is included or needed.</p>
+  <h3>Are these official LEGO products?</h3>
+  <p>No. These are third-party lighting accessories designed for compatible LEGO builds. LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize, or endorse these products.</p>
+
+  <div class="shop-card"><p class="section-kicker">THE COLLECTOR'S EDIT</p><h2>Find the kit for your own build</h2><p>Start with your exact set number, then compare photos, available versions, power guidance, and return terms on the matching product page.</p><a href="/categories/gifts-collectibles/lego-light-kits/">Explore our LEGO light-kit collection <span aria-hidden="true">↗</span></a></div>
+  <p class="closing-note">Affiliate disclosure: Buy Better Finds may earn a commission if you purchase through links to BRKOX. This guide is independently prepared and is not sponsored or endorsed by LEGO. Product descriptions are based on available listings; we have not claimed hands-on testing of these kits.</p>
+</BlogArticleLayout>
+<style>
+  .kit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:26px 0 32px;font-family:Arial,Helvetica,sans-serif}
+  .kit-card{display:flex;flex-direction:column;min-width:0;border:1px solid #e5ded2;background:#fff}
+  .kit-photo{display:flex;align-items:center;justify-content:center;aspect-ratio:1.25;background:#fff;padding:12px;overflow:hidden}
+  .kit-photo img{width:100%;height:100%;object-fit:contain}
+  .no-photo{font-size:.76rem;color:#77736c;text-align:center;background:#f0e9df}
+  .kit-copy{padding:17px;display:flex;flex-direction:column;align-items:stretch;flex:1}
+  .kit-number{font-size:.64rem!important;letter-spacing:.12em;font-weight:800;color:#c8102e;margin:0 0 8px!important}
+  .kit-copy h3{font-family:Arial,Helvetica,sans-serif;font-size:1.08rem;line-height:1.35;color:#142b45;margin:0 0 10px}
+  .kit-copy>p{font-family:Arial,Helvetica,sans-serif;font-size:.85rem;line-height:1.6;margin:0 0 11px}
+  .kit-best{color:#596168}
+  .kit-cta{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#c8102e;color:#fff!important;text-decoration:none;padding:12px 13px;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;font-weight:800;margin-top:auto}
+  .kit-note{font-size:.68rem!important;color:#77736c;margin:9px 0 0!important}
+  .compare-wrap{overflow-x:auto;margin:18px 0}
+  .compare-wrap table{border-collapse:collapse;width:100%;min-width:590px;font-family:Arial,Helvetica,sans-serif;font-size:.84rem;line-height:1.55}
+  .compare-wrap th,.compare-wrap td{padding:13px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #e5ded2}
+  .compare-wrap thead{background:#142b45;color:#fff}
+  .compare-wrap tbody th{color:#142b45}
+  .small-note{font-family:Arial,Helvetica,sans-serif;color:#77736c;font-size:.78rem!important;line-height:1.6!important}
+  .kit-copy h3{margin-top:0}
+  .story-body h3{font-family:Georgia,'Times New Roman',serif;color:#142b45;font-size:1.25rem;font-weight:600;line-height:1.35;margin:24px 0 8px}
+  @media(max-width:560px){.kit-grid{grid-template-columns:1fr}.kit-photo{aspect-ratio:1.35}.kit-copy{padding:15px}}
+</style>
