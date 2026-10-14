@@ -110,7 +110,7 @@ const legoImageResults = await Promise.all(legoFeaturedKits.map(async (kit) => {
     if (!response.ok) return null;
     const product = await response.json();
     const title = String(product.title || '');
-    if (!new RegExp('(?:^|\\\\D)' + kit.set + '(?:\\\\D|$)').test(title)) return null;
+    if (!new RegExp('(?:^|\\D)' + kit.set + '(?:\\D|$)').test(title)) return null;
     const image = product.featured_image || product.images?.[0];
     if (typeof image !== 'string') return null;
     const url = new URL(image.startsWith('//') ? 'https:' + image : image, kit.url);
