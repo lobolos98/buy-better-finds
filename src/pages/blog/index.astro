@@ -140,8 +140,9 @@ const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6
   .editorial-promo div>p:not(.section-kicker){font-size:.86rem;line-height:1.7;color:#62686c;margin:0 0 22px}
   .editorial-promo div>a{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.75rem;font-weight:800;text-decoration:none;color:var(--ink)}
    .lego-editorial-photo{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1.27;padding:22px;background:radial-gradient(circle at 75% 30%,#d5e5f3 0,transparent 32%),linear-gradient(140deg,#102b50,#1e456d 58%,#c8102e);color:#fff;text-decoration:none;overflow:hidden}
-  .lego-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-  .lego-editorial-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,18,31,.36),rgba(7,18,31,.16) 35%,rgba(7,18,31,.86));z-index:-1}
+  .lego-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .lego-editorial-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,18,31,.36),rgba(7,18,31,.16) 35%,rgba(7,18,31,.86));z-index:1}
+  .lego-editorial-photo > span{position:relative;z-index:2}
   .lego-editorial-kicker{font-size:.61rem;letter-spacing:.15em;font-weight:800}
   .lego-editorial-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.5rem,4vw,3.8rem);line-height:.88;letter-spacing:-.06em;font-weight:500}
   .lego-editorial-title em{font-weight:400;color:#f2c9d1}
