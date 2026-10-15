@@ -55,7 +55,6 @@ const items = await Promise.all(products.map(async (p) => {
   <a slot="contents" href="#shopping-tips">Shopping tips</a>
   <a slot="contents" href="#faq">Questions to consider</a>
 
-  <a class="brand-banner" href="https://www.awin1.com/cread.php?s=4038738&v=59383&q=529678&r=3119041" target="_blank" rel="sponsored noopener noreferrer"><img src="https://www.awin1.com/cshow.php?s=4038738&v=59383&q=529678&r=3119041" alt="Shop Sunshine Tienda — official affiliate creative" loading="eager" /></a>
   <p>Sunshine Tienda brings cheerful color to everyday accessories, with palm hats, statement jewelry, totes and easygoing apparel. If you prefer one memorable accessory over an entirely new outfit, this collection offers plenty of ways to experiment with pattern and texture.</p>
   <p>We selected ten products across different categories to make browsing easier. This is an independent editorial shopping guide, not a hands-on review. Product details, sizing, availability and current prices should always be checked on the merchant's listing.</p>
   <section class="visual-feature" aria-label="Sunshine Tienda featured product photographs"><div class="visual-feature-heading"><span>THE COLOR EDIT</span><h2>Bright details. Easy outfit inspiration.</h2><p>Browse genuine product photography from Sunshine Tienda's catalog, then explore each matching item below.</p></div><div class="visual-feature-grid">{items.filter(p => p.image).slice(0,4).map(p => <a href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank"><img src={p.image} alt={p.name} loading="lazy" /><strong>{p.name}</strong></a>)}</div></section>
@@ -98,7 +97,6 @@ const items = await Promise.all(products.map(async (p) => {
   <p class="closing-note">Affiliate disclosure: Buy Better Finds participates in affiliate programs including Awin. We may earn a commission on qualifying purchases made through links in this article, at no additional cost to you.</p>
 </BlogArticleLayout>
 <style>
-  .brand-banner{display:block;text-align:center;margin:22px 0 28px}.brand-banner img{display:inline-block;max-width:100%;height:auto}
   .visual-feature{margin:30px 0 40px;background:#f5e7dd;padding:24px}
   .visual-feature-heading>span{font:800 .65rem Arial,sans-serif;color:#c8102e;letter-spacing:.15em}
   .visual-feature-heading h2{margin:10px 0!important}
