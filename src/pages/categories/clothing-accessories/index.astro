@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const products = [
+  { name: 'Wildflower Tango Fable Top', slug: 'wildflower-tango-fable-top', category: 'CLOTHING', detail: 'A lightweight cotton top with a relaxed fit and a colorful floral print.', price: '$118.00' },
+  { name: 'Rainbow Confetti Necklace', slug: 'rainbow-confetti-necklace', category: 'JEWELRY', detail: 'A colorful statement necklace for adding a playful accent to simple outfits.', price: 'Check current price' },
+  { name: 'Painted Gingham Canvas Tote', slug: 'painted-gingham-canvas-tote', category: 'BAGS & TOTES', detail: 'A patterned canvas tote for errands, travel, or carrying everyday essentials.', price: '$98.00' },
+  { name: 'Colorful Leighton Set', slug: 'colorful-leighton-set', category: 'CLOTHING', detail: 'A coordinated colorful set for an outfit that feels styled with minimal effort.', price: '$325.00' },
+  { name: 'Rainbow Colorblock Earrings', slug: 'copy-of-rainbow-colorblock-earrings', category: 'JEWELRY', detail: 'Colorful statement earrings in a vibrant mix of rainbow, tortoise, and natural tones.', price: '$52.00', image: 'https://www.sunshinetienda.com/cdn/shop/files/sunshine-tienda-rainbow-colorblock-earrings-1220266770.jpg?v=1770771009&width=1920' },
+  { name: 'Rosita Palm Hat', slug: 'rosita-palm-hat', category: 'HATS', detail: 'A distinctive palm hat for sunny days, travel, and vacation outfits.', price: '$169.00' },
+  { name: 'Rainbow Plaid Canvas Tote', slug: 'rainbow-plaid-canvas-tote', category: 'BAGS & TOTES', detail: 'A rainbow-plaid tote that brings color to a practical everyday carryall.', price: '$98.00' },
+  { name: 'Harvest Blooms Hali Top', slug: 'harvest-blooms-hali-top', category: 'CLOTHING', detail: 'A lightweight cotton top with a smocked bodice, ruffle neckline, and floral print.', price: '$118.00' },
+  { name: 'Gabriela Bucket Hat', slug: 'gabriela-bucket-hat', category: 'HATS', detail: 'A relaxed bucket-hat shape for an alternative to a wide-brim silhouette.', price: '$159.00' },
+  { name: 'Rainbow Tile Earrings', slug: 'rainbow-tile-earrings', category: 'JEWELRY', detail: 'A bright, graphic earring option to finish a casual or vacation-ready look.', price: '$52.00' }
+];
+
+const cleanImage = (value) => {
+  if (typeof value !== 'string' || !value) return '';
+  try {
+    const url = new URL(value.startsWith('//') ? 'https:' + value : value, 'https://www.sunshinetienda.com');
+    return url.protocol === 'https:' && url.hostname.endsWith('sunshinetienda.com') ? url.toString() : '';
+  } catch { return ''; }
+};
+const norm = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const items = await Promise.all(products.map(async (product) => {
+  let image = cleanImage(product.image);
+  let verified = Boolean(image);
+  const url = 'https://www.sunshinetienda.com/products/' + product.slug;
+  if (!image) {
+    try {
+      const response = await fetch(url + '.js', { signal: AbortSignal.timeout(7000) });
+      if (response.ok) {
+        const data = await response.json();
+        const title = norm(data.title);
+        if (title && (title.includes(norm(product.name)) || norm(product.name).includes(title))) {
+          image = cleanImage(data.featured_image || (Array.isArray(data.images) ? data.images[0] : ''));
+          verified = Boolean(image);
+        }
+      }
+    } catch (error) { console.warn('Sunshine Tienda category image unavailable:', product.slug, String(error)); }
+  }
+  return { ...product, url, image, verified, affiliateUrl: 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url) };
+}));
+const photoItems = items.filter((item) => item.image && item.verified);
+---
+<BaseLayout title="Clothing & Accessories | Buy Better Finds" description="Browse colorful clothing, bags, jewelry, and hats from brands worth a closer look. Compare style, details, and current product listings.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Categories', item: 'https://buybetterfinds.com/categories/' },
+      { '@type': 'ListItem', position: 3, name: 'Clothing & Accessories', item: 'https://buybetterfinds.com/categories/clothing-accessories/' }
+    ]
+  })} />
+  <main class="section fashion-page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>Clothing &amp; Accessories</strong></nav>
+      <section class="fashion-hero">
+        <div class="fashion-hero-copy">
+          <span class="eyebrow">THE STYLE EDIT · CURATED FINDS</span>
+          <h1>Clothing &amp; Accessories</h1>
+          <p class="lead">Colorful clothing, standout jewelry, useful bags, and hats that bring personality to everyday outfits. Start with this curated Sunshine Tienda edit, then check back as we add more brands and price points.</p>
+          <div class="hero-pills"><span>Clothing</span><span>Bags &amp; Totes</span><span>Jewelry</span><span>Hats</span></div>
+          <a class="shop-collection" href="https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=https%3A%2F%2Fwww.sunshinetienda.com%2Fcollections%2Fall" target="_blank" rel="sponsored nofollow noopener noreferrer">Browse Sunshine Tienda collection ↗</a>
+        </div>
+        <div class="hero-image">
+          {photoItems[0]?.image && <img src={photoItems[0].image} alt={photoItems[0].name + ' from Sunshine Tienda'} fetchpriority="high" />}
+          <div class="hero-image-caption"><span>FEATURED BRAND</span><strong>Sunshine Tienda</strong><small>Colorful pieces for everyday and getaway style</small></div>
+        </div>
+      </section>
+
+      <section class="intro-strip">
+        <div><span class="eyebrow">THE FIRST EDIT</span><h2>10 Sunshine Tienda finds to browse</h2></div>
+        <p>We chose a balanced mix: three clothing pieces, two bags, three jewelry options, and two hats. Product photography is shown only when it can be matched to the merchant's product listing.</p>
+      </section>
+
+      <div class="fashion-grid">
+        {items.map((item, index) => <article class="fashion-card">
+          {item.image && <a class="fashion-photo" href={item.affiliateUrl} target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label={'Shop ' + item.name + ' at Sunshine Tienda'}><img src={item.image} alt={item.name + ' product photo from Sunshine Tienda'} loading="lazy" /></a>}
+          {!item.image && <div class="fashion-photo-unavailable"><span>Product photo being verified</span></div>}
+          <div class="fashion-card-body">
+            <div class="fashion-card-meta"><span>{item.category}</span><span>FIND {String(index + 1).padStart(2, '0')}</span></div>
+            <h3>{item.name}</h3>
+            <p>{item.detail}</p>
+            <div class="fashion-card-bottom"><span>{item.price}</span><a href={item.affiliateUrl} target="_blank" rel="sponsored nofollow noopener noreferrer">Shop item ↗</a></div>
+          </div>
+        </article>)}
+      </div>
+      <p class="affiliate-note">Affiliate disclosure: Buy Better Finds may earn a commission when you shop through links on this page. This is an independent shopping edit, not a hands-on review. Prices, sizes, availability, and product details can change; confirm the current listing before ordering.</p>
+      <section class="more-style">
+        <div><span class="eyebrow">KEEP EXPLORING</span><h2>More ways to shop</h2><p>Explore the wider catalog and practical shopping guides as the category grows.</p></div>
+        <div class="more-links"><a href="/blog/sunshine-tienda-style-accessories/">Read the Sunshine Tienda style guide <span>→</span></a><a href="/categories/">Browse all categories <span>→</span></a><a href="/guides/">Explore buying guides <span>→</span></a></div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+.fashion-page{padding-top:24px}.breadcrumbs{display:flex;gap:10px;align-items:center;margin-bottom:30px;color:#64748b;font-size:13px}.breadcrumbs a{color:#475569;text-decoration:none}.breadcrumbs strong{color:#111827}.fashion-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:stretch;margin-bottom:42px}.fashion-hero-copy{padding:clamp(22px,4vw,48px);border-radius:18px;background:#f8fafc;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.14em;color:#c8102e}.fashion-hero h1{font-size:clamp(38px,5.4vw,64px);line-height:.99;letter-spacing:-.04em;margin:14px 0 18px;color:#111827}.lead{font-size:17px;line-height:1.7;color:#475569;max-width:640px;margin:0}.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.hero-pills span{padding:8px 11px;background:#fff;border:1px solid #e2e8f0;border-radius:999px;color:#334155;font-size:12px;font-weight:700}.shop-collection{display:inline-flex;background:#c8102e;color:#fff;text-decoration:none;font-weight:800;border-radius:8px;padding:13px 17px}.hero-image{position:relative;min-height:380px;background:#f1f5f9;border-radius:18px;overflow:hidden}.hero-image>img{width:100%;height:100%;min-height:380px;object-fit:cover;display:block}.hero-image-caption{position:absolute;left:16px;right:16px;bottom:16px;padding:16px;background:rgba(255,255,255,.94);border-radius:10px;display:grid;gap:4px}.hero-image-caption span{font-size:10px;letter-spacing:.12em;font-weight:800;color:#c8102e}.hero-image-caption strong{font-size:20px;color:#111827}.hero-image-caption small{font-size:12px;color:#475569}.intro-strip{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:end;margin:42px 0 22px;border-bottom:1px solid #e2e8f0;padding-bottom:20px}.intro-strip h2,.more-style h2{font-size:clamp(25px,3vw,34px);line-height:1.1;margin:8px 0 0;color:#111827}.intro-strip p,.more-style p{color:#64748b;line-height:1.65;margin:0}.fashion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.fashion-card{border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;min-width:0}.fashion-photo{display:block;aspect-ratio:4/5;background:#f8fafc;overflow:hidden}.fashion-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}.fashion-photo:hover img{transform:scale(1.025)}.fashion-photo-unavailable{aspect-ratio:4/5;background:#f8fafc;display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;color:#64748b;font-size:13px}.fashion-card-body{padding:18px;display:flex;flex-direction:column;flex:1}.fashion-card-meta{display:flex;justify-content:space-between;gap:8px;color:#64748b;font-size:10px;font-weight:800;letter-spacing:.08em}.fashion-card-meta span:first-child{color:#c8102e}.fashion-card h3{font-size:20px;line-height:1.2;margin:11px 0;color:#111827}.fashion-card p{font-size:14px;line-height:1.6;color:#64748b;margin:0 0 18px}.fashion-card-bottom{margin-top:auto;border-top:1px solid #e2e8f0;padding-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}.fashion-card-bottom>span{font-weight:800;color:#111827;font-size:14px}.fashion-card-bottom a{font-weight:800;font-size:12px;color:#003087;text-decoration:none}.affiliate-note{margin:28px 0;color:#64748b;font-size:12px;line-height:1.6}.more-style{margin-top:52px;padding:28px;border-radius:16px;background:#f8fafc;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.more-links{display:grid;gap:0}.more-links a{display:flex;justify-content:space-between;gap:16px;padding:13px 0;color:#003087;text-decoration:none;font-weight:750;border-bottom:1px solid #e2e8f0}.more-links a:last-child{border-bottom:0}@media(max-width:800px){.fashion-hero{grid-template-columns:1fr}.hero-image,.hero-image>img{min-height:300px}.intro-strip,.more-style{grid-template-columns:1fr;gap:14px}.fashion-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.fashion-card-body{padding:14px}.fashion-card h3{font-size:17px}}@media(max-width:520px){.fashion-grid{grid-template-columns:1fr}.fashion-photo,.fashion-photo-unavailable{aspect-ratio:4/3}.fashion-hero h1{font-size:40px}.hero-image,.hero-image>img{min-height:280px}}
+</style>
