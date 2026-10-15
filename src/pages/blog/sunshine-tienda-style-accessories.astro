@@ -1,0 +1,89 @@
+---
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
+const title = 'Sunshine Tienda Finds: 10 Colorful Hats, Bags & Jewelry Picks | The Finds Edit';
+const description = 'Explore ten Sunshine Tienda hats, totes, jewelry pieces and a dress, with styling tips and practical details to check before buying.';
+const products = [{"name":"Marta Palm Hat","slug":"copy-of-marta-palm-hat","label":"Signature multicolor palm hat","detail":"A standout choice for trips and sunny outings."},{"name":"Rosita Palm Hat","slug":"copy-of-rosita-palm-hat","label":"Artisan-inspired classic","detail":"A bright band adds personality to simple outfits."},{"name":"Natural Rancher Palm Hat","slug":"natural-rancher-palm-hat","label":"Versatile strap-ready hat","detail":"Consider this if you want to change up removable straps."},{"name":"Rainbow Plaid Canvas Tote","slug":"rainbow-plaid-canvas-tote","label":"Everyday carryall","detail":"A colorful tote for errands or travel."},{"name":"Rainbow Confetti Necklace","slug":"rainbow-confetti-necklace","label":"Statement jewelry","detail":"A lively finishing touch for neutral outfits."},{"name":"Carolina Palm Hat","slug":"carolina-palm-hat","label":"Elevated sun hat","detail":"A bold choice for vacation wardrobes."},{"name":"Gabriela Bucket Hat","slug":"gabriela-bucket-hat","label":"Relaxed hat style","detail":"An alternative silhouette to traditional wide brims."},{"name":"Painted Gingham Canvas Tote","slug":"painted-gingham-canvas-tote","label":"Patterned tote","detail":"A playful accessory for weekend packing."},{"name":"Harbor Plaid Charlotte Dress","slug":"harbor-plaid-charlotte-dress","label":"Seasonal dress","detail":"A plaid option for styling beyond summer."},{"name":"Flower Tile Cabana Earrings","slug":"flower-tile-cabana-earrings","label":"Giftable jewelry","detail":"A small, colorful accent for everyday wear."}];
+const affiliateUrl = (url) => 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url);
+const items = await Promise.all(products.map(async (p) => {
+  const url = 'https://www.sunshinetienda.com/products/' + p.slug;
+  let image = '';
+  try {
+    const response = await fetch(url + '.js');
+    if (response.ok) {
+      const data = await response.json();
+      const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      if (norm(data.title).includes(norm(p.name))) {
+        const candidate = (Array.isArray(data.images) ? data.images : []).find((src) => {
+          try { const u = new URL(src, url); return u.protocol === 'https:' && (u.hostname === 'sunshinetienda.com' || u.hostname === 'www.sunshinetienda.com' || /(^|\\.)shopify\\.com$/.test(u.hostname)) && u.pathname.includes('/cdn/shop/'); } catch { return false; }
+        });
+        image = candidate || '';
+      }
+    }
+  } catch {}
+  return {...p, url, image, affiliateUrl: affiliateUrl(url)};
+}));
+---
+<BlogArticleLayout title={title} description={description} image={items.find(p => p.image)?.image} imageAlt="Sunshine Tienda fashion and accessories" category="THE STYLE EDIT" readingTime="6 MIN READ" dek="From handmade palm hats to colorful bags and jewelry, here are ten Sunshine Tienda finds to browse—and what to consider before choosing one." related={[{title:'More stories from The Finds Edit',href:'/blog/'},{title:'Explore Lifestyle finds',href:'/categories/lifestyle/'},{title:'Browse gifts and collectibles',href:'/categories/gifts-collectibles/'}]}>
+  <span slot="caption">Product photography from Sunshine Tienda's current listings. Availability and styling may change.</span>
+  <a slot="contents" href="#picks">Ten finds to browse</a>
+  <a slot="contents" href="#compare">Compare the styles</a>
+  <a slot="contents" href="#shopping-tips">Shopping tips</a>
+  <a slot="contents" href="#faq">Questions to consider</a>
+
+  <p>Sunshine Tienda brings cheerful color to everyday accessories, with palm hats, statement jewelry, totes and easygoing apparel. If you prefer one memorable accessory over an entirely new outfit, this collection offers plenty of ways to experiment with pattern and texture.</p>
+  <p>We selected ten products across different categories to make browsing easier. This is an independent editorial shopping guide, not a hands-on review. Product details, sizing, availability and current prices should always be checked on the merchant's listing.</p>
+  <h2 id="picks">10 Sunshine Tienda finds worth a closer look</h2>
+  <div class="finds-grid">
+    {items.map((p, i) => <article class="find-card">
+      {p.image && <a class="find-photo" href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank"><img src={p.image} alt={p.name + ' from Sunshine Tienda'} loading="lazy" referrerpolicy="no-referrer" /></a>}
+      <div class="find-copy">
+        <p class="find-number">FIND {String(i+1).padStart(2,'0')} / {p.label}</p>
+        <h3>{p.name}</h3>
+        <p>{p.detail}</p>
+        <a class="find-link" href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank">Shop at Sunshine Tienda <span aria-hidden="true">↗</span></a>
+        <small>Check the current listing for price, color and availability.</small>
+      </div>
+    </article>)}
+  </div>
+  <h2 id="compare">Which Sunshine Tienda style fits your plans?</h2>
+  <div class="compare-scroll"><table><thead><tr><th>Category</th><th>Consider for</th><th>Before buying</th></tr></thead><tbody>
+    <tr><td>Palm hats</td><td>Travel, sunny days, statement styling</td><td>Head measurement, brim shape, personalization terms</td></tr>
+    <tr><td>Bucket hats</td><td>Relaxed outfits and alternative silhouettes</td><td>Fit, brim coverage, care instructions</td></tr>
+    <tr><td>Totes</td><td>Errands, weekend trips, gifting</td><td>Dimensions, material, carrying capacity</td></tr>
+    <tr><td>Jewelry</td><td>Adding color to simple outfits</td><td>Dimensions, materials, care</td></tr>
+    <tr><td>Dresses</td><td>Coordinated looks and occasion outfits</td><td>Size chart, fabric, return eligibility</td></tr>
+  </tbody></table></div>
+  <h2 id="shopping-tips">Three things to check before you order</h2>
+  <h3>Measure for a hat, not just a clothing size</h3>
+  <p>Sunshine Tienda's palm-hat listings provide head-circumference sizing. Use a soft measuring tape around your head and check the product's size guide; some styles offer personalization or removable straps at an additional cost.</p>
+  <h3>Think about the outfit you already own</h3>
+  <p>A colorful hat, tote or pair of earrings can do a lot of work with neutral clothing. If your wardrobe already has bold prints, consider choosing an accessory with one complementary color rather than matching every detail.</p>
+  <h3>Read the returns and sale conditions</h3>
+  <p>Personalized products and clearance merchandise may have different return conditions. Check the specific listing, shipping details and checkout total before purchasing.</p>
+  <h2 id="faq">Frequently asked questions</h2>
+  <h3>Is this a hands-on product review?</h3>
+  <p>No. This is a curated editorial guide based on the brand's product listings and publicly described features; we have not independently tested these items.</p>
+  <h3>Do the shopping links go to individual products?</h3>
+  <p>Yes. Each shopping link is designed to open its matching Sunshine Tienda product listing through our Awin affiliate tracking link.</p>
+  <h3>Are prices guaranteed?</h3>
+  <p>No. Product prices, colors and stock can change. The merchant's product page and checkout show the current details.</p>
+  <div class="shop-card"><p class="section-kicker">THE STYLE EDIT</p><h2>Browse more colorful finds</h2><p>Explore the full Sunshine Tienda collection and check current arrivals, sizes and availability.</p><a href={affiliateUrl('https://www.sunshinetienda.com/collections/all')} rel="sponsored noopener noreferrer" target="_blank">Shop Sunshine Tienda <span aria-hidden="true">↗</span></a></div>
+  <p class="closing-note">Affiliate disclosure: Buy Better Finds participates in affiliate programs including Awin. We may earn a commission on qualifying purchases made through links in this article, at no additional cost to you.</p>
+</BlogArticleLayout>
+<style>
+  .finds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:24px 0}
+  .find-card{min-width:0;background:#fffdf9;border:1px solid #e5ded2;overflow:hidden}
+  .find-photo{display:block;aspect-ratio:1/1;background:#f3eee7;overflow:hidden}
+  .find-photo img{display:block;width:100%;height:100%;object-fit:contain}
+  .find-copy{padding:20px}
+  .find-number{font:700 .65rem/1.5 Arial,sans-serif;letter-spacing:.12em;color:#c8102e;margin:0 0 10px}
+  .find-copy h3{font:500 1.5rem/1.2 Georgia,serif;color:#142b45;margin:0 0 12px}
+  .find-copy>p:not(.find-number){font-size:.96rem;line-height:1.65;margin:0 0 18px}
+  .find-link{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#c8102e;color:white;text-decoration:none;padding:12px 14px;font:700 .78rem Arial,sans-serif}
+  .find-copy small{display:block;color:#687078;font:400 .7rem/1.5 Arial,sans-serif;margin-top:12px}
+  .compare-scroll{overflow-x:auto;max-width:100%}
+  .compare-scroll table{width:100%;min-width:480px;border-collapse:collapse;font:400 .85rem/1.6 Arial,sans-serif}
+  .compare-scroll th,.compare-scroll td{padding:12px;text-align:left;border-bottom:1px solid #e5ded2}
+  .compare-scroll th{color:#142b45}
+  @media(max-width:700px){.finds-grid{grid-template-columns:minmax(0,1fr)}.find-copy{padding:17px}}
+</style>
