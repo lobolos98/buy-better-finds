@@ -1,19 +1,19 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
-const products = [
-  { name: 'Wildflower Tango Fable Top', slug: 'wildflower-tango-fable-top', category: 'CLOTHING', detail: 'A lightweight cotton top with a relaxed fit and a colorful floral print.', price: '$118.00' },
-  { name: 'Rainbow Confetti Necklace', slug: 'rainbow-confetti-necklace', category: 'JEWELRY', detail: 'A colorful statement necklace for adding a playful accent to simple outfits.', price: 'Check current price' },
-  { name: 'Painted Gingham Canvas Tote', slug: 'painted-gingham-canvas-tote', category: 'BAGS & TOTES', detail: 'A patterned canvas tote for errands, travel, or carrying everyday essentials.', price: '$98.00' },
-  { name: 'Colorful Leighton Set', slug: 'colorful-leighton-set', category: 'CLOTHING', detail: 'A coordinated colorful set for an outfit that feels styled with minimal effort.', price: '$325.00' },
-  { name: 'Rainbow Colorblock Earrings', slug: 'copy-of-rainbow-colorblock-earrings', category: 'JEWELRY', detail: 'Colorful statement earrings in a vibrant mix of rainbow, tortoise, and natural tones.', price: '$52.00', image: 'https://www.sunshinetienda.com/cdn/shop/files/sunshine-tienda-rainbow-colorblock-earrings-1220266770.jpg?v=1770771009&width=1920' },
-  { name: 'Rosita Palm Hat', slug: 'rosita-palm-hat', category: 'HATS', detail: 'A distinctive palm hat for sunny days, travel, and vacation outfits.', price: '$169.00' },
-  { name: 'Rainbow Plaid Canvas Tote', slug: 'rainbow-plaid-canvas-tote', category: 'BAGS & TOTES', detail: 'A rainbow-plaid tote that brings color to a practical everyday carryall.', price: '$98.00' },
-  { name: 'Harvest Blooms Hali Top', slug: 'harvest-blooms-hali-top', category: 'CLOTHING', detail: 'A lightweight cotton top with a smocked bodice, ruffle neckline, and floral print.', price: '$118.00' },
-  { name: 'Gabriela Bucket Hat', slug: 'gabriela-bucket-hat', category: 'HATS', detail: 'A relaxed bucket-hat shape for an alternative to a wide-brim silhouette.', price: '$159.00' },
-  { name: 'Rainbow Tile Earrings', slug: 'rainbow-tile-earrings', category: 'JEWELRY', detail: 'A bright, graphic earring option to finish a casual or vacation-ready look.', price: '$52.00' }
+const productSpecs = [
+  { category: 'CLOTHING', terms: ['fable top','hali top','charlotte dress','leighton set','dress','top','set','blouse'], detail: 'A colorful clothing option to style with everyday wardrobe basics.' },
+  { category: 'JEWELRY', terms: ['rainbow confetti necklace','rainbow colorblock earrings','flower tile cabana earrings','earrings','necklace','bangle','bracelet'], detail: 'A statement accessory for adding a playful accent to an outfit.' },
+  { category: 'BAGS & TOTES', terms: ['painted gingham canvas tote','rainbow plaid canvas tote','canvas tote','tote','bag'], detail: 'A patterned bag for errands, travel, or carrying everyday essentials.' },
+  { category: 'CLOTHING', terms: ['colorful leighton set','harbor plaid charlotte dress','wildflower tango fable top','harvest blooms hali top','dress','top','set'], detail: 'An easy-to-style clothing piece with color or pattern.' },
+  { category: 'JEWELRY', terms: ['rainbow colorblock earrings','rainbow tile earrings','flower tile cabana earrings','earrings','necklace','bangle'], detail: 'A colorful jewelry option to finish a casual or vacation-ready look.' },
+  { category: 'HATS', terms: ['gabriela bucket hat','marta palm hat','rosita palm hat','carolina palm hat','natural rancher palm hat','palm hat','bucket hat','hat'], detail: 'A distinctive hat for sunny days, travel, and vacation outfits.' },
+  { category: 'BAGS & TOTES', terms: ['rainbow plaid canvas tote','painted gingham canvas tote','tote','bag'], detail: 'A colorful carryall for everyday essentials or weekend packing.' },
+  { category: 'CLOTHING', terms: ['harvest blooms hali top','wildflower tango fable top','harbor plaid charlotte dress','dress','top','set'], detail: 'A printed or colorful clothing piece for a standout outfit.' },
+  { category: 'HATS', terms: ['gabriela bucket hat','marta palm hat','rosita palm hat','carolina palm hat','natural rancher palm hat','hat'], detail: 'An alternative hat silhouette for a sunny-day wardrobe.' },
+  { category: 'JEWELRY', terms: ['rainbow colorblock earrings','rainbow confetti necklace','flower tile cabana earrings','earrings','necklace','bangle','bracelet'], detail: 'A bright finishing touch that can make a simple outfit feel more personal.' }
 ];
-
+const normalize = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const cleanImage = (value) => {
   if (typeof value !== 'string' || !value) return '';
   try {
@@ -21,27 +21,39 @@ const cleanImage = (value) => {
     return url.protocol === 'https:' && url.hostname.endsWith('sunshinetienda.com') ? url.toString() : '';
   } catch { return ''; }
 };
-const norm = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-const items = await Promise.all(products.map(async (product) => {
-  let image = cleanImage(product.image);
-  let verified = Boolean(image);
-  const url = 'https://www.sunshinetienda.com/products/' + product.slug;
-  if (!image) {
-    try {
-      const response = await fetch(url + '.js', { signal: AbortSignal.timeout(7000) });
-      if (response.ok) {
-        const data = await response.json();
-        const title = norm(data.title);
-        if (title && (title.includes(norm(product.name)) || norm(product.name).includes(title))) {
-          image = cleanImage(data.featured_image || (Array.isArray(data.images) ? data.images[0] : ''));
-          verified = Boolean(image);
-        }
-      }
-    } catch (error) { console.warn('Sunshine Tienda category image unavailable:', product.slug, String(error)); }
+let catalog = [];
+try {
+  const response = await fetch('https://www.sunshinetienda.com/products.json?limit=250', { signal: AbortSignal.timeout(12000) });
+  if (response.ok) {
+    const data = await response.json();
+    catalog = (Array.isArray(data.products) ? data.products : []).map((product) => {
+      const image = cleanImage(product.images?.[0]?.src || product.image?.src || product.image);
+      const priceValue = Number(product.variants?.[0]?.price);
+      return { title: String(product.title || ''), handle: String(product.handle || ''), image, price: Number.isFinite(priceValue) && priceValue > 0 ? '$' + priceValue.toFixed(2) : 'Check current price' };
+    }).filter((product) => product.handle && product.image && product.title);
   }
-  return { ...product, url, image, verified, affiliateUrl: 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url) };
-}));
+} catch (error) {
+  console.warn('Sunshine Tienda product catalog could not be loaded:', String(error));
+}
+const usedHandles = new Set();
+const items = productSpecs.map((spec) => {
+  const match = catalog.find((product) => !usedHandles.has(product.handle) && spec.terms.some((term) => normalize(product.title).includes(normalize(term))));
+  if (!match) return null;
+  usedHandles.add(match.handle);
+  const url = 'https://www.sunshinetienda.com/products/' + match.handle;
+  return {
+    name: match.title,
+    category: spec.category,
+    detail: spec.detail,
+    price: match.price,
+    image: match.image,
+    verified: true,
+    url,
+    affiliateUrl: 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url)
+  };
+}).filter(Boolean);
 const photoItems = items.filter((item) => item.image && item.verified);
+
 ---
 <BaseLayout title="Clothing & Accessories | Buy Better Finds" description="Browse colorful clothing, bags, jewelry, and hats from brands worth a closer look. Compare style, details, and current product listings.">
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -71,8 +83,8 @@ const photoItems = items.filter((item) => item.image && item.verified);
       </section>
 
       <section class="intro-strip">
-        <div><span class="eyebrow">THE FIRST EDIT</span><h2>10 Sunshine Tienda finds to browse</h2></div>
-        <p>We chose a balanced mix: three clothing pieces, two bags, three jewelry options, and two hats. Product photography is shown only when it can be matched to the merchant's product listing.</p>
+        <div><span class="eyebrow">THE FIRST EDIT</span><h2>Sunshine Tienda finds to browse</h2></div>
+        <p>Every card below is matched to a live Sunshine Tienda catalog entry with its own product image and product URL. Items that cannot be matched are omitted rather than shown with broken links or placeholder photography.</p>
       </section>
 
       <div class="fashion-grid">
