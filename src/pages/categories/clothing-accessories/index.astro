@@ -28,8 +28,7 @@ try {
     const data = await response.json();
     catalog = (Array.isArray(data.products) ? data.products : []).map((product) => {
       const image = cleanImage(product.images?.[0]?.src || product.image?.src || product.image);
-      const priceValue = Number(product.variants?.[0]?.price);
-      return { title: String(product.title || ''), handle: String(product.handle || ''), image, price: Number.isFinite(priceValue) && priceValue > 0 ? '$' + priceValue.toFixed(2) : 'Check current price' };
+      return { title: String(product.title || ''), handle: String(product.handle || ''), image };
     }).filter((product) => product.handle && product.image && product.title);
   }
 } catch (error) {
@@ -45,7 +44,6 @@ const items = productSpecs.map((spec) => {
     name: match.title,
     category: spec.category,
     detail: spec.detail,
-    price: match.price,
     image: match.image,
     verified: true,
     url,
@@ -94,7 +92,7 @@ const photoItems = items.filter((item) => item.image && item.verified);
             <div class="fashion-card-meta"><span>{item.category}</span><span>FIND {String(index + 1).padStart(2, '0')}</span></div>
             <h3>{item.name}</h3>
             <p>{item.detail}</p>
-            <div class="fashion-card-bottom"><span>{item.price}</span><a href={item.affiliateUrl} target="_blank" rel="sponsored nofollow noopener noreferrer">Shop item ↗</a></div>
+            <div class="fashion-card-bottom"><span>See current price</span><a href={item.affiliateUrl} target="_blank" rel="sponsored nofollow noopener noreferrer">Shop item ↗</a></div>
           </div>
         </article>)}
       </div>
