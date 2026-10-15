@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container nav">
+  <div class="nav">
     <a class="logo" href="/" aria-label="Buy Better Finds home">BUY <span>BETTER</span> FINDS</a>
 
     <nav class="links" aria-label="Main navigation">
@@ -59,10 +59,15 @@
   }
 
   .nav {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 12px clamp(16px, 2vw, 40px);
     min-height: 84px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: clamp(12px, 1.2vw, 24px);
   }
 
   .logo {
