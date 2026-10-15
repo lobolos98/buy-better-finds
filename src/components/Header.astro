@@ -62,7 +62,7 @@
     min-height: 72px;
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 16px;
   }
 
   .logo {
@@ -82,11 +82,12 @@
   }
 
   .links {
-    margin-left: auto;
+    flex: 1 1 auto;
+    min-width: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 18px;
+    justify-content: center;
+    gap: clamp(6px, .65vw, 12px);
   }
 
   .links a,
@@ -169,17 +170,7 @@
     background: #1e40af;
   }
 
-  @media (max-width: 1100px) {
-    .links {
-      gap: 10px;
-    }
-
-    .links a {
-      font-size: 11px;
-    }
-  }
-
-  @media (max-width: 1600px) {
+  @media (max-width: 1800px) {
     .nav {
       min-height: 64px;
       padding-top: 8px;
