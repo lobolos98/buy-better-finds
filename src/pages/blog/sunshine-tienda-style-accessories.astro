@@ -6,21 +6,46 @@ const products = [{"name":"Marta Palm Hat","slug":"copy-of-marta-palm-hat","labe
 const affiliateUrl = (url) => 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url);
 const items = await Promise.all(products.map(async (p) => {
   const url = 'https://www.sunshinetienda.com/products/' + p.slug;
+  const norm = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const imageUrl = (value) => {
+    if (!value) return '';
+    try {
+      const raw = typeof value === 'string' ? value : (value.src || value.url || '');
+      const u = new URL(raw.startsWith('//') ? 'https:' + raw : raw, url);
+      if (u.protocol !== 'https:') return '';
+      if (!['cdn.shopify.com', 'www.sunshinetienda.com', 'sunshinetienda.com'].includes(u.hostname)) return '';
+      if (!u.pathname.includes('/s/files/') && !u.pathname.includes('/cdn/shop/')) return '';
+      return u.href;
+    } catch { return ''; }
+  };
   let image = '';
+  let verified = false;
   try {
-    const response = await fetch(url + '.js', { headers: { 'Accept': 'application/json' } });
+    const response = await fetch(url + '.js');
     if (response.ok) {
       const data = await response.json();
-      const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-      if (norm(data.title).includes(norm(p.name))) {
-        const candidate = [data.featured_image, ...(Array.isArray(data.images) ? data.images : [])].filter(Boolean).find((src) => {
-          try { const u = new URL(src, url); return u.protocol === 'https:' && (u.hostname === 'sunshinetienda.com' || u.hostname === 'www.sunshinetienda.com' || /(^|\\.)shopify\\.com$/.test(u.hostname)) && (u.pathname.includes('/cdn/shop/') || u.pathname.includes('/s/files/')); } catch { return false; }
-        });
-        image = candidate ? new URL(candidate, url).href : '';
-      }
+      verified = norm(data.title).includes(norm(p.name));
+      if (verified) image = [data.featured_image, ...(Array.isArray(data.images) ? data.images : [])].map(imageUrl).find(Boolean) || '';
     }
-  } catch {}
-  return {...p, url, image, affiliateUrl: affiliateUrl(url)};
+  } catch (error) { console.warn('Sunshine Tienda product JSON unavailable:', p.slug, String(error)); }
+  if (!image) {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const html = await response.text();
+        const titleMatch = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i) || html.match(/<title>([^<]+)/i);
+        const title = titleMatch?.[1]?.replace(/&amp;/g, '&') || '';
+        if (norm(title).includes(norm(p.name))) {
+          verified = true;
+          const match = html.match(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)/i)
+            || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+          image = imageUrl(match?.[1]?.replace(/&amp;/g, '&'));
+        }
+      }
+    } catch (error) { console.warn('Sunshine Tienda product page unavailable:', p.slug, String(error)); }
+  }
+  if (!image) console.warn('Sunshine Tienda: missing verified image for', p.name, url);
+  return {...p, url, image, verified, affiliateUrl: affiliateUrl(url)};
 }));
 ---
 <BlogArticleLayout title={title} description={description} image={items.find(p => p.image)?.image} imageAlt="Sunshine Tienda fashion and accessories" category="THE STYLE EDIT" readingTime="6 MIN READ" dek="From handmade palm hats to colorful bags and jewelry, here are ten Sunshine Tienda finds to browse—and what to consider before choosing one." related={[{title:'More stories from The Finds Edit',href:'/blog/'},{title:'Explore Lifestyle finds',href:'/categories/lifestyle/'},{title:'Browse gifts and collectibles',href:'/categories/gifts-collectibles/'}]}>
