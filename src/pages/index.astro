@@ -23,8 +23,9 @@ const categoryPreviews = [
   { name: 'Gifts & Collectibles', href: '/categories/gifts-collectibles/', slug: 'disney-stitch-plush', alt: 'Disney Stitch plush representing Gifts and Collectibles', description: 'Disney, LEGO, Pokémon, Funko & fandom gifts' },
   { name: 'Toys & Games', href: '/categories/toys-games/', slug: 'lego-city-lava-rollercoaster', alt: 'LEGO City set representing Toys and Games', description: 'Building, STEM, puzzles & family games' },
   { name: 'Beauty & Personal Care', href: '/categories/beauty-personal-care/', slug: 'cerave-hydrating-cleanser', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care & grooming' },
-  { name: 'Pet Supplies', href: '/categories/pet-supplies/', slug: 'earth-rated-dog-waste-bags', alt: 'Earth Rated dog waste bags representing Pet Supplies', description: 'Dog and cat essentials, cleanup & grooming' }
-].map((category) => ({ ...category, product: validCatalog.find((product) => product?.slug === category.slug) })).filter((category) => category.product?.image);
+  { name: 'Pet Supplies', href: '/categories/pet-supplies/', slug: 'earth-rated-dog-waste-bags', alt: 'Earth Rated dog waste bags representing Pet Supplies', description: 'Dog and cat essentials, cleanup & grooming' },
+  { name: 'Clothing & Accessories', href: '/categories/clothing-accessories/', slug: 'sunshine-tienda-style', alt: 'Colorful clothing and accessories from Sunshine Tienda', description: 'Clothing, bags, jewelry & hats', image: 'https://www.sunshinetienda.com/cdn/shop/files/sunshine-tienda-rainbow-colorblock-earrings-1220266770.jpg?v=1770771009&width=1920' }
+].map((category) => ({ ...category, product: category.image ? { image: category.image, imageAlt: category.alt } : validCatalog.find((product) => product?.slug === category.slug) })).filter((category) => category.product?.image);
 const guides = [
   ['Best Tech Products','best-tech','◈'],['Best Home & Kitchen Products','best-home-kitchen','⌂'],['Best Tools & DIY Products','best-tools-diy','⚒'],['Best Outdoor Products','best-outdoor','☼'],['Best Products Under $100','best-products-under-100','★']
 ];
