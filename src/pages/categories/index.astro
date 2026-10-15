@@ -15,8 +15,8 @@ const categoryData = [
   { name: 'Beauty & Personal Care', slug: 'beauty-personal-care', image: '', alt: 'CeraVe cleanser representing Beauty and Personal Care', description: 'Skincare, hair care, grooming, cosmetics, beauty tools, and everyday personal-care products.', guide: '/categories/beauty-personal-care/cosmetics/' },
   { name: 'Seasonal & Holidays', slug: 'seasonal-holidays', image: 'https://m.media-amazon.com/images/I/71KDHlz9KCL._AC_SL1500_.jpg', alt: 'wymulot 2-Pack 40-inch Pose-N-Stay Halloween Skeletons representing seasonal and holiday finds', description: 'Seasonal deals, holiday gifts, major shopping events, and timely finds worth watching right now.', guide: null, seasonal: true },
   { name: 'Automotive & Car Accessories', slug: 'automotive-car-accessories', image: '', alt: 'Automotive accessories', description: 'Dash cams, tire inflators, jump starters, car cleaning gear, and practical vehicle accessories.', guide: '/guides/best-automotive-accessories/' },
-  { name: 'Pet Supplies', slug: 'pet-supplies', image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BSYR7K8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', alt: 'Earth Rated dog waste bags representing Pet Supplies', description: 'Everyday dog and cat essentials, cleanup products, grooming gear, toys, and useful pet tech.', guide: null }
-];
+  { name: 'Pet Supplies', slug: 'pet-supplies', image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00BSYR7K8&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', alt: 'Earth Rated dog waste bags representing Pet Supplies', description: 'Everyday dog and cat essentials, cleanup products, grooming gear, toys, and useful pet tech.', guide: null },
+  { name: 'Clothing & Accessories', slug: 'clothing-accessories', image: 'https://www.sunshinetienda.com/cdn/shop/files/sunshine-tienda-rainbow-colorblock-earrings-1220266770.jpg?v=1770771009&width=1920', alt: 'Rainbow Colorblock Earrings from Sunshine Tienda', description: 'Colorful clothing, bags, jewelry, hats, and accessories from brands worth browsing.', guide: null, countOverride: 10 }];
 
 const categories = categoryData.map((category) => {
   const realImageProduct = products.find(
@@ -30,7 +30,7 @@ const categories = categoryData.map((category) => {
     ...category,
     image: realImageProduct?.image || category.image,
     alt: realImageProduct?.imageAlt || category.alt,
-    count: products.filter((product) => product.category === category.name).length
+    count: category.countOverride ?? products.filter((product) => product.category === category.name).length
   };
 });
 ---
