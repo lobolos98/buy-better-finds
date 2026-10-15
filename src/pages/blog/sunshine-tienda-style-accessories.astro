@@ -2,19 +2,19 @@
 import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
 const title = 'Sunshine Tienda Finds: 10 Colorful Hats, Bags & Jewelry Picks | The Finds Edit';
 const description = 'Explore ten Sunshine Tienda hats, totes, jewelry pieces and a dress, with styling tips and practical details to check before buying.';
-const products = [{"name":"Marta Palm Hat","slug":"marta-palm-hat","label":"Signature multicolor palm hat","detail":"A standout choice for trips and sunny outings."},{"name":"Rosita Palm Hat","slug":"rosita-palm-hat","label":"Artisan-inspired classic","detail":"A bright band adds personality to simple outfits."},{"name":"Natural Rancher Palm Hat","slug":"natural-rancher-palm-hat","label":"Versatile strap-ready hat","detail":"Consider this if you want to change up removable straps."},{"name":"Rainbow Plaid Canvas Tote","slug":"rainbow-plaid-canvas-tote","label":"Everyday carryall","detail":"A colorful tote for errands or travel."},{"name":"Rainbow Confetti Necklace","slug":"rainbow-confetti-necklace","label":"Statement jewelry","detail":"A lively finishing touch for neutral outfits."},{"name":"Carolina Palm Hat","slug":"carolina-palm-hat","label":"Elevated sun hat","detail":"A bold choice for vacation wardrobes."},{"name":"Gabriela Bucket Hat","slug":"gabriela-bucket-hat","label":"Relaxed hat style","detail":"An alternative silhouette to traditional wide brims."},{"name":"Painted Gingham Canvas Tote","slug":"painted-gingham-canvas-tote","label":"Patterned tote","detail":"A playful accessory for weekend packing."},{"name":"Harbor Plaid Charlotte Dress","slug":"harbor-plaid-charlotte-dress","label":"Seasonal dress","detail":"A plaid option for styling beyond summer."},{"name":"Flower Tile Cabana Earrings","slug":"flower-tile-cabana-earrings","label":"Giftable jewelry","detail":"A small, colorful accent for everyday wear."}];
+const products = [{"name":"Marta Palm Hat","slug":"copy-of-marta-palm-hat","label":"Signature multicolor palm hat","detail":"A standout choice for trips and sunny outings."},{"name":"Rosita Palm Hat","slug":"copy-of-rosita-palm-hat","label":"Artisan-inspired classic","detail":"A bright band adds personality to simple outfits."},{"name":"Natural Rancher Palm Hat","slug":"natural-rancher-palm-hat","label":"Versatile strap-ready hat","detail":"Consider this if you want to change up removable straps."},{"name":"Rainbow Plaid Canvas Tote","slug":"rainbow-plaid-canvas-tote","label":"Everyday carryall","detail":"A colorful tote for errands or travel."},{"name":"Rainbow Confetti Necklace","slug":"rainbow-confetti-necklace","label":"Statement jewelry","detail":"A lively finishing touch for neutral outfits."},{"name":"Carolina Palm Hat","slug":"carolina-palm-hat","label":"Elevated sun hat","detail":"A bold choice for vacation wardrobes."},{"name":"Gabriela Bucket Hat","slug":"gabriela-bucket-hat","label":"Relaxed hat style","detail":"An alternative silhouette to traditional wide brims."},{"name":"Painted Gingham Canvas Tote","slug":"painted-gingham-canvas-tote","label":"Patterned tote","detail":"A playful accessory for weekend packing."},{"name":"Harbor Plaid Charlotte Dress","slug":"harbor-plaid-charlotte-dress","label":"Seasonal dress","detail":"A plaid option for styling beyond summer."},{"name":"Flower Tile Cabana Earrings","slug":"flower-tile-cabana-earrings","label":"Giftable jewelry","detail":"A small, colorful accent for everyday wear."}];
 const affiliateUrl = (url) => 'https://www.awin1.com/cread.php?awinmid=59383&awinaffid=3119041&ued=' + encodeURIComponent(url);
 const items = await Promise.all(products.map(async (p) => {
   const url = 'https://www.sunshinetienda.com/products/' + p.slug;
   let image = '';
   try {
-    const response = await fetch(url + '.js');
+    const response = await fetch(url + '.js', { headers: { 'Accept': 'application/json' } });
     if (response.ok) {
       const data = await response.json();
       const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
       if (norm(data.title).includes(norm(p.name))) {
-        const candidate = (Array.isArray(data.images) ? data.images : []).find((src) => {
-          try { const u = new URL(src, url); return u.protocol === 'https:' && (u.hostname === 'sunshinetienda.com' || u.hostname === 'www.sunshinetienda.com' || /(^|\\.)shopify\\.com$/.test(u.hostname)) && u.pathname.includes('/cdn/shop/'); } catch { return false; }
+        const candidate = [data.featured_image, ...(Array.isArray(data.images) ? data.images : [])].filter(Boolean).find((src) => {
+          try { const u = new URL(src, url); return u.protocol === 'https:' && (u.hostname === 'sunshinetienda.com' || u.hostname === 'www.sunshinetienda.com' || /(^|\\.)shopify\\.com$/.test(u.hostname)) && (u.pathname.includes('/cdn/shop/') || u.pathname.includes('/s/files/')); } catch { return false; }
         });
         image = candidate ? new URL(candidate, url).href : '';
       }
@@ -30,6 +30,7 @@ const items = await Promise.all(products.map(async (p) => {
   <a slot="contents" href="#shopping-tips">Shopping tips</a>
   <a slot="contents" href="#faq">Questions to consider</a>
 
+  <a class="brand-banner" href="https://www.awin1.com/cread.php?s=4038738&v=59383&q=529678&r=3119041" target="_blank" rel="sponsored noopener noreferrer"><img src="https://www.awin1.com/cshow.php?s=4038738&v=59383&q=529678&r=3119041" alt="Shop Sunshine Tienda — official affiliate creative" loading="eager" /></a>
   <p>Sunshine Tienda brings cheerful color to everyday accessories, with palm hats, statement jewelry, totes and easygoing apparel. If you prefer one memorable accessory over an entirely new outfit, this collection offers plenty of ways to experiment with pattern and texture.</p>
   <p>We selected ten products across different categories to make browsing easier. This is an independent editorial shopping guide, not a hands-on review. Product details, sizing, availability and current prices should always be checked on the merchant's listing.</p>
   <section class="visual-feature" aria-label="Sunshine Tienda featured product photographs"><div class="visual-feature-heading"><span>THE COLOR EDIT</span><h2>Bright details. Easy outfit inspiration.</h2><p>Browse genuine product photography from Sunshine Tienda's catalog, then explore each matching item below.</p></div><div class="visual-feature-grid">{items.filter(p => p.image).slice(0,4).map(p => <a href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank"><img src={p.image} alt={p.name} loading="lazy" /><strong>{p.name}</strong></a>)}</div></section>
@@ -72,6 +73,7 @@ const items = await Promise.all(products.map(async (p) => {
   <p class="closing-note">Affiliate disclosure: Buy Better Finds participates in affiliate programs including Awin. We may earn a commission on qualifying purchases made through links in this article, at no additional cost to you.</p>
 </BlogArticleLayout>
 <style>
+  .brand-banner{display:block;text-align:center;margin:22px 0 28px}.brand-banner img{display:inline-block;max-width:100%;height:auto}
   .visual-feature{margin:30px 0 40px;background:#f5e7dd;padding:24px}
   .visual-feature-heading>span{font:800 .65rem Arial,sans-serif;color:#c8102e;letter-spacing:.15em}
   .visual-feature-heading h2{margin:10px 0!important}
