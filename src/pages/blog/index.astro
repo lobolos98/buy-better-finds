@@ -4,27 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = 'The Finds Edit | Shopping Ideas & Product Advice | Buy Better Finds';
 const description = 'The Finds Edit by Buy Better Finds: thoughtful shopping ideas, seasonal inspiration, and practical advice to help you choose what is worth buying.';
 // Resolve a real image from the matching BRKOX product instead of relying on a stale CDN filename.
-let legoCoverImage = '';
-const legoProductUrl = 'https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419';
-try {
-  const response = await fetch(legoProductUrl + '.js', { signal: AbortSignal.timeout(12000) });
-  if (response.ok) {
-    const product = await response.json();
-    if (/(?:^|\\D)75419(?:\\D|$)/.test(String(product.title || ''))) {
-      const photos = [product.featured_image, ...(Array.isArray(product.images) ? product.images : [])];
-      for (const photo of photos) {
-        if (typeof photo !== 'string') continue;
-        const url = new URL(photo.startsWith('//') ? 'https:' + photo : photo, 'https://brkox.com');
-        if (url.protocol === 'https:' && ((url.hostname === 'brkox.com' && url.pathname.includes('/cdn/shop/')) || url.hostname === 'cdn.shopify.com')) {
-          legoCoverImage = url.href;
-          break;
-        }
-      }
-    }
-  }
-} catch (error) {
-  console.warn('Unable to load BRKOX product photo for blog cover:', String(error));
-}
+const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6-459fe7e2b93d.png?v=1791015215&width=2000';
 
 ---
 <BaseLayout title={title} description={description}>
@@ -64,7 +44,8 @@ try {
             <div class="story-card-copy"><p class="story-meta">STYLE &amp; ACCESSORIES <span>•</span> <time datetime="2026-10-15">OCTOBER 15, 2026</time> <span>•</span> 6 MIN READ</p><h3><a href="/blog/sunshine-tienda-style-accessories/">10 Sunshine Tienda Finds Worth Discovering</a></h3><p class="story-summary">Browse colorful hats, totes, jewelry and styling ideas—with direct product shopping links.</p><a class="small-link" href="/blog/sunshine-tienda-style-accessories/">Read the story →</a></div>
           </article>
           <article class="story-card lego-story-card">
-            <a class="lego-editorial-photo" href="/blog/best-lego-light-kits/" aria-label="Read the LEGO light kit buying guide" style={legoCoverImage ? {'background-image': `linear-gradient(180deg,rgba(7,18,31,.30),rgba(7,18,31,.22) 40%,rgba(7,18,31,.90)),url("${legoCoverImage}")`, 'background-position':'center', 'background-size':'cover'} : undefined}>
+            <a class="lego-editorial-photo" href="/blog/best-lego-light-kits/" aria-label="Read the LEGO light kit buying guide">
+              <img class="lego-cover-image" src={legoCoverImage} alt="BRKOX illuminated Death Star LEGO-compatible display lighting kit" loading="lazy" referrerpolicy="no-referrer" />
               <span class="lego-editorial-kicker">THE COLLECTOR'S EDIT</span>
               <span class="lego-editorial-title">Built to<br/><em>glow.</em></span>
               <span class="lego-editorial-caption">A guide to compatible display lighting</span>
@@ -158,7 +139,9 @@ try {
   .editorial-promo h3{font-size:1.85rem;margin-bottom:12px}
   .editorial-promo div>p:not(.section-kicker){font-size:.86rem;line-height:1.7;color:#62686c;margin:0 0 22px}
   .editorial-promo div>a{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.75rem;font-weight:800;text-decoration:none;color:var(--ink)}
-  .lego-editorial-photo{display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1.27;padding:22px;background:radial-gradient(circle at 75% 30%,#d5e5f3 0,transparent 32%),linear-gradient(140deg,#102b50,#1e456d 58%,#c8102e);color:#fff;text-decoration:none;overflow:hidden}
+   .lego-editorial-photo{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1.27;padding:22px;background:radial-gradient(circle at 75% 30%,#d5e5f3 0,transparent 32%),linear-gradient(140deg,#102b50,#1e456d 58%,#c8102e);color:#fff;text-decoration:none;overflow:hidden}
+  .lego-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .lego-editorial-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,18,31,.36),rgba(7,18,31,.16) 35%,rgba(7,18,31,.86));z-index:-1}
   .lego-editorial-kicker{font-size:.61rem;letter-spacing:.15em;font-weight:800}
   .lego-editorial-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.5rem,4vw,3.8rem);line-height:.88;letter-spacing:-.06em;font-weight:500}
   .lego-editorial-title em{font-weight:400;color:#f2c9d1}
