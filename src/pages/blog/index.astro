@@ -3,7 +3,28 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = 'The Finds Edit | Shopping Ideas & Product Advice | Buy Better Finds';
 const description = 'The Finds Edit by Buy Better Finds: thoughtful shopping ideas, seasonal inspiration, and practical advice to help you choose what is worth buying.';
-const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6-459fe7e2b93d.png?v=1791015215&width=2000';
+// Resolve a real image from the matching BRKOX product instead of relying on a stale CDN filename.
+let legoCoverImage = '';
+const legoProductUrl = 'https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419';
+try {
+  const response = await fetch(legoProductUrl + '.js', { signal: AbortSignal.timeout(12000) });
+  if (response.ok) {
+    const product = await response.json();
+    if (/(?:^|\\D)75419(?:\\D|$)/.test(String(product.title || ''))) {
+      const photos = [product.featured_image, ...(Array.isArray(product.images) ? product.images : [])];
+      for (const photo of photos) {
+        if (typeof photo !== 'string') continue;
+        const url = new URL(photo.startsWith('//') ? 'https:' + photo : photo, 'https://brkox.com');
+        if (url.protocol === 'https:' && ((url.hostname === 'brkox.com' && url.pathname.includes('/cdn/shop/')) || url.hostname === 'cdn.shopify.com')) {
+          legoCoverImage = url.href;
+          break;
+        }
+      }
+    }
+  }
+} catch (error) {
+  console.warn('Unable to load BRKOX product photo for blog cover:', String(error));
+}
 
 ---
 <BaseLayout title={title} description={description}>
