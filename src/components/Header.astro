@@ -62,11 +62,15 @@
     min-height: 72px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
   }
 
   .logo {
     flex: 0 0 auto;
+    margin-left: calc(-1 * clamp(0px, 2vw, 36px));
+    margin-right: clamp(12px, 2vw, 36px);
+    position: relative;
+    z-index: 1;
     color: #111827;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -87,6 +91,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: clamp(6px, .65vw, 12px);
   }
 
@@ -189,6 +194,8 @@
 
   @media (max-width: 480px) {
     .logo {
+      margin-left: 0;
+      margin-right: 0;
       font-size: 14px;
     }
 
