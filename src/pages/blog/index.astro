@@ -3,25 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = 'The Finds Edit | Shopping Ideas & Product Advice | Buy Better Finds';
 const description = 'The Finds Edit by Buy Better Finds: thoughtful shopping ideas, seasonal inspiration, and practical advice to help you choose what is worth buying.';
-const legoPhotoSource = 'https://brkox.com/products/light-kit-compatible-with-lego%C2%AE-death-star-set-75419.js';
-let legoCoverImage = '';
-try {
-  const response = await fetch(legoPhotoSource, { signal: AbortSignal.timeout(10000) });
-  if (response.ok) {
-    const product = await response.json();
-    const matchesSet = /(?:^|\\D)75419(?:\\D|$)/.test(String(product.title || ''));
-    const candidate = [product.featured_image, ...(Array.isArray(product.images) ? product.images : [])].find((image) => {
-      if (typeof image !== 'string') return false;
-      try {
-        const url = new URL(image.startsWith('//') ? 'https:' + image : image, 'https://brkox.com');
-        return url.protocol === 'https:' && ((url.hostname === 'brkox.com' && url.pathname.includes('/cdn/shop/')) || url.hostname === 'cdn.shopify.com');
-      } catch { return false; }
-    });
-    if (matchesSet && candidate) legoCoverImage = new URL(candidate.startsWith('//') ? 'https:' + candidate : candidate, 'https://brkox.com').href;
-  }
-} catch (error) {
-  console.warn('BRKOX editorial cover image unavailable:', String(error));
-}
+const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6-459fe7e2b93d.png?v=1791015215&width=2000';
 
 ---
 <BaseLayout title={title} description={description}>
