@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const finds = [
+  {
+    "name": "Apple AirPods Pro 3",
+    "asin": "B0FQFB8FMG",
+    "description": "Premium wireless earbuds for listening, calls, and everyday use.",
+    "image": "https://m.media-amazon.com/images/I/61solmQSSlL._AC_SL1500_.jpg",
+    "url": "https://www.amazon.com/dp/B0FQFB8FMG?tag=buybetterfi06-20"
+  },
+  {
+    "name": "Shark AI Ultra Robot Vacuum",
+    "asin": "B09T4YZGQR",
+    "description": "A hands-off floor-cleaning option for busy homes.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B09T4YZGQR?tag=buybetterfi06-20"
+  },
+  {
+    "name": "Owala FreeSip Twist 24 oz",
+    "asin": "B0CZ7KJQR9",
+    "description": "A portable insulated water bottle for daily hydration.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B0CZ7KJQR9?tag=buybetterfi06-20"
+  },
+  {
+    "name": "Walker's Razor Slim Electronic Hearing Protection Earmuffs",
+    "asin": "B01AAH8CRU",
+    "description": "Low-profile electronic hearing protection. Not music headphones.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B01AAH8CRU?tag=buybetterfi06-20"
+  },
+  {
+    "name": "Hanes EcoSmart Fleece Sweatshirt",
+    "asin": "B01L8JJ57U",
+    "description": "A casual fleece layer for cooler days.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B01L8JJ57U?tag=buybetterfi06-20"
+  },
+  {
+    "name": "BAGSMART Toiletry Organizer",
+    "asin": "B0CKYZBRDV",
+    "description": "Keep travel toiletries and personal-care essentials organized.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B0CKYZBRDV?tag=buybetterfi06-20"
+  },
+  {
+    "name": "KitchenAid Prep Bowls",
+    "asin": "B0FR2JZ35B",
+    "description": "Handy bowls for organizing ingredients while cooking.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B0FR2JZ35B?tag=buybetterfi06-20"
+  },
+  {
+    "name": "LEGO Botanicals Mini Orchid",
+    "asin": "B0DJ19VGDD",
+    "description": "A decorative floral building set for LEGO and plant enthusiasts.",
+    "image": null,
+    "url": "https://www.amazon.com/dp/B0DJ19VGDD?tag=buybetterfi06-20"
+  }
+];
+---
+<BaseLayout title="Amazon Weekly Finds | Buy Better Finds" description="Eight featured Amazon finds across tech, home, lifestyle, and gifts. Explore our shortlist and check current Amazon prices.">
+  <main class="weekly">
+    <section class="weekly-hero"><div class="container"><div class="eyebrow">BUY BETTER FINDS · WEEKLY PICKS</div><h1>8 Amazon Finds Worth a Look</h1><p>From everyday essentials to gift ideas, explore this week's featured products and check the current details directly on Amazon.</p><a class="jump" href="#weekly-products">Explore the eight finds ↓</a></div></section>
+    <section class="container weekly-body" id="weekly-products">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> As an Amazon Associate, Buy Better Finds earns from qualifying purchases. Product prices, discounts, and availability may change. Check the Amazon listing before purchasing.</p>
+      <div class="finds-grid">
+        {finds.map((item, index) => <article class="find-card">
+          {item.image && <div class="find-image"><img src={item.image} alt={item.name} loading="lazy" referrerpolicy="no-referrer" /></div>}
+          <div class="find-copy"><span class="number">FIND {String(index+1).padStart(2,'0')}</span><h2>{item.name}</h2><p>{item.description}</p><a class="shop" href={item.url} target="_blank" rel="nofollow sponsored noopener noreferrer">View product details on Amazon →</a></div>
+        </article>)}
+      </div>
+      <p class="bottom-note">Featured products are selected for discovery, not presented as verified discounts. This page does not guarantee a sale price.</p>
+    </section>
+  </main>
+</BaseLayout>
+<style>
+.weekly{background:#f5f7fa;color:#14243a;min-height:75vh}.weekly-hero{background:#10233f;color:white;text-align:center;padding:64px 16px 60px}.weekly-hero .container{max-width:850px;margin:auto}.eyebrow{font-size:12px;letter-spacing:.16em;color:#ff8798;font-weight:800}.weekly-hero h1{font-size:clamp(34px,6vw,60px);line-height:1.07;margin:16px 0}.weekly-hero p{font-size:17px;line-height:1.6;color:#e3eaf3}.jump{display:inline-block;margin-top:14px;padding:12px 20px;border-radius:8px;background:#c8102e;color:#fff;text-decoration:none;font-weight:800}.weekly-body{max-width:1120px;margin:auto;padding:32px 16px 64px}.disclosure{padding:15px 18px;background:white;border-left:4px solid #c8102e;border-radius:8px;font-size:13px;line-height:1.6;margin:0 0 25px}.finds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.find-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 22px rgba(10,30,50,.05)}.find-image{height:230px;display:grid;place-items:center;padding:15px;background:#fff}.find-image img{max-width:100%;max-height:100%;object-fit:contain}.find-copy{padding:26px;display:flex;flex:1;flex-direction:column;align-items:flex-start}.number{font-size:11px;font-weight:900;letter-spacing:.12em;color:#c8102e}.find-copy h2{font-size:23px;line-height:1.22;margin:12px 0}.find-copy p{font-size:15px;line-height:1.6;color:#516178;margin:0 0 22px}.shop{margin-top:auto;background:#c8102e;color:#fff;text-decoration:none;padding:13px 16px;border-radius:7px;font-size:14px;font-weight:800;display:inline-block}.shop:hover,.jump:hover{background:#a20c25}.bottom-note{text-align:center;font-size:13px;color:#526278;margin-top:30px}@media(max-width:650px){.finds-grid{grid-template-columns:1fr;gap:16px}.find-copy{padding:21px}.find-copy h2{font-size:21px}.weekly-hero{padding:45px 14px}.find-image{height:210px}}
+</style>
