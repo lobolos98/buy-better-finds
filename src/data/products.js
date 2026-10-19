@@ -382,7 +382,7 @@ const supplementalProducts = [
   },
   {
     slug: 'tweezerman-tweezers', name: 'Tweezerman Slant Tweezer', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦', image: 'https://tweezerman.com/cdn/shop/files/wobnswxyuhspivnfjukp_1_2.jpg?v=1762528093&width=2000', imageAlt: 'Tweezerman slant tweezers',
-    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/dp/B000EMUDUQ?tag=buybetterfi06-20'
+    bestFor: 'Precision grooming and eyebrow shaping', why: 'A precision tweezer format built for controlled grooming and detail work.', watch: 'Tip alignment and grip preference are personal, so verify the exact model.', url: 'https://www.amazon.com/dp/B0CRLG3L11?tag=buybetterfi06-20'
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
