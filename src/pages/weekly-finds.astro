@@ -67,7 +67,7 @@ const finds = [
       <div class="finds-grid">
         {finds.map((item, index) => <article class="find-card">
           {item.image && <div class="find-image"><img src={item.image} alt={item.name} loading="lazy" referrerpolicy="no-referrer" /></div>}
-          <div class="find-copy"><span class="number">FIND {String(index+1).padStart(2,'0')}</span><h2>{item.name}</h2><p>{item.description}</p><a class="shop" href={item.url} target="_blank" rel="nofollow sponsored noopener noreferrer">Check Price on Amazon →</a></div>
+          <div class="find-copy"><span class="number">FIND {String(index+1).padStart(2,'0')}</span><h2>{item.name}</h2><p>{item.description}</p><a class="shop" href={item.url} target="_blank" rel="nofollow sponsored noopener noreferrer">View product details on Amazon →</a></div>
         </article>)}
       </div>
       <p class="bottom-note">Featured products are selected for discovery, not presented as verified discounts. This page does not guarantee a sale price.</p>
