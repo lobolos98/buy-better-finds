@@ -269,7 +269,7 @@ const productsCatalog = [
     bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', amazonAsin: 'B074PVTPBW', amazonUrl: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20'
   },
   {
-    slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: '$5.90', icon: '✦',
+    slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/516r6ghtxaL._AC_SL700_.jpg', imageAlt: 'CeraVe Hydrating Facial Cleanser',
     bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', amazonAsin: 'B07RL88DD2', amazonUrl: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20'
   },
