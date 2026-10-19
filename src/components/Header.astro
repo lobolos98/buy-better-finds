@@ -1,235 +1,73 @@
 <header class="header">
   <div class="nav">
     <a class="logo" href="/" aria-label="Buy Better Finds home">BUY <span>BETTER</span> FINDS</a>
-
     <nav class="links" aria-label="Main navigation">
       <a href="/">Home</a>
-      <a href="/products/">Products</a>
-      <a href="/search/">Search</a>
-      <a href="/categories/">Categories</a>
-      <a href="/trending/">What's Trending</a>
-      <a href="/price-watch/">Price Watch</a>
-      <a href="/categories/seasonal-holidays/">Seasonal & Holidays</a>
-      <a href="/best/">Best Of</a>
-      <a href="/guides/">Buying Guides</a>
-      <a href="/reviews/">Hands-On Reviews</a>
+      <div class="nav-group"><a class="group-link" href="/categories/">Shop Categories</a><button class="drop-trigger" type="button" aria-label="Toggle Shop Categories menu" aria-expanded="false" aria-controls="nav-panel-0">⌄</button><div class="nav-panel mega" id="nav-panel-0"><a href="/categories/">All Categories</a><a href="/categories/tech/">Tech</a><a href="/categories/home-kitchen/">Home &amp; Kitchen</a><a href="/categories/smart-home/">Smart Home</a><a href="/categories/tools-diy/">Tools &amp; DIY</a><a href="/categories/fitness/">Fitness</a><a href="/categories/beauty-personal-care/">Beauty &amp; Personal Care</a><a href="/categories/clothing-accessories/">Clothing &amp; Accessories</a><a href="/categories/pet/">Pets</a><a href="/categories/automotive/">Automotive</a><a href="/categories/toys-games/">Toys &amp; Games</a><a href="/categories/gifts-collectibles/">Gifts &amp; Collectibles</a><a href="/categories/seasonal-holidays/">Seasonal &amp; Holidays</a></div></div>
+<div class="nav-group"><a class="group-link" href="/weekly-finds/">Deals &amp; Finds</a><button class="drop-trigger" type="button" aria-label="Toggle Deals &amp; Finds menu" aria-expanded="false" aria-controls="nav-panel-1">⌄</button><div class="nav-panel " id="nav-panel-1"><a href="/weekly-finds/">Weekly Finds</a><a href="/products/">All Products</a><a href="/trending/">What's Trending</a><a href="/price-watch/">Price Watch</a><a href="/best/">Best Of</a></div></div>
+<div class="nav-group"><a class="group-link" href="/guides/">Buying Guides</a><button class="drop-trigger" type="button" aria-label="Toggle Buying Guides menu" aria-expanded="false" aria-controls="nav-panel-2">⌄</button><div class="nav-panel " id="nav-panel-2"><a href="/guides/">All Buying Guides</a><a href="/guides/best-automotive-accessories/">Automotive Accessories</a><a href="/guides/basement-bathroom-macerating-toilets/">Basement Bathroom Solutions</a><a href="/comparisons/">Comparisons</a><a href="/reviews/">Hands-On Reviews</a><a href="/why-we-recommend/">Our Standards</a></div></div>
       <a href="/blog/">Blog</a>
-      <a href="/comparisons/">Comparisons</a>
-      <a href="/why-we-recommend/">Buy Better Finds Standards</a>
-      <a href="/about/">About</a>
     </nav>
-
     <a class="btn primary nav-cta" href="/products/">Shop Finds <span aria-hidden="true">→</span></a>
-
-    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
-
   <div id="mobile-menu" class="mobile-menu" hidden>
     <nav aria-label="Mobile navigation">
       <a href="/">Home</a>
-      <a href="/products/">Products</a>
-      <a href="/search/">Search</a>
-      <a href="/categories/">Categories</a>
-      <a href="/trending/">What's Trending</a>
-      <a href="/price-watch/">Price Watch</a>
-      <a href="/categories/seasonal-holidays/">Seasonal &amp; Holidays</a>
-      <a href="/best/">Best Of</a>
-      <a href="/guides/">Buying Guides</a>
-      <a href="/reviews/">Hands-On Reviews</a>
+      <details><summary>Shop Categories</summary><div class="mobile-sub"><a href="/categories/">View all Shop Categories</a><a href="/categories/tech/">Tech</a><a href="/categories/home-kitchen/">Home &amp; Kitchen</a><a href="/categories/smart-home/">Smart Home</a><a href="/categories/tools-diy/">Tools &amp; DIY</a><a href="/categories/fitness/">Fitness</a><a href="/categories/beauty-personal-care/">Beauty &amp; Personal Care</a><a href="/categories/clothing-accessories/">Clothing &amp; Accessories</a><a href="/categories/pet/">Pets</a><a href="/categories/automotive/">Automotive</a><a href="/categories/toys-games/">Toys &amp; Games</a><a href="/categories/gifts-collectibles/">Gifts &amp; Collectibles</a><a href="/categories/seasonal-holidays/">Seasonal &amp; Holidays</a></div></details>
+<details><summary>Deals &amp; Finds</summary><div class="mobile-sub"><a href="/weekly-finds/">View all Deals &amp; Finds</a><a href="/products/">All Products</a><a href="/trending/">What's Trending</a><a href="/price-watch/">Price Watch</a><a href="/best/">Best Of</a></div></details>
+<details><summary>Buying Guides</summary><div class="mobile-sub"><a href="/guides/">View all Buying Guides</a><a href="/guides/best-automotive-accessories/">Automotive Accessories</a><a href="/guides/basement-bathroom-macerating-toilets/">Basement Bathroom Solutions</a><a href="/comparisons/">Comparisons</a><a href="/reviews/">Hands-On Reviews</a><a href="/why-we-recommend/">Our Standards</a></div></details>
       <a href="/blog/">Blog</a>
-      <a href="/comparisons/">Comparisons</a>
-      <a href="/why-we-recommend/">Buy Better Finds Standards</a>
+      <a href="/search/">Search</a>
       <a href="/about/">About</a>
-      <a class="mobile-cta" href="/products/">Shop Finds <span aria-hidden="true">→</span></a>
+      <a class="mobile-cta" href="/products/">Shop Finds →</a>
     </nav>
   </div>
 </header>
-
 <style>
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .nav {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 12px clamp(16px, 2vw, 40px);
-    min-height: 84px;
-    display: flex;
-    align-items: center;
-    gap: clamp(12px, 1.2vw, 24px);
-  }
-
-  .logo {
-    flex: 0 0 auto;
-    color: #111827;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    line-height: 1;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .logo span {
-    color: #1d4ed8;
-  }
-
-  .links {
-    flex: 1 1 auto;
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: clamp(8px, .9vw, 16px);
-    row-gap: 8px;
-  }
-
-  .links a,
-  .mobile-menu a {
-    color: #374151;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 1.2;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .links a:hover,
-  .links a:focus-visible,
-  .mobile-menu a:hover,
-  .mobile-menu a:focus-visible {
-    color: #1d4ed8;
-  }
-
-  .nav-cta {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-
-  .menu-toggle {
-    display: none;
-    width: 44px;
-    height: 44px;
-    margin-left: auto;
-    padding: 9px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    background: #ffffff;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    margin: 5px auto;
-    background: #111827;
-    border-radius: 2px;
-  }
-
-  .mobile-menu {
-    border-top: 1px solid #e5e7eb;
-    background: #ffffff;
-    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
-  }
-
-  .mobile-menu nav {
-    display: flex;
-    flex-direction: column;
-    padding: 8px 20px 18px;
-  }
-
-  .mobile-menu a {
-    display: block;
-    padding: 14px 0;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 15px;
-  }
-
-  .mobile-menu .mobile-cta {
-    margin-top: 10px;
-    padding: 13px 16px;
-    border: 0;
-    border-radius: 7px;
-    background: #1d4ed8;
-    color: #ffffff;
-    text-align: center;
-  }
-
-  .mobile-menu .mobile-cta:hover,
-  .mobile-menu .mobile-cta:focus-visible {
-    color: #ffffff;
-    background: #1e40af;
-  }
-
-  @media (max-width: 767px) {
-    .nav {
-      min-height: 64px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .links,
-    .nav-cta {
-      display: none;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .links { display: flex; }
-    .nav-cta { display: inline-flex; }
-    .menu-toggle { display: none; }
-  }
-
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 14px;
-    }
-
-    .mobile-menu nav {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-  }
+.header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e5e7eb}
+.nav{box-sizing:border-box;width:100%;padding:12px clamp(16px,2vw,40px);min-height:76px;display:flex;align-items:center;gap:clamp(12px,1.4vw,24px)}
+.logo{flex:0 0 auto;color:#111827;font:800 16px/1 Arial,Helvetica,sans-serif;letter-spacing:.04em;text-decoration:none;white-space:nowrap}
+.logo span{color:#1d4ed8}
+.links{flex:1;min-width:0;display:flex;justify-content:center;align-items:center;gap:clamp(12px,1.6vw,28px)}
+.links a,.drop-trigger,.mobile-menu a,.mobile-menu summary{color:#374151;font:600 13px/1.3 Arial,Helvetica,sans-serif;text-decoration:none}
+.links a:hover,.links a:focus-visible,.drop-trigger:hover,.drop-trigger:focus-visible{color:#1d4ed8}
+.nav-group{position:relative;display:flex;align-items:center;gap:3px}
+.group-link{white-space:nowrap}
+.drop-trigger{background:transparent;border:0;cursor:pointer;font-size:20px;padding:8px 5px}
+.nav-panel{display:none;position:absolute;top:100%;left:0;min-width:230px;padding:14px;background:white;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 14px 28px rgba(17,24,39,.13);grid-template-columns:1fr;gap:2px}
+.nav-panel.mega{width:min(620px,calc(100vw - 48px));grid-template-columns:repeat(3,minmax(0,1fr))}
+.nav-panel a{display:block;padding:11px 10px;white-space:normal;border-radius:6px}
+.nav-panel a:hover,.nav-panel a:focus-visible{background:#eff6ff}
+.nav-group:hover .nav-panel,.nav-group:focus-within .nav-panel,.nav-group.is-open .nav-panel{display:grid}
+.nav-cta{flex:0 0 auto;white-space:nowrap}
+.menu-toggle{display:none;width:44px;height:44px;margin-left:auto;padding:9px;border:1px solid #d1d5db;border-radius:8px;background:white;cursor:pointer}
+.menu-toggle span{display:block;width:24px;height:2px;margin:5px auto;background:#111827;border-radius:2px}
+.mobile-menu{border-top:1px solid #e5e7eb;background:#fff;box-shadow:0 8px 18px rgba(17,24,39,.08);max-height:calc(100vh - 64px);overflow-y:auto}
+.mobile-menu nav{display:flex;flex-direction:column;padding:8px 20px 18px}
+.mobile-menu a,.mobile-menu summary{display:block;padding:14px 0;border-bottom:1px solid #f1f5f9;font-size:15px;cursor:pointer}
+.mobile-menu summary{list-style:none}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu summary:after{content:'+';float:right}
+.mobile-menu details[open] summary:after{content:'−'}
+.mobile-sub{padding:0 0 8px 16px}
+.mobile-sub a{font-size:14px;padding:11px 0;color:#4b5563}
+.mobile-menu .mobile-cta{margin-top:10px;padding:13px 16px;border:0;border-radius:7px;background:#1d4ed8;color:#fff;text-align:center}
+@media(max-width:900px){.links,.nav-cta{display:none}.menu-toggle{display:block}.nav{min-height:64px;padding-top:8px;padding-bottom:8px}}
+@media(min-width:901px){.mobile-menu{display:none!important}}
+@media(max-width:480px){.logo{font-size:14px}.mobile-menu nav{padding-left:16px;padding-right:16px}}
 </style>
-
 <script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('#mobile-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-      menu.hidden = isOpen;
-    });
-
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation menu');
-        menu.hidden = true;
-      });
-    });
-  }
+const toggle=document.querySelector('.menu-toggle');
+const menu=document.querySelector('#mobile-menu');
+if(toggle&&menu){
+ toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?'Open navigation menu':'Close navigation menu');menu.hidden=open;});
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');menu.hidden=true;}));
+}
+document.querySelectorAll('.nav-group').forEach(group=>{
+ const button=group.querySelector('.drop-trigger');
+ button?.addEventListener('click',()=>{const open=group.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));});
+ group.addEventListener('keydown',event=>{if(event.key==='Escape'){group.classList.remove('is-open');button?.setAttribute('aria-expanded','false');button?.focus();}});
+});
+document.addEventListener('click',event=>{document.querySelectorAll('.nav-group.is-open').forEach(group=>{if(!group.contains(event.target)){group.classList.remove('is-open');group.querySelector('.drop-trigger')?.setAttribute('aria-expanded','false');}});});
 </script>
