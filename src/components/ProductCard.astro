@@ -14,7 +14,9 @@ const directAmazonBySlug = {
   'skil-brushless-flip-drill': 'https://www.amazon.com/dp/B0DHWPM278?tag=buybetterfi06-20',
   'dremel-4300-rotary-tool': 'https://www.amazon.com/dp/B01M1SJNVU?tag=buybetterfi06-20'
 };
-const directAmazonUrl = directAmazonBySlug[product.slug];
+const directAmazonUrl = product.slug === 'tweezerman-tweezers'
+  ? 'https://www.amazon.com/dp/B0CRLG3L11?tag=buybetterfi06-20'
+  : directAmazonBySlug[product.slug];
 const amazonUrl = directAmazonUrl ?? (product.amazonAsin === 'B0C6XJNKP8'
   ? exactDealAmazonUrl
   : (product.amazonAsin === 'B0F2J118F4' || product.amazonAsin === 'B0CS3FF4RF')
