@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const currentMonth = new Date().getMonth();
 const seasonalWindow = currentMonth >= 8 && currentMonth <= 10
-  ? { season: 'Fall', headline: 'Fall & Halloween Shopping', intro: 'Stay ahead of the season with Halloween finds, fall products, gift ideas, and timely shopping opportunities.', events: ['Fall finds', 'Halloween', 'Early holiday gifts', 'Black Friday & Cyber Monday'] }
+  ? { season: 'Fall', headline: 'Fall, Halloween & Christmas Shopping', intro: 'Shop the season in one place—from fall favorites and Halloween finds to Christmas gifts, festive home picks, and upcoming holiday deals.', events: ['Fall finds', 'Halloween favorites', 'Christmas gifts & decor', 'Black Friday & Cyber Monday'] }
   : currentMonth >= 11 || currentMonth <= 1
     ? { season: 'Winter', headline: 'Winter & Holiday Shopping', intro: 'Find timely gift ideas, winter essentials, clearance opportunities, and the next big shopping events.', events: ['Holiday gifts', 'Winter essentials', 'Last-minute gifts', 'New Year deals'] }
     : currentMonth >= 2 && currentMonth <= 4
