@@ -27,11 +27,13 @@ A practical gift for someone who regularly misplaces keys, a bag, or other every
 **Best for:** Busy people and anyone who likes a little help keeping track of essentials.  
 **Check Price:** https://www.amazon.com/dp/B0D63657GY/ref=cm_sw_r_as_gl_apa_gl_i_2N87REJG61WFY1VFVRQW?linkCode=ml1&tag=buybetterfi06-20&linkId=0a7bc990e0a1ca8459af23ece68ef72e&gaOptInStatus=true
 
-### 3. Bedsure GentleSoft Throw Blanket
+### 3. Bedsure GentleSoft Faux Fur Sherpa Throw Blanket
 A soft throw is an easy comfort gift for movie nights, reading corners, or adding an extra layer to a favorite chair. Confirm the selected fabric, color, and size on the listing.
 
 **Best for:** Cozy-home people and winter lounging.  
-**Check Price:** https://www.amazon.com/dp/B0C22WJ4N6?tag=buybetterfi06-20
+**Check Price:** https://www.amazon.com/dp/B07X3BX7WM?tag=buybetterfi06-20
+
+**Image match correction:** The originally listed ASIN B0C22WJ4N6 is a wearable blanket hoodie, not the throw blanket described here. Use the corrected ASIN B07X3BX7WM, whose Amazon listing identifies a Bedsure faux-fur/fleece sherpa throw blanket.
 
 ### 4. Yankee Candle Balsam & Cedar Large Jar
 A seasonal evergreen scent can make a room feel warm and festive. Check that the listing is for the intended Balsam & Cedar candle and the correct jar size.
@@ -127,3 +129,28 @@ A good under-$25 gift should feel intentional, not like a compromise. Pick the i
 - [ ] Convert each “Check Price” link to the site's standard product-link styling.
 - [ ] Add the story card to `src/pages/blog/index.astro` only after the article is approved for publication.
 - [ ] Run the Astro build and review mobile/desktop before merging to `main`.
+
+
+## Product-image verification log
+
+Image URLs below were read from the primary product-image markup on the corresponding Amazon listing. They are authentic Amazon-hosted listing photos, not generated images. Use the large image URL for each matching product; retain a “Check Price” link to the corresponding product detail page.
+
+| # | Exact listing checked | Main image source | Status |
+|---|---|---|---|
+| 1 | PRUNUS J-999 Retro Bluetooth Speaker, Purple — B0DXNRVR3V | https://m.media-amazon.com/images/I/71h45gas2wL._AC_SL1500_.jpg | Verified |
+| 2 | Tile Mate, 1-Pack Black — B0D63657GY | https://m.media-amazon.com/images/I/81SYpSm0gNL._AC_SL1500_.jpg | Verified |
+| 3 | Bedsure Faux Fur Fluffy Fleece Sherpa Throw Blanket, Grey 50 x 60 — B07X3BX7WM | https://m.media-amazon.com/images/I/A1Ajfh3EvtL._AC_SL1500_.jpg | Corrected and verified |
+| 4 | Yankee Candle Balsam & Cedar Scented Candle, 22 oz Large Jar — B0F3DPXQP1 | https://m.media-amazon.com/images/I/71Z42Yzlc5L._AC_SL1500_.jpg | Verified |
+| 5 | Bedsure Satin Pillowcases, Queen Set of 2, Grey — B0725WFLMB | https://m.media-amazon.com/images/I/81yXFAw10nL._AC_SL1500_.jpg | Verified |
+| 6 | DASH Mini Waffle Maker, Aqua — B01M9I779L | https://m.media-amazon.com/images/I/61fTss4amkL._AC_SL1500_.jpg | Verified |
+| 7 | SIMPLETASTE Handheld Electric Milk Frother, Grey — B01LNFYCHM | https://m.media-amazon.com/images/I/61mgiABFYnL._AC_SL1500_.jpg | Verified |
+| 8 | Bodum Bean Cold Brew Coffee Maker — B083JXKVMP | Pending direct main-image URL capture |
+| 9 | LANEIGE Lip Glowy Balm, Sweet Candy — B0CZYN6RBZ | Variant label confirmed; pending direct main-image URL capture |
+| 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | Listing identity confirmed; pending direct main-image URL capture |
+| 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | Listing identity confirmed; pending direct main-image URL capture |
+| 12 | Rechargeable Candle Lighter, 2-Pack — B0D4PHGPMN | Listing identity confirmed; pending direct main-image URL capture |
+| 13 | PULIDIKI Car Cleaning Gel Clean Putty — B081T7N948 | Listing identity confirmed; newer version is also offered; pending direct main-image URL capture |
+| 14 | LENRUE A2 Bluetooth Speaker — B0CM2WNR7V | Brand/model details found; pending direct main-image URL capture |
+| 15 | GODONLIF Candle Warmer Lamp with Timer — B0CTJGJL2T | Listing identity confirmed; pending direct main-image URL capture |
+
+**Do not publish yet:** Direct photo sources are captured for 7 of 15 items. Finish capturing and checking the remaining 8 image URLs, then visually inspect the image set and confirm each image matches its listed color/variant. Amazon listing availability and featured offers can change.
