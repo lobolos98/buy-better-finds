@@ -53,8 +53,8 @@ This compact waffle maker is a cheerful gift for quick breakfasts and playful sn
 **Best for:** Breakfast fans, students, and small kitchens.  
 **Check Price:** https://www.amazon.com/dp/B01M9I779L/ref=cm_sw_r_as_gl_apa_gl_i_7B493624H8J48CF36JKK?linkCode=ml1&tag=buybetterfi06-20&linkId=d91f55cabee250e58e4564e78ee5de9c&gaOptInStatus=true
 
-### 7. SIMPLETASTE Electric Milk Frother
-A handheld frother can make at-home coffee, matcha, and other drinks feel more café-like without taking up much space. Check whether batteries are included and review care instructions.
+### 7. SIMPLETASTE Handheld Electric Milk Frother
+A handheld frother can make at-home coffee, matcha, and other drinks feel more café-like without taking up much space. Check the exact package contents and review care instructions before ordering.
 
 **Best for:** Coffee and matcha drinkers.  
 **Check Price:** https://www.amazon.com/dp/B01LNFYCHM?tag=buybetterfi06-20
@@ -137,20 +137,20 @@ Image URLs below were read from the primary product-image markup on the correspo
 
 | # | Exact listing checked | Main image source | Status |
 |---|---|---|---|
-| 1 | PRUNUS J-999 Retro Bluetooth Speaker, Purple — B0DXNRVR3V | https://m.media-amazon.com/images/I/71h45gas2wL._AC_SL1500_.jpg | Verified |
+| 1 | PRUNUS J-999 Retro Bluetooth Speaker, Purple — B0DXNRVR3V | https://m.media-amazon.com/images/I/71h45gas2wL._AC_SL1500_.jpg | Source recorded; image could not be rendered in the visual check, so color/product appearance remains unconfirmed |
 | 2 | Tile Mate, 1-Pack Black — B0D63657GY | https://m.media-amazon.com/images/I/81SYpSm0gNL._AC_SL1500_.jpg | Verified |
 | 3 | Bedsure Faux Fur Fluffy Fleece Sherpa Throw Blanket, Grey 50 x 60 — B07X3BX7WM | https://m.media-amazon.com/images/I/A1Ajfh3EvtL._AC_SL1500_.jpg | Corrected and verified |
 | 4 | Yankee Candle Balsam & Cedar Scented Candle, 22 oz Large Jar — B0F3DPXQP1 | https://m.media-amazon.com/images/I/71Z42Yzlc5L._AC_SL1500_.jpg | Verified |
-| 5 | Bedsure Satin Pillowcases, Queen Set of 2, Grey — B0725WFLMB | https://m.media-amazon.com/images/I/81yXFAw10nL._AC_SL1500_.jpg | Verified |
+| 5 | Bedsure Satin Pillowcases, Queen Set of 2, Grey — B0725WFLMB | https://m.media-amazon.com/images/I/81yXFAw10nL._AC_SL1500_.jpg | Source recorded; image could not be rendered in the visual check; listing identity independently matches silver-grey queen 2-pack |
 | 6 | DASH Mini Waffle Maker, Aqua — B01M9I779L | https://m.media-amazon.com/images/I/61fTss4amkL._AC_SL1500_.jpg | Verified |
-| 7 | SIMPLETASTE Handheld Electric Milk Frother, Grey — B01LNFYCHM | https://m.media-amazon.com/images/I/61mgiABFYnL._AC_SL1500_.jpg | Verified |
+| 7 | SIMPLETASTE Handheld Electric Milk Frother — B01LNFYCHM | https://m.media-amazon.com/images/I/61mgiABFYnL._AC_SL1500_.jpg | HOLD: rendered image shows three frothers (black, white, silver) and batteries; verify that this exact ASIN/package includes the pictured quantity before using this image |
 | 8 | Bodum 51oz Cold Brew Coffee Maker, Black — B083JXKVMP | https://m.media-amazon.com/images/I/81yEdHzDgkL._AC_SL1500_.jpg | Verified from Amazon primary-image markup |
 | 9 | LANEIGE Lip Glowy Balm — B0CZYN6RBZ | https://m.media-amazon.com/images/I/61A3hPK-npL._SL1500_.jpg | Main image verified; exact Sweet Candy variant still needs visual confirmation |
-| 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | https://m.media-amazon.com/images/I/91dGmlpvdxL._SL1500_.jpg | Verified from Amazon primary-image markup |
+| 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | https://m.media-amazon.com/images/I/91dGmlpvdxL._SL1500_.jpg | Source recorded; image could not be rendered in the visual check; listing identity independently matches six-product gift tin |
 | 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | https://m.media-amazon.com/images/I/71ACduNmVAL._SL1500_.jpg | Verified from Amazon primary-image markup; green variant identified in image alt text |
 | 12 | Rechargeable Candle Lighter, 2-Pack — B0D4PHGPMN | https://m.media-amazon.com/images/I/71s0mqypf4L._AC_SL1500_.jpg | Verified from Amazon primary-image markup; alt text confirms 2-piece rechargeable lighter set |
 | 13 | PULIDIKI Car Cleaning Gel Clean Putty — B081T7N948 | https://m.media-amazon.com/images/I/71WpCXsPbML._AC_SL1500_.jpg | Verified from Amazon primary-image markup; alt text confirms PULIDIKI Car Cleaning Gel |
 | 14 | LENRUE compact Bluetooth speaker, gray — B0CM2WNR7V | https://m.media-amazon.com/images/I/610yy0u0QWL.jpg | Exact-ASIN image source confirmed through the product record; image visually matches a gray LENRUE compact speaker. The listing data identifies model K3, not A2, so the draft title has been corrected to avoid the mismatch |
 | 15 | GODONLIF Candle Warmer Lamp with Timer — B0CTJGJL2T | https://m.media-amazon.com/images/I/810vcJJDrkL._AC_SL1500_.jpg | Verified from Amazon primary-image markup; title confirms timer and dimmable lamp |
 
-**Do not publish yet:** Direct main-image URLs are recorded for all 15 candidate listings. The LENRUE mismatch has been resolved by replacing the questionable image with the image source associated with the exact linked ASIN B0CM2WNR7V and changing the copy from “A2” to a generic compact Bluetooth speaker title; the product record identifies this listing as model K3. The LANEIGE Sweet Candy variation is confirmed in Amazon's variation data. Before publication, visually inspect all 15 image files in the actual site layout, verify crops and alt text, and confirm all current variants and prices remain appropriate. Amazon listing availability and featured offers can change.
+**Do not publish yet:** The image URLs are recorded for all 15 listings, and 12 images were visually rendered in this audit. The PRUNUS speaker, Bedsure pillowcase, and Burt’s Bees gift-set image URLs could not be rendered by the visual-check tool, so their image appearance is not confirmed here. The SIMPLETASTE frother image renders as a three-unit set; verify that the exact linked ASIN/package includes all three before using it. The LENRUE item is now titled generically as a compact gray Bluetooth speaker; the exact ASIN's product record identifies model K3. The LANEIGE Sweet Candy image visibly matches the selected variant. Before publication, visually inspect unresolved images, verify all crops and alt text in the actual site layout, and confirm all current variants and prices remain appropriate. Amazon listing availability and featured offers can change.
