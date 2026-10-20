@@ -115,28 +115,32 @@ const productsCatalog = [
   {
     slug: 'apple-airpods-4', name: 'Apple AirPods 4', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/newsroom/images/2024/09/apple-introduces-airpods-4/article/Apple-AirPods-4-with-case-240909_big.jpg.large.jpg', imageAlt: 'Apple AirPods 4',
-    bestFor: 'Everyday wireless listening', why: 'Open-ear wireless earbuds with the H2 chip, USB-C charging case, and an available ANC model.', watch: 'AirPods 4 and AirPods 4 with ANC are separate models; confirm the exact version before buying.', url: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20', amazonAsin: 'B0DGHMNQ5Z', amazonUrl: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20', dailyDealDate: '2026-10-21'
+    bestFor: 'Everyday wireless listening', why: 'Open-ear wireless earbuds with the H2 chip, USB-C charging case, and an available ANC model.', watch: 'AirPods 4 and AirPods 4 with ANC are separate models; confirm the exact version before buying.', url: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20', amazonAsin: 'B0DGHMNQ5Z', amazonUrl: 'https://www.amazon.com/dp/B0DGHMNQ5Z?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-21'
   },
 
   {
     slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
     image: 'https://timbuktoys.com/cdn/shop/files/Magna-TilesClearColors32PieceSet.jpg?v=1723148394', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', dailyDealDate: '2026-10-23'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-23'
   },
 
   {
     slug: 'taco-cat-goat-cheese-pizza', name: 'Taco Cat Goat Cheese Pizza Card Game', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://happypiranha.com/cdn/shop/files/taco_cat_goat_cheese_pizza_game_1.png?v=1762271901&width=1946', imageAlt: 'Taco Cat Goat Cheese Pizza Card Game',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B077Z1R28P', amazonUrl: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', dailyDealDate: '2026-10-30'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B077Z1R28P', amazonUrl: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B077Z1R28P?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-30'
   },
 
   {
     slug: 'bitzee-interactive-digital-pet', name: 'Bitzee Interactive Digital Pet', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ecsmedia.pl/c/bitzee-interaktywne-zwierzatko-cyfrowe-wirtualny-zwierzak-hologram-spin-master-b-iext191183535.jpg', imageAlt: 'Bitzee Interactive Digital Pet',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BW1B31SR', amazonUrl: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20', dailyDealDate: '2026-11-06'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0BW1B31SR', amazonUrl: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BW1B31SR?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-06'
   },
 
   {
@@ -150,7 +154,8 @@ const productsCatalog = [
     slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
     image: 'https://www.crayola.com/images/default-source/product-images/toys/04-0908-0-202_light-up-tracing-pad_pink_f1.jpg?sfvrsn=67c0bf90_9', imageAlt: 'Crayola Light Up Tracing Pad',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0084JUNXS', amazonUrl: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20', dailyDealDate: '2026-11-13'
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B0084JUNXS', amazonUrl: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-13'
   },
 
   {
@@ -255,28 +260,35 @@ const productsCatalog = [
     slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
     image: 'https://t7.leapfrog.com/images/prod-lg/learning-friends-100-words-book_80-601540_1.jpg', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
     bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazo{
+    watch: 'Check the current age guidance, edition, and availability before buying.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-22'
+  },
+
+  {
     slug: 'eltamd-uv-clear-spf-46', name: 'EltaMD UV Clear Broad-Spectrum SPF 46', category: 'Beauty & Personal Care', price: '$14.00', icon: '✦',
     image: 'https://lirp.cdn-website.com/f2fb22d0/dms3rep/multi/opt/EltaMD%2BUV%2BClear%2BBroad-Spectrum%2BSPF%2B46%2B1.7%2Bfl.oz-1920w.png', imageAlt: 'EltaMD UV Clear Broad-Spectrum SPF 46',
-    bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', amazonAsin: 'B002MSN3QQ', amazonUrl: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20', dailyDealDate: '2026-10-22'
-  }amazon.com/dp/B002MSN3QQ?tag=buyb{
+    bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', amazonAsin: 'B002MSN3QQ', amazonUrl: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20'
+  },
+  {
     slug: 'hero-mighty-patch-original', name: 'Hero Cosmetics Mighty Patch Original', category: 'Beauty & Personal Care', price: '$8.97', icon: '✦',
     image: 'https://www.herocosmetics.us/cdn/shop/t/458/assets/ba-mpo-box_1400x.png?v=117881626257170890701790705573', imageAlt: 'Hero Cosmetics Mighty Patch Original',
-    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', amazonAsin: 'B074PVTPBW', amazonUrl: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', dailyDealDate: '2026-10-29'
-  }buybetterfi06-20', url: 'https://{
+    bestFor: 'Blemish care and overnight routines', why: 'Hydrocolloid patches designed for overnight blemish coverage and absorption.', watch: 'Patch count and package size vary by listing.', amazonAsin: 'B074PVTPBW', amazonUrl: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B074PVTPBW?tag=buybetterfi06-20'
+  },
+  {
     slug: 'cerave-hydrating-facial-cleanser', name: 'CeraVe Hydrating Facial Cleanser', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/516r6ghtxaL._AC_SL700_.jpg', imageAlt: 'CeraVe Hydrating Facial Cleanser',
-    bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', amazonAsin: 'B07RL88DD2', amazonUrl: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20', dailyDealDate: '2026-11-05'
-  }s://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20'
+    bestFor: 'Gentle daily cleansing', why: 'Fragrance-free cleanser with ceramides and hyaluronic acid for normal-to-dry skin.', watch: 'Confirm the bottle size because listings vary.', amazonAsin: 'B07RL88DD2', amazonUrl: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07RL88DD2?tag=buybetterfi06-20'
   },
   {
     slug: 'paulas-choice-2-bha-liquid-exfoliant', name: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant", category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://m.media-amazon.com/images/I/61cGibB-FbL._SL1500_.jpg', imageAlt: "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant",
-    bestFor: 'Pore and texture-focused routines', why: 'Leave-on salicylic-acid exfoliant designed to unclog pores and smooth the look of uneven texture.', watch: 'Exfoliating acids can be irritating; follow the product directions.', url: 'https://www.amazon.com/dp/B07B6ZN7P8?{
+    bestFor: 'Pore and texture-focused routines', why: 'Leave-on salicylic-acid exfoliant designed to unclog pores and smooth the look of uneven texture.', watch: 'Exfoliating acids can be irritating; follow the product directions.', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-12'
+  },
+  {
     slug: 'biodance-bio-collagen-real-deep-mask', name: 'Biodance Bio-Collagen Real Deep Mask', category: 'Beauty & Personal Care', price: '$19.00', icon: '✦',
     image: 'https://www.pletovecentrum.sk/cdn/shop/files/Biodance_pink.jpg?v=1729804718', imageAlt: 'Biodance Bio-Collagen Real Deep Mask',
-    bestFor: 'Hydration and overnight self-care', why: 'Hydrogel face mask designed for deep hydration and a plump, refreshed-looking complexion.', watch: 'Verify the number of masks in the selected package.', amazonAsin: 'B0B2RM68G2', amazonUrl: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20', dailyDealDate: '2026-11-12'
-  }8G2?tag=buybetterfi06-20'
+    bestFor: 'Hydration and overnight self-care', why: 'Hydrogel face mask designed for deep hydration and a plump, refreshed-looking complexion.', watch: 'Verify the number of masks in the selected package.', amazonAsin: 'B0B2RM68G2', amazonUrl: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0B2RM68G2?tag=buybetterfi06-20'
   },
   {
     slug: 'the-ordinary-niacinamide-zinc', name: 'The Ordinary Niacinamide 10% + Zinc 1%', category: 'Beauty & Personal Care', price: '$17.54', icon: '✦',
@@ -351,14 +363,21 @@ const productsCatalog = [
   {
     slug: 'sacheu-stay-n-peel-off-lip-liner', name: 'Sacheu Peel Off Lip Liner STAY-N', category: 'Beauty & Personal Care', price: 'Check price', icon: '✦',
     image: 'https://sacheu.com/cdn/shop/files/Number_1_Lip_Liner_Graphic_-_Lip_Liner_STAY-N_7a835234-c49e-4e33-a180-6903637bc8c5.png?v=1777402314&width=2000', imageAlt: 'Sacheu STAY-N Peel Off Lip Liner',
-    bestFor: 'Long-wear lip color', why: 'Peel-off lip liner format designed to leave a long-lasting tint after removal.', watch: 'Shade and wear time vary by person and application.', amazonAsin: 'B0BVPNQW1C', amazon{
-    slug: 'ring-battery-doorbell', name: 'Ring Battery Doorbell', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://images.ctfassets.net/a3peezndovsu/x7qceIoaiCJ3QArhqVeSp/ea33ebc6250b36d629f22971b3e76930/ring_battery_doorbell_2nd_gen_front_image_render_speckle_mocha_1500x1500_02.jpg', imageAlt: 'Ring Battery Doorbell', bestFor: 'Front-door monitoring and package awareness', why: 'Battery-powered video doorbell designed for flexible installation without running doorbell wiring.', watch: 'Cloud features and subscriptions can add ongoing cost depending on how you use it.', amazonAsin: 'B0BZWRLRLK', amazonUrl: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', dailyDealDate: '2026-10-25'
-  }e it.', amazonAsin: 'B0BZWRLRLK', amazonUrl: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20'
+    bestFor: 'Long-wear lip color', why: 'Peel-off lip liner format designed to leave a long-lasting tint after removal.', watch: 'Shade and wear time vary by person and application.', amazonAsin: 'B0BVPNQW1C', amazonUrl: 'https://www.amazon.com/dp/B0BVPNQW1C?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BVPNQW1C?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-25'
+  },
+
+];
+
+const supplementalProducts = [
+  {
+    slug: 'ring-battery-doorbell', name: 'Ring Battery Doorbell', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://images.ctfassets.net/a3peezndovsu/x7qceIoaiCJ3QArhqVeSp/ea33ebc6250b36d629f22971b3e76930/ring_battery_doorbell_2nd_gen_front_image_render_speckle_mocha_1500x1500_02.jpg', imageAlt: 'Ring Battery Doorbell', bestFor: 'Front-door monitoring and package awareness', why: 'Battery-powered video doorbell designed for flexible installation without running doorbell wiring.', watch: 'Cloud features and subscriptions can add ongoing cost depending on how you use it.', amazonAsin: 'B0BZWRLRLK', amazonUrl: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZWRLRLK?tag=buybetterfi06-20'
   },
   {
-    slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watc{
-    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', amazonAsin: 'B09B7NQT2K', amazonUrl: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20', dailyDealDate: '2026-10-20'
-  }r rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', amazonAsin: 'B09B7NQT2K', amazonUrl: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20'
+    slug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣', image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank', bestFor: 'Portable phone charging', why: 'Compact Anker charging option aimed at people who want backup power without carrying a large battery pack.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20', dailyDealDate: '2026-10-20', amazonAsin: 'B0C6XK6DDL', amazonUrl: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'govee-smart-light-bulbs', name: 'Govee Smart LED Light Bulbs', category: 'Home & Kitchen', price: 'Check price', icon: '✦', image: 'https://cdn.shopify.com/s/files/1/0512/3489/8105/files/H6008_cde715ce-4395-4eec-8c65-329d794af8cf.png?v=1758526174', imageAlt: 'Govee Smart LED Light Bulbs', bestFor: 'Color lighting and smart-home ambiance', why: 'Smart LED bulbs offer app-based lighting control and color options for rooms, desks, and entertainment spaces.', watch: 'Smart-home compatibility and exact bulb specifications vary by model.', amazonAsin: 'B09B7NQT2K', amazonUrl: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B7NQT2K?tag=buybetterfi06-20'
   },
   {
     slug: 'stanley-quencher', name: 'Stanley Quencher H2.0 Tumbler', category: 'Lifestyle', price: 'Check price', icon: '◈', image: 'https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-TheQuencherH2.OFlowStateTMTumbler20OZ-Black2.0-Front_20399a06-bbde-478f-a91e-c3b545d6457d.png?v=1716304216&width=990', imageAlt: 'Stanley Quencher H2.0 Tumbler', pressKitUrl: 'https://www.stanley1913.com/pages/newsroom', bestFor: 'Large-volume everyday hydration', why: 'Large insulated tumbler designed for carrying a substantial drink throughout the day.', watch: 'Its large size is convenient for hydration but less convenient for small cup holders and bags.', amazonAsin: 'B0CK9GTLJY', amazonUrl: 'https://www.amazon.com/dp/B0CK9GTLJY?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CK9GTLJY?tag=buybetterfi06-20', dailyDealDate: '2026-09-18'
@@ -375,19 +394,23 @@ const productsCatalog = [
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
-    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creativ{
+    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-28'
+  },
+  {
     slug: 'apple-airtag-2', name: 'Apple AirTag (2nd generation)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airtag-1pack-witb-202601?wid=600&hei=600&fmt=jpeg', imageAlt: 'Apple AirTag 2nd generation',
-    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', dailyDealDate: '2026-10-28'
-  }king.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amaz{
+    bestFor: 'Finding keys, bags, and everyday items', why: 'A compact item tracker designed to help locate personal belongings through the Find My network.', watch: 'AirTag is intended for item finding, not continuous personal location tracking.', amazonAsin: 'B0GJTFXNRX', amazonUrl: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20'
+  },
+  {
     slug: 'anker-737-power-bank', name: 'Anker 737 Power Bank (PowerCore 24K)', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09VPHVT2Z&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Anker 737 Power Bank',
-    bestFor: 'Laptop and phone charging while traveling', why: 'High-capacity portable power bank with high-output USB-C charging and an onboard display.', watch: 'Its large capacity also means a heavier battery pack.', amazonAsin: 'B09VPHVT2Z', amazonUrl: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20', dailyDealDate: '2026-11-04'
-  }amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20', url: 'https://{
+    bestFor: 'Laptop and phone charging while traveling', why: 'High-capacity portable power bank with high-output USB-C charging and an onboard display.', watch: 'Its large capacity also means a heavier battery pack.', amazonAsin: 'B09VPHVT2Z', amazonUrl: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09VPHVT2Z?tag=buybetterfi06-20'
+  },
+  {
     slug: 'logitech-mx-keys-s', name: 'Logitech MX Keys S Wireless Keyboard', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BKW3LB2B&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1', imageAlt: 'Logitech MX Keys S Wireless Keyboard',
-    bestFor: 'Desktop productivity and multi-device work', why: 'Low-profile wireless keyboard built for quiet typing, multi-device switching, and customizable shortcuts.', watch: 'Full-size layouts take more desk space than compact keyboards.', amazonAsin: 'B0BKW3LB2B', amazonUrl: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20', dailyDealDate: '2026-11-11'
-  }s://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20'
+    bestFor: 'Desktop productivity and multi-device work', why: 'Low-profile wireless keyboard built for quiet typing, multi-device switching, and customizable shortcuts.', watch: 'Full-size layouts take more desk space than compact keyboards.', amazonAsin: 'B0BKW3LB2B', amazonUrl: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BKW3LB2B?tag=buybetterfi06-20'
   },
   {
     slug: 'samsung-t7-shield', name: 'Samsung T7 Shield Portable SSD 2TB', category: 'Tech', price: 'Check price', icon: '▣',
@@ -397,7 +420,8 @@ const productsCatalog = [
   {
     slug: 'bose-qc-ultra-2', name: 'Bose QuietComfort Ultra Headphones (2nd Gen)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://image.anhducdigital.vn/di-dong/tai-nghe/tai-nghe-headphone/bose/bose-quietcomfort-ultra-headphones-2/bose-quietcomfort-ultra-headphones-2-white-2.jpg', imageAlt: 'Bose QuietComfort Ultra Headphones 2nd Gen',
-    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', amazonAsin: 'B0FDKR293G', amazonUrl: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', dailyDealDate: '2026-11-18'
+    bestFor: 'Travel and immersive listening', why: 'Premium wireless over-ear headphones with active noise cancellation and spatial-audio features.', watch: 'Premium headphones are a substantial purchase, so fit and sound preferences matter.', amazonAsin: 'B0FDKR293G', amazonUrl: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FDKR293G?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-18'
   },
   {
     slug: 'jbl-charge-5', name: 'JBL Charge 5 Portable Bluetooth Speaker', category: 'Tech', price: 'Check price', icon: '◉',
@@ -447,19 +471,23 @@ const productsCatalog = [
   {
     slug: 'apple-magic-mouse-usbc', name: 'Apple Magic Mouse (USB-C)', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://m.media-amazon.com/images/I/516a630bNQL._AC_SL1500_.jpg', imageAlt: 'Apple Magic Mouse USB-C',
-    bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for com{
+    bestFor: 'Mac desktop setups and gesture-based navigation', why: 'Wireless mouse with a Multi-Touch surface and rechargeable USB-C connection for compatible Apple setups.', watch: 'The charging-port location and low-profile shape are worth considering before buying.', url: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20', amazonAsin: 'B0DL72PK1P', amazonUrl: 'https://www.amazon.com/dp/B0DL72PK1P?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-27'
+  },
+  {
     slug: 'kitchenaid-artisan-stand-mixer', name: 'KitchenAid Artisan Series 5-Quart Stand Mixer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://kitchenaidus.vtexassets.com/arquivos/ids/159154/hero-KSM150PSBK.jpg?v=639198847141800000', imageAlt: 'KitchenAid Artisan Series stand mixer',
-    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', amazonAsin: 'B00005UP2K', amazonUrl: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20', dailyDealDate: '2026-10-27'
-  }wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choic{
+    bestFor: 'Baking, mixing, and everyday kitchen prep', why: 'Classic 5-quart stand mixer format with a wide accessory ecosystem for mixing and baking tasks.', watch: 'Attachments and color choices can change the total price.', amazonAsin: 'B00005UP2K', amazonUrl: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00005UP2K?tag=buybetterfi06-20'
+  },
+  {
     slug: 'oxo-9-tongs-silicone', name: 'OXO Good Grips 9-Inch Tongs with Silicone Heads', category: 'Home & Kitchen', price: '$17.99', icon: '⌁',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/1/1101880.jpg', imageAlt: 'OXO Good Grips 9-Inch Tongs with Silicone Heads',
-    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', amazonAsin: 'B003L0OYJ4', amazonUrl: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20', dailyDealDate: '2026-11-03'
-  }-inch version for larger cookware.', amazonAsin: 'B003L0OYJ4', amazonUrl: 'https://www.amaz{
+    bestFor: 'Everyday cooking and non-stick cookware', why: 'Heat-resistant silicone heads provide a secure grip while helping protect non-stick surfaces.', watch: 'The 9-inch size is compact; compare with the 12-inch version for larger cookware.', amazonAsin: 'B003L0OYJ4', amazonUrl: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B003L0OYJ4?tag=buybetterfi06-20'
+  },
+  {
     slug: 'oxo-salad-spinner', name: 'OXO Good Grips Salad Spinner', category: 'Home & Kitchen', price: '$32.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_32480_3_1.jpg', imageAlt: 'OXO Good Grips Salad Spinner',
-    bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', amazonAsin: 'B00004OCKR', amazonUrl: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20', dailyDealDate: '2026-11-10'
-  }amazon.com/dp/B00004OCKR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20'
+    bestFor: 'Washing and drying salad greens', why: 'Countertop salad spinner designed to rinse and quickly dry greens with a pump-style mechanism.', watch: 'It takes more cabinet space than a basic colander.', amazonAsin: 'B00004OCKR', amazonUrl: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00004OCKR?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-garlic-press', name: 'OXO Good Grips Garlic Press', category: 'Home & Kitchen', price: '$28.99', icon: '⌁',
@@ -474,23 +502,29 @@ const productsCatalog = [
   {
     slug: 'oxo-5qt-mixing-bowl', name: 'OXO Good Grips 5-Quart Mixing Bowl', category: 'Home & Kitchen', price: '$16.99', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/0/1059701.jpg', imageAlt: 'OXO Good Grips 5-Quart Mixing Bowl',
-    bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.amazon.com/dp/B0GJTFXNRX?{
+    bestFor: 'Baking, mixing, and food prep', why: 'Large mixing bowl with a non-slip base, comfortable handle, wide lip, and pouring spout.', watch: 'The 5-quart size needs more cabinet space than smaller prep bowls.', url: 'https://www.amazon.com/dp/B0GJTFXNRX?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-24'
+  },
+  {
     slug: 'kitchenaid-artisan-plus-5qt', name: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer - Milkshake', category: 'Home & Kitchen', price: '$499.99', icon: '◇',
     image: 'https://m.media-amazon.com/images/I/41JBw54siWL._SL500_.jpg', imageAlt: 'KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer in Milkshake',
-    be{
+    bestFor: 'Baking and frequent mixing', why: 'Five-quart tilt-head mixer with 10 speeds, a stainless steel bowl, and included mixing attachments.', watch: 'Optional attachments increase the total investment.', amazonAsin: 'B0769ZQWH7', amazonUrl: 'https://www.amazon.com/dp/B0769ZQWH7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0769ZQWH7?tag=buybetterfi06-20'
+  },
+  {
     slug: 'solo-stove-summit-27', name: 'Solo Stove Infinity Flame 42" Propane Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/f2nzr1001imdiltvo3cy', imageAlt: 'Solo Stove Infinity Flame 42-inch Propane Fire Pit',
-    bestFor: 'Large backyard gatherings and outdoor entertaining', why: '42-inch propane fire pit designed to deliver a large, easy-to-use outdoor flame without wood or smoke.', watch: 'Its large 42-inch footprint requires substantial dedicated outdoor space.', amazonAsin: 'B0GVVS9L3P', amazonUrl: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20', dailyDealDate: '2026-10-24'
-  } Pit',
     bestFor: 'Large backyard gatherings and outdoor entertaining', why: '42-inch propane fire pit designed to deliver a large, easy-to-use outdoor flame without wood or smoke.', watch: 'Its large 42-inch footprint requires substantial dedicated outdoor space.', amazonAsin: 'B0GVVS9L3P', amazonUrl: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20'
   },
   {
     slug: 'solo-stove-steelfire-22', name: 'Solo Stove Steelfire 22 Stainless Griddle', category: 'Outdoor', price: '$399.99', icon: '☼',
-    image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/tctgukyqqxxzeighjz8f', imageAlt: 'Solo Stove Steelfire 22 Stainless Grid{
+    image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/tctgukyqqxxzeighjz8f', imageAlt: 'Solo Stove Steelfire 22 Stainless Griddle',
+    bestFor: 'Backyard cooking and tailgating', why: 'Tabletop outdoor griddle with a clad stainless-steel cooking surface and compact footprint.', watch: 'It uses propane and is intended for outdoor use only.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-31'
+  },
+  {
     slug: 'solo-stove-infinity-flame', name: 'Solo Stove Infinity Flame Propane Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/aemdwwt79qizvty5h9pf', imageAlt: 'Solo Stove Infinity Flame Propane Fire Pit',
-    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', dailyDealDate: '2026-10-31'
-  }athering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
+    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-nylon-slotted-spoon', name: 'OXO Good Grips Nylon Slotted Spoon', category: 'Home & Kitchen', price: '$9.99', icon: '⌁',
@@ -530,15 +564,18 @@ const productsCatalog = [
   {
     slug: 'ooni-koda-2-pro', name: 'Ooni Koda 2 Pro 18" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$799.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/Koda_2_Pro_Carousel_4.png?crop=center&format=webp&height=640&v=1749094124&width=640', imageAlt: 'Ooni Koda 2 Pro outdoor pizza oven',
-    bestFor: 'Large backyard pizza nights', why: '18-inch gas-powered outdoor pizza oven with a large cooking area and high-temp{
+    bestFor: 'Large backyard pizza nights', why: '18-inch gas-powered outdoor pizza oven with a large cooking area and high-temperature cooking.', watch: 'Its larger footprint is best suited to a dedicated outdoor cooking area.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-07'
+  },
+  {
     slug: 'ooni-karu-2-pro', name: 'Ooni Karu 2 Pro 16" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$849.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2Pro-F_fb2a4824-8fc4-43d2-b031-6f158f77b22c.webp?crop=center&height=640&v=1749094517&width=640', imageAlt: 'Ooni Karu 2 Pro multi-fuel pizza oven',
-    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', amazonAsin: 'B0DLH28V1D', amazonUrl: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', dailyDealDate: '2026-11-07'
-  }oven.', amazonAsin: 'B0DLH28V1D', amazonUrl: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', url: 'https://{
+    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', amazonAsin: 'B0DLH28V1D', amazonUrl: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20'
+  },
+  {
     slug: 'ooni-karu-2', name: 'Ooni Karu 2 12" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$449.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2_98e75b3e-ab5e-4709-9a6d-3b80d32ce40e.webp?crop=center&height=640&v=1749094631&width=640', imageAlt: 'Ooni Karu 2 multi-fuel pizza oven',
-    bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', amazonAsin: 'B0DQ8R4TYT', amazonUrl: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', dailyDealDate: '2026-11-14'
-  }s://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20'
+    bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', amazonAsin: 'B0DQ8R4TYT', amazonUrl: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-koda-2-max', name: 'Ooni Koda 2 Max 24" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$1,299.00', icon: '☼',
@@ -597,13 +634,18 @@ const productsCatalog = [
   },
   {
     slug: 'dazuma-solar-path-lighting', name: 'Dazuma Outdoor Solar Path Lighting', category: 'Outdoor', price: '$104.99', icon: '☼',
-    image: 'https://dazuma.us/cdn/shop/files/warm-glowing-outdoor-solar-path-lighting-grassy-lawn-night.jpg?v=1763106655&width=1946', imageAlt: 'Dazuma Outdoor Solar Path L{
-    slug: 'amazon-echo-show-5', name: 'Amazon Echo Show 5 (3rd Gen)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/e1fkf1k4_full.jpg?v=1769431765', imageAlt: 'Amazon Echo Show 5 smart display', bestFor: 'Nightstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Verify generation before buying.', amazonAsin: 'B09B2SBHQK', amazonUrl: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20', dailyDealDate: '2026-11-01'
-  }tstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Ve{
-    slug: 'ring-pan-tilt-indoor-cam', name: 'Ring Pan-Tilt Indoor Cam', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://en-uk.ring.com/cdn/shop/files/ring_pantilt-indoor-camera_wht_01A_product_ground_1500x1500_abc7aa64-5c5e-4d02-8f01-f42b3cc60784.png?v=1756448928', imageAlt: 'Ring Pan-Tilt Indoor Cam', bestFor: 'Room monitoring, pets, and indoor security', why: 'A pan-and-tilt indoor camera with broad room coverage and two-way communication.', watch: 'Subscription features can add recurring cost.', amazonAsin: 'B0CG2VS5FD', amazonUrl: 'https://www.amazon.com/dp/B0CG2VS5FD?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CG2VS5FD?tag=buybetterfi06-20', dailyDealDate: '2026-11-08'
-  }n features can add recurring cost.', amazonAsin: 'B0CG2VS5FD', amazonUrl: 'https://www.amazon.com/dp/B0CG2VS5FD?tag=buybetterfi06-20', url: 'https://{
-    slug: 'blink-outdoor-4', name: 'Blink Outdoor 4', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/ej5ww6ae_full.jpg?v=1759146146', imageAlt: 'Blink Outdoor 4 security camera', bestFor: 'Wire-free outdoor home monitoring', why: 'A battery-powered outdoor camera with 1080p video, night vision, motion detection, and long battery life.', watch: 'Battery life varies with settings and conditions.', amazonAsin: 'B0DHLSZXQD', amazonUrl: 'https://www.amazon.com/dp/B0DHLSZXQD?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DHLSZXQD?tag=buybetterfi06-20', dailyDealDate: '2026-11-15'
-  }s://www.amazon.com/dp/B0DHLSZXQD?tag=buybetterfi06-20'
+    image: 'https://dazuma.us/cdn/shop/files/warm-glowing-outdoor-solar-path-lighting-grassy-lawn-night.jpg?v=1763106655&width=1946', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
+    bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-01'
+  },
+  {
+    slug: 'amazon-echo-show-5', name: 'Amazon Echo Show 5 (3rd Gen)', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/e1fkf1k4_full.jpg?v=1769431765', imageAlt: 'Amazon Echo Show 5 smart display', bestFor: 'Nightstands, desks, and compact smart-home control', why: 'A compact 5.5-inch smart display with Alexa, camera features, and improved audio.', watch: 'Verify generation before buying.', amazonAsin: 'B09B2SBHQK', amazonUrl: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B2SBHQK?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'ring-pan-tilt-indoor-cam', name: 'Ring Pan-Tilt Indoor Cam', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://en-uk.ring.com/cdn/shop/files/ring_pantilt-indoor-camera_wht_01A_product_ground_1500x1500_abc7aa64-5c5e-4d02-8f01-f42b3cc60784.png?v=1756448928', imageAlt: 'Ring Pan-Tilt Indoor Cam', bestFor: 'Room monitoring, pets, and indoor security', why: 'A pan-and-tilt indoor camera with broad room coverage and two-way communication.', watch: 'Subscription features can add recurring cost.', amazonAsin: 'B0CG2VS5FD', amazonUrl: 'https://www.amazon.com/dp/B0CG2VS5FD?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CG2VS5FD?tag=buybetterfi06-20'
+  },
+  {
+    slug: 'blink-outdoor-4', name: 'Blink Outdoor 4', category: 'Smart Home', price: 'Check price', icon: '◉', image: 'https://beautychest.lt/cdn/shop/files/ej5ww6ae_full.jpg?v=1759146146', imageAlt: 'Blink Outdoor 4 security camera', bestFor: 'Wire-free outdoor home monitoring', why: 'A battery-powered outdoor camera with 1080p video, night vision, motion detection, and long battery life.', watch: 'Battery life varies with settings and conditions.', amazonAsin: 'B0DHLSZXQD', amazonUrl: 'https://www.amazon.com/dp/B0DHLSZXQD?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DHLSZXQD?tag=buybetterfi06-20'
   },
   {
     slug: 'amazon-smart-plug', name: 'Amazon Smart Plug', category: 'Smart Home', price: 'Check price', icon: '⚡', image: 'https://auspowers.com/cdn/shop/files/B089DR29T6.jpg?v=1775763168', imageAlt: 'Amazon Smart Plug', bestFor: 'Lamps, fans, appliances, and Alexa routines', why: 'A compact Wi-Fi smart plug designed for simple Alexa control and scheduling.', watch: 'Designed primarily for devices with a physical on/off switch.', amazonAsin: 'B089DR29T6', amazonUrl: 'https://www.amazon.com/dp/B089DR29T6?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B089DR29T6?tag=buybetterfi06-20'
@@ -790,7 +832,7 @@ const productsCatalog = [
   },
 
 
-  {"slug":"owala-freesip","name":"Owala FreeSip Insulated Water Bottle","category":"Home & Kitchen","price":"$34.99","icon":"◈","image":"https://cdn.shopify.com/s/files/1/0439/2537/3087/files/OW_Nailed_It_24oz_Freesip_SC_ff189ca1-fb0a-4adb-81ea-f88b3fff7e77.png?crop=center&height=500&v=1772222740&width=500","imageAlt":"Owala FreeSip Insulated Water Bottle","bestFor":"Everyday hydration","why":"Insulated bottle with the FreeSip lid for sipping through the built-in straw or drinking from the wide opening.","watch":"Choose the size and lid configuration that fit your routine.","url":"https://www.amazon.com/dp/B085DVHQ57?tag=buybetterfi06-20","amazonAsin":"B085DVHQ57","amazonUrl":"https://www.amazon.com/dp/B085DVHQ57?tag=buybetterfi06-20"},,
+  {"slug":"owala-freesip","name":"Owala FreeSip Insulated Water Bottle","category":"Home & Kitchen","price":"$34.99","icon":"◈","image":"https://cdn.shopify.com/s/files/1/0439/2537/3087/files/OW_Nailed_It_24oz_Freesip_SC_ff189ca1-fb0a-4adb-81ea-f88b3fff7e77.png?crop=center&height=500&v=1772222740&width=500","imageAlt":"Owala FreeSip Insulated Water Bottle","bestFor":"Everyday hydration","why":"Insulated bottle with the FreeSip lid for sipping through the built-in straw or drinking from the wide opening.","watch":"Choose the size and lid configuration that fit your routine.","url":"https://www.amazon.com/dp/B085DVHQ57?tag=buybetterfi06-20","amazonAsin":"B085DVHQ57","amazonUrl":"https://www.amazon.com/dp/B085DVHQ57?tag=buybetterfi06-20"},
   {"slug":"ecobee-smart-thermostat-premium","name":"ecobee Smart Thermostat Premium","category":"Smart Home","price":"Check price","icon":"⌂","image":"https://images.ctfassets.net/a3qyhfznts9y/3Pk9XugWXYQXdiPmssg4r4/e6ddc84bb15c2c2611037d8e5ca5e994/Ares_-_Slot_2_-_Mobile.png?fm=png&h=1366&q=80&w=1366","imageAlt":"ecobee Smart Thermostat Premium","bestFor":"Connected climate control","why":"Smart thermostat designed for scheduling, remote control, and connected-home routines.","watch":"Check HVAC compatibility before installation.","url":"https://www.ecobee.com/en-us/smart-thermostats/smart-thermostat-premium/"},
   {"slug":"lego-mini-orchid","name":"LEGO Botanicals Mini Orchid","category":"Gifts & Collectibles","price":"Check price","icon":"✦","image":"https://www.lego.com/cdn/cs/set/assets/bltade30768c791af76/10343_Prod.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500","imageAlt":"LEGO Botanicals Mini Orchid","bestFor":"Desk and décor gifts","why":"A compact LEGO Botanicals build that combines a relaxing building experience with display-friendly décor.","watch":"Its appeal is strongest for people who enjoy both building and decorative displays.","url":"https://www.lego.com/en-us/product/mini-orchid-10343"},
   {"slug":"dremel-4300-rotary-tool","name":"Dremel 4300 Rotary Tool","category":"Tools & DIY","price":"Check price","icon":"⚙","image":"https://shop.dremel.com/cdn/shop/files/dremel_4300-5-40_update_3000x3000_rendition_PNG.png?v=1746473729&width=1500","imageAlt":"Dremel 4300 Rotary Tool","bestFor":"DIY cutting, sanding, grinding, and detail work","why":"Versatile rotary-tool platform for detailed cutting, shaping, sanding, and grinding tasks.","watch":"Choose the accessory set that matches the materials and jobs you expect to tackle.","url":"https://www.dremel.com/us/en/p/4300-5-40-f0134300pb"},
@@ -806,7 +848,7 @@ const productsCatalog = [
     why: 'Compact character collectible designed for display, gifting, and fandom collecting.',
     watch: 'Specific characters and editions vary in availability and price.',
     url: 'https://funko.com/'
-  },,
+  },
 
   {
     slug: 'apple-airpods-pro-3', name: 'Apple AirPods Pro 3', category: 'Tech', price: '$179.00', icon: '◉',
@@ -916,25 +958,30 @@ const productsCatalog = [
   },
   {
     slug: 'garmin-vivoactive-6', name: 'Garmin vívoactive 6', category: 'Fitness', price: 'Check price', icon: '◉',
-    {
+    image: 'https://www.staples-3p.com/s7/is/image/Staples/D5BA7333-6ABF-4CC6-90DBE79FA31BDB1B_sc7?hei=512&wid=512', imageAlt: 'Garmin vívoactive 6 fitness GPS smartwatch',
+    bestFor: 'More advanced everyday fitness tracking', why: 'Newer GPS smartwatch option for shoppers who want a broader fitness-focused feature set.', watch: 'The extra features may not matter if you mainly want basic activity tracking.', amazonAsin: 'B0F38GR9PZ', amazonUrl: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F38GR9PZ?tag=buybetterfi06-20'
+  },
+  {
     slug: 'simple-modern-40oz-tumbler', name: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid', category: 'Lifestyle', price: 'Check price', icon: '◈',
     image: 'https://www.simplemodern.com/cdn/shop/files/FB-TRK-SH-40-SPMX-M_efff742d-57ea-4714-b52f-36eef3bf09c8.jpg?v=1757017809&width=640', imageAlt: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid',
-    bestFor: 'Large-volume everyday hydration', why: 'Large handled tumbler format built around portable hydration and a straw lid.', watch: 'The 40-ounce size is less convenient if you prefer a smaller bottle or cup-holder footprint.', amazonAsin: 'B0DG3MS3ST', amazonUrl: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20', dailyDealDate: '2026-10-26'
-  }dern.com/cdn/shop/files/FB-TRK-SH-40-SPMX-M_efff742d-57ea-4714-b52f-36eef3bf09c8.jpg?v=1757017809&width=640', imageAlt: 'Simple Modern 40-Oz Tumbler with Handle and Straw Lid',
- {
+    bestFor: 'Large-volume everyday hydration', why: 'Large handled tumbler format built around portable hydration and a straw lid.', watch: 'The 40-ounce size is less convenient if you prefer a smaller bottle or cup-holder footprint.', amazonAsin: 'B0DG3MS3ST', amazonUrl: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DG3MS3ST?tag=buybetterfi06-20',
+    dailyDealDate: '2026-10-26'
+  },
+  {
     slug: 'owala-freesip-32', name: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle', category: 'Lifestyle', price: 'Check price', icon: '◈',
     image: 'https://chicly.us/cdn/shop/files/FreeSip-Three-Quarter-32oz-SS-1080x1080-Very-Very-Dark.webp?v=1753764400&width=1946', imageAlt: 'Owala FreeSip 32-Oz Insulated Stainless Steel Water Bottle',
-    bestFor: 'Everyday hydration and on-the-go use', why: 'Insulated bottle with Owala’s FreeSip drinking design for flexible sipping and chugging.', watch: 'Choose the size and lid style that best fit your bag, car, and daily routine.', amazonAsin: 'B0FK1LF5PM', amazonUrl: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20', dailyDealDate: '2026-11-02'
+    bestFor: 'Everyday hydration and on-the-go use', why: 'Insulated bottle with Owala’s FreeSip drinking design for flexible sipping and chugging.', watch: 'Choose the size and lid style that best fit your bag, car, and daily routine.', amazonAsin: 'B0FK1LF5PM', amazonUrl: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FK1LF5PM?tag=buybetterfi06-20',
+    dailyDealDate: '2026-11-02'
   },
-    bestFor: 'Everyday hydration and on-the-go use', why: 'Insulated bottle with Owala’s FreeSip drinking design for flexible sipping and chugging.', watch: 'Choose the size an{
+  {
     slug: 'oxo-extendable-tub-tile-scrubber', name: 'OXO Good Grips Extendable Tub & Tile Scrubber', category: 'Lifestyle', price: 'Check price', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/g/g/gg_12126100_1_1__1.jpg', imageAlt: 'OXO Good Grips Extendable Tub and Tile Scrubber',
-    bestFor: 'Cleaning hard-to-reach bathroom areas', why: 'Extendable cleaning tool designed to make tubs, tile, and other awkward surfaces easier to reach.', watch: 'This is a cleaning-accessory pick rather than a storage product, so use it when reducing household task friction is the goal.', amazonAsin: 'B00L9XH3X4', amazonUrl: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', dailyDealDate: '2026-11-09'
-  }t, so use it when reducing household task friction is the goal.', amazonAsin: 'B00L9XH3X4', amazonUrl: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', url: 'https://{
+    bestFor: 'Cleaning hard-to-reach bathroom areas', why: 'Extendable cleaning tool designed to make tubs, tile, and other awkward surfaces easier to reach.', watch: 'This is a cleaning-accessory pick rather than a storage product, so use it when reducing household task friction is the goal.', amazonAsin: 'B00L9XH3X4', amazonUrl: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00L9XH3X4?tag=buybetterfi06-20'
+  },
+  {
     slug: 'bagsmart-toiletry-bag-organization', name: 'BAGSMART Toiletry Bag', category: 'Lifestyle', price: 'Check price', icon: '◇',
     image: 'https://www.gosupps.com/media/catalog/product/8/1/81nTRvlpV6L.jpg', imageAlt: 'BAGSMART Toiletry Bag',
-    bestFor: 'Bathroom and travel organization', why: 'Compartmented toiletry organizer that keeps smaller personal-care items together and easy to find.', watch: 'Capacity and compartment layout vary by BAGSMART version.', amazonAsin: 'B07G2Q1JY9', amazonUrl: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', dailyDealDate: '2026-11-16'
-  }s://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20'
+    bestFor: 'Bathroom and travel organization', why: 'Compartmented toiletry organizer that keeps smaller personal-care items together and easy to find.', watch: 'Capacity and compartment layout vary by BAGSMART version.', amazonAsin: 'B07G2Q1JY9', amazonUrl: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07G2Q1JY9?tag=buybetterfi06-20'
   },
   {
     slug: 'tubshroom-ultra-organization', name: 'TubShroom Ultra', category: 'Lifestyle', price: 'Check price', icon: '◇',
