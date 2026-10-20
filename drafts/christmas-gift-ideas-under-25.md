@@ -144,8 +144,8 @@ Image URLs below were read from the primary product-image markup on the correspo
 | 5 | Bedsure Satin Pillowcases, Queen Set of 2, Grey — B0725WFLMB | https://m.media-amazon.com/images/I/81yXFAw10nL._AC_SL1500_.jpg | Verified |
 | 6 | DASH Mini Waffle Maker, Aqua — B01M9I779L | https://m.media-amazon.com/images/I/61fTss4amkL._AC_SL1500_.jpg | Verified |
 | 7 | SIMPLETASTE Handheld Electric Milk Frother, Grey — B01LNFYCHM | https://m.media-amazon.com/images/I/61mgiABFYnL._AC_SL1500_.jpg | Verified |
-| 8 | Bodum Bean Cold Brew Coffee Maker — B083JXKVMP | Pending direct main-image URL capture |
-| 9 | LANEIGE Lip Glowy Balm, Sweet Candy — B0CZYN6RBZ | Variant label confirmed; pending direct main-image URL capture |
+| 8 | Bodum 51oz Cold Brew Coffee Maker, Black — B083JXKVMP | https://m.media-amazon.com/images/I/81yEdHzDgkL._AC_SL1500_.jpg | Verified from Amazon primary-image markup |
+| 9 | LANEIGE Lip Glowy Balm — B0CZYN6RBZ | https://m.media-amazon.com/images/I/61A3hPK-npL._SL1500_.jpg | Main image verified; exact Sweet Candy variant still needs visual confirmation |
 | 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | Listing identity confirmed; pending direct main-image URL capture |
 | 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | Listing identity confirmed; pending direct main-image URL capture |
 | 12 | Rechargeable Candle Lighter, 2-Pack — B0D4PHGPMN | Listing identity confirmed; pending direct main-image URL capture |
@@ -153,4 +153,4 @@ Image URLs below were read from the primary product-image markup on the correspo
 | 14 | LENRUE A2 Bluetooth Speaker — B0CM2WNR7V | Brand/model details found; pending direct main-image URL capture |
 | 15 | GODONLIF Candle Warmer Lamp with Timer — B0CTJGJL2T | Listing identity confirmed; pending direct main-image URL capture |
 
-**Do not publish yet:** Direct photo sources are captured for 7 of 15 items. Finish capturing and checking the remaining 8 image URLs, then visually inspect the image set and confirm each image matches its listed color/variant. Amazon listing availability and featured offers can change.
+**Do not publish yet:** Direct main-image URLs have been captured for 9 of 15 items. The remaining six Amazon pages did not expose a usable primary image in the page snapshot (some showed “Image Unavailable” for the selected variation), so no URL has been guessed. Recheck those exact listings/variants or choose a verified alternate listing only after confirming it is the same product. Also visually confirm the LANEIGE Sweet Candy variant before publication. Amazon listing availability and featured offers can change.
