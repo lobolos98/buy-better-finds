@@ -146,11 +146,11 @@ Image URLs below were read from the primary product-image markup on the correspo
 | 7 | SIMPLETASTE Handheld Electric Milk Frother, Grey — B01LNFYCHM | https://m.media-amazon.com/images/I/61mgiABFYnL._AC_SL1500_.jpg | Verified |
 | 8 | Bodum 51oz Cold Brew Coffee Maker, Black — B083JXKVMP | https://m.media-amazon.com/images/I/81yEdHzDgkL._AC_SL1500_.jpg | Verified from Amazon primary-image markup |
 | 9 | LANEIGE Lip Glowy Balm — B0CZYN6RBZ | https://m.media-amazon.com/images/I/61A3hPK-npL._SL1500_.jpg | Main image verified; exact Sweet Candy variant still needs visual confirmation |
-| 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | Listing identity confirmed; pending direct main-image URL capture |
-| 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | Listing identity confirmed; pending direct main-image URL capture |
+| 10 | Burt’s Bees Classics Gift Set, 6 Products — B00VK5SG46 | https://m.media-amazon.com/images/I/91dGmlpvdxL._SL1500_.jpg | Verified from Amazon primary-image markup |
+| 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | https://m.media-amazon.com/images/I/71ACduNmVAL._SL1500_.jpg | Verified from Amazon primary-image markup; green variant identified in image alt text |
 | 12 | Rechargeable Candle Lighter, 2-Pack — B0D4PHGPMN | Listing identity confirmed; pending direct main-image URL capture |
 | 13 | PULIDIKI Car Cleaning Gel Clean Putty — B081T7N948 | Listing identity confirmed; newer version is also offered; pending direct main-image URL capture |
-| 14 | LENRUE A2 Bluetooth Speaker — B0CM2WNR7V | Brand/model details found; pending direct main-image URL capture |
+| 14 | LENRUE A2 Mini Bluetooth Speaker — B0CM2WNR7V | https://m.media-amazon.com/images/I/71UD1AqfFkL._AC_SL1500_.jpg | Amazon primary image captured; listing image alt text identifies LENRUE portable Bluetooth speaker in black; confirm the A2 model wording before publication |
 | 15 | GODONLIF Candle Warmer Lamp with Timer — B0CTJGJL2T | Listing identity confirmed; pending direct main-image URL capture |
 
-**Do not publish yet:** Direct main-image URLs have been captured for 9 of 15 items. The remaining six Amazon pages did not expose a usable primary image in the page snapshot (some showed “Image Unavailable” for the selected variation), so no URL has been guessed. Recheck those exact listings/variants or choose a verified alternate listing only after confirming it is the same product. Also visually confirm the LANEIGE Sweet Candy variant before publication. Amazon listing availability and featured offers can change.
+**Do not publish yet:** Direct main-image URLs have been captured for 12 of 15 items. Three exact Amazon pages (the rechargeable lighter, PULIDIKI gel, and GODONLIF lamp) did not expose a usable primary image for the selected listing in the page snapshot, so no URL has been guessed. Recheck those exact listings/variants or choose a verified alternate listing only after confirming it is the same product. Also visually confirm the LANEIGE Sweet Candy variant and verify the LENRUE A2 model wording before publication. Amazon listing availability and featured offers can change.
