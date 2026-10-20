@@ -1,0 +1,101 @@
+---
+import BlogArticleLayout from '../../layouts/BlogArticleLayout.astro';
+
+const title = 'Christmas Gift Ideas Under $25 (That Don’t Look Cheap) | The Finds Edit';
+const description = 'Fifteen thoughtful Christmas gift ideas under $25, from cozy home comforts and kitchen finds to beauty favorites and practical stocking stuffers.';
+const heroImage = 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1600&q=85';
+
+const gifts = [
+  { name: 'PRUNUS J-999 Retro Bluetooth Speaker', category: 'TECH & MUSIC', description: 'A retro-inspired speaker adds personality to a desk, bedroom, or small listening space. Confirm the purple color and included features on the listing.', bestFor: 'Music lovers and desk setups', asin: 'B0DXNRVR3V', image: 'https://m.media-amazon.com/images/I/71h45gas2wL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0DXNRVR3V?tag=buybetterfi06-20' },
+  { name: 'Tile Mate Bluetooth Tracker', category: 'EVERYDAY ESSENTIALS', description: 'A practical little helper for keeping track of keys, bags, and other everyday essentials. Review phone compatibility and the included tracker configuration.', bestFor: 'Busy people and the perpetually misplaced keys', asin: 'B0D63657GY', image: 'https://m.media-amazon.com/images/I/81SYpSm0gNL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0D63657GY/ref=cm_sw_r_as_gl_apa_gl_i_2N87REJG61WFY1VFVRQW?linkCode=ml1&tag=buybetterfi06-20&linkId=0a7bc990e0a1ca8459af23ece68ef72e&gaOptInStatus=true' },
+  { name: 'Bedsure GentleSoft Faux Fur Sherpa Throw Blanket', category: 'COZY HOME', description: 'A soft throw is an easy comfort gift for movie nights, reading corners, or an extra layer over a favorite chair. Check the chosen color and size.', bestFor: 'Cozy-home people and winter lounging', asin: 'B07X3BX7WM', image: 'https://m.media-amazon.com/images/I/A1Ajfh3EvtL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B07X3BX7WM?tag=buybetterfi06-20' },
+  { name: 'Yankee Candle Balsam & Cedar Large Jar', category: 'SEASONAL HOME', description: 'An evergreen-inspired candle brings a seasonal touch to a living room or entryway. Confirm the scent and jar size on the listing.', bestFor: 'Candle fans and holiday hosts', asin: 'B0F3DPXQP1', image: 'https://m.media-amazon.com/images/I/71Z42Yzlc5L._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0F3DPXQP1?tag=buybetterfi06-20' },
+  { name: 'Bedsure Satin Pillowcases, 2-Pack', category: 'EVERYDAY COMFORT', description: 'Satin pillowcases are a small upgrade that can make a bedtime routine feel more considered. Verify color, size, and pack quantity before ordering.', bestFor: 'Self-care baskets and everyday comfort', asin: 'B0725WFLMB', image: 'https://m.media-amazon.com/images/I/81yXFAw10nL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0725WFLMB?tag=buybetterfi06-20' },
+  { name: 'DASH Mini Waffle Maker, Aqua', category: 'KITCHEN FINDS', description: 'A cheerful compact waffle maker for quick breakfasts and playful snacks. Check the Aqua variant and follow the manufacturer’s instructions for use.', bestFor: 'Breakfast fans, students, and small kitchens', asin: 'B01M9I779L', image: 'https://m.media-amazon.com/images/I/61fTss4amkL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B01M9I779L/ref=cm_sw_r_as_gl_apa_gl_i_7B493624H8J48CF36JKK?linkCode=ml1&tag=buybetterfi06-20&linkId=d91f55cabee250e58e4564e78ee5de9c&gaOptInStatus=true' },
+  { name: 'SIMPLETASTE Handheld Electric Milk Frother', category: 'COFFEE CORNER', description: 'A handheld frother can make coffee, matcha, and other drinks feel a little more café-like without taking up much counter space. Check package contents and care instructions.', bestFor: 'Coffee and matcha drinkers', asin: 'B01LNFYCHM', image: 'https://m.media-amazon.com/images/I/71PqfP07-rL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B01LNFYCHM?tag=buybetterfi06-20' },
+  { name: 'Bodum Bean Cold Brew Coffee Maker', category: 'COFFEE CORNER', description: 'A cold-brew maker is a useful option for someone who likes preparing coffee at home. Review the capacity and included components.', bestFor: 'Iced-coffee fans and home brewers', asin: 'B083JXKVMP', image: 'https://m.media-amazon.com/images/I/81yEdHzDgkL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B083JXKVMP?tag=buybetterfi06-20' },
+  { name: 'LANEIGE Lip Glowy Balm, Sweet Candy', category: 'BEAUTY FAVORITE', description: 'A giftable lip balm is an easy addition to a beauty bundle or stocking. Confirm the Sweet Candy flavor and current package on the product page.', bestFor: 'Beauty fans and small self-care gifts', asin: 'B0CZYN6RBZ', image: 'https://m.media-amazon.com/images/I/61A3hPK-npL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B0CZYN6RBZ?tag=buybetterfi06-20' },
+  { name: 'Burt’s Bees Classics Gift Set', category: 'SELF-CARE SET', description: 'A ready-made set of personal-care favorites keeps gifting simple. Check the current gift-set contents because assortments can vary.', bestFor: 'Practical gifts and self-care bundles', asin: 'B00VK5SG46', image: 'https://m.media-amazon.com/images/I/91dGmlpvdxL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B00VK5SG46?tag=buybetterfi06-20' },
+  { name: 'BAIMEI IcyMe Jade Roller & Gua Sha Set', category: 'SKINCARE ACCESSORY', description: 'A facial massage set is a presentation-friendly pick for someone who enjoys a skincare ritual. It is a personal-care accessory, not a treatment or medical device.', bestFor: 'Skincare routines and beauty gift baskets', asin: 'B08RD6S5HF', image: 'https://m.media-amazon.com/images/I/71ACduNmVAL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B08RD6S5HF?tag=buybetterfi06-20' },
+  { name: 'Rechargeable Electric Candle Lighters, 2-Pack', category: 'USEFUL EXTRAS', description: 'A rechargeable lighter set is a practical household extra for candle lovers. Review charging instructions and follow the manufacturer’s safety guidance.', bestFor: 'Candle fans and useful stocking stuffers', asin: 'B0D4PHGPMN', image: 'https://m.media-amazon.com/images/I/71s0mqypf4L._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0D4PHGPMN?tag=buybetterfi06-20' },
+  { name: 'PULIDIKI Car Cleaning Gel Putty', category: 'CAR CARE', description: 'A compact car-care extra for someone who likes keeping their interior tidy. Follow the product directions and avoid use on surfaces the manufacturer excludes.', bestFor: 'Drivers and car-care enthusiasts', asin: 'B081T7N948', image: 'https://m.media-amazon.com/images/I/71WpCXsPbML._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20' },
+  { name: 'LENRUE Compact Bluetooth Speaker, Gray', category: 'TECH & MUSIC', description: 'A compact Bluetooth speaker is a handy option for desks, travel, or casual listening. Check the current listing for battery and connectivity details.', bestFor: 'Students, travelers, and casual listeners', asin: 'B0CM2WNR7V', image: 'https://m.media-amazon.com/images/I/610yy0u0QWL.jpg', url: 'https://www.amazon.com/dp/B0CM2WNR7V?tag=buybetterfi06-20' },
+  { name: 'GODONLIF Candle Warmer Lamp with Timer', category: 'COZY HOME', description: 'A candle warmer lamp creates a cozy display without lighting the candle wick. Review candle size compatibility, timer settings, and all safety instructions.', bestFor: 'Home décor fans and candle lovers', asin: 'B0CTJGJL2T', image: 'https://m.media-amazon.com/images/I/810vcJJDrkL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0CTJGJL2T?tag=buybetterfi06-20' }
+];
+---
+<BlogArticleLayout
+  title={title}
+  description={description}
+  image={heroImage}
+  imageAlt="Thoughtfully wrapped Christmas gifts with seasonal greenery"
+  category="HOLIDAY GIFT GUIDE"
+  dek="Fifteen thoughtful finds for cozy nights, coffee breaks, beauty baskets, and everyday essentials—all with a budget of about $25 per gift. Check each listing for current pricing before you buy."
+  readingTime="8 MIN READ"
+  related={[{title:'Browse seasonal finds',href:'/categories/seasonal-holidays/'},{title:'Explore our buying guides',href:'/guides/'}]}
+>
+  <span slot="caption">Small gifts can still feel personal when they suit the person receiving them.</span>
+  <a slot="contents" href="#how-to-choose">How to choose a good gift</a>
+  <a slot="contents" href="#gift-list">15 gift ideas under $25</a>
+  <a slot="contents" href="#last-checks">Before you check out</a>
+
+  <p>Thoughtful gifting isn’t about spending the most. It’s about finding something useful, personal, or just a little more special than an everyday purchase. These ideas span cozy comforts, small kitchen upgrades, beauty favorites, and practical extras—so you can choose something that fits the person, not just the price tag.</p>
+  <p><strong>Budget note:</strong> Product prices and availability can change, especially during the holiday season. We’ve kept the guide focused on budget-friendly ideas, but check the current Amazon listing before ordering to confirm the price, selected color or size, and quantity.</p>
+
+  <h2 id="how-to-choose">How to choose a gift that feels more expensive</h2>
+  <p>Start with the recipient’s routine. A coffee drinker may use a frother every morning; a homebody might appreciate a soft throw; a practical friend may prefer something that solves a small daily annoyance. A gift feels more thoughtful when it reflects a real habit or interest.</p>
+  <ul>
+    <li><strong>Choose a specific use.</strong> “For your cold-coffee mornings” feels more personal than a random gadget.</li>
+    <li><strong>Check the details.</strong> Confirm size, color, compatibility, and pack quantity before purchasing.</li>
+    <li><strong>Make the presentation count.</strong> A simple gift bag, handwritten note, or small bundle can make a modest gift feel considered.</li>
+  </ul>
+
+  <h2 id="gift-list">15 Christmas gift ideas under $25</h2>
+  <p>Use these as a shortlist, then confirm the current price and exact variant on the product page. We’ve kept each button labeled “Check Price” rather than displaying a price that may go stale.</p>
+  <div class="gift-grid">
+    {gifts.map((gift, index) => (
+      <article class="gift-card">
+        <a class="gift-image-link" href={gift.url} target="_blank" rel="sponsored nofollow noopener" aria-label={'Check price for ' + gift.name}>
+          <img src={gift.image} alt={gift.name} loading={index < 4 ? 'eager' : 'lazy'} />
+          <span class="gift-number">{String(index + 1).padStart(2, '0')}</span>
+        </a>
+        <div class="gift-copy">
+          <p class="gift-category">{gift.category}</p>
+          <h3>{gift.name}</h3>
+          <p>{gift.description}</p>
+          <p class="gift-best"><strong>Best for:</strong> {gift.bestFor}</p>
+          <a class="check-price" href={gift.url} target="_blank" rel="sponsored nofollow noopener">Check Price <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <h2 id="last-checks">Before you check out</h2>
+  <p>Gift-set contents, color options, dimensions, and availability can change. Open the listing and make sure it matches the version you intend to give. For electronics, check compatibility and included accessories; for home goods, double-check dimensions; and for candles or rechargeable items, review the care and safety directions.</p>
+  <div class="closing-card">
+    <p class="closing-kicker">THE FINDS EDIT</p>
+    <h2>A thoughtful gift starts with knowing the person.</h2>
+    <p>Use this list as inspiration, then choose the item that best fits their routine, interests, and budget. A useful gift with a personal note can go a long way.</p>
+    <a href="/categories/seasonal-holidays/">Explore seasonal finds <span aria-hidden="true">↗</span></a>
+  </div>
+</BlogArticleLayout>
+
+<style>
+  .gift-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:28px 0 42px}
+  .gift-card{border:1px solid #e5ded2;background:#fffdf9;display:flex;flex-direction:column;min-width:0}
+  .gift-image-link{position:relative;display:grid;place-items:center;aspect-ratio:1.18;background:#fff;padding:18px;overflow:hidden}
+  .gift-image-link img{width:100%;height:100%;max-height:280px;object-fit:contain;display:block}
+  .gift-number{position:absolute;top:12px;left:12px;background:#142b45;color:white;font:700 .7rem Arial,sans-serif;letter-spacing:.08em;padding:7px 9px}
+  .gift-copy{padding:18px;display:flex;flex-direction:column;flex:1}
+  .gift-category{font:800 .62rem Arial,sans-serif;letter-spacing:.14em;color:#c8102e;margin:0 0 9px}
+  .gift-copy h3{font-family:Georgia,'Times New Roman',serif;color:#142b45;font-size:1.28rem;line-height:1.2;margin:0 0 10px}
+  .gift-copy>p:not(.gift-category){font-size:.94rem;line-height:1.7;margin:0 0 12px}
+  .gift-copy .gift-best{font-size:.86rem;color:#596168;margin-top:auto}
+  .check-price{display:flex;justify-content:space-between;align-items:center;background:#c8102e;color:#fff;text-decoration:none;font:800 .78rem Arial,sans-serif;padding:12px 14px;margin-top:12px}
+  .check-price:hover{background:#a60d26}
+  .closing-card{background:#142b45;color:#fff;padding:clamp(22px,4vw,36px);margin:38px 0 10px}
+  .closing-kicker{font:800 .65rem Arial,sans-serif;letter-spacing:.16em;color:#f2b8c1;margin:0 0 12px}
+  .closing-card h2{font-family:Georgia,'Times New Roman',serif;color:#fff;margin:0 0 12px;font-size:clamp(1.6rem,4vw,2.3rem)}
+  .closing-card p:not(.closing-kicker){color:#edf0f2;line-height:1.7}
+  .closing-card a{display:inline-flex;gap:12px;margin-top:10px;padding:12px 15px;background:#fff;color:#142b45;text-decoration:none;font:800 .78rem Arial,sans-serif}
+  @media(max-width:640px){.gift-grid{grid-template-columns:1fr;gap:18px}.gift-image-link{aspect-ratio:1.25}.gift-image-link img{max-height:300px}.gift-copy{padding:16px}}
+</style>
