@@ -95,8 +95,8 @@ This cleaning gel is designed to help lift dust and crumbs from certain hard-to-
 **Best for:** Drivers who like keeping their car tidy.  
 **Check Price:** https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20
 
-### 14. LENRUE A2 Mini Bluetooth Speaker
-A compact Bluetooth speaker is an easy-to-wrap option for someone who wants portable sound. Compare the current listing's battery, connectivity, and size details before choosing.
+### 14. LENRUE Compact Bluetooth Speaker (Gray)
+A compact Bluetooth speaker is an easy-to-wrap option for someone who wants portable sound. Check the listing for the model name, battery claims, connectivity, and size details before choosing.
 
 **Best for:** Students, travel bags, and casual listening.  
 **Check Price:** https://www.amazon.com/dp/B0CM2WNR7V?tag=buybetterfi06-20
@@ -150,7 +150,7 @@ Image URLs below were read from the primary product-image markup on the correspo
 | 11 | BAIMEI IcyMe Gua Sha & Jade Roller Set, Green — B08RD6S5HF | https://m.media-amazon.com/images/I/71ACduNmVAL._SL1500_.jpg | Verified from Amazon primary-image markup; green variant identified in image alt text |
 | 12 | Rechargeable Candle Lighter, 2-Pack — B0D4PHGPMN | https://m.media-amazon.com/images/I/71s0mqypf4L._AC_SL1500_.jpg | Verified from Amazon primary-image markup; alt text confirms 2-piece rechargeable lighter set |
 | 13 | PULIDIKI Car Cleaning Gel Clean Putty — B081T7N948 | https://m.media-amazon.com/images/I/71WpCXsPbML._AC_SL1500_.jpg | Verified from Amazon primary-image markup; alt text confirms PULIDIKI Car Cleaning Gel |
-| 14 | LENRUE A2 Mini Bluetooth Speaker — B0CM2WNR7V | https://m.media-amazon.com/images/I/71UD1AqfFkL._AC_SL1500_.jpg | HOLD: image captured, but Amazon page image-block data references a different ASIN (B0BXP85WY8) and generic LENRUE speaker wording; do not publish this image until the ASIN/model mismatch is resolved |
+| 14 | LENRUE compact Bluetooth speaker, gray — B0CM2WNR7V | https://m.media-amazon.com/images/I/610yy0u0QWL.jpg | Exact-ASIN image source confirmed through the product record; image visually matches a gray LENRUE compact speaker. The listing data identifies model K3, not A2, so the draft title has been corrected to avoid the mismatch |
 | 15 | GODONLIF Candle Warmer Lamp with Timer — B0CTJGJL2T | https://m.media-amazon.com/images/I/810vcJJDrkL._AC_SL1500_.jpg | Verified from Amazon primary-image markup; title confirms timer and dimmable lamp |
 
-**Do not publish yet:** Direct main-image URLs are captured for all 15 candidate listings, but the LENRUE speaker image is on hold because the Amazon page's image-block data references a different ASIN (B0BXP85WY8) than the draft link (B0CM2WNR7V). Resolve that mismatch or replace the product with a verified exact listing before publication. The LANEIGE Sweet Candy variation is confirmed in Amazon's variation data. Finally, visually inspect all 15 image files, crops, and alt text before publication. Amazon listing availability and featured offers can change.
+**Do not publish yet:** Direct main-image URLs are recorded for all 15 candidate listings. The LENRUE mismatch has been resolved by replacing the questionable image with the image source associated with the exact linked ASIN B0CM2WNR7V and changing the copy from “A2” to a generic compact Bluetooth speaker title; the product record identifies this listing as model K3. The LANEIGE Sweet Candy variation is confirmed in Amazon's variation data. Before publication, visually inspect all 15 image files in the actual site layout, verify crops and alt text, and confirm all current variants and prices remain appropriate. Amazon listing availability and featured offers can change.
