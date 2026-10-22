@@ -15,6 +15,18 @@ const products=[
 {name:'Grundig S04 Internal-Sensor TPMS',range:'Up to 217 PSI',wheels:'Six-wheel setup',best:'Compatible six-wheel rigs preferring internal sensors',sensor:'Internal sensors; verify exact kit before ordering',path:'/products/grundig-s04-internal-sensor-version',price:'From $129 on manufacturer listing'},
 {name:'Grundig Caravan TPMS',range:'Up to 116 PSI',wheels:'4, 6 or 8 wheels',best:'Touring caravans and compatible motorhomes',sensor:'External sensors; booster option may be available',path:'/products/grundig-caravan-tpms',price:'From $100 on manufacturer listing'}
 ];
+const productImages = {};
+for (const product of products) {
+  productImages[product.path] = product.image || '';
+  try {
+    const response = await fetch(`https://grundig-auto.com${product.path}.js`);
+    if (response.ok) {
+      const item = await response.json();
+      const source = item.featured_image || item.images?.[0];
+      if (source) productImages[product.path] = new URL(source, 'https://grundig-auto.com').toString();
+    }
+  } catch {}
+}
 ---
 <BaseLayout title={title} description={description} image={s04Image}>
 <main class="grundig-guide">
@@ -24,7 +36,7 @@ const products=[
 <section class="decision"><p class="eyebrow">START WITH YOUR SETUP</p><h2>Which type should you compare first?</h2><div class="decision-grid"><div><b>4–8 wheels · up to 116 PSI</b><p>Start with the RV TPMS/RV01 or Caravan TPMS, then compare external versus internal sensors.</p></div><div><b>Six wheels · higher pressure</b><p>Start with the S04. Compare its external kit with the internal-sensor version if installation style matters.</p></div><div><b>8–12 wheels · higher pressure</b><p>Start with the S08 and verify wheel count and sensor pressure rating in the selected package.</p></div><div><b>More than 12 wheels</b><p>Compare the 550S for 6–36 wheels or the 860 for multi-trailer setups up to 110 wheels.</p></div></div></section>
 <h2 id="comparison">Grundig TPMS models side by side</h2><p class="note">Pressure limits and wheel counts reflect manufacturer listings; kit options can differ. Prices are indicative listing prices where available, not guaranteed checkout prices.</p>
 <div class="table-wrap"><table><thead><tr><th>System</th><th>Max listed pressure</th><th>Wheel configurations</th><th>Best fit</th><th>Shop</th></tr></thead><tbody>{products.map(p=><tr><th scope="row">{p.name}</th><td>{p.range}</td><td>{p.wheels}</td><td>{p.best}</td><td><a href={affiliate(p.path)} target="_blank" rel="sponsored noopener noreferrer">Check Price ↗</a></td></tr>)}</tbody></table></div>
-<section class="product-list">{products.map(p=><article class="product-card">{p.image&&<div class="product-image"><img src={p.image} alt={p.name} loading="lazy"/></div>}<div class="product-copy"><p class="eyebrow">{p.image?'KEY COMPARISON':'ALSO WORTH COMPARING'}</p><h3>{p.name}</h3><p class="spec">{p.wheels} <span>•</span> {p.range}</p><p>{p.best}. Sensor count, pressure rating and booster availability depend on the selected package; confirm these details on the manufacturer page before checkout.</p><p><b>Sensor style:</b> {p.sensor}</p><p class="note">{p.price}</p><a class="button" href={affiliate(p.path)} target="_blank" rel="sponsored noopener noreferrer">Check Price ↗</a> <a class="manufacturer" href={'https://grundig-auto.com'+p.path} target="_blank" rel="noopener noreferrer">Manufacturer details</a></div></article>)}</section>
+<section class="product-list">{products.map(p=><article class="product-card">{productImages[p.path]&&<div class="product-image"><img src={productImages[p.path]} alt={p.name} loading="lazy"/></div>}<div class="product-copy"><p class="eyebrow">{p.image?'KEY COMPARISON':'ALSO WORTH COMPARING'}</p><h3>{p.name}</h3><p class="spec">{p.wheels} <span>•</span> {p.range}</p><p>{p.best}. Sensor count, pressure rating and booster availability depend on the selected package; confirm these details on the manufacturer page before checkout.</p><p><b>Sensor style:</b> {p.sensor}</p><p class="note">{p.price}</p><a class="button" href={affiliate(p.path)} target="_blank" rel="sponsored noopener noreferrer">Check Price ↗</a> <a class="manufacturer" href={'https://grundig-auto.com'+p.path} target="_blank" rel="noopener noreferrer">Manufacturer details</a></div></article>)}</section>
 <section class="sensor-note"><p class="eyebrow">DON'T SKIP THIS DETAIL</p><h2>External vs. internal sensors</h2><p>External sensors screw onto compatible valve stems and are generally easier to install yourself. Internal sensors mount inside the tire and normally require tire-service installation. Confirm sensor type, valve fit, wheel count and maximum pressure match your vehicle and selected kit.</p></section>
 <section class="focused"><div><p class="eyebrow">WANT THE CLOSE-UP?</p><h2>Grundig S04 vs. S08</h2><p>Our dedicated comparison takes a closer look at these two high-pressure options, including wheel configurations, display, charging and sensor choices.</p></div><a class="button" href="/blog/grundig-s04-vs-s08-tpms-comparison/">Read the S04 vs. S08 comparison ↗</a></section>
 <footer class="disclosure"><b>Affiliate disclosure:</b> Buy Better Finds may earn a commission from qualifying purchases through these links, at no additional cost to you. Product details and prices can change; verify compatibility and current package details with the manufacturer.</footer>
