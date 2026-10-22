@@ -56,6 +56,15 @@ const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6
             <div class="story-card-copy"><p class="story-meta">HOLIDAY GIFT GUIDE <span>•</span> 8 MIN READ</p><h3><a href="/blog/christmas-gift-ideas-under-25/">Christmas Gift Ideas Under $25 (That Don’t Look Cheap)</a></h3><p class="story-summary">Thoughtful finds for cozy nights, coffee breaks, beauty baskets, and everyday essentials.</p><a class="small-link" href="/blog/christmas-gift-ideas-under-25/">Read the story →</a></div>
           </article>
           <article class="story-card">
+            <a class="s04-editorial-cover" href="/blog/grundig-s04-six-wheel-tpms-cold-season/" aria-label="Read the Grundig S04 cold-weather TPMS guide">
+              <img src="https://grundig-auto.com/cdn/shop/files/TPMS-S04-8-bar.webp" alt="Grundig S04 six-wheel solar tire pressure monitoring system" loading="lazy" />
+              <span class="s04-editorial-kicker">THE RV &amp; AUTOMOTIVE EDIT</span>
+              <strong>Six wheels.<br/><em>More peace of mind.</em></strong>
+              <small>A cold-weather TPMS checklist</small>
+            </a>
+            <div class="story-card-copy"><p class="story-meta">RV &amp; AUTOMOTIVE <span>•</span> <time datetime="2026-10-21">OCTOBER 21, 2026</time> <span>•</span> 5 MIN READ</p><h3><a href="/blog/grundig-s04-six-wheel-tpms-cold-season/">Six Wheels, Solar Power: Is the Grundig S04 TPMS Ready for Cold Weather?</a></h3><p class="story-summary">A practical look at six-wheel tire monitoring, solar charging, sensor setup, and the cold-weather checks to make before a trip.</p><a class="small-link" href="/blog/grundig-s04-six-wheel-tpms-cold-season/">Read the story →</a></div>
+          </article>
+          <article class="story-card">
             <a class="everblog-cover" href="/blog/everblog-smart-family-calendars/" aria-label="Read the Everblog smart family calendar comparison">
               <span>THE SMART HOME EDIT</span><strong>Make room<br/><em>for calm.</em></strong><small>Everblog FridgeCal vs. HomeCal</small>{everblogCoverImage && <img class="everblog-cover-product" src={everblogCoverImage} alt="Everblog HomeCal smart family calendar" loading="lazy" />}
             </a>
@@ -153,6 +162,14 @@ const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6
   .christmas-editorial-title em{color:#f5c5cd;font-weight:400}
   .christmas-editorial-caption{font-size:.72rem;margin-top:12px;letter-spacing:.05em}
 
+  .s04-editorial-cover{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1.27;min-height:250px;padding:22px;overflow:hidden;background:#e9e4da;color:#fff;text-decoration:none}
+  .s04-editorial-cover:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,43,69,.08),rgba(20,43,69,.82));z-index:1}
+  .s04-editorial-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+  .s04-editorial-cover .s04-editorial-kicker,.s04-editorial-cover strong,.s04-editorial-cover small{position:relative;z-index:2}
+  .s04-editorial-kicker{font-size:.61rem;letter-spacing:.15em;font-weight:800}
+  .s04-editorial-cover strong{font:500 clamp(1.8rem,3.5vw,2.5rem)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.04em}
+  .s04-editorial-cover strong em{font-weight:400;color:#f4d2d7}
+  .s04-editorial-cover small{font-size:.72rem;line-height:1.5}
   .quick-links{background:#fffdf9;border:1px solid var(--line);padding:22px 20px;position:sticky;top:20px}
   .quick-links h3{font-family:Georgia,'Times New Roman',serif;font-size:1.8rem;line-height:1.1;font-weight:500;letter-spacing:-.035em;color:var(--ink);margin:0 0 9px}
   .quick-links-intro{font-family:Georgia,'Times New Roman',serif;font-size:.9rem;line-height:1.6;color:#62686c;margin:0 0 17px}
