@@ -15,9 +15,11 @@ const products=[
 {name:'Grundig S04 Internal-Sensor TPMS',range:'Up to 217 PSI',wheels:'Six-wheel setup',best:'Compatible six-wheel rigs preferring internal sensors',sensor:'Internal sensors; verify exact kit before ordering',path:'/products/grundig-s04-internal-sensor-version',price:'From $129 on manufacturer listing'},
 {name:'Grundig Caravan TPMS',range:'Up to 116 PSI',wheels:'4, 6 or 8 wheels',best:'Touring caravans and compatible motorhomes',sensor:'External sensors; booster option may be available',path:'/products/grundig-caravan-tpms',price:'From $100 on manufacturer listing'}
 ];
-const productImages = {};
+const productImages: Record<string, string> = {
+  '/products/solar-tpms-6-wheel-trucks': s04Image,
+  '/products/grundig-s08-rv-tpms': s08Image
+};
 for (const product of products) {
-  productImages[product.path] = product.image || '';
   try {
     const response = await fetch(`https://grundig-auto.com${product.path}.js`);
     if (response.ok) {
