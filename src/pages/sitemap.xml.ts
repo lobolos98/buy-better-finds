@@ -2,6 +2,9 @@ import type { APIRoute } from 'astro';
 import { products } from '../data/products.js';
 import { guideConfig } from '../data/guide-config.js';
 
+// Generate this endpoint at build time as a real XML file for static hosting.
+export const prerender = true;
+
 // Keep the sitemap aligned with real, published routes. Product and configured
 // guide URLs are derived from the same data that creates those pages.
 const staticPages = [
@@ -115,11 +118,7 @@ export const GET: APIRoute = () => {
     .map((path) => `  <url><loc>${escapeXml(`https://buybetterfinds.com${path}`)}</loc></url>`)
     .join('\n');
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 
   return new Response(xml, {
     headers: {
