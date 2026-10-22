@@ -20,6 +20,7 @@ const staticPages = [
   '/price-watch/',
   '/search/',
   '/blog/grundig-s04-six-wheel-tpms-cold-season/',
+  '/blog/grundig-s08-heavy-duty-tpms-cold-season/',
   '/categories/seasonal-holidays/',
   '/categories/seasonal-holidays/prime-big-deal-days/'
 ];
