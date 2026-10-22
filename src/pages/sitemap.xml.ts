@@ -56,7 +56,8 @@ const guidePages = [
   'best-smart-plugs',
   'best-home-organization',
   'best-products-under-100',
-  'best-everyday-products'
+  'best-everyday-products',
+  'grundig-tpms-buying-guide'
 ].map((slug) => `/guides/${slug}/`);
 
 const comparisonPages = [
