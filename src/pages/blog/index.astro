@@ -56,22 +56,16 @@ const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6
             <div class="story-card-copy"><p class="story-meta">HOLIDAY GIFT GUIDE <span>•</span> 8 MIN READ</p><h3><a href="/blog/christmas-gift-ideas-under-25/">Christmas Gift Ideas Under $25 (That Don’t Look Cheap)</a></h3><p class="story-summary">Thoughtful finds for cozy nights, coffee breaks, beauty baskets, and everyday essentials.</p><a class="small-link" href="/blog/christmas-gift-ideas-under-25/">Read the story →</a></div>
           </article>
           <article class="story-card">
-            <a class="s04-editorial-cover" href="/blog/grundig-s04-six-wheel-tpms-cold-season/" aria-label="Read the Grundig S04 cold-weather TPMS guide">
-              <img src="https://grundig-auto.com/cdn/shop/files/TPMS-S04-8-bar.webp" alt="Grundig S04 six-wheel solar tire pressure monitoring system" loading="lazy" />
-              <span class="s04-editorial-kicker">THE RV &amp; AUTOMOTIVE EDIT</span>
-              <strong>Six wheels.<br/><em>More peace of mind.</em></strong>
-              <small>A cold-weather TPMS checklist</small>
+            <a class="tpms-editorial-cover" href="/blog/grundig-s04-vs-s08-tpms-comparison/" aria-label="Compare Grundig S04 and S08 tire pressure monitoring systems">
+              <div class="tpms-editorial-products">
+                <img src="https://grundig-auto.com/cdn/shop/files/TPMS-S04-8-bar.webp" alt="Grundig S04 six-wheel solar TPMS" loading="lazy" />
+                <img src="https://grundig-auto.com/cdn/shop/files/S08-8-wheel-version.webp" alt="Grundig S08 heavy-duty TPMS" loading="lazy" />
+              </div>
+              <span class="tpms-editorial-kicker">THE RV &amp; AUTOMOTIVE EDIT</span>
+              <strong>Two systems.<br/><em>One smarter choice.</em></strong>
+              <small>Grundig S04 vs. S08</small>
             </a>
-            <div class="story-card-copy"><p class="story-meta">RV &amp; AUTOMOTIVE <span>•</span> <time datetime="2026-10-21">OCTOBER 21, 2026</time> <span>•</span> 5 MIN READ</p><h3><a href="/blog/grundig-s04-six-wheel-tpms-cold-season/">Six Wheels, Solar Power: Is the Grundig S04 TPMS Ready for Cold Weather?</a></h3><p class="story-summary">A practical look at six-wheel tire monitoring, solar charging, sensor setup, and the cold-weather checks to make before a trip.</p><a class="small-link" href="/blog/grundig-s04-six-wheel-tpms-cold-season/">Read the story →</a></div>
-          </article>
-          <article class="story-card">
-            <a class="s08-editorial-cover" href="/blog/grundig-s08-heavy-duty-tpms-cold-season/" aria-label="Read the Grundig S08 heavy-duty TPMS cold-weather guide">
-              <img src="https://grundig-auto.com/cdn/shop/files/S08-8-wheel-version.webp" alt="Grundig S08 heavy-duty tire pressure monitoring system" loading="lazy" />
-              <span class="s08-editorial-kicker">THE RV &amp; AUTOMOTIVE EDIT</span>
-              <strong>The first cold snap.<br/><em>Check every wheel.</em></strong>
-              <small>A heavy-duty TPMS winter checklist</small>
-            </a>
-            <div class="story-card-copy"><p class="story-meta">RV &amp; AUTOMOTIVE <span>•</span> <time datetime="2026-10-21">OCTOBER 21, 2026</time> <span>•</span> 6 MIN READ</p><h3><a href="/blog/grundig-s08-heavy-duty-tpms-cold-season/">The First Cold Snap: Setting Up the Grundig S08 Heavy-Duty TPMS</a></h3><p class="story-summary">A practical guide to multi-wheel monitoring, sensor options, alarm settings, and cold-weather tire checks.</p><a class="small-link" href="/blog/grundig-s08-heavy-duty-tpms-cold-season/">Read the story →</a></div>
+            <div class="story-card-copy"><p class="story-meta">RV &amp; AUTOMOTIVE <span>•</span> <time datetime="2026-10-21">OCTOBER 21, 2026</time> <span>•</span> 7 MIN READ</p><h3><a href="/blog/grundig-s04-vs-s08-tpms-comparison/">Grundig S04 vs. S08 TPMS: Which System Fits Your RV or Truck?</a></h3><p class="story-summary">Compare wheel counts, pressure ranges, charging, sensor options, and price before choosing a system for your rig.</p><a class="small-link" href="/blog/grundig-s04-vs-s08-tpms-comparison/">Read the comparison →</a></div>
           </article>
           <article class="story-card">
             <a class="everblog-cover" href="/blog/everblog-smart-family-calendars/" aria-label="Read the Everblog smart family calendar comparison">
@@ -187,6 +181,15 @@ const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6
   .s08-editorial-cover strong{font:500 clamp(1.8rem,3.5vw,2.5rem)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.04em}
   .s08-editorial-cover strong em{font-weight:400;color:#f4d2d7}
   .s08-editorial-cover small{font-size:.72rem;line-height:1.5}
+  .tpms-editorial-cover{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1.27;min-height:250px;padding:22px;overflow:hidden;background:#e9e4da;color:#fff;text-decoration:none}
+  .tpms-editorial-cover:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,43,69,.04),rgba(20,43,69,.86));z-index:1}
+  .tpms-editorial-products{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;background:#fff}
+  .tpms-editorial-products img{width:100%;height:100%;min-width:0;object-fit:contain;padding:5px}
+  .tpms-editorial-cover .tpms-editorial-kicker,.tpms-editorial-cover strong,.tpms-editorial-cover small{position:relative;z-index:2}
+  .tpms-editorial-kicker{font-size:.61rem;letter-spacing:.15em;font-weight:800}
+  .tpms-editorial-cover strong{font:500 clamp(1.8rem,3.5vw,2.5rem)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.04em}
+  .tpms-editorial-cover strong em{font-weight:400;color:#f4d2d7}
+  .tpms-editorial-cover small{font-size:.72rem;line-height:1.5}
   .quick-links{background:#fffdf9;border:1px solid var(--line);padding:22px 20px;position:sticky;top:20px}
   .quick-links h3{font-family:Georgia,'Times New Roman',serif;font-size:1.8rem;line-height:1.1;font-weight:500;letter-spacing:-.035em;color:var(--ink);margin:0 0 9px}
   .quick-links-intro{font-family:Georgia,'Times New Roman',serif;font-size:.9rem;line-height:1.6;color:#62686c;margin:0 0 17px}
