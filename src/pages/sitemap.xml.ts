@@ -54,8 +54,8 @@ const categorySlugs = [
   'toys-games',
   'beauty-personal-care',
   'seasonal-holidays',
-  'pet',
-  'automotive'
+  'pet-supplies',
+  'automotive-car-accessories'
 ];
 const categoryPages = categorySlugs.map((slug) => `/categories/${slug}/`);
 
