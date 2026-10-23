@@ -951,7 +951,7 @@ const supplementalProducts = [
   },
   {
     slug: 'apple-watch-se-3', name: 'Apple Watch SE 3', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://bfasset.costco-static.com/U447IH35/as/p39hnnpxr4ct4f8mx4grk7h/4000403247-894_starlight_1?auto=webp&canvas=1024%2C1024&fit=bounds&format=jpg&height=1024&width=1024', imageAlt: 'Apple Watch SE 3',
+    image: 'https://www.apple.com/newsroom/images/2025/09/apple-introduces-apple-watch-se-3/article/Apple-Watch-SE-3-hero-250909_big.jpg.large.jpg', imageAlt: 'Apple Watch SE 3',
     bestFor: 'Everyday fitness tracking and Apple users', why: 'Lower-cost Apple Watch option for activity tracking, notifications, and everyday smartwatch use.', watch: 'Check the exact case size and GPS or cellular configuration before buying.', amazonAsin: 'B0FQFJ2WRG', amazonUrl: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FQFJ2WRG?tag=buybetterfi06-20'
   },
   {
