@@ -51,7 +51,7 @@ const productsCatalog = [
   {
     slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
-    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.solostove.com/us/en-us/p/SSTOWER1.5_PELLET', dailyDealDate: '2026-10-10'
+    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: '', dailyDealDate: '2026-10-10'
   },
   {
     slug: 'apple-airpods-5', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
