@@ -956,7 +956,7 @@ const supplementalProducts = [
   },
   {
     slug: 'fitbit-charge-6', name: 'Fitbit Charge 6 Fitness Tracker', category: 'Fitness', price: 'Check price', icon: '◉',
-    image: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1715883391-619toLfvJL.jpg?crop=1xw%3A1.00xh%3Bcenter', imageAlt: 'Fitbit Charge 6 Fitness Tracker',
+    image: 'https://images-na.ssl-images-amazon.com/images/P/B0CC63GZ3R.01.L.jpg', imageAlt: 'Fitbit Charge 6 Fitness Tracker',
     bestFor: 'Everyday activity and fitness tracking', why: 'Fitness tracker format focused on activity, workouts, and everyday health and training metrics.', watch: 'A fitness tracker is a different experience from a full smartwatch with a larger app ecosystem.', amazonAsin: 'B0CC63GZ3R', amazonUrl: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CC63GZ3R?tag=buybetterfi06-20'
   },
   {
