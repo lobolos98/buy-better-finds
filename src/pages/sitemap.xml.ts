@@ -80,7 +80,7 @@ const comparisonPages = [
   'sony-wh-1000xm5-vs-airpods-4',
   'ninja-af101-vs-instant-vortex-plus',
   'seesii-car-jack-vs-fanttik-e1-max',
-  'amazon-basics-vs-solo-stove-patio-heaters',
+  'amazon-basics-vs-east-oak-patio-heaters',
   'echo-dot-vs-kasa-ep40m',
   'bowflex-552-vs-amazon-basics-neoprene-dumbbells',
   'garmin-vivoactive-6-vs-fitbit-charge-6',
