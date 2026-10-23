@@ -268,6 +268,14 @@ const productsCatalog = [
   },
 
   {
+    slug: 'triple-bristle-original-sonic-toothbrush', name: 'Triple Bristle Original 3-Sided Sonic Electric Toothbrush', category: 'Beauty & Personal Care', price: '$69.97', icon: '✦',
+    image: 'https://www.triplebristle.com/cdn/shop/files/TripleBristle_AmazonImages_2025_OriginalToothbrush_1_1024x1024.jpg?v=1781786190', imageAlt: 'Triple Bristle Original three-sided sonic electric toothbrush and included brush heads',
+    bestFor: 'People looking for a three-sided brushing design and a guided brushing routine',
+    why: 'Dentist-designed sonic toothbrush with a three-sided brush head intended to clean the front, back, and biting surfaces of teeth in one placement.',
+    watch: 'The brush-head shape can take getting used to; review the manufacturer’s usage instructions and current replacement-head options.',
+    affiliateUrl: 'https://www.awin1.com/cread.php?s=4569823&v=121760&q=586576&r=3119041', url: 'https://www.awin1.com/cread.php?s=4569823&v=121760&q=586576&r=3119041', affiliateLabel: 'Shop at Triple Bristle'
+  },
+  {
     slug: 'eltamd-uv-clear-spf-46', name: 'EltaMD UV Clear Broad-Spectrum SPF 46', category: 'Beauty & Personal Care', price: '$14.00', icon: '✦',
     image: 'https://lirp.cdn-website.com/f2fb22d0/dms3rep/multi/opt/EltaMD%2BUV%2BClear%2BBroad-Spectrum%2BSPF%2B46%2B1.7%2Bfl.oz-1920w.png', imageAlt: 'EltaMD UV Clear Broad-Spectrum SPF 46',
     bestFor: 'Daily facial sun protection', why: 'Lightweight facial sunscreen featuring niacinamide and broad-spectrum SPF 46 protection.', watch: 'Check the exact untinted or tinted version and current price.', amazonAsin: 'B002MSN3QQ', amazonUrl: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B002MSN3QQ?tag=buybetterfi06-20'
