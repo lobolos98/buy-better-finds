@@ -30,7 +30,6 @@ const staticPages = [
   '/deals/',
   '/deal-of-the-day/',
   '/price-watch/',
-  '/search/',
   '/categories/seasonal-holidays/',
   '/categories/seasonal-holidays/christmas/',
   '/categories/seasonal-holidays/halloween/',
