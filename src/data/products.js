@@ -49,11 +49,6 @@ const productsCatalog = [
     bestFor: 'Patios, decks, outdoor dining, and entertaining', why: 'Portable propane patio heater with adjustable heat output and wheels for repositioning.', watch: 'Check current propane, clearance, and outdoor-use requirements before setup.', amazonAsin: 'B010VFKZEO', amazonUrl: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B010VFKZEO?tag=buybetterfi06-20', dailyDealDate: '2026-09-30', score: 8.7
   },
   {
-    slug: 'solo-stove-tower', name: 'Solo Stove Tower Patio Heater', category: 'Outdoor', price: '$799.99', icon: '☼',
-    image: 'https://content.solostove.com/image/upload/ar_442%3A300%2Cc_auto%2Cg_auto%2Cw_305/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/qpdqxp6zip3b7yzu9e9b', imageAlt: 'Solo Stove Tower Patio Heater',
-    bestFor: 'Patios, decks, and outdoor entertaining', why: 'Tall outdoor patio heater designed to extend usable outdoor time.', watch: 'Large footprint and premium price make it a better fit for dedicated outdoor spaces.', url: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20', dailyDealDate: '2026-10-10'
-  },
-  {
     slug: 'apple-airpods-5', name: 'Apple AirPods 5', category: 'Tech', price: 'Check price', icon: '◉',
     image: 'https://www.apple.com/v/airpods-5/b/images/overview/bento-gallery/bento_pair__c7i9mu5k2zee_xlarge.jpg', imageAlt: 'Apple AirPods 5 wireless earbuds',
     bestFor: 'Everyday wireless listening in the Apple ecosystem', why: 'Apple AirPods 5 with Active Noise Cancellation, Personalized Spatial Audio, Live Translation, USB-C charging, and the H2 chip.', watch: 'Check Amazon for the current configuration, price, and availability.', url: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20', dailyDealDate: '2026-10-02', amazonAsin: 'B0HJB76H2V', amazonUrl: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20'
