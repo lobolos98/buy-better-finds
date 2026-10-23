@@ -24,9 +24,7 @@ const productCards = products.map((product) => {
   const watch = escapeHtml(product.watch);
   const price = escapeHtml(product.price);
   const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
-  const amazonUrl = product.slug === 'solo-stove-tower'
-    ? product.url
-    : product.amazonAsin === 'B0C6XJNKP8'
+  const amazonUrl = product.amazonAsin === 'B0C6XJNKP8'
     ? exactDealAmazonUrl
     : (product.amazonUrl
       ?? (product.amazonAsin
@@ -46,7 +44,7 @@ const productCards = products.map((product) => {
     <p class="price"><strong>${price}</strong></p>
     <div class="product-actions">
       <a class="shop-btn secondary-shop" href="/products/${slug}/">See our take →</a>
-      <a class="shop-btn amazon-shop" href="${escapeHtml(amazonUrl)}" target="_blank" rel="${product.slug === 'solo-stove-tower' ? 'noopener' : 'nofollow sponsored noopener'}">${product.slug === 'solo-stove-tower' ? 'View at Solo Stove →' : 'Check on Amazon →'}</a>
+      <a class="shop-btn amazon-shop" href="${escapeHtml(amazonUrl)}" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
     </div>
   </article>`;
 }).join('');
