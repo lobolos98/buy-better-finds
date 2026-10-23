@@ -8,7 +8,8 @@ const {
   title = 'Buy Better Finds',
   description = 'Find it. Compare it. Buy better.',
   image = '',
-  imageAlt = 'Buy Better Finds'
+  imageAlt = 'Buy Better Finds',
+  noindex = false
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
@@ -30,7 +31,7 @@ const socialImage = image
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large"} />
     <meta name="theme-color" content="#10233f" />
     <meta name="impact-site-verification" content="fcc4dd8c-c08e-4d6b-a21f-06dd1124114e" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
