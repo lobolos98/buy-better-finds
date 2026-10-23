@@ -11,6 +11,14 @@ import { petProducts } from './pet-products.js';
 import { automotiveProducts } from './automotive-products.js';
 
 const productsCatalog = [
+  {
+    slug: 'bedsure-heated-throw-blanket-grey', name: 'Bedsure Heated Throw Blanket with Preheat, Grey 50 x 60 in', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://m.media-amazon.com/images/I/91fD-JU6I9L.jpg', imageAlt: 'Bedsure grey heated flannel throw blanket with preheat function',
+    bestFor: 'Cozy evenings, winter lounging, and practical holiday gifts',
+    why: 'Soft flannel heated throw with fast preheating, six adjustable heat settings, and six timer options up to 10 hours.',
+    watch: 'Follow the manufacturer’s safety and care instructions; check the selected size and color before ordering.',
+    amazonAsin: 'B0BZR6YBHK', amazonUrl: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20'
+  },
   ...automotiveProducts,
   ...diyProducts,
   ...fitnessProducts,
