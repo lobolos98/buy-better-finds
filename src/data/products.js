@@ -1036,7 +1036,6 @@ const supplementalProducts = [
 const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
-  'leapfrog-learning-friends-100-words',
 
   'alpine-solar-pathway-stakes-4',
   'dazuma-solar-path-lighting',
