@@ -589,9 +589,9 @@ const supplementalProducts = [
     bestFor: 'Everyday chopping and food prep', why: 'Double-sided non-porous cutting board with non-slip feet and a drip catcher.', watch: 'Choose a larger board if you regularly prep large meals.', url: 'https://www.amazon.com/dp/B0836229FZ?tag=buybetterfi06-20'
   },
   {
-    slug: 'ooni-koda-2-pro', name: 'Ooni Koda 2 Pro 18" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$799.00', icon: '☼',
+    slug: 'ooni-koda-2-pro', name: 'Ooni Koda 2 Pro 18" Gas-Powered Pizza Oven', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/Koda_2_Pro_Carousel_4.png?crop=center&format=webp&height=640&v=1749094124&width=640', imageAlt: 'Ooni Koda 2 Pro outdoor pizza oven',
-    bestFor: 'Large backyard pizza nights', why: '18-inch gas-powered outdoor pizza oven with a large cooking area and high-temperature cooking.', watch: 'Its larger footprint is best suited to a dedicated outdoor cooking area.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20',
+    bestFor: 'Large backyard pizza nights', why: '18-inch gas-powered outdoor pizza oven with a large cooking area and high-temperature cooking.', watch: 'Its larger footprint is best suited to a dedicated outdoor cooking area.', amazonAsin: 'B0F48FRPW7', amazonUrl: 'https://www.amazon.com/dp/B0F48FRPW7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F48FRPW7?tag=buybetterfi06-20',
     dailyDealDate: '2026-11-07'
   },
   {
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'ooni-koda-2-pro',
   'ooni-karu-2-pro',
   'ooni-koda-2-max',
   'keter-signature-50-gallon-walnut',
