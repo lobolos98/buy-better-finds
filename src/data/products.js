@@ -543,9 +543,9 @@ const supplementalProducts = [
     bestFor: 'Large backyard gatherings and outdoor entertaining', why: '42-inch propane fire pit designed to deliver a large, easy-to-use outdoor flame without wood or smoke.', watch: 'Its large 42-inch footprint requires substantial dedicated outdoor space.', amazonAsin: 'B0GVVS9L3P', amazonUrl: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVVS9L3P?tag=buybetterfi06-20'
   },
   {
-    slug: 'solo-stove-steelfire-22', name: 'Solo Stove Steelfire 22 Stainless Griddle', category: 'Outdoor', price: '$399.99', icon: '☼',
+    slug: 'solo-stove-steelfire-22', name: 'Solo Stove Steelfire 22 Stainless Griddle', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/tctgukyqqxxzeighjz8f', imageAlt: 'Solo Stove Steelfire 22 Stainless Griddle',
-    bestFor: 'Backyard cooking and tailgating', why: 'Tabletop outdoor griddle with a clad stainless-steel cooking surface and compact footprint.', watch: 'It uses propane and is intended for outdoor use only.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20',
+    bestFor: 'Backyard cooking and tailgating', why: 'Tabletop outdoor griddle with a clad stainless-steel cooking surface and compact footprint.', watch: 'It uses propane and is intended for outdoor use only.', amazonAsin: 'B0H42SRNRZ', amazonUrl: 'https://www.amazon.com/dp/B0H42SRNRZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0H42SRNRZ?tag=buybetterfi06-20',
     dailyDealDate: '2026-10-31'
   },
   {
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'solo-stove-steelfire-22',
   'solo-stove-infinity-flame',
   'oxo-simple-mandoline-slicer',
   'ooni-koda-2-pro',
