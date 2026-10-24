@@ -549,9 +549,9 @@ const supplementalProducts = [
     dailyDealDate: '2026-10-31'
   },
   {
-    slug: 'solo-stove-infinity-flame', name: 'Solo Stove Infinity Flame Propane Fire Pit', category: 'Outdoor', price: '$599.99', icon: '☼',
+    slug: 'solo-stove-infinity-flame', name: 'Solo Stove Infinity Flame 42-Inch Propane Fire Pit', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://content.solostove.com/image/upload/ar_1%3A1%2Cc_auto%2Cg_auto%2Cw_800/q_auto/f_avif/dpr_auto/e_unsharp_mask%3A100/aemdwwt79qizvty5h9pf', imageAlt: 'Solo Stove Infinity Flame Propane Fire Pit',
-    bestFor: 'Low-maintenance patio entertaining', why: 'Propane fire pit with integrated tabletop, adjustable flame control, and a large outdoor gathering footprint.', watch: 'Propane fire features require proper outdoor placement, ventilation, and local-rule checks.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
+    bestFor: 'Outdoor patio entertaining for groups of 5–8', why: 'A 42-inch propane fire pit table with a stainless-steel build and Solo Stove’s signature flame, designed for outdoor gatherings of about 5–8 people.', watch: 'Propane tank is not included. Use outdoors only and follow the manufacturer’s clearance, ventilation, and local fire-safety guidance.', amazonAsin: 'B0GVTXZZFB', amazonUrl: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-nylon-slotted-spoon', name: 'OXO Good Grips Nylon Slotted Spoon', category: 'Home & Kitchen', price: '$9.99', icon: '⌁',
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'solo-stove-infinity-flame',
   'oxo-simple-mandoline-slicer',
   'ooni-koda-2-pro',
   'ooni-karu-2-pro',
