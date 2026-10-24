@@ -1050,7 +1050,8 @@ const unverifiedAffiliateDestinations = new Set([
   'keter-signature-50-gallon-walnut',
   'ooni-koda-2',
   'keter-cortina-30-gallon',
-  'keter-cortina-30-gallon-storage'
+  'keter-cortina-30-gallon-storage',
+  'brightech-ambience-pro-solar-remote'
 ]);
 
 export const products = [...productsCatalog, ...supplementalProducts]
