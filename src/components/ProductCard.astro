@@ -53,7 +53,7 @@ const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommenda
 
   <div class="product-card-actions">
     <a class="shop-btn secondary-shop" href={`/products/${product.slug}/`}>See our take →</a>
-    <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+    {!product.affiliateDestinationUnverified && <a class="shop-btn amazon-shop" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>}
   </div>
 </article>
 
