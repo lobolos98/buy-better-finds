@@ -595,11 +595,6 @@ const supplementalProducts = [
     dailyDealDate: '2026-11-07'
   },
   {
-    slug: 'ooni-karu-2-pro', name: 'Ooni Karu 2 Pro 16" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$849.00', icon: '☼',
-    image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2Pro-F_fb2a4824-8fc4-43d2-b031-6f158f77b22c.webp?crop=center&height=640&v=1749094517&width=640', imageAlt: 'Ooni Karu 2 Pro multi-fuel pizza oven',
-    bestFor: 'Multi-fuel outdoor cooking', why: '16-inch multi-fuel oven supporting wood and charcoal, with optional gas capability and smart temperature monitoring.', watch: 'Fuel versatility adds setup choices compared with a simple gas-only oven.', amazonAsin: 'B0DLH28V1D', amazonUrl: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20'
-  },
-  {
     slug: 'ooni-karu-2', name: 'Ooni Karu 2 12" Multi-Fuel Pizza Oven', category: 'Outdoor', price: '$449.00', icon: '☼',
     image: 'https://ooni.com/cdn/shop/files/1000x1000-Ovens-ToScale-Karu2_98e75b3e-ab5e-4709-9a6d-3b80d32ce40e.webp?crop=center&height=640&v=1749094631&width=640', imageAlt: 'Ooni Karu 2 multi-fuel pizza oven',
     bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', amazonAsin: 'B0DQ8R4TYT', amazonUrl: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20'
@@ -1037,7 +1032,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'ooni-karu-2-pro',
   'ooni-koda-2-max',
   'keter-signature-50-gallon-walnut',
   'ooni-koda-2',
