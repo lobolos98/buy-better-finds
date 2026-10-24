@@ -126,7 +126,7 @@ const breadcrumbSchema = {
   ...(product.image ? { image: [new URL(product.image, 'https://buybetterfinds.com').toString()] } : {}),
   description: product.why,
   url: canonicalUrl,
-  ...(freshCurrentPrice ? { offers: { '@type': 'Offer', url: affiliateUrl, price: freshCurrentPrice.price, priceCurrency: freshCurrentPrice.currency, availability: 'https://schema.org/InStock' } } : {}),
+  ...(freshCurrentPrice && !product.affiliateDestinationUnverified ? { offers: { '@type': 'Offer', url: affiliateUrl, price: freshCurrentPrice.price, priceCurrency: freshCurrentPrice.currency, availability: 'https://schema.org/InStock' } } : {}),
   review: {
     '@type': 'Review',
     author: { '@type': 'Organization', name: 'Buy Better Finds' },
@@ -211,7 +211,7 @@ const breadcrumbSchema = {
           </div>
 
           <div class="detail-actions">
-            <a class="btn primary amazon-btn" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>
+            {!product.affiliateDestinationUnverified && <a class="btn primary amazon-btn" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>}
             <a class="btn secondary" href="/products/">Browse all finds</a>
           </div>
 
