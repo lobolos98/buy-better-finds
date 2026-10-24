@@ -163,10 +163,10 @@ const productsCatalog = [
   },
 
   {
-    slug: 'tonies-toniebox-starter-set', name: 'Tonies Toniebox Starter Set', category: 'Toys & Games', price: '$69.99', icon: '★',
+    slug: 'tonies-toniebox-starter-set', name: 'Toniebox 2 Disney Princess Bundle – Cloud Pink', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://images.cdn.europe-west1.gcp.commercetools.com/3b0dd326-e471-4c81-b93e-7cd0db90e1b0/Green-GZJm9dPg.png', imageAlt: 'Tonies Toniebox Starter Set',
-    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B09XS7JWHH?tag=buybetterfi06-20'
+    bestFor: 'Screen-free Disney Princess stories and independent listening for ages 3+', why: 'Toniebox 2 audio player bundled with Ariel, Moana, Merida and Belle Tonies for child-led listening without a screen.',
+    watch: 'This is the Cloud Pink Toniebox 2 Disney Princess bundle, not the older Toniebox starter set. Check included characters and setup requirements.', url: 'https://www.amazon.com/dp/B0FJ2ZJY9J?tag=buybetterfi06-20'
   },
 
   {
@@ -1034,7 +1034,6 @@ const supplementalProducts = [
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
 const unverifiedToyDestinations = new Set([
-  'tonies-toniebox-starter-set',
   'crayola-globbles-6-count',
   'pokemon-day-2026-collection',
   'buzz-lightyear-interactive-talking',
