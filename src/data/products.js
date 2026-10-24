@@ -569,9 +569,9 @@ const supplementalProducts = [
     bestFor: 'Quick avocado preparation', why: 'Three-in-one tool for halving, pitting, slicing, and serving ripe avocados.', watch: 'Its value depends on how often you prepare avocados.', url: 'https://www.amazon.com/dp/B0088LR5EW?tag=buybetterfi06-20'
   },
   {
-    slug: 'oxo-simple-mandoline-slicer', name: 'OXO Good Grips Simple Mandoline Slicer', category: 'Home & Kitchen', price: '$59.99', icon: '◇',
+    slug: 'oxo-simple-mandoline-slicer', name: 'OXO Good Grips Simple Mandoline Slicer', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
     image: 'https://www.oxo.com/media/catalog/product/cache/b2f1ce2dfe10d3d31bf2056bf6e0d10f/1/2/1273180.jpg', imageAlt: 'OXO Good Grips Simple Mandoline Slicer',
-    bestFor: 'Consistent vegetable slicing', why: 'Adjustable slicing and julienne settings with an integrated finger guard.', watch: 'Mandolines require careful handling and dedicated storage.', url: 'https://www.amazon.com/dp/B0GVTXZZFB?tag=buybetterfi06-20'
+    bestFor: 'Consistent vegetable slicing', why: 'Adjustable slicing and julienne settings with an integrated finger guard.', watch: 'Mandolines require careful handling and dedicated storage.', amazonAsin: 'B00JVSVMJU', amazonUrl: 'https://www.amazon.com/dp/B00JVSVMJU?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00JVSVMJU?tag=buybetterfi06-20'
   },
   {
     slug: 'oxo-one-stop-chop', name: 'OXO One Stop Chop Manual Food Processor', category: 'Home & Kitchen', price: '$49.99', icon: '◇',
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'oxo-simple-mandoline-slicer',
   'ooni-koda-2-pro',
   'ooni-karu-2-pro',
   'ooni-koda-2-max',
