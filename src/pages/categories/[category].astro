@@ -204,7 +204,7 @@ if (showEverblog) {
           <div class="score-row"><strong>{Number.isFinite(Number(rec?.score)) ? Number(rec.score).toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
-          <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
+          <div class="card-footer"><strong>{name === 'Toys & Games' ? 'Check Price' : product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
           <div class="affiliate-actions">{amazonUrl && <a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>}</div>
         </article>; })}</div>
         <p class="affiliate-disclosure">As an Amazon Associate and Awin publisher, Buy Better Finds may earn from qualifying purchases. Product availability and prices can change; confirm current details with the retailer before buying.</p>
