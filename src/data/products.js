@@ -625,9 +625,9 @@ const supplementalProducts = [
     bestFor: 'Pergolas, patios, and backyard entertaining', why: 'Solar Edison-style S14 LED string lights with automatic dusk activation and warm 2700K light.', watch: 'Solar output depends on direct sunlight reaching the panel.', amazonAsin: 'B075NS8YXG', amazonUrl: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
-    slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro Solar Hanging Remote String Lights', category: 'Outdoor', price: '$64.00', icon: '☼',
-    image: 'https://brightech.com/cdn/shop/files/Untitled_design_65.png?v=1751923255&width=1500', imageAlt: 'Brightech Ambience Pro Solar Hanging Remote String Lights',
-    bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
+    slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro 48-Foot Solar Outdoor String Lights', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://brightech.com/cdn/shop/files/Untitled_design_65.png?v=1751923255&width=1500', imageAlt: 'Brightech Ambience Pro 48-foot solar outdoor string lights',
+    bestFor: 'Patios, pergolas, and outdoor bistro-style lighting', why: '48-foot solar-powered outdoor string lights with 15 shatterproof, soft-white Edison-style LED bulbs.', watch: 'Place the solar panel where it receives adequate sunlight; check mounting space for the 48-foot strand.', amazonAsin: 'B07XG6Z4VG', amazonUrl: 'https://www.amazon.com/dp/B07XG6Z4VG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07XG6Z4VG?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: 'Check price', icon: '◇',
