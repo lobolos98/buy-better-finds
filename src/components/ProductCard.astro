@@ -29,7 +29,7 @@ const productImage = product.amazonImage || product.image;
 const isTinyPlants = product.slug === 'lego-botanicals-tiny-plants';
 const fallbackImage = isTinyPlants ? null : (product.imageFallback || (product.manufacturerImage && product.manufacturerImage !== productImage ? product.manufacturerImage : null));
 const recommendation = getRecommendation(product);
-const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommendation.score).toFixed(1) : '—';
+const score = recommendation?.score != null && Number.isFinite(Number(recommendation.score)) ? Number(recommendation.score).toFixed(1) : 'Not rated';
 ---
 <article class="card product-card">
   <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>
@@ -42,7 +42,7 @@ const score = Number.isFinite(Number(recommendation?.score)) ? Number(recommenda
 
   <div class="product-meta">
     <div class="tag">{product.category}</div>
-    <div class="score-mini" aria-label={`Buy Better Finds Score ${score} out of 10`}><small>Buy Better Score</small><strong>{score}<span>/10</span></strong></div>
+    <div class="score-mini" aria-label={`Buy Better Finds Score ${score} out of 10`}><small>{score === 'Not rated' ? 'Editorial score' : 'Buy Better Score'}</small><strong>{score}<span>/10</span></strong></div>
   </div>
 
   <h3>{product.name}</h3>
