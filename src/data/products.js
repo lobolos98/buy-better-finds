@@ -660,9 +660,9 @@ const supplementalProducts = [
     bestFor: 'Walkways, driveways, and garden borders', why: 'Solar-powered LED pathway stakes with warm white light and tool-free installation.', watch: 'Their 15-inch height is best for accent and pathway lighting rather than broad-area illumination.', amazonAsin: 'B0916FW7X4', amazonUrl: 'https://www.amazon.com/dp/B0916FW7X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0916FW7X4?tag=buybetterfi06-20'
   },
   {
-    slug: 'dazuma-solar-path-lighting', name: 'Dazuma Outdoor Solar Path Lighting', category: 'Outdoor', price: '$104.99', icon: '☼',
-    image: 'https://dazuma.us/cdn/shop/files/warm-glowing-outdoor-solar-path-lighting-grassy-lawn-night.jpg?v=1763106655&width=1946', imageAlt: 'Dazuma Outdoor Solar Path Lighting',
-    bestFor: 'Upscale pathway and garden lighting', why: 'Decorative solar path fixture with textured glass, warm 3000K light, and a metal stake for landscape placement.', watch: 'The larger decorative design is better suited to permanent landscape installations.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20',
+    slug: 'dazuma-solar-path-lighting', name: 'RAVICEN Solar Pathway Lights Outdoor, 8-Pack', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://dazuma.us/cdn/shop/files/warm-glowing-outdoor-solar-path-lighting-grassy-lawn-night.jpg?v=1763106655&width=1946', imageAlt: 'Outdoor solar pathway lights for garden and walkway lighting',
+    bestFor: 'Walkways, patios, lawns, and garden borders', why: 'An 8-pack of solar-powered outdoor pathway lights with automatic on/off operation and an IP65 waterproof rating, designed for decorative landscape lighting.', watch: 'Check the current pack contents, brightness, and weather-resistance details on the Amazon listing before buying.', amazonAsin: 'B0GVJFHJ5M', amazonUrl: 'https://www.amazon.com/dp/B0GVJFHJ5M?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0GVJFHJ5M?tag=buybetterfi06-20',
     dailyDealDate: '2026-11-01'
   },
   {
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'dazuma-solar-path-lighting',
   'oxo-5qt-mixing-bowl',
   'solo-stove-steelfire-22',
   'solo-stove-infinity-flame',
