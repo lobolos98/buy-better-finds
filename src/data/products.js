@@ -1031,6 +1031,17 @@ const supplementalProducts = [
     bestFor: 'Portable everyday hydration', why: 'Insulated bottle designed for quick drinking with a lightweight, travel-friendly format.', watch: 'Check the exact lid style and capacity before buying because IceFlow models vary.', amazonAsin: 'B0CWLQ1Z25', amazonUrl: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CWLQ1Z25?tag=buybetterfi06-20'
   },
 ];
+// Amazon destinations flagged during the Toys & Games affiliate audit.
+// Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
+const unverifiedToyDestinations = new Set([
+  'lego-city-lava-rollercoaster',
+  'tonies-toniebox-starter-set',
+  'crayola-globbles-6-count',
+  'pokemon-day-2026-collection',
+  'buzz-lightyear-interactive-talking',
+  'lego-bonsai-tree-10281'
+]);
+
 export const products = [...productsCatalog, ...supplementalProducts]
   .filter((product) => product?.slug && product?.name && product?.category && (product?.image || product?.category === 'Automotive & Car Accessories'))
   .map((product) => {
@@ -1039,12 +1050,14 @@ export const products = [...productsCatalog, ...supplementalProducts]
 
   if (!amazonOverride && !manufacturerOverride) return {
     ...product,
+    affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
     score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5
   };
 
   const override = amazonOverride || manufacturerOverride;
   return {
     ...product,
+    affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
     score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5,
     amazonAsin: amazonOverride?.asin || product.amazonAsin,
     amazonImage: amazonOverride?.image || product.amazonImage,
