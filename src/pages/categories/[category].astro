@@ -201,7 +201,7 @@ if (showEverblog) {
           : (product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('/dp/') ? product.url : null)))); const rec = getRecommendation(product); return <article class="card product-card">
           {product.image && <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a>}
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
-          <div class="score-row"><strong>{Number.isFinite(Number(rec?.score)) ? Number(rec.score).toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
+          <div class="score-row"><strong>{rec?.score != null && Number.isFinite(Number(rec.score)) ? Number(rec.score).toFixed(1) : 'Not rated'}</strong><span>{rec?.score != null && Number.isFinite(Number(rec.score)) ? 'BUY BETTER SCORE' : 'EDITORIAL SCORE'}</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
           <div class="card-footer"><strong>{name === 'Toys & Games' ? 'Check Price' : product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
