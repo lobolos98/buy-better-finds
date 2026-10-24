@@ -13,6 +13,8 @@ import { automotiveProducts } from './automotive-products.js';
 const productsCatalog = [
   {
     slug: 'goally-kids-learning-tablet',
+    editorialScore: 9.3,
+    editorialScoreContext: 'Focused early learning, routines and independence (not hands-on tested)',
     name: 'Goally Kids Learning Tablet',
     category: 'Toys & Games',
     price: 'Check price',
@@ -20,7 +22,7 @@ const productsCatalog = [
     image: 'https://www.awin1.com/cshow.php?s=4140395&v=79880&q=540559&r=3119041',
     imageAlt: 'Goally kids learning tablet promotional image supplied by the Goally Awin program',
     bestFor: 'Families exploring a more controlled learning tablet for children ages 2–8',
-    why: 'Goally promotes a child-focused learning experience without an open browser, YouTube, or third-party advertising, making it worth comparing with general-purpose tablets.',
+    why: 'Our 9.3/10 editorial pick for focused early learning: visual schedules, parent-managed routines, practical life-skills lessons and a curated environment without an open browser, YouTube or ads. This score reflects documented features rather than hands-on testing.',
     watch: 'Confirm current device features, subscription or ongoing costs, age suitability, and any discount-code terms with Goally before ordering.',
     affiliateUrl: 'https://www.awin1.com/cread.php?s=4140395&v=79880&q=540559&r=3119041',
     affiliateLabel: 'Shop Goally'
