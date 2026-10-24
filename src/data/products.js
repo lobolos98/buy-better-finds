@@ -241,10 +241,10 @@ const productsCatalog = [
   },
 
   {
-    slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: '$39.99', icon: '★',
+    slug: 'buzz-lightyear-interactive-talking', name: 'Disney Store Buzz Lightyear Interactive Talking Action Figure', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/1713036510322?fmt=jpeg&hei=608&qlt=90&wid=608', imageAlt: 'Disney Store Buzz Lightyear Interactive Talking Action Figure',
-    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B07NQFW239?tag=buybetterfi06-20'
+    bestFor: 'Toy Story fans who enjoy interactive character play', why: 'An interactive Buzz Lightyear figure with 10+ English phrases that can interact with compatible figures and toys, adding character-led play to Toy Story collections.',
+    watch: 'Confirm the exact edition, included accessories, required batteries and compatibility details in the current listing.', url: 'https://www.amazon.com/dp/B07PQFT83F?tag=buybetterfi06-20'
   },
 
   {
@@ -1034,7 +1034,6 @@ const supplementalProducts = [
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
 const unverifiedToyDestinations = new Set([
-  'buzz-lightyear-interactive-talking',
   'lego-bonsai-tree-10281'
 ]);
 
