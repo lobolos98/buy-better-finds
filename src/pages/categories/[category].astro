@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { products } from '../../data/products.js';
-import { amazonProductUrl, amazonSearchUrl } from '../../utils/amazon.js';
+import { amazonProductUrl } from '../../utils/amazon.js';
 import { getRecommendation } from '../../data/recommendations.js';
 
 export function getStaticPaths() {
@@ -82,7 +82,8 @@ const categoryComparisons = {
   Tech: [['Sony WH-1000XM5 vs AirPods 4', '/comparisons/sony-wh-1000xm5-vs-airpods-4/']],
   'Home & Kitchen': [['Ninja AF101 vs Instant Vortex Plus', '/comparisons/ninja-af101-vs-instant-vortex-plus/'], ['Dyson V8 vs Shark Navigator', '/comparisons/dyson-v8-vs-shark-navigator/']],
   Lifestyle: [['YETI Rambler vs Stanley Quencher', '/comparisons/yeti-rambler-vs-stanley-quencher/']],
-  'Smart Home': [['TP-Link Outdoor Plug vs Ring Doorbell', '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/']]
+  'Smart Home': [['TP-Link Outdoor Plug vs Ring Doorbell', '/comparisons/tp-link-outdoor-plug-vs-ring-doorbell/']],
+  'Toys & Games': [['Goally vs. iPad: Learning, Routines & Independence', '/blog/goally-vs-ipad-learning-tablet/']]
 };
 
 
@@ -157,7 +158,7 @@ if (showEverblog) {
 }
 
 ---
-<BaseLayout title={`${name} Buying Guide | Buy Better Finds`} description={`Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, comparisons, and product sources.`}>
+<BaseLayout title={name === 'Toys & Games' ? 'Toys & Games: Learning Toys, LEGO & Family Games | Buy Better Finds' : `${name} Buying Guide | Buy Better Finds`} description={name === 'Toys & Games' ? 'Compare learning tablets, building sets, creative toys and family games. Explore age fit, repeat-play value, parent involvement and buying tradeoffs.' : `Shop ${name} recommendations from Buy Better Finds, with practical buying guidance, strengths, tradeoffs, comparisons, and product sources.`}>
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -170,6 +171,7 @@ if (showEverblog) {
   <section class="section category-page"><div class="container">
     <div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/categories/">Categories</a><span>/</span><strong>{name}</strong></div>
     <div class="category-hero"><div><div class="eyebrow">SHOPPING HUB · {matches.length} FINDS</div><h1>{name}</h1><p class="lead">{advice}</p>{name === 'Gifts & Collectibles' && <p style="margin-top:1rem"><a href="/categories/gifts-collectibles/lego-light-kits/" style="display:inline-block;background:#003087;color:#fff;padding:.8rem 1.1rem;border-radius:9px;text-decoration:none;font-weight:700">Explore LEGO-compatible lighting kits →</a></p>}</div><div class="category-rule"><strong>HOW TO SHOP</strong><span>Start with your use case, then compare the tradeoffs.</span></div></div>
+    {name === 'Toys & Games' && <section class="section" aria-label="Toys and games buying advice"><div class="container" style="padding:22px 0"><p class="eyebrow">BEYOND THE PRODUCT LIST</p><h2>Choose for the way your child actually plays and learns.</h2><p>For building sets, compare age recommendations with the child's experience, the number of pieces and whether the finished build is meant for display or repeated play. For family games, check player count, reading requirements and how long a round takes. For learning tablets, distinguish structured routines and guided lessons from a general-purpose device with broader apps and entertainment.</p><p>A higher score is not a universal recommendation: a child who enjoys open-ended building may get more repeat value from a construction set, while a family prioritizing visual schedules may prefer a dedicated learning device. Compare the tradeoffs before choosing.</p><p><a href="/blog/goally-vs-ipad-learning-tablet/">Explore our detailed Goally vs. iPad learning comparison →</a></p></div></section>}
     {name === 'Beauty & Personal Care' && <section class="section" aria-label="Featured toothbrush comparison"><div class="container" style="padding:22px 0"><p class="eyebrow">FEATURED ORAL CARE COMPARISON</p><h2>Triple Bristle: four toothbrushes compared</h2><p>Explore Original, Max, Kids and Duo three-sided sonic toothbrushes, including fit, replacement-head compatibility and buying considerations.</p><a href="/blog/triple-bristle-sonic-toothbrush/" style="display:inline-block;background:#142b45;color:#fff;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:700">Read the comparison →</a></div></section>}
     {name === 'Gifts & Collectibles' && <section class="lego-featured" aria-label="Featured LEGO sets and matching lighting kits">
       <div class="section-head"><div><div class="eyebrow">FEATURED COLLECTIBLES</div><h2>LEGO sets &amp; matching light kits.</h2><p class="lego-intro">Shop the building set on Amazon, then add its separate BRKOX lighting kit if you want to illuminate your display.</p></div><a class="text-link" href="/categories/gifts-collectibles/lego-light-kits/">View the full LEGO collection →</a></div>
@@ -196,14 +198,14 @@ if (showEverblog) {
       <section class="featured-section"><div class="section-head"><div><div class="eyebrow">SHORTLISTED FINDS</div><h2>Start with the products worth comparing.</h2></div><a class="text-link" href="/products/">Browse all finds →</a></div>
         <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.affiliateUrl ?? (product.category === 'Beauty & Personal Care' && product.url?.includes('amazon.com/dp/')
           ? product.url
-          : (product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : amazonSearchUrl(product.name)))); const rec = getRecommendation(product); return <article class="card product-card">
+          : (product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('/dp/') ? product.url : null)))); const rec = getRecommendation(product); return <article class="card product-card">
           {product.image && <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a>}
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
           <div class="score-row"><strong>{Number.isFinite(Number(rec?.score)) ? Number(rec.score).toFixed(1) : '—'}</strong><span>BUY BETTER SCORE</span></div>
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
           <div class="card-footer"><strong>{product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
-          <div class="affiliate-actions"><a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a></div>
+          <div class="affiliate-actions">{amazonUrl && <a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>}</div>
         </article>; })}</div>
         <p class="affiliate-disclosure">As an Amazon Associate and Awin publisher, Buy Better Finds may earn from qualifying purchases. Product availability and prices can change; confirm current details with the retailer before buying.</p>
       </section>
