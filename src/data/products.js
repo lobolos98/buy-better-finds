@@ -227,10 +227,10 @@ const productsCatalog = [
   },
 
   {
-    slug: 'pokemon-day-2026-collection', name: 'Pokémon Day 2026 Collection', category: 'Toys & Games', price: 'Check price', icon: '★',
+    slug: 'pokemon-day-2026-collection', name: 'Pokémon TCG 3 Booster Packs (30 Cards Total)', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://m.media-amazon.com/images/I/91YHLxggDmL._AC_SL1500_.jpg', imageAlt: 'Pokémon Day 2026 Collection',
-    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20'
+    bestFor: 'Pokémon trading card fans seeking a surprise assortment of booster packs', why: 'A three-pack Pokémon TCG assortment with 30 cards total. Randomized cards offer a surprise-opening experience, but no particular rare or holofoil card is guaranteed.',
+    watch: 'The assortment may vary; check the seller, pack condition and listing details before ordering. This is not the Pokémon Day 2026 Collection.', url: 'https://www.amazon.com/dp/B001DIJ48C?tag=buybetterfi06-20'
   },
 
   {
@@ -1034,7 +1034,6 @@ const supplementalProducts = [
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
 const unverifiedToyDestinations = new Set([
-  'pokemon-day-2026-collection',
   'buzz-lightyear-interactive-talking',
   'lego-bonsai-tree-10281'
 ]);
