@@ -1026,7 +1026,7 @@ const supplementalProducts = [
 const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
-  'brightech-ambience-pro-solar-remote'
+
 ]);
 
 export const products = [...productsCatalog, ...supplementalProducts]
