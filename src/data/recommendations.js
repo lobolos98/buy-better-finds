@@ -331,6 +331,8 @@ const scoreOverrides = {
 };
 
 export function getRecommendation(product) {
+  if (product.slug === 'goally-kids-learning-tablet') return { score: 9.3, label: 'Best for focused early learning and independence', pros: ['Visual routines and practical life-skills learning', 'Curated, parent-managed digital environment', 'Supports practice of everyday independence'], cons: ['Subscription and device costs', 'Less versatile than a general-purpose tablet', 'Benefits depend on child needs and parental participation'], bestFor: 'Families prioritizing focused early learning, routines and independence', skipIf: 'You need unrestricted general-purpose tablet apps or school platforms' };
+
   const existing = recommendationData[product.slug];
   const score = scoreOverrides[product.slug] ?? product.score ?? null;
   if (existing) return score == null ? existing : { ...existing, score };
