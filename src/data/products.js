@@ -120,7 +120,7 @@ const productsCatalog = [
     bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.amazon.com/dp/B0G2T1VN17?tag=buybetterfi06-20', dailyDealDate: '2026-10-08'
   },
   {
-    slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙',
+    slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: 'Check price', icon: '⚙',
     image: 'https://i5.walmartimages.com/asr/26c902f4-0819-45b0-8ad6-d9a1db96a9a6.8cf79559a1b1f9516ba243f972226a12.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768', imageAlt: 'CrunchLabs The Crunchinator STEM building toy',
     bestFor: 'STEM-minded kids and hands-on makers', why: 'A build-and-experiment toy designed around problem solving and mechanical curiosity.', watch: 'Best suited to kids who enjoy building and tinkering rather than passive play.', amazonAsin: 'B0G3Y3RNZQ', amazonUrl: 'https://www.amazon.com/dp/B0G3Y3RNZQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0G3Y3RNZQ?tag=buybetterfi06-20', dailyDealDate: '2026-10-09'
   },
@@ -139,7 +139,7 @@ const productsCatalog = [
   },
 
   {
-    slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: '$49.99', icon: '★',
+    slug: 'magna-tiles-clear-32', name: 'Magna-Tiles Clear Colors 32-Piece Set', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://timbuktoys.com/cdn/shop/files/Magna-TilesClearColors32PieceSet.jpg?v=1723148394', imageAlt: 'MAGNA-TILES Clear Colors 32-Piece Set',
     bestFor: 'Open-ended building, spatial reasoning, and collaborative play for children who enjoy construction toys', why: 'A 32-piece magnetic tile set for creating flat patterns and three-dimensional structures. The clear colors make it easy to see through builds and combine pieces into imaginative designs.',
     watch: 'Check the included piece shapes and age guidance; supervise younger children and follow the manufacturer’s safety instructions.', amazonAsin: 'B000CBSNKQ', amazonUrl: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B000CBSNKQ?tag=buybetterfi06-20',
@@ -170,7 +170,7 @@ const productsCatalog = [
   },
 
   {
-    slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: '$22.49', icon: '★',
+    slug: 'crayola-light-up-tracing-pad', name: 'Crayola Light Up Tracing Pad', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://www.crayola.com/images/default-source/product-images/toys/04-0908-0-202_light-up-tracing-pad_pink_f1.jpg?sfvrsn=67c0bf90_9', imageAlt: 'Crayola Light Up Tracing Pad',
     bestFor: 'Drawing practice, tracing activities, and creative gifts for young artists', why: 'An illuminated tracing surface helps children follow outlines and practice drawing with a reference underneath their paper. It can support repeatable art activities without needing a tablet app.',
     watch: 'Confirm what templates, paper, and drawing tools are included, and check the current model’s power requirements and age guidance.', amazonAsin: 'B0084JUNXS', amazonUrl: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20',
@@ -178,42 +178,42 @@ const productsCatalog = [
   },
 
   {
-    slug: 'lego-harry-potter-hogwarts-castle-71043', name: 'LEGO Harry Potter Hogwarts Castle (71043)', category: 'Toys & Games', price: '$469.99', icon: '★',
+    slug: 'lego-harry-potter-hogwarts-castle-71043', name: 'LEGO Harry Potter Hogwarts Castle (71043)', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://ucarecdn.com/5ef380cf-4612-4bce-9142-3c397d58069b/-/format/auto/-/preview/3000x3000/-/quality/lighter/', imageAlt: 'LEGO Harry Potter Hogwarts Castle 71043',
     bestFor: 'Harry Potter fans and experienced builders looking for a substantial display project', why: 'A large LEGO Hogwarts Castle model packed with recognizable details from the Wizarding World. It is suited to a longer building session and a display shelf once completed.',
     watch: 'This is a complex, space-consuming build; check the set number, piece count, dimensions, age guidance, and current listing before purchase.', amazonAsin: 'B07GH953JN', amazonUrl: 'https://www.amazon.com/dp/B07GH953JN?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07GH953JN?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'melissa-doug-top-bake-pizza-counter', name: 'Melissa & Doug Top & Bake Wooden Pizza Counter', category: 'Toys & Games', price: '$59.99', icon: '★',
+    slug: 'melissa-doug-top-bake-pizza-counter', name: 'Melissa & Doug Top & Bake Wooden Pizza Counter', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://www.melissaanddoug.com/cdn/shop/files/dc3d6e11c82d1ab2f8e2b562c6dd53eae932feaa_750x.progressive.jpg?v=1747934085', imageAlt: 'Melissa & Doug Top & Bake Wooden Pizza Counter',
     bestFor: 'Pretend restaurant play and imaginative food-service role-play', why: 'A wooden play counter themed around making and serving pizza encourages children to take orders, assemble pretend food, and act out a small pizzeria. It works well for open-ended role-play with other play food.',
     watch: 'Check the included accessories, assembled footprint, and age guidance; accessories and dimensions should be confirmed in the current listing.', amazonAsin: 'B075KX9NS7', amazonUrl: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075KX9NS7?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'snap-circuits-jr-sc100', name: 'Snap Circuits Jr. SC-100', category: 'Toys & Games', price: '$14.11', icon: '★',
+    slug: 'snap-circuits-jr-sc100', name: 'Snap Circuits Jr. SC-100', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://www.gigaparts.com/media/catalog/product/cache/002dc70ccef261c78c46589b619436fc/s/n/snap-circuits-jr-sc100-electronics-exploration-kit-over-100-projects-stem-educational-toy-for-kids-8_2ea30750-6d94-4389-9ab1-96d12ad79106.a0686dc9319d685b881bfb641eefaf73.jpg', imageAlt: 'Snap Circuits Jr. SC-100',
     bestFor: 'Beginners exploring basic electronics through guided hands-on projects', why: 'A beginner-friendly electronics kit uses snap-together components to build simple circuits without soldering. The project-based format gives children a practical introduction to how switches, lights, and other circuit elements work.',
     watch: 'Follow the kit’s age and supervision guidance and confirm the included project manual and component set.', amazonAsin: 'B00008BFZH', amazonUrl: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00008BFZH?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'stomp-rocket-dueling-rockets', name: 'Stomp Rocket Dueling Rockets', category: 'Toys & Games', price: '$34.99', icon: '★',
+    slug: 'stomp-rocket-dueling-rockets', name: 'Stomp Rocket Dueling Rockets', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://i5.samsclubimages.com/asr/2171a5ad-c4c6-45aa-87b3-4f1a3e1e1620.2b4227fdfe8075866d0adb45d104bae7.jpeg', imageAlt: 'Stomp Rocket Dueling Rockets',
     bestFor: 'Outdoor active play, friendly challenges, and energetic group activities', why: 'A stomp-powered rocket launcher turns running, jumping, and aiming into a simple outdoor challenge. The dueling format lets players compare launches and take turns rather than relying on batteries or screens.',
     watch: 'Use it in an open outdoor area away from people, roads, windows, and overhead hazards; check the age guidance and included rocket count.', amazonAsin: 'B00G9WR0RE', amazonUrl: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00G9WR0RE?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: '$35.99', icon: '★',
+    slug: 'bravokids-lcd-writing-tablet', name: 'Bravokids LCD Writing Tablet', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://m.media-amazon.com/images/I/41TEK-U5X1L.jpg', imageAlt: 'Bravokids LCD Writing Tablet',
     bestFor: 'Reusable doodling, travel activities, and low-mess drawing practice', why: 'An LCD writing tablet gives children a reusable surface for drawing, writing, and simple games, then clears for the next activity. Its lightweight format can be handy for car trips or waiting rooms.',
     watch: 'Confirm screen size, erase/lock controls, stylus inclusion, and battery type for the exact model; it is not a substitute for paper when permanent work is needed.', amazonAsin: 'B083BCTLP5', amazonUrl: 'https://www.amazon.com/dp/B083BCTLP5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B083BCTLP5?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'fisher-price-rock-a-stack', name: 'Fisher-Price Rock-a-Stack', category: 'Toys & Games', price: '$8.63', icon: '★',
+    slug: 'fisher-price-rock-a-stack', name: 'Fisher-Price Rock-a-Stack', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://cdn.shopify.com/s/files/1/1857/6931/products/UyJaJVohb6.jpg?v=1675763441', imageAlt: 'Fisher-Price Rock-a-Stack',
     bestFor: 'Early cause-and-effect play and practicing grasping and stacking', why: 'A classic stacking toy invites babies to place rings on a post, explore size order, and repeat a simple hand-eye coordination activity. The bright pieces make the activity easy to see and revisit.',
     watch: 'Follow the manufacturer’s age and safety guidance, and check the current set’s ring count and materials.', amazonAsin: 'B07M9233QG', amazonUrl: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07M9233QG?tag=buybetterfi06-20'
@@ -255,14 +255,14 @@ const productsCatalog = [
   },
 
   {
-    slug: 'vtech-pull-and-sing-puppy', name: 'VTech Pull and Sing Puppy', category: 'Toys & Games', price: '$11.95', icon: '★',
+    slug: 'vtech-pull-and-sing-puppy', name: 'VTech Pull and Sing Puppy', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://static.wixstatic.com/media/4c5139_508bafa058df4cbd9b2f10e443c5b53a~mv2.jpg/v1/fill/w_1500,h_1500,al_c,q_90,enc_avif,quality_auto/4c5139_508bafa058df4cbd9b2f10e443c5b53a~mv2.jpg', imageAlt: 'VTech Pull and Sing Puppy',
     bestFor: 'Toddlers who enjoy pull-along toys, music, and early learning play', why: 'A pull-along puppy combines movement with songs and simple learning prompts, encouraging toddlers to take the toy along while playing. It brings a musical element to active play around the home.',
     watch: 'Check the exact version, included features, battery requirements, and age guidance; supervise pull-along play around stairs.', amazonAsin: 'B01MQ3YP7Y', amazonUrl: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01MQ3YP7Y?tag=buybetterfi06-20'
   },
 
   {
-    slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: '$3.59', icon: '★',
+    slug: 'original-slinky', name: 'The Original Slinky', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://i.ebayimg.com/images/g/KmcAAOSwBfNgnnUz/s-l1200.jpg', imageAlt: 'The Original Slinky',
     bestFor: 'Small gifts, nostalgic play, and simple demonstrations of motion', why: 'The classic metal spring can stretch, bounce, and walk down suitable steps when handled correctly. Its simple design makes it a compact, screen-free novelty for play and demonstrations.',
     watch: 'The metal spring can tangle or pinch fingers; check age guidance and avoid stretching it excessively or around the neck.', amazonAsin: 'B00000IZKX', amazonUrl: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B00000IZKX?tag=buybetterfi06-20'
@@ -276,7 +276,7 @@ const productsCatalog = [
   },
 
   {
-    slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: '$7.99', icon: '★',
+    slug: 'leapfrog-learning-friends-100-words', name: 'LeapFrog Learning Friends 100 Words Book', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://t7.leapfrog.com/images/prod-lg/learning-friends-100-words-book_80-601540_1.jpg', imageAlt: 'LeapFrog Learning Friends 100 Words Book',
     bestFor: 'Preschool vocabulary practice and interactive early-learning play', why: 'An interactive picture-word book introduces everyday vocabulary across familiar categories with audio prompts and touch-based exploration. It can support shared learning time and independent discovery for preschoolers.',
     watch: 'Check the exact edition, language options, battery requirements, and included features in the current listing.', amazonAsin: 'B07B6ZN7P8', amazonUrl: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07B6ZN7P8?tag=buybetterfi06-20',
@@ -1044,7 +1044,7 @@ export const products = [...productsCatalog, ...supplementalProducts]
   if (!amazonOverride && !manufacturerOverride) return {
     ...product,
     affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
-    score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5
+    score: Number.isFinite(Number(product.score)) ? Number(product.score) : null
   };
 
   const override = amazonOverride || manufacturerOverride;
