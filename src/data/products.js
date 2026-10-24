@@ -605,9 +605,9 @@ const supplementalProducts = [
     bestFor: 'Pizza dough, bread baking, and countertop mixing', why: '4.8-quart spiral mixer with 20 speed settings, dual high-torque DC motors, 300W power, and attachments for kneading, beating, and whipping.', watch: 'A specialized premium mixer; check counter space, batch capacity, and warranty registration requirements before buying.', amazonAsin: 'B0H5RCW4W2', amazonUrl: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20'
   },
   {
-    slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$499.00', icon: '☼',
-    image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2-Side-Black.webp?crop=center&height=640&v=1749094390&width=640', imageAlt: 'Ooni Koda 2 gas-powered pizza oven',
-    bestFor: 'Portable gas pizza cooking', why: '14-inch gas-powered oven designed to balance portability with a larger cooking surface.', watch: 'Gas-only cooking offers less fuel flexibility than Ooni multi-fuel models.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
+    slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Propane Gas Pizza Oven — Foundry Black', category: 'Outdoor', price: 'Check price', icon: '☼',
+    image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2-Side-Black.webp?crop=center&height=640&v=1749094390&width=640', imageAlt: 'Ooni Koda 2 14-inch propane pizza oven in Foundry Black',
+    bestFor: 'Portable gas pizza cooking', why: '14-inch propane-powered outdoor pizza oven with G2 Gas Technology, designed to reach up to 950°F and cook Neapolitan-style pizza in about 60 seconds.', watch: 'Propane only; confirm the supplied hose and regulator are compatible with your local gas connection.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
   },
   {
     slug: 'brightech-ambience-pro-solar', name: 'Brightech Ambience Pro Solar String Lights', category: 'Outdoor', price: '$49.00', icon: '☼',
@@ -1031,7 +1031,6 @@ const supplementalProducts = [
 const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
-  'ooni-koda-2',
   'keter-cortina-30-gallon',
   'keter-cortina-30-gallon-storage',
   'brightech-ambience-pro-solar-remote'
