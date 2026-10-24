@@ -600,9 +600,9 @@ const supplementalProducts = [
     bestFor: 'Portable backyard and camping pizza', why: 'Compact multi-fuel oven designed for wood or charcoal cooking with optional gas capability.', watch: 'Solid-fuel cooking takes more hands-on preparation than gas.', amazonAsin: 'B0DQ8R4TYT', amazonUrl: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DQ8R4TYT?tag=buybetterfi06-20'
   },
   {
-    slug: 'ooni-koda-2-max', name: 'Ooni Koda 2 Max 24" Gas-Powered Pizza Oven', category: 'Outdoor', price: 'Check price', icon: '☼',
-    image: 'https://ooni.com/cdn/shop/files/2048x2048-PDP-Koda2Max-Front-2Pizzas-F.webp?crop=center&height=640&v=1749094223&width=640', imageAlt: 'Ooni Koda 2 Max gas-powered pizza oven',
-    bestFor: 'Large-format backyard pizza cooking', why: '24-inch gas-powered oven designed for large pizzas and multi-zone cooking.', watch: 'Its size and price make it a substantial outdoor-kitchen purchase.', amazonAsin: 'B0H5RCW4W2', amazonUrl: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20'
+    slug: 'ooni-halo-core-spiral-dough-mixer', name: 'Ooni Halo Core Spiral Dough Mixer 4.8 Qt — Foundry Black', category: 'Home & Kitchen', price: 'Check price', icon: '◇',
+    image: 'https://flammenpapst.de/cdn/shop/files/HaloCore-Black-45Right.webp?v=1784038879', imageAlt: 'Ooni Halo Core 4.8-quart spiral dough mixer in Foundry Black',
+    bestFor: 'Pizza dough, bread baking, and countertop mixing', why: '4.8-quart spiral mixer with 20 speed settings, dual high-torque DC motors, 300W power, and attachments for kneading, beating, and whipping.', watch: 'A specialized premium mixer; check counter space, batch capacity, and warranty registration requirements before buying.', amazonAsin: 'B0H5RCW4W2', amazonUrl: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0H5RCW4W2?tag=buybetterfi06-20'
   },
   {
     slug: 'ooni-koda-2', name: 'Ooni Koda 2 14" Gas-Powered Pizza Oven', category: 'Outdoor', price: '$499.00', icon: '☼',
