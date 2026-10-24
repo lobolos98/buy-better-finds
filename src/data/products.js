@@ -655,9 +655,9 @@ const supplementalProducts = [
     bestFor: 'Pathways, gardens, and patio borders', why: 'Solar-powered square path lights with dusk-to-dawn operation and selectable 2700K–4000K color temperature.', watch: 'Solar charging performance depends on direct sunlight reaching each light.', amazonAsin: 'B0CNBS4XD5', amazonUrl: 'https://www.amazon.com/dp/B0CNBS4XD5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0CNBS4XD5?tag=buybetterfi06-20'
   },
   {
-    slug: 'alpine-solar-pathway-stakes-4', name: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack', category: 'Outdoor', price: '$69.84', icon: '☼',
+    slug: 'alpine-solar-pathway-stakes-4', name: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://images.thdstatic.com/productImages/858bd1c1-7e7d-467c-91b5-d57f00a0c251/svn/black-alpine-corporation-landscape-flood-spotlights-sla342slr-4-64_600.jpg', imageAlt: 'Alpine Corporation Solar Pathway LED Light Stakes 4-Pack',
-    bestFor: 'Walkways, driveways, and garden borders', why: 'Solar-powered LED pathway stakes with warm white light and tool-free installation.', watch: 'Their 15-inch height is best for accent and pathway lighting rather than broad-area illumination.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20'
+    bestFor: 'Walkways, driveways, and garden borders', why: 'Solar-powered LED pathway stakes with warm white light and tool-free installation.', watch: 'Their 15-inch height is best for accent and pathway lighting rather than broad-area illumination.', amazonAsin: 'B0916FW7X4', amazonUrl: 'https://www.amazon.com/dp/B0916FW7X4?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0916FW7X4?tag=buybetterfi06-20'
   },
   {
     slug: 'dazuma-solar-path-lighting', name: 'Dazuma Outdoor Solar Path Lighting', category: 'Outdoor', price: '$104.99', icon: '☼',
@@ -1037,7 +1037,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
-  'alpine-solar-pathway-stakes-4',
   'dazuma-solar-path-lighting',
   'oxo-5qt-mixing-bowl',
   'solo-stove-steelfire-22',
