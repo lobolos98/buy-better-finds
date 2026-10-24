@@ -164,7 +164,7 @@ const productsCatalog = [
 
   {
     slug: 'tonies-toniebox-starter-set', name: 'Toniebox 2 Disney Princess Bundle – Cloud Pink', category: 'Toys & Games', price: 'Check price', icon: '★',
-    image: 'https://images.cdn.europe-west1.gcp.commercetools.com/3b0dd326-e471-4c81-b93e-7cd0db90e1b0/Green-GZJm9dPg.png', imageAlt: 'Tonies Toniebox Starter Set',
+    image: 'https://m.media-amazon.com/images/I/41-wxOqZFqL.jpg', imageAlt: 'Cloud Pink Toniebox 2 with Ariel, Moana, Merida, and Belle Disney Princess figures',
     bestFor: 'Screen-free Disney Princess stories and independent listening for ages 3+', why: 'Toniebox 2 audio player bundled with Ariel, Moana, Merida and Belle Tonies for child-led listening without a screen.',
     watch: 'This is the Cloud Pink Toniebox 2 Disney Princess bundle, not the older Toniebox starter set. Check included characters and setup requirements.', url: 'https://www.amazon.com/dp/B0FJ2ZJY9J?tag=buybetterfi06-20'
   },
@@ -228,7 +228,7 @@ const productsCatalog = [
 
   {
     slug: 'pokemon-day-2026-collection', name: 'Pokémon TCG 3 Booster Packs (30 Cards Total)', category: 'Toys & Games', price: 'Check price', icon: '★',
-    image: 'https://m.media-amazon.com/images/I/91YHLxggDmL._AC_SL1500_.jpg', imageAlt: 'Pokémon Day 2026 Collection',
+    image: 'https://collectorsemporium.com/cdn/shop/files/91lc8fojw0l._ul1001.jpg?v=1691539149&width=1445', imageAlt: 'Three Pokémon Trading Card Game booster packs, 30 cards total',
     bestFor: 'Pokémon trading card fans seeking a surprise assortment of booster packs', why: 'A three-pack Pokémon TCG assortment with 30 cards total. Randomized cards offer a surprise-opening experience, but no particular rare or holofoil card is guaranteed.',
     watch: 'The assortment may vary; check the seller, pack condition and listing details before ordering. This is not the Pokémon Day 2026 Collection.', url: 'https://www.amazon.com/dp/B001DIJ48C?tag=buybetterfi06-20'
   },
