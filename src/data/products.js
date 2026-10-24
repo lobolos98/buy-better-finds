@@ -1033,7 +1033,25 @@ const supplementalProducts = [
 ];
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
-const unverifiedToyDestinations = new Set([]);
+const unverifiedAffiliateDestinations = new Set([
+  // Conflicting Amazon destinations found during the cross-category audit.
+  // Keep the editorial pages live, but suppress shopping links until each listing is verified.
+  'leapfrog-learning-friends-100-words',
+  'stitch-sticker-stamper',
+  'alpine-solar-pathway-stakes-4',
+  'dazuma-solar-path-lighting',
+  'oxo-5qt-mixing-bowl',
+  'solo-stove-steelfire-22',
+  'solo-stove-infinity-flame',
+  'oxo-simple-mandoline-slicer',
+  'ooni-koda-2-pro',
+  'ooni-karu-2-pro',
+  'ooni-koda-2-max',
+  'keter-signature-50-gallon-walnut',
+  'ooni-koda-2',
+  'keter-cortina-30-gallon',
+  'keter-cortina-30-gallon-storage'
+]);
 
 export const products = [...productsCatalog, ...supplementalProducts]
   .filter((product) => product?.slug && product?.name && product?.category && (product?.image || product?.category === 'Automotive & Car Accessories'))
@@ -1043,14 +1061,14 @@ export const products = [...productsCatalog, ...supplementalProducts]
 
   if (!amazonOverride && !manufacturerOverride) return {
     ...product,
-    affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
+    affiliateDestinationUnverified: unverifiedAffiliateDestinations.has(product.slug),
     score: product.score != null && Number.isFinite(Number(product.score)) ? Number(product.score) : null
   };
 
   const override = amazonOverride || manufacturerOverride;
   return {
     ...product,
-    affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
+    affiliateDestinationUnverified: unverifiedAffiliateDestinations.has(product.slug),
     score: product.score != null && Number.isFinite(Number(product.score)) ? Number(product.score) : null,
     amazonAsin: amazonOverride?.asin || product.amazonAsin,
     amazonImage: amazonOverride?.image || product.amazonImage,
