@@ -630,9 +630,9 @@ const supplementalProducts = [
     bestFor: 'Convenient patio lighting control', why: 'Solar outdoor string lights with remote control, automatic dusk activation, and warm 3000K LED bulbs.', watch: 'The remote adds convenience but solar placement still determines charging performance.', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
-    slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: '$129.99', icon: '◇',
+    slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: 'Check price', icon: '◇',
     image: 'https://i5.walmartimages.com/asr/3142a8d5-4b47-4d39-93fc-2fd76f666b43.450c1f32b83f53ea7550ae7caf751756.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768', imageAlt: 'Keter Signature 50-Gallon Deck Box Walnut Brown',
-    bestFor: 'Cushions, pool gear, and gardening tools', why: 'Weather-resistant resin storage box with 50-gallon capacity, ventilation, carrying handles, and lockable lid.', watch: 'The 50-gallon size is best for medium-volume patio storage.', url: 'https://www.amazon.com/dp/B0DLH28V1D?tag=buybetterfi06-20'
+    bestFor: 'Cushions, pool gear, and gardening tools', why: 'Weather-resistant resin storage box with 50-gallon capacity, ventilation, carrying handles, and lockable lid.', watch: 'The 50-gallon size is best for medium-volume patio storage.', amazonAsin: 'B0FTNXD8PZ', amazonUrl: 'https://www.amazon.com/dp/B0FTNXD8PZ?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0FTNXD8PZ?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-circa-37-gallon', name: 'Keter Circa 37-Gallon Deck Box', category: 'Outdoor', price: '$99.99', icon: '◇',
@@ -1033,7 +1033,6 @@ const unverifiedAffiliateDestinations = new Set([
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
 
   'ooni-koda-2-max',
-  'keter-signature-50-gallon-walnut',
   'ooni-koda-2',
   'keter-cortina-30-gallon',
   'keter-cortina-30-gallon-storage',
