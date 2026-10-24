@@ -269,10 +269,10 @@ const productsCatalog = [
   },
 
   {
-    slug: 'lego-bonsai-tree-10281', name: 'LEGO Bonsai Tree Building Kit', category: 'Toys & Games', price: '$17.04', icon: '★',
+    slug: 'lego-bonsai-tree-10281', name: 'LEGO Bonsai Tree Building Kit (10281)', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://images.squarespace-cdn.com/content/v1/5f06d2b4df9fa94888ac8286/1609348324314-MDYY5RZHERMVBR82P03G/Bonsai%2BLEGO.jpg', imageAlt: 'LEGO Bonsai Tree 10281',
-    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B010TQY7A8?tag=buybetterfi06-20'
+    bestFor: 'Adult LEGO fans, plant lovers, and relaxing display builds', why: 'A detailed LEGO botanical building set that creates a bonsai-style tree for display, with interchangeable foliage options for a personalized look.',
+    watch: 'Check the current listing for piece count, included foliage, dimensions, and availability before buying.', amazonAsin: 'B08HVXZW8X', amazonUrl: 'https://www.amazon.com/dp/B08HVXZW8X?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08HVXZW8X?tag=buybetterfi06-20'
   },
 
   {
@@ -1033,9 +1033,7 @@ const supplementalProducts = [
 ];
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
-const unverifiedToyDestinations = new Set([
-  'lego-bonsai-tree-10281'
-]);
+const unverifiedToyDestinations = new Set([]);
 
 export const products = [...productsCatalog, ...supplementalProducts]
   .filter((product) => product?.slug && product?.name && product?.category && (product?.image || product?.category === 'Automotive & Car Accessories'))
