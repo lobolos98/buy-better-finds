@@ -117,7 +117,7 @@ const productsCatalog = [
   {
     slug: 'lego-city-lava-rollercoaster', name: 'LEGO City Lava Land Roller Coaster Park', category: 'Toys & Games', price: 'Check price', icon: '▰',
     image: 'https://www.lego.com/cdn/cs/set/assets/blt5ade0bb8e69bd6af/bltbb861aad3aa34ad7-60501_Prod_en-gb.png?dpr=1&fit=bounds&format=jpg&height=1500&quality=80&width=1500', imageAlt: 'LEGO City Lava Land Roller Coaster Park building set',
-    bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.amazon.com/dp/B0HJB76H2V?tag=buybetterfi06-20', dailyDealDate: '2026-10-08'
+    bestFor: 'Creative builders and imaginative play', why: 'A large LEGO City build combining construction, play value, and an amusement-park theme.', watch: 'Larger LEGO sets need meaningful storage and build space.', url: 'https://www.amazon.com/dp/B0G2T1VN17?tag=buybetterfi06-20', dailyDealDate: '2026-10-08'
   },
   {
     slug: 'crunchlabs-crunchinator', name: 'CrunchLabs The Crunchinator', category: 'Toys & Games', price: '$34.99', icon: '⚙',
@@ -1034,7 +1034,6 @@ const supplementalProducts = [
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
 const unverifiedToyDestinations = new Set([
-  'lego-city-lava-rollercoaster',
   'tonies-toniebox-starter-set',
   'crayola-globbles-6-count',
   'pokemon-day-2026-collection',
