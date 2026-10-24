@@ -1044,14 +1044,14 @@ export const products = [...productsCatalog, ...supplementalProducts]
   if (!amazonOverride && !manufacturerOverride) return {
     ...product,
     affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
-    score: Number.isFinite(Number(product.score)) ? Number(product.score) : null
+    score: product.score != null && Number.isFinite(Number(product.score)) ? Number(product.score) : null
   };
 
   const override = amazonOverride || manufacturerOverride;
   return {
     ...product,
     affiliateDestinationUnverified: unverifiedToyDestinations.has(product.slug),
-    score: Number.isFinite(Number(product.score)) ? Number(product.score) : 8.5,
+    score: product.score != null && Number.isFinite(Number(product.score)) ? Number(product.score) : null,
     amazonAsin: amazonOverride?.asin || product.amazonAsin,
     amazonImage: amazonOverride?.image || product.amazonImage,
     manufacturerImage: manufacturerOverride?.image || product.manufacturerImage,
