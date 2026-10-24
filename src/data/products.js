@@ -220,10 +220,10 @@ const productsCatalog = [
   },
 
   {
-    slug: 'crayola-globbles-6-count', name: 'Crayola Globbles (6-Count)', category: 'Toys & Games', price: '$8.95', icon: '★',
+    slug: 'crayola-globbles-6-count', name: 'Crayola Globbles (6-Count)', category: 'Toys & Games', price: 'Check price', icon: '★',
     image: 'https://www.crayola.com/images/default-source/product-images/toys/74-7294-0-300_globbles_6ct_f1.jpg?sfvrsn=d9f59144_7', imageAlt: 'Crayola Globbles 6-Count',
-    bestFor: 'Toys, play, learning, and family fun', why: 'A real, recognizable toy or game selected for play value and gifting appeal.',
-    watch: 'Check the current age guidance, edition, and availability before buying.', url: 'https://www.amazon.com/dp/B0084JUNXS?tag=buybetterfi06-20'
+    bestFor: 'Washable sensory fidget play and small gifts for ages 4+', why: 'Six colorful sticky, squishy fidget balls for tactile play. They can be washed with soap and water to restore their stickiness without leaving sticky residue.',
+    watch: 'Recommended for ages 4+. Keep away from extreme temperatures and check the manufacturer safety guidance before use.', url: 'https://www.amazon.com/dp/B07HDX46HS?tag=buybetterfi06-20'
   },
 
   {
@@ -1034,7 +1034,6 @@ const supplementalProducts = [
 // Amazon destinations flagged during the Toys & Games affiliate audit.
 // Preserve original URLs for manual correction; never send shoppers to a known conflicting listing.
 const unverifiedToyDestinations = new Set([
-  'crayola-globbles-6-count',
   'pokemon-day-2026-collection',
   'buzz-lightyear-interactive-talking',
   'lego-bonsai-tree-10281'
