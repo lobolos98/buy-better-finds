@@ -421,7 +421,7 @@ const supplementalProducts = [
   },
   {
     slug: 'stitch-sticker-stamper', name: 'Melissa & Doug Sticker WOW! Disney Stitch Stamper & Activity Pad', category: 'Toys & Games', price: 'Check price', icon: '★', image: 'https://www.melissaanddoug.com/cdn/shop/files/13393_166870794_750x.progressive.jpg?v=1785436175', imageAlt: 'Melissa and Doug Sticker WOW Disney Stitch sticker stamper and activity pad',
-    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/dp/B0B83HZVCF?tag=buybetterfi06-20',
+    bestFor: 'Screen-free creative play and Disney-themed gifts', why: 'A reusable sticker-stamping activity built around Disney Stitch for creative, portable play.', watch: 'Check the current activity-pad and sticker-roll contents before buying.', url: 'https://www.amazon.com/dp/B0G4XNTNHT?tag=buybetterfi06-20',
     dailyDealDate: '2026-10-28'
   },
   {
@@ -1037,7 +1037,7 @@ const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
   'leapfrog-learning-friends-100-words',
-  'stitch-sticker-stamper',
+
   'alpine-solar-pathway-stakes-4',
   'dazuma-solar-path-lighting',
   'oxo-5qt-mixing-bowl',
