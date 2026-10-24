@@ -615,9 +615,9 @@ const supplementalProducts = [
     bestFor: 'Solar-powered patio and pergola ambiance', why: 'Weather-resistant Edison-style solar string lights with automatic dusk activation and a warm 2700K glow.', watch: 'Solar performance depends on placing the panel where it receives adequate direct sunlight.', amazonAsin: 'B075NS8YXG', amazonUrl: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B075NS8YXG?tag=buybetterfi06-20'
   },
   {
-    slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: '$59.49', icon: '◇',
+    slug: 'keter-cortina-30-gallon', name: 'Keter Cortina 30-Gallon Resin Deck Box — Graphite', category: 'Outdoor', price: 'Check price', icon: '◇',
     image: 'https://i5.walmartimages.com/seo/Keter-Cortina-30-Gallon-Resin-Deck-Box-for-Patio-Furniture-Pool-Accessories-and-Storage-for-Outdoor-Toys-Grey-Black_0b628539-23dc-458b-8f6f-7340e8caec84.5a6d7d2a67f3243bd467fb876d490ee8.jpeg?odnBg=FFFFFF&odnHeight=573&odnWidth=573', imageAlt: 'Keter Cortina 30-Gallon Deck Box in graphite',
-    bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
+    bestFor: 'Storing cushions, gardening tools, and outdoor accessories', why: 'Weather-resistant resin deck box with 30-gallon capacity, ventilation, carrying handles, and a lockable design.', watch: 'The 30-gallon capacity is intended for smaller outdoor storage needs.', amazonAsin: 'B0DT4R1DG8', amazonUrl: 'https://www.amazon.com/dp/B0DT4R1DG8?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0DT4R1DG8?tag=buybetterfi06-20'
   },
   {
     slug: 'brightech-ambience-pro-solar-hanging', name: 'Brightech Ambience Pro Solar Hanging String Lights', category: 'Outdoor', price: '$59.00', icon: '☼',
@@ -1011,11 +1011,6 @@ const supplementalProducts = [
     bestFor: 'Reducing bathroom drain buildup and cleanup', why: 'Simple bathroom accessory that keeps hair and debris from becoming a recurring drain-maintenance problem.', watch: 'Fit depends on the drain configuration in your tub or shower.', amazonAsin: 'B01M0XQY1D', amazonUrl: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B01M0XQY1D?tag=buybetterfi06-20'
   },
   {
-    slug: 'keter-cortina-30-gallon-storage', name: 'Keter Cortina 30-Gallon Deck Box', category: 'Outdoor', price: 'Check price', icon: '◇',
-    image: 'https://m.media-amazon.com/images/I/61U+lAJfoHL._AC_SL1500_.jpg', imageAlt: 'Keter Cortina 30-Gallon Deck Box',
-    bestFor: 'Compact household and patio storage', why: 'Weather-resistant deck box format for keeping outdoor accessories, cushions, and small gear contained.', watch: 'It is most useful where outdoor or garage-style storage is appropriate; measure the footprint first.', amazonAsin: 'B0F44216HP', amazonUrl: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0F44216HP?tag=buybetterfi06-20'
-  },
-  {
     slug: 'stanley-iceflow-20oz', name: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz', category: 'Lifestyle', price: 'Check price', icon: '◈',
     image: 'https://00846a.cdn.akinoncloud.com/products/2026/02/04/390165/3a3aefe7-168c-40c9-bd8d-e7e0fa48a716.jpg', imageAlt: 'STANLEY IceFlow Flip Straw Tumbler 20-Oz',
     bestFor: 'Portable hydration with a handled straw lid', why: 'Compact insulated tumbler format designed for easy carrying and sipping on the go.', watch: 'The 20-ounce capacity is smaller than many oversized tumbler options.', amazonAsin: 'B08VPTBYM5', amazonUrl: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B08VPTBYM5?tag=buybetterfi06-20'
@@ -1031,8 +1026,6 @@ const supplementalProducts = [
 const unverifiedAffiliateDestinations = new Set([
   // Conflicting Amazon destinations found during the cross-category audit.
   // Keep the editorial pages live, but suppress shopping links until each listing is verified.
-  'keter-cortina-30-gallon',
-  'keter-cortina-30-gallon-storage',
   'brightech-ambience-pro-solar-remote'
 ]);
 
