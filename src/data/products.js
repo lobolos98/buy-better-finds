@@ -627,7 +627,7 @@ const supplementalProducts = [
   {
     slug: 'brightech-ambience-pro-solar-remote', name: 'Brightech Ambience Pro 48-Foot Solar Outdoor String Lights', category: 'Outdoor', price: 'Check price', icon: '☼',
     image: 'https://brightech.com/cdn/shop/files/Untitled_design_65.png?v=1751923255&width=1500', imageAlt: 'Brightech Ambience Pro 48-foot solar outdoor string lights',
-    bestFor: 'Patios, pergolas, and outdoor bistro-style lighting', why: '48-foot solar-powered outdoor string lights with 15 shatterproof, soft-white Edison-style LED bulbs.', watch: 'Place the solar panel where it receives adequate sunlight; check mounting space for the 48-foot strand.', amazonAsin: 'B07XG6Z4VG', amazonUrl: 'https://www.amazon.com/dp/B07XG6Z4VG?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07XG6Z4VG?tag=buybetterfi06-20'
+    bestFor: 'Patios, pergolas, and outdoor bistro-style lighting', why: '48-foot solar-powered outdoor string lights with 15 shatterproof, soft-white Edison-style LED bulbs.', watch: 'Place the solar panel where it receives adequate sunlight; check mounting space for the 48-foot strand.', amazonAsin: 'B07XC79V8W', amazonUrl: 'https://www.amazon.com/dp/B07XC79V8W?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B07XC79V8W?tag=buybetterfi06-20'
   },
   {
     slug: 'keter-signature-50-gallon-walnut', name: 'Keter Signature 50-Gallon Deck Box — Walnut Brown', category: 'Outdoor', price: 'Check price', icon: '◇',
