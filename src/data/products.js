@@ -9,6 +9,7 @@ import { autoDiscoveredProducts } from './auto-products.js';
 import { pinterestProducts } from './pinterest-products.js';
 import { petProducts } from './pet-products.js';
 import { automotiveProducts } from './automotive-products.js';
+import { piscifunProducts } from './piscifun-products.js';
 
 const productsCatalog = [
   {
@@ -36,6 +37,7 @@ const productsCatalog = [
     amazonAsin: 'B0BZR6YBHK', amazonUrl: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20'
   },
   ...automotiveProducts,
+  ...piscifunProducts,
   ...diyProducts,
   ...fitnessProducts,
   ...lifestyleProducts,
