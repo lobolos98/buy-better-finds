@@ -6,6 +6,12 @@ const image = 'https://www.piscifun.com/cdn/shop/files/Frame6.jpg?v=1790064177&w
 const affiliate = 'https://www.awin1.com/cread.php?awinmid=89509&awinaffid=3119041&ued=https%3A%2F%2Fwww.piscifun.com%2Fproducts%2Ftorrent-lite-twin-tip-spinning-rod-and-reel-combo';
 const spinning = 'https://www.piscifun.com/products/torrent-lite-twin-tip-spinning-rod-and-reel-combo';
 const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-baitcasting-rod-and-reel-combo';
+const affiliateUrl = (url) => `https://www.awin1.com/cread.php?awinmid=89509&awinaffid=3119041&ued=${encodeURIComponent(url)}`;
+const carbonPrism = 'https://www.piscifun.com/products/carbon-prism-spinning-reels-ultralight-seafoam-violet';
+const alinox300 = 'https://www.piscifun.com/products/piscifun-alinox-size-300-low-profile-baitcasting-reel-aluminum-frame-casting-reels';
+const carbonR1 = 'https://www.piscifun.com/products/carbon-r1-spinning-rod';
+const toolKit = 'https://www.piscifun.com/products/piscifun-6pcs-fishing-tool-kit';
+const lineSpooler = 'https://www.piscifun.com/products/fishing-line-spooler-kit';
 ---
 <BaseLayout title={title} description={description} image={image}>
 <article class="torrent-wrap">
@@ -30,13 +36,48 @@ const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-bai
     <div><strong>1 year</strong><span>Limited warranty listed by Piscifun</span></div>
   </div>
 
+  <nav class="torrent-jump-nav" aria-label="Jump to article section">
+    <strong>Explore this guide</strong>
+    <a href="#reels">Fishing Reels</a>
+    <a href="#rods">Fishing Rods</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#combos">Rod-and-Reel Combos</a>
+  </nav>
+
   <p class="torrent-note"><strong>Price note:</strong> The prices shown here are the prices listed on Piscifun’s official product pages when researched. Promotions, options, shipping and stock can change; confirm the current total and selected configuration before ordering.</p>
 
   <h2>What is the Torrent Lite?</h2>
   <p>The Torrent Lite is a family of rod-and-reel combos offered in spinning and baitcasting versions. Instead of buying a rod and reel separately and matching them yourself, a combo gives you a coordinated starting point. The series uses an IM6 graphite rod blank, a two-piece construction and a teal-and-black finish. Piscifun also includes a spare rod tip, a practical extra if the original tip is damaged during transport or storage.</p>
   <p>That combination makes the Torrent Lite worth investigating for anglers who want a setup that is easier to transport than a one-piece rod and prefer to keep the initial gear decision straightforward. It does not, by itself, establish how the combo performs on the water; real-world balance, durability and casting feel still depend on the angler, line, lure and conditions.</p>
 
-  <h2>Spinning vs. baitcasting: which version fits you?</h2>
+  <section id="reels" class="torrent-category-section">
+    <p class="torrent-kicker">BUY COMPONENTS SEPARATELY</p>
+    <h2>Fishing Reels: Spinning vs. Baitcasting</h2>
+    <p>If you already own a rod—or want more control over the exact setup—a standalone reel may make more sense than a combo. Match the reel to the rod, target species, line capacity and fishing environment rather than choosing by bearing count alone.</p>
+    <div class="torrent-alternative-grid">
+      <article class="torrent-alternative">
+        <a class="torrent-alt-photo" href={carbonPrism} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/carbonprismViolet.jpg?v=1684151584&width=700" alt="Piscifun Carbon Prism purple spinning fishing reel" loading="lazy" /></a>
+        <p class="torrent-label">SPINNING REEL</p>
+        <h3>Piscifun Carbon Prism 2000</h3>
+        <p class="torrent-price">Listed at $76.99 when researched</p>
+        <p>Worth comparing for a lightweight freshwater spinning setup. Piscifun lists a 6.2:1 gear ratio, 10+1 bearings and 22 lb maximum drag for the 2000 model. Check the current price and size availability before ordering.</p>
+        <a class="torrent-cta" href={affiliateUrl(carbonPrism)} target="_blank" rel="sponsored noopener noreferrer">Check Carbon Prism ↗</a>
+        <p><a class="torrent-text-link" href={carbonPrism} target="_blank" rel="noopener noreferrer">View official specifications</a></p>
+      </article>
+      <article class="torrent-alternative">
+        <a class="torrent-alt-photo" href={alinox300} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/8_44d8ad8c-f4f0-4bec-9a85-5bf6199910e2.jpg?v=1777346660&width=700" alt="Piscifun AlinoX 300 low-profile baitcasting reel" loading="lazy" /></a>
+        <p class="torrent-label">BAITCASTING REEL</p>
+        <h3>Piscifun AlinoX 300</h3>
+        <p class="torrent-price">Listed at $109.99 when researched</p>
+        <p>A low-profile baitcaster with multiple gear-ratio and handle configurations. Piscifun lists an aluminum frame, magnetic braking and up to 33 lb maximum drag. Its larger drag figure alone does not mean it is the best choice for every rod or fishing style.</p>
+        <a class="torrent-cta" href={affiliateUrl(alinox300)} target="_blank" rel="sponsored noopener noreferrer">Check AlinoX 300 ↗</a>
+        <p><a class="torrent-text-link" href={alinox300} target="_blank" rel="noopener noreferrer">View official specifications</a></p>
+      </article>
+    </div>
+    <p class="torrent-disclaimer">Reel prices and specifications are based on the manufacturer pages checked for this guide and may change. Confirm the exact model, retrieve-hand orientation, line capacity and drag specifications on the live listing.</p>
+  </section>
+
+  <h2 id="combos">Rod-and-Reel Combos: Spinning vs. Baitcasting</h2>
   <div class="torrent-product-grid">
     <section class="torrent-product">
       <a href={spinning} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/Frame6.jpg?v=1790064177&width=900" alt="Piscifun Torrent Lite spinning rod and reel combo" loading="lazy" /></a>
@@ -115,7 +156,7 @@ const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-bai
     <p class="torrent-disclaimer">Comparison method: manufacturer-published specifications and listed prices, not a hands-on head-to-head test. Max drag, bearing count and gear ratio do not independently prove which combo casts better or lasts longer. Check the selected configuration, line/lure ratings, return terms and live price on each product page.</p>
   </section>
 
-  <h2>Understanding the rod options</h2>
+  <section id="rods" class="torrent-category-section">\n  <p class="torrent-kicker">BUILD THE RIGHT MATCH</p>\n  <h2>Fishing Rods: Length, Power and Action</h2>
   <p>Rod length and power influence how a setup feels and which presentations it can handle. Piscifun lists multiple configurations, so there is no single version that is best for every buyer.</p>
   <div class="torrent-table-scroll">
     <table class="torrent-table">
@@ -129,6 +170,38 @@ const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-bai
     </table>
   </div>
   <p>This is a general selection guide, not a substitute for the manufacturer’s exact lure-weight and line-rating chart. Those specifications should guide your final choice, particularly if you already own line, lures or other tackle.</p>
+  <div class="torrent-rod-feature">
+    <a class="torrent-alt-photo" href={carbonR1} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/RD012-_02.png?v=1775010066&width=800" alt="Piscifun Carbon R1 graphite fishing rod sections" loading="lazy" /></a>
+    <div><p class="torrent-label">STANDALONE ROD TO COMPARE</p><h3>Piscifun Carbon R1</h3><p>A separate rod option for shoppers who want to choose their reel independently. The Carbon R1 line has spinning and casting versions, so make sure the selected rod type matches your reel. This is a different price tier from the Torrent Lite combo, not a like-for-like budget alternative.</p><a class="torrent-cta" href={affiliateUrl(carbonR1)} target="_blank" rel="sponsored noopener noreferrer">Check Carbon R1 Rod ↗</a><p><a class="torrent-text-link" href={carbonR1} target="_blank" rel="noopener noreferrer">View official rod details</a></p></div>
+  </div>
+  </section>
+
+  <section id="accessories" class="torrent-category-section">
+    <p class="torrent-kicker">THE USEFUL EXTRAS</p>
+    <h2>Fishing Accessories Worth Considering</h2>
+    <p>Accessories should solve a real problem—like changing line neatly or handling tools safely—rather than adding clutter to the tackle bag. These are examples from Piscifun’s accessory range that complement a rod-and-reel setup.</p>
+    <div class="torrent-alternative-grid">
+      <article class="torrent-alternative">
+        <a class="torrent-alt-photo" href={lineSpooler} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/1-_B_8139eb7f-33f3-4326-8cd7-6469a639403d.jpg?v=1750987744&width=700" alt="Piscifun fishing line spooler kit mounted on a rod with scissors" loading="lazy" /></a>
+        <p class="torrent-label">FOR RE-SPOOLING LINE</p>
+        <h3>Piscifun Fishing Line Spooler Kit</h3>
+        <p class="torrent-price">Listed at $24.99 when researched</p>
+        <p>A line-spooling tool designed for rod-mounted or tabletop use. It may be useful if you frequently change line or want more controlled tension while spooling. Check compatibility with your line spool and reel before buying.</p>
+        <a class="torrent-cta" href={affiliateUrl(lineSpooler)} target="_blank" rel="sponsored noopener noreferrer">Check Line Spooler ↗</a>
+        <p><a class="torrent-text-link" href={lineSpooler} target="_blank" rel="noopener noreferrer">View official product details</a></p>
+      </article>
+      <article class="torrent-alternative">
+        <a class="torrent-alt-photo" href={toolKit} target="_blank" rel="noopener noreferrer"><img src="https://www.piscifun.com/cdn/shop/files/1TL031.jpg?v=1755855652&width=700" alt="Piscifun fishing tool kit with pliers, scissors, fish gripper and other tools" loading="lazy" /></a>
+        <p class="torrent-label">FOR EVERYDAY TACKLE TASKS</p>
+        <h3>Piscifun 6-Piece Fishing Tool Kit</h3>
+        <p class="torrent-price">Listed at $59.99 when researched</p>
+        <p>The kit combines pliers, braid scissors, a line spooler, fish gripper, fillet knife and lanyard. It is a broader bundle, so compare the included tools with what you already own; some anglers may only need a pair of pliers and line cutters.</p>
+        <a class="torrent-cta" href={affiliateUrl(toolKit)} target="_blank" rel="sponsored noopener noreferrer">Check Tool Kit ↗</a>
+        <p><a class="torrent-text-link" href={toolKit} target="_blank" rel="noopener noreferrer">View official product details</a></p>
+      </article>
+    </div>
+    <p class="torrent-disclaimer">Accessories are optional. Prioritize safe, corrosion-resistant tools suited to your environment, and confirm current price and availability directly on each listing.</p>
+  </section>
 
   <h2>What stands out on paper?</h2>
   <div class="torrent-feature-grid">
@@ -180,6 +253,13 @@ const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-bai
 .torrent-highlights strong,.torrent-highlights span{display:block}
 .torrent-highlights strong{font-size:1.2rem;color:#142b45}
 .torrent-highlights span{font-size:.84rem;line-height:1.4}
+.torrent-jump-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px;margin:24px 0;border:1px solid #e1e5e8;border-radius:14px;background:#fff}
+.torrent-jump-nav strong{color:#142b45;margin-right:6px}
+.torrent-jump-nav a{display:inline-block;color:#9e2637;border:1px solid #e1e5e8;border-radius:999px;padding:7px 12px;text-decoration:none;font-size:.9rem;font-weight:700}
+.torrent-jump-nav a:hover{background:#f5f7f8}
+.torrent-category-section{margin:44px 0;padding:28px 0;border-top:1px solid #e1e5e8;scroll-margin-top:24px}
+.torrent-rod-feature{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr;gap:24px;align-items:center;margin:22px 0;padding:20px;border:1px solid #e1e5e8;border-radius:16px}
+.torrent-rod-feature .torrent-alt-photo img{display:block;width:100%;height:260px;object-fit:contain}
 .torrent-note{background:#f7f7f7;border-left:4px solid #a82a3b;padding:14px 18px}
 .torrent-wrap h2{font-size:clamp(1.8rem,3.2vw,2.35rem);margin:38px 0 12px}
 .torrent-wrap h3{font-size:1.4rem;margin:8px 0}
@@ -207,7 +287,7 @@ const baitcasting = 'https://www.piscifun.com/products/torrent-lite-twin-tip-bai
 .torrent-final-cta p{margin:4px 0}
 .torrent-source a{color:#9e2637;font-weight:700}
 .torrent-disclosure{border-top:1px solid #e1e5e8;padding-top:18px;margin-top:28px}
-@media(max-width:760px){.torrent-hero{grid-template-columns:1fr;padding:20px}.torrent-hero-image img{height:270px}.torrent-highlights{grid-template-columns:repeat(2,1fr)}.torrent-product-grid,.torrent-feature-grid,.torrent-verdict-grid{grid-template-columns:1fr}.torrent-final-cta{display:block}.torrent-wrap{padding:30px 16px 60px}}
+@media(max-width:760px){.torrent-hero{grid-template-columns:1fr;padding:20px}.torrent-hero-image img{height:270px}.torrent-highlights{grid-template-columns:repeat(2,1fr)}.torrent-product-grid,.torrent-feature-grid,.torrent-verdict-grid,.torrent-rod-feature{grid-template-columns:1fr}.torrent-final-cta{display:block}.torrent-wrap{padding:30px 16px 60px}}
 </style>
 
 <style>
