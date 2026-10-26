@@ -4,6 +4,7 @@ export default defineConfig({
   site: 'https://buybetterfinds.com',
   trailingSlash: 'always',
   redirects: {
+    '/search/': '/categories/',
     '/categories/home/': '/categories/home-kitchen/',
     '/categories/kitchen/': '/categories/home-kitchen/',
     '/comparisons/sony-wh-1000xm5-noise-canceling-headphones/': '/comparisons/sony-wh-1000xm5-vs-airpods-4/',
