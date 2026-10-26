@@ -51,22 +51,32 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
   <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div><h1>Buy Better Finds: Products worth buying.</h1><p>Better research. Clearer tradeoffs. Smarter choices. We narrow down real products and explain what makes each one worth considering before you spend your money.</p><div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div><div class="hero-note"><span>✓</span> Real products · Original buying guidance · Clear strengths and tradeoffs</div></div><div class="hero-product"><div class="pick-badge">BUY BETTER FINDS PICK</div><div class="hero-visual hero-image-wrap"><img src={featured.image} alt={featured.imageAlt} width="1000" height="750" /><div class="hero-image-fallback" aria-hidden="true"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div></div><div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div><div class="hero-actions"><a class="hero-shop" href={`/products/${featured.slug}/`}>See why we recommend it <span>→</span></a><a class="amazon-btn" href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">{featured.affiliateLabel || "Check on Amazon"} →</a></div></div></div></section>
 
 
-  <section class="piscifun-home-banner" aria-label="Piscifun fishing gear advertisement">
-    <div class="container piscifun-banner-inner">
-      <span class="piscifun-banner-heading">FEATURED FISHING GEAR · SPONSORED</span>
-      <a href="https://www.awin1.com/cread.php?s=4936689&v=89509&q=522775&r=3119041" target="_blank" rel="sponsored nofollow noopener" aria-label="Shop Piscifun fishing gear">
-        <img src="https://www.awin1.com/cshow.php?s=4936689&v=89509&q=522775&r=3119041" alt="Piscifun fishing gear promotional banner" loading="lazy" decoding="async" />
-      </a>
-      <span class="piscifun-banner-disclosure">Affiliate advertisement · We may earn a commission from qualifying purchases.</span>
+  <section class="affiliate-home-banners" aria-label="Featured partner advertisements">
+    <div class="container affiliate-banner-grid">
+      <div class="affiliate-banner-card">
+        <span class="affiliate-banner-heading">PISCIFUN · SPONSORED</span>
+        <a href="https://www.awin1.com/cread.php?s=4936689&v=89509&q=522775&r=3119041" target="_blank" rel="sponsored nofollow noopener" aria-label="Shop Piscifun fishing gear">
+          <img src="https://www.awin1.com/cshow.php?s=4936689&v=89509&q=522775&r=3119041" alt="Piscifun fishing gear promotional banner" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <div class="affiliate-banner-card">
+        <span class="affiliate-banner-heading">GRUNDIG AUTO · SPONSORED</span>
+        <a href="https://www.awin1.com/cread.php?s=4954913&v=130595&q=615269&r=3119041" target="_blank" rel="sponsored nofollow noopener" aria-label="Shop Grundig Auto products">
+          <img src="https://www.awin1.com/cshow.php?s=4954913&v=130595&q=615269&r=3119041" alt="Grundig Auto promotional banner" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <p class="affiliate-banner-disclosure">Affiliate advertisements · We may earn a commission from qualifying purchases.</p>
     </div>
   </section>
   <style>
-    .piscifun-home-banner{padding:22px 0;background:#f5f8fa}
-    .piscifun-banner-inner{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
-    .piscifun-banner-heading{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#18344c}
-    .piscifun-banner-inner a{display:block;max-width:100%}
-    .piscifun-banner-inner img{display:block;max-width:100%;height:auto;margin:auto}
-    .piscifun-banner-disclosure{font-size:.72rem;color:#5b6670}
+    .affiliate-home-banners{padding:22px 0;background:#f5f8fa}
+    .affiliate-banner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px;align-items:stretch}
+    .affiliate-banner-card{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:#fff;border:1px solid #e0e6ea;border-radius:12px;text-align:center}
+    .affiliate-banner-heading{font-size:.72rem;font-weight:800;letter-spacing:.09em;color:#18344c}
+    .affiliate-banner-card a{display:flex;width:100%;min-height:80px;align-items:center;justify-content:center}
+    .affiliate-banner-card img{display:block;max-width:100%;height:auto;object-fit:contain}
+    .affiliate-banner-disclosure{grid-column:1/-1;margin:0;text-align:center;font-size:.72rem;color:#5b6670}
+    @media(max-width:700px){.affiliate-banner-grid{grid-template-columns:1fr}.affiliate-banner-card{padding:14px}}
   </style>
 
   <section class="grundig-home-promo" aria-label="Grundig Auto Black Friday Early Access">
