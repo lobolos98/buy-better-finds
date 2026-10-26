@@ -50,6 +50,17 @@ const socialImage = image
     <meta name="twitter:description" content={description} />
     {socialImage && <meta name="twitter:image" content={socialImage} />}
     <title>{pageTitle}</title>
+    <script is:inline>
+      (() => {
+        const url = new URL(window.location.href);
+        if (url.searchParams.get('utm_source')?.toLowerCase() === 'chatgpt.com') {
+          url.searchParams.delete('utm_source');
+          const query = url.searchParams.toString();
+          const cleanUrl = url.pathname + (query ? '?' + query : '') + url.hash;
+          window.history.replaceState(window.history.state, '', cleanUrl);
+        }
+      })();
+    </script>
     <script type="application/ld+json" set:html={JSON.stringify(isHome ? homeStructuredData : { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description, url: canonical.toString(), isPartOf: { '@id': 'https://buybetterfinds.com/#website' }, publisher: { '@id': 'https://buybetterfinds.com/#organization' } })} />
   </head>
   <body>
