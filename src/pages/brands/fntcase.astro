@@ -45,7 +45,7 @@ const products = [
       <div class="section-heading"><p class="eyebrow">A FEW OPTIONS TO COMPARE</p><h2>Featured FNTCASE listings</h2><p>These examples make it easier to compare common styles. Availability, pricing and supported variants can change.</p></div>
       <div class="product-grid">
         {products.map((product) => <article class="product-card">
-          <a class="product-image" href={affiliate(product.url)} target="_blank" rel="sponsored noopener noreferrer"><img src={product.image} alt={product.name} loading="lazy" /></a>
+          <a class="product-image" href={affiliate(product.url)} target="_blank" rel="sponsored noopener noreferrer"><img src={product.image} alt={product.name} loading="eager" decoding="async" /></a>
           <div class="product-copy">
             <p class="product-type">{product.type}</p>
             <h3>{product.name}</h3>
