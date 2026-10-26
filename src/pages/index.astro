@@ -50,6 +50,23 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
 <BaseLayout title="Buy Better Finds | Product Reviews, Comparisons & Buying Guides" description="Buy Better Finds helps you discover worthwhile products, compare features and tradeoffs, and shop smarter with practical buying guides and curated recommendations.">
   <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div><h1>Buy Better Finds: Products worth buying.</h1><p>Better research. Clearer tradeoffs. Smarter choices. We narrow down real products and explain what makes each one worth considering before you spend your money.</p><div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div><div class="hero-note"><span>✓</span> Real products · Original buying guidance · Clear strengths and tradeoffs</div></div><div class="hero-product"><div class="pick-badge">BUY BETTER FINDS PICK</div><div class="hero-visual hero-image-wrap"><img src={featured.image} alt={featured.imageAlt} width="1000" height="750" /><div class="hero-image-fallback" aria-hidden="true"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div></div><div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div><div class="hero-actions"><a class="hero-shop" href={`/products/${featured.slug}/`}>See why we recommend it <span>→</span></a><a class="amazon-btn" href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">{featured.affiliateLabel || "Check on Amazon"} →</a></div></div></div></section>
 
+
+  <section class="grundig-home-promo" aria-label="Grundig Auto Black Friday Early Access">
+    <div class="container grundig-home-promo-inner">
+      <div><span class="grundig-home-promo-label">BLACK FRIDAY EARLY ACCESS · SELECT ITEMS</span><h2>Grundig Auto: Up to 65% Off</h2><p>Explore early-access savings on eligible automotive gear. Compare the S04 and S08 tire pressure monitoring systems before you shop. Discounts vary by product and configuration.</p></div>
+      <a href="/blog/grundig-s04-vs-s08-tpms-comparison/" class="grundig-home-promo-link">Explore the Deals →</a>
+    </div>
+  </section>
+  <style>
+    .grundig-home-promo{padding:16px 0;background:#f7f8fb;border-block:1px solid #e4e8ee}
+    .grundig-home-promo-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .grundig-home-promo-label{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#c8102e}
+    .grundig-home-promo h2{margin:5px 0;font-size:clamp(1.15rem,2vw,1.5rem);color:#003087}
+    .grundig-home-promo p{margin:0;max-width:690px;font-size:.88rem;line-height:1.5;color:#39475b}
+    .grundig-home-promo-link{display:inline-block;background:#c8102e;color:#fff!important;border-radius:5px;padding:12px 16px;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
+    @media(max-width:600px){.grundig-home-promo-inner{align-items:flex-start}.grundig-home-promo-link{width:100%;text-align:center}}
+  </style>
+
   <section class="christmas-home-feature">
     <div class="container">
       <div class="christmas-home-inner">
