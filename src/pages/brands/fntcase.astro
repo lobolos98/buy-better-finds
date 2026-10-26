@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'FNTCASE Phone Case Hub: Shop by Style & Device | Buy Better Finds';
+const description = 'Explore FNTCASE phone cases by style, including rugged protection, magnetic cases, ring kickstands and belt-clip holsters. Compare options and check device compatibility before buying.';
+const heroImage = 'https://fntcase.com/cdn/shop/files/6391ace427ade714b70fb966024ae804_a20f420e-d5d3-4d2b-88a6-10419faf4e25.jpg?v=1772271361';
+const affiliate = (url) => 'https://www.awin1.com/cread.php?awinmid=45915&awinaffid=3119041&ued=' + encodeURIComponent(url);
+const collection = 'https://fntcase.com/collections/all-products';
+const guide = '/blog/fntcase-phone-cases-deep-dive/';
+const products = [
+  { name: 'Rugged magnetic case for iPhone 17 Pro', type: 'Rugged + magnetic', device: 'iPhone 17 Pro', url: 'https://fntcase.com/products/iphone-17-pro-magnetic-rugged-case-featuring-ring-kickstand-military-grade-protection', image: heroImage, detail: 'A feature-rich option to explore if you want a ring stand and a more protective case style.' },
+  { name: 'Galaxy S26 case with belt-clip holster', type: 'Holster + kickstand', device: 'Samsung Galaxy S26', url: 'https://fntcase.com/products/samsung-galaxy-s26-case-with-belt-clip-holster-and-kickstand-military-grade-protection-includes-2-front-frames-and-a-built-in-screen-protector', image: 'https://fntcase.com/cdn/shop/files/6391ace427ade714b70fb966024ae804_a20f420e-d5d3-4d2b-88a6-10419faf4e25.jpg?v=1772271361', detail: 'Worth a look for work or outdoor carry when a belt clip and hands-free viewing matter.' },
+  { name: 'Rugged holster case for Google Pixel', type: 'Rugged + holster', device: 'Pixel 10 Pro XL / 9 Pro XL (check exact variant)', url: 'https://fntcase.com/products/fntcase-for-google-pixel-10-pro-xl-9-pro-xl-case-with-ring-holder-magnetic-kickstand-military-grade-shockproof-protective-rugged-cell-phone-cover-with-belt-clip-holster', image: heroImage, detail: 'A bulkier style for shoppers who prefer a ring holder and belt-clip carry.' },
+  { name: 'Magnetic holster case for iPhone 16 Pro', type: 'Magnetic + holster', device: 'iPhone 16 Pro', url: 'https://fntcase.com/products/fntcase-for-iphone-16-pro-6-3-inch-magnetic-case-dual-layer-protective-phone-cover-with-belt-clip-holster-military-grade-dropproof-protection-durable-non-slip-textured-back', image: heroImage, detail: 'A previous-generation option; double-check the exact phone model and included accessories.' }
+];
+---
+<BaseLayout title={title} description={description} image={heroImage}>
+  <main class="fnt-hub">
+    <section class="hub-hero">
+      <div class="hub-hero-copy">
+        <p class="eyebrow">THE BUY BETTER FINDS BRAND HUB</p>
+        <p class="kicker">Phone protection, organized by how you use it</p>
+        <h1>Find the FNTCASE style that fits your everyday carry.</h1>
+        <p class="intro">From rugged cases with ring stands to magnetic designs and belt-clip holsters, this hub brings FNTCASE options together in one place. Start with your phone model, then compare the features and trade-offs that matter to you.</p>
+        <div class="hero-actions">
+          <a class="button primary" href={affiliate(collection)} target="_blank" rel="sponsored noopener noreferrer">Browse FNTCASE cases ↗</a>
+          <a class="button secondary" href={guide}>Read our comparison guide</a>
+        </div>
+        <p class="disclosure">Buy Better Finds may earn a commission from qualifying purchases through links on this page. This guide is based on manufacturer-published information; we have not independently tested these cases.</p>
+      </div>
+      <div class="hub-hero-image"><img src={heroImage} alt="FNTCASE rugged phone case with ring-style stand and holster" fetchpriority="high" /></div>
+    </section>
+
+    <section class="style-section">
+      <div class="section-heading"><p class="eyebrow">START WITH YOUR PRIORITY</p><h2>Shop by case style</h2><p>Think about how you carry your phone before choosing a design.</p></div>
+      <div class="style-grid">
+        <a class="style-card" href={affiliate(collection)} target="_blank" rel="sponsored noopener noreferrer"><span class="style-number">01</span><h3>Rugged protection</h3><p>Explore multi-layer styles and raised-edge designs. Check dimensions and the exact model listing.</p><span class="card-link">Explore rugged cases ↗</span></a>
+        <a class="style-card" href={affiliate(collection)} target="_blank" rel="sponsored noopener noreferrer"><span class="style-number">02</span><h3>Magnetic cases</h3><p>For compatible magnetic accessories, verify magnet placement and wireless-charging compatibility.</p><span class="card-link">Explore magnetic cases ↗</span></a>
+        <a class="style-card" href={affiliate(collection)} target="_blank" rel="sponsored noopener noreferrer"><span class="style-number">03</span><h3>Ring stands & kickstands</h3><p>Useful for grip support and hands-free viewing; consider added bulk and stand positioning.</p><span class="card-link">Explore stand styles ↗</span></a>
+        <a class="style-card" href={affiliate(collection)} target="_blank" rel="sponsored noopener noreferrer"><span class="style-number">04</span><h3>Belt-clip holsters</h3><p>Consider clip orientation, holster fit, and whether the complete setup suits your daily carry.</p><span class="card-link">Explore holster cases ↗</span></a>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="section-heading"><p class="eyebrow">A FEW OPTIONS TO COMPARE</p><h2>Featured FNTCASE listings</h2><p>These examples make it easier to compare common styles. Availability, pricing and supported variants can change.</p></div>
+      <div class="product-grid">
+        {products.map((product) => <article class="product-card">
+          <a class="product-image" href={affiliate(product.url)} target="_blank" rel="sponsored noopener noreferrer"><img src={product.image} alt={product.name} loading="lazy" /></a>
+          <div class="product-copy">
+            <p class="product-type">{product.type}</p>
+            <h3>{product.name}</h3>
+            <p class="device"><strong>Device:</strong> {product.device}</p>
+            <p>{product.detail}</p>
+            <a class="product-cta" href={affiliate(product.url)} target="_blank" rel="sponsored noopener noreferrer">Check product details ↗</a>
+          </div>
+        </article>)}
+      </div>
+      <p class="small-note">Images and product descriptions are provided for shopping orientation. Confirm that each image, product title, selected variant and phone model match before ordering.</p>
+    </section>
+
+    <section class="check-section">
+      <div><p class="eyebrow">BEFORE YOU BUY</p><h2>Use this quick compatibility checklist.</h2></div>
+      <ul>
+        <li><strong>Confirm the exact phone:</strong> model name, generation, size and camera layout.</li>
+        <li><strong>Review what's included:</strong> front frame, built-in screen protector, holster and other accessories may vary.</li>
+        <li><strong>Check everyday fit:</strong> pocket bulk, button access, charging and magnetic accessory needs.</li>
+        <li><strong>Read current terms:</strong> confirm price, shipping, returns and stock on the product page.</li>
+      </ul>
+    </section>
+
+    <section class="guide-cta">
+      <p class="eyebrow">NEED HELP CHOOSING?</p><h2>Compare the details before you decide.</h2>
+      <p>Our FNTCASE deep dive breaks down case styles, trade-offs and practical compatibility checks.</p>
+      <a class="button primary" href={guide}>Read the FNTCASE deep dive ↗</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+.fnt-hub{--navy:#10233f;--red:#c8102e;--ink:#1d2733;--muted:#596574;max-width:1200px;margin:0 auto;padding:24px 22px 64px;color:var(--ink)}
+.hub-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;background:#f0f3f6;border-top:6px solid var(--red);padding:clamp(24px,5vw,58px);overflow:hidden}
+.eyebrow{font-size:.7rem;font-weight:850;letter-spacing:.16em;color:var(--red);margin:0 0 14px}.kicker{font-size:.9rem;font-weight:750;color:var(--navy);margin:0 0 10px}.hub-hero h1{font:500 clamp(2.35rem,5vw,4.4rem)/.99 Georgia,'Times New Roman',serif;letter-spacing:-.045em;color:var(--navy);margin:0 0 20px}.intro{font-size:1.06rem;line-height:1.75;max-width:650px}.hub-hero-image{min-height:320px;display:grid;place-items:center;background:#fff}.hub-hero-image img{display:block;width:100%;height:390px;object-fit:contain;padding:20px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0 18px}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;padding:13px 18px;min-height:48px}.primary{background:var(--red);color:#fff}.secondary{border:1px solid var(--navy);color:var(--navy);background:transparent}.disclosure,.small-note{font-size:.78rem;line-height:1.6;color:#586474}.style-section,.featured-section{padding:54px 0 8px}.section-heading{max-width:720px;margin-bottom:24px}.section-heading h2,.check-section h2,.guide-cta h2{font:500 clamp(2rem,3.7vw,3rem)/1.05 Georgia,'Times New Roman',serif;color:var(--navy);letter-spacing:-.035em;margin:0 0 12px}.section-heading>p:last-child{line-height:1.65;color:var(--muted)}.style-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.style-card{display:flex;flex-direction:column;align-items:flex-start;min-height:235px;padding:22px;border:1px solid #d9e0e7;background:#fff;color:var(--ink);text-decoration:none;transition:transform .15s ease,border-color .15s ease}.style-card:hover{transform:translateY(-3px);border-color:var(--red)}.style-number{font-size:.7rem;font-weight:900;letter-spacing:.15em;color:var(--red)}.style-card h3{font:600 1.3rem/1.15 Georgia,serif;color:var(--navy);margin:22px 0 8px}.style-card p,.product-copy>p{font-size:.9rem;line-height:1.6;color:var(--muted)}.card-link{font-size:.83rem;font-weight:850;color:var(--red);margin-top:auto;padding-top:12px}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product-card{border:1px solid #dce2e8;background:#fff;display:flex;flex-direction:column;min-width:0}.product-image{display:grid;place-items:center;background:#f7f8fa;min-height:220px;padding:14px}.product-image img{width:100%;height:205px;object-fit:contain}.product-copy{padding:18px;display:flex;flex-direction:column;flex:1}.product-type{font-size:.68rem!important;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--red)!important;margin:0 0 8px}.product-copy h3{font:600 1.18rem/1.2 Georgia,serif;color:var(--navy);margin:0 0 10px}.product-copy p{margin:8px 0}.product-copy .device{font-size:.78rem}.product-cta{display:block;text-align:center;margin-top:auto;padding:12px 10px;background:var(--navy);color:#fff;text-decoration:none;font-weight:800;font-size:.83rem}.small-note{margin-top:16px}.check-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;margin:58px 0;background:var(--navy);color:#fff;padding:clamp(24px,4vw,44px)}.check-section h2{color:#fff}.check-section .eyebrow{color:#ffb9c5}.check-section ul{margin:0;padding-left:20px;line-height:1.75}.check-section li+li{margin-top:10px}.guide-cta{text-align:center;padding:42px 24px;background:#f0f3f6;border-bottom:5px solid var(--red)}.guide-cta .eyebrow{margin-bottom:12px}.guide-cta p:not(.eyebrow){max-width:650px;margin:0 auto 22px;line-height:1.7;color:var(--muted)}@media(max-width:850px){.hub-hero{grid-template-columns:1fr}.hub-hero-image img{height:300px}.style-grid,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.check-section{grid-template-columns:1fr}}@media(max-width:520px){.fnt-hub{padding:12px 12px 40px}.style-grid,.product-grid{grid-template-columns:1fr}.style-card{min-height:190px}.hub-hero-image{min-height:230px}.hub-hero-image img{height:250px}.product-image{min-height:200px}}
+</style>
