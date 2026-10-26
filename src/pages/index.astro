@@ -48,32 +48,24 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
 <BaseLayout title="Buy Better Finds | Product Reviews, Comparisons & Buying Guides" description="Buy Better Finds helps you discover worthwhile products, compare features and tradeoffs, and shop smarter with practical buying guides and curated recommendations.">
   <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">REAL PRODUCTS · SMARTER SHOPPING</div><h1>Buy Better Finds: Products worth buying.</h1><p>Better research. Clearer tradeoffs. Smarter choices. We narrow down real products and explain what makes each one worth considering before you spend your money.</p><div class="buttons"><a class="btn primary" href="/products/">Explore Our Finds →</a><a class="btn secondary" href="/categories/">Browse Categories</a></div><div class="hero-note"><span>✓</span> Real products · Original buying guidance · Clear strengths and tradeoffs</div></div><div class="hero-product"><div class="pick-badge">BUY BETTER FINDS PICK</div><div class="hero-visual hero-image-wrap"><img src={featured.image} alt={featured.imageAlt} width="1000" height="750" /><div class="hero-image-fallback" aria-hidden="true"><div class="hero-product-shape"><div class="hero-ring"></div><div class="hero-label">SONY<small>WH-1000XM5</small></div></div></div></div><div class="hero-product-copy"><div><div class="tag">{featured.category}</div><h3>{featured.name}</h3><p>{featured.why}</p></div><div class="hero-price">{featured.price}</div></div><div class="hero-actions"><a class="hero-shop" href={`/products/${featured.slug}/`}>See why we recommend it <span>→</span></a><a class="amazon-btn" href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a></div></div></div></section>
 
-  <section class="halloween-home-feature">
+  <section class="christmas-home-feature">
     <div class="container">
-      <div class="halloween-home-inner">
-        <div class="halloween-home-copy">
-          <div class="eyebrow">🎃 HALLOWEEN 2026 · FEATURED NOW</div>
-          <h2>Halloween Finds Worth Clicking.</h2>
-          <p>From outdoor displays and animatronics to lighting, décor, costumes, party supplies, toys, and seasonal LEGO builds, we’ve pulled together verified Halloween finds worth a closer look.</p>
-          <div class="halloween-home-actions">
-            <a class="halloween-primary" href="/categories/seasonal-holidays/halloween/">Shop Halloween Finds →</a>
-            <a class="halloween-secondary" href="/categories/seasonal-holidays/">Explore Seasonal & Holidays</a>
+      <div class="christmas-home-inner">
+        <div class="christmas-home-copy">
+          <div class="eyebrow">✦ CHRISTMAS 2026 · HOLIDAY GIFT GUIDE</div>
+          <h2>Make Christmas Shopping Easier.</h2>
+          <p>Discover thoughtful Christmas gifts, stocking stuffers, festive decorations, and holiday finds for every budget. Explore our recommendations and find something worth giving.</p>
+          <div class="christmas-home-actions">
+            <a class="christmas-primary" href="/categories/seasonal-holidays/christmas/">Shop Christmas Finds →</a>
+            <a class="christmas-secondary" href="/blog/christmas-gift-ideas-under-25/">Gifts Under $25 →</a>
           </div>
         </div>
-        <div class="halloween-home-art" aria-hidden="true">
-          <span class="halloween-orb orb-one"></span>
-          <span class="halloween-orb orb-two"></span>
-          <span class="halloween-bat">🦇</span>
-          <span class="halloween-ghost">👻</span>
-          <span class="halloween-pumpkin">🎃</span>
-          <span class="halloween-spark spark-one">✦</span>
-          <span class="halloween-spark spark-two">✦</span>
-        </div>
+        <div class="christmas-home-art" aria-hidden="true"><span class="christmas-tree">🎄</span><span class="christmas-gift gift-one">🎁</span><span class="christmas-gift gift-two">🎁</span><span class="christmas-star star-one">✦</span><span class="christmas-star star-two">✧</span><span class="christmas-star star-three">✦</span></div>
       </div>
     </div>
   </section>
 
-<section class="section seasonal-home-section"><div class="container"><div class="section-head"><div><div class="eyebrow">SEASONAL & HOLIDAYS</div><h2>Halloween is the moment.</h2><p>Halloween is our featured seasonal focus right now, with verified finds for decorating, entertaining, costumes, collecting, and more.</p></div><a class="arrow" href="/categories/seasonal-holidays/">Explore Seasonal & Holidays →</a></div><div class="seasonal-home-grid"><a class="seasonal-home-card featured halloween-feature" href="/categories/seasonal-holidays/halloween/"><div class="halloween-art" aria-hidden="true"><span class="halloween-bat bat-one">🦇</span><span class="halloween-bat bat-two">🦇</span><span class="halloween-ghost">👻</span><span class="halloween-pumpkin">🎃</span><span class="halloween-spark spark-one">✦</span><span class="halloween-spark spark-two">✦</span></div><span class="seasonal-home-label">HALLOWEEN 2026</span><h3>Halloween Finds Worth Clicking</h3><p>New Halloween decorations, animated props, lighting, tabletop accents, and seasonal LEGO finds selected for the 2026 season.</p><strong>Shop the Halloween collection →</strong></a><a class="seasonal-home-card" href="/deals/"><span class="seasonal-home-label">DEALS</span><h3>Seasonal Deals</h3><p>Watch for timely price drops across home, outdoor, beauty, tech, and more.</p><strong>See current deals →</strong></a><a class="seasonal-home-card" href="/guides/"><span class="seasonal-home-label">GIFTS</span><h3>Holiday Gift Ideas</h3><p>Build gift shortlists early instead of waiting for the holiday rush.</p><strong>Browse buying guides →</strong></a><a class="seasonal-home-card" href="/trending/"><span class="seasonal-home-label">TRENDING</span><h3>What’s Hot Right Now</h3><p>Follow products showing current shopper, seasonal, search, or retail signals.</p><strong>View trend watchlist →</strong></a></div></div></section>\n\n
+  <section class="section seasonal-home-section"><div class="container"><div class="section-head"><div><div class="eyebrow">SEASONAL & HOLIDAYS</div><h2>Christmas gifting starts here.</h2><p>Explore festive décor, thoughtful gifts, stocking stuffers, and seasonal finds for the 2026 holidays.</p></div><a class="arrow" href="/categories/seasonal-holidays/">Explore Seasonal & Holidays →</a></div><div class="seasonal-home-grid"><a class="seasonal-home-card featured christmas-feature" href="/categories/seasonal-holidays/christmas/"><div class="christmas-card-art" aria-hidden="true">🎄 <span>✦</span> 🎁</div><span class="seasonal-home-label">CHRISTMAS 2026</span><h3>Christmas Finds Worth Giving</h3><p>Discover holiday décor, festive gifts, and Christmas favorites selected for a more thoughtful shopping season.</p><strong>Shop the Christmas collection →</strong></a><a class="seasonal-home-card" href="/blog/christmas-gift-ideas-under-25/"><span class="seasonal-home-label">GIFT IDEAS</span><h3>Christmas Gifts Under $25</h3><p>Affordable gifts and stocking stuffers that make holiday shopping simpler.</p><strong>Explore gifts under $25 →</strong></a><a class="seasonal-home-card" href="/deals/"><span class="seasonal-home-label">DEALS</span><h3>Seasonal Deals</h3><p>Watch for timely price drops across home, outdoor, beauty, tech, and more.</p><strong>See current deals →</strong></a><a class="seasonal-home-card" href="/guides/"><span class="seasonal-home-label">GIFTS</span><h3>Holiday Gift Ideas</h3><p>Build gift shortlists early instead of waiting for the holiday rush.</p><strong>Browse buying guides →</strong></a><a class="seasonal-home-card" href="/trending/"><span class="seasonal-home-label">TRENDING</span><h3>What’s Hot Right Now</h3><p>Follow products showing current shopper, seasonal, search, or retail signals.</p><strong>View trend watchlist →</strong></a></div></div></section>
 
   <section class="section affiliate-strip"><div class="container"><strong>Shop with confidence.</strong><span>Review our recommendation first, then check Amazon for current price and availability.</span>{amazonUrl(featured) ? <a href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">Check today's Amazon listing →</a> : <span>Amazon listing link pending verified ASIN.</span>}</div></section>
 
@@ -185,4 +177,17 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
   .blog-home-secondary{color:#142b45;text-decoration:none;font-size:12px;font-weight:800}
   .blog-home-secondary:hover{color:#c8102e}
   @media(max-width:700px){.blog-home-feature{padding-top:0;padding-bottom:30px}.blog-home-banner{grid-template-columns:minmax(0,1fr);border-radius:14px}.blog-home-image,.blog-home-image img{min-height:0;height:auto;aspect-ratio:1.45}.blog-home-copy{padding:24px 20px}.blog-home-copy h2{font-size:30px}.blog-home-copy p{font-size:14px}.blog-home-links{align-items:stretch;flex-direction:column;width:100%}.blog-home-primary{width:100%;box-sizing:border-box}.blog-home-secondary{line-height:1.5}}
+
+/* Christmas seasonal homepage promotion */
+.christmas-home-feature{padding:22px 0 28px;background:#fffaf4}
+.christmas-home-inner{position:relative;overflow:hidden;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:22px;padding:38px 42px;border-radius:20px;background:linear-gradient(115deg,#fff9ee 0%,#fff1e5 60%,#fbe7db 100%);border:1px solid #eed7c4;box-shadow:0 14px 34px rgba(123,46,32,.1)}
+.christmas-home-copy{position:relative;z-index:2}.christmas-home-copy .eyebrow{color:#a42630;font-weight:900;letter-spacing:.12em}
+.christmas-home-feature h2{color:#164d3b;font-size:clamp(30px,4vw,47px);line-height:1.08;margin:10px 0 14px}.christmas-home-feature p{color:#48574e;max-width:700px;line-height:1.7;margin:0}
+.christmas-home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.christmas-primary,.christmas-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:9px;text-decoration:none;font-size:13px;font-weight:800}
+.christmas-primary{background:#b42332;color:#fff}.christmas-primary:hover{background:#921c28}.christmas-secondary{background:#fff;border:1px solid #cda887;color:#164d3b}.christmas-secondary:hover{background:#f7ecdc}
+.christmas-home-art{position:relative;min-height:225px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#fff6d8 0%,transparent 72%)}.christmas-tree{font-size:clamp(125px,17vw,210px);filter:drop-shadow(0 14px 14px #164d3b20);animation:christmas-sway 6s ease-in-out infinite}.christmas-gift,.christmas-star{position:absolute}.christmas-gift{font-size:60px;bottom:4px}.gift-one{left:8%}.gift-two{right:7%;font-size:49px}.christmas-star{color:#bd8d36;font-size:34px;animation:christmas-twinkle 3s ease-in-out infinite}.star-one{top:8%;left:14%}.star-two{top:17%;right:11%;animation-delay:1s}.star-three{bottom:26%;right:3%;animation-delay:2s}
+.christmas-feature{position:relative;overflow:hidden;background:linear-gradient(135deg,#f8f2e5,#f2e8d5)!important;border-color:#dfc7a8!important}.christmas-feature .seasonal-home-label{color:#a42630!important}.christmas-feature h3{color:#164d3b!important}.christmas-feature p{color:#4b6257!important}.christmas-feature strong{color:#a42630!important}.christmas-card-art{position:absolute;right:10px;top:10px;font-size:33px;opacity:.22;pointer-events:none}.christmas-card-art span{color:#bd8d36}.christmas-feature>*:not(.christmas-card-art){position:relative;z-index:1}
+@keyframes christmas-twinkle{0%,100%{opacity:.4;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}@keyframes christmas-sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+@media(max-width:700px){.christmas-home-inner{grid-template-columns:1fr;padding:27px 22px}.christmas-home-art{min-height:170px}.christmas-tree{font-size:135px}.christmas-home-actions{display:grid}.christmas-primary,.christmas-secondary{width:100%;box-sizing:border-box}}
+@media(prefers-reduced-motion:reduce){.christmas-tree,.christmas-star{animation:none}}
 </style>
