@@ -62,7 +62,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
       <div class="affiliate-banner-card">
         <span class="affiliate-banner-heading">GRUNDIG AUTO · SPONSORED</span>
         <a href="https://www.awin1.com/cread.php?s=4954913&v=130595&q=615269&r=3119041" target="_blank" rel="sponsored nofollow noopener" aria-label="Shop Grundig Auto products">
-          <img src="https://www.awin1.com/cshow.php?s=4954913&v=130595&q=615269&r=3119041" alt="Grundig Auto promotional banner" loading="lazy" decoding="async" />
+          <img src="https://www.awin1.com/cshow.php?s=4954913&v=130595&q=615269&r=3119041" alt="Grundig Auto promotional banner" loading="eager" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
         </a>
       </div>
       <p class="affiliate-banner-disclosure">Affiliate advertisements · We may earn a commission from qualifying purchases.</p>
@@ -74,7 +74,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     .affiliate-banner-card{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:#fff;border:1px solid #e0e6ea;border-radius:12px;text-align:center}
     .affiliate-banner-heading{font-size:.72rem;font-weight:800;letter-spacing:.09em;color:#18344c}
     .affiliate-banner-card a{display:flex;width:100%;min-height:80px;align-items:center;justify-content:center}
-    .affiliate-banner-card img{display:block;max-width:100%;height:auto;object-fit:contain}
+    .affiliate-banner-card img{display:block;max-width:100%;height:auto;object-fit:contain;min-height:80px}
     .affiliate-banner-disclosure{grid-column:1/-1;margin:0;text-align:center;font-size:.72rem;color:#5b6670}
     @media(max-width:700px){.affiliate-banner-grid{grid-template-columns:1fr}.affiliate-banner-card{padding:14px}}
   </style>
