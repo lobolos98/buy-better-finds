@@ -80,3 +80,15 @@ const finds = [
 <style>
 .weekly-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:26px;align-items:start}.archive-sidebar{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;position:sticky;top:20px}.archive-sidebar h2{font-size:17px;margin:0 0 16px;color:#10233f}.archive-sidebar nav{display:grid;gap:8px}.archive-sidebar nav a{display:grid;gap:3px;padding:12px;border-radius:8px;color:#10233f;text-decoration:none;font-weight:800;font-size:14px;background:#f5f7fa}.archive-sidebar nav a span{font-size:11px;font-weight:600;color:#65748a}.archive-sidebar nav a.active{background:#c8102e;color:white}.archive-sidebar nav a.active span{color:#fff}.archive-sidebar p{font-size:12px;color:#65748a;line-height:1.5;margin:16px 0 0}.weekly-content{min-width:0}@media(max-width:850px){.weekly-layout{grid-template-columns:1fr}.archive-sidebar{position:static}.archive-sidebar nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:430px){.archive-sidebar nav{grid-template-columns:1fr}}
 </style>
+<style>
+/* Keep image and copy in separate, non-overlapping card rows. */
+.weekly .finds-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.weekly .find-card{display:grid;grid-template-rows:220px minmax(0,1fr);min-width:0;height:auto;overflow:hidden;position:relative}
+.weekly .find-image{box-sizing:border-box;position:relative;grid-row:1;width:100%;height:220px;min-height:0;padding:18px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
+.weekly .find-image img{display:block;position:static;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;flex-shrink:1}
+.weekly .find-copy{box-sizing:border-box;position:relative;grid-row:2;min-width:0;min-height:0;height:auto;display:flex;flex-direction:column;padding:20px;background:#fff;z-index:1}
+.weekly .find-copy h2{font-size:19px;overflow-wrap:anywhere;line-height:1.3}
+.weekly .find-copy p{overflow-wrap:anywhere}
+@media(max-width:1050px){.weekly .finds-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.weekly .finds-grid{grid-template-columns:minmax(0,1fr)}.weekly .find-card{grid-template-rows:210px minmax(0,1fr)}.weekly .find-image{height:210px}}
+</style>
