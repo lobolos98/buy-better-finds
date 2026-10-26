@@ -75,25 +75,6 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
 
 <section class="section seasonal-home-section"><div class="container"><div class="section-head"><div><div class="eyebrow">SEASONAL & HOLIDAYS</div><h2>Halloween is the moment.</h2><p>Halloween is our featured seasonal focus right now, with verified finds for decorating, entertaining, costumes, collecting, and more.</p></div><a class="arrow" href="/categories/seasonal-holidays/">Explore Seasonal & Holidays →</a></div><div class="seasonal-home-grid"><a class="seasonal-home-card featured halloween-feature" href="/categories/seasonal-holidays/halloween/"><div class="halloween-art" aria-hidden="true"><span class="halloween-bat bat-one">🦇</span><span class="halloween-bat bat-two">🦇</span><span class="halloween-ghost">👻</span><span class="halloween-pumpkin">🎃</span><span class="halloween-spark spark-one">✦</span><span class="halloween-spark spark-two">✦</span></div><span class="seasonal-home-label">HALLOWEEN 2026</span><h3>Halloween Finds Worth Clicking</h3><p>New Halloween decorations, animated props, lighting, tabletop accents, and seasonal LEGO finds selected for the 2026 season.</p><strong>Shop the Halloween collection →</strong></a><a class="seasonal-home-card" href="/deals/"><span class="seasonal-home-label">DEALS</span><h3>Seasonal Deals</h3><p>Watch for timely price drops across home, outdoor, beauty, tech, and more.</p><strong>See current deals →</strong></a><a class="seasonal-home-card" href="/guides/"><span class="seasonal-home-label">GIFTS</span><h3>Holiday Gift Ideas</h3><p>Build gift shortlists early instead of waiting for the holiday rush.</p><strong>Browse buying guides →</strong></a><a class="seasonal-home-card" href="/trending/"><span class="seasonal-home-label">TRENDING</span><h3>What’s Hot Right Now</h3><p>Follow products showing current shopper, seasonal, search, or retail signals.</p><strong>View trend watchlist →</strong></a></div></div></section>\n\n
 
-  <section class="section product-search-home">
-    <div class="container">
-      <div class="search-home-copy">
-        <div>
-          <div class="eyebrow">SEARCH ANY PRODUCT</div>
-          <h2>Looking for something specific?</h2>
-          <p>Search for a product, brand, or model and then use Buy Better Finds research to understand what to look for before you buy.</p>
-        </div>
-        <div class="home-search-placeholder">
-          <div class="placeholder-icon">⌕</div>
-          <strong>Amazon Product Search</strong>
-          <span>Coming soon</span>
-          <small>Live Amazon product search will be available once Creators API access is enabled for the Buy Better Finds Associates account.</small>
-          <a class="btn primary" href="/search/">Explore Product Search →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section affiliate-strip"><div class="container"><strong>Shop with confidence.</strong><span>Review our recommendation first, then check Amazon for current price and availability.</span>{amazonUrl(featured) ? <a href={amazonUrl(featured)} target="_blank" rel="nofollow sponsored noopener">Check today's Amazon listing →</a> : <span>Amazon listing link pending verified ASIN.</span>}</div></section>
 
   <script is:inline define:vars={{ dailyDealSchedule }}>
