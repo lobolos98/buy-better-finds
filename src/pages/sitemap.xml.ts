@@ -102,7 +102,7 @@ const comparisonPages = [
 ].map((slug) => `/comparisons/${slug}/`);
 
 const productPages = products
-  .filter((product) => product && typeof product.slug === 'string' && product.slug.length > 0)
+  .filter((product) => product && typeof product.slug === 'string' && product.slug.length > 0 && (!product.canonicalSlug || product.canonicalSlug === product.slug))
   .map((product) => `/products/${product.slug}/`);
 
 const pages = [...new Set([
