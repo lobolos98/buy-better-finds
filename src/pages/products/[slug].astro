@@ -104,7 +104,7 @@ const priceHistory = getPriceHistory(product.slug);
 const lowestObserved = getLowestObservedPrice(priceHistory);
 const verifiedCurrentPrice = getCurrentPriceObservation(priceHistory);
 const freshCurrentPrice = getFreshCurrentPriceObservation(priceHistory);
-const canonicalUrl = new URL(Astro.url.pathname, 'https://buybetterfinds.com').toString();
+const canonicalUrl = new URL(`/products/${product.canonicalSlug ?? product.slug}/`, 'https://buybetterfinds.com').toString();
 const metaDescription = `${product.name}: independent buying guidance for ${product.category.toLowerCase()} shoppers, including strengths, tradeoffs, best-for use cases, and price context.`;
 
 const breadcrumbSchema = {
@@ -154,7 +154,7 @@ const breadcrumbSchema = {
 })} />
 <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
-<BaseLayout title={`${product.name} | Buy Better Finds`} description={metaDescription} image={product.image} imageAlt={product.imageAlt}>
+<BaseLayout title={`${product.name} | Buy Better Finds`} description={metaDescription} image={product.image} imageAlt={product.imageAlt} canonicalUrl={canonicalUrl}>
   <section class="section product-page">
     <div class="container">
       <div class="breadcrumbs">

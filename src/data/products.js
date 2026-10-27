@@ -87,7 +87,7 @@ const productsCatalog = [
     bestFor: 'Voice control, timers, music, and smart-home routines', why: 'Compact smart speaker that can serve as a convenient voice-control hub.', watch: 'Smart-speaker usefulness depends on how much of your home you want connected.', amazonAsin: 'B09B8V1LZ3', amazonUrl: 'https://www.amazon.com/dp/B09B8V1LZ3?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B09B8V1LZ3?tag=buybetterfi06-20', dailyDealDate: '2026-09-29'
   },
   {
-    slug: 'anker-nano-power-bank-tech', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣',
+    slug: 'anker-nano-power-bank-tech', canonicalSlug: 'anker-nano-power-bank', name: 'Anker Nano Power Bank', category: 'Tech', price: 'Check price', icon: '▣',
     image: 'https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A1653011_ND01_V1.png?v=1728462233&width=3840', imageAlt: 'Anker Nano Power Bank',
     bestFor: 'Portable phone charging', why: 'Compact Anker charging option for backup power on the go.', watch: 'Check the exact connector, capacity, and charging wattage of the version you choose.', url: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20', dailyDealDate: '2026-10-05', amazonAsin: 'B0C6XK6DDL', amazonUrl: 'https://www.amazon.com/dp/B0C6XK6DDL?tag=buybetterfi06-20'
   },
