@@ -105,7 +105,7 @@ const items = await Promise.all(products.map(async (p) => {
     {items.map((p, i) => <article class="find-card">
       {p.image && <a class="find-photo" href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank"><img src={p.image} alt={p.name + ' from Sunshine Tienda'} loading="lazy" referrerpolicy="no-referrer" /></a>}
       <div class="find-copy">
-        <p class="find-number">FIND {String(i+1).padStart(2,'0')} / {p.label}</p>
+        <p class="find-number">FIND {i + 1} / {p.label}</p>
         <h3>{p.name}</h3>
         <p>{p.detail}</p>
         <a class="find-link" href={p.affiliateUrl} rel="sponsored noopener noreferrer" target="_blank">Shop at Sunshine Tienda <span aria-hidden="true">↗</span></a>
