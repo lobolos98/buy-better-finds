@@ -5,15 +5,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const silverProducts = [["Black Velvet®","black-velvet-round-short-handle"],["Silverwhite®","silverwhite-stroke-short-handle"],["Renaissance®","renaissance-9pc-must-have-rounds-set-long-handle"],["Ruby Satin®","ruby-satin-pointed-triangle-short-handle"],["Bristlon®","bristlon-5pc-filbert-and-long-filbert-brush-set-long-handle"],["Ultra Mini®","ultra-mini-3pc-tight-spot-set-short-handle"]].map(([series, handle]) => ({series, handle}));
 const silverPhotos = {};
 await Promise.all(silverProducts.map(async ({series, handle}) => {
-  try {
-    const response = await fetch(`https://www.silverbrush.com/products/${handle}.js`);
-    if (!response.ok) return;
-    const product = await response.json();
-    const photo = product.featured_image || product.images?.[0];
-    if (photo && String(product.title || '').toLowerCase().includes(series.replace('®','').toLowerCase())) {
-      silverPhotos[series] = String(photo).startsWith('//') ? 'https:' + photo : new URL(photo, 'https://www.silverbrush.com').toString();
-    }
-  } catch {}
+  const seriesSlug = series.replace('®','').toLowerCase().replace(/\s+/g, '-');
+  const candidates = [
+    `https://www.silverbrush.com/collections/${seriesSlug}/products.json?limit=100`,
+    `https://www.silverbrush.com/collections/${seriesSlug}%C2%AE/products.json?limit=100`,
+    `https://www.silverbrush.com/products/${handle}.js`
+  ];
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) continue;
+      const payload = await response.json();
+      const product = Array.isArray(payload.products)
+        ? payload.products.find(p => String(p.title || '').toLowerCase().includes(series.replace('®','').toLowerCase()) && (p.images?.length || p.image))
+        : payload;
+      if (!product || !String(product.title || '').toLowerCase().includes(series.replace('®','').toLowerCase())) continue;
+      const photo = product.featured_image || product.image?.src || product.images?.[0]?.src || product.images?.[0];
+      if (!photo) continue;
+      const imageUrl = String(photo).startsWith('//') ? 'https:' + photo : new URL(String(photo), 'https://www.silverbrush.com').toString();
+      if (!imageUrl.startsWith('https://')) continue;
+      silverPhotos[series] = imageUrl;
+      break;
+    } catch {}
+  }
 }));
 const silverAffiliate = 'https://www.awin1.com/cread.php?s=4874986&v=129485&q=613593&r=3119041';
 ---
