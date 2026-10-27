@@ -11,7 +11,7 @@ const escapeHtml = (value) => String(value ?? '')
   .replace(/'/g, '&#39;');
 
 const productCards = products.map((product) => {
-  const slug = escapeHtml(product.slug);
+  const slug = escapeHtml(product.canonicalSlug ?? product.slug);
   const name = escapeHtml(product.name);
   const category = escapeHtml(product.category);
   const icon = escapeHtml(product.icon);
