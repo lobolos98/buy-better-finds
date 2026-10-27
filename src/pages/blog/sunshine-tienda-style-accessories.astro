@@ -88,8 +88,8 @@ const items = await Promise.all(products.map(async (p) => {
 
   <p>Sunshine Tienda brings cheerful color to outfits and accessories, with statement jewelry, patterned totes, playful clothing and distinctive hats. If you prefer one memorable accessory over an entirely new outfit, this collection offers plenty of ways to experiment with pattern and texture.</p>
   <p>We selected two hats, three jewelry pieces, two bags and three clothing items to make browsing easier. This is an independent editorial shopping guide, not a hands-on review. Product details, sizing, availability and current prices should always be checked on the merchant's listing.</p>
-  <section id="sale-finds" class="sale-feature" aria-label="Sunshine Tienda sale picks">
-    <div class="sale-feature-heading"><p class="sale-kicker">THE SALE EDIT</p><h2>Colorful finds to browse on sale</h2><p>We pulled a cross-section of products currently listed in Sunshine Tienda's sale collection. Sale prices and availability can change; confirm the final price and any sale conditions on the retailer's page.</p></div>
+  <section class="sale-feature" aria-label="Sunshine Tienda sale picks">
+    <div class="sale-feature-heading"><p class="sale-kicker">THE SALE EDIT</p><h2 id="sale-finds" class="sale-anchor">Colorful finds to browse on sale</h2><p>We pulled a cross-section of products currently listed in Sunshine Tienda's sale collection. Sale prices and availability can change; confirm the final price and any sale conditions on the retailer's page.</p></div>
     {saleItems.length > 0 ? <div class="sale-product-grid">
       {saleItems.map((p) => <article class="sale-product-card">
         <a class="sale-product-image" href={affiliateUrl(p.url)} rel="sponsored nofollow noopener noreferrer" target="_blank"><img src={p.image} alt={p.name + ' from Sunshine Tienda'} loading="lazy" decoding="async" /></a>
