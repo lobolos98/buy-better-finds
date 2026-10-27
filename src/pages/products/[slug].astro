@@ -99,7 +99,6 @@ const affiliateUrl = product.affiliateUrl ?? (product.category === 'Beauty & Per
     : (product.amazonUrl
       ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin)
       : (product.url?.includes('amazon.com') ? product.url : amazonSearchUrl(product.name)))));
-const reviewDate = 'September 22, 2026';
 const dealStatus = getPriceWatchStatus(product.dailyDealDate);
 const priceHistory = getPriceHistory(product.slug);
 const lowestObserved = getLowestObservedPrice(priceHistory);
@@ -130,12 +129,15 @@ const breadcrumbSchema = {
   review: {
     '@type': 'Review',
     author: { '@type': 'Organization', name: 'Buy Better Finds' },
-    datePublished: '2026-09-22',
     reviewBody: `${product.why} Best for: ${recommendation.bestFor} Key tradeoff: ${recommendation.skipIf}`,
-    reviewRating: {
-      '@type': 'Rating',
-      ...(recommendation.score != null && Number.isFinite(Number(recommendation.score)) ? { ratingValue: Number(recommendation.score), bestRating: 10, worstRating: 1 } : {})
-    },
+    ...(recommendation.score != null && Number.isFinite(Number(recommendation.score)) ? {
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: Number(recommendation.score),
+        bestRating: 10,
+        worstRating: 1
+      }
+    } : {}),
     positiveNotes: {
       '@type': 'ItemList',
       itemListElement: (recommendation.pros ?? []).map((name, index) => ({
@@ -178,7 +180,7 @@ const breadcrumbSchema = {
           <p class="lead">{product.why}</p>
 
           <div class="review-meta">
-            <span>Research updated: {reviewDate}</span>
+            <span>Independent editorial review</span>
             <a href="/why-we-recommend/">How we evaluate →</a>
           </div>
 
