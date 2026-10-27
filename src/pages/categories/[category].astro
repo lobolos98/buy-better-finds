@@ -199,12 +199,12 @@ if (showEverblog) {
         <div class="grid category-product-grid">{rankedMatches.map((product, index) => { const amazonUrl = product.affiliateUrl ?? (product.category === 'Beauty & Personal Care' && product.url?.includes('amazon.com/dp/')
           ? product.url
           : (product.amazonUrl ?? (product.amazonAsin ? amazonProductUrl(product.amazonAsin) : (product.url?.includes('/dp/') ? product.url : null)))); const rec = getRecommendation(product); return <article class="card product-card">
-          {product.image && <a class="product-image" href={`/products/${product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a>}
+          {product.image && <a class="product-image" href={`/products/${product.canonicalSlug ?? product.slug}/`} aria-label={`View ${product.name}`}>{index === 0 && <span class="pick-badge">TOP FIND</span>}<img src={product.image} alt={product.imageAlt} loading="lazy" width="800" height="600" /></a>}
           <div class="tag">{index === 0 ? 'TOP FIND · ' : ''}{product.category}</div><h3>{product.name}</h3>
           {rec?.score != null && Number.isFinite(Number(rec.score)) && <div class="score-row"><strong>{Number(rec.score).toFixed(1)}/10</strong><span>BUY BETTER SCORE</span></div>}
           <div class="best-for"><strong>BEST FOR</strong><span>{rec.bestFor || product.bestFor}</span></div><p>{product.why}</p>
           <div class="tradeoff"><strong>WATCH</strong><span>{product.watch}</span></div>
-          <div class="card-footer"><strong>{name === 'Toys & Games' ? 'Check Price' : product.price}</strong><a class="arrow" href={`/products/${product.slug}/`}>See our take →</a></div>
+          <div class="card-footer"><strong>{name === 'Toys & Games' ? 'Check Price' : product.price}</strong><a class="arrow" href={`/products/${product.canonicalSlug ?? product.slug}/`}>See our take →</a></div>
           <div class="affiliate-actions">{amazonUrl && !product.affiliateDestinationUnverified && <a class="amazon-button" href={amazonUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>}</div>
         </article>; })}</div>
         <p class="affiliate-disclosure">As an Amazon Associate and Awin publisher, Buy Better Finds may earn from qualifying purchases. Product availability and prices can change; confirm current details with the retailer before buying.</p>
