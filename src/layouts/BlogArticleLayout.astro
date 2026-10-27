@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const {title, description, image, imageAlt, category='SHOPPING ADVICE', readingTime='5 MIN READ', dek, related=[]} = Astro.props;
+const {title, description, image, imageAlt, category='SHOPPING ADVICE', readingTime='5 MIN READ', dek, related=[], affiliateDisclosure='As an Amazon Associate, Buy Better Finds earns from qualifying purchases.'} = Astro.props;
 ---
 <BaseLayout title={title} description={description} image={image} imageAlt={imageAlt}>
   <div class="journal-page">
@@ -19,7 +19,7 @@ const {title, description, image, imageAlt, category='SHOPPING ADVICE', readingT
         <div class="story-body">
           <p class="affiliate-brief">This article may contain affiliate links. We may earn a commission from qualifying purchases.</p>
           <slot />
-          <p class="affiliate-note"><strong>Affiliate disclosure:</strong> As an Amazon Associate, Buy Better Finds earns from qualifying purchases. Product availability and prices can change, so check the current listing before buying.</p>
+          <p class="affiliate-note"><strong>Affiliate disclosure:</strong> {affiliateDisclosure} Product availability and prices can change, so check the current listing before buying.</p>
           {related.length > 0 && <section class="related-stories" aria-label="Related articles"><p class="section-kicker">KEEP EXPLORING</p><h2>You Might Also Like</h2><div class="related-grid">{related.map((item) => <a href={item.href} class="related-link">{item.title} <span aria-hidden="true">↗</span></a>)}</div></section>}
           <a class="back-bottom" href="/blog/">← More from The Finds Edit</a>
         </div>
