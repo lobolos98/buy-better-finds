@@ -9,10 +9,13 @@ const {
   description = 'Find it. Compare it. Buy better.',
   image = '',
   imageAlt = 'Buy Better Finds',
-  noindex = false
+  noindex = false,
+  canonicalUrl = ''
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, 'https://buybetterfinds.com');
+const canonical = canonicalUrl
+  ? new URL(canonicalUrl, 'https://buybetterfinds.com')
+  : new URL(Astro.url.pathname, 'https://buybetterfinds.com');
 const siteName = 'Buy Better Finds';
 const isHome = Astro.url.pathname === '/';
 const pageTitle = title || siteName;
