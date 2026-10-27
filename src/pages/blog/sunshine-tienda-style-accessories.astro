@@ -93,7 +93,7 @@ const items = await Promise.all(products.map(async (p) => {
     {saleItems.length > 0 ? <div class="sale-product-grid">
       {saleItems.map((p) => <article class="sale-product-card">
         <a class="sale-product-image" href={affiliateUrl(p.url)} rel="sponsored nofollow noopener noreferrer" target="_blank"><img src={p.image} alt={p.name + ' from Sunshine Tienda'} loading="lazy" decoding="async" /></a>
-        <div class="sale-product-copy"><h3>{p.name}</h3><p class="sale-price">{p.price}{p.comparePrice && <><span class="sale-compare">{p.comparePrice}</span><span class="sale-discount"> {p.discount}% off</span></>}</p><a class="sale-shop-link" href={affiliateUrl(p.url)} rel="sponsored nofollow noopener noreferrer" target="_blank">Check sale price ↗</a></div>
+        <div class="sale-product-copy"><h3>{p.name}</h3><p class="sale-price">{p.price}{p.comparePrice && <span class="sale-price-meta"><span class="sale-compare">{p.comparePrice}</span><span class="sale-discount"> {p.discount}% off</span></span>}</p><a class="sale-shop-link" href={affiliateUrl(p.url)} rel="sponsored nofollow noopener noreferrer" target="_blank">Check sale price ↗</a></div>
       </article>)}
     </div> : <div class="sale-fallback"><p>Browse the live sale collection for current product selection and pricing.</p><a href={affiliateUrl('https://www.sunshinetienda.com/collections/sale-1')} rel="sponsored nofollow noopener noreferrer" target="_blank">Shop the Sunshine Tienda sale ↗</a></div>}
     <p class="sale-footnote">Sale listings, discounts and product availability are not guaranteed and may change before checkout. Some products may have final-sale or other return restrictions.</p>
@@ -150,7 +150,7 @@ const items = await Promise.all(products.map(async (p) => {
   .sale-product-copy{padding:12px;display:flex;flex-direction:column;flex:1}
   .sale-product-copy h3{font:700 .88rem/1.4 Arial,sans-serif;margin:0 0 9px;color:#142b45}
   .sale-price{font:800 .88rem/1.5 Arial,sans-serif;color:#142b45;margin:0 0 12px}
-  .sale-compare{font-weight:400;color:#777;text-decoration:line-through;margin-left:6px}
+  .sale-price-meta{display:inline-flex;flex-wrap:wrap;gap:5px;align-items:center}\n  .sale-compare{font-weight:400;color:#777;text-decoration:line-through;margin-left:6px}
   .sale-discount{display:inline-block;color:#a20e28;font-size:.72rem;font-weight:800}
   .sale-shop-link,.sale-fallback a,.sale-all-link{display:inline-block;margin-top:auto;color:#b10f29;font:800 .76rem/1.5 Arial,sans-serif;text-decoration:none}
   .sale-footnote{font-size:.76rem;line-height:1.6;color:#6b7280}
