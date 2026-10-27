@@ -24,7 +24,17 @@ const saleItems = await (async () => {
         name: p.title,
         url: 'https://www.sunshinetienda.com/products/' + p.handle,
         image,
-        price: Number.isFinite(price) ? '
+        price: Number.isFinite(price) ? '$' + price.toFixed(2) : '',
+        comparePrice: Number.isFinite(compare) && compare > price ? '$' + compare.toFixed(2) : '',
+        discount: Number.isFinite(compare) && compare > price ? Math.round((compare - price) / compare * 100) : 0
+      };
+    }).filter(p => p.name && p.url && p.image).slice(0, 8);
+  } catch (error) {
+    console.warn('Sunshine Tienda sale collection unavailable:', String(error));
+    return [];
+  }
+})();
+const items = await Promise.all(products.map(async (p) => {
   const url = 'https://www.sunshinetienda.com/products/' + p.slug;
   const norm = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const imageUrl = (value) => {
