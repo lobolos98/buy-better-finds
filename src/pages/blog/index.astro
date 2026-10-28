@@ -15,14 +15,17 @@ try {
 } catch {}
 let rockbrosCoverImage = '';
 try {
- const response = await fetch('https://rockbrosbike.us/collections/bike-bags/products.json?limit=6');
- if (response.ok) {
-  const data = await response.json();
-  const product = (data.products || []).find((p) => p.images?.[0]?.src || p.image?.src);
-  const raw = product?.images?.[0]?.src || product?.image?.src;
-  if (raw) { const url = new URL(raw, 'https://rockbrosbike.us'); if (url.protocol === 'https:' && ['rockbrosbike.us','www.rockbrosbike.us','cdn.shopify.com'].includes(url.hostname)) rockbrosCoverImage = url.href; }
- }
-} catch {}
+  // Use a known live ROCKBROS product instead of relying on a possibly empty collection feed.
+  const response = await fetch('https://rockbrosbike.us/products/as-165-bike-bag.js');
+  if (response.ok) {
+    const product = await response.json();
+    const raw = product.featured_image || product.images?.[0];
+    if (raw) {
+      const url = new URL(typeof raw === 'string' ? raw : raw.src, 'https://rockbrosbike.us');
+      if (url.protocol === 'https:' && ['rockbrosbike.us','www.rockbrosbike.us','cdn.shopify.com'].includes(url.hostname)) rockbrosCoverImage = url.href;
+    }
+  }
+} catch (error) { console.warn('ROCKBROS blog cover unavailable:', String(error)); }
 const legoCoverImage = 'https://brkox.com/cdn/shop/files/621342c0-cf06-4c1d-b6f6-459fe7e2b93d.png?v=1791015215&width=2000';
 
 ---
