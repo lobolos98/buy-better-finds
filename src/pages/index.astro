@@ -93,7 +93,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     .affiliate-carousel-controls{display:flex;align-items:center;gap:10px}
     .affiliate-carousel-viewport{flex:1;min-width:0;overflow:hidden}
     .affiliate-banner-track{display:flex;gap:18px;width:max-content;animation:affiliate-marquee 48s linear infinite;will-change:transform}
-    .affiliate-carousel:hover .affiliate-banner-track,.affiliate-carousel:focus-within .affiliate-banner-track{animation-play-state:paused}
+    .affiliate-carousel:hover .affiliate-banner-track{animation-play-state:paused}
     @keyframes affiliate-marquee{to{transform:translateX(calc(-1 * var(--affiliate-loop-width, 0px)))}}
     .affiliate-banner-card{box-sizing:border-box;flex:0 0 calc((var(--affiliate-viewport-width, 900px) - 36px)/3);display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:#fff;border:1px solid #e0e6ea;border-radius:12px;text-align:center}
     .affiliate-banner-heading{font-size:.72rem;font-weight:800;letter-spacing:.09em;color:#18344c}
