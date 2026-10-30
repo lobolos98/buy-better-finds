@@ -56,7 +56,7 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
       <div class="affiliate-carousel-controls">
         <button type="button" class="affiliate-arrow" data-affiliate-prev aria-label="Previous sponsored banners">❮</button>
         <div class="affiliate-carousel-viewport" data-affiliate-viewport tabindex="0" aria-label="Sponsored advertiser banners">
-          <div class="affiliate-banner-track">
+          <div class="affiliate-banner-track" data-affiliate-track>
             <div class="affiliate-banner-card">
               <span class="affiliate-banner-heading">PISCIFUN · SPONSORED</span>
               <a href="https://www.awin1.com/cread.php?s=4936689&v=89509&q=522775&r=3119041" target="_blank" rel="sponsored nofollow noopener" aria-label="Shop Piscifun fishing gear">
@@ -92,16 +92,18 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     .affiliate-home-banners{padding:22px 0;background:#f5f8fa}
     .affiliate-carousel-controls{display:flex;align-items:center;gap:10px}
     .affiliate-carousel-viewport{flex:1;min-width:0;overflow:hidden}
-    .affiliate-banner-track{display:flex;gap:18px;transition:transform .45s ease;will-change:transform}
-    .affiliate-banner-card{box-sizing:border-box;flex:0 0 calc((100% - 36px)/3);display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:#fff;border:1px solid #e0e6ea;border-radius:12px;text-align:center}
+    .affiliate-banner-track{display:flex;gap:18px;width:max-content;animation:affiliate-marquee 48s linear infinite;will-change:transform}
+    .affiliate-carousel:hover .affiliate-banner-track,.affiliate-carousel:focus-within .affiliate-banner-track{animation-play-state:paused}
+    @keyframes affiliate-marquee{to{transform:translateX(calc(-1 * var(--affiliate-loop-width, 0px)))}}
+    .affiliate-banner-card{box-sizing:border-box;flex:0 0 calc((var(--affiliate-viewport-width, 900px) - 36px)/3);display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:#fff;border:1px solid #e0e6ea;border-radius:12px;text-align:center}
     .affiliate-banner-heading{font-size:.72rem;font-weight:800;letter-spacing:.09em;color:#18344c}
     .affiliate-banner-card a{display:flex;width:100%;height:220px;align-items:center;justify-content:center;overflow:hidden}
     .affiliate-banner-card img{display:block;width:100%;height:100%;object-fit:contain}
     .affiliate-arrow{flex:0 0 34px;height:44px;border:1px solid #d3dce3;border-radius:8px;background:white;color:#18344c;cursor:pointer;font-size:1.2rem}
     .affiliate-arrow:hover,.affiliate-arrow:focus-visible{background:#eaf0f5;outline-offset:2px}
     .affiliate-banner-disclosure{margin:12px 0 0;text-align:center;font-size:.72rem;color:#5b6670}
-    @media(max-width:700px){.affiliate-banner-card{flex-basis:100%;padding:14px}.affiliate-banner-card a{height:180px}.affiliate-carousel-controls{gap:6px}.affiliate-arrow{flex-basis:30px}}
-    @media(prefers-reduced-motion:reduce){.affiliate-banner-track{transition:none}}
+    @media(max-width:700px){.affiliate-banner-card{flex-basis:var(--affiliate-viewport-width, 320px);padding:14px}.affiliate-banner-card a{height:180px}.affiliate-carousel-controls{gap:6px}.affiliate-arrow{flex-basis:30px}}
+    @media(prefers-reduced-motion:reduce){.affiliate-banner-track{animation:none}}
   </style>
   <script is:inline>
     (() => {
@@ -109,41 +111,38 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
         const root = document.querySelector('[data-affiliate-carousel]');
         if (!root) return;
         const viewport = root.querySelector('[data-affiliate-viewport]');
-        const track = root.querySelector('.affiliate-banner-track');
-        const cards = Array.from(track.querySelectorAll('.affiliate-banner-card'));
-        const gap = 18;
-        let index = 0;
-        let timer;
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const visibleCount = () => window.matchMedia('(max-width:700px)').matches ? 1 : 3;
-        const draw = () => {
-          const step = cards[0].getBoundingClientRect().width + gap;
-          track.style.transform = 'translateX(-' + (index * step) + 'px)';
+        const track = root.querySelector('[data-affiliate-track]');
+        const originals = Array.from(track.children);
+        originals.forEach((card) => {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+          track.appendChild(clone);
+        });
+        const measure = () => {
+          const width = viewport.getBoundingClientRect().width;
+          root.style.setProperty('--affiliate-viewport-width', width + 'px');
+          const loopWidth = originals[originals.length - 1].offsetLeft + originals[originals.length - 1].offsetWidth - originals[0].offsetLeft + 18;
+          root.style.setProperty('--affiliate-loop-width', loopWidth + 'px');
         };
-        const move = (direction) => {
-          const max = Math.max(0, cards.length - visibleCount());
-          index = index + direction;
-          if (index > max) index = 0;
-          if (index < 0) index = max;
-          draw();
+        const shift = (direction) => {
+          const style = getComputedStyle(track);
+          const matrix = new DOMMatrixReadOnly(style.transform);
+          const loop = parseFloat(root.style.getPropertyValue('--affiliate-loop-width')) || 1;
+          const current = ((-matrix.m41 % loop) + loop) % loop;
+          const step = originals[0].getBoundingClientRect().width + 18;
+          const target = ((current + direction * step) % loop + loop) % loop;
+          track.style.animation = 'none';
+          track.style.transform = 'translateX(-' + target + 'px)';
+          void track.offsetWidth;
+          track.style.transform = '';
+          track.style.animation = '';
+          track.style.animationDelay = '-' + (target / loop * 48) + 's';
         };
-        const stop = () => { if (timer) clearInterval(timer); timer = undefined; };
-        const start = () => {
-          stop();
-          if (reducedMotion.matches || document.hidden) return;
-          timer = setInterval(() => move(1), 5000);
-        };
-        root.querySelector('[data-affiliate-prev]').addEventListener('click', () => { move(-1); start(); });
-        root.querySelector('[data-affiliate-next]').addEventListener('click', () => { move(1); start(); });
-        root.addEventListener('mouseenter', stop);
-        root.addEventListener('mouseleave', start);
-        root.addEventListener('focusin', stop);
-        root.addEventListener('focusout', (event) => { if (!root.contains(event.relatedTarget)) start(); });
-        document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else start(); });
-        window.addEventListener('resize', () => { index = Math.min(index, Math.max(0, cards.length - visibleCount())); draw(); });
-        reducedMotion.addEventListener('change', start);
-        draw();
-        start();
+        root.querySelector('[data-affiliate-prev]').addEventListener('click', () => shift(-1));
+        root.querySelector('[data-affiliate-next]').addEventListener('click', () => shift(1));
+        window.addEventListener('resize', measure);
+        measure();
       };
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
       else init();
