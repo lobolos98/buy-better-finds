@@ -114,6 +114,21 @@ export const recommendationData = {
   'sportneer-ankle-wrist-weights': { score: 8.4, label: 'Adjustable resistance accessory', pros: ['Adjustable loading', 'Wearable format', 'Versatile for low-impact workouts'], cons: ['Fit matters', 'Added load is not appropriate for every movement'], bestFor: 'Walking and controlled accessory exercises', skipIf: 'You need conventional free weights' },
   'running-fanny-pack': { score: 8.4, label: 'Useful running accessory', pros: ['Hands-free storage', 'Compact', 'Good for essentials'], cons: ['Fit varies', 'Capacity is limited'], bestFor: 'Running and walking with a phone and keys', skipIf: 'You need to carry larger items' },
   'spri-exercise-dice': { score: 8.0, label: 'Fun workout aid', pros: ['Adds variety', 'Simple to use', 'Good for group workouts'], cons: ['Random format is not for every training plan', 'Exercise selection is limited'], bestFor: 'Casual workouts and fitness games', skipIf: 'You follow a highly structured program' },
+  'philips-norelco-head-shaver-pro-9000': {
+    label: 'Well-equipped scalp-grooming option',
+    pros: [
+      '360° flexing head and 36 ComfortCut blades are designed to follow scalp contours',
+      'Wet/dry use with up to 90 minutes of cordless runtime',
+      'HS9980/40 bundle includes a rinsing station, travel case, mirror and four extra blades'
+    ],
+    cons: [
+      'Replacement heads are recommended about every six months',
+      'USB-A charging cable is included, but the power adapter is not',
+      'Results vary with hair density; some owners report needing extra passes on coarse growth'
+    ],
+    bestFor: 'People who shave their scalp regularly and want a wet/dry electric shaver with a complete accessory bundle',
+    skipIf: 'You prefer a manual razor or expect a cartridge-razor-close finish with minimal passes'
+  }
 };
 
 const scoreOverrides = {

@@ -36,6 +36,23 @@ const productsCatalog = [
     watch: 'Follow the manufacturer’s safety and care instructions; check the selected size and color before ordering.',
     amazonAsin: 'B0BZR6YBHK', amazonUrl: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20', url: 'https://www.amazon.com/dp/B0BZR6YBHK?tag=buybetterfi06-20'
   },
+  {
+    slug: 'philips-norelco-head-shaver-pro-9000',
+    name: 'Philips Norelco Head Shaver Pro 9000 Series (HS9980/40)',
+    amazonAsin: 'B0FHJ4ZY62',
+    amazonUrl: 'https://www.amazon.com/dp/B0FHJ4ZY62?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B0FHJ4ZY62?tag=buybetterfi06-20',
+    category: 'Beauty & Personal Care',
+    price: 'Check price',
+    icon: '◉',
+    image: 'https://m.media-amazon.com/images/I/81ymuEibenL._SL1500_.jpg',
+    imageAlt: 'Philips Norelco Head Shaver Pro 9000 Series HS9980/40 with travel case and included accessories',
+    bestFor: 'People who shave their scalp regularly and want a wet/dry shaver with a flexible head and accessory bundle',
+    why: 'The 360° flexing head, 36 ComfortCut blades and PowerAdapt sensor are designed to follow scalp contours for a close, comfortable shave. The HS9980/40 package includes a rinsing station, mirror, travel case and four replacement blades.',
+    watch: 'Not hands-on tested by Buy Better Finds. Results can vary with hair density, and some owners report needing extra passes on coarse growth. The USB-A cable is included, but the power adapter is not.',
+    weeklyPick: true,
+    affiliateLabel: 'Check Amazon offer'
+  },
   ...automotiveProducts,
   ...piscifunProducts,
   ...diyProducts,
