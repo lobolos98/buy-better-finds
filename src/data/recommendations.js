@@ -132,6 +132,7 @@ export const recommendationData = {
 };
 
 const scoreOverrides = {
+  "philips-norelco-head-shaver-pro-9000": 8.5,
   "sony-wh-1000xm5": 9.2,
   "ninja-af101": 9.1,
   "amazon-basics-46000-btu-patio-heater": 8.7,
