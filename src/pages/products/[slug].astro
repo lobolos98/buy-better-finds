@@ -105,7 +105,7 @@ const lowestObserved = getLowestObservedPrice(priceHistory);
 const verifiedCurrentPrice = getCurrentPriceObservation(priceHistory);
 const freshCurrentPrice = getFreshCurrentPriceObservation(priceHistory);
 const canonicalUrl = new URL(`/products/${product.canonicalSlug ?? product.slug}/`, 'https://buybetterfinds.com').toString();
-const metaDescription = `${product.name}: independent buying guidance for ${product.category.toLowerCase()} shoppers, including strengths, tradeoffs, best-for use cases, and price context.`;
+const metaDescription = `${product.name}: Buy Better Finds product evaluation, Buy Better Score, strengths, tradeoffs, best-for use cases, and price context.`;
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -180,7 +180,7 @@ const breadcrumbSchema = {
           <p class="lead">{product.why}</p>
 
           <div class="review-meta">
-            <span>Independent editorial review</span>
+            <span>Buy Better Finds editorial evaluation</span>
             <a href="/why-we-recommend/">How we evaluate →</a>
           </div>
 
@@ -189,7 +189,7 @@ const breadcrumbSchema = {
             <div>
               <div class="score-label">{recommendation.score != null && Number.isFinite(Number(recommendation.score)) ? 'BUY BETTER SCORE' : 'EDITORIAL SCORE'}</div>
               <strong class="score-status">{recommendation.label}</strong>
-              <p>{recommendation.score != null && Number.isFinite(Number(recommendation.score)) ? 'Editorial score based on practical fit, value, useful features, and documented tradeoffs—not paid placement.' : 'No numeric score assigned yet. Review the product details and tradeoffs before deciding.'}</p>
+              <p>{recommendation.score != null && Number.isFinite(Number(recommendation.score)) ? 'Buy Better Finds assessment based on use-case fit, useful features, practicality, value, and tradeoffs—not paid placement.' : 'No numeric Buy Better Score assigned yet. Review the product details and tradeoffs before deciding.'}</p>
             </div>
           </div>
 
