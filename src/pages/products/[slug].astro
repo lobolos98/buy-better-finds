@@ -201,17 +201,18 @@ const breadcrumbSchema = {
 
           <div class="price-box">
             <div class="price-context-head">
-              <span>PRICE WATCH</span>
-              {dealStatus?.key === 'today' && <b class="deal-live">DEAL OF THE DAY · TODAY</b>}
-              {dealStatus?.key === 'upcoming' && <b>DEAL SCHEDULED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
-              {dealStatus?.key === 'past' && <b class="deal-past">FEATURED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
+              <span>CHECK PRICE</span>
+              {dealStatus?.key === 'today' && <b class="deal-live">FEATURED TODAY</b>}
+              {dealStatus?.key === 'upcoming' && <b>FEATURED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
+              {dealStatus?.key === 'past' && <b class="deal-past">PREVIOUSLY FEATURED · {formatPriceWatchDate(product.dailyDealDate)}</b>}
             </div>
-            {verifiedCurrentPrice ? <><strong>${verifiedCurrentPrice.price.toFixed(2)} {verifiedCurrentPrice.currency}</strong><small>Verified current price · {formatPriceWatchDate(verifiedCurrentPrice.date)}. Prices and availability can change.</small></> : <><strong>{product.price}</strong><small>Reference price only. Prices and availability can change. Verify the current offer at the retailer.</small></>}
+            <strong>Check current price at the retailer</strong>
+            <small>Retailer prices, promotions, and availability can change. Follow the product link to see the current offer and confirm details before purchasing.</small>
             {dealStatus && <a class="price-watch-link" href="/price-watch/">See Price Watch context →</a>}
           </div>
 
           <div class="detail-actions">
-            {!product.affiliateDestinationUnverified && <a class="btn primary amazon-btn" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">{product.affiliateLabel ?? 'Check on Amazon'} →</a>}
+            {!product.affiliateDestinationUnverified && <a class="btn primary amazon-btn" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">Check Price at Retailer →</a>}
             <a class="btn secondary" href="/products/">Browse all finds</a>
           </div>
 
