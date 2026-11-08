@@ -22,7 +22,6 @@ const productCards = products.map((product) => {
   const bestFor = escapeHtml(product.bestFor);
   const why = escapeHtml(product.why);
   const watch = escapeHtml(product.watch);
-  const price = escapeHtml(product.price);
   const exactDealAmazonUrl = 'https://www.amazon.com/dp/B0C6XJNKP8/ref=cm_sw_r_as_gl_apa_gl_i_TT11G26RB9T7ADWVK57N?linkCode=ml1&tag=buybetterfi06-20&linkId=e9bec15ede862289c17773f1aff94a3f&gaOptInStatus=true';
   const amazonUrl = product.amazonAsin === 'B0C6XJNKP8'
     ? exactDealAmazonUrl
@@ -41,10 +40,10 @@ const productCards = products.map((product) => {
     <p class="best-for"><strong>Best for:</strong> ${bestFor}</p>
     <p>${why}</p>
     <div class="tradeoff"><strong>Watch:</strong> ${watch}</div>
-    <p class="price"><strong>${price}</strong></p>
+    <p class="price"><strong>Check current price</strong></p>
     <div class="product-actions">
       <a class="shop-btn secondary-shop" href="/products/${slug}/">See our take →</a>
-      <a class="shop-btn amazon-shop" href="${escapeHtml(amazonUrl)}" target="_blank" rel="nofollow sponsored noopener">Check on Amazon →</a>
+      <a class="shop-btn amazon-shop" href="${escapeHtml(amazonUrl)}" target="_blank" rel="nofollow sponsored noopener">Check Price →</a>
     </div>
   </article>`;
 }).join('');
@@ -54,12 +53,12 @@ const productCards = products.map((product) => {
     <div class="container">
       <div class="eyebrow">REAL PRODUCTS · EDITORIALLY EVALUATED</div>
       <h1>Products worth considering.</h1>
-      <p class="lead">Explore specific products, see how we rate their practical fit, understand the tradeoffs, and follow the product link to verify today's price and availability.</p>
+      <p class="lead">Explore specific products, see how we rate their practical fit, understand the tradeoffs, and follow the product link to check the retailer for current price and availability.</p>
       <div class="catalog-note">
         <div><strong>How to use our scores</strong><span>Buy Better Scores summarize our editorial view of practical fit, value, useful features, and tradeoffs. They are not paid ratings.</span></div>
         <a href="/why-we-recommend/">How we recommend →</a>
       </div>
-      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so always confirm the current details on Amazon before buying.</p>
+      <p class="affiliate-notice"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Product availability and prices can change, so check the retailer listing for current price, availability, and terms before buying.</p>
       <h2 class="catalog-heading">Browse products</h2>
       <div class="grid product-grid" set:html={productCards}></div>
     </div>
