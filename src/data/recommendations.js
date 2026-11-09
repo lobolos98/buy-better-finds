@@ -128,11 +128,27 @@ export const recommendationData = {
     ],
     bestFor: 'People who shave their scalp regularly and want a wet/dry electric shaver with a complete accessory bundle',
     skipIf: 'You prefer a manual razor or expect a cartridge-razor-close finish with minimal passes'
+  },
+  'bulova-hartwick-chiming-wall-clock-c4331': {
+    label: 'Traditional pendulum clock with customizable chimes',
+    pros: [
+      'Solid wood case with an Old World walnut finish and decorative carved accents',
+      'Harmonic 2 movement offers Westminster, Ave Maria, or Bim-Bam chimes',
+      'Adjustable volume and automatic night shutoff'
+    ],
+    cons: [
+      'Nearly 30 inches tall, so wall space and placement matter',
+      'Traditional styling will not suit every interior',
+      'Requires one AA and two C batteries, which are not included'
+    ],
+    bestFor: 'Living rooms, entryways, and traditional interiors that can accommodate a statement wall clock',
+    skipIf: 'You prefer a compact, silent, or minimalist wall clock'
   }
 };
 
 const scoreOverrides = {
   "philips-norelco-head-shaver-pro-9000": 8.5,
+  "bulova-hartwick-chiming-wall-clock-c4331": 8.5,
   "sony-wh-1000xm5": 9.2,
   "ninja-af101": 9.1,
   "amazon-basics-46000-btu-patio-heater": 8.7,
