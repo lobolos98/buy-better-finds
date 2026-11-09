@@ -50,6 +50,22 @@ const productsCatalog = [
     bestFor: 'People who shave their scalp regularly and want a wet/dry shaver with a flexible head and accessory bundle',
     why: 'The 360° flexing head, 36 ComfortCut blades and PowerAdapt sensor are designed to follow scalp contours for a close, comfortable shave. The HS9980/40 package includes a rinsing station, mirror, travel case and four replacement blades.',
     watch: 'Not hands-on tested by Buy Better Finds. Results can vary with hair density, and some owners report needing extra passes on coarse growth. The USB-A cable is included, but the power adapter is not.',
+    affiliateLabel: 'Check Amazon offer'
+  },
+  {
+    slug: 'bulova-hartwick-chiming-wall-clock-c4331',
+    name: 'Bulova Hartwick Chiming Wall Clock (C4331)',
+    amazonAsin: 'B001VUU4MM',
+    amazonUrl: 'https://www.amazon.com/dp/B001VUU4MM?tag=buybetterfi06-20',
+    url: 'https://www.amazon.com/dp/B001VUU4MM?tag=buybetterfi06-20',
+    category: 'Home & Kitchen',
+    price: 'Check price',
+    icon: '◷',
+    image: 'https://citizenwatch.widen.net/content/cno3h13qyf/webp/Hartwick.webp?color=F9F8F6&crop=false&height=625&keep=c&quality=80&u=41zuoe&width=500',
+    imageAlt: 'Bulova Hartwick C4331 walnut pendulum wall clock with Roman numeral dial and decorative carved wood case',
+    bestFor: 'Living rooms, entryways, and traditional interiors that can accommodate a large pendulum wall clock',
+    why: 'The C4331 pairs an Old World walnut-finish wood case and curved glass with a Harmonic 2 triple-chime movement. It offers a choice of Westminster, Ave Maria, or Bim-Bam melodies, adjustable volume, and an automatic night shutoff.',
+    watch: 'Not hands-on tested by Buy Better Finds. The clock is nearly 30 inches tall and has an ornate traditional look, so measure the wall and consider whether audible chimes suit the room. One AA and two C batteries are required and are not included.',
     weeklyPick: true,
     affiliateLabel: 'Check Amazon offer'
   },
