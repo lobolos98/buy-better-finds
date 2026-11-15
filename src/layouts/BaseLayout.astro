@@ -10,7 +10,8 @@ const {
   image = '',
   imageAlt = 'Buy Better Finds',
   noindex = false,
-  canonicalUrl = ''
+  canonicalUrl = '',
+  structuredData = null
 } = Astro.props;
 
 const canonical = canonicalUrl
@@ -75,7 +76,7 @@ const socialImage = image
         }
       })();
     </script>
-    <script type="application/ld+json" set:html={JSON.stringify(isHome ? homeStructuredData : { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description, url: canonical.toString(), isPartOf: { '@id': 'https://buybetterfinds.com/#website' }, publisher: { '@id': 'https://buybetterfinds.com/#organization' } })} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData || (isHome ? homeStructuredData : { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description, url: canonical.toString(), isPartOf: { '@id': 'https://buybetterfinds.com/#website' }, publisher: { '@id': 'https://buybetterfinds.com/#organization' } }))} />
   </head>
   <body>
     <Header />
