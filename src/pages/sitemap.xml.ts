@@ -41,6 +41,7 @@ const staticPages = [
   '/guides/grundig-tpms-buying-guide/',
   '/weekly-finds/2026-10-12/',
   '/weekly-finds/2026-10-19/',
+  '/brands/flikeze/',
   '/brands/fntcase/',
   '/brands/piscifun/',
   '/brands/silver-brush/'
@@ -74,6 +75,7 @@ const blogPages = [
   'grundig-s04-vs-s08-tpms-comparison',
   'halloween-decorations-for-your-front-yard',
   'cozeware-mini-split-buying-guide',
+  'flikeze-wellness-recovery-beauty-tech',
   'fntcase-phone-cases-deep-dive',
   'goally-vs-ipad-learning-tablet',
   'piscifun-torrent-lite-combo-deep-dive',
