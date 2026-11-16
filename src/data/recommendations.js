@@ -143,12 +143,28 @@ export const recommendationData = {
     ],
     bestFor: 'Living rooms, entryways, and traditional interiors that can accommodate a statement wall clock',
     skipIf: 'You prefer a compact, silent, or minimalist wall clock'
+  },
+  'vitamix-5200-professional-grade-blender': {
+    label: 'Classic full-size blender with powerful manual control',
+    pros: [
+      '2 HP motor and 64-ounce container support small and large batches',
+      '10 variable speeds plus a High switch allow texture adjustment',
+      'Self-cleaning routine and included tamper help with cleanup and thicker blends'
+    ],
+    cons: [
+      '20.5-inch height needs cabinet clearance',
+      'Manual controls rather than preset blending programs',
+      'Full-size base and tall container require substantial counter or storage space'
+    ],
+    bestFor: 'Households that regularly blend family-size batches and prefer tactile manual control',
+    skipIf: 'You need a compact blender, preset programs, or an appliance that fits under low cabinets'
   }
 };
 
 const scoreOverrides = {
   "philips-norelco-head-shaver-pro-9000": 8.5,
   "bulova-hartwick-chiming-wall-clock-c4331": 8.5,
+  "vitamix-5200-professional-grade-blender": 9.0,
   "sony-wh-1000xm5": 9.2,
   "ninja-af101": 9.1,
   "amazon-basics-46000-btu-patio-heater": 8.7,

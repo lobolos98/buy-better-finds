@@ -35,7 +35,7 @@ const featured = validCatalog.find((product) => product.weeklyPick) ?? validCata
 const rotationStart = '2026-10-14';
 const rotationStartMs = Date.parse(rotationStart + 'T12:00:00Z');
 const alreadyScheduled = new Set(validCatalog.filter(p => p.dailyDealDate).map(p => p.slug));
-const rotationCandidates = validCatalog.filter(p => p.slug && p.image && (p.amazonAsin || (p.amazonUrl && p.amazonUrl.includes('/dp/'))) && !alreadyScheduled.has(p.slug) && !p.weeklyPick);
+const rotationCandidates = validCatalog.filter(p => p.slug && p.image && (p.amazonAsin || (p.amazonUrl && p.amazonUrl.includes('/dp/'))) && !alreadyScheduled.has(p.slug) && !p.weeklyPick && !p.excludeFromDailyDealRotation);
 const rotation = rotationCandidates.slice(0, 30).map((p, i) => ({
   ...p,
   dailyDealDate: new Date(rotationStartMs + i * 86400000).toISOString().slice(0, 10)
