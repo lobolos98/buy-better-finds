@@ -149,6 +149,40 @@ const trending = trendingProducts.slice(0, 4).map((trend) => ({ ...trend, produc
     })();
   </script>
 
+
+  <section class="piscifun-home-black-friday" aria-label="Piscifun Black Friday coupon offer">
+    <div class="container piscifun-home-black-friday-inner">
+      <div class="piscifun-home-bf-copy">
+        <span class="piscifun-home-bf-label">BLACK FRIDAY · PISCIFUN · NOVEMBER 16–27</span>
+        <h2>Save up to 60% at Piscifun</h2>
+        <p>Use code <strong>BF12</strong> for 12% off, <strong>BF30</strong> for 30% off your second item, or <strong>BF60</strong> for 60% off your third item.</p>
+        <div class="piscifun-home-bf-codes" aria-label="Piscifun coupon codes">
+          <span><b>BF12</b> · 12% OFF</span>
+          <span><b>BF30</b> · 2ND ITEM</span>
+          <span><b>BF60</b> · 3RD ITEM</span>
+        </div>
+        <small>Campaign ends November 27, 2026. Check retailer checkout for eligible items and offer terms.</small>
+      </div>
+      <a class="piscifun-home-bf-link" href="/brands/piscifun/">View Piscifun Offers →</a>
+    </div>
+  </section>
+  <style>
+    .piscifun-home-black-friday{padding:25px 0;background:#fff8ed;border-block:1px solid #ead9c4}
+    .piscifun-home-black-friday-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .piscifun-home-bf-copy{min-width:0;flex:1 1 500px}
+    .piscifun-home-bf-label{font-size:.7rem;font-weight:950;letter-spacing:.11em;color:#c8102e}
+    .piscifun-home-black-friday h2{margin:7px 0 8px;color:#142b45;font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.1}
+    .piscifun-home-black-friday p{margin:0 0 12px;max-width:760px;color:#405166;font-size:.92rem;line-height:1.55}
+    .piscifun-home-black-friday p strong{color:#c8102e}
+    .piscifun-home-bf-codes{display:flex;gap:9px;flex-wrap:wrap}
+    .piscifun-home-bf-codes span{padding:7px 10px;background:#fff;border:1px dashed #c8102e;border-radius:6px;color:#405166;font-size:.75rem}
+    .piscifun-home-bf-codes b{color:#c8102e;font-size:.85rem}
+    .piscifun-home-black-friday small{display:block;margin-top:10px;color:#64748b;font-size:.7rem;line-height:1.45}
+    .piscifun-home-bf-link{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:7px;background:#c8102e;color:#fff!important;text-decoration:none;font-size:.85rem;font-weight:900;white-space:nowrap}
+    .piscifun-home-bf-link:hover{background:#a80c25}
+    @media(max-width:600px){.piscifun-home-black-friday-inner{align-items:stretch}.piscifun-home-bf-link{width:100%;box-sizing:border-box}.piscifun-home-bf-codes{display:grid;grid-template-columns:1fr}}
+  </style>
+
   <section class="flikeze-home-promo" aria-label="FliKEZE Black Friday Early Access offer">
     <div class="container flikeze-home-promo-inner">
       <div class="flikeze-home-promo-copy">
