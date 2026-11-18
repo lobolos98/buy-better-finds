@@ -1,46 +1,387 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const productImage = 'https://www.argendon.com/cdn/shop/files/70-pint-commercial-dehumidifier-argendon-sandidry-pro-35c.webp?v=1767503709&width=1600';
+const productUrl = 'https://www.awin1.com/cread.php?awinmid=126513&awinaffid=3119041&ued=https%3A%2F%2Fwww.argendon.com%2Fproducts%2Fcrawl-space-dehumidifier-sandidry-pro-35c';
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  name: 'Argendon SandiDry Pro 35C Review',
+  itemReviewed: {
+    '@type': 'Product',
+    name: 'Argendon SandiDry Pro 35C Crawl Space Dehumidifier',
+    brand: { '@type': 'Brand', name: 'Argendon' }
+  },
+  author: { '@type': 'Organization', name: 'Buy Better Finds' },
+  publisher: { '@type': 'Organization', name: 'Buy Better Finds' },
+  reviewBody: 'A hands-on editorial review covering firsthand operating observations, product specifications, practical considerations, and overall value.'
+};
 ---
-<BaseLayout title="Argendon SandiDry Pro 35C Review — Testing in Progress | Buy Better Finds" description="We are hands-on testing the Argendon SandiDry Pro 35C crawl space dehumidifier. Check back for original photos, real-world results and our independent review." noindex={true}>
-  <article class="article sandidry-preview">
-    <a class="back-link" href="/reviews/">← All Hands-On Reviews</a>
-    <div class="review-status">● HANDS-ON TESTING IN PROGRESS</div>
-    <h1>Argendon SandiDry Pro 35C Review: Testing in Progress</h1>
-    <p class="lead">We have received the SandiDry Pro 35C and are currently evaluating it. Check back soon for our complete, firsthand review.</p>
-    <div class="preview-grid">
-      <div class="product-photo"><img src="https://www.argendon.com/cdn/shop/files/70-pint-commercial-dehumidifier-argendon-sandidry-pro-35c.webp?v=1767503709&width=1946" alt="Argendon SandiDry Pro 35C dehumidifier, manufacturer product photo" width="1000" height="1000" loading="eager" /><small>Image courtesy of Argendon. Original testing photos will be added to the completed review.</small></div>
-      <div class="preview-copy">
-        <h2>Our review is underway</h2>
-        <p>We are taking time to evaluate setup, everyday operation, moisture removal, drainage options, noise and usability. We will share what we actually observe, including strengths and limitations, when testing is complete.</p>
-        <div class="notice"><strong>Full review coming soon</strong><p>Our current target is approximately 2–3 weeks, subject to completing meaningful testing. No verdict or rating has been assigned yet.</p></div>
-        <a class="product-link" href="https://www.awin1.com/cread.php?awinmid=126513&amp;awinaffid=3119041&amp;ued=https%3A%2F%2Fwww.argendon.com%2Fproducts%2Fcrawl-space-dehumidifier-sandidry-pro-35c" target="_blank" rel="sponsored noopener noreferrer">View product details at Argendon →</a>
+<BaseLayout
+  title="Argendon SandiDry Pro 35C Review: Features, Setup & Performance | Buy Better Finds"
+  description="Our in-depth Argendon SandiDry Pro 35C crawl space dehumidifier review, with product video, photo explanations, manufacturer specifications, practical considerations and firsthand observations."
+  pageStructuredData={pageStructuredData}
+>
+  <article class="sandidry-review">
+    <a class="back-link" href="/reviews/">← All Product Reviews</a>
+    <nav class="review-nav" aria-label="Review sections"><a href="#photo-guide">📸 Features</a><a href="#spec-title">📋 Specifications</a><a href="#buy-verdict-title">⭐ Our Score</a><a href="#faq-section">❓ FAQs</a></nav>
+
+    <header class="review-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BUY BETTER FINDS · PRODUCT REVIEW</p>
+        <p class="status">HANDS-ON REVIEW · SAMPLE PROVIDED BY ARGENDON</p>
+        <h1>Argendon SandiDry Pro 35C Review</h1>
+        <p class="hero-lead">A closer look at a crawl space dehumidifier designed for demanding moisture-control applications—with detailed product photos, practical features, and firsthand operating observations.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#photo-guide">Explore the Review</a>
+          <a class="button secondary" href="#photo-guide">Explore the Features</a>
+        </div>
+        <p class="disclosure-short">Argendon provided a complimentary sample for editorial review. This does not guarantee a positive assessment.</p>
       </div>
-    </div>
-    <h2>Manufacturer-listed specifications</h2>
-    <p>These are Argendon's published specifications, not independent measurements or confirmed results from our testing.</p>
-    <div class="specs"><div><strong>Moisture removal</strong><span>35 pints/day (AHAM); 70 pints/day (saturation)</span></div><div><strong>Advertised coverage</strong><span>Up to 1,000 sq. ft.</span></div><div><strong>Drainage</strong><span>Gravity drain and built-in condensate pump</span></div><div><strong>Listed weight</strong><span>40.5 lb</span></div></div>
-    <h2>Our editorial disclosure</h2>
-    <p>Argendon provided this dehumidifier to Buy Better Finds at no cost for review. The complimentary sample does not guarantee a positive review. Our assessment will reflect our own testing and observations. Any affiliate links included in the completed review will be clearly disclosed.</p>
-    <p><a href="/reviews/">Explore our hands-on reviews →</a></p>
+      <figure class="hero-product">
+        <img src={productImage} alt="Argendon SandiDry Pro 35C crawl space dehumidifier" width="1000" height="1000" fetchpriority="high" />
+        <figcaption>Manufacturer product image of the Argendon SandiDry Pro 35C.</figcaption>
+      </figure>
+    </header>
+
+    <section class="video-section hero-video" aria-labelledby="hero-video-title">
+      <div class="section-heading">
+        <p class="eyebrow">QUICK INTRODUCTION</p>
+        <h2 id="hero-video-title">🎬 See the SandiDry Pro 35C</h2>
+        <p>Get a quick look at the SandiDry Pro 35C before exploring its design, controls, drainage options and our hands-on observations.</p>
+      </div>
+      <figure class="video-player">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster={productImage}
+          aria-label="Argendon SandiDry Pro 35C product introduction"
+        >
+          <source src="/videos/SandiDry%20pro%2035c%20Intro%20Video.mp4" type="video/mp4" />
+          Your browser does not support HTML video. You can still explore the product details below.
+        </video>
+        <figcaption>SandiDry Pro 35C introduction video · Use the controls to play.</figcaption>
+      </figure>
+      <p class="media-note">The product introduction provides a quick visual overview. The sections below take a closer look at the unit and our experience using it.</p>
+    </section>
+
+    <section class="quick-take" aria-labelledby="quick-take-title">
+      <div>
+        <p class="eyebrow">AT A GLANCE</p>
+        <h2 id="quick-take-title">What this dehumidifier is designed to do</h2>
+        <p>The SandiDry Pro 35C is marketed as a crawl space and commercial-style dehumidifier. This review looks beyond headline capacity to cover setup, drainage, controls, maintenance and the details buyers should confirm for their own space.</p>
+      </div>
+      <div class="take-points">
+        <div><span class="point-number">01</span><p><strong>Understand the capacity</strong><br />Know what the published pint ratings mean and the conditions behind them.</p></div>
+        <div><span class="point-number">02</span><p><strong>Plan the installation</strong><br />Consider placement, airflow, drainage and electrical requirements.</p></div>
+        <div><span class="point-number">03</span><p><strong>Look at ownership</strong><br />Review access, filter care, condensate handling and ongoing upkeep.</p></div>
+      </div>
+    </section>
+
+    <section class="delivery-story" aria-labelledby="delivery-title">
+      <div class="section-heading">
+        <p class="eyebrow">THE REVIEW, STEP BY STEP · 01</p>
+        <h2 id="delivery-title">📦 Delivery and Unboxing</h2>
+        <p>We begin with the product as it arrived, then move through the unboxing and first inspection. These are photographs and footage of the actual SandiDry Pro 35C received for this review.</p>
+      </div>
+      <figure class="story-figure">
+        <img src="/images/products/20261110_102238.jpg" alt="Argendon SandiDry Pro 35C shipping carton before unboxing" loading="lazy" />
+        <figcaption><strong>The SandiDry Pro 35C as delivered.</strong> The unit arrived in a timely manner in its original Argendon-branded carton. The box identifies the SandiDry Pro35C model and includes an illustration of the dehumidifier. The packaging appeared well prepared for shipment, giving us a positive first impression before opening the box.</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <video controls playsinline preload="metadata" aria-label="Video showing the Argendon SandiDry Pro 35C unboxing and initial look">
+          <source src="/videos/Dehumidifier_product_unboxing_an%E2%80%A6_4fba5df2.mp4" type="video/mp4" />
+          Your browser does not support HTML video.
+        </video>
+        <figcaption><strong>Unboxing and initial look.</strong> This video accompanies the unboxing story, showing the dehumidifier as it is taken out of its packaging and first inspected.</figcaption>
+      </figure>
+    </section>
+
+    <section id="photo-guide" class="photo-guide">
+      <div class="section-heading">
+        <p class="eyebrow">THE REVIEW, STEP BY STEP · 02</p>
+        <h2>🔍 A Closer Look at the Design and Features</h2>
+        <p>Explore the SandiDry Pro 35C from every angle, including its airflow openings, controls, filter access and drainage connections. Captions distinguish what is visible in our photographs from specifications published by Argendon.</p>
+      </div>
+
+      <article class="feature-story">
+        <figure class="story-figure">
+          <img src="/images/products/20261110_102534.jpg" alt="Front view of the gray Argendon SandiDry Pro 35C dehumidifier showing its metal housing and logo" loading="lazy" />
+          <figcaption><strong>Overall appearance and dimensions.</strong> The SandiDry Pro 35C has a tall, upright gray metal housing with a simple front panel and centered Argendon branding. The manufacturer lists the dimensions as 12.9 × 14.14 × 24.55 inches and the weight as 40.5 pounds. Its four 360-degree universal wheels make it easier to reposition the unit. Allow for suitable clearance and access when choosing its location.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_102700.jpg" alt="Three-quarter side view showing the SandiDry Pro 35C side air outlet grille and handle" loading="lazy" />
+          <figcaption><strong>Side air outlets and handles.</strong> The tall black grille assemblies on the sides are identified in Argendon's documentation as the Left Air Outlet and Right Air Outlet. They form part of the unit's air-discharge arrangement. The recessed side areas also provide integrated handholds for moving and positioning the dehumidifier.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_103003.jpg" alt="Close-up of the SandiDry Pro 35C Intelligent Control Panel and digital display window" loading="lazy" />
+          <figcaption><strong>Intelligent Control Panel and Display Window.</strong> The controls are located on the top of the unit for convenient access. The panel includes Power, Up and Down controls, GPP mode, Drain and Lock. The Display Window communicates operating information and settings. The top label also reminds owners to complete the manufacturer's warranty registration before use. Refer to Argendon's manual for the exact operation of each control and indicator.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_102751.jpg" alt="Rear of the SandiDry Pro 35C showing the air intake grille, filter area, pump drain and gravity drain connections" loading="lazy" />
+          <figcaption><strong>Rear Air Intake Grille, filter and drainage connections.</strong> The large rear mesh panel is the Air Intake Grille, with the MERV-1 Air Filter positioned behind it. The lower rear panel brings together the two separately labeled drainage connections: PUMP DRAINAGE and GRAVITY DRAINAGE. This layout makes the air intake and condensate connections easy to identify during inspection and setup.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_103216.jpg" alt="SandiDry Pro 35C rear panel opened to expose the air filter" loading="lazy" />
+          <figcaption><strong>Opening the rear panel for filter access.</strong> This view shows the rear panel opened, exposing the filter area behind the intake grille. It gives buyers a clearer idea of where to access the filter when carrying out routine inspection and maintenance.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_103240.jpg" alt="Close-up view of the SandiDry Pro 35C air filter" loading="lazy" />
+          <figcaption><strong>A closer look at the air filter.</strong> With the panel open, this close-up shows the filter itself. Filter access is an important ownership detail because it allows the intake filter to be inspected and maintained in accordance with the manufacturer's instructions.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_102915.jpg" alt="The two drainage hoses supplied with the SandiDry Pro 35C" loading="lazy" />
+          <figcaption><strong>The two drainage hoses.</strong> This photo shows the separate hoses for the pump-drain and gravity-drain options. Seeing both accessories together helps clarify that the unit offers two different ways to route collected water. The following demonstrations show where each hose connects and how it works.</figcaption>
+        </figure>
+        <figure class="story-figure">
+          <img src="/images/products/20261110_102814.jpg" alt="SandiDry Pro 35C power plug and electrical connection" loading="lazy" />
+          <figcaption><strong>Power plug and electrical connection.</strong> This close-up shows the unit's power plug so buyers can inspect the connection before planning an installation. Check the product label and manufacturer's manual to confirm the required outlet, voltage and circuit; do not rely on the appearance of the plug alone.</figcaption>
+        </figure>
+      </article>
+
+      <div class="drainage-explainer">
+        <h3>Two drainage options, two different purposes</h3>
+        <div class="drainage-columns">
+          <div>
+            <h4>Built-in condensate pump · Pump Drain</h4>
+            <p>The connection labeled PUMP DRAINAGE is used for pump-assisted condensate removal. Argendon specifies a maximum vertical lift of up to 19.6 feet. This can be useful when the water must be routed to a drain positioned higher than the dehumidifier's outlet, within the manufacturer's installation limits.</p>
+          </div>
+          <div>
+            <h4>Gravity drainage · Gravity Drain</h4>
+            <p>The connection labeled GRAVITY DRAINAGE allows water to leave the unit by gravity. The hose must be routed continuously downward to a suitable drain; it cannot be routed uphill like a pump-assisted line. Argendon lists a 6.5-foot gravity drain hose.</p>
+          </div>
+        </div>
+        <p class="media-note">Choose the drainage method that suits the installation and follow the manufacturer's manual for hose installation and drainage requirements.</p>
+      </div>
+    </section>
+
+    <section class="spec-section" aria-labelledby="spec-title">
+      <div class="section-heading">
+        <p class="eyebrow">PUBLISHED PRODUCT INFORMATION</p>
+        <h2 id="spec-title">📋 SandiDry Pro 35C Specifications</h2>
+        <p>These are manufacturer-published specifications, not independent performance measurements.</p>
+      </div>
+      <div class="spec-table-wrap">
+        <table>
+          <tbody>
+            <tr><th scope="row">Model</th><td>SandiDry Pro 35C</td></tr>
+            <tr><th scope="row">Moisture removal</th><td>35 pints per day (AHAM); 70 pints per day (saturation), as listed by the manufacturer</td></tr>
+            <tr><th scope="row">Advertised coverage</th><td>Up to 1,000 sq. ft. (manufacturer claim; actual suitability depends on conditions)</td></tr>
+            <tr><th scope="row">Drainage</th><td>Gravity drain and built-in condensate pump, according to the manufacturer listing</td></tr>
+            <tr><th scope="row">Listed weight</th><td>40.5 lb, according to the manufacturer listing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine-print">Always confirm current specifications, installation instructions, electrical requirements and warranty terms with Argendon before purchase or installation.</p>
+    </section>
+
+    <section class="evaluation">
+      <div class="section-heading">
+        <p class="eyebrow">BUY BETTER FINDS EVALUATION</p>
+        <h2>👍 What Stands Out and What to Consider</h2>
+        <p>Our assessment considers published product information, firsthand operating observations, practical usability and overall value.</p>
+      </div>
+      <div class="evaluation-grid">
+        <div class="evaluation-card positive"><h3>What stands out</h3><ul><li>Published moisture-removal capacity</li><li>Drainage options for different installation needs</li><li>Access to controls and routine maintenance</li><li>Build, handling and installation practicality</li></ul></div>
+        <div class="evaluation-card caution"><h3>Before you install</h3><ul><li>Confirm the right capacity for the actual space and moisture conditions</li><li>Plan a suitable drain route and condensate disposal</li><li>Check electrical and installation requirements</li><li>Review filter maintenance, warranty coverage and service support</li></ul></div>
+      </div>
+    </section>
+
+    <section class="buyer-guide" aria-labelledby="buy-verdict-title">
+      <p class="eyebrow">BEFORE YOU BUY · OUR EDITORIAL VERDICT</p>
+      <h2 id="buy-verdict-title">⭐ Is the SandiDry Pro 35C Worth Considering?</h2>
+      <p class="verdict-lead">The SandiDry Pro 35C makes a compelling case for shoppers who need a dedicated, higher-capacity dehumidifier and want more than one way to manage collected water. Its combination of a metal cabinet, wheeled base, top-mounted controls, accessible rear intake and two drainage choices gives it the feel of equipment designed around a practical installation—not simply a small room appliance scaled up.</p>
+      <p>One of the most useful things about this unit is that its design addresses the details that matter after purchase. The four 360-degree wheels help with positioning a 40.5-pound machine. The Intelligent Control Panel keeps the operating controls together on top, while the rear Air Intake Grille and MERV-1 Air Filter provide a defined point for routine inspection and maintenance. The side air outlets are clearly integrated into the housing, and the overall footprint—12.9 × 14.14 inches at the base, with a height of 24.55 inches according to Argendon—may make placement easier in locations where floor space is limited. Buyers should still allow the clearances required by the manual.</p>
+      <h3>What stood out in our use</h3>
+      <p>We also moved beyond a visual inspection and ran the dehumidifier in an approximately 700-square-foot area. The starting humidity reading was 65%, and we set the target to 60%. During that session, the display moved down to 61% and the unit continued toward the selected target; the compressor stopped when the reading reached 60%, then cycled back on as needed to maintain the setting. That is a useful real-world observation of the controls responding around the selected humidity target. It is not a laboratory capacity test, and results will vary with temperature, air leakage, moisture load, placement and other site conditions.</p>
+      <h3>Drainage flexibility is a meaningful advantage</h3>
+      <p>The two drainage choices are a particularly practical feature. Gravity drainage offers a straightforward route when a suitable drain is below the unit and the hose can maintain a continuous downward slope. When the drain is higher or the route requires water to be lifted, the built-in condensate pump provides another option; Argendon lists a maximum vertical lift of up to 19.6 feet. Having both options gives buyers more flexibility when planning an installation. The route, hose connection and final discharge point still need to follow the manufacturer's instructions.</p>
+      <h3>Why it earns a place on your shortlist</h3>
+      <p>For the right application, the appeal is the complete package: a purpose-built housing, useful mobility, clearly identified controls, a serviceable intake/filter arrangement and flexible condensate management. The manufacturer lists 35 pints per day at AHAM conditions and 70 pints per day at saturation conditions. Those figures describe different test conditions and should not be treated as interchangeable; the AHAM figure is the more useful comparison point when evaluating products on a like-for-like basis. Argendon's advertised coverage is up to 1,000 square feet, but actual suitability depends on the space and moisture conditions—not square footage alone.</p>
+      <div class="verdict-callout">
+        <strong>Our take:</strong> The SandiDry Pro 35C is a strong candidate to consider when you need a dedicated dehumidifier with pump-assisted and gravity drainage options. Its practical design and our initial operating observations are encouraging. The best fit is a buyer who has checked the moisture load, installation location, drainage route and electrical requirements rather than choosing by the advertised coverage number alone.
+      </div>
+      <h3>🏆 The Buy Better Score</h3>
+      <p>After evaluating the product's fit, features, ease of use, practical ownership considerations and current pricing against comparable compact crawl-space dehumidifiers, our Buy Better Score is <strong>9.4 out of 10</strong>.</p>
+      <div class="overall-score" aria-label="Overall Buy Better Score 9.4 out of 10"><span>BUY BETTER SCORE</span><strong>9.4<small>/10</small></strong><em>Excellent — a strong option in its class</em></div>
+      <div class="scorecard" aria-label="Buy Better Score evaluation categories">
+        <div class="score-row"><div><strong>Use-case fit</strong><span>Exactly what was needed for the intended moisture-control application</span></div><b>10/10</b><div class="score-meter" aria-label="10 out of 10"><span style="--score:100%"></span></div></div>
+        <div class="score-row"><div><strong>Useful features</strong><span>Straightforward controls, easy operation and flexible drainage</span></div><b>10/10</b><div class="score-meter" aria-label="10 out of 10"><span style="--score:100%"></span></div></div>
+        <div class="score-row"><div><strong>Practicality</strong><span>Convenient setup, maintenance and operation; weight is a consideration on stairs</span></div><b>9/10</b><div class="score-meter" aria-label="9 out of 10"><span style="--score:90%"></span></div></div>
+        <div class="score-row"><div><strong>Value</strong><span>Competitive current pricing for its capacity, built-in pump and dual-drain flexibility</span></div><b>9/10</b><div class="score-meter" aria-label="9 out of 10"><span style="--score:90%"></span></div></div>
+        <div class="score-row"><div><strong>Tradeoffs</strong><span>The main drawback identified is its 40.5-pound weight when moving between levels</span></div><b>9/10</b><div class="score-meter" aria-label="9 out of 10"><span style="--score:90%"></span></div></div>
+      </div>
+      <p class="score-note">The overall score is the average of the five category scores. The Buy Better Score is our independent editorial assessment—not a retailer rating, customer-review average, laboratory result or paid placement. Affiliate compensation does not determine the score.</p>
+      <div class="buyer-bottom-line">
+        <h3>Who should consider it?</h3>
+        <p>Shoppers managing persistent moisture in a suitable crawl space or comparable application, especially where a built-in pump could simplify condensate routing, should put the SandiDry Pro 35C on their comparison list.</p>
+        <h3>What to confirm before ordering</h3>
+        <ul>
+          <li>That the AHAM capacity and operating range suit the actual moisture load.</li>
+          <li>That the unit has the required clearance, airflow and electrical supply.</li>
+          <li>That the gravity or pump drain can reach an appropriate discharge location.</li>
+          <li>That filter access, routine maintenance, warranty and service arrangements work for your installation.</li>
+        </ul>
+      </div>
+      <a class="button primary" href={productUrl} target="_blank" rel="sponsored noopener noreferrer">Check Product Details at Argendon</a>
+    </section>
+
+    <section id="faq-section" class="faq-section">
+      <p class="eyebrow">COMMON QUESTIONS</p>
+      <h2>❓ SandiDry Pro 35C: Frequently Asked Questions</h2>
+      <details><summary>What do 35-pint AHAM and 70-pint saturation ratings mean?</summary><p>They refer to different testing conditions. Dehumidifier moisture-removal figures can vary substantially with temperature and humidity, so compare ratings measured under the same standard rather than treating them as interchangeable.</p></details>
+      <details><summary>Does the SandiDry Pro 35C have a built-in pump?</summary><p>Argendon's product listing describes both gravity drainage and a built-in condensate pump. Confirm the included configuration and installation instructions with Argendon before purchase.</p></details>
+      <details><summary>What should I check before installing a crawl space dehumidifier?</summary><p>Review the manufacturer's manual for required clearances, airflow, electrical supply, condensate routing, access for maintenance and any site-preparation requirements. Consult a qualified professional when the installation involves electrical or building work outside your expertise.</p></details>
+      <details><summary>Is this a hands-on review?</summary><p>Yes. Buy Better Finds examined the unit and operated it in an approximately 700-square-foot area, recording the starting humidity, selected target and operating response. The review distinguishes those firsthand observations from specifications supplied by the manufacturer. Argendon provided a complimentary sample, but that does not guarantee a positive assessment.</p></details>
+    </section>
+
+    <section class="final-cta">
+      <h2>See the current product details</h2>
+      <p>Review the manufacturer's latest specifications, availability, pricing and warranty information before making a decision.</p>
+      <a class="button primary" href={productUrl} target="_blank" rel="sponsored noopener noreferrer">Check Price at Argendon</a>
+      <p class="affiliate-disclosure">Buy Better Finds may earn a commission if you purchase through our affiliate link, at no additional cost to you. Argendon provided a complimentary product sample for editorial review. Product provision does not determine our conclusions.</p>
+    </section>
   </article>
+
   <style>
-    .sandidry-preview{max-width:1080px;margin:0 auto;padding:42px 22px 70px}
-    .back-link{display:inline-block;margin-bottom:24px;text-decoration:none;font-weight:700}
-    .review-status{display:inline-block;background:#fff0d7;color:#8b4300;border:1px solid #f3cc89;border-radius:999px;padding:8px 13px;font-size:.76rem;font-weight:800;letter-spacing:.07em}
-    .sandidry-preview h1{max-width:850px;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:18px 0}
-    .sandidry-preview .lead{font-size:1.12rem;line-height:1.65;max-width:850px;color:#435066}
-    .preview-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center;margin:32px 0 45px}
-    .product-photo{background:#f6f8fb;border:1px solid #e3e8ef;border-radius:18px;padding:20px;text-align:center}
-    .product-photo img{width:100%;height:auto;display:block;object-fit:contain;border-radius:12px}
-    .product-photo small{display:block;margin-top:12px;color:#5b6574;line-height:1.5}
-    .preview-copy h2{margin-top:0}
-    .preview-copy p{line-height:1.7}
-    .notice{background:#eef5ff;border-left:4px solid #003087;padding:18px 20px;border-radius:8px;margin:22px 0}
-    .notice p{margin:6px 0 0}
-    .product-link{display:inline-block;background:#c8102e;color:white!important;font-weight:800;padding:13px 18px;border-radius:8px;text-decoration:none}
-    .specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 35px}
-    .specs div{border:1px solid #e1e6ec;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
-    .specs span{color:#475569}
-    @media(max-width:720px){.preview-grid,.specs{grid-template-columns:1fr}.sandidry-preview{padding:28px 16px 55px}}
+    .sandidry-review{--navy:#142b4a;--red:#c8102e;--ink:#182538;--muted:#5b6676;--line:#e2e7ee;max-width:1160px;margin:0 auto;padding:30px 22px 76px;color:var(--ink)}
+    .sandidry-review *{box-sizing:border-box}
+    .back-link{display:inline-block;margin:0 0 22px;color:var(--navy);font-weight:750;text-decoration:none}
+    .review-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:center;padding:32px;background:linear-gradient(135deg,#f2f6fb,#fff 65%);border:1px solid var(--line);border-radius:22px}
+    .eyebrow{margin:0 0 10px;color:var(--red);font-size:.76rem;font-weight:850;letter-spacing:.12em}
+    .status{display:inline-block;margin:0 0 14px;padding:7px 11px;background:#fff1d9;border:1px solid #f1d29a;border-radius:999px;color:#814400;font-size:.72rem;font-weight:800;letter-spacing:.04em}
+    .review-hero h1{margin:0 0 16px;color:var(--navy);font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.04;letter-spacing:-.035em}
+    .hero-lead{max-width:620px;color:#465467;font-size:1.08rem;line-height:1.7}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:24px 0}
+    .button{display:inline-flex;justify-content:center;align-items:center;padding:13px 18px;border-radius:9px;font-weight:800;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+    .button:hover{transform:translateY(-1px);box-shadow:0 6px 18px #142b4a1c}
+    .button.primary{background:var(--red);color:#fff!important}
+    .button.secondary{border:1px solid #b9c5d4;color:var(--navy)!important;background:#fff}
+    .disclosure-short,.fine-print,.media-note,.photo-note{font-size:.84rem;color:var(--muted);line-height:1.6}
+    .hero-product{margin:0;padding:18px;background:#fff;border:1px solid var(--line);border-radius:17px;text-align:center}
+    .hero-product img{display:block;width:100%;max-height:440px;object-fit:contain}
+    .hero-product figcaption{margin-top:10px;color:var(--muted);font-size:.78rem;line-height:1.5}
+    .video-section,.photo-guide,.spec-section,.evaluation,.faq-section{margin-top:76px}
+    .delivery-story{margin-top:76px}
+    .feature-story{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .story-figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .story-figure img,.story-figure video{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;background:#f4f6f8}
+    .story-figure figcaption{padding:18px 20px;color:var(--muted);font-size:.94rem;line-height:1.7}
+    .story-figure figcaption strong{display:block;margin-bottom:5px;color:var(--navy);font-size:1rem}
+    .delivery-story>.story-figure{max-width:850px;margin:0 auto 22px}
+    .drainage-explainer{margin-top:24px;padding:25px;background:#f4f6f9;border:1px solid var(--line);border-radius:15px}
+    .drainage-explainer h3{margin:0 0 18px;color:var(--navy);font-size:1.35rem}
+    .drainage-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .drainage-columns h4{margin:0 0 8px;color:var(--navy)}
+    .drainage-columns p{margin:0;color:var(--muted);line-height:1.7}
+    .drainage-explainer .media-note{margin:18px 0 0}
+
+    .section-heading{max-width:780px;margin:0 auto 26px;text-align:center}
+    .section-heading h2,.quick-take h2,.buyer-guide h2,.final-cta h2{margin:0 0 12px;color:var(--navy);font-size:clamp(1.75rem,3.5vw,2.45rem);line-height:1.14}
+    .section-heading>p:last-child{color:var(--muted);line-height:1.7}
+    .video-player{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#0b1422;box-shadow:0 14px 36px #142b4a18}
+    .video-player video{display:block;width:100%;max-height:680px;aspect-ratio:16/9;object-fit:contain;background:#0b1422}
+    .video-player figcaption{padding:12px 16px;background:#f5f7fa;color:var(--muted);font-size:.82rem;text-align:center}
+    .media-placeholder{min-height:310px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:34px;text-align:center;background:linear-gradient(145deg,#122a49,#203e62);border-radius:18px;color:#fff}
+    .review-placeholder{min-height:390px;background:linear-gradient(145deg,#182538,#35465e)}
+    .play-mark{display:grid;place-items:center;width:66px;height:66px;border:2px solid #ffffffa6;border-radius:50%;font-size:1.5rem;padding-left:4px}
+    .media-placeholder strong{font-size:1.2rem}
+    .media-placeholder span{max-width:570px;color:#e1e9f3;line-height:1.6}
+    .media-placeholder code{color:#fff;background:#ffffff20;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}
+    .quick-take{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;margin-top:68px;padding:34px;background:#f5f7fa;border-radius:18px}
+    .quick-take>div:first-child>p:last-child{color:var(--muted);line-height:1.75}
+    .take-points{display:grid;gap:13px}
+    .take-points>div{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;padding:15px;background:#fff;border:1px solid var(--line);border-radius:12px}
+    .point-number{color:var(--red);font-weight:900;font-size:1.05rem}
+    .take-points p{margin:0;color:#536072;line-height:1.55}
+    .take-points strong{color:var(--navy)}
+    .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .photo-card{overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .photo-slot{min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;padding:25px;text-align:center;background:linear-gradient(135deg,#edf2f8,#f8fafc);color:var(--navy)}
+    .photo-slot span{font-size:.7rem;font-weight:900;letter-spacing:.12em;color:var(--red)}
+    .photo-slot strong{font-size:1.05rem}
+    .photo-copy{padding:20px}
+    .photo-copy h3{margin:0 0 8px;color:var(--navy);font-size:1.15rem}
+    .photo-copy p{margin:0;color:var(--muted);line-height:1.65}
+    .photo-note{margin-top:16px;text-align:center}
+    .spec-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+    .spec-table-wrap table{width:100%;border-collapse:collapse}
+    .spec-table-wrap th,.spec-table-wrap td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.55}
+    .spec-table-wrap tr:last-child th,.spec-table-wrap tr:last-child td{border-bottom:0}
+    .spec-table-wrap th{width:30%;background:#f5f7fa;color:var(--navy);font-weight:800}
+    .spec-table-wrap td{color:#485568}
+    .evaluation-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .evaluation-card{padding:24px;border-radius:15px;border:1px solid var(--line)}
+    .evaluation-card.positive{background:#f1f7f4;border-top:4px solid #39815a}
+    .evaluation-card.caution{background:#fff7ed;border-top:4px solid #c47a24}
+    .evaluation-card h3{margin:0 0 12px;color:var(--navy)}
+    .evaluation-card ul{margin:0;padding-left:20px;color:#536072;line-height:1.8}
+    .buyer-guide{margin-top:70px;padding:34px;background:#f4f6f9;border-radius:18px}
+    .buyer-guide p{max-width:900px;color:#536072;line-height:1.75}
+    .buyer-guide .verdict-lead{font-size:1.08rem;color:#34465c;font-weight:600}
+    .buyer-guide h3{margin:26px 0 8px;color:var(--navy);font-size:1.2rem}
+    .verdict-callout{margin:24px 0;padding:20px 22px;border-left:4px solid var(--red);border-radius:0 12px 12px 0;background:#fff;color:#34465c;line-height:1.75}
+    .verdict-callout strong{color:var(--navy)}
+    .overall-score{display:flex;flex-direction:column;align-items:center;gap:5px;margin:20px 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}
+    .overall-score span{font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+    .overall-score strong{font-size:3.2rem;line-height:1;color:var(--navy)}
+    .overall-score strong small{font-size:1.1rem;color:var(--muted)}
+    .overall-score em{font-style:normal;font-weight:700;color:#28734a}
+    .scorecard{display:grid;gap:9px;margin:18px 0}
+    .score-row{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fff}
+    .score-row>div{display:grid;gap:3px}
+    .score-row strong{color:var(--navy)}
+    .score-row span{color:var(--muted);font-size:.84rem;line-height:1.45}
+    .score-row b{flex:0 0 auto;color:#8a5a14;font-size:.82rem;letter-spacing:.03em}
+    .buyer-guide .score-note{font-size:.82rem;color:var(--muted)}
+    .buyer-bottom-line{margin:25px 0;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:12px}
+    .buyer-bottom-line h3{margin:0 0 8px}
+    .buyer-bottom-line h3:not(:first-child){margin-top:20px}
+    .buyer-bottom-line p{margin:0}
+    .buyer-bottom-line ul{margin:8px 0 0;padding-left:22px;color:#536072;line-height:1.75}
+    .buyer-guide .button{margin-top:10px}
+    .faq-section details{padding:18px 2px;border-bottom:1px solid var(--line)}
+    .faq-section summary{cursor:pointer;color:var(--navy);font-weight:800;line-height:1.5}
+    .faq-section details p{margin:12px 0 0;color:var(--muted);line-height:1.7}
+    .final-cta{margin-top:70px;padding:36px;text-align:center;color:#fff;background:var(--navy);border-radius:20px}
+    .final-cta h2{color:#fff}
+    .final-cta>p{max-width:750px;margin:0 auto 20px;color:#e0e7f0;line-height:1.7}
+    .final-cta .button{margin-bottom:18px}
+    .final-cta .affiliate-disclosure{margin:0 auto;color:#cbd5e1;font-size:.78rem}
+
+    /* Editorial visual refresh */
+    .sandidry-review{font-size:18px;line-height:1.72}
+    .sandidry-review p,.sandidry-review li{font-size:1rem}
+    .review-nav{position:sticky;top:10px;z-index:5;display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 0 24px;padding:10px;background:#ffffffed;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 24px #142b4a12;backdrop-filter:blur(10px)}
+    .review-nav a{padding:8px 13px;border-radius:999px;background:#f2f5f9;color:var(--navy);font-size:.88rem;font-weight:800;text-decoration:none;transition:background .2s ease,color .2s ease,transform .2s ease}
+    .review-nav a:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+    .section-heading h2,.quick-take h2,.buyer-guide h2,.final-cta h2{font-size:clamp(2rem,4vw,2.8rem)}
+    .section-heading>p:last-child{font-size:1.06rem}
+    .hero-lead{font-size:1.18rem;line-height:1.75}
+    .story-figure{box-shadow:0 8px 24px #142b4a0c;transition:transform .22s ease,box-shadow .22s ease}
+    .story-figure:hover{transform:translateY(-4px);box-shadow:0 16px 34px #142b4a1c}
+    .story-figure img{transition:transform .35s ease}
+    .story-figure:hover img{transform:scale(1.025)}
+    .story-figure figcaption{font-size:1rem;line-height:1.78}
+    .story-figure figcaption strong{font-size:1.08rem}
+    .quick-take,.drainage-explainer,.buyer-guide{box-shadow:0 10px 30px #142b4a0b}
+    .take-points>div,.evaluation-card,.score-row,.buyer-bottom-line{transition:transform .2s ease,box-shadow .2s ease}
+    .take-points>div:hover,.evaluation-card:hover,.score-row:hover,.buyer-bottom-line:hover{transform:translateY(-3px);box-shadow:0 10px 24px #142b4a12}
+    .button{font-size:.98rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+    .button:hover{transform:translateY(-3px);box-shadow:0 10px 24px #142b4a25}
+    .score-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+    .score-row .score-meter{grid-column:1/-1;height:8px;overflow:hidden;border-radius:99px;background:#e9edf2}
+    .score-meter span{display:block;width:var(--score);height:100%;border-radius:inherit;background:linear-gradient(90deg,#c8102e,#e6a13a)}
+    .overall-score{border:2px solid #e4eaf1;box-shadow:0 12px 30px #142b4a12}
+    .overall-score strong{font-size:4rem}
+    .faq-section details{transition:background .2s ease;padding:20px 14px;border-radius:10px}
+    .faq-section details:hover{background:#f5f7fa}
+    .faq-section summary{font-size:1.04rem}
+    .faq-section details p{font-size:1rem}
+    .final-cta{box-shadow:0 16px 36px #142b4a22}
+    @media(max-width:760px){.sandidry-review{font-size:16px}.review-nav{position:static;justify-content:flex-start}.review-nav a{font-size:.82rem}.story-figure:hover,.take-points>div:hover,.evaluation-card:hover,.score-row:hover{transform:none}.story-figure:hover img{transform:none}.score-row{grid-template-columns:minmax(0,1fr) auto}}
+
+    @media(max-width:760px){.feature-story,.drainage-columns{grid-template-columns:1fr}.delivery-story>.story-figure{margin-bottom:18px}.sandidry-review{padding:22px 15px 55px}.review-hero,.quick-take{grid-template-columns:1fr;padding:22px}.review-hero{gap:22px}.hero-product img{max-height:330px}.photo-grid,.evaluation-grid{grid-template-columns:1fr}.video-section,.photo-guide,.spec-section,.evaluation,.faq-section{margin-top:55px}.video-player video{max-height:420px}.media-placeholder{min-height:250px}.review-placeholder{min-height:290px}.quick-take{margin-top:50px}.buyer-guide,.final-cta{padding:25px 20px}.spec-table-wrap th,.spec-table-wrap td{padding:13px 12px}.spec-table-wrap th{width:37%}}
   </style>
 </BaseLayout>
