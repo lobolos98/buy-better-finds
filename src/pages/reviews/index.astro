@@ -1,42 +1,183 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const featuredReview = {
+  href: '/reviews/argendon-sandidry-pro-35c/',
+  image: 'https://www.argendon.com/cdn/shop/files/70-pint-commercial-dehumidifier-argendon-sandidry-pro-35c.webp?v=1767503709&width=1800',
+  imageAlt: 'Argendon SandiDry Pro 35C crawl space dehumidifier',
+  brand: 'ARGENDON',
+  category: 'HOME IMPROVEMENT · DEHUMIDIFIERS',
+  title: 'Argendon SandiDry Pro 35C Review',
+  description: 'A closer look at setup, drainage options, filter access, product features and firsthand operating observations from our review.',
+  score: '9.4',
+  scoreLabel: 'BUY BETTER SCORE',
+  status: 'HANDS-ON REVIEW'
+};
 ---
-<BaseLayout title="Product Reviews & Evaluations | Buy Better Finds" description="Explore Buy Better Finds product evaluations, research-based reviews, transparent Buy Better Scores, product comparisons, and clearly identified hands-on testing updates.">
-<article class="article">
-<div class="eyebrow">Buy Better Finds Product Reviews</div>
-<h1>Product Reviews &amp; Evaluations</h1>
-<p class="lead">Independent product research. Clear evaluations. More informed shopping.</p>
-<p>Buy Better Finds evaluates products using our Buy Better Score framework. We review available specifications, features, intended uses, practical considerations, value, and tradeoffs to help shoppers understand what a product offers and who it may suit.</p>
-<p>Most evaluations are research-based, not hands-on product tests. We clearly identify hands-on testing when it has actually taken place, and we distinguish firsthand observations from manufacturer information and other research.</p>
-<div class="card" style="margin:2rem 0;padding:1.5rem">
-<h2>How our evaluations work</h2>
-<ul>
-<li>Product research and review of available specifications</li>
-<li>Assessment of intended use, features, practicality, and value</li>
-<li>Clear explanation of strengths, limitations, and tradeoffs</li>
-<li>A Buy Better Score based on our editorial framework</li>
-<li>Transparent affiliate disclosures and testing status</li>
-</ul>
-<p style="margin-bottom:0"><a href="/why-we-recommend/">Read how the Buy Better Score works →</a></p>
-</div>
-<h2>Currently in hands-on testing</h2>
-<div class="card" style="margin:1rem 0 2rem;padding:1.5rem;border-left:4px solid #c8102e">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1.5rem;align-items:center">
-    <a href="/reviews/argendon-sandidry-pro-35c/" aria-label="View Argendon SandiDry Pro 35C testing update" style="display:block;background:#f6f8fb;border-radius:12px;padding:14px">
-      <img src="https://www.argendon.com/cdn/shop/files/70-pint-commercial-dehumidifier-argendon-sandidry-pro-35c.webp?v=1767503709&amp;width=800" alt="Argendon SandiDry Pro 35C crawl space dehumidifier — manufacturer product image" width="800" height="800" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain" />
-    </a>
-    <div>
-      <p style="margin:0 0 .5rem;font-size:.8rem;font-weight:800;letter-spacing:.06em;color:#9a3412">HANDS-ON TESTING IN PROGRESS</p>
-      <h3 style="margin:.25rem 0 .75rem"><a href="/reviews/argendon-sandidry-pro-35c/">Argendon SandiDry Pro 35C Dehumidifier</a></h3>
-      <p>We have received this crawl space dehumidifier and are evaluating it. The completed review will distinguish firsthand observations from product specifications and other research.</p>
-      <p style="margin-bottom:0"><a href="/reviews/argendon-sandidry-pro-35c/">See the testing update →</a></p>
+<BaseLayout
+  title="Product Reviews & Evaluations | Buy Better Finds"
+  description="Explore Buy Better Finds product reviews, hands-on observations, research-based evaluations and transparent Buy Better Scores."
+>
+  <main class="reviews-page">
+    <div class="reviews-topline">
+      <div class="reviews-wrap">
+        <span>BUY BETTER FINDS · PRODUCT REVIEWS</span>
+        <span>INDEPENDENT RESEARCH. CLEARER CHOICES.</span>
+      </div>
     </div>
-  </div>
-</div>
-<p>Explore our <a href="/guides/">buying guides</a> and <a href="/comparisons/">product comparisons</a> for additional research-based shopping guidance.</p>
-<h2>Are you a manufacturer?</h2>
-<p>We consider products for independent editorial review. Sending a product does not guarantee publication or favorable coverage.</p>
-<p><a class="btn primary" href="/review-submissions/">Submit a product for consideration →</a></p>
-<p>Questions? Contact <a href="mailto:info@buybetterfinds.com">info@buybetterfinds.com</a>.</p>
-</article>
+
+    <header class="reviews-masthead reviews-wrap">
+      <p class="reviews-kicker">THE BUY BETTER FINDS REVIEW DESK</p>
+      <h1>Reviews worth<br /><em>a closer look.</em></h1>
+      <p>Thoughtful product evaluations, practical details and clear takeaways to help you decide what deserves a place on your shortlist.</p>
+      <nav class="reviews-nav" aria-label="Review page navigation">
+        <a href="#featured-review">Featured review</a>
+        <a href="#our-approach">How we evaluate</a>
+        <a href="#manufacturers">For manufacturers</a>
+      </nav>
+    </header>
+
+    <section id="featured-review" class="featured-review reviews-wrap" aria-labelledby="featured-title">
+      <a class="featured-image" href={featuredReview.href} aria-label="Read the Argendon SandiDry Pro 35C review">
+        <img src={featuredReview.image} alt={featuredReview.imageAlt} width="1800" height="1300" fetchpriority="high" />
+        <span class="image-corner-label">LATEST REVIEW</span>
+        <span class="image-score"><small>{featuredReview.scoreLabel}</small><strong>{featuredReview.score}<small>/10</small></strong></span>
+      </a>
+      <div class="featured-copy">
+        <p class="review-meta"><span class="meta-dot"></span>{featuredReview.status}<span class="meta-separator">·</span>{featuredReview.category}</p>
+        <p class="brand-line">{featuredReview.brand}</p>
+        <h2 id="featured-title"><a href={featuredReview.href}>{featuredReview.title}</a></h2>
+        <p class="featured-description">{featuredReview.description}</p>
+        <div class="featured-details">
+          <span>📸 Product photos</span>
+          <span>🎬 Video overview</span>
+          <span>⭐ Buy Better Score</span>
+        </div>
+        <a class="review-cta" href={featuredReview.href}>Read the full review <span aria-hidden="true">↗</span></a>
+        <p class="featured-note">Argendon provided a complimentary sample for editorial review. Product provision does not determine our conclusions.</p>
+      </div>
+    </section>
+
+    <section class="review-archive reviews-wrap" aria-labelledby="archive-title">
+      <div class="archive-heading">
+        <div>
+          <p class="reviews-kicker">THE REVIEW ARCHIVE</p>
+          <h2 id="archive-title">Explore our latest evaluations.</h2>
+        </div>
+        <p>Each review brings together useful product details, strengths, tradeoffs and a clear editorial assessment.</p>
+      </div>
+      <a class="archive-feature" href={featuredReview.href}>
+        <div class="archive-thumb"><img src={featuredReview.image} alt="" loading="lazy" /></div>
+        <div class="archive-copy">
+          <p>{featuredReview.category}</p>
+          <h3>{featuredReview.title}</h3>
+          <span>Buy Better Score: <strong>{featuredReview.score}/10</strong></span>
+        </div>
+        <span class="archive-arrow" aria-hidden="true">↗</span>
+      </a>
+      <p class="archive-footnote">More product reviews will be added here as they are published.</p>
+    </section>
+
+    <section id="our-approach" class="approach-section">
+      <div class="reviews-wrap approach-inner">
+        <div class="approach-intro">
+          <p class="reviews-kicker">OUR EDITORIAL APPROACH</p>
+          <h2>Useful details.<br /><em>Honest perspective.</em></h2>
+          <p>Buy Better Finds evaluates products using our Buy Better Score framework. We look beyond marketing claims to explain what a product offers, where it may fit and what shoppers should consider before buying.</p>
+          <a href="/why-we-recommend/" class="approach-link">How the Buy Better Score works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="approach-points">
+          <article><span>01</span><div><h3>Research the details</h3><p>We review available specifications, features, intended uses and product information.</p></div></article>
+          <article><span>02</span><div><h3>Weigh the practicalities</h3><p>We consider usability, ownership, value, strengths, limitations and tradeoffs.</p></div></article>
+          <article><span>03</span><div><h3>Explain the score</h3><p>Our Buy Better Score reflects our editorial framework—not a retailer rating or paid placement.</p></div></article>
+          <article><span>04</span><div><h3>Be clear about testing</h3><p>Most evaluations are research-based. We identify hands-on observations only when they have actually taken place.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="manufacturers" class="manufacturer-section reviews-wrap">
+      <div>
+        <p class="reviews-kicker">FOR BRANDS &amp; MANUFACTURERS</p>
+        <h2>Have a product<br /><em>worth reviewing?</em></h2>
+        <p>We consider products for independent editorial review. Sending a product does not guarantee publication or favorable coverage. Our conclusions and scoring remain editorial decisions.</p>
+      </div>
+      <a class="manufacturer-cta" href="/review-submissions/">Submit a product for consideration <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <p class="contact-line reviews-wrap">Questions about our reviews? Contact <a href="mailto:info@buybetterfinds.com">info@buybetterfinds.com</a>.</p>
+  </main>
 </BaseLayout>
+
+<style>
+  .reviews-page{--navy:#173454;--red:#c8102e;--ink:#1d2a39;--muted:#647184;--line:#e3e8ee;color:var(--ink);background:#fff}
+  .reviews-page *{box-sizing:border-box}
+  .reviews-wrap{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+  .reviews-topline{background:var(--navy);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.12em}
+  .reviews-topline>div{display:flex;justify-content:space-between;gap:18px;padding:12px 0}
+  .reviews-masthead{padding-top:65px;padding-bottom:38px}
+  .reviews-kicker{margin:0 0 13px;color:var(--red);font-size:.72rem;font-weight:900;letter-spacing:.16em}
+  .reviews-masthead h1{margin:0;color:var(--navy);font-size:clamp(3rem,7vw,5.8rem);line-height:.98;letter-spacing:-.055em}
+  .reviews-masthead h1 em,.approach-intro h2 em,.manufacturer-section h2 em{color:var(--red);font-family:Georgia,serif;font-weight:500}
+  .reviews-masthead>p:not(.reviews-kicker){max-width:650px;margin:20px 0 24px;color:var(--muted);font-size:1.15rem;line-height:1.7}
+  .reviews-nav{display:flex;flex-wrap:wrap;gap:10px}
+  .reviews-nav a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--navy);font-size:.85rem;font-weight:750;text-decoration:none;transition:all .2s ease}
+  .reviews-nav a:hover{border-color:var(--navy);background:var(--navy);color:#fff;transform:translateY(-2px)}
+  .featured-review{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(28px,5vw,66px);padding:28px;margin-bottom:92px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#f4f7fa 0%,#fff 72%);box-shadow:0 18px 50px #17345410}
+  .featured-image{position:relative;display:block;min-height:420px;overflow:hidden;border-radius:17px;background:#edf1f5}
+  .featured-image>img{display:block;width:100%;height:100%;min-height:420px;object-fit:contain;transition:transform .45s ease}
+  .featured-image:hover>img{transform:scale(1.045)}
+  .image-corner-label{position:absolute;top:17px;left:17px;padding:9px 12px;border-radius:4px;background:var(--red);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.12em}
+  .image-score{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;gap:2px;min-width:115px;padding:12px 15px;border:1px solid #fff9;border-radius:12px;background:#fffF;color:var(--navy);box-shadow:0 8px 24px #172b4420}
+  .image-score>small{font-size:.58rem;font-weight:900;letter-spacing:.1em}
+  .image-score strong{font-size:2rem;line-height:1.05}
+  .image-score strong small{font-size:.8rem;color:var(--muted)}
+  .featured-copy{padding:12px 8px 12px 0}
+  .review-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:0 0 22px;color:#506075;font-size:.7rem;font-weight:850;letter-spacing:.08em}
+  .meta-dot{width:8px;height:8px;border-radius:50%;background:#258453}
+  .meta-separator{color:#a0a9b5}
+  .brand-line{margin:0 0 8px;color:var(--red);font-size:.75rem;font-weight:900;letter-spacing:.17em}
+  .featured-copy h2{margin:0 0 16px;color:var(--navy);font-size:clamp(2.1rem,4vw,3.3rem);line-height:1.06;letter-spacing:-.04em}
+  .featured-copy h2 a{color:inherit;text-decoration:none}
+  .featured-copy h2 a:hover{color:var(--red)}
+  .featured-description{max-width:560px;color:var(--muted);font-size:1.08rem;line-height:1.75}
+  .featured-details{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
+  .featured-details span{padding:8px 10px;border-radius:8px;background:#edf2f7;color:#344a63;font-size:.78rem;font-weight:750}
+  .review-cta,.manufacturer-cta{display:inline-flex;align-items:center;justify-content:center;gap:24px;padding:15px 19px;border-radius:7px;background:var(--red);color:#fff!important;font-weight:850;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+  .review-cta:hover,.manufacturer-cta:hover{transform:translateY(-3px);background:#a90d27;box-shadow:0 10px 24px #c8102e30}
+  .featured-note{margin:16px 0 0;color:#778292;font-size:.75rem;line-height:1.55}
+  .review-archive{padding-bottom:90px}
+  .archive-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:24px}
+  .archive-heading h2{margin:0;color:var(--navy);font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:-.035em}
+  .archive-heading>p{max-width:390px;margin:0;color:var(--muted);line-height:1.65}
+  .archive-feature{display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:24px;padding:14px;border:1px solid var(--line);border-radius:15px;color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+  .archive-feature:hover{transform:translateY(-3px);box-shadow:0 12px 28px #17345412}
+  .archive-thumb{height:135px;overflow:hidden;border-radius:10px;background:#f1f4f7}
+  .archive-thumb img{width:100%;height:100%;object-fit:contain;transition:transform .3s ease}
+  .archive-feature:hover img{transform:scale(1.05)}
+  .archive-copy>p{margin:0 0 7px;color:var(--red);font-size:.68rem;font-weight:900;letter-spacing:.1em}
+  .archive-copy h3{margin:0 0 8px;color:var(--navy);font-size:1.25rem}
+  .archive-copy>span{color:var(--muted);font-size:.85rem}
+  .archive-copy>span strong{color:var(--navy)}
+  .archive-arrow{padding:0 12px;color:var(--red);font-size:1.5rem}
+  .archive-footnote{margin:15px 0 0;color:#7a8594;font-size:.83rem}
+  .approach-section{padding:76px 0;background:#f5f7fa}
+  .approach-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(35px,7vw,95px);align-items:start}
+  .approach-intro h2,.manufacturer-section h2{margin:0 0 18px;color:var(--navy);font-size:clamp(2.3rem,4.5vw,3.6rem);line-height:1.04;letter-spacing:-.045em}
+  .approach-intro>p:not(.reviews-kicker),.manufacturer-section>div>p:not(.reviews-kicker){color:var(--muted);font-size:1.02rem;line-height:1.8}
+  .approach-link{display:inline-block;margin-top:10px;color:var(--red);font-weight:850;text-decoration:none}
+  .approach-points{display:grid;gap:0}
+  .approach-points article{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid #dce2e9}
+  .approach-points article:first-child{padding-top:0}
+  .approach-points article>span{color:var(--red);font-size:.88rem;font-weight:900}
+  .approach-points h3{margin:0 0 5px;color:var(--navy);font-size:1.08rem}
+  .approach-points p{margin:0;color:var(--muted);line-height:1.65}
+  .manufacturer-section{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-top:78px;padding-bottom:55px}
+  .manufacturer-section>div{max-width:650px}
+  .manufacturer-section h2{font-size:clamp(2.1rem,4vw,3.2rem)}
+  .manufacturer-cta{flex:0 0 auto}
+  .contact-line{padding-bottom:35px;color:var(--muted);font-size:.88rem}
+  .contact-line a{color:var(--navy);font-weight:750}
+  @media(max-width:800px){.featured-review{grid-template-columns:1fr;gap:25px;margin-bottom:65px;padding:18px}.featured-image,.featured-image>img{min-height:320px}.featured-copy{padding:4px 5px 8px}.approach-inner{grid-template-columns:1fr;gap:35px}.manufacturer-section{align-items:flex-start;flex-direction:column;gap:22px}.archive-heading{align-items:flex-start;flex-direction:column;gap:10px}}
+  @media(max-width:560px){.reviews-wrap{width:min(100% - 30px,1180px)}.reviews-topline>div{font-size:.58rem;letter-spacing:.07em}.reviews-topline>div span:last-child{display:none}.reviews-masthead{padding-top:44px}.reviews-masthead h1{font-size:clamp(2.8rem,15vw,4.2rem)}.reviews-masthead>p:not(.reviews-kicker){font-size:1rem}.featured-image,.featured-image>img{min-height:260px}.featured-copy h2{font-size:2.2rem}.featured-description{font-size:1rem}.archive-feature{grid-template-columns:100px 1fr auto;gap:13px;padding:10px}.archive-thumb{height:100px}.archive-copy h3{font-size:1rem}.archive-copy>p{font-size:.58rem}.archive-arrow{padding:0 3px}.archive-copy>span{font-size:.76rem}.approach-section{padding:55px 0}.manufacturer-section{padding-top:58px}}
+  @media(prefers-reduced-motion:reduce){.reviews-page *{scroll-behavior:auto!important;transition:none!important}}
+</style>
