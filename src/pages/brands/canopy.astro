@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Canopy Brand Guide: Humidifiers, Air Quality & Home Wellness | Buy Better Finds';
+const description = 'Explore Canopy home wellness products, including evaporative humidifiers, air purifiers, water filtration and accessories. Compare features, filter costs and what to know before buying.';
+const affiliate = 'https://www.awin1.com/cread.php?s=3968588&v=92525&q=521919&r=3119041';
+const banner = 'https://www.awin1.com/cshow.php?s=3968588&v=92525&q=521919&r=3119041';
+const bedsideImage = 'https://getcanopy.co/cdn/shop/files/2.0_PDP_Exploded_4.jpg?v=1780592952&width=1200';
+const filterImage = 'https://getcanopy.co/cdn/shop/files/2.0_PDP_Filter_3.jpg?v=1781721762&width=1200';
+const nurseryImage = 'https://getcanopy.co/cdn/shop/files/2.0_PDP_Exploded_4.jpg?v=1780592952&width=1200';
+const pageStructuredData = {
+  '@context':'https://schema.org',
+  '@type':'WebPage',
+  name:title,
+  description,
+  url:'https://www.buybetterfinds.com/brands/canopy/',
+  about:{'@type':'Brand',name:'Canopy',url:'https://getcanopy.co/'},
+  isPartOf:{'@type':'WebSite',name:'Buy Better Finds',url:'https://www.buybetterfinds.com/'},
+  breadcrumb:{'@type':'BreadcrumbList',itemListElement:[
+    {'@type':'ListItem',position:1,name:'Home',item:'https://www.buybetterfinds.com/'},
+    {'@type':'ListItem',position:2,name:'Canopy',item:'https://www.buybetterfinds.com/brands/canopy/'}
+  ]}
+};
+---
+<BaseLayout title={title} description={description} image={bedsideImage} structuredData={pageStructuredData}>
+<main class="canopy-shell">
+  <section class="canopy-hero">
+    <div class="canopy-hero-copy">
+      <p class="eyebrow">FEATURED BRAND · HOME WELLNESS</p>
+      <h1>Canopy: A Closer Look at Humidifiers &amp; Home Wellness</h1>
+      <p>Canopy is known for its evaporative humidifiers, but its home-wellness range reaches beyond bedroom humidity. Explore the product categories, understand how the humidifiers work, and compare the details that matter before choosing.</p>
+      <div class="actions"><a class="btn primary" href={affiliate} target="_blank" rel="sponsored nofollow noopener">Shop Canopy ↗</a><a class="btn secondary" href="/blog/canopy-humidifier-buying-guide/">Read the Canopy humidifier buying guide ↗</a></div>
+      <p class="disclosure">Buy Better Finds may earn a commission from qualifying purchases made through sponsored links on this page, at no additional cost to you.</p>
+    </div>
+    <a class="hero-photo" href={affiliate} target="_blank" rel="sponsored nofollow noopener"><img src={bedsideImage} alt="Canopy Bedside Humidifier 2.0 product components and filter design" fetchpriority="high"/><span>Explore Canopy products ↗</span></a>
+  </section>
+
+  <a class="canopy-banner" href={affiliate} target="_blank" rel="sponsored nofollow noopener"><img src={banner} alt="Shop Canopy through Buy Better Finds" loading="lazy" decoding="async"/></a>
+
+  <section class="intro">
+    <p class="eyebrow">THE BRAND AT A GLANCE</p>
+    <h2>Designed around everyday home comfort</h2>
+    <p>Canopy's product range includes humidifiers, air-care products, water-filtration products and accessories. Its humidifiers use an evaporative approach: water is drawn into a filter and a fan moves air through it, releasing moisture without the visible plume associated with many ultrasonic humidifiers.</p>
+  </section>
+
+  <section aria-labelledby="canopy-categories">
+    <h2 id="canopy-categories">Explore Canopy product categories</h2>
+    <div class="category-grid">
+      <article class="category-card"><img src={bedsideImage} alt="Canopy Bedside Humidifier 2.0" loading="lazy"/><div><span class="category-label">BEDROOM &amp; EVERYDAY COMFORT</span><h3>Humidifiers</h3><p>Compare bedside, nursery, large-room and portable options. Room coverage, tank size, run time and filter compatibility are useful starting points.</p><a href="/blog/canopy-humidifier-buying-guide/">Compare Canopy humidifiers →</a></div></article>
+      <article class="category-card"><img src={filterImage} alt="Canopy humidifier filter media and pre-filter" loading="lazy"/><div><span class="category-label">REPLACEMENT &amp; UPKEEP</span><h3>Filters &amp; accessories</h3><p>Check the correct filter for your specific device. Bedside and Nursery models use compatible filter options, while the Large Room model requires its own filter size.</p><a href="/blog/canopy-humidifier-buying-guide/#filter-costs">Understand filter replacement →</a></div></article>
+      <article class="category-card"><img src="https://getcanopy.co/cdn/shop/files/2.0_PDP_Exploded_4.jpg?v=1780592952&width=1200" alt="Canopy humidifier design detail" loading="lazy"/><div><span class="category-label">MORE HOME-WELLNESS OPTIONS</span><h3>Air care &amp; water filtration</h3><p>Canopy also offers air-purification and water-filtration products. Compare the intended use, replacement cartridges and maintenance needs of each device.</p><a href={affiliate} target="_blank" rel="sponsored nofollow noopener">Explore the Canopy range →</a></div></article>
+    </div>
+  </section>
+
+  <section class="feature-band">
+    <div><p class="eyebrow">WHY THE HUMIDIFIER DESIGN STANDS OUT</p><h2>Evaporative moisture, without a visible mist</h2><p>Canopy humidifiers draw air through a water-wicking filter and use a fan to release moisture into the room. The brand highlights features such as dishwasher-safe water-contact components, filter reminders and designs intended to make routine upkeep more manageable.</p><a href="/blog/canopy-humidifier-buying-guide/">See how the technology works →</a></div>
+    <img src={filterImage} alt="Close-up of Canopy Filter 2.0 replacement filter" loading="lazy"/>
+  </section>
+
+  <section>
+    <h2>What to compare before buying</h2>
+    <div class="consider-grid">
+      <article><span>01</span><h3>Room coverage</h3><p>Bedside and Nursery models are listed for rooms up to 500 sq. ft.; the Large Room model is listed for spaces up to 1,000 sq. ft. Match the unit to your actual room and layout.</p></article>
+      <article><span>02</span><h3>Filter replacement</h3><p>Bedside and Nursery filters are generally replaced about every 45 days. Check the current filter price, subscription terms and compatibility before you buy.</p></article>
+      <article><span>03</span><h3>Cleaning routine</h3><p>Canopy says the parts that contact water are dishwasher-safe on many models. Check the instructions for the exact device; the electrical housing is not dishwasher-safe.</p></article>
+      <article><span>04</span><h3>Features you will use</h3><p>Compare tank capacity, run time, controls, night-light or sound features, aroma options and the space available on your nightstand or floor.</p></article>
+    </div>
+  </section>
+
+  <section class="guide-cta"><div><p class="eyebrow">BUY BETTER FINDS BUYING GUIDE</p><h2>Is a Canopy Humidifier Worth Considering?</h2><p>Our in-depth guide compares the Bedside, Nursery and Large Room options, explains filter replacement and highlights the questions worth asking before checkout.</p></div><a href="/blog/canopy-humidifier-buying-guide/">Read the full guide →</a></section>
+
+  <section class="faq" aria-labelledby="canopy-faq"><h2 id="canopy-faq">Canopy: Frequently Asked Questions</h2>
+    <article><h3>What is Canopy best known for?</h3><p>Canopy is especially visible for its evaporative humidifiers, including bedside, nursery and large-room models. The brand also offers other home-wellness and air-care products.</p></article>
+    <article><h3>Do Canopy humidifiers produce visible mist?</h3><p>They use evaporative humidification. Air moves through a water-wicking filter and moisture is released into the room without a visible mist plume.</p></article>
+    <article><h3>How often do Canopy humidifier filters need to be replaced?</h3><p>The manufacturer generally recommends replacing Bedside and Nursery humidifier filters every 45 days. Always confirm the current guidance and the correct filter for your model.</p></article>
+    <article><h3>Does the antimicrobial filter protect people from germs?</h3><p>No. Canopy's product disclaimer says the treatment is intended to inhibit fungal growth within the product and filter. It does not protect users against bacteria, viruses or other disease organisms.</p></article>
+  </section>
+  <p class="fine-print">Affiliate disclosure: Buy Better Finds may earn a commission when you shop through sponsored links, at no additional cost to you. This brand guide is based on published product information and is not a hands-on product review. Product features, availability, filter prices and policies can change; confirm details with Canopy before purchasing.</p>
+</main>
+<style>
+.canopy-shell{max-width:1160px;margin:auto;padding:34px 20px 70px;color:#283746}.canopy-shell h2{font:500 clamp(27px,3vw,38px)/1.15 Georgia,serif;color:#142b45;letter-spacing:-.025em;margin:36px 0 16px}.canopy-shell p{line-height:1.72}.canopy-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:center;background:linear-gradient(120deg,#f2f6f2,#fffaf4);border:1px solid #e3e8e2;border-radius:18px;overflow:hidden;padding:clamp(24px,4vw,46px)}.eyebrow{font-size:11px!important;font-weight:900;letter-spacing:.15em;color:#b43a4c;margin:0 0 13px}.canopy-hero h1{font:500 clamp(34px,4.5vw,54px)/1.04 Georgia,serif;color:#142b45;letter-spacing:-.045em;margin:0 0 17px}.canopy-hero-copy>p:not(.eyebrow){font-size:17px;color:#52616b}.actions{display:flex;gap:11px;flex-wrap:wrap;margin:22px 0}.btn{padding:13px 17px;border-radius:7px;text-decoration:none;font-weight:800}.btn.primary{background:#c8102e;color:white}.btn.secondary{background:white;color:#173a54;border:1px solid #d8e0df}.disclosure,.fine-print{font-size:12px;color:#6c7780}.hero-photo{position:relative;display:block;min-height:320px;background:#fff;border-radius:13px;overflow:hidden}.hero-photo img{width:100%;height:100%;min-height:320px;object-fit:contain;padding:12px}.hero-photo span{position:absolute;bottom:13px;right:13px;background:#c8102e;color:#fff;padding:10px 13px;border-radius:5px;font-size:12px;font-weight:800}.canopy-banner{display:flex;justify-content:center;margin:22px 0 36px;padding:12px;background:#fff;border:1px solid #e4e8e8;border-radius:12px}.canopy-banner img{display:block;width:auto;max-width:100%;height:auto;max-height:180px;object-fit:contain}.intro{max-width:850px;margin:38px auto}.intro h2{margin-top:0}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.category-card{border:1px solid #e0e6e8;border-radius:13px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.category-card>img{width:100%;height:205px;object-fit:contain;background:#f7f8f7;padding:12px}.category-card>div{padding:20px;display:flex;flex-direction:column;flex:1}.category-label{font-size:10px;letter-spacing:.13em;font-weight:900;color:#b43a4c}.category-card h3{font:600 22px Georgia,serif;color:#142b45;margin:9px 0}.category-card p{font-size:14px;color:#596771}.category-card a,.feature-band a{font-weight:800;color:#a52d43;text-decoration:none;margin-top:auto}.feature-band{display:grid;grid-template-columns:1fr .8fr;gap:28px;align-items:center;margin:38px 0;padding:28px;background:#edf3f1;border-radius:15px}.feature-band h2{margin-top:0}.feature-band img{width:100%;height:260px;object-fit:contain;background:#fff;border-radius:10px}.consider-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.consider-grid article{padding:20px;border:1px solid #e1e6e8;border-radius:12px;background:#fff}.consider-grid span{font-size:12px;font-weight:900;color:#c8102e}.consider-grid h3{font:600 19px Georgia,serif;color:#142b45}.consider-grid p{font-size:13px;color:#5c6872}.guide-cta{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:40px 0;padding:27px 30px;background:#142b45;color:#fff;border-radius:14px}.guide-cta h2{color:#fff;margin:0 0 10px}.guide-cta p:not(.eyebrow){color:#e2e9ed;max-width:720px}.guide-cta a{flex-shrink:0;background:#c8102e;color:#fff;text-decoration:none;padding:14px 17px;border-radius:6px;font-weight:800}.faq{padding:26px;background:#f4f6f7;border-radius:13px;border-top:4px solid #c8102e}.faq h2{margin:0 0 22px}.faq article+article{border-top:1px solid #dce2e5;padding-top:15px;margin-top:15px}.faq h3{font-size:17px;color:#142b45;margin:0 0 6px}.faq p{margin:0;color:#586671;font-size:14px}.fine-print{margin-top:28px}@media(max-width:800px){.canopy-hero,.feature-band{grid-template-columns:1fr}.category-grid{grid-template-columns:1fr 1fr}.consider-grid{grid-template-columns:1fr 1fr}.hero-photo,.hero-photo img{min-height:250px}}@media(max-width:560px){.canopy-shell{padding:22px 15px 50px}.category-grid,.consider-grid{grid-template-columns:1fr}.guide-cta{align-items:flex-start;flex-direction:column}.canopy-hero{padding:22px}.canopy-hero h1{font-size:36px}}
+</style>
+</BaseLayout>
