@@ -44,6 +44,7 @@ const staticPages = [
   '/brands/flikeze/',
   '/brands/fntcase/',
   '/brands/piscifun/',
+  '/brands/tidewe/',
   '/brands/silver-brush/',
   '/brands/cozeware/',
   '/brands/rockbros/'
@@ -81,6 +82,7 @@ const blogPages = [
   'fntcase-phone-cases-deep-dive',
   'goally-vs-ipad-learning-tablet',
   'piscifun-torrent-lite-combo-deep-dive',
+  'tidewe-hunting-gear-buying-guide',
   'silver-brush-paintbrushes-compared',
   'triple-bristle-sonic-toothbrush',
   'prunus-j999-retro-speaker',
