@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const picks = [
+  { name: 'Tile Mate Bluetooth Tracker', category: 'EVERYDAY ESSENTIALS', description: 'A useful little tracker for keys, bags, and other everyday essentials. Check phone compatibility and the selected listing before ordering.', bestFor: 'People who are always looking for their keys', image: 'https://m.media-amazon.com/images/I/81SYpSm0gNL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0D63657GY/ref=cm_sw_r_as_gl_apa_gl_i_2N87REJG61WFY1VFVRQW?linkCode=ml1&tag=buybetterfi06-20&linkId=0a7bc990e0a1ca8459af23ece68ef72e&gaOptInStatus=true' },
+  { name: 'LANEIGE Lip Glowy Balm, Sweet Candy', category: 'BEAUTY FAVORITE', description: 'A compact lip-care pick that slips easily into a stocking or small self-care bundle. Confirm the flavor and package on the listing.', bestFor: 'Beauty fans and little self-care treats', image: 'https://m.media-amazon.com/images/I/61A3hPK-npL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B0CZYN6RBZ?tag=buybetterfi06-20' },
+  { name: 'Burt’s Bees Classics Gift Set', category: 'SELF-CARE SET', description: 'A ready-made personal-care set for an easy-to-give stocking or gift-bag addition. Check the current set contents.', bestFor: 'Practical gifts and everyday care', image: 'https://m.media-amazon.com/images/I/91dGmlpvdxL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B00VK5SG46?tag=buybetterfi06-20' },
+  { name: 'BAIMEI IcyMe Jade Roller & Gua Sha Set', category: 'SKINCARE ACCESSORY', description: 'A presentation-friendly accessory for someone who enjoys a skincare routine. Check the current listing for the exact set and contents.', bestFor: 'Skincare fans and pampering bundles', image: 'https://m.media-amazon.com/images/I/71ACduNmVAL._SL1500_.jpg', url: 'https://www.amazon.com/dp/B08RD6S5HF?tag=buybetterfi06-20' },
+  { name: 'Rechargeable Electric Candle Lighters, 2-Pack', category: 'USEFUL EXTRAS', description: 'A practical household extra for candle lovers. Review charging instructions and the manufacturer’s safety guidance.', bestFor: 'Candle fans and useful little upgrades', image: 'https://m.media-amazon.com/images/I/71s0mqypf4L._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B0D4PHGPMN?tag=buybetterfi06-20' },
+  { name: 'PULIDIKI Car Cleaning Gel Putty', category: 'CAR CARE', description: 'A compact car-care extra for reaching dust and debris in tight interior spaces. Follow the product directions and surface guidance.', bestFor: 'Drivers and car-care enthusiasts', image: 'https://m.media-amazon.com/images/I/71WpCXsPbML._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B081T7N948?tag=buybetterfi06-20' },
+  { name: 'LENRUE Compact Bluetooth Speaker', category: 'TECH & MUSIC', description: 'A small speaker for desks, travel, or casual listening. Check the current listing for color, battery, and connectivity details.', bestFor: 'Students, travelers, and music fans', image: 'https://m.media-amazon.com/images/I/610yy0u0QWL.jpg', url: 'https://www.amazon.com/dp/B0CM2WNR7V?tag=buybetterfi06-20' },
+  { name: 'SIMPLETASTE Handheld Electric Milk Frother', category: 'COFFEE CORNER', description: 'A compact extra for coffee, matcha, and other drinks at home. Review package contents and care instructions.', bestFor: 'Coffee and matcha drinkers', image: 'https://m.media-amazon.com/images/I/71PqfP07-rL._AC_SL1500_.jpg', url: 'https://www.amazon.com/dp/B01LNFYCHM?tag=buybetterfi06-20' }
+];
+---
+<BaseLayout title="Stocking Stuffers | Buy Better Finds" description="Thoughtful stocking stuffer ideas, from useful everyday extras and beauty favorites to compact tech and practical little gifts.">
+  <main class="stocking-page">
+    <section class="hero">
+      <div class="wrap hero-content">
+        <p class="eyebrow">THE CHRISTMAS EDIT · 2026</p>
+        <p class="kicker">SMALL GIFTS · SMART FINDS</p>
+        <h1>Stocking Stuffers<br /><em>Worth Finding.</em></h1>
+        <p class="hero-copy">Little surprises, useful extras, and thoughtful finds that make the small gifts feel just as special.</p>
+        <div class="actions">
+          <a class="primary" href="#stocking-picks">Shop stocking stuffers ↓</a>
+          <a class="secondary" href="/categories/seasonal-holidays/christmas/">Explore all Christmas finds ↗</a>
+        </div>
+        <p class="footnote">A little something thoughtful for every stocking.</p>
+      </div>
+    </section>
+    <section class="wrap intro">
+      <p class="eyebrow red">THE LITTLE-GIFT SHORTLIST</p>
+      <h2>Small finds. Plenty of thought.</h2>
+      <p>Explore compact beauty favorites, useful everyday helpers, car-care extras, and little tech finds. Product prices and availability can change, so use Check Price to review the current listing, selected variant, and total before ordering.</p>
+    </section>
+    <section id="stocking-picks" class="wrap product-section">
+      <div class="section-heading"><div><p class="eyebrow red">CURATED STOCKING STUFFERS</p><h2>Little finds to add to the list</h2></div><span>8 PICKS</span></div>
+      <div class="gift-grid">
+        {picks.map((pick, index) => <article class="gift-card">
+          <a class="gift-image" href={pick.url} target="_blank" rel="sponsored nofollow noopener" aria-label={'Check price for ' + pick.name}>
+            <img src={pick.image} alt={pick.name} loading={index < 4 ? 'eager' : 'lazy'} />
+            <span>{String(index + 1).padStart(2, '0')}</span>
+          </a>
+          <div class="gift-copy">
+            <p class="category">{pick.category}</p>
+            <h3>{pick.name}</h3>
+            <p>{pick.description}</p>
+            <p class="best"><strong>Best for:</strong> {pick.bestFor}</p>
+            <a class="check" href={pick.url} target="_blank" rel="sponsored nofollow noopener">Check Price <span>↗</span></a>
+          </div>
+        </article>)}
+      </div>
+      <p class="disclosure">As an Amazon Associate, Buy Better Finds earns from qualifying purchases. Prices and availability may change; check the current listing before ordering.</p>
+    </section>
+    <section class="wrap more">
+      <div><p class="eyebrow">KEEP EXPLORING</p><h2>Still making your Christmas list?</h2><p>Browse the full Christmas collection for cozy home gifts, kitchen favorites, tech, and more ideas across the season.</p></div>
+      <a href="/categories/seasonal-holidays/christmas/">Shop all Christmas Finds ↗</a>
+    </section>
+  </main>
+</BaseLayout>
+<style>
+.stocking-page{background:#fffdf9;color:#142b45;padding-bottom:64px}.wrap{width:min(1160px,calc(100% - 36px));margin:0 auto}.hero{background:radial-gradient(ellipse at 82% 12%,rgba(255,255,255,.95),transparent 32%),linear-gradient(120deg,#f7fbff,#e8f2fb 54%,#fff5f2);padding:76px 0 62px}.hero-content{max-width:1160px}.eyebrow{font:800 .7rem Arial,sans-serif;letter-spacing:.16em;margin:0 0 13px;color:#c8102e}.kicker{font:800 .68rem Arial,sans-serif;letter-spacing:.2em;color:#657b91;margin:0}.hero h1{font:700 clamp(3rem,7vw,5.2rem)/.99 Georgia,'Times New Roman',serif;letter-spacing:-.055em;color:#142b45;margin:15px 0}.hero h1 em{font-weight:500;color:#c8102e}.hero-copy{max-width:610px;line-height:1.75;color:#53677a;font-size:1.02rem}.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}.actions a,.more>a{display:inline-block;padding:13px 17px;text-decoration:none;font:800 .78rem Arial,sans-serif}.primary,.more>a{background:#c8102e;color:white}.secondary{background:white;color:#142b45;border:1px solid #d7e1ea}.footnote{font-size:.74rem;color:#71869a;margin:20px 0 0}.intro{max-width:850px;padding:34px 0 22px}.red{color:#c8102e}.intro h2,.section-heading h2,.more h2{font:500 clamp(1.8rem,4vw,2.5rem)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.035em;margin:0 0 12px;color:#142b45}.intro>p:last-child,.more p:not(.eyebrow){color:#626b74;line-height:1.75;margin:0}.product-section{padding:18px 0 44px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}.section-heading h2{margin:0}.section-heading>span{font:800 .68rem Arial,sans-serif;letter-spacing:.12em;color:#687582}.gift-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.gift-card{border:1px solid #e1e5e9;background:white;min-width:0;display:flex;flex-direction:column}.gift-image{position:relative;display:grid;place-items:center;aspect-ratio:1;background:#fff;padding:14px;overflow:hidden}.gift-image img{width:100%;height:100%;object-fit:contain;display:block}.gift-image span{position:absolute;top:10px;left:10px;background:#142b45;color:white;font:700 .7rem Arial,sans-serif;padding:7px 9px}.gift-copy{display:flex;flex-direction:column;align-items:flex-start;padding:16px;flex:1}.category{font:800 .61rem Arial,sans-serif;letter-spacing:.13em;color:#c8102e;margin:0 0 8px}.gift-copy h3{font:600 1rem/1.4 Arial,sans-serif;color:#142b45;margin:0 0 9px}.gift-copy>p:not(.category){font-size:.82rem;line-height:1.6;color:#66717c;margin:0 0 13px}.gift-copy .best{font-size:.78rem;color:#596168;margin-top:auto}.check{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;width:100%;box-sizing:border-box;padding:11px 12px;background:#c8102e;color:white;text-decoration:none;font:800 .76rem Arial,sans-serif}.disclosure{font-size:.72rem;line-height:1.6;color:#747d85;margin:22px 0 0}.more{display:flex;align-items:center;justify-content:space-between;gap:28px;background:#f1eee8;padding:29px;box-sizing:border-box}.more h2{margin-bottom:9px}.more p:not(.eyebrow){max-width:680px}.more>a{white-space:nowrap;flex-shrink:0}
+@media(max-width:900px){.gift-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:620px){.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gift-copy{padding:11px}.gift-copy h3{font-size:.88rem}.gift-copy>p:not(.category){font-size:.76rem}.gift-image{padding:7px}.hero{padding:48px 0 40px}.hero h1{font-size:clamp(2.8rem,12vw,3.6rem)}.actions{flex-direction:column;max-width:340px}.actions a{text-align:center}.section-heading{align-items:flex-start;flex-direction:column}.more{align-items:stretch;flex-direction:column;padding:22px}.more>a{text-align:center}}
+</style>
