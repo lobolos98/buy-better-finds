@@ -22,6 +22,7 @@ const staticPages = [
   '/comparisons/',
   '/blog/',
   '/gifts/',
+  '/gifts/stocking-stuffers/',
   '/weekly-finds/',
   '/reviews/',
   '/review-submissions/',
