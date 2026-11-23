@@ -108,14 +108,26 @@ const structuredData = [
     </section>
 
     <section id="storefront" class="storefront-section">
-      <div class="section-heading"><p class="eyebrow red">THE MINI STOREFRONT</p><h2>Featured {brandName} products</h2><p>A curated starting point for comparing popular product types. Product details, availability and pricing may change at the retailer.</p></div>
-      <div class="product-grid">
-        {products.map((product) => <article class="product-card">
+      <div class="section-heading"><p class="eyebrow red">THE MINI STOREFRONT</p><h2>Shop individual {brandName} products</h2><p>Browse individual knives, complete sets and storage accessories. Search the catalog or narrow it by product type before opening the exact item at HOSHANHO.</p></div>
+      <div class="store-controls" aria-label="Filter HOSHANHO products">
+        <label class="store-search"><span>Search products</span><input id="brand-product-search" type="search" placeholder="Try chef knife, Nakiri, knife set..." /></label>
+        <label><span>Product type</span><select id="brand-category-filter"><option value="all">All products</option><option value="Individual knives">Individual knives</option><option value="Knife sets">Knife sets</option><option value="Storage & accessories">Storage & accessories</option></select></label>
+        <label><span>Sort by</span><select id="brand-product-sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label>
+      </div>
+      <p class="store-count" id="brand-product-count" aria-live="polite">{products.length} products shown</p>
+      <div class="product-grid" id="brand-product-grid">
+        {products.map((product) => <article class="product-card" data-category={product.category} data-name={product.name.toLowerCase()} data-description={product.description.toLowerCase()} data-price={product.priceValue}>
           <a class="product-image" href={affiliateFor(product.url)} target="_blank" rel="sponsored nofollow noopener noreferrer"><img src={product.image} alt={product.alt} loading="lazy" decoding="async" /></a>
-          <div class="product-copy"><span class="product-type">{product.category}</span><h3>{product.name}</h3><p>{product.description}</p><a href={affiliateFor(product.url)} target="_blank" rel="sponsored nofollow noopener noreferrer">View product details ↗</a></div>
+          <div class="product-copy">
+            <span class="product-type">{product.category}</span><h3>{product.name}</h3><p>{product.description}</p>
+            <div class="product-price">{product.price}</div>
+            {product.priceNote && <small class="price-note">{product.priceNote}</small>}
+            <a class="product-link" href={affiliateFor(product.url)} target="_blank" rel="sponsored nofollow noopener noreferrer">View product at HOSHANHO ↗</a>
+          </div>
         </article>)}
       </div>
-      <a class="all-products" href={affiliateFor(brandUrl)} target="_blank" rel="sponsored nofollow noopener noreferrer">Browse the full {brandName} store ↗</a>
+      <p class="no-products" id="brand-no-products" hidden>No products match that search. Try another keyword or choose “All products.”</p>
+      <div class="store-footer"><p>Prices and availability can change. Listed prices were checked on {lastVerified || 'the date shown above'} and may differ at checkout.</p><a class="all-products" href={affiliateFor('https://www.hoshanho.com/collections/all')} target="_blank" rel="sponsored nofollow noopener noreferrer">Browse all HOSHANHO products ↗</a></div>
     </section>
 
     <section id="about" class="about-section">
@@ -138,6 +150,40 @@ const structuredData = [
   </main>
 </BaseLayout>
 
+<script>
+  const productGrid = document.querySelector('#brand-product-grid');
+  if (productGrid) {
+    const cards = Array.from(productGrid.querySelectorAll('.product-card'));
+    const search = document.querySelector('#brand-product-search');
+    const category = document.querySelector('#brand-category-filter');
+    const sort = document.querySelector('#brand-product-sort');
+    const count = document.querySelector('#brand-product-count');
+    const empty = document.querySelector('#brand-no-products');
+    const filterProducts = () => {
+      const term = (search?.value || '').trim().toLowerCase();
+      const selectedCategory = category?.value || 'all';
+      const visible = cards.filter((card) => {
+        const matchesCategory = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+        const matchesTerm = !term || (card.dataset.name + ' ' + card.dataset.description).includes(term);
+        card.hidden = !(matchesCategory && matchesTerm);
+        return !card.hidden;
+      });
+      const mode = sort?.value || 'featured';
+      visible.sort((a,b) => {
+        if (mode === 'price-low') return Number(a.dataset.price) - Number(b.dataset.price);
+        if (mode === 'price-high') return Number(b.dataset.price) - Number(a.dataset.price);
+        if (mode === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+        return cards.indexOf(a) - cards.indexOf(b);
+      }).forEach((card) => productGrid.appendChild(card));
+      if (count) count.textContent = visible.length + (visible.length === 1 ? ' product shown' : ' products shown');
+      if (empty) empty.hidden = visible.length !== 0;
+    };
+    search?.addEventListener('input',filterProducts);
+    category?.addEventListener('change',filterProducts);
+    sort?.addEventListener('change',filterProducts);
+  }
+</script>
+
 <style>
 .brand-spotlight{--navy:#142b45;--red:#c8102e;--ink:#1f2937;--muted:#596579;max-width:1200px;margin:auto;padding:18px 22px 64px;color:var(--ink)}
 .breadcrumbs{display:flex;gap:9px;font-size:.78rem;color:#64748b;margin:4px 0 18px}.breadcrumbs a{color:var(--navy);text-decoration:none}
@@ -150,11 +196,22 @@ const structuredData = [
 section{scroll-margin-top:100px}.section-heading{max-width:760px;margin-bottom:23px}.section-heading.centered{text-align:center;margin:0 auto 25px}.section-heading h2,.about-section h2,.faq-section h2,.related-section h2{margin:0 0 11px;color:var(--navy);font:600 clamp(1.85rem,3.5vw,2.8rem)/1.08 Georgia,serif}.section-heading>p:last-child{margin:0;color:var(--muted);line-height:1.65}
 .offer-section{margin:34px 0 12px;padding:clamp(22px,4vw,36px);background:#fff7f5;border:1px solid #f0d7d8;border-top:5px solid var(--red)}.offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.offer-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:19px;background:#fff;border:1px solid #e5dfe0;border-radius:8px}.offer-card.offer-featured{border:2px solid var(--red)}.offer-type{font-size:.64rem;font-weight:900;letter-spacing:.12em;color:var(--red)}.offer-card h3{margin:10px 0 7px;color:var(--navy);font:600 1.35rem/1.15 Georgia,serif}.offer-card p{margin:0 0 12px;line-height:1.55;color:var(--muted);font-size:.88rem}.offer-card small{margin:8px 0 14px;color:#64748b;line-height:1.5}.coupon-code{display:flex;align-items:center;gap:10px;padding:8px 11px;background:#f8fafc;border:1px dashed #c8102e}.coupon-code span{font-size:.58rem;font-weight:900;letter-spacing:.12em;color:#64748b}.coupon-code strong{font-size:1.05rem;letter-spacing:.08em;color:var(--red)}.offer-card>a{margin-top:auto;color:var(--red);font-size:.82rem;font-weight:850;text-decoration:none}.verified-note{margin:15px 0 0;font-size:.72rem;color:#64748b}
 .category-section,.storefront-section,.buying-section{padding:42px 0 8px}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.category-card{display:flex;flex-direction:column;min-width:0;padding:14px;border:1px solid #e1e6ed;background:#fff;text-decoration:none;color:var(--ink)}.category-card img{width:100%;height:190px;object-fit:contain;background:#f7f8fa}.category-index{margin:15px 0 7px;color:var(--red);font-size:.63rem;font-weight:900;letter-spacing:.12em}.category-card h3,.product-card h3{margin:0 0 7px;color:var(--navy);font:600 1.25rem/1.2 Georgia,serif}.category-card p,.product-card p{margin:0 0 14px;color:var(--muted);font-size:.87rem;line-height:1.6}.category-card b{margin-top:auto;color:var(--red);font-size:.8rem}
-.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product-card{display:flex;flex-direction:column;min-width:0;border:1px solid #e1e6ed;background:#fff}.product-image{display:flex;align-items:center;justify-content:center;height:235px;padding:14px;background:#f7f8fa}.product-image img{width:100%;height:100%;object-fit:contain}.product-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:17px}.product-type{margin-bottom:8px;color:var(--red);font-size:.63rem;font-weight:900;letter-spacing:.12em}.product-copy a{margin-top:auto;padding-top:12px;color:var(--red);font-size:.8rem;font-weight:850;text-decoration:none}.all-products{display:inline-flex;margin-top:22px;padding:13px 18px;background:var(--navy);color:#fff;text-decoration:none;font-weight:850;font-size:.82rem}
+.store-controls{display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(2,minmax(160px,.8fr));gap:12px;padding:17px;margin:0 0 10px;background:#f3f6f9;border:1px solid #dce4ec}
+.store-controls label{display:flex;flex-direction:column;gap:6px;color:var(--navy);font-size:.72rem;font-weight:850}
+.store-controls input,.store-controls select{width:100%;min-height:43px;padding:0 12px;border:1px solid #cbd5e1;border-radius:0;background:#fff;color:#1f2937;font:inherit;font-weight:500}
+.store-count{margin:0 0 14px;color:#64748b;font-size:.76rem}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.product-card[hidden]{display:none}
+.product-price{margin:0 0 4px;color:var(--navy);font-size:1.05rem;font-weight:900}
+.price-note{color:#64748b;font-size:.68rem;line-height:1.4}
+.product-copy .product-link{display:inline-flex;margin-top:12px;padding:11px 13px;background:var(--red);color:#fff;text-decoration:none;font-size:.76rem;font-weight:900}
+.no-products{padding:25px;background:#f3f6f9;color:#526176;text-align:center}
+.store-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px}
+.store-footer p{margin:0;color:#64748b;font-size:.72rem;line-height:1.5}.product-card{display:flex;flex-direction:column;min-width:0;border:1px solid #e1e6ed;background:#fff}.product-image{display:flex;align-items:center;justify-content:center;height:235px;padding:14px;background:#f7f8fa}.product-image img{width:100%;height:100%;object-fit:contain}.product-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:17px}.product-type{margin-bottom:8px;color:var(--red);font-size:.63rem;font-weight:900;letter-spacing:.12em}.product-copy a{margin-top:auto;padding-top:12px;color:var(--red);font-size:.8rem;font-weight:850;text-decoration:none}.all-products{display:inline-flex;margin-top:22px;padding:13px 18px;background:var(--navy);color:#fff;text-decoration:none;font-weight:850;font-size:.82rem}
 .about-section{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;margin:48px 0;padding:clamp(22px,4vw,36px);background:#f3f6f9;border-left:5px solid var(--red)}.about-section p{margin:0 0 13px;line-height:1.75;color:#475569}.about-section p:last-child{margin-bottom:0}
 .highlight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.highlight-grid article{padding:19px;border:1px solid #e1e6ed;background:#fff}.highlight-grid article>span{color:var(--red);font-size:.68rem;font-weight:900;letter-spacing:.1em}.highlight-grid h3{margin:12px 0 7px;color:var(--navy);font:600 1.15rem Georgia,serif}.highlight-grid p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.65}
 .faq-section{margin:45px 0 20px;padding:clamp(22px,4vw,36px);background:#f3f6f9;border-top:4px solid var(--red)}.faq-section article+article{margin-top:17px;padding-top:17px;border-top:1px solid #d8e0e8}.faq-section h3{margin:0 0 7px;color:var(--navy);font-size:1rem}.faq-section article p{margin:0;color:#526176;line-height:1.7;font-size:.9rem}
 .related-section{margin:35px 0}.related-section>div{display:flex;flex-wrap:wrap;gap:12px}.related-section a{color:var(--red);font-weight:800;font-size:.85rem;text-decoration:none}.fine-print{margin-top:30px;padding-top:17px;border-top:1px solid #e5e7eb;color:#64748b;font-size:.72rem;line-height:1.65}
-@media(max-width:850px){.brand-hero{grid-template-columns:1fr}.hero-photo img{height:260px}.category-grid,.product-grid,.offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-section{grid-template-columns:1fr}.highlight-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.brand-spotlight{padding:12px 13px 42px}.brand-hero{padding:22px 18px}.brand-hero h1{font-size:2.4rem}.hero-photo img{height:220px}.quick-nav{gap:7px}.quick-nav a{font-size:.7rem;padding:8px 10px}.category-grid,.product-grid,.offer-grid,.highlight-grid{grid-template-columns:1fr}.category-card img{height:210px}.product-image{height:220px}.about-section{gap:12px}}
+@media(max-width:850px){.store-controls{grid-template-columns:1fr 1fr}.store-search{grid-column:1/-1}.store-footer{align-items:flex-start;flex-direction:column}.brand-hero{grid-template-columns:1fr}.hero-photo img{height:260px}.category-grid,.product-grid,.offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-section{grid-template-columns:1fr}.highlight-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.store-controls{grid-template-columns:1fr}.store-search{grid-column:auto}.brand-spotlight{padding:12px 13px 42px}.brand-hero{padding:22px 18px}.brand-hero h1{font-size:2.4rem}.hero-photo img{height:220px}.quick-nav{gap:7px}.quick-nav a{font-size:.7rem;padding:8px 10px}.category-grid,.product-grid,.offer-grid,.highlight-grid{grid-template-columns:1fr}.category-card img{height:210px}.product-image{height:220px}.about-section{gap:12px}}
 </style>
