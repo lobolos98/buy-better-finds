@@ -1,0 +1,75 @@
+---
+import BrandSpotlight from '../../components/BrandSpotlight.astro';
+
+const brandName = 'HOSHANHO';
+const brandUrl = 'https://www.hoshanho.com/';
+const affiliateFor = (url) => 'https://www.awin1.com/cread.php?awinmid=124972&awinaffid=3119041&ued=' + encodeURIComponent(url);
+
+const title = 'HOSHANHO Knives Review & Brand Guide | Coupons, Knife Sets & Buying Tips | Buy Better Finds';
+const description = 'Explore HOSHANHO kitchen knives, Japanese-style chef knives, knife sets and magnetic storage. Compare product types, check current verified coupon codes and shop curated picks.';
+
+const heroImage = 'https://www.hoshanho.com/cdn/shop/files/238c4bc0b69bda8657c8b3e678f6b05c_abe8d26d-6203-4e3b-a74a-20a7871b8442_800x.png?v=1786688971';
+const nakiriImage = 'https://www.hoshanho.com/cdn/shop/files/fb0cd118305cd6432f7229edaef1a77f_47236fc7-30de-4f85-812e-7238a56b591d_800x.png?v=1786688978';
+const blockImage = 'https://www.hoshanho.com/cdn/shop/files/bb2374375eb68d46c444ea8fa196946a_800x.jpg?v=1788512016';
+
+const intro = 'HOSHANHO is a kitchenware brand whose catalog centers on kitchen knives, knife sets and practical kitchen accessories. Its official store organizes products by knife type, series and set size, with options ranging from individual chef knives to multi-piece collections and magnetic storage. This guide brings those choices together and highlights the specifications, care instructions, warranty terms and current offers shoppers should review before ordering.';
+
+const offers = [
+  { type: 'BLACK FRIDAY · TIERED COUPON', title: 'Save up to $130 with a spend-based code', details: 'Enter the code that matches your order subtotal: save $20 on $175+, $35 on $250+, $50 on $300+, $85 on $450+, or $130 on $600+.', code: 'BF20 / BF35 / BF50 / BF85 / BF130', terms: 'One code per order; the highest eligible tier applies. Current official sale page says codes apply storewide, including bundles. Confirm final eligibility at checkout.', url: 'https://www.hoshanho.com/pages/black-friday', button: 'Shop Black Friday offers', featured: true },
+  { type: 'AUTOMATIC SHIPPING OFFER', title: 'Free standard shipping over $50', details: 'The official store currently advertises free shipping on orders of $50 or more.', terms: 'Shipping eligibility and delivery details are confirmed by the retailer at checkout.', url: 'https://www.hoshanho.com/pages/black-friday', button: 'Shop HOSHANHO' },
+  { type: 'NEW SUBSCRIBERS', title: '10% off one item by email signup', details: 'The official store advertises 10% off one item when you subscribe to its email list.', terms: 'New email subscribers only; retailer terms apply. This is a signup offer, not a universal coupon code.', url: 'https://www.hoshanho.com/', button: 'Visit HOSHANHO' }
+];
+
+const categories = [
+  { label: 'CHEF & EVERYDAY KNIVES', title: 'Chef knives & single blades', description: 'Compare Gyuto, Santoku, Nakiri, paring and other individual knives by blade shape, length, steel and handle.', image: heroImage, alt: 'HOSHANHO 8-inch Gyuto Japanese chef knife with rosewood handle', url: 'https://www.hoshanho.com/collections/1-piece' },
+  { label: 'KNIFE SETS', title: 'Knife sets & collections', description: 'Browse multi-piece sets and compare which blades, storage pieces and accessories are included in each bundle.', image: nakiriImage, alt: 'HOSHANHO Japanese-style Nakiri kitchen knife', url: 'https://www.hoshanho.com/pages/black-friday' },
+  { label: 'STORAGE & ACCESSORIES', title: 'Knife storage & kitchen accessories', description: 'Explore magnetic knife stands, holders and other kitchen tools. Check dimensions, capacity, materials and countertop footprint.', image: blockImage, alt: 'HOSHANHO double-sided magnetic acacia wood knife stand', url: 'https://www.hoshanho.com/products/14x10-inch-double-sided-magnetic-knife-stand' }
+];
+
+const products = [
+  { category: 'CHEF KNIFE', name: '8-inch Gyuto Japanese Chef Knife – Rosewood Handle', description: 'A versatile chef-knife profile with a layered high-carbon stainless-steel construction and rosewood handle, according to the official listing. Compare blade length, edge geometry and care requirements.', image: heroImage, alt: 'HOSHANHO 8-inch Gyuto Japanese chef knife with rosewood handle', url: 'https://www.hoshanho.com/products/8-inch-japanese-gyuto-chef-knife-9-layers-10cr15comov-high-carbon-steel-kitchen-knife-professional-hand-forged-cooking-knife-with-ergonomic-rosewood-handle-size-8' },
+  { category: 'VEGETABLE KNIFE', name: '7-inch Nakiri Knife, Japanese Steel', description: 'A vegetable-focused knife shape with a scalloped blade and Pakkawood handle. Review the exact blade dimensions, edge design and hand-washing instructions.', image: nakiriImage, alt: 'HOSHANHO 7-inch Nakiri Japanese steel knife', url: 'https://www.hoshanho.com/products/7-nakiri-knife-japanese-steel' },
+  { category: 'KNIFE STORAGE', name: '14 × 10-inch Double-Sided Magnetic Knife Stand', description: 'A countertop storage option made with acacia wood and a concealed magnetic system. Check available counter space and how the stand should be loaded and maintained.', image: blockImage, alt: 'HOSHANHO 14 by 10 inch double-sided magnetic acacia wood knife stand', url: 'https://www.hoshanho.com/products/14x10-inch-double-sided-magnetic-knife-stand' }
+];
+
+const highlights = [
+  { title: 'Match the blade to the task', text: 'Compare chef, Santoku, Nakiri, paring, fillet and carving shapes by the foods and cutting techniques you use most.' },
+  { title: 'Check the steel and edge details', text: 'Look at the exact steel description, hardness, blade length, edge angle and construction on the individual product page.' },
+  { title: 'Plan for care and storage', text: 'The official knife listings recommend hand-washing and drying promptly. Consider a safe storage option and a suitable cutting surface.' },
+  { title: 'Compare complete set contents', text: 'A larger piece count is not automatically better. Check the specific knives, block or magnetic holder, sheaths and accessories included.' },
+  { title: 'Review returns and warranty', text: 'The current official store advertises a 45-day return period and a lifetime warranty against manufacturing defects. Read the full policy before purchase.' },
+  { title: 'Check the checkout total', text: 'Confirm coupon eligibility, shipping, taxes, exclusions and final price at checkout; promotional terms and product availability can change.' }
+];
+
+const faqs = [
+  { question: 'What does HOSHANHO sell?', answer: 'HOSHANHO’s official store features individual kitchen knives, multi-piece knife sets, knife blocks and magnetic storage, plus other kitchen accessories. Its assortment is organized by knife type, series and set size.' },
+  { question: 'Are there HOSHANHO coupon codes?', answer: 'The official Black Friday page currently lists BF20, BF35, BF50, BF85 and BF130. Each code has a different minimum spend, ranging from $175 to $600. The highest eligible tier applies, and the official page says the codes apply storewide, including bundles. Confirm the terms at checkout.' },
+  { question: 'Does HOSHANHO offer free shipping?', answer: 'The official store currently advertises free shipping on orders over $50. Check the shipping page and checkout for current eligibility and delivery details.' },
+  { question: 'What is HOSHANHO’s return and warranty policy?', answer: 'The official Black Friday page advertises 45-day returns and a lifetime warranty against manufacturing defects. Review the retailer’s current Returns & Exchanges and warranty terms for exclusions and instructions.' },
+  { question: 'How should HOSHANHO knives be cleaned?', answer: 'The product listings recommend hand-washing and drying thoroughly immediately after use, then storing the knife in a dry environment. Follow the care instructions for the exact model.' },
+  { question: 'Does Buy Better Finds personally test every HOSHANHO product?', answer: 'No. This brand page is a research-based buying guide using publicly available brand and product information. It does not claim hands-on testing of every product.' }
+];
+
+const related = [
+  { title: 'Browse more Buy Better Finds brand guides', url: '/blog/' },
+  { title: 'Shop Home & Kitchen finds', url: '/categories/home-kitchen/' },
+  { title: 'Explore all coupons & offers', url: '/coupons/' }
+];
+---
+<BrandSpotlight
+  brandName={brandName}
+  brandUrl={brandUrl}
+  title={title}
+  description={description}
+  heroImage={heroImage}
+  heroAlt="HOSHANHO 8-inch Gyuto Japanese chef knife with rosewood handle"
+  intro={intro}
+  affiliateFor={affiliateFor}
+  offers={offers}
+  categories={categories}
+  products={products}
+  highlights={highlights}
+  faqs={faqs}
+  related={related}
+  lastVerified="November 23, 2026"
+/>
