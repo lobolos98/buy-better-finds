@@ -42,6 +42,8 @@ const staticPages = [
   '/guides/grundig-tpms-buying-guide/',
   '/weekly-finds/2026-10-12/',
   '/weekly-finds/2026-10-19/',
+  '/brands/',
+  '/brands/perfumania/',
   '/brands/flikeze/',
   '/brands/fntcase/',
   '/brands/piscifun/',
