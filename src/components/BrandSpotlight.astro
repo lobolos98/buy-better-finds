@@ -17,9 +17,13 @@ const {
   highlights = [],
   faqs = [],
   related = [],
-  lastVerified = ''
+  lastVerified = '',
+  storefrontIntro = 'Browse the brand’s products, compare categories and open the exact item at the retailer.',
+  productSearchPlaceholder = 'Search products...',
+  allProductsUrl = brandUrl
 } = Astro.props;
 
+const productCategories = [...new Set(products.map((product) => product.category))];
 const pageUrl = `https://buybetterfinds.com/brands/${brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`;
 const structuredData = [
   {
@@ -99,10 +103,10 @@ const structuredData = [
     </section>
 
     <section id="storefront" class="storefront-section">
-      <div class="section-heading"><p class="eyebrow red">THE MINI STOREFRONT</p><h2>Shop individual {brandName} products</h2><p>Browse individual knives, complete sets and storage accessories. Search the catalog or narrow it by product type before opening the exact item at HOSHANHO.</p></div>
-      <div class="store-controls" aria-label="Filter HOSHANHO products">
-        <label class="store-search"><span>Search products</span><input id="brand-product-search" type="search" placeholder="Try chef knife, Nakiri, knife set..." /></label>
-        <label><span>Product type</span><select id="brand-category-filter"><option value="all">All products</option><option value="Individual knives">Individual knives</option><option value="Knife sets">Knife sets</option><option value="Storage & accessories">Storage & accessories</option></select></label>
+      <div class="section-heading"><p class="eyebrow red">THE MINI STOREFRONT</p><h2>Shop individual {brandName} products</h2><p>{storefrontIntro}</p></div>
+      <div class="store-controls" aria-label={`Filter ${brandName} products`}>
+        <label class="store-search"><span>Search products</span><input id="brand-product-search" type="search" placeholder="{productSearchPlaceholder}" /></label>
+        <label><span>Product type</span><select id="brand-category-filter"><option value="all">All products</option>{productCategories.map((category) => <option value={category}>{category}</option>)}</select></label>
         <label><span>Sort by</span><select id="brand-product-sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label>
       </div>
       <p class="store-count" id="brand-product-count" aria-live="polite">{products.length} products shown</p>
@@ -113,12 +117,12 @@ const structuredData = [
             <span class="product-type">{product.category}</span><h3>{product.name}</h3><p>{product.description}</p>
             <div class="product-price">{product.price}</div>
             {product.priceNote && <small class="price-note">{product.priceNote}</small>}
-            <a class="product-link" href={affiliateFor(product.url)} target="_blank" rel="sponsored nofollow noopener noreferrer">View product at HOSHANHO ↗</a>
+            <a class="product-link" href={affiliateFor(product.url)} target="_blank" rel="sponsored nofollow noopener noreferrer">View product at {brandName} ↗</a>
           </div>
         </article>)}
       </div>
       <p class="no-products" id="brand-no-products" hidden>No products match that search. Try another keyword or choose “All products.”</p>
-      <div class="store-footer"><p>Prices and availability can change. Listed prices were checked on {lastVerified || 'the date shown above'} and may differ at checkout.</p><a class="all-products" href={affiliateFor('https://www.hoshanho.com/collections/all')} target="_blank" rel="sponsored nofollow noopener noreferrer">Browse all HOSHANHO products ↗</a></div>
+      <div class="store-footer"><p>Prices and availability can change. Listed prices were checked on {lastVerified || 'the date shown above'} and may differ at checkout.</p><a class="all-products" href={affiliateFor(allProductsUrl)} target="_blank" rel="sponsored nofollow noopener noreferrer">Browse all {brandName} products ↗</a></div>
     </section>
 
 
