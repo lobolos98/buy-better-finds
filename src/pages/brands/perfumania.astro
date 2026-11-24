@@ -1,256 +1,150 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandSpotlight from '../../components/BrandSpotlight.astro';
 
-const title = 'Perfumania Review & Brand Guide | Buy Better Finds';
-const description = 'Explore Perfumania, a discount fragrance retailer featuring designer perfumes, colognes, fragrance gift sets and accessories. Learn what to compare before shopping.';
-const home = 'https://perfumania.com/';
-const image = 'https://perfumania.com/cdn/shop/files/Bundle33_Perf.jpg?v=1712147385&width=2000';
+const brandName = 'Perfumania';
+const brandUrl = 'https://perfumania.com/';
+const affiliateFor = (url) => 'https://www.kqzyfj.com/click-101914897-17283060?url=' + encodeURIComponent(url);
 
-const pageStructuredData = [
+const title = 'Perfumania Review & Brand Guide | Designer Fragrances, Gift Sets & Deals | Buy Better Finds';
+const description = 'Explore Perfumania designer perfumes, colognes, fragrance gift sets and current offers. Compare featured fragrance picks, scent profiles and shopping details before you buy.';
+
+const heroImage = 'https://perfumania.com/cdn/shop/files/YSL_GiftSet_Both.png?format=pjpg&v=1787086254&width=1100';
+const heroAlt = 'Yves Saint Laurent four-piece mini fragrance gift set featuring Black Opium, Libre and Mon Paris';
+
+const intro = 'Perfumania is a discount fragrance retailer with a wide selection of designer perfumes, colognes, gift sets and fragrance accessories. Its catalog includes familiar fragrance houses, everyday scents and giftable collections at a range of price points. This guide brings together useful shopping categories, selected products and practical details to compare before ordering.';
+
+const offers = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://buybetterfinds.com/brands/perfumania/#webpage',
-    name: title,
-    description,
-    url: 'https://buybetterfinds.com/brands/perfumania/',
-    isPartOf: { '@id': 'https://buybetterfinds.com/#website' },
-    publisher: { '@id': 'https://buybetterfinds.com/#organization' },
-    about: { '@id': 'https://buybetterfinds.com/brands/perfumania/#brand' },
-    mainEntity: { '@id': 'https://buybetterfinds.com/brands/perfumania/#brand' },
-    inLanguage: 'en-US'
+    type: 'MIX & MATCH PROMOTION',
+    title: 'Buy one eligible fragrance, get the second 50% off',
+    details: 'Perfumania currently advertises a BOGO 50% offer on selected fragrances. The discount applies to the equal- or lesser-priced eligible item.',
+    terms: 'Offer is limited to eligible products and may exclude some designer fragrances. Confirm the eligible items and final discount in your cart.',
+    url: 'https://perfumania.com/collections/bogo-50',
+    button: 'Shop BOGO 50'
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'Brand',
-    '@id': 'https://buybetterfinds.com/brands/perfumania/#brand',
-    name: 'Perfumania',
-    url: home,
-    description: 'A discount fragrance retailer offering designer perfumes, colognes, fragrance gift sets and related accessories.'
+    type: 'BUNDLE SAVINGS',
+    title: 'Compare fragrance bundles',
+    details: 'Bundle & Save collections pair selected fragrances and may offer a lower combined price than buying each item separately.',
+    terms: 'Bundle contents, savings and availability vary by listing. Compare the exact bottles, sizes and final cart total.',
+    url: 'https://perfumania.com/collections/bundle-deals-perfumes',
+    button: 'Shop bundle deals',
+    featured: true
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://buybetterfinds.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Brands', item: 'https://buybetterfinds.com/brands/' },
-      { '@type': 'ListItem', position: 3, name: 'Perfumania', item: 'https://buybetterfinds.com/brands/perfumania/' }
-    ]
+    type: 'THREE-FRAGRANCE OFFER',
+    title: 'Choose three eligible scents for $99',
+    details: 'Perfumania currently lists a mix-and-match 3 for $99 collection for selected perfumes and colognes.',
+    terms: 'Only participating products qualify. Verify the promotion is applied to all three selected items before checkout.',
+    url: 'https://perfumania.com/collections/3-for-99-deal',
+    button: 'Shop 3 for $99'
   }
 ];
 
 const categories = [
   {
-    number: '01',
-    title: 'Women’s fragrances',
-    description: 'Compare perfume formats, fragrance families, bottle sizes and concentrations. Consider whether you prefer fresh, floral, fruity, warm or woody scent profiles.'
+    label: 'WOMEN’S FRAGRANCES',
+    title: 'Perfumes for women',
+    description: 'Explore floral, fruity, fresh, warm and gourmand scent profiles from designer and value-focused fragrance labels.',
+    image: 'https://perfumania.com/cdn/shop/files/bgoddes.jpg?v=1726070164&width=700',
+    alt: 'Burberry Goddess Eau de Parfum bottle and box',
+    url: 'https://perfumania.com/collections/womens-perfume'
   },
   {
-    number: '02',
-    title: 'Men’s colognes',
-    description: 'Explore cologne and fragrance options across fresh, aromatic, woody, spicy and other scent directions. Check concentration and size before comparing prices.'
+    label: 'MEN’S COLOGNES',
+    title: 'Colognes for men',
+    description: 'Compare fresh, woody, aromatic and warm-spicy options. Check concentration, bottle size and the exact fragrance version.',
+    image: 'https://perfumania.com/cdn/shop/files/Azzaro_themostwanted_34.jpg?v=1759754999&width=2048',
+    alt: 'Azzaro The Most Wanted Parfum bottle',
+    url: 'https://perfumania.com/collections/mens-colognes'
   },
   {
-    number: '03',
-    title: 'Designer fragrance brands',
-    description: 'Perfumania lists well-known fragrance names alongside other labels. Compare the exact fragrance, concentration, bottle size and seller details rather than relying on the brand name alone.'
-  },
-  {
-    number: '04',
+    label: 'GIFTABLE FINDS',
     title: 'Fragrance gift sets',
-    description: 'Gift sets can combine a fragrance with travel sizes, body products or complementary scents. Review every included item and the total volume to judge the value.'
-  },
-  {
-    number: '05',
-    title: 'Bundles and special offers',
-    description: 'Multi-item offers can reduce the per-item cost, but eligibility may vary by product and promotion. Check mix-and-match rules, exclusions and the final cart total.'
-  },
-  {
-    number: '06',
-    title: 'Fragrance accessories',
-    description: 'Explore related accessories and giftable extras, checking dimensions, compatibility and what is included before ordering.'
+    description: 'Shop coordinated fragrance sets and mini collections. Review every included scent, bottle size and accompanying product.',
+    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
+    alt: 'Camille Rochelle four-piece mini fragrance gift set',
+    url: 'https://perfumania.com/collections/fragrance-gift-sets'
   }
+];
+
+const products = [
+  {
+    category: 'Women’s fragrance',
+    name: 'Yves Saint Laurent Black Opium Eau de Parfum',
+    description: 'A warm, sweet fragrance built around coffee and jasmine, with pear, pink pepper and orange blossom at the opening and vanilla, patchouli and woods in the base. Multiple bottle sizes are listed; check the selected size and stock status.',
+    image: 'https://perfumania.com/cdn/shop/products/Yves-Saint-Laurent-Black-Opium-Womens-Eau-De-Parfum-EDP-Spray-3-oz.-Best-Price-Fragrance-Parfume-FragranceOutlet.com-details.jpg?format=pjpg&v=1773156491&width=1100',
+    alt: 'Yves Saint Laurent Black Opium Eau de Parfum bottle and box',
+    url: 'https://perfumania.com/products/yves-saint-laurent-black-opium-perfume-for-women',
+    price: '$82.95',
+    priceValue: 82.95,
+    priceNote: 'Perfumania listing checked Nov. 24, 2026; selected sizes and availability can change.'
+  },
+  {
+    category: 'Men’s fragrance gift set',
+    name: 'Camille Rochelle 4-Piece Mini Gift Set',
+    description: 'A four-scent mini collection with Cobalt Intense, Cognac Haze, Coast and Platinum Eau de Parfum. A useful format for sampling several profiles or giving a fragrance-focused gift.',
+    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
+    alt: 'Camille Rochelle four-piece mini gift set with four fragrance bottles',
+    url: 'https://perfumania.com/products/camille-rochelle-4-piece-mini-gift-set',
+    price: '$90.00',
+    priceValue: 90,
+    priceNote: 'Perfumania listing checked Nov. 24, 2026; confirm availability before ordering.'
+  },
+  {
+    category: 'Women’s fragrance gift set',
+    name: 'YSL 4-Piece Mini Gift Set',
+    description: 'A compact set featuring Black Opium, Libre, Mon Paris and Libre Intense Eau de Parfum minis. Compare the included fragrance names and individual vial sizes before choosing.',
+    image: 'https://perfumania.com/cdn/shop/files/YSL_GiftSet_Both.png?format=pjpg&v=1787086254&width=1100',
+    alt: 'YSL four-piece mini gift set with Black Opium, Libre and Mon Paris fragrances',
+    url: 'https://perfumania.com/products/ysl-4-piece-mini-gift-set',
+    price: '$77.95',
+    priceValue: 77.95,
+    priceNote: 'Perfumania listing checked Nov. 24, 2026; confirm availability before ordering.'
+  }
+];
+
+const highlights = [
+  { title: 'Compare the exact scent', text: 'Fragrance names can have several editions and flankers. Check the full product name and scent version so you compare the same fragrance.' },
+  { title: 'Check concentration and size', text: 'Eau de parfum, eau de toilette and parfum are different formats. Compare concentration and milliliters or fluid ounces before judging the price.' },
+  { title: 'Read the scent notes', text: 'Look at top, middle and base notes, but remember fragrance develops differently on different skin. If possible, sample before committing to a full bottle.' },
+  { title: 'Review gift-set contents', text: 'Check each included item, bottle size and whether the set contains full-size products, travel sprays or mini vials.' },
+  { title: 'Check current promotions', text: 'BOGO and bundle offers may apply only to selected products. Confirm exclusions, mix-and-match rules and discount application in the cart.' },
+  { title: 'Review shipping and returns', text: 'Perfumania’s policy pages describe shipping thresholds and conditions for unopened returns. Read the current terms before placing an order.' }
 ];
 
 const faqs = [
-  {
-    question: 'What is Perfumania?',
-    answer: 'Perfumania is a fragrance retailer specializing in designer perfumes, colognes, fragrance gift sets and related accessories. Its website offers online shopping, while the company also operates physical retail locations.'
-  },
-  {
-    question: 'What fragrance brands can shoppers find at Perfumania?',
-    answer: 'The retailer features a changing selection of designer and other fragrance labels. Examples highlighted in its affiliate program information include Vince Camuto, Gucci, Creed, Marc Jacobs, Calvin Klein, Versace and Dolce & Gabbana. Product availability can change.'
-  },
-  {
-    question: 'Are Perfumania fragrances authentic?',
-    answer: 'Perfumania describes its assortment as genuine designer fragrances. Shoppers should review the retailer’s current product information, policies and order details, and contact the retailer directly if they have questions about a specific item.'
-  },
-  {
-    question: 'Are fragrance gift sets a good value?',
-    answer: 'They can be, particularly when you want a coordinated gift or multiple formats of the same scent. Compare the included products, total fragrance volume, sizes and current standalone prices before deciding.'
-  },
-  {
-    question: 'What should I check before buying perfume online?',
-    answer: 'Confirm the fragrance name, concentration, bottle size, intended recipient, scent notes, seller and return terms. Fragrance preferences are personal, so consider whether you already know the scent or can sample it before purchasing.'
-  },
-  {
-    question: 'Does Perfumania run promotions?',
-    answer: 'Perfumania advertises rotating offers such as bundles, multi-buy promotions, clearance selections and seasonal deals. Terms and eligible products can change, so verify the current offer on the retailer’s website before checkout.'
-  }
+  { question: 'What does Perfumania sell?', answer: 'Perfumania sells designer and value-focused perfumes, colognes, fragrance gift sets, body sprays and related accessories for a range of shoppers and budgets.' },
+  { question: 'Does Perfumania carry designer fragrance brands?', answer: 'Yes. Its catalog includes well-known fragrance labels such as Yves Saint Laurent, Gucci, Versace, Burberry, Calvin Klein, Dolce & Gabbana and other brands. Product selection changes over time.' },
+  { question: 'Does Perfumania offer fragrance deals?', answer: 'Perfumania advertises rotating promotions that can include buy-one-get-one offers, multi-fragrance deals and bundles. Eligibility and terms vary, so check the live promotion page and final cart total.' },
+  { question: 'Are fragrance gift sets worth considering?', answer: 'They can be useful for gifting or trying several formats of a familiar scent. Compare the exact products and sizes included with the cost of buying those items separately.' },
+  { question: 'What should I compare before buying perfume online?', answer: 'Check the full fragrance name, concentration, bottle size, scent notes, included accessories, shipping cost and return conditions. Fragrance preferences are personal, so sampling is helpful when possible.' },
+  { question: 'Does Buy Better Finds personally test every Perfumania product?', answer: 'No. This page is a research-based brand guide using publicly available retailer and product information. It does not claim hands-on testing or independent authentication of every product listed.' }
+];
+
+const related = [
+  { title: 'Browse more Buy Better Finds brand guides', url: '/brands/' },
+  { title: 'Explore Beauty & Personal Care', url: '/categories/beauty-personal-care/' },
+  { title: 'Read more shopping guides', url: '/blog/' }
 ];
 ---
-
-<BaseLayout title={title} description={description} image={image} imageAlt="Perfumania fragrance gift pairing" structuredData={pageStructuredData}>
-<main class="perfumania-page">
-  <header class="brand-hero">
-    <div class="hero-copy">
-      <p class="eyebrow">BUY BETTER FINDS · FEATURED BRAND</p>
-      <p class="hero-kicker">Designer fragrances and giftable finds</p>
-      <h1>Perfumania Review &amp; Brand Guide: Fragrances, Gift Sets &amp; Shopping Tips</h1>
-      <p class="hero-intro">Shopping for a designer perfume, everyday cologne or fragrance gift? This independent Perfumania brand guide looks at the retailer’s fragrance selection, gift sets, bundles and promotional offers—and the details worth comparing before you buy.</p>
-      <div class="hero-actions">
-        <a class="button button-light" href="/brands/">Explore all brand guides</a>
-      </div>
-      <p class="hero-note">Shopping research · Product details and promotions can change</p>
-    </div>
-    <div class="hero-photo">
-      <img src={image} alt="Perfumania fragrance gift pairing featuring two perfume bottles" fetchpriority="high" />
-      <span>Fragrance gift inspiration</span>
-    </div>
-  </header>
-
-  <nav class="quick-nav" aria-label="Perfumania brand guide sections">
-    <a href="#overview">About Perfumania</a>
-    <a href="#categories">Shop by category</a>
-    <a href="#buying-guide">What to compare</a>
-    <a href="#offers">Deals &amp; promotions</a>
-    <a href="#faqs">FAQs</a>
-  </nav>
-
-  <section id="overview" class="intro-section">
-    <div class="section-heading">
-      <p class="eyebrow red">THE BRAND AT A GLANCE</p>
-      <h2>A fragrance retailer with designer names and value-focused offers</h2>
-    </div>
-    <p>Perfumania specializes in discounted designer fragrances, including perfumes, colognes, gift sets and related accessories. Its assortment features familiar fragrance houses alongside other labels, giving shoppers a range of scent styles and price points to explore.</p>
-    <p>The retailer highlights both online shopping and physical stores. Its current website features categories such as women’s fragrances, men’s fragrances, best sellers, new arrivals, clearance, gift sets and bundle offers. Selection, pricing and promotions may change over time, so check the live product listing for the latest details.</p>
-  </section>
-
-  <section class="brand-assessment" aria-labelledby="perfumania-assessment-title">
-    <div class="section-heading">
-      <p class="eyebrow red">INDEPENDENT BUYING ASSESSMENT</p>
-      <h2 id="perfumania-assessment-title">Perfumania: what shoppers should know</h2>
-    </div>
-    <p><strong>What stands out:</strong> Perfumania brings together a broad mix of fragrance categories, recognizable designer labels, gift sets and multi-item promotions. That makes it a retailer worth comparing when you already have a scent, brand or gift budget in mind.</p>
-    <p><strong>What to compare:</strong> Fragrance listings can vary by concentration, bottle size, packaging and included extras. A lower displayed price is not automatically the best value if the bottle is smaller or the product differs from the one you intended to buy.</p>
-    <p><strong>Is Perfumania worth considering?</strong> It may be useful for shoppers comparing designer fragrance prices and gift options. The right choice depends on the exact fragrance, current price, shipping costs, return terms and whether the scent suits the person receiving it.</p>
-    <p><strong>Authenticity and retailer information:</strong> Perfumania describes its products as genuine designer fragrances. Review the retailer’s current policies and product details, and contact Perfumania directly if you need clarification about a specific listing or order.</p>
-    <p class="assessment-method"><strong>How we approach this guide:</strong> This is a research-based overview of publicly available retailer and product information. It is not a claim that Buy Better Finds has personally tested or independently authenticated every fragrance listed by the retailer.</p>
-  </section>
-
-  <section id="categories" class="category-section">
-    <div class="section-heading centered">
-      <p class="eyebrow red">EXPLORE THE ASSORTMENT</p>
-      <h2>Shop Perfumania by category</h2>
-      <p>Start with the type of fragrance or shopping occasion you have in mind.</p>
-    </div>
-    <div class="category-grid">
-      {categories.map((category) => (
-        <article class="category-card">
-          <span class="category-index">{category.number} / FRAGRANCE SHOPPING</span>
-          <h3>{category.title}</h3>
-          <p>{category.description}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="featured-section">
-    <div class="section-heading">
-      <p class="eyebrow red">BRANDS TO LOOK FOR</p>
-      <h2>Designer fragrance names featured by Perfumania</h2>
-      <p>The affiliate program introduction highlights a selection of well-known fragrance brands. Availability and specific product ranges may vary.</p>
-    </div>
-    <div class="brand-name-list">
-      <span>Vince Camuto</span>
-      <span>Gucci</span>
-      <span>Creed</span>
-      <span>Marc Jacobs</span>
-      <span>Calvin Klein</span>
-      <span>Versace</span>
-      <span>Dolce &amp; Gabbana</span>
-    </div>
-  </section>
-
-  <section id="buying-guide" class="buying-section">
-    <div class="section-heading">
-      <p class="eyebrow red">BEFORE YOU CHECK OUT</p>
-      <h2>How to compare fragrances and find better value</h2>
-      <p>A few details can make a meaningful difference when comparing fragrance listings.</p>
-    </div>
-    <div class="check-grid">
-      <article><span>01</span><div><h3>Confirm the exact fragrance</h3><p>Check the full product name, flanker or edition, and whether the listing is for the scent you recognize.</p></div></article>
-      <article><span>02</span><div><h3>Compare concentration</h3><p>Eau de parfum, eau de toilette, parfum and cologne are not interchangeable labels. Compare the concentration shown on the exact product.</p></div></article>
-      <article><span>03</span><div><h3>Check bottle size</h3><p>Compare the volume in milliliters or fluid ounces. A smaller bottle can make a discounted price less compelling.</p></div></article>
-      <article><span>04</span><div><h3>Read gift-set contents</h3><p>Check the sizes and number of items included. Confirm whether the set contains a full-size fragrance, minis or complementary body products.</p></div></article>
-      <article><span>05</span><div><h3>Review promotion terms</h3><p>Look for eligible products, mix-and-match rules, exclusions, offer dates and whether discounts apply automatically at checkout.</p></div></article>
-      <article><span>06</span><div><h3>Calculate the final cost</h3><p>Include shipping, taxes and any minimum-spend requirements when comparing the final price with other retailers.</p></div></article>
-    </div>
-  </section>
-
-  <section id="offers" class="offer-section">
-    <div class="offer-copy">
-      <p class="eyebrow red">PROMOTIONS &amp; SEASONAL SHOPPING</p>
-      <h2>Look beyond the headline discount</h2>
-      <p>Perfumania promotes rotating offers that may include bundle pricing, multi-buy deals, clearance selections and seasonal fragrance promotions. Check the current terms and eligible products directly with the retailer before placing an order.</p>
-      <p>For a fair comparison, calculate the price per bottle or per milliliter and confirm that the products in a bundle are scents you actually want.</p>
-    </div>
-    <div class="offer-art" aria-label="Perfume bottle illustration">
-      <span>THE FRAGRANCE EDIT</span>
-      <strong>Find your<br/>signature scent</strong>
-      <b>COMPARE · CONSIDER · CHOOSE</b>
-    </div>
-  </section>
-
-  <section id="faqs" class="faq-section">
-    <div class="section-heading">
-      <p class="eyebrow red">COMMON QUESTIONS</p>
-      <h2>Perfumania FAQs</h2>
-    </div>
-    {faqs.map((faq) => (
-      <details>
-        <summary>{faq.question}</summary>
-        <p>{faq.answer}</p>
-      </details>
-    ))}
-  </section>
-
-  <section class="related-section">
-    <div>
-      <p class="eyebrow red">KEEP EXPLORING</p>
-      <h2>Discover more brand guides</h2>
-      <p>Browse more independent brand features from Buy Better Finds, with product highlights, comparisons and practical shopping considerations.</p>
-    </div>
-    <a class="button button-red" href="/brands/">Explore all brands →</a>
-  </section>
-
-  <p class="brand-disclosure"><strong>Affiliate disclosure:</strong> Buy Better Finds may earn a commission from qualifying purchases made through affiliate links, at no additional cost to you. Product selection, prices, shipping terms and promotions are controlled by the retailer and may change. This guide is independently prepared for shopping research and discovery.</p>
-</main>
-</BaseLayout>
-
-<style>
-.perfumania-page{max-width:1240px;margin:0 auto;padding:24px clamp(14px,2.5vw,28px) 64px;color:#172033}
-.brand-hero{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:28px;align-items:center;overflow:hidden;padding:clamp(28px,5vw,58px);border:1px solid #e6e9ee;border-radius:18px;background:linear-gradient(120deg,#f6f7fa 0%,#fff 58%,#fff5f0 100%)}
-.hero-copy{position:relative;z-index:1}.eyebrow{margin:0 0 12px;color:#b42332;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.hero-kicker{margin:0 0 10px;color:#7b5360;font-size:14px;font-weight:750;letter-spacing:.02em}.brand-hero h1{max-width:760px;margin:0;color:#14233b;font-size:clamp(34px,4.5vw,54px);line-height:1.06;letter-spacing:-.04em}.hero-intro{max-width:690px;margin:18px 0;color:#566274;font-size:16px;line-height:1.75}.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:7px;text-decoration:none;font-size:13px;font-weight:850}.button-light{border:1px solid #cfd6df;background:#fff;color:#172b49}.button-red{background:#c8102e;color:#fff}.hero-note{margin:14px 0 0;color:#7b8795;font-size:11px}.hero-photo{position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;min-height:330px;border-radius:13px;background:#f4f1ef}.hero-photo img{display:block;width:100%;height:360px;object-fit:contain}.hero-photo span{position:absolute;left:14px;bottom:14px;padding:8px 11px;border-radius:5px;background:#fff;color:#263449;font-size:11px;font-weight:800}
-.quick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 42px;padding:12px 0;border-bottom:1px solid #e7ebf0}.quick-nav a{padding:8px 11px;border:1px solid #e2e7ed;border-radius:999px;color:#34445a;font-size:12px;font-weight:750;text-decoration:none}.quick-nav a:hover{border-color:#c8102e;color:#c8102e}
-.intro-section{max-width:950px;margin:0 auto 44px}.section-heading{margin-bottom:20px}.section-heading h2,.related-section h2{margin:0;color:#14233b;font-size:clamp(25px,3vw,34px);line-height:1.15;letter-spacing:-.025em}.section-heading>p:not(.eyebrow){color:#667085;line-height:1.65}.intro-section>p,.brand-assessment>p{color:#5c6879;font-size:15px;line-height:1.8}
-.brand-assessment{max-width:980px;margin:0 auto 52px;padding:28px 30px;border:1px solid #e3e8ef;border-left:5px solid #c8102e;border-radius:12px;background:#f7f8fa}.brand-assessment .assessment-method{padding:14px 16px;border-radius:8px;background:#fff;font-size:13px}
-.category-section{padding:12px 0 48px}.centered{text-align:center}.centered>p:last-child{max-width:720px;margin:10px auto 0}.red{color:#b42332}.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.category-card{min-height:190px;padding:21px;border:1px solid #e2e7ed;border-radius:11px;background:#fff;box-shadow:0 4px 14px rgba(16,35,63,.035)}.category-index{color:#b42332;font-size:10px;font-weight:900;letter-spacing:.1em}.category-card h3{margin:13px 0 8px;color:#172b49;font-size:19px}.category-card p{margin:0;color:#657286;font-size:13px;line-height:1.7}
-.featured-section{padding:40px 0;border-top:1px solid #e6eaf0;border-bottom:1px solid #e6eaf0}.brand-name-list{display:flex;flex-wrap:wrap;gap:10px}.brand-name-list span{padding:11px 15px;border:1px solid #e2e7ed;border-radius:7px;background:#fff;color:#24344d;font-size:13px;font-weight:800}
-.buying-section{padding:48px 0}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.check-grid article{display:flex;gap:14px;padding:18px;border:1px solid #e2e7ed;border-radius:10px;background:#fafbfd}.check-grid article>span{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:50%;background:#fcebed;color:#b42332;font-weight:900}.check-grid h3{margin:2px 0 6px;color:#172b49;font-size:15px}.check-grid p{margin:0;color:#657286;font-size:13px;line-height:1.65}
-.offer-section{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;padding:clamp(24px,4vw,42px);border:1px solid #f0dadd;border-radius:15px;background:linear-gradient(120deg,#fff1f2,#fff9f7)}.offer-copy h2{margin:0 0 12px;color:#14233b;font-size:clamp(25px,3vw,34px);line-height:1.12}.offer-copy p:not(.eyebrow){color:#5e6b7c;line-height:1.75}.offer-art{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:210px;padding:22px;border-radius:12px;background:#24344d;color:#fff;text-align:center}.offer-art span{color:#f3b8c0;font-size:10px;font-weight:900;letter-spacing:.2em}.offer-art strong{margin:13px 0;font-size:clamp(25px,4vw,39px);line-height:1.08}.offer-art b{color:#d8e2ef;font-size:9px;letter-spacing:.16em}
-.faq-section{max-width:930px;margin:48px auto}.faq-section details{margin:10px 0;padding:16px 18px;border:1px solid #e2e7ed;border-radius:9px;background:#fff}.faq-section summary{color:#172b49;font-weight:850;cursor:pointer}.faq-section details p{margin:10px 0 0;color:#5d6b7c;font-size:14px;line-height:1.7}
-.related-section{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 0;border-top:1px solid #e6eaf0}.related-section>div{max-width:700px}.related-section p:not(.eyebrow){color:#657286;line-height:1.7}.brand-disclosure{margin:20px 0 0;padding:17px 19px;border-radius:8px;background:#f4f6f9;color:#687587;font-size:12px;line-height:1.7}.brand-disclosure strong{color:#172b49}
-@media(max-width:820px){.brand-hero{grid-template-columns:1fr}.hero-photo{min-height:250px}.hero-photo img{height:280px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.offer-section{grid-template-columns:1fr}}
-@media(max-width:600px){.perfumania-page{padding:14px 13px 44px}.brand-hero{padding:24px 19px}.brand-hero h1{font-size:2.35rem}.category-grid,.check-grid{grid-template-columns:1fr}.category-card{min-height:0}.related-section{align-items:flex-start;flex-direction:column}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .button{width:100%;box-sizing:border-box}}
-</style>
+<BrandSpotlight
+  brandName={brandName}
+  brandUrl={brandUrl}
+  title={title}
+  description={description}
+  heroImage={heroImage}
+  heroAlt={heroAlt}
+  intro={intro}
+  affiliateFor={affiliateFor}
+  offers={offers}
+  categories={categories}
+  products={products}
+  highlights={highlights}
+  faqs={faqs}
+  related={related}
+  lastVerified="November 24, 2026"
+  storefrontIntro="Explore selected perfumes and gift sets, then open the exact Perfumania product listing for current sizes, prices and availability."
+  productSearchPlaceholder="Search perfumes, colognes and gift sets..."
+  allProductsUrl="https://perfumania.com/collections/all"
+/>
