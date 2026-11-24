@@ -1,0 +1,84 @@
+---
+import BrandSpotlight from '../../components/BrandSpotlight.astro';
+
+const brandName = 'Sunaofe';
+const brandUrl = 'https://sunaofe.com/';
+const allProductsUrl = 'https://sunaofe.com/collections/all-products';
+const affiliateFor = (url) => 'https://www.awin1.com/cread.php?awinmid=122512&awinaffid=3119041&ued=' + encodeURIComponent(url);
+
+const title = 'Sunaofe Brand Guide: Ergonomic Chairs, Standing Desks & Monitor Arms | Buy Better Finds';
+const description = 'Explore Sunaofe ergonomic office chairs, standing desks and monitor arms. Compare featured products, current offers, shipping, returns and warranty details.';
+const heroImage = 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/sunaofe-sustainable-office-chair-green_76774736-e721-4fe9-a92f-dbdf580bac3e.webp?width=900';
+const intro = 'Sunaofe is an office-furniture brand built by Sunon, a manufacturer that has made office furniture since 1991. Its US catalog focuses on ergonomic office chairs, sit-stand desks and monitor arms for home and professional workspaces. This guide brings together product options, current advertised offers and key shopping policies so you can compare the details before visiting the official store.';
+
+const offers = [
+  { type: 'NEW CUSTOMER OFFER', title: '10% off your first order', details: 'Sunaofe advertises a 10% welcome offer for new email subscribers. Sign up through the official store to receive the offer details.', terms: 'New subscribers; confirm exclusions and offer terms with Sunaofe before checkout.', url: 'https://sunaofe.com/', button: 'Get the welcome offer', featured: true },
+  { type: 'MULTI-ITEM SAVINGS', title: 'Buy 2 or more and save up to 10%', details: 'Selected product pages advertise additional savings when purchasing two or more items.', terms: 'Savings may vary by product and order. Check the eligible items and final discount at checkout.', url: allProductsUrl, button: 'Shop eligible products' },
+  { type: 'DIRECT STORE OFFER', title: 'Free shipping in the contiguous US', details: 'Sunaofe advertises complimentary FedEx Ground shipping to the 48 contiguous United States. In-stock orders are generally processed within one business day, with delivery estimated at 3–7 business days.', terms: 'Shipping exclusions apply, including Alaska, Hawaii, P.O. boxes, APO/FPO addresses and US territories.', url: 'https://sunaofe.com/pages/shipping-policy', button: 'Read shipping details' }
+];
+
+const categories = [
+  { label: 'ERGONOMIC SEATING', title: 'Ergonomic office chairs', description: 'Compare mesh and vegan-leather chairs, lumbar support styles, recline ranges, armrest adjustments and seat dimensions.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/sunaofe-ergonomic-office-chair-black_20eec32d-634d-4c36-bcb5-4936dfe95295.webp?width=800', alt: 'Sunaofe black ergonomic office chair', url: 'https://sunaofe.com/collections/crafted-for-comfort-ergonomic-chairs' },
+  { label: 'SIT-STAND WORKSPACES', title: 'Standing desks', description: 'Explore height-adjustable desk options and compare desktop sizes, frame finishes, motor features and weight capacity.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/lunar-standing-desk-lunar-dust-nova-white.webp?width=800', alt: 'Sunaofe Lunar standing desk', url: 'https://sunaofe.com/collections/standing-desks' },
+  { label: 'DESK ACCESSORIES', title: 'Monitor arms', description: 'Compare single- and dual-monitor mounting options, supported screen sizes, weight ranges and desk clamp requirements.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/cts100-single-modular-monitor-arm-239943.png?width=800', alt: 'Sunaofe CTS100 single modular monitor arm', url: 'https://sunaofe.com/collections/monitor-arms' }
+];
+
+const products = [
+  { category: 'Ergonomic chairs', name: 'Resistance Color Office Chair', description: 'Breathable mesh chair with a curved ergonomic back, flip-up armrests and recline up to 135°. Available in multiple colors.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/sunaofe-sustainable-office-chair-green_76774736-e721-4fe9-a92f-dbdf580bac3e.webp?width=700', alt: 'Sunaofe Resistance Color green ergonomic office chair', url: 'https://sunaofe.com/products/color-is-power-all-colors-collection', price: '$199.99', priceValue: 199.99, priceNote: 'Advertised US price; options and colors may vary.' },
+  { category: 'Ergonomic chairs', name: 'Boss Pro Leather Chair', description: 'Executive-style chair with water-resistant vegan leather, adaptive lumbar support, adjustable headrest and retractable footrest.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/sunaofe-ergonomic-office-chair-black_20eec32d-634d-4c36-bcb5-4936dfe95295.webp?width=700', alt: 'Sunaofe Boss Pro black vegan leather office chair', url: 'https://sunaofe.com/products/boss-pro-ergonomic-chair', price: '$289.99', priceValue: 289.99, priceNote: 'Advertised US price; color options may vary.' },
+  { category: 'Ergonomic chairs', name: 'Morph Classic Ergonomic Chair', description: 'Mesh chair with auto-tracking lumbar support, up to 140° recline and seven-way adjustable armrests.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/morph-classicergonomic-chair-with-the-most-advanced-lumbar-supportdelivered-with-4-weeks-6482483.webp?width=700', alt: 'Sunaofe Morph Classic black ergonomic office chair', url: 'https://sunaofe.com/products/ergonomic-chair-morph-classic', price: '$399.99', priceValue: 399.99, priceNote: 'Advertised US price; headrest options may vary.' },
+  { category: 'Ergonomic chairs', name: 'Morph Edition Ergonomic Chair', description: 'Morph series chair with eco-gradient mesh and auto-tracking lumbar support. Check the current color and configuration options.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/morph-editionadvanced-lumbar-support-ergonomic-chair-with-sustainable-meshdelivered-in-4-weeks-1876482.webp?width=700', alt: 'Sunaofe Morph Edition green ergonomic chair', url: 'https://sunaofe.com/products/ergnomic-chair-morph-edition', price: '$399.99', priceValue: 399.99, priceNote: 'Advertised US price; color options may vary.' },
+  { category: 'Ergonomic chairs', name: 'Atlas Ergonomic Office Chair', description: 'Mesh chair with adjustable headrest, dynamic lumbar support and backrest height adjustment.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/white1.jpg?width=700', alt: 'Sunaofe Atlas ergonomic office chair', url: 'https://sunaofe.com/products/sunaofe-atlas-ergonomic-office-chair-adjustable-headrest-dynamic-lumbar-2d-armrests', price: '$349.99', priceValue: 349.99, priceNote: 'Advertised from-price on the US all-products collection; verify selected configuration.' },
+  { category: 'Ergonomic chairs', name: 'Trace Mesh Ergonomic Chair', description: 'Pre-order mesh chair with an auto-follow backrest and multi-position tilt lock. Review the estimated ship timing before ordering.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/morph-classicergonomic-chair-with-the-most-advanced-lumbar-supportdelivered-with-4-weeks-6482483.webp?width=700', alt: 'Sunaofe ergonomic mesh chair representative product image', url: 'https://sunaofe.com/collections/all-products', price: '$489.99', priceValue: 489.99, priceNote: 'Pre-order listing price; check current availability and ship estimate.' },
+  { category: 'Standing desks', name: 'Lunar Standing Desk', description: 'Dual-motor sit-stand desk with a curved front edge, cable management and advertised lift capacity up to 350 lb.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/lunar-standing-desk-lunar-dust-nova-white.webp?width=700', alt: 'Sunaofe Lunar standing desk in Lunar Dust and Nova White', url: 'https://sunaofe.com/products/standing-desk-lunar', price: '$749.99', priceValue: 749.99, priceNote: 'Advertised starting price; desktop size and finish affect configuration.' },
+  { category: 'Monitor arms', name: 'CTS100 Single Monitor Arm', description: 'Single-screen modular monitor arm. Check supported screen size, weight range and desk clamp compatibility.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/cts100-single-modular-monitor-arm-239943.png?width=700', alt: 'Sunaofe CTS100 single monitor arm', url: 'https://sunaofe.com/products/cts-single-monitor-arm', price: '$69.99', priceValue: 69.99, priceNote: 'Advertised US price on the all-products collection.' },
+  { category: 'Monitor arms', name: 'CTS300 Dual Monitor Arm', description: 'Dual-monitor modular arm with independent movement, quick-release VESA mounts and support for screens up to 34 inches.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/cts300-dual-modular-monitor-arm.webp?width=700', alt: 'Sunaofe CTS300 dual modular monitor arm', url: 'https://sunaofe.com/products/cts-dual-modular-monitor-arm', price: '$109.99', priceValue: 109.99, priceNote: 'Advertised US price on the all-products collection.' },
+  { category: 'Monitor arms', name: 'CTS200 Dual Monitor Arm with Stand', description: 'Dual-monitor arm configuration with a stand. This item is listed as a pre-order; verify current delivery timing.', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/cts300-dual-modular-monitor-arm.webp?width=700', alt: 'Sunaofe dual modular monitor arm representative product image', url: 'https://sunaofe.com/products/cts-dual-modular-monitor-arm-with-stand', price: '$109.99', priceValue: 109.99, priceNote: 'Advertised US price; listed as pre-order on the catalog.' }
+];
+
+const highlights = [
+  { title: 'Compare chair adjustment ranges', text: 'Look beyond the chair name. Compare lumbar movement, recline angle, headrest adjustment, armrest directions and seat-height range.' },
+  { title: 'Check dimensions and fit', text: 'Review seat height, overall dimensions and weight capacity against your desk, available space and preferred sitting position.' },
+  { title: 'Choose mesh or upholstery', text: 'Sunaofe offers breathable mesh chairs and a water-resistant vegan-leather option. Consider cleaning preferences and the feel of the seat material.' },
+  { title: 'Plan your full workstation', text: 'For desks and monitor arms, compare desktop dimensions, lift capacity, supported monitor size, VESA pattern and clamp thickness.' },
+  { title: 'Understand the return conditions', text: 'The current US policy describes a 60-day home trial and free eligible returns, but original packaging is required and condition rules apply.' },
+  { title: 'Check warranty coverage by component', text: 'The current policy lists five years for chairs, desk frames, motors and controls, and monitor arms; desktop surfaces are covered for two years.' }
+];
+
+const faqs = [
+  { question: 'What does Sunaofe sell?', answer: 'The US catalog includes ergonomic office chairs, standing desks and monitor arms, with several chair collections and accessory configurations.' },
+  { question: 'Who makes Sunaofe products?', answer: 'Sunaofe describes itself as Sunon’s own brand. Sunon is an office-furniture manufacturer that has been making office furniture since 1991.' },
+  { question: 'Does Sunaofe offer free shipping?', answer: 'The US shipping policy advertises free FedEx Ground shipping to the contiguous 48 states. In-stock orders are processed within one business day, with estimated delivery in 3–7 business days. Alaska, Hawaii, P.O. boxes, APO/FPO addresses and US territories are excluded.' },
+  { question: 'What is the Sunaofe return window?', answer: 'For orders placed on or after March 25, 2026, Sunaofe describes a 60-day return window from delivery and prepaid return shipping for eligible returns. Items must be in like-new condition, fully disassembled and packed in the original Sunaofe packaging. Missing packaging can lead to a declined return or a 20%–30% repacking or damage-liability fee.' },
+  { question: 'What does the Sunaofe warranty cover?', answer: 'The current warranty page lists five years for electric standing desk frames, motors and controls, chairs, and monitor arms. Desktop surfaces are listed with two years of coverage. Review the official warranty for exclusions and claim steps.' },
+  { question: 'Does Sunaofe have a welcome discount?', answer: 'The official US store advertises 10% off a first order for new email subscribers. Sign up on the retailer site and check the terms supplied with the offer.' },
+  { question: 'Does Buy Better Finds personally test every Sunaofe product?', answer: 'No. This is a research-based brand guide using publicly available brand, catalog and policy information. It does not claim hands-on testing of every product.' }
+];
+
+const related = [
+  { title: 'Browse more Buy Better Finds brand guides', url: '/brands/' },
+  { title: 'Explore home and office finds', url: '/categories/home/' },
+  { title: 'Read the latest product reviews', url: '/reviews/' }
+];
+---
+<BrandSpotlight
+  brandName={brandName}
+  brandLogo=""
+  brandUrl={brandUrl}
+  title={title}
+  description={description}
+  heroImage={heroImage}
+  heroAlt="Sunaofe green ergonomic office chair"
+  intro={intro}
+  affiliateFor={affiliateFor}
+  offers={offers}
+  categories={categories}
+  products={products}
+  highlights={highlights}
+  faqs={faqs}
+  related={related}
+  lastVerified="November 24, 2026"
+  storefrontIntro="Browse Sunaofe ergonomic chairs, standing desks and monitor arms. Search the catalog or narrow it by product category before opening the exact item at Sunaofe."
+  productSearchPlaceholder="Try office chair, desk, monitor arm..."
+  allProductsUrl={allProductsUrl}
+/>
