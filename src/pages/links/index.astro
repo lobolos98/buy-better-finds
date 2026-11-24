@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const links = [
+  {
+    eyebrow: 'START HERE',
+    title: "Today's Best Finds",
+    description: 'Fresh discoveries, useful products, and deals worth a closer look.',
+    href: '/weekly-finds/',
+    label: 'Explore Weekly Finds',
+    featured: true
+  },
+  {
+    eyebrow: 'SEASONAL SAVINGS',
+    title: 'Black Friday Deals',
+    description: 'Browse current offers and shopping finds for the holiday season.',
+    href: '/weekly-finds/',
+    label: 'Shop the Deals'
+  },
+  {
+    eyebrow: 'FRAGRANCE FAVORITES',
+    title: 'Perfumania Bestselling Fragrances',
+    description: 'Discover popular designer scents and gift-worthy fragrance picks.',
+    href: 'https://www.kqzyfj.com/click-101914897-17358170',
+    label: 'Shop Perfumania Bestsellers',
+    external: true
+  },
+  {
+    eyebrow: 'LIMITED-TIME OFFER',
+    title: 'Perfumania Black Friday Fragrance Deals',
+    description: 'Explore fragrance savings and limited-time offers at Perfumania.',
+    href: 'https://www.kqzyfj.com/click-101914897-17325429',
+    label: 'Explore Fragrance Deals',
+    external: true
+  },
+  {
+    eyebrow: 'RESEARCH BEFORE YOU BUY',
+    title: 'Product Reviews',
+    description: 'Read our product research, hands-on testing updates, and practical evaluations.',
+    href: '/reviews/',
+    label: 'Read Reviews'
+  },
+  {
+    eyebrow: 'MAKE A SMARTER CHOICE',
+    title: 'Buying Guides & Comparisons',
+    description: 'Understand features, tradeoffs, and what matters before you spend.',
+    href: '/guides/',
+    label: 'Explore Buying Guides'
+  },
+  {
+    eyebrow: 'MORE TO DISCOVER',
+    title: 'Browse All Products',
+    description: 'Explore products and recommendations across categories.',
+    href: '/products/',
+    label: 'Browse Products'
+  },
+  {
+    eyebrow: 'OUR APPROACH',
+    title: 'How We Choose',
+    description: 'Learn about our research standards and how we evaluate recommendations.',
+    href: '/why-we-recommend/',
+    label: 'Our Standards'
+  }
+];
+---
+<BaseLayout
+  title="Buy Better Finds Links | Deals, Reviews & Buying Guides"
+  description="Shop the latest finds, explore fragrance deals, read product reviews, and browse buying guides from Buy Better Finds."
+  canonicalUrl="https://buybetterfinds.com/links/"
+>
+  <main class="links-page">
+    <section class="links-hero">
+      <div class="links-wrap">
+        <div class="brand-lockup" aria-label="Buy Better Finds">
+          <span class="brand-mark">B</span>
+          <span>BUY BETTER FINDS</span>
+        </div>
+        <p class="tagline">Smart shopping. Better finds.</p>
+        <h1>Your next great find starts here.</h1>
+        <p class="intro">Explore useful products, current offers, honest product research, and practical buying advice—all in one place.</p>
+        <a class="instagram-link" href="https://www.instagram.com/buybetterfinds/" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">◎</span> Follow @buybetterfinds
+        </a>
+      </div>
+    </section>
+
+    <section class="links-content" aria-label="Buy Better Finds destinations">
+      <div class="links-wrap">
+        <div class="section-label"><span></span> EXPLORE BUY BETTER FINDS <span></span></div>
+        <div class="link-list">
+          {links.map((link) => (
+            <a
+              class:list={['link-card', link.featured && 'featured']}
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'sponsored nofollow noopener noreferrer' : undefined}
+            >
+              <span class="link-copy">
+                <span class="link-eyebrow">{link.eyebrow}</span>
+                <strong>{link.title}</strong>
+                <span class="link-description">{link.description}</span>
+                <span class="link-action">{link.label} <span aria-hidden="true">↗</span></span>
+              </span>
+              <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="site-link">
+          <span class="site-link-mark">B</span>
+          <div>
+            <strong>BuyBetterFinds.com</strong>
+            <span>Independent product research. Clearer choices.</span>
+          </div>
+          <a href="/" aria-label="Visit Buy Better Finds homepage">Visit site ↗</a>
+        </div>
+
+        <p class="disclosure">Disclosure: Buy Better Finds may earn a commission when you purchase through qualifying affiliate links, at no additional cost to you. This does not affect our editorial approach.</p>
+        <div class="contact"><a href="/disclosure/">Affiliate Disclosure</a><span>·</span><a href="mailto:info@buybetterfinds.com">Contact</a></div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .links-page{background:#f5f7fa;color:#182333}
+  .links-wrap{width:min(100% - 32px,680px);margin:0 auto}
+  .links-hero{position:relative;overflow:hidden;padding:48px 0 40px;text-align:center;background:linear-gradient(145deg,#edf2f8 0%,#fff 58%,#f8edf0 100%);border-bottom:1px solid #dfe5ec}
+  .brand-lockup{display:flex;align-items:center;justify-content:center;gap:10px;color:#10233f;font-size:12px;font-weight:950;letter-spacing:.14em}
+  .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#10233f;color:#fff;font-size:23px;font-weight:950;box-shadow:0 8px 20px #10233f24}
+  .tagline{margin:13px 0 0;color:#c8102e;font-size:12px;font-weight:850;letter-spacing:.08em}
+  .links-hero h1{max-width:590px;margin:15px auto 10px;color:#10233f;font-size:clamp(34px,7vw,49px);line-height:1.04;letter-spacing:-.045em}
+  .intro{max-width:510px;margin:0 auto;color:#64748b;font-size:15px;line-height:1.7}
+  .instagram-link{display:inline-flex;align-items:center;gap:8px;margin-top:19px;padding:10px 15px;border:1px solid #d8e0e9;border-radius:999px;background:#fff;color:#10233f;font-size:12px;font-weight:850}
+  .instagram-link span{color:#c8102e;font-size:17px}
+  .links-content{padding:30px 0 42px}
+  .section-label{display:flex;align-items:center;justify-content:center;gap:11px;margin:0 0 17px;color:#64748b;font-size:10px;font-weight:900;letter-spacing:.15em}
+  .section-label span{width:25px;height:1px;background:#c8102e}
+  .link-list{display:grid;gap:11px}
+  .link-card{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 18px;border:1px solid #dce3eb;border-left:4px solid #10233f;border-radius:12px;background:#fff;color:inherit;box-shadow:0 3px 10px #10233f08;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+  .link-card:hover{transform:translateY(-2px);border-color:#bac8d8;box-shadow:0 9px 22px #10233f12}
+  .link-card.featured{border-left-color:#c8102e;background:linear-gradient(110deg,#fff 0%,#fff 72%,#fff5f6 100%)}
+  .link-copy{display:flex;min-width:0;flex-direction:column;align-items:flex-start}
+  .link-eyebrow{margin-bottom:4px;color:#c8102e;font-size:9px;font-weight:950;letter-spacing:.13em}
+  .link-card strong{color:#10233f;font-size:17px;line-height:1.25}
+  .link-description{margin-top:4px;color:#64748b;font-size:12px;line-height:1.5}
+  .link-action{display:inline-flex;align-items:center;gap:6px;margin-top:9px;color:#1f5f9f;font-size:11px;font-weight:900}
+  .link-arrow{flex:0 0 auto;color:#c8102e;font-size:22px;font-weight:800}
+  .site-link{display:flex;align-items:center;gap:12px;margin-top:22px;padding:15px;border-radius:12px;background:#10233f;color:#fff}
+  .site-link-mark{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid #ffffff55;border-radius:50%;font-size:19px;font-weight:950}
+  .site-link>div{display:flex;min-width:0;flex:1;flex-direction:column}
+  .site-link strong{font-size:13px}
+  .site-link>div span{margin-top:2px;color:#cbd5e1;font-size:10px}
+  .site-link>a{color:#fff;font-size:11px;font-weight:900;white-space:nowrap}
+  .disclosure{margin:20px 4px 0;color:#778394;font-size:10px;line-height:1.65;text-align:center}
+  .contact{display:flex;justify-content:center;gap:10px;margin-top:11px;color:#94a3b8;font-size:10px}
+  .contact a{color:#52647b;font-weight:750}
+  @media(max-width:480px){.links-hero{padding:38px 0 32px}.links-hero h1{font-size:36px}.intro{font-size:14px}.link-card{padding:15px 14px}.link-card strong{font-size:15px}.link-description{font-size:11px}.site-link{gap:9px;padding:12px}.site-link>div span{font-size:9px}.site-link>a{font-size:10px}}
+  @media(prefers-reduced-motion:reduce){.link-card{transition:none}.link-card:hover{transform:none}}
+</style>
