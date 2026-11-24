@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Explore Our Brands | Buy Better Finds';
+const description = 'Explore brand guides and shopping features from Buy Better Finds. Discover products, compare options, and find practical details across technology, home, outdoor gear, beauty, and more.';
+
+const brands = [
+  { name: 'FNTCASE', category: 'Tech & Accessories', description: 'Explore protective phone cases, magnetic designs, kickstands and belt-clip styles.', href: '/brands/fntcase/', image: 'https://fntcase.com/cdn/shop/files/6391ace427ade714b70fb966024ae804_a20f420e-d5d3-4d2b-88a6-10419faf4e25.jpg?v=1772271361', alt: 'FNTCASE protective phone case' },
+  { name: 'Silver Brush', category: 'Art Supplies', description: 'Compare artist paintbrush collections for watercolor, acrylic, oil and detailed work.', href: '/brands/silver-brush/', image: 'https://www.silverbrush.com/cdn/shop/files/silver-kolinsky-r-round-paintbrush-short-handle-7200s-387.png?v=1787977993', alt: 'Silver Brush Kolinsky round artist paintbrush' },
+  { name: 'Piscifun', category: 'Fishing Gear', description: 'Explore fishing rods, reels, combos and accessories for different fishing styles.', href: '/brands/piscifun/', image: 'https://www.piscifun.com/cdn/shop/files/Frame7.jpg?v=1790064177&width=1200', alt: 'Piscifun Torrent Lite spinning rod and reel combo' },
+  { name: 'TIDEWE', category: 'Outdoor & Hunting', description: 'Browse waders, hunting blinds, heated apparel, boots and outdoor equipment.', href: '/brands/tidewe/', image: 'https://www.tidewe.com/cdn/shop/files/WD018-VA-07-TE_6d90e871-320c-4b39-8c1f-79965f8540dd.png?v=1787738670&width=1000', alt: 'TIDEWE outdoor gear' },
+  { name: 'ROCKBROS', category: 'Cycling Gear', description: 'Discover cycling bags, lights, helmets, apparel, tools and riding accessories.', href: '/brands/rockbros/', image: 'https://rockbrosus.com/cdn/shop/files/rockbros-lk69-bike-helmet-bionic-support-black_1.jpg?v=1759285865&width=1500', alt: 'ROCKBROS cycling helmet' },
+  { name: 'Cozeware', category: 'Home Comfort', description: 'Compare mini-split air conditioners and heat pumps by capacity, efficiency and setup needs.', href: '/brands/cozeware/', image: 'https://img.yitashop.com/fit-in/800x800/10006/banners/original/202606/5905719B-E9E9-A632-9729-E66C3D3F6598.jpg', alt: 'Cozeware ductless mini-split system' },
+  { name: 'Canopy', category: 'Home Wellness', description: 'Explore humidifiers, air quality products, filtration and home wellness accessories.', href: '/brands/canopy/', image: 'https://getcanopy.co/cdn/shop/files/2.0_PDP_Exploded_4.jpg?v=1780592952&width=1200', alt: 'Canopy humidifier product and filter components' },
+  { name: 'FliKEZE', category: 'Beauty & Wellness Tech', description: 'Explore red-light panels, LED masks, wellness mats and recovery devices.', href: '/brands/flikeze/', image: 'https://flikeze.com/cdn/shop/files/BASIC78_6.jpg?v=1769421162&width=900', alt: 'FliKEZE red light therapy panel' },
+  { name: 'HOSHANHO', category: 'Kitchen & Cooking', description: 'Compare kitchen knives, knife sets and storage options for everyday cooking.', href: '/brands/hoshanho/', image: 'https://www.hoshanho.com/cdn/shop/files/238c4bc0b69bda8657c8b3e678f6b05c_abe8d26d-6203-4e3b-a74a-20a7871b8442_800x.png?v=1786688971', alt: 'HOSHANHO kitchen knife' },
+  { name: 'Sunaofe', category: 'Office Furniture', description: 'Explore ergonomic office chairs, standing desks and monitor arms for workspaces.', href: '/brands/sunaofe/', image: 'https://cdn.shopify.com/s/files/1/0273/7867/9908/files/sunaofe-sustainable-office-chair-green_76774736-e721-4fe9-a92f-dbdf580bac3e.webp?width=900', alt: 'Sunaofe ergonomic office chair' }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: title,
+  description,
+  url: 'https://buybetterfinds.com/brands/',
+  isPartOf: { '@type': 'WebSite', name: 'Buy Better Finds', url: 'https://buybetterfinds.com/' },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: brands.map((brand, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: brand.name,
+      url: 'https://buybetterfinds.com' + brand.href
+    }))
+  }
+};
+---
+
+<BaseLayout title={title} description={description} structuredData={structuredData}>
+  <main class="brands-page">
+    <section class="brands-hero">
+      <div class="brands-hero-inner">
+        <p class="eyebrow">THE BUY BETTER FINDS BRAND DIRECTORY</p>
+        <h1>Explore Our Brands</h1>
+        <p>Get to know brands across the categories you shop. Explore our independent brand guides for product highlights, useful comparisons, shopping considerations and links to official stores.</p>
+      </div>
+    </section>
+
+    <section class="brands-content" aria-labelledby="brand-directory-title">
+      <div class="brands-heading">
+        <div>
+          <p class="section-kicker">DISCOVER SOMETHING WORTH A CLOSER LOOK</p>
+          <h2 id="brand-directory-title">Brand Guides & Features</h2>
+          <p>Browse our current brand features. Each guide offers a closer look at products and details to consider before you shop.</p>
+        </div>
+        <span class="brand-count">{brands.length} brand guides</span>
+      </div>
+
+      <div class="brand-grid">
+        {brands.map((brand) => (
+          <article class="brand-card">
+            <a class="brand-card-image" href={brand.href} aria-label={'Explore ' + brand.name}>
+              <img src={brand.image} alt={brand.alt} loading="lazy" decoding="async" />
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="brand-card-copy">
+              <p class="brand-category">{brand.category}</p>
+              <h3><a href={brand.href}>{brand.name}</a></h3>
+              <p>{brand.description}</p>
+              <a class="brand-card-link" href={brand.href}>Explore Brand <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="brands-disclosure">Some links on individual brand pages may be affiliate links. Buy Better Finds may earn a commission from qualifying purchases, at no additional cost to you. Our brand guides are independently prepared for shopping research and discovery.</p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+.brands-page{color:#172033;background:#fff}
+.brands-hero{background:linear-gradient(115deg,#f4f7fb 0%,#fff 58%,#fdf4f4 100%);border-bottom:1px solid #e7ebf1;padding:clamp(52px,7vw,88px) 24px}
+.brands-hero-inner{max-width:1120px;margin:0 auto}
+.eyebrow,.section-kicker{margin:0 0 13px;color:#b42332;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.brands-hero h1{max-width:760px;margin:0;color:#14233b;font-size:clamp(38px,5.5vw,62px);line-height:1.04;letter-spacing:-.045em}
+.brands-hero p:last-child{max-width:740px;margin:19px 0 0;color:#526071;font-size:clamp(16px,2vw,19px);line-height:1.7}
+.brands-content{max-width:1168px;margin:0 auto;padding:58px 24px 72px}
+.brands-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.brands-heading h2{margin:0;color:#14233b;font-size:clamp(26px,3vw,34px);letter-spacing:-.025em}
+.brands-heading>div>p:last-child{max-width:690px;margin:10px 0 0;color:#667085;line-height:1.65}
+.brand-count{flex:0 0 auto;padding:8px 12px;border:1px solid #e1e6ed;border-radius:999px;color:#475467;font-size:12px;font-weight:700}
+.brand-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.brand-card{overflow:hidden;display:flex;flex-direction:column;min-width:0;border:1px solid #e3e8ef;border-radius:14px;background:#fff;box-shadow:0 5px 18px rgba(16,35,63,.045);transition:transform .18s ease,box-shadow .18s ease}
+.brand-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(16,35,63,.10)}
+.brand-card-image{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#f3f5f8}
+.brand-card-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .25s ease}
+.brand-card:hover .brand-card-image img{transform:scale(1.035)}
+.image-arrow{position:absolute;right:13px;bottom:13px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#14233b;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.brand-card-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:20px}
+.brand-category{margin:0 0 8px;color:#b42332;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.brand-card h3{margin:0;color:#172033;font-size:22px;line-height:1.2}
+.brand-card h3 a{color:inherit;text-decoration:none}
+.brand-card-copy>p:not(.brand-category){margin:10px 0 18px;color:#596579;font-size:14px;line-height:1.6}
+.brand-card-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;color:#174ea6;font-size:14px;font-weight:800;text-decoration:none}
+.brand-card-link:hover{text-decoration:underline}
+.brands-disclosure{max-width:850px;margin:30px 0 0;color:#697586;font-size:12px;line-height:1.6}
+@media(max-width:900px){.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.brands-hero{padding:46px 20px}.brands-content{padding:42px 18px 56px}.brands-heading{align-items:flex-start;flex-direction:column;gap:12px}.brand-grid{grid-template-columns:1fr;gap:18px}.brand-card-image{aspect-ratio:16/9}.brand-card-copy{padding:18px}}
+@media(prefers-reduced-motion:reduce){.brand-card,.brand-card-image img{transition:none}}
+</style>
