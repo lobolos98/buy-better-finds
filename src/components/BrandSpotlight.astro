@@ -13,6 +13,7 @@ const {
   affiliateFor,
   offers = [],
   couponBanner = null,
+  couponBanners = [],
   categories = [],
   products = [],
   highlights = [],
@@ -25,6 +26,7 @@ const {
 } = Astro.props;
 
 const productCategories = [...new Set(products.map((product) => product.category))];
+const promotionBanners = couponBanners.length ? couponBanners : couponBanner ? [couponBanner] : [];
 const pageUrl = `https://buybetterfinds.com/brands/${brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`;
 const structuredData = [
   {
@@ -90,9 +92,9 @@ const structuredData = [
         <h2>Current {brandName} offers</h2>
         <p>Offers can change. Check the retailer's current checkout and terms before placing an order.</p>
       </div>
-      {couponBanner && <a class="coupon-banner" href={couponBanner.url} target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label={couponBanner.alt || 'View current brand coupon offer'}>
-        <img src={couponBanner.image} alt={couponBanner.alt || 'Current coupon promotion'} loading="lazy" decoding="async" />
-      </a>}
+      {promotionBanners.map((banner) => <a class="coupon-banner" href={banner.url} target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label={banner.alt || 'View current brand promotion'}>
+        <img src={banner.image} alt={banner.alt || 'Current brand promotion'} loading="lazy" decoding="async" />
+      </a>)}
       <div class="offer-grid">
         {offers.map((offer) => <article class:list={['offer-card', offer.featured && 'offer-featured']}>
           <span class="offer-type">{offer.type}</span>
