@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const {
   brandName,
+  brandLogo = '',
   brandUrl,
   title,
   description,
@@ -57,6 +58,7 @@ const structuredData = [
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>{brandName}</span></nav>
     <header class="brand-hero">
       <div class="hero-copy">
+        {brandLogo && <div class="brand-logo-wrap"><img class="brand-logo" src={brandLogo} alt={`${brandName} logo`} /></div>}
         <p class="eyebrow">BUY BETTER FINDS · BRAND SPOTLIGHT</p>
         <p class="kicker">A closer look at {brandName}</p>
         <h1>{brandName}: Brand Guide, Product Picks &amp; Current Offers</h1>
@@ -186,6 +188,7 @@ const structuredData = [
 </script>
 
 <style>
+.brand-logo-wrap{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;padding:10px 16px;margin:0 0 16px;max-width:260px}.brand-logo{display:block;width:100%;max-height:112px;object-fit:contain}
 .brand-spotlight{--navy:#142b45;--red:#c8102e;--ink:#1f2937;--muted:#596579;max-width:1200px;margin:auto;padding:18px 22px 64px;color:var(--ink)}
 .breadcrumbs{display:flex;gap:9px;font-size:.78rem;color:#64748b;margin:4px 0 18px}.breadcrumbs a{color:var(--navy);text-decoration:none}
 .brand-hero{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:center;padding:clamp(18px,2.5vw,28px);background:linear-gradient(120deg,#142b45,#294866 68%,#49627b);color:#fff;border-bottom:6px solid var(--red)}
