@@ -34,6 +34,34 @@ const links = [
     external: true
   },
   {
+    eyebrow: 'DISCOVER OUR PARTNERS',
+    title: 'Brand Pages',
+    description: 'Explore dedicated brand guides, featured products, shopping details, and official-store links.',
+    href: '/brands/',
+    label: 'Explore All Brand Pages'
+  },
+  {
+    eyebrow: 'SHOP BY INTEREST',
+    title: 'Browse Categories',
+    description: 'Find products and recommendations by the way you shop.',
+    href: '/categories/',
+    label: 'Explore Categories'
+  },
+  {
+    eyebrow: 'GIFT INSPIRATION',
+    title: 'The Gift Edit',
+    description: 'Discover gift ideas and useful finds for the people on your list.',
+    href: '/gifts/',
+    label: 'Browse Gift Ideas'
+  },
+  {
+    eyebrow: 'SAVE WHILE YOU SHOP',
+    title: 'Coupons & Offers',
+    description: 'Check current offers and ways to save on featured finds.',
+    href: '/coupons/',
+    label: 'View Offers'
+  },
+  {
     eyebrow: 'RESEARCH BEFORE YOU BUY',
     title: 'Product Reviews',
     description: 'Read our product research, hands-on testing updates, and practical evaluations.',
@@ -146,6 +174,18 @@ const links = [
   .link-description{margin-top:4px;color:#64748b;font-size:12px;line-height:1.5}
   .link-action{display:inline-flex;align-items:center;gap:6px;margin-top:9px;color:#1f5f9f;font-size:11px;font-weight:900}
   .link-arrow{flex:0 0 auto;color:#c8102e;font-size:22px;font-weight:800}
+  .brand-shortcuts{margin-top:25px;padding:21px;border:1px solid #dce3eb;border-radius:14px;background:#fff}
+  .brand-shortcuts-heading h2{margin:5px 0;color:#10233f;font-size:22px;line-height:1.2}
+  .brand-shortcuts-heading p{margin:6px 0 15px;color:#64748b;font-size:12px;line-height:1.55}
+  .brand-shortcut-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .brand-shortcut-list a{display:flex;flex-direction:column;gap:3px;padding:12px;border:1px solid #e1e7ef;border-radius:9px;color:#10233f;font-size:13px;font-weight:900}
+  .brand-shortcut-list a span{color:#64748b;font-size:10px;font-weight:600}
+  .brand-shortcut-list a:hover{border-color:#c8102e}
+  .edit-link{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px;padding:15px 17px;border:1px solid #dce3eb;border-radius:12px;background:#fff}
+  .edit-link>span{display:flex;flex-direction:column;gap:3px}
+  .edit-link strong{color:#10233f;font-size:13px}
+  .edit-link small{color:#64748b;font-size:10px}
+  .edit-link>b{color:#1f5f9f;font-size:11px;white-space:nowrap}
   .site-link{display:flex;align-items:center;gap:12px;margin-top:22px;padding:15px;border-radius:12px;background:#10233f;color:#fff}
   .site-link-mark{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid #ffffff55;border-radius:50%;font-size:19px;font-weight:950}
   .site-link>div{display:flex;min-width:0;flex:1;flex-direction:column}
@@ -155,6 +195,6 @@ const links = [
   .disclosure{margin:20px 4px 0;color:#778394;font-size:10px;line-height:1.65;text-align:center}
   .contact{display:flex;justify-content:center;gap:10px;margin-top:11px;color:#94a3b8;font-size:10px}
   .contact a{color:#52647b;font-weight:750}
-  @media(max-width:480px){.links-hero{padding:38px 0 32px}.links-hero h1{font-size:36px}.intro{font-size:14px}.link-card{padding:15px 14px}.link-card strong{font-size:15px}.link-description{font-size:11px}.site-link{gap:9px;padding:12px}.site-link>div span{font-size:9px}.site-link>a{font-size:10px}}
+  @media(max-width:480px){.brand-shortcut-list{grid-template-columns:1fr}.edit-link{align-items:flex-start;flex-direction:column;gap:7px}.links-hero{padding:38px 0 32px}.links-hero h1{font-size:36px}.intro{font-size:14px}.link-card{padding:15px 14px}.link-card strong{font-size:15px}.link-description{font-size:11px}.site-link{gap:9px;padding:12px}.site-link>div span{font-size:9px}.site-link>a{font-size:10px}}
   @media(prefers-reduced-motion:reduce){.link-card{transition:none}.link-card:hover{transform:none}}
 </style>
