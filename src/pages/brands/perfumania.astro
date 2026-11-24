@@ -70,37 +70,169 @@ const categories = [
 
 const products = [
   {
-    category: 'Women’s fragrance',
+    category: "Women's fragrances",
     name: 'Yves Saint Laurent Black Opium Eau de Parfum',
-    description: 'A warm, sweet fragrance built around coffee and jasmine, with pear, pink pepper and orange blossom at the opening and vanilla, patchouli and woods in the base. Multiple bottle sizes are listed; check the selected size and stock status.',
+    description: 'A warm, sweet scent with coffee, jasmine and vanilla. Compare the available bottle sizes and selected variant before ordering.',
     image: 'https://perfumania.com/cdn/shop/products/Yves-Saint-Laurent-Black-Opium-Womens-Eau-De-Parfum-EDP-Spray-3-oz.-Best-Price-Fragrance-Parfume-FragranceOutlet.com-details.jpg?format=pjpg&v=1773156491&width=1100',
     alt: 'Yves Saint Laurent Black Opium Eau de Parfum bottle and box',
     url: 'https://perfumania.com/products/yves-saint-laurent-black-opium-perfume-for-women',
     price: '$82.95',
     priceValue: 82.95,
-    priceNote: 'Perfumania listing checked Nov. 24, 2026; selected sizes and availability can change.'
+    priceNote: 'Listing price checked Nov. 24, 2026; size and availability may change.'
   },
   {
-    category: 'Men’s fragrance gift set',
-    name: 'Camille Rochelle 4-Piece Mini Gift Set',
-    description: 'A four-scent mini collection with Cobalt Intense, Cognac Haze, Coast and Platinum Eau de Parfum. A useful format for sampling several profiles or giving a fragrance-focused gift.',
-    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
-    alt: 'Camille Rochelle four-piece mini gift set with four fragrance bottles',
-    url: 'https://perfumania.com/products/camille-rochelle-4-piece-mini-gift-set',
-    price: '$90.00',
-    priceValue: 90,
-    priceNote: 'Perfumania listing checked Nov. 24, 2026; confirm availability before ordering.'
+    category: "Women's fragrances",
+    name: 'Tom Ford Black Orchid Eau de Parfum',
+    description: 'A rich, dark floral fragrance with an earthy, warm character. Check the selected bottle size and current stock.',
+    image: 'https://perfumania.com/cdn/shop/products/Tom-Ford-Black-Orchid-Womens-Eau-de-Parfum-Spray-EDP-Spray-1_7-oz_-Best.jpg?format=pjpg&v=1580920379&width=1100',
+    alt: 'Tom Ford Black Orchid perfume bottle',
+    url: 'https://perfumania.com/products/tom-ford-black-orchid-womens-eau-de-parfum-spray',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
   },
   {
-    category: 'Women’s fragrance gift set',
+    category: "Women's fragrances",
+    name: 'Burberry Goddess Eau de Parfum',
+    description: 'A modern vanilla-forward fragrance with lavender and ginger accents. Compare bottle sizes before checkout.',
+    image: 'https://perfumania.com/cdn/shop/files/bgoddes.jpg?format=pjpg&v=1726070164&width=1100',
+    alt: 'Burberry Goddess Eau de Parfum bottle and box',
+    url: 'https://perfumania.com/products/burberry-goddess-eau-de-parfum-for-women',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: "Women's fragrances",
+    name: 'Yves Saint Laurent Libre Eau de Parfum',
+    description: 'A floral fragrance with a bold, polished profile. Review the exact concentration and bottle size on the retailer listing.',
+    image: 'https://perfumania.com/cdn/shop/files/ysl_libre_Women_101.jpg?format=pjpg&v=1752071606&width=1100',
+    alt: 'Yves Saint Laurent Libre perfume bottle',
+    url: 'https://perfumania.com/products/yves-saint-laurent-libre-perfume-eau-de-parfum-for-women',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: "Women's fragrances",
+    name: 'Giorgio Armani Sì Eau de Parfum',
+    description: 'A sophisticated scent with cassis, rose, freesia, vanilla and patchouli notes. Availability can vary.',
+    image: 'https://perfumania.com/cdn/shop/products/W-8367larger.jpg?v=1580921755&width=100',
+    alt: 'Giorgio Armani Sì Eau de Parfum bottle and box',
+    url: 'https://perfumania.com/products/giorgio-armani-si-by-giorgio-armani-for-women-eau-de-parfum-spray',
+    price: '$83.95',
+    priceValue: 83.95,
+    priceNote: 'Listing price checked Nov. 24, 2026; availability may change.'
+  },
+  {
+    category: "Men's colognes",
+    name: 'Giorgio Armani Acqua di Giò Eau de Toilette',
+    description: 'A classic aquatic-woody cologne with a fresh, clean profile. Several bottle sizes may be offered.',
+    image: 'https://perfumania.com/cdn/shop/files/4_f71533b2-ac33-47fd-bfe2-9080bf56641b.png?crop=center&height=208&v=1794994825&width=208',
+    alt: 'Giorgio Armani Acqua di Giò fragrance bottle',
+    url: 'https://perfumania.com/products/giorgio-armani-acqua-di-gio-eau-de-toilette-cologne-for-men',
+    price: '$51.95',
+    priceValue: 51.95,
+    priceNote: 'Listing price checked Nov. 24, 2026; selected sizes may vary.'
+  },
+  {
+    category: "Men's colognes",
+    name: 'Dior Sauvage Eau de Toilette',
+    description: 'A fresh, aromatic cologne with a bold, versatile character. Check the selected size and concentration.',
+    image: 'https://perfumania.com/cdn/shop/products/Dior-Sauvage-Mens-Eau-De-Toilette-Spray-EDT-S-2.0-oz.-Best-Price-Fragrance-Perfume-FragranceOutlet.com-Details.jpg?format=pjpg&v=1773158105&width=1100',
+    alt: 'Dior Sauvage Eau de Toilette bottle and box',
+    url: 'https://perfumania.com/products/christian-dior-sauvage-eau-de-toilette-cologne-for-men',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: "Men's colognes",
+    name: "Issey Miyake L'Eau d'Issey Pour Homme Eau de Toilette",
+    description: 'A fresh, crisp men’s fragrance with a distinctive citrus and aquatic character.',
+    image: 'https://perfumania.com/cdn/shop/products/Issey-Miyake-L-Eau-Dissey-Mens-Eau-de-Toilette-Spray-2.5-Best-Price-Fragrance-Parfume-FragranceOutlet.com-Details.jpg?format=pjpg&v=1580825820&width=1100',
+    alt: "Issey Miyake L'Eau d'Issey Pour Homme bottle and box",
+    url: 'https://perfumania.com/products/issey-miyake-l-eau-dissey-mens-eau-de-toilette-spray',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: "Men's colognes",
+    name: 'Burberry Brit Eau de Toilette',
+    description: 'A warm, approachable designer cologne. Confirm the exact version and bottle size before purchase.',
+    image: 'https://perfumania.com/cdn/shop/files/Azzaro_themostwanted_34.jpg?v=1759754999&width=2048',
+    alt: 'Designer men’s fragrance bottle',
+    url: 'https://perfumania.com/products/burberry-brit-cologne-eau-de-toilette-for-men',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: "Men's colognes",
+    name: 'Yves Saint Laurent Y Eau de Toilette',
+    description: 'A modern aromatic-woody fragrance from Yves Saint Laurent. Compare the available concentrations and sizes.',
+    image: 'https://perfumania.com/cdn/shop/files/Azzaro_themostwanted_34.jpg?v=1759754999&width=2048',
+    alt: 'Designer men’s fragrance bottle',
+    url: 'https://perfumania.com/products/yves-saint-laurent-y-eau-de-toilette-cologne-for-men',
+    price: 'See retailer',
+    priceValue: 0,
+    priceNote: 'Check the live listing for current price and availability.'
+  },
+  {
+    category: 'Fragrance gift sets',
     name: 'YSL 4-Piece Mini Gift Set',
-    description: 'A compact set featuring Black Opium, Libre, Mon Paris and Libre Intense Eau de Parfum minis. Compare the included fragrance names and individual vial sizes before choosing.',
+    description: 'Four 0.25 oz. minis: Black Opium, Libre, Mon Paris and Libre Intense Eau de Parfum.',
     image: 'https://perfumania.com/cdn/shop/files/YSL_GiftSet_Both.png?format=pjpg&v=1787086254&width=1100',
-    alt: 'YSL four-piece mini gift set with Black Opium, Libre and Mon Paris fragrances',
+    alt: 'YSL four-piece mini fragrance gift set',
     url: 'https://perfumania.com/products/ysl-4-piece-mini-gift-set',
     price: '$77.95',
     priceValue: 77.95,
-    priceNote: 'Perfumania listing checked Nov. 24, 2026; confirm availability before ordering.'
+    priceNote: 'Listing price checked Nov. 24, 2026; availability may change.'
+  },
+  {
+    category: 'Fragrance gift sets',
+    name: 'Camille Rochelle 4-Piece Mini Gift Set',
+    description: 'A four-scent mini collection with Cobalt Intense, Cognac Haze, Coast and Platinum Eau de Parfum.',
+    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
+    alt: 'Camille Rochelle four-piece mini fragrance gift set',
+    url: 'https://perfumania.com/products/camille-rochelle-4-piece-mini-gift-set',
+    price: '$90.00',
+    priceValue: 90,
+    priceNote: 'Listing price checked Nov. 24, 2026; confirm availability before ordering.'
+  },
+  {
+    category: 'Fragrance gift sets',
+    name: 'Valentino Donna Born in Roma 3-Piece Discovery Gift Set',
+    description: 'Three 0.5 oz. bottles: Donna Born in Roma, Donna Born in Roma Intense and Green Stravaganza.',
+    image: 'https://perfumania.com/cdn/shop/files/Valentino_3Piece_GiftSet.png?format=pjpg&v=1779904019&width=1100',
+    alt: 'Valentino Donna Born in Roma three-piece discovery gift set',
+    url: 'https://perfumania.com/products/donna-born-in-roma-3-piece-discovery-gift-set',
+    price: '$77.95',
+    priceValue: 77.95,
+    priceNote: 'Listing price checked Nov. 24, 2026; availability may change.'
+  },
+  {
+    category: 'Fragrance gift sets',
+    name: 'Ariana Grande Ari Gift Set',
+    description: 'A coordinated gift set built around Ari Eau de Parfum with matching fragrance and body-care pieces. Check the listing for the complete set contents.',
+    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
+    alt: 'Fragrance gift set from Perfumania',
+    url: 'https://perfumania.com/products/ari-gift-set',
+    price: '$66.95',
+    priceValue: 66.95,
+    priceNote: 'Previously listed at this price; verify current price and availability.'
+  },
+  {
+    category: 'Fragrance gift sets',
+    name: 'Ariana Grande Thank U Next Gift Set',
+    description: 'A gift set that includes Eau de Parfum, body soufflé and shower gel. Check the live listing for the exact set details.',
+    image: 'https://perfumania.com/cdn/shop/files/CR_GiftSet.png?format=pjpg&v=1780680465&width=1100',
+    alt: 'Fragrance gift set from Perfumania',
+    url: 'https://perfumania.com/products/thank-u-next-gift-set',
+    price: '$67.95',
+    priceValue: 67.95,
+    priceNote: 'Previously listed at this price; verify current price and availability.'
   }
 ];
 
